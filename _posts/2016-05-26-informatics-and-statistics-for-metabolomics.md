@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Informatics and Statistics for Metabolomics
-date: 2016-05-26
 ---
         <header>
 
