@@ -1,46 +1,12 @@
-<!DOCTYPE html>
-
-<html>
-
-  <head>
-
-    <meta charset='utf-8'>
-
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" type="text/css" href="../../../stylesheets/stylesheet.css" media="screen">
-
-    <link rel="stylesheet" type="text/css" href="../../../stylesheets/github-dark.css" media="screen">
-
-    <link rel="stylesheet" type="text/css" href="../../../stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-
-    <![endif]-->
-
-    <title>Informatics and Statistics for Metabolomics</title>
-
-  </head>
-
-
-
-  <body>
-
-    <div id="container">
-
-      <div class="inner">
-
-
-
+---
+layout: default
+title: Informatics and Statistics for Metabolomics
+---
         <header>
 
-          <h1>Informatics and Statistics for Metabolomics</h1>
+          #Informatics and Statistics for Metabolomics
 
-          <h2>Workshop pages for students</h2>
+          ##Workshop pages for students
 
         </header>
 
