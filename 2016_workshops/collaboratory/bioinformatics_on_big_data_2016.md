@@ -70,9 +70,7 @@ header2: Workshop pages for students
 ###  Welcome <a id="welcome"></a>
 
   *<font color="green">Ann Meyer</font>* 
-
 <br>
-
 ###  Module 1: Ethics of Data Usage and Security Best Practices <a id="module_1"></a>
 
    *<font color="green">Mark Phillips</font>*
@@ -101,6 +99,7 @@ header2: Workshop pages for students
 ###  Module 4: Customizing a VM with New Tools <a id="module_4"></a>
 
    *<font color="green">George Mihaiescu</font>*
+  
   Lecture:
 
   Lab practical:
