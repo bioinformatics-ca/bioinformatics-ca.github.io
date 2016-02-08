@@ -1,2 +1,13 @@
-name: CBW Workshop GitHub
-markdown: kramdown
+url: http://bioinformatics-ca.github.io
+title: CBW Workshop GitHub
+google_analytics_tracking_id: UA-18554799-8
+permalink: /2016_workshops/:year/:month/:day/:title/
+twitter_username: Bioinfodotca
+github_username: bioinformatics-ca
+
+
+
+
+markdown: redcarpet
+# markdown: redcarpet
+highlighter: pygments
