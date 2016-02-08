@@ -9,4 +9,4 @@ github_username: bioinformatics-ca
 
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
