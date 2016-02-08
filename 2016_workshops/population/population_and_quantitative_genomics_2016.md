@@ -16,23 +16,26 @@ header2: Workshop pages for students
 [Pre-Workshop Readings](#pre_readings)
 
 [Day 1](#day_1)
+<p class="tab">
 
-  ...[Welcome](#welcome)
+  [Welcome](#welcome)
   
-  ...[Module 1: Concepts in Population Genomics](#module_1)
+  [Module 1: Concepts in Population Genomics](#module_1)
   
-  ...[Module 2: Extensions in Population Genomics](#module_2)
+  [Module 2: Extensions in Population Genomics](#module_2)
   
-  ...[Module 3: Basic Concepts in QTLs](#module_3)
+  [Module 3: Basic Concepts in QTLs](#module_3)
+  </p>
   
 [Day 2](#day_2)
+<p class="tab">
 
-  ...[Module 4: Advanced Concepts in QTLs](#module_4)
+  [Module 4: Advanced Concepts in QTLs](#module_4)
   
-  ...[Module 5: Gene x Environment](#module_5)
+  [Module 5: Gene x Environment](#module_5)
   
-  ...[Module 6: Functional Annotation of Mutations and Haplotypes](#module_6)
-  
+  [Module 6: Functional Annotation of Mutations and Haplotypes](#module_6)
+  </p>
 
 ***
 
@@ -62,12 +65,13 @@ header2: Workshop pages for students
 
 ###  Welcome <a id="welcome"></a>
 
-  <font color="green">  _Ann Meyer_  </font> 
-
+  *<font color="green">Ann Meyer</font>* 
+<br>
 
 ###  Module 1: Concepts in Population Genomics <a id="module_1"></a>
 
   <font color="green"> _Philip Awadalla_ </font>
+  
   Lecture:
   
   Lab practical:
@@ -76,12 +80,14 @@ header2: Workshop pages for students
 ###  Module 2: Extensions in Population Genomics <a id="module_2"></a>
 
   <font color="green"> _Philip Awadalla_ </font>
+  
   Lecture:
 
 
 ###  Module 3: Basic Concepts in QTLs <a id="module_3"></a>
 
   <font color="green"> _Philip Awadalla and Stephen Montgomery_ </font>
+  
   Lecture:
   
   Lab practical:
@@ -92,6 +98,7 @@ header2: Workshop pages for students
 ###  Module 4: Advanced Concepts in QTLs <a id="module_4"></a>
 
   <font color="green"> _Philip Awadalla and Stephen Montgomery_ </font>
+  
   Lecture:
   
   Lab practical:
@@ -100,12 +107,14 @@ header2: Workshop pages for students
 ###  Module 5: Gene x Environment <a id="module_5"></a>
 
   <font color="green"> _Philip Awadalla and Stephen Montgomery_ </font>
+  
   Lecture:
 
 
 ###  Module 6: Functional Annotation of Mutations and Haplotypes <a id="module_6"></a>
 
   <font color="green"> _Philip Awadalla_ </font>
+  
   Lecture:
   
   Lab practical:
