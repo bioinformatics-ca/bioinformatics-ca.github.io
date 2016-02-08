@@ -8,6 +8,5 @@ github_username: bioinformatics-ca
 
 
 
-markdown: redcarpet
-# markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
