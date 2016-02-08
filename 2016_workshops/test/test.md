@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 permalink: /test/
 title: Test Page
 header1: This is the first header
