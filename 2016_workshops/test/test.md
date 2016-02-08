@@ -2,6 +2,8 @@
 layout: default
 permalink: /test/
 title: Test Page
+header1: This is the first header
+header2: This is the second header
 ---
 
 # H1
