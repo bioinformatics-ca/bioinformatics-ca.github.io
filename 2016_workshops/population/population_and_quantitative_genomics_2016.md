@@ -8,18 +8,31 @@ header2: Workshop pages for students
 
 #### Contents
 [Course Schedule](#course_schedule)
+
 [Workshop Q/A Forum](#q_a_forum)
+
 [Laptop Setup Instructions](#laptop_setup)
+
 [Pre-Workshop Readings](#pre_readings)
+
 [Day 1](#day_1)
+
   [Welcome](#welcome)
+  
   [Module 1: Concepts in Population Genomics](#module_1)
+  
   [Module 2: Extensions in Population Genomics](#module_2)
+  
   [Module 3: Basic Concepts in QTLs](#module_3)
+  
 [Day 2](#day_2)
+
   [Module 4: Advanced Concepts in QTLs](#module_4)
+  
   [Module 5: Gene x Environment](#module_5)
+  
   [Module 6: Functional Annotation of Mutations and Haplotypes](#module_6)
+  
 
 
 
@@ -56,6 +69,7 @@ header2: Workshop pages for students
 
   <font color="green"> *Philip Awadalla* </font>
   Lecture:
+  
   Lab practical:
 
 
@@ -69,6 +83,7 @@ header2: Workshop pages for students
 
   <font color="green"> *Philip Awadalla and Stephen Montgomery* </font>
   Lecture:
+  
   Lab practical:
 
 
@@ -78,6 +93,7 @@ header2: Workshop pages for students
 
   <font color="green"> *Philip Awadalla and Stephen Montgomery* </font>
   Lecture:
+  
   Lab practical:
 
 
@@ -91,4 +107,5 @@ header2: Workshop pages for students
 
   <font color="green"> *Philip Awadalla* </font>
   Lecture:
+  
   Lab practical:
