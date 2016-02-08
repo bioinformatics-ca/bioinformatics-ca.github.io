@@ -1,0 +1,14 @@
+- name: GitHub
+  url: http://github.com/bioinformatics-ca
+  class: icon-github
+  title: "Source on GitHub"
+  
+- name: Twitter
+  url: http://twitter.com/Bioinfodotca
+  class: icon-twitter
+  title: "Canadian Bioinformatics Workshops on Twitter"
+  
+- name: Facebook
+  url: http://facebook.com/bioinformaticsdotca
+  class: icon-facebook
+  title: "Canadian Bioinformatics Workshops on Facebook"
