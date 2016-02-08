@@ -1,12 +1,31 @@
 url: http://bioinformatics-ca.github.io
-title: CBW Workshop GitHub
+title: "CBW Workshop GitHub"
+description: "CBW focuses on training researchers to use the latest approaches in computational biology to deal with large dataset."
 google_analytics_tracking_id: UA-18554799-8
-permalink: /2016_workshops/:year/:month/:day/:title/
+permalink: /2016_workshops/:year/:month/:title.html
 twitter_username: Bioinfodotca
 github_username: bioinformatics-ca
-
-
-
+baseurl: ''
+filesurl: '/files'
 
 markdown: kramdown
 highlighter: rouge
+excerpt_separator: "<!--more-->"
+
+language: "en"
+
+defaults:
+  -
+   scope:
+    path: ""
+    type: "pages"
+  values:
+    show_meta: false
+  -
+   scope:
+    path: ""
+    type: "posts"
+  values:
+   show_meta: true
+   
+  
