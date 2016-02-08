@@ -15,13 +15,13 @@ excerpt_separator: "<!--more-->"
 language: "en"
 
 defaults:
-  -
+  
    scope:
     path: ""
     type: "pages"
   values:
     show_meta: false
-  -
+  
    scope:
     path: ""
     type: "posts"
