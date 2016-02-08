@@ -71,6 +71,7 @@ header2: Workshop pages for students
 
   *<font color="green">Ann Meyer</font>* 
 <br>
+
 ###  Module 1: Ethics of Data Usage and Security Best Practices <a id="module_1"></a>
 
    *<font color="green">Mark Phillips</font>*
