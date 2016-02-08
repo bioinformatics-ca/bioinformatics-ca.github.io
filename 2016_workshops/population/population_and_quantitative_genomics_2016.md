@@ -15,26 +15,26 @@ header2: Workshop pages for students
 
 [Pre-Workshop Readings](#pre_readings)
 
-[Day 1](#day_1)
+**[Day 1](#day_1)**
 
 
-  [Welcome](#welcome)
+  ...[Welcome](#welcome)
   
-  [Module 1: Concepts in Population Genomics](#module_1)
+  ...[Module 1: Concepts in Population Genomics](#module_1)
   
-  [Module 2: Extensions in Population Genomics](#module_2)
+  ...[Module 2: Extensions in Population Genomics](#module_2)
   
-  [Module 3: Basic Concepts in QTLs](#module_3)
+  ...[Module 3: Basic Concepts in QTLs](#module_3)
   
   
-[Day 2](#day_2)
+**[Day 2](#day_2)**
 
 
-  [Module 4: Advanced Concepts in QTLs](#module_4)
+  ...[Module 4: Advanced Concepts in QTLs](#module_4)
   
-  [Module 5: Gene x Environment](#module_5)
+  ...[Module 5: Gene x Environment](#module_5)
   
-  [Module 6: Functional Annotation of Mutations and Haplotypes](#module_6)
+  ...[Module 6: Functional Annotation of Mutations and Haplotypes](#module_6)
   
 
 ***
