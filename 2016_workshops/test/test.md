@@ -14,6 +14,6 @@ header2: This is the second header
 
 ### H3
 
-* **combined stuff** *
+_**combined stuff**_
 
 This is a test page to see how markdown works.  I've made a change.  And another change.
