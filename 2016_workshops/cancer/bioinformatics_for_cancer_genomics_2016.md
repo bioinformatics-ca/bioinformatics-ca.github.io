@@ -93,7 +93,7 @@ header2: Workshop pages for students
 **RStudio** doesn't know where libraries are installed, when they are not installed through the **RStudio** package manager. To tell **RStudio** the location, you can define the path in a startup file. Create a file called .Renviron . Inside there:
 
 ```r
-R_LIBS=\<R Library Path of other installed packages\>
+R_LIBS=<R Library Path of other installed packages>
 ```
 
 That was the problem when students installed things in **RStudio** at the command line using the **R** command <code>install.package()</code>.
