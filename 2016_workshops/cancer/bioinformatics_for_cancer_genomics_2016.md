@@ -98,6 +98,7 @@ R_LIBS=<R Library Path of other installed packages>
 ```
 
 That was the problem when students installed things in **RStudio** at the command line using the **R** command <code>install.package()</code>.
+
 ... or you could use the package manger to install libraries.
 
 ##### Syntax highlighting
@@ -108,7 +109,22 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ###  Pre-Workshop Tutorials <a id="pre_tutorials"></a>
 
-Do these before coming to the workshop.
+1) **R Preparation tutorials**: You are expected to have completed the following tutorials in **R** beforehand. The tutorial should be very accessible even if you have never used **R** before.
+
+* The [CBW R tutorial](http://bioinformatics.ca/workshop_wiki/index.php/R_tutorial) or http://www.cyclismo.org/tutorial/R/ 
+* The [R command cheat sheet](http://bioinformatics.ca/workshop_wiki/images/4/4c/Short-refcard.pdf)
+* [PlottingReference.pdf](http://bioinformatics.ca/workshop_wiki/images/d/dc/PlottingReference.pdf)
+
+
+2) **Cytoscape 3.x Preparation tutorials**: Complete the introductory tutorial to Cytoscape 3.x: http://opentutorials.cgl.ucsf.edu/index.php/Portal:Cytoscape3
+* Introduction to Cytoscape3 - User Interface
+* Introduction to Cytoscape3 - Welcome Screen
+* Introduction to Cytoscape 3.1 - Networks, Data, Styles, Layouts and App Manager
+
+
+3) **UNIX Preparation tutorials**: Please complete tutorials #1-3 on UNIX at http://www.ee.surrey.ac.uk/Teaching/Unix/
+* [Unix Cheat sheet](http://www.rain.org/~mkummel/unix.html) 
+
 
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
