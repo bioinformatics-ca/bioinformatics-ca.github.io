@@ -41,17 +41,17 @@ header2: Workshop pages for students
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/Metabolomics_2016_Schedule_v1.pdf">Schedule for July 18 to July 19, 2016</a>
+  <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/Metabolomics_2016_Schedule_v1.pdf">Schedule for JMay 26 - may 27, 2016</a>
 
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
-  Post your workshop questions <a href="http://todaysmeet.com/Population2016">here</a>!
+  Post your workshop questions <a href="http://todaysmeet.com/Metabolomics2016">here</a>!
 
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
-  Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/population/laptop_setup_instructions.pdf">here</a>.
+  Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/laptop_setup_instructions.pdf">here</a>.
 
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
@@ -59,9 +59,13 @@ header2: Workshop pages for students
   Before coming to the workshop, read these.
   
   <a href="http://www.ncbi.nlm.nih.gov/pubmed/17626065">Current Progress in Computational Metabolomics</a>
+  
   <a href="http://www.ncbi.nlm.nih.gov/pubmed/21083105">Computational Strategies for Metabolite Identification in Metabolomics</a>
+  
   <a href="http://www.ncbi.nlm.nih.gov/pubmed/23161693">HMDB 3.0 - The Human Metabolome Database in 2013</a>
+  
   <a href="http://www.ncbi.nlm.nih.gov/pubmed/21633943">Metabolomic Data Processing, Analysis, and Interpretation using MetaboAnalyst</a>
+  
   <a href="http://www.ncbi.nlm.nih.gov/pubmed/25897128">MetaboAnalyst 3.0 - Making Metabolomics More Meaningful</a>
 
 
@@ -89,11 +93,13 @@ header2: Workshop pages for students
   
   Lab practical:
   
+  
   #### Break-out Groups:
   
   Begin with your assigned data set and then move through to the next data set when done.
   
   Student #01-10 - Begin with NMR and <a href="http://cbw.bayesil.ca/">CBW-Bayesil</a>.
+  
   
   ##### Sub-groups for NMR
   
@@ -106,19 +112,24 @@ header2: Workshop pages for students
   9-10 | #5
   
   Student #11-20 - Begin with GC-MS and <a href="http://gcms.wishartlab.com/">GCMS</a>.
+  
   Student #21-34 - Begin with LC-MS and <a href="http://xcmsonline.scripps.edu/index.php">XCMS Online</a>.
+  
   
   #### Data Set and Results Files:
   
+  
   ##### NMR:
   
+  
   ##### GC-MS:
+  
   
   ##### LC-MS:
   
   Small test datasets:
   
-  Description: a subset of 12 samples from the study <a href="http://www.bioconductor.org/packages/release/data/experiment/html/faahKO.html>Assignment of Endogenous Substrates to Enzymes by Global Metabolite Profiling</a>.
+  Description: a subset of 12 samples from the study <a href="http://www.bioconductor.org/packages/release/data/experiment/html/faahKO.html">Assignment of Endogenous Substrates to Enzymes by Global Metabolite Profiling</a>.
   
   Group WT: wild type; Group KO: knock out.  Platform: HPLC Single Quad.
   
@@ -128,6 +139,7 @@ header2: Workshop pages for students
   Description: a subset of 38 samples from the study <a href="http://www.ebi.ac.uk/metabolights/MTBLS146">Pregnancy-Induced Metabolic Phenotype Variations in Maternal Plasma</a>.
   
   Group A: 13-16 weeks; Group B: 9-12 weeks.  Platform: HPLC Orbitrap
+  
   
   #### Links:
   
@@ -156,6 +168,7 @@ header2: Workshop pages for students
   Lecture:
   
   Optional Exercises:
+  
  
  #### Links:
   
@@ -194,9 +207,11 @@ header2: Workshop pages for students
   
   Lab practical:
   
+  
   #### Data Input:
   
   Critical: before uploading your data, perform a sanity check: 
+  
 * It is a data table separated by comma (.csv) or tab (.txt); 
 * Three types of labels: feature names, sample names and group labels (must directly follow sample names);
 * All measurements should be numerical values (empty for missing values); 
