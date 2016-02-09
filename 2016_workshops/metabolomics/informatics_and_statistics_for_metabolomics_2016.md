@@ -58,11 +58,11 @@ header2: Workshop pages for students
 
   Before coming to the workshop, read these.
   
-  <a href="http://www.ncbi.nlm.nih.gov/pubmed/17626065">Current Progress in Computational Metabolomics<\a>
-  <a href="http://www.ncbi.nlm.nih.gov/pubmed/21083105">Computational Strategies for Metabolite Identification in Metabolomics<\a>
-  <a href="http://www.ncbi.nlm.nih.gov/pubmed/23161693">HMDB 3.0 - The Human Metabolome Database in 2013<\a>
-  <a href="http://www.ncbi.nlm.nih.gov/pubmed/21633943">Metabolomic Data Processing, Analysis, and Interpretation using MetaboAnalyst<\a>
-  <a href="http://www.ncbi.nlm.nih.gov/pubmed/25897128">MetaboAnalyst 3.0 - Making Metabolomics More Meaningful<\a>
+  <a href="http://www.ncbi.nlm.nih.gov/pubmed/17626065">Current Progress in Computational Metabolomics</a>
+  <a href="http://www.ncbi.nlm.nih.gov/pubmed/21083105">Computational Strategies for Metabolite Identification in Metabolomics</a>
+  <a href="http://www.ncbi.nlm.nih.gov/pubmed/23161693">HMDB 3.0 - The Human Metabolome Database in 2013</a>
+  <a href="http://www.ncbi.nlm.nih.gov/pubmed/21633943">Metabolomic Data Processing, Analysis, and Interpretation using MetaboAnalyst</a>
+  <a href="http://www.ncbi.nlm.nih.gov/pubmed/25897128">MetaboAnalyst 3.0 - Making Metabolomics More Meaningful</a>
 
 
 ***
@@ -93,7 +93,7 @@ header2: Workshop pages for students
   
   Begin with your assigned data set and then move through to the next data set when done.
   
-  Student #01-10 - Begin with NMR and <a href="http://cbw.bayesil.ca/">CBW-Bayesil<\a>.
+  Student #01-10 - Begin with NMR and <a href="http://cbw.bayesil.ca/">CBW-Bayesil</a>.
   
   ##### Sub-groups for NMR
   
@@ -105,8 +105,8 @@ header2: Workshop pages for students
   7-8 | #4
   9-10 | #5
   
-  Student #11-20 - Begin with GC-MS and <a href="http://gcms.wishartlab.com/">GCMS<\a>.
-  Student #21-34 - Begin with LC-MS and <a href="http://xcmsonline.scripps.edu/index.php">XCMS Online<\a>.
+  Student #11-20 - Begin with GC-MS and <a href="http://gcms.wishartlab.com/">GCMS</a>.
+  Student #21-34 - Begin with LC-MS and <a href="http://xcmsonline.scripps.edu/index.php">XCMS Online</a>.
   
   #### Data Set and Results Files:
   
@@ -118,14 +118,14 @@ header2: Workshop pages for students
   
   Small test datasets:
   
-  Description: a subset of 12 samples from the study <a href="http://www.bioconductor.org/packages/release/data/experiment/html/faahKO.html>Assignment of Endogenous Substrates to Enzymes by Global Metabolite Profiling<\a>.
+  Description: a subset of 12 samples from the study <a href="http://www.bioconductor.org/packages/release/data/experiment/html/faahKO.html>Assignment of Endogenous Substrates to Enzymes by Global Metabolite Profiling</a>.
   
   Group WT: wild type; Group KO: knock out.  Platform: HPLC Single Quad.
   
   
   Large test datasets:
   
-  Description: a subset of 38 samples from the study <a href="http://www.ebi.ac.uk/metabolights/MTBLS146">Pregnancy-Induced Metabolic Phenotype Variations in Maternal Plasma<\a>.
+  Description: a subset of 38 samples from the study <a href="http://www.ebi.ac.uk/metabolights/MTBLS146">Pregnancy-Induced Metabolic Phenotype Variations in Maternal Plasma</a>.
   
   Group A: 13-16 weeks; Group B: 9-12 weeks.  Platform: HPLC Orbitrap
   
