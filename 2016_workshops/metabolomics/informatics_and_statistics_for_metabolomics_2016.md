@@ -94,14 +94,14 @@ header2: Workshop pages for students
   Lab practical:
   
   
-  #### Break-out Groups:
+#### Break-out Groups:
   
   Begin with your assigned data set and then move through to the next data set when done.
   
   Student #01-10 - Begin with NMR and <a href="http://cbw.bayesil.ca/">CBW-Bayesil</a>.
   
   
-  ##### Sub-groups for NMR
+##### Sub-groups for NMR
   
   Students | Data Set
   -------- | --------
@@ -116,16 +116,14 @@ header2: Workshop pages for students
   Student #21-34 - Begin with LC-MS and <a href="http://xcmsonline.scripps.edu/index.php">XCMS Online</a>.
   
   
-  #### Data Set and Results Files:
+#### Data Set and Results Files:
   
   
-  ##### NMR:
+##### NMR:
   
+##### GC-MS:
   
-  ##### GC-MS:
-  
-  
-  ##### LC-MS:
+##### LC-MS:
   
   Small test datasets:
   
@@ -141,7 +139,7 @@ header2: Workshop pages for students
   Group A: 13-16 weeks; Group B: 9-12 weeks.  Platform: HPLC Orbitrap
   
   
-  #### Links:
+#### Links:
   
  * [MetaboMiner](http://wishart.biology.ualberta.ca/metabominer/) 
  * [rNMR](http://rnmr.nmrfam.wisc.edu/) 
@@ -170,7 +168,7 @@ header2: Workshop pages for students
   Optional Exercises:
   
  
- #### Links:
+#### Links:
   
  * [HMDB](http://hmdb.ca/) 
  * [DrugBank](http://drugbank.ca/) 
@@ -208,7 +206,7 @@ header2: Workshop pages for students
   Lab practical:
   
   
-  #### Data Input:
+#### Data Input:
   
   Critical: before uploading your data, perform a sanity check: 
   
