@@ -36,7 +36,7 @@ header2: Workshop pages for students
   
   ...[Module 6: Future of Metabolomics](#module_6)
   
-
+***
 ***
 
 ###  Course Schedule  <a id="course_schedule"></a>
@@ -68,7 +68,7 @@ header2: Workshop pages for students
   
   <a href="http://www.ncbi.nlm.nih.gov/pubmed/25897128">MetaboAnalyst 3.0 - Making Metabolomics More Meaningful</a>
 
-
+***
 ***
 
 ##  Day 1 <a id="day_1"></a>
@@ -77,6 +77,7 @@ header2: Workshop pages for students
 
   *<font color="green">Ann Meyer</font>* 
 <br>
+***
 
 ###  Module 1: Introduction to Metabolomics <a id="module_1"></a>
 
@@ -84,7 +85,7 @@ header2: Workshop pages for students
   
   Lecture:
 
-
+***
 ###  Module 2: Metabolite Identification and Annotation <a id="module_2"></a>
 
   *<font color="green">David Wishart and Jeff Xia</font>*
@@ -158,7 +159,7 @@ header2: Workshop pages for students
  * [7GR Software](http://fiehnlab.ucdavis.edu/projects/Seven_Golden_Rules/Software/) 
  * [MyCompoundID](http://mycompoundid.org/) 
 
-
+***
 ###  Module 3: Databases for Chemical, Spectral, and Biological Data <a id="module_3"></a>
 
   *<font color="green">David Wishart</font>*
@@ -187,7 +188,7 @@ header2: Workshop pages for students
  * [Reactome](http://www.reactome.org/) 
  * [BioCyc](http://biocyc.org/) 
 
-
+***
 ##  Day 2 <a id="day_2"></a>
 
 ###  Module 4: Backgrounder in Statistical Methods <a id="module_4"></a>
@@ -196,7 +197,7 @@ header2: Workshop pages for students
   
   Lecture:
 
-
+***
 ###  Module 5: MetaboAnalyst <a id="module_5"></a>
 
   *<font color="green">David Wishart and Jeff Xia</font>*
@@ -215,9 +216,12 @@ header2: Workshop pages for students
 * All measurements should be numerical values (empty for missing values); 
 * For details and screenshot instructions, [click here](http://www.metaboanalyst.ca/faces/docs/Format.xhtml)
 
-
+***
 ###  Module 6: Future of Metabolomics <a id="module_6"></a>
 
   *<font color="green">David Wishart</font>*
   
   Lecture:
+
+***
+***
