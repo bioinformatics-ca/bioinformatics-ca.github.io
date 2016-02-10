@@ -131,6 +131,27 @@ That was the problem when students installed things in **RStudio** at the comman
 
   Before coming to the workshop, read these.
   
+[Database resources of the National Center for Biotechnology Information](http://www.ncbi.nlm.nih.gov/pubmed/26615191)
+
+[COSMIC: mining complete cancer genomes in the Catalogue of Somatic Mutations in Cancer](http://www.ncbi.nlm.nih.gov/pubmed/20952405/)
+
+[Integrative genomic profiling of human prostate cancer](http://www.ncbi.nlm.nih.gov/pubmed/20579941)
+
+[Predicting the functional impact of protein mutations: application to cancer genomics](http://www.ncbi.nlm.nih.gov/pubmed/21727090)
+
+[Cancer genome sequencing study design](http://www.ncbi.nlm.nih.gov/pubmed/23594910)
+
+[Using cloud computing infrastructure with CloudBioLinux, CloudMan, and Galaxy](http://www.ncbi.nlm.nih.gov/pubmed/22700313)
+
+[The UCSC Genome Browser database: extensions and updates 2013](http://www.ncbi.nlm.nih.gov/pubmed/23155063)
+
+[Integrative Genomics Viewer (IGV): high-performance genomics data visualization and exploration](http://www.ncbi.nlm.nih.gov/pubmed/22517427)
+
+[Feature-based classifiers for somatic mutation detection in tumour–normal paired sequencing data](http://www.ncbi.nlm.nih.gov/pubmed/22084253)
+
+[Expression Data Analysis with Reactome](http://www.ncbi.nlm.nih.gov/pubmed/25754994)
+
+  
   
 ### Logging into the Amazon Cloud <a id="amazon_cloud"></a>
 
