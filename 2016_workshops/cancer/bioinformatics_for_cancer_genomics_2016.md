@@ -276,6 +276,18 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   
   Lab practical:
   
+  #### Links:
+  
+ * [ICGC](http://icgc.org/) 
+ * [DCC portal on ICGC](http://dcc.icgc.org/) 
+ * [Docs for ICGC](http://docs.icgc.org/) 
+ * [Integrated Genomics Viewer](http://www.broadinstitute.org/igv/) 
+ * [UCSC Genome Browser](http://genome.ucsc.edu/) 
+ * [UCSC Genome Browser](https://genome-cancer.ucsc.edu/) 
+ * [Cancer Genome Workbench](https://cgwb.nci.nih.gov/) 
+ * [cBioPortal for Cancer Genomics](http://www.cbioportal.org/public-portal/web_api.jsp/) 
+ * [Savant Genome Browser](http://genomesavant.com/p/home/index/)
+  
 
 ***  
 
@@ -292,6 +304,16 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 
 *<font color="green">TBA</font>*
 
+Lecture:
+
+Lab practical:
+
+#### Links:
+
+ * [R Statistical Package](http://www.r-project.org/) 
+ * [R Studio](http://rstudio.org/) 
+
+
 ***
 
 ##  Day 2 <a id="day_2"></a>
@@ -303,7 +325,27 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lecture:
   
   Lab practical:
+  
+  **Bonus**
+  
+You can view your results (BAM and BAM.BAI file) in the IGV browser by using the URL for that file from your Cloud instance. We have a web server running on the Amazon cloud for each instance. In a browser, like Firefox, type in your server name (cbw#.dyndns.info) and all files under your workspace will be shown there. Find your Bam and Bam.Bai file, right click it and 'copy the link location'. Start IGV and choose 'load from URL' from File menu, and then paste the location you just copied and you will see the Bam file you just generated in IGV! Narrow down the view to chromosome 15 or 17 where the break points were identified.
 
+#### Links:
+
+ * [What does my SAM flag mean?](https://broadinstitute.github.io/picard/explain-flags.html)
+ * [Tools for Mapping High-throughput Sequencing Data Paper (2012)](http://www.ncbi.nlm.nih.gov/pubmed/23060614) 
+ * [SAM/BAM file specifications](http://samtools.sourceforge.net/SAM1.pdf) 
+ * [samtools](http://samtools.sourceforge.net/) 
+ * [Picard](http://picard.sourceforge.net) 
+ * [bwa](http://bio-bwa.sourceforge.net/) 
+ * [GASV](http://compbio.cs.brown.edu/software.html) 
+ * [BreakDancer](http://breakdancer.sourceforge.net/) 
+  
+##### Extras:
+
+* exampleheader.txt **Put example header here**
+* [explain sam flag app](https://broadinstitute.github.io/picard/explain-flags.html) 
+* [sam flags explained](http://davetang.org/muse/2014/03/06/understanding-bam-flags/) 
 
 ***
 
@@ -314,6 +356,31 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lecture:
   
   Lab practical:
+  
+#### Papers and Background Material:
+
+ * [Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks](http://www.ncbi.nlm.nih.gov/pubmed/22383036)
+ 
+ * [ENCODE RNA-seq Standards](https://genome.ucsc.edu/ENCODE/protocols/dataStandards/ENCODE_RNAseq_Standards_V1.0.pdf)
+
+
+#### Links:
+
+ * [BioStar](http://www.biostars.org/)
+ * [SeqAnswers](http://seqanswers.com/)
+ * [Integrative Genomics Viewer (IGV)](http://www.broadinstitute.org/igv/)
+ * [FASTQ format](http://en.wikipedia.org/wiki/FASTQ_format)
+ * [SAM/BAM format](http://samtools.sourceforge.net/SAM1.pdf)
+ * [Illumina iGenomes](http://tophat.cbcb.umd.edu/igenomes.html)
+ * [SamTools](http://samtools.sourceforge.net/)
+ * [Picard](http://picard.sourceforge.net/)
+ * [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+ * [SAMStat](http://samstat.sourceforge.net/)
+ * [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml)
+ * [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
+ * [TopHat/TopHat2](http://tophat.cbcb.umd.edu/)
+ * [Cufflinks/Cuffdiff](http://cufflinks.cbcb.umd.edu/)
+ * [CummeRbund](http://compbio.mit.edu/cummeRbund/)
 
 
 ***
@@ -327,6 +394,13 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lecture:
   
   Lab practical:
+  
+#### Links:
+
+ * [PennCNV-Affy](http://penncnv.openbioinformatics.org/en/latest/user-guide/affy/): In-depth guide into pre-processing of Affymetrix 6.0 microarrays for OncoSNP
+ * [OncoSNP](https://sites.google.com/site/oncosnp/)
+ * [Titan](http://compbio.bccrc.ca/software/titan/)
+ * [SnpEff/SnpSift](http://snpeff.sourceforge.net/)
 
 
 ***
@@ -338,6 +412,10 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lecture:
   
   Lab practical:
+  
+#### Links:
+ * [Strelka](https://sites.google.com/site/strelkasomaticvariantcaller/)
+ * [MutationSeq](http://compbio.bccrc.ca/software/mutationseq/)
   
   
 ***
@@ -351,6 +429,10 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lecture:
   
   Lab practical:
+  
+#### Links:
+ * [R Statistical Package](http://www.r-project.org/) 
+ * [R Studio](http://rstudio.org/)
   
   
 ***
