@@ -276,7 +276,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   
   Lab practical:
   
-  #### Links:
+#### Links:
   
  * [ICGC](http://icgc.org/) 
  * [DCC portal on ICGC](http://dcc.icgc.org/) 
@@ -420,7 +420,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
   
 ***
 
-##  Day 4 <a id="day_3"></a>
+##  Day 4 <a id="day_4"></a>
 
 ###  Module 7: Gene Expression Profiling <a id="module_7"></a>
 
@@ -461,7 +461,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 
 ***
 
-##  Day 5 <a id="day_3"></a>
+##  Day 5 <a id="day_5"></a>
 
 #### Part 3: Network Analysis using Reactome <a id="part_3"></a>
 
@@ -470,6 +470,48 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
   Lecture:
   
   Lab practical:
+  
+#### Papers:
+
+Clustering Algorithms: [Newman Clustering](http://www.pnas.org/content/103/23/8577.abstract) and [Hotnet](http://www.ncbi.nlm.nih.gov/pubmed/22174262)
+Reactome Website: [NAR paper](http://www.ncbi.nlm.nih.gov/pubmed/26656494)
+[Nature Methods and Perspectives Paper](http://www.ncbi.nlm.nih.gov/pubmed/26125594)
+[Supplementary Materials](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4717906/bin/NIHMS750562-supplement-Supplementary_materials.pdf)
+
+
+#### Links:
+
+ * [GO](http://www.geneontology.org)
+ * [KEGG](http://www.genome.jp/kegg)
+ * [Biocarta](http://www.biocarta.com)
+ * [Reactome](http://reactome.org/) Curated human pathways
+ * [NCI/PID](http://pid.nci.nih.gov/)
+ * [Pathway Commons](http://www.pathwaycommons.org/pc/) Aggregates pathways from multiple sources
+ * [iRefWeb/iRefIndex](http://wodaklab.org/iRefWeb/) Protein interactions
+ * [>300 more](http://www.pathguide.org/)
+
+#### Tools for finding/converting gene identifiers and gene attributes
+
+ * [Ensembl/BioMart](http://www.ensembl.org/index.html) 
+ * [The Synergizer](http://llama.mshri.on.ca/synergizer/translate/) 
+
+#### Cytoscape
+ 
+ * [Cytoscape ](http://www.cytoscape.org/)
+ * [Open Tutorials for Cytoscape](http://opentutorials.cgl.ucsf.edu/index.php/Portal:Cytoscape)
+ 
+Useful plugins:
+
+  * VistaClara - makes it easy to visualize gene expression data on networks
+  * Agilent Literature Search - extracts interactions from PubMed abstracts
+  * clusterMaker - provides multiple ways to cluster gene expression and networks
+  * BiNGO - provides over-representation analysis using Gene Ontology in Cytoscape - you can select genes in your network or provide a list of genes and see the enrichment results visually mapped to the Gene Ontology
+  * commandTool, coreCommands - used to control Cytoscape by a series of commands. E.g. automate the process: open network, layout network, save network as PDF. These plugins require Cytoscape 2.7
+  * jActiveModules - requires gene expression data over multiple samples (>3). Finds regions of a network where genes are active (e.g. differentially expressed) across multiple samples.
+  * [EnrichmentMap](http://baderlab.org/Software/EnrichmentMap)
+  * [ReactomeFI](http://wiki.reactome.org/index.php/Reactome_FI_Cytoscape_Plugin)
+  * [Many more](http://chianti.ucsd.edu/cyto_web/plugins/index.php)
+
   
   
 ***
@@ -481,5 +523,13 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
   Lecture:
   
   Lab practical:
+  
+#### Papers:
+
+[Cox Regression Survival Paper](http://www.ncbi.nlm.nih.gov/pubmed/12613350)
+[Genomics and Transcriptional Abberations Paper](http://www.ncbi.nlm.nih.gov/pubmed/17157792)
+[Supplementary Data](http://www.cell.com/cms/attachment/588951/4507288/mmc1.pdf)
+
+  
   
   ***
