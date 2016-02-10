@@ -94,7 +94,7 @@ header2: Workshop pages for students
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/cancer/laptop_setup_instructions.pdf">here</a>.
   
 ##### Difference Between **R** and **RStudio**
-
+<br>
 
 **RStudio** doesn't know where libraries are installed, when they are not installed through the **RStudio** package manager. To tell **RStudio** the location, you can define the path in a startup file. Create a file called .Renviron . Inside there:
 
@@ -161,6 +161,7 @@ That was the problem when students installed things in **RStudio** at the comman
 ### Logging into the Amazon Cloud <a id="amazon_cloud"></a>
 
 * These instructions will **ONLY** be relevant in class, as the Cloud will not be accessible from home in advance of the class.
+* 
 * We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download this **link certificate here**. Otherwise if you plan on using Windows (with Putty and Winscp), please download this **link certificate here**. 
 
 * On the cloud, we're going to use the default username: **ubuntu**
@@ -168,6 +169,7 @@ That was the problem when students installed things in **RStudio** at the comman
 #### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a>
 
 ##### Logging in
+
 
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
@@ -185,6 +187,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ##### Copying files to your computer
 
+
 * To copy files from an instance, use scp in a similar fashion:
 
 ```bash
@@ -197,7 +200,9 @@ That was the problem when students installed things in **RStudio** at the comman
 
 #### Logging in with Putty (Windows) <a id="putty_login"></a>
 
+
 ##### Logging in
+
 
 To configure Putty, start Putty and do the following:
 
@@ -213,19 +218,26 @@ To configure Putty, start Putty and do the following:
 
 ##### Copying files to your computer
 
+
 To configure WinScp, start WinScp and do the following:
 
 * On the right-hand buttons click "New".
+
 * Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
+
 * Fill in the "User name" field with **ubuntu**
+
 * Leave the password field empty
+
 * In the "private key file" field press the "..." button to browse for the CBWCG.ppk certificate.
+
 * Click the "Save..." button and in the "Save session as" field write "Amazon node" .
 
 
 **Now that WinScp is configured**, all you have to do is start WinScp and double-click on **Amazon node** to start copying files.
 
 #### File System Layout <a id="file_system_layout"></a>
+
 
 When you log in, you'll notice that you have two directories: **CourseData** and **workspace**.
 
@@ -255,6 +267,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 
 
 ***
+
 ###  Module 2.1: Databases and Visualization Tools <a id="module_2.1"></a>
 
   *<font color="green">Francis Ouellette</font>*
@@ -265,6 +278,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   
 
 ***  
+
 ###  Module 2.2: Logging into the Cloud <a id="module_2.2"></a>
 
   *<font color="green">Francis Ouellette</font>*
@@ -273,11 +287,13 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 
 
 ***
+
 ###  *Optional* **R** Review Session <a id="r_review"></a>
 
 *<font color="green">TBA</font>*
 
 ***
+
 ##  Day 2 <a id="day_2"></a>
 
 ###  Module 3: Mapping and Genome Rearrangement <a id="module_3"></a>
@@ -290,6 +306,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 
 
 ***
+
 ###  Module 4: Gene Fusion Discovery <a id="module_4"></a>
 
   *<font color="green">Andrew McPherson</font>*
@@ -300,6 +317,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 
 
 ***
+
 ##  Day 3 <a id="day_3"></a>
 
 ###  Module 5: Copy Number Alterations <a id="module_5"></a>
@@ -312,6 +330,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 
 
 ***
+
 ###  Module 6: Somatic Mutations <a id="module_6"></a>
 
   *<font color="green">Sohrab Shah</font>*
@@ -322,6 +341,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   
   
 ***
+
 ##  Day 4 <a id="day_3"></a>
 
 ###  Module 7: Gene Expression Profiling <a id="module_7"></a>
@@ -334,6 +354,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   
   
 ***
+
 ###  Module 8: Variants to Networks <a id="module_8"></a>
 
 #### Part 1: How to annotate variants and prioritize potentially relevant ones <a id="part_1"></a>
@@ -346,6 +367,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   
   
 ***
+
 #### Part 2: From genes to pathways <a id="part_2"></a>
   
   *<font color="green">Juri Reimand</font>*
@@ -356,6 +378,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   
 
 ***
+
 ##  Day 5 <a id="day_3"></a>
 
 #### Part 3: Network Analysis using Reactome <a id="part_3"></a>
@@ -368,6 +391,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   
   
 ***
+
 ###  Module 9: Integration of Clinical Data <a id="module_9"></a>
 
 *<font color="green">Anna Lapuk</font>*
