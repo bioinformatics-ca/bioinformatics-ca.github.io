@@ -77,6 +77,7 @@ header2: Workshop pages for students
   
 
 ***
+***
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
@@ -244,6 +245,8 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   *<font color="green">Ann Meyer</font>* 
 <br>
 
+***
+
 ###  Module 1: Introduction to Cancer Genomics <a id="module_1"></a>
 
   *<font color="green">TBA</font>*
@@ -251,6 +254,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lecture:
 
 
+***
 ###  Module 2.1: Databases and Visualization Tools <a id="module_2.1"></a>
 
   *<font color="green">Francis Ouellette</font>*
@@ -259,7 +263,8 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   
   Lab practical:
   
-  
+
+***  
 ###  Module 2.2: Logging into the Cloud <a id="module_2.2"></a>
 
   *<font color="green">Francis Ouellette</font>*
@@ -267,10 +272,12 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lecture:
 
 
+***
 ###  *Optional* **R** Review Session <a id="r_review"></a>
 
 *<font color="green">TBA</font>*
 
+***
 ##  Day 2 <a id="day_2"></a>
 
 ###  Module 3: Mapping and Genome Rearrangement <a id="module_3"></a>
@@ -282,6 +289,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lab practical:
 
 
+***
 ###  Module 4: Gene Fusion Discovery <a id="module_4"></a>
 
   *<font color="green">Andrew McPherson</font>*
@@ -291,6 +299,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lab practical:
 
 
+***
 ##  Day 3 <a id="day_3"></a>
 
 ###  Module 5: Copy Number Alterations <a id="module_5"></a>
@@ -302,6 +311,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lab practical:
 
 
+***
 ###  Module 6: Somatic Mutations <a id="module_6"></a>
 
   *<font color="green">Sohrab Shah</font>*
@@ -311,6 +321,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lab practical:
   
   
+***
 ##  Day 4 <a id="day_3"></a>
 
 ###  Module 7: Gene Expression Profiling <a id="module_7"></a>
@@ -322,6 +333,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lab practical:
   
   
+***
 ###  Module 8: Variants to Networks <a id="module_8"></a>
 
 #### Part 1: How to annotate variants and prioritize potentially relevant ones <a id="part_1"></a>
@@ -333,6 +345,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lab practical:
   
   
+***
 #### Part 2: From genes to pathways <a id="part_2"></a>
   
   *<font color="green">Juri Reimand</font>*
@@ -342,6 +355,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lab practical:
   
 
+***
 ##  Day 5 <a id="day_3"></a>
 
 #### Part 3: Network Analysis using Reactome <a id="part_3"></a>
@@ -353,6 +367,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lab practical:
   
   
+***
 ###  Module 9: Integration of Clinical Data <a id="module_9"></a>
 
 *<font color="green">Anna Lapuk</font>*
@@ -360,3 +375,5 @@ When you log in, you'll notice that you have two directories: **CourseData** and
   Lecture:
   
   Lab practical:
+  
+  ***
