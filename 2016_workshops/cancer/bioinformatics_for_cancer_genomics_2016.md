@@ -95,7 +95,6 @@ header2: Workshop pages for students
   
 ##### Difference Between **R** and **RStudio**
 <br>
-
 **RStudio** doesn't know where libraries are installed, when they are not installed through the **RStudio** package manager. To tell **RStudio** the location, you can define the path in a startup file. Create a file called .Renviron . Inside there:
 
 ```r
@@ -107,8 +106,7 @@ That was the problem when students installed things in **RStudio** at the comman
 ... or you could use the package manger to install libraries.
 
 ##### Syntax highlighting
-
-
+<br>
 ... of scripts in the R editor does not seem to work under Windows. If you want highlighted syntax, use RStudio instead.
 
 
@@ -167,7 +165,7 @@ That was the problem when students installed things in **RStudio** at the comman
 * On the cloud, we're going to use the default username: **ubuntu**
 
 #### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a>
-
+<br>
 ##### Logging in
 
 
@@ -186,8 +184,7 @@ That was the problem when students installed things in **RStudio** at the comman
 (where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
 
 ##### Copying files to your computer
-
-
+<br>
 * To copy files from an instance, use scp in a similar fashion:
 
 ```bash
@@ -199,11 +196,9 @@ That was the problem when students installed things in **RStudio** at the comman
  http://cbw#.dyndns.info/ http://cbw#.dyndns.info/
 
 #### Logging in with Putty (Windows) <a id="putty_login"></a>
-
-
+<br>
 ##### Logging in
-
-
+<br>
 To configure Putty, start Putty and do the following:
 
 * Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number less is than 10, please add 0 in front of it.)
@@ -217,8 +212,7 @@ To configure Putty, start Putty and do the following:
 **Now that Putty is configured**, all you have to do is start putty and double-click on "Amazon node" to login.
 
 ##### Copying files to your computer
-
-
+<br>
 To configure WinScp, start WinScp and do the following:
 
 * On the right-hand buttons click "New".
@@ -237,8 +231,7 @@ To configure WinScp, start WinScp and do the following:
 **Now that WinScp is configured**, all you have to do is start WinScp and double-click on **Amazon node** to start copying files.
 
 #### File System Layout <a id="file_system_layout"></a>
-
-
+<br>
 When you log in, you'll notice that you have two directories: **CourseData** and **workspace**.
 
 * The **CourseData** directory will contain the files that you'll need to complete your lab assignments.
@@ -327,7 +320,6 @@ Lab practical:
   Lab practical:
   
   **Bonus**
-  
 You can view your results (BAM and BAM.BAI file) in the IGV browser by using the URL for that file from your Cloud instance. We have a web server running on the Amazon cloud for each instance. In a browser, like Firefox, type in your server name (cbw#.dyndns.info) and all files under your workspace will be shown there. Find your Bam and Bam.Bai file, right click it and 'copy the link location'. Start IGV and choose 'load from URL' from File menu, and then paste the location you just copied and you will see the Bam file you just generated in IGV! Narrow down the view to chromosome 15 or 17 where the break points were identified.
 
 #### Links:
@@ -358,6 +350,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
   Lab practical:
   
 #### Papers and Background Material:
+
 
  * [Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks](http://www.ncbi.nlm.nih.gov/pubmed/22383036)
  
@@ -474,8 +467,11 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 #### Papers:
 
 Clustering Algorithms: [Newman Clustering](http://www.pnas.org/content/103/23/8577.abstract) and [Hotnet](http://www.ncbi.nlm.nih.gov/pubmed/22174262)
+
 Reactome Website: [NAR paper](http://www.ncbi.nlm.nih.gov/pubmed/26656494)
+
 [Nature Methods and Perspectives Paper](http://www.ncbi.nlm.nih.gov/pubmed/26125594)
+
 [Supplementary Materials](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4717906/bin/NIHMS750562-supplement-Supplementary_materials.pdf)
 
 
@@ -527,7 +523,9 @@ Useful plugins:
 #### Papers:
 
 [Cox Regression Survival Paper](http://www.ncbi.nlm.nih.gov/pubmed/12613350)
+
 [Genomics and Transcriptional Abberations Paper](http://www.ncbi.nlm.nih.gov/pubmed/17157792)
+
 [Supplementary Data](http://www.cell.com/cms/attachment/588951/4507288/mmc1.pdf)
 
   
