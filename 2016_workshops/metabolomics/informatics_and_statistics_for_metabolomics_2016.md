@@ -41,7 +41,7 @@ header2: Workshop pages for students
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/Metabolomics_2016_Schedule_v1.pdf">Schedule for May 26 - may 27, 2016</a>
+  <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/Metabolomics_2016_Schedule_v1.pdf">Schedule for May 26 - May 27, 2016</a>
 
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
