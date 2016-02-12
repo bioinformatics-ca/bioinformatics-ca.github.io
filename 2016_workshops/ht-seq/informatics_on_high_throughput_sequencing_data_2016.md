@@ -104,16 +104,14 @@ header2: Workshop pages for students
 ### Logging into the Amazon Cloud <a id="amazon_cloud"></a>
 
 * These instructions will **ONLY** be relevant in class, as the Cloud will not be accessible from home in advance of the class.
-* 
+
 * We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download this **link certificate here**. Otherwise if you plan on using Windows (with Putty and Winscp), please download this **link certificate here**. 
 
 * On the cloud, we're going to use the default username: **ubuntu**
 
-#### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a>
-<br>
+#### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a><br>
 
-##### Logging in
-
+##### Logging in <br>
 
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
@@ -141,11 +139,9 @@ header2: Workshop pages for students
 
  http://cbw#.dyndns.info/ http://cbw#.dyndns.info/
 
-#### Logging in with Putty (Windows) <a id="putty_login"></a>
-<br>
+#### Logging in with Putty (Windows) <a id="putty_login"></a><br>
 
-##### Logging in
-<br>
+##### Logging in<br>
 
 To configure Putty, start Putty and do the following:
 
@@ -262,15 +258,15 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 
 *<font color="green">TBA</font>*
 
-'''bash
+```bash
 Files are in the following directory of the cloud instance: ~/CourseData/HT_data/Module2/
  * NA12891_CBW_chr1_R1.fastq.gz
  * NA12891_CBW_chr1_R2.fastq.gz
  * NA12892_CBW_chr1_R1.fastq.gz
  * NA12892_CBW_chr1_R2.fastq.gz
-'''
+```
 
-'''bash
+```bash
  # Create a directory to work in
  # this is where we'll place all of our output files
  
@@ -286,7 +282,7 @@ Files are in the following directory of the cloud instance: ~/CourseData/HT_data
  
  ln -s ~/CourseData/HT_data/Module2/* .
  ls
-'''
+```
 
 
 Task list:
@@ -365,7 +361,7 @@ Programs:
   
   Data set:
   
-'''bash
+```bash
 NA12878_CBW_chr1_R1.fastq.gz
 http://cbwxx.dyndns.info/module2/NA12878_CBW_chr1_R1.fastq.gz
 
@@ -377,7 +373,7 @@ http://cbwxx.dyndns.info/module7/hg19_chr1.fa
 
 dbSNP_135_chr1.vcf.gz
 http://cbwxx.dyndns.info/module2/dbSNP_135_chr1.vcf.gz
-'''
+```
 
 Note: xx is your student number.
 
