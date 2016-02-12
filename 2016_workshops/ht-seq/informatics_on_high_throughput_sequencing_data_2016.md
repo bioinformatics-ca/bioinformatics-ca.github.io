@@ -109,7 +109,7 @@ header2: Workshop pages for students
 
 * On the cloud, we're going to use the default username: **ubuntu**
 
-#### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a><br>
+#### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a> <br>
 
 
 ##### Logging in <br>
@@ -119,7 +119,7 @@ header2: Workshop pages for students
 
 ```bash
  chmod 600 CBWCG.pem
- ```
+```
 
 * To log in to the node, use the -i command line argument to specify your certificate:
 
