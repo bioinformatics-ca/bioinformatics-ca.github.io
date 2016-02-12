@@ -114,7 +114,7 @@ That was the problem when students installed things in **RStudio** at the comman
 * [**Rseek**: the specialized search engine for **R** topics](http://rseek.org/)
 * [**R** questions on stackoverflow](http://stackoverflow.com/questions/tagged/r)
 * [The Comprehensive **R** Archive Network **CRAN**](http://cran.r-project.org/)
-* [The **CRAN** task-view collection}(http://cran.r-project.org/web/views/)
+* [The **CRAN** task-view collection](http://cran.r-project.org/web/views/)
 * [**Bioconductor** task views](http://www.bioconductor.org/packages/release/BiocViews.html)
   
   
