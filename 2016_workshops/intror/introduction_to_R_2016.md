@@ -106,7 +106,7 @@ That was the problem when students installed things in **RStudio** at the comman
   
   Resources:
   
-  [Single-cell RNA-Seq defines cell type](http://www.ncbi.nlm.nih.gov/pubmed/24531970)
+  * [Single-cell RNA-Seq defines cell type](http://www.ncbi.nlm.nih.gov/pubmed/24531970)
   
   Helpful Links:
   
