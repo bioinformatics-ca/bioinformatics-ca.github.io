@@ -71,7 +71,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ##### Syntax highlighting
 <br>
-... of scripts in the R editor does not seem to work under Windows. If you want highlighted syntax, use RStudio instead.
+... of scripts in the **R** editor does not seem to work under Windows. If you want highlighted syntax, use **RStudio** instead.
 
 
 ###  Pre-workshop Tutorials <a id="pre_readings"></a>
@@ -134,7 +134,7 @@ That was the problem when students installed things in **RStudio** at the comman
   
   Links:
   
-* [Maximal Information Coefficient](http://www.ncbi.nlm.nih.gov/pubmed/22174245)[
+* [Maximal Information Coefficient](http://www.ncbi.nlm.nih.gov/pubmed/22174245)
 * [Homepage for data exploration with the MIC measure](http://www.exploredata.net/) 
 * [**CRAN**: package MINERVA](http://cran.r-project.org/web/packages/minerva/)  (**R** wrapper for a fast *mine* implementation)
 
@@ -178,25 +178,26 @@ For your reference:
   
   Links:
   
-*[Comparison of Clustering Methods](http://www.ncbi.nlm.nih.gov/pubmed/19240124)
-*[**R**-"task view": Cluster Analysis](http://cran.r-project.org/web/views/Cluster.html)  (and Finite Mixture Models)]
+* [Comparison of Clustering Methods](http://www.ncbi.nlm.nih.gov/pubmed/19240124)
+* [**R**-"task view": Cluster Analysis](http://cran.r-project.org/web/views/Cluster.html)  (and Finite Mixture Models)
   
   Dataset:
   
   If you load using **Gset.RData** do:
   
-  ```r
-load("gset.RData")
+```r
+  load("gset.RData")
 ```
 on the command line.  (Check that 'gset' is actually lower case in the folder.  You might need a capital letter at the start.)
 
 If you load using **Platf.RData** do:
 
-  ```r
-load("platf.RData")
+```r
+  load("platf.RData")
 ```
 
 R object file: **GSE26922.rds** 
+
 Read with:
 
 ```r
