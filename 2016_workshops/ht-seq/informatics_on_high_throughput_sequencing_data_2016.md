@@ -111,7 +111,9 @@ header2: Workshop pages for students
 
 #### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a><br>
 
+
 ##### Logging in <br>
+
 
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
