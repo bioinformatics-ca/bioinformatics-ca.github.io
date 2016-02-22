@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /pathway_and_network_analysis_of_-omics_data_2016/
+permalink: /pathway_and_network_analysis_of_omics_data_2016/
 title: Pathway and Network Analysis of -Omics Data 2016 Student Page
 header1: Pathway and Network Analysis of -Omics Data 2016
 header2: Workshop pages for students
