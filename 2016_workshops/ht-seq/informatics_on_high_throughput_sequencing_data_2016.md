@@ -46,7 +46,7 @@ header2: Workshop pages for students
 
   ...[Module 5: Genome Variation](#module_5)
   
-  ...[Module 6: Genome Structural Variatio](#module_6)
+  ...[Module 6: Genome Structural Variation](#module_6)
   
   ...[Module 7: Bringing it all Together with Galaxy](#module_7)
   
