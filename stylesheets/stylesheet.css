@@ -97,6 +97,12 @@ header h2 {
   left: 10px;
 }
 
+.header h2 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
 #container {
   min-height: 595px;
   background: transparent url(../images/highlight-bg.jpg) 50% 0 no-repeat;
