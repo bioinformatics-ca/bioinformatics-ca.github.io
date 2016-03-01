@@ -74,14 +74,14 @@ header2: Workshop pages for students
 
 ###  Welcome <a id="welcome"></a>
 
-  *<font color="#7e9c82">Ann Meyer</font>* 
+  *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
 ***
 
 ###  Module 1: Introduction to Metabolomics <a id="module_1"></a>
 
-  *<font color="#7e9c82">David Wishart</font>*
+  *<font color="#827e9c">David Wishart</font>*
   
   Lecture:
 
@@ -89,7 +89,7 @@ header2: Workshop pages for students
 
 ###  Module 2: Metabolite Identification and Annotation <a id="module_2"></a>
 
-  *<font color="#7e9c82">David Wishart and Jeff Xia</font>*
+  *<font color="#827e9c">David Wishart and Jeff Xia</font>*
   
   Lecture:
   
@@ -164,7 +164,7 @@ header2: Workshop pages for students
 
 ###  Module 3: Databases for Chemical, Spectral, and Biological Data <a id="module_3"></a>
 
-  *<font color="#7e9c82">David Wishart</font>*
+  *<font color="#827e9c">David Wishart</font>*
   
   Lecture:
   
@@ -196,7 +196,7 @@ header2: Workshop pages for students
 
 ###  Module 4: Backgrounder in Statistical Methods <a id="module_4"></a>
 
-  *<font color="green">David Wishart</font>*
+  *<font color="#827e9c">David Wishart</font>*
   
   Lecture:
 
@@ -204,7 +204,7 @@ header2: Workshop pages for students
 
 ###  Module 5: MetaboAnalyst <a id="module_5"></a>
 
-  *<font color="#7e9c82">David Wishart and Jeff Xia</font>*
+  *<font color="827e9c">David Wishart and Jeff Xia</font>*
   
   Lecture:
   
@@ -224,7 +224,7 @@ header2: Workshop pages for students
 
 ###  Module 6: Future of Metabolomics <a id="module_6"></a>
 
-  *<font color="#7e9c82">David Wishart</font>*
+  *<font color="827e9c">David Wishart</font>*
   
   Lecture:
 
