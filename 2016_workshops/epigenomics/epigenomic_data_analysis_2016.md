@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: post2
 permalink: /epigenomic_data_analysis_2016/
 title: Epigenomic Data Analysis 2016 Student Page
 header1: Epigenomic Data Analysis 2016
 header2: Workshop pages for students
+image: CBW_Epigenome-data_icon.jpg
 ---
 
 #### Contents
