@@ -108,15 +108,18 @@ That was the problem when students installed things in **RStudio** at the comman
 * The [R command cheat sheet](../../resources/R_Short-refcard.pdf)
 
 2) **UNIX Preparation tutorials**: 
+
 * [UNIX Bootcamp](https://github.com/griffithlab/rnaseq_tutorial/wiki/Unix-Bootcamp)
 * Tutorials #1-3 on [UNIX Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
 * [Unix Cheat sheet](http://www.rain.org/~mkummel/unix.html) 
 
 3) **IGV Tutorial**: Review how to use IGV Genome Browser if you have not used this tool before.
+
 * The [IGV Tutorial](../../resources/IGV_Tutorial.pdf)
 * *Datasets too large for Github*
 
 4) **Sequencing Terminology**:
+
 * *Coming soon*
 
 ### Logging into the Amazon Cloud <a id="amazon_cloud"></a>
@@ -131,7 +134,6 @@ That was the problem when students installed things in **RStudio** at the comman
 <br>
 
 ##### Logging in
-
 
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
@@ -164,7 +166,6 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ##### Logging in
 <br>
-
 To configure Putty, start Putty and do the following:
 
 * Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number less is than 10, please add 0 in front of it.)
