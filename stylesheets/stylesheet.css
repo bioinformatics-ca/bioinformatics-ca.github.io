@@ -105,6 +105,11 @@ header h2 {
   color: #aaa;
 }
 
+.tops {
+   vertical-align: middle;
+   horizontal-align: middle;
+}
+
 #container {
   min-height: 595px;
   background: transparent url(../images/highlight-bg.jpg) 50% 0 no-repeat;
