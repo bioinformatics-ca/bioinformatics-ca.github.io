@@ -1,8 +1,8 @@
 ---
 layout: post2
 permalink: /population_and_quantitative_genomics_2016/
-title: Population and Quantitative Genomics 2016 Student Page
-header1: Population and Quantitative Genomics 2016
+title: Next-Generation Methods for Mapping Genomic Features and Clinical Traits 2016 Student Page
+header1: Next-Generation Methods for Mapping Genomic Features and Clinical Traits 2016
 header2: Workshop pages for students
 image: CBW_population_icon.jpg
 ---
@@ -66,12 +66,12 @@ image: CBW_population_icon.jpg
 
 ###  Welcome <a id="welcome"></a>
 
-  *<font color="green">Ann Meyer</font>* 
+  *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
 ###  Module 1: Concepts in Population Genomics <a id="module_1"></a>
 
-  *<font color="green">Philip Awadalla</font>*
+  *<font color="#827e9c">Philip Awadalla</font>*
   
   Lecture:
   
@@ -80,14 +80,14 @@ image: CBW_population_icon.jpg
 
 ###  Module 2: Extensions in Population Genomics <a id="module_2"></a>
 
-  *<font color="green">Philip Awadalla</font>*
+  *<font color="#827e9c">Philip Awadalla</font>*
   
   Lecture:
 
 
 ###  Module 3: Basic Concepts in QTLs <a id="module_3"></a>
 
-  *<font color="green">Philip Awadalla and Stephen Montgomery</font>*
+  *<font color="#827e9c">Philip Awadalla and Stephen Montgomery</font>*
   
   Lecture:
   
@@ -98,7 +98,7 @@ image: CBW_population_icon.jpg
 
 ###  Module 4: Advanced Concepts in QTLs <a id="module_4"></a>
 
-  *<font color="green">Philip Awadalla and Stephen Montgomery</font>*
+  *<font color="#827e9c">Philip Awadalla and Stephen Montgomery</font>*
   
   Lecture:
   
@@ -107,14 +107,14 @@ image: CBW_population_icon.jpg
 
 ###  Module 5: Gene x Environment <a id="module_5"></a>
 
-  *<font color="green">Philip Awadalla and Stephen Montgomery</font>*
+  *<font color="#827e9c">Philip Awadalla and Stephen Montgomery</font>*
   
   Lecture:
 
 
 ###  Module 6: Functional Annotation of Mutations and Haplotypes <a id="module_6"></a>
 
-  *<font color="green">Philip Awadalla</font>*
+  *<font color="#827e9c">Philip Awadalla</font>*
   
   Lecture:
   
