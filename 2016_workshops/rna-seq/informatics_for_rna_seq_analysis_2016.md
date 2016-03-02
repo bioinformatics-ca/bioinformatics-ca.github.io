@@ -160,13 +160,9 @@ That was the problem when students installed things in **RStudio** at the comman
 
  http://cbw#.dyndns.info/ http://cbw#.dyndns.info/
 
-#### Logging in with Putty (Windows) <a id="putty_login"></a>  
-   
-   
-##### Logging in  
-   
-   
-ATo configure Putty, start Putty and do the following:
+#### Logging in with Putty (Windows) <a id="putty_login"></a>  <br>  
+##### Logging in <br>   
+To configure Putty, start Putty and do the following:
 
 * Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number less is than 10, please add 0 in front of it.)
 
