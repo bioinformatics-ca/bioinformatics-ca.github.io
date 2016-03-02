@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: post2
 permalink: /pathway_and_network_analysis_of_omics_data_2016/
 title: Pathway and Network Analysis of -Omics Data 2016 Student Page
 header1: Pathway and Network Analysis of -Omics Data 2016
 header2: Workshop pages for students
+image: CBW_pathway_icon.jpg
 ---
 
 #### Contents
