@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: post2
 permalink: /exploratory_analysis_of_biological_data_2016/
 title: Exploratory Analysis of Biological Data 2016 Student Page
 header1: Exploratory Analysis of Biological Data 2016
 header2: Workshop pages for students
+image: CBW_R_icon.jpg
 ---
 
 #### Contents
