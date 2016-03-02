@@ -116,7 +116,7 @@ That was the problem when students installed things in **RStudio** at the comman
 1) **R Preparation tutorials**: You are expected to have completed the following tutorials in **R** beforehand. The tutorial should be very accessible even if you have never used **R** before.
 
 * The [CBW R tutorial](http://bioinformatics.ca/workshop_wiki/index.php/R_tutorial) or [R Tutorial](http://www.cyclismo.org/tutorial/R/) 
-* The [R command cheat sheet](.../.../resources/R_Short-refcard.pdf)
+* The [R command cheat sheet](../../resources/R_Short-refcard.pdf)
 * [PlottingReference.pdf](http://bioinformatics.ca/workshop_wiki/images/d/dc/PlottingReference.pdf)
 
 
