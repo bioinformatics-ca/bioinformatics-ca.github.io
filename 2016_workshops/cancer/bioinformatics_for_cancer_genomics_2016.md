@@ -167,8 +167,9 @@ That was the problem when students installed things in **RStudio** at the comman
 
 #### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a>
 <p>
-##### Logging in
+<h5> Logging in </h5>
 </p>
+
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
 ```bash
@@ -197,7 +198,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 #### Logging in with Putty (Windows) <a id="putty_login"></a>
 <p>
-##### Logging in
+<h5> Logging in </h5>
 </p>
 To configure Putty, start Putty and do the following:
 
