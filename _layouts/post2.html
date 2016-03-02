@@ -25,9 +25,15 @@
     
       <div class="inner">
     <div class="header">
-      <img src="../images/{{ page.image }}" alt="logo" />
-      <h1> {{ page.header1 }} </h1>
-      <h2> {{ page.header2 }} </h2>
+      <table border="0">
+        <tr> 
+          <td rowspan="2" align="center"><img src="../images/{{ page.image }}" alt="logo" /></td>
+          <td><h1> {{ page.header1 }} </h1></td>
+        </tr>
+        <tr>
+          <td><h2> {{ page.header2 }} </h2></td>
+        </tr>
+      </table>
     </div>  
       
       <hr>
