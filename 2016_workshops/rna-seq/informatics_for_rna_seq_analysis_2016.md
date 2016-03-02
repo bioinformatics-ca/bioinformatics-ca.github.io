@@ -131,9 +131,9 @@ That was the problem when students installed things in **RStudio** at the comman
 * On the cloud, we're going to use the default username: **ubuntu**
 
 #### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a>
-<br>
+<p>
 <h5> Logging in </h5>
-<br>
+</p>
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
 ```bash
