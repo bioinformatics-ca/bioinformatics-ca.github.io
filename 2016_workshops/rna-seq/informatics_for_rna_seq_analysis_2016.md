@@ -163,7 +163,9 @@ That was the problem when students installed things in **RStudio** at the comman
 #### Logging in with Putty (Windows) <a id="putty_login"></a>
 
 
+
 ##### Logging in
+
 
 
 To configure Putty, start Putty and do the following:
