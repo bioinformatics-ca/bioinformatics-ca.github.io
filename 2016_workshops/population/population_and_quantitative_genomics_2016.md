@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: post2
 permalink: /population_and_quantitative_genomics_2016/
 title: Population and Quantitative Genomics 2016 Student Page
 header1: Population and Quantitative Genomics 2016
 header2: Workshop pages for students
+image: CBW_population_icon.jpg
 ---
 
 #### Contents
