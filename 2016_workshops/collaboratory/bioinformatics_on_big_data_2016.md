@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: post2
 permalink: /bioinformatics_on_big_data_2016/
 title: Bioinformatics on Big Data 2016 Student Page
 header1: Bioinformatics on Big Data 2016
 header2: Workshop pages for students
+image: CBW_bigdata_icon.jpg
 ---
 
 
