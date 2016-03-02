@@ -166,11 +166,9 @@ That was the problem when students installed things in **RStudio** at the comman
 * On the cloud, we're going to use the default username: **ubuntu**
 
 #### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a>
-<br>
-
+<p>
 ##### Logging in
-
-
+</p>
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
 ```bash
@@ -198,11 +196,9 @@ That was the problem when students installed things in **RStudio** at the comman
  http://cbw#.dyndns.info/ http://cbw#.dyndns.info/
 
 #### Logging in with Putty (Windows) <a id="putty_login"></a>
-<br>
-
+<p>
 ##### Logging in
-<br>
-
+</p>
 To configure Putty, start Putty and do the following:
 
 * Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number less is than 10, please add 0 in front of it.)
