@@ -115,18 +115,18 @@ That was the problem when students installed things in **RStudio** at the comman
 
 1) **R Preparation tutorials**: You are expected to have completed the following tutorials in **R** beforehand. The tutorial should be very accessible even if you have never used **R** before.
 
-* The [CBW R tutorial](http://bioinformatics.ca/workshop_wiki/index.php/R_tutorial) or http://www.cyclismo.org/tutorial/R/ 
-* The [R command cheat sheet](http://bioinformatics.ca/workshop_wiki/images/4/4c/Short-refcard.pdf)
+* The [CBW R tutorial](http://bioinformatics.ca/workshop_wiki/index.php/R_tutorial) or [R Tutorial](http://www.cyclismo.org/tutorial/R/) 
+* The [R command cheat sheet](.../.../resources/R_Short-refcard.pdf)
 * [PlottingReference.pdf](http://bioinformatics.ca/workshop_wiki/images/d/dc/PlottingReference.pdf)
 
 
-2) **Cytoscape 3.x Preparation tutorials**: Complete the introductory tutorial to Cytoscape 3.x: http://opentutorials.cgl.ucsf.edu/index.php/Portal:Cytoscape3
+2) **Cytoscape 3.x Preparation tutorials**: Complete the [introductory tutorial to Cytoscape 3.x](http://opentutorials.cgl.ucsf.edu/index.php/Portal:Cytoscape3): 
 * Introduction to Cytoscape3 - User Interface
 * Introduction to Cytoscape3 - Welcome Screen
 * Introduction to Cytoscape 3.1 - Networks, Data, Styles, Layouts and App Manager
 
 
-3) **UNIX Preparation tutorials**: Please complete tutorials #1-3 on UNIX at http://www.ee.surrey.ac.uk/Teaching/Unix/
+3) **UNIX Preparation tutorials**: Please complete tutorials #1-3 on [UNIX Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
 * [Unix Cheat sheet](http://www.rain.org/~mkummel/unix.html) 
 
 
