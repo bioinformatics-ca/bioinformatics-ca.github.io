@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: post2
 permalink: /informatics_and_statistics_for_metabolomics_2016/
 title: Informatics and Statistics for Metabolomics 2016 Student Page
 header1: Informatics and Statistics for Metabolomics 2016
 header2: Workshop pages for students
+image: CBW_metabolomics_icon.eps
 ---
 
 #### Contents
