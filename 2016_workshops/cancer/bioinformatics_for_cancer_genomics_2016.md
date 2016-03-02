@@ -175,7 +175,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ```bash
  chmod 600 CBWCG.pem
- ```
+```
 
 * To log in to the node, use the -i command line argument to specify your certificate:
 
