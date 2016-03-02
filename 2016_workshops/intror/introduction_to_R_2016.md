@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: post2
 permalink: /introduction_to_r_2016/
 title: Introduction to R 2016 Student Page
 header1: Introduction to R 2016
 header2: Workshop pages for students
+image: CBW_introtoR-icon.jpg
 ---
 
 #### Contents
