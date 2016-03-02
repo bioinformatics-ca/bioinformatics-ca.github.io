@@ -132,9 +132,8 @@ That was the problem when students installed things in **RStudio** at the comman
 
 #### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a>
 <br>
-<h5> Logging in </h5>   
-
-
+<h5> Logging in </h5>
+<br>
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
 ```bash
@@ -161,9 +160,8 @@ That was the problem when students installed things in **RStudio** at the comman
 
  http://cbw#.dyndns.info/ http://cbw#.dyndns.info/
 
-#### Logging in with Putty (Windows) <a id="putty_login"></a>  
-
-
+#### Logging in with Putty (Windows) <a id="putty_login"></a>
+<br>
 <h5> Logging in </h5>   
 <br>
 To configure Putty, start Putty and do the following:
