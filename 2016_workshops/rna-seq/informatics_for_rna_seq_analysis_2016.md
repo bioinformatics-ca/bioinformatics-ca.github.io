@@ -162,7 +162,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 #### Logging in with Putty (Windows) <a id="putty_login"></a>
 <br>
-##### Logging in
+ ##### Logging in
 <br>
 To configure Putty, start Putty and do the following:
 
