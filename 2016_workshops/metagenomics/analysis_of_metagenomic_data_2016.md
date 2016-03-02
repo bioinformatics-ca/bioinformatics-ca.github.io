@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: post2
 permalink: /analysis_of_metagenomic_data_2016/
 title: Analysis of Metagenomic Data 2016 Student Page
 header1: Analysis of Metagenomic Data 2016
 header2: Workshop pages for students
+image: CBW_Metagenome_icon.jpg
 ---
 
 #### Contents
