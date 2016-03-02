@@ -161,9 +161,8 @@ That was the problem when students installed things in **RStudio** at the comman
  http://cbw#.dyndns.info/ http://cbw#.dyndns.info/
 
 #### Logging in with Putty (Windows) <a id="putty_login"></a>  
-<br>  
-
-##### Logging in <br>   
+<br>    
+<h4> Logging in </h4>   
 
 To configure Putty, start Putty and do the following:
 
