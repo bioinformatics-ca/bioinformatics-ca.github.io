@@ -7,14 +7,16 @@ header2: Workshop pages for students
 ---
 
 
-#### Contents
-* [Logging into the Amazon Cloud](#amazon_cloud)
+#### Contents <a id="back_to_top"></a>
+[Logging into the Amazon Cloud](#amazon_cloud)
 
-  * [Logging in with ssh (Mac/Linux)](#ssh_login)
+<div class="center">
+[Logging in with ssh (Mac/Linux)](#ssh_login)
 
-  * [Logging in with Putty (Windows)](#putty_login)
+[Logging in with Putty (Windows)](#putty_login)
 
-  * [File System Layout](#file_system_layout) 
+[File System Layout](#file_system_layout) 
+</div>
 
 ***
 
@@ -23,6 +25,8 @@ header2: Workshop pages for students
 * These instructions will **ONLY** be relevant in class, as the Cloud will not be accessible from home in advance of the class.
  
 * On the cloud, we're going to use the default username: **ubuntu**
+ 
+[Return to Top][#back_to_top]
 
 #### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a>
 <p>
@@ -42,6 +46,8 @@ header2: Workshop pages for students
 
 (where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
 
+[Return to Top][#back_to_top]
+
 ##### Copying files to your computer
 <br>
 * To copy files from an instance, use scp in a similar fashion:
@@ -53,6 +59,8 @@ header2: Workshop pages for students
 * Everything created in your workspace on the cloud is also available by a web server on your cloud instance.  Simply go to the following in your browser:
 
  http://cbw#.dyndns.info/ http://cbw#.dyndns.info/
+
+[Return to Top][#back_to_top]
 
 #### Logging in with Putty (Windows) <a id="putty_login"></a>
 <p>
@@ -76,6 +84,8 @@ To configure Putty, start Putty and do the following:
 
 **Now that Putty is configured**, all you have to do is start putty and double-click on "Amazon node" to login.
 
+[Return to Top][#back_to_top]
+
 ##### Copying files to your computer
 <br>
 To configure WinScp, start WinScp and do the following:
@@ -96,6 +106,8 @@ To configure WinScp, start WinScp and do the following:
 
 **Now that WinScp is configured**, all you have to do is start WinScp and double-click on **Amazon node** to start copying files.
 
+[Return to Top][#back_to_top]
+
 #### File System Layout <a id="file_system_layout"></a>
 <br>
 When you log in, you'll notice that you have two directories: **CourseData** and **workspace**.
@@ -103,5 +115,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 * The **CourseData** directory will contain the files that you'll need to complete your lab assignments.
 
 * The **workspace** directory is where we will keep our temporary files. By default, we have around 40 GB available for our output files in the workspace directory. If you run out of space, you may need to delete some files from this directory.
+
+[Return to Top][#back_to_top]
 
 ***
