@@ -12,9 +12,9 @@ header2: Workshop pages for students
 
 <font color="#e7e7e7">...[Logging in with ssh (Mac/Linux)](#ssh_login)</font>
 
-<font color="#e7e7e7">...</font> [Logging in with Putty (Windows)](#putty_login)
+<font color="#e7e7e7">...[Logging in with Putty (Windows)](#putty_login)</font>
 
-<font color="#e7e7e7">...</font> [File System Layout](#file_system_layout)
+<font color="#e7e7e7">...[File System Layout](#file_system_layout)</font> 
 
 ***
 
