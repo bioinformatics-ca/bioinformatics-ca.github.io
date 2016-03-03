@@ -62,15 +62,15 @@ To configure Putty, start Putty and do the following:
 
 * Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number less is than 10, please add 0 in front of it.)
  
-![Basic Putty Options](../resources/Putty_Basic_Options.png)
+<img src="../resources/Putty_Basic_Options.png" alt="Basic Putty Options" class="center">
 
 * In the left hand categories,under the Connection category choose Data.  In the auto-login username field write ***ubuntu***.
- 
-![Putty Data Options](../resources/Putty_Data_Options.png)
+
+<img src="../resources/Putty_Data_Options.png" alt="Putty Data Options" class="center"> 
 
 * In the left hand categories, in the Connection category next to SSH click on the **+**. Click on Auth. In the private-key file for authentication field, hit browse and find the CBWCG.ppk certificate that you downloaded above.
 
-![Putty Auth Options](../resources/Putty_Auth_Options.png)
+<img src="../resources/Putty_Auth_Options.png" alt="Putty Auth Options" class="center">
 
 * In the left hand categories, click on Session.  In the Saved Sessions field write **Amazon node** and click save.
 
@@ -92,7 +92,7 @@ To configure WinScp, start WinScp and do the following:
 
 * Click the "Save..." button and in the "Save session as" field write "Amazon node". 
 
-![WinSCP_Login_Options](../resources/WinSCP_Login_Options.png)
+<img src="../resources/WinSCP_Login_Options.png" alt="WinSCP_Login_Options" class="center">
 
 **Now that WinScp is configured**, all you have to do is start WinScp and double-click on **Amazon node** to start copying files.
 
