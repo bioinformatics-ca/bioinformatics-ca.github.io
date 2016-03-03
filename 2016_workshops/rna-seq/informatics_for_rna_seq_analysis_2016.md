@@ -211,7 +211,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 
 *<font color="827e9c">Fouad Yousif</font>*
 
-Lecture:
+[Lecture](../../resources/RReview_slides.pdf)
 
 [Scripts](../../resources/R_Review_Session_Code.ipynb)
 
