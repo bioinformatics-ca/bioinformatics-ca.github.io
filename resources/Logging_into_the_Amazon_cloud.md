@@ -8,13 +8,13 @@ header2: Workshop pages for students
 
 
 #### Contents
-[Logging into the Amazon Cloud](#amazon_cloud)
+* [Logging into the Amazon Cloud](#amazon_cloud)
 
-...[Logging in with ssh (Mac/Linux)](#ssh_login)
+  * [Logging in with ssh (Mac/Linux)](#ssh_login)
 
-...[Logging in with Putty (Windows)](#putty_login)
+  * [Logging in with Putty (Windows)](#putty_login)
 
-...[File System Layout](#file_system_layout) 
+  * [File System Layout](#file_system_layout) 
 
 ***
 
@@ -61,10 +61,16 @@ header2: Workshop pages for students
 To configure Putty, start Putty and do the following:
 
 * Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number less is than 10, please add 0 in front of it.)
+ 
+![Basic Putty Options](../Putty_Basic_Options.png)
 
 * In the left hand categories,under the Connection category choose Data.  In the auto-login username field write ***ubuntu***.
+ 
+![Putty Data Options](../Putty_Data_Options.png)
 
 * In the left hand categories, in the Connection category next to SSH click on the **+**. Click on Auth. In the private-key file for authentication field, hit browse and find the CBWCG.ppk certificate that you downloaded above.
+
+![Putty Auth Options](../Putty_Auth_Options.png)
 
 * In the left hand categories, click on Session.  In the Saved Sessions field write **Amazon node** and click save.
 
@@ -84,8 +90,9 @@ To configure WinScp, start WinScp and do the following:
 
 * In the "private key file" field press the "..." button to browse for the CBWCG.ppk certificate.
 
-* Click the "Save..." button and in the "Save session as" field write "Amazon node" .
+* Click the "Save..." button and in the "Save session as" field write "Amazon node". 
 
+![WinSCP_Login_Options](../WinSCP_Login_Options.png)
 
 **Now that WinScp is configured**, all you have to do is start WinScp and double-click on **Amazon node** to start copying files.
 
