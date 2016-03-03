@@ -213,7 +213,7 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 
 Lecture:
 
-Scripts:
+[Scripts](../../resources/R_Review_Session_Code.ipynb)
 
 
 ##  Day 1 <a id="day_1"></a>
