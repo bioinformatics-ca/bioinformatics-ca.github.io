@@ -10,7 +10,7 @@ header2: Workshop pages for students
 #### Contents
 [Logging into the Amazon Cloud](#amazon_cloud)
 
-<font color="#e7e7e7">...</font> [Logging in with ssh (Mac/Linux)](#ssh_login)
+<font color="#e7e7e7">...[Logging in with ssh (Mac/Linux)](#ssh_login)</font>
 
 <font color="#e7e7e7">...</font> [Logging in with Putty (Windows)](#putty_login)
 
