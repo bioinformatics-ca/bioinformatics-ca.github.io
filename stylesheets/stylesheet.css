@@ -228,6 +228,11 @@ img.center {
   margin-right: auto;
 }
 
+div.center {
+  margin: 0 auto;
+  width: 80em;
+}
+
 
 /* COMMON STYLES */
 
