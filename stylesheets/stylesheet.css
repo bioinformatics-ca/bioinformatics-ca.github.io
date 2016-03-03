@@ -217,6 +217,17 @@ ul, ol, dl {
   margin-bottom: 20px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* COMMON STYLES */
 
