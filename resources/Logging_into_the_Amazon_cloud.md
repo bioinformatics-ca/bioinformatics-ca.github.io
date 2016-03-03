@@ -10,11 +10,11 @@ header2: Workshop pages for students
 #### Contents
 [Logging into the Amazon Cloud](#amazon_cloud)
 
-...[Logging in with ssh (Mac/Linux)](#ssh_login)
+   [Logging in with ssh (Mac/Linux)](#ssh_login)
 
-...[Logging in with Putty (Windows)](#putty_login)
+   [Logging in with Putty (Windows)](#putty_login)
 
-...[File System Layout](#file_system_layout)
+   [File System Layout](#file_system_layout)
 
 ***
 
