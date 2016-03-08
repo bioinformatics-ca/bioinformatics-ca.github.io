@@ -74,11 +74,14 @@ In this section we discuss how to download and install the software, how to conf
 
 #### Installation <a id="installation"></a> 
 
-1. Navigate to http://probability.ca/cran/ and follow the link to your computer's operating system.
-2. Download a precompiled binary (or "build") of the ***R*** "framework" to your computer and follow the instructions for installing it. You don't need tools, or GUI versions for now, but do make sure that the program is the correct one for your ***version*** of your operating system.
-3. Launch ***R***.
+1. Navigate to [the CRAN mirror site at the University of Toronto](http://probability.ca/cran/) and follow the link to your computer's operating system.
+
+2. Download a precompiled binary (or "build") of the **R** "framework" to your computer and follow the instructions for installing it. You don't need tools, or GUI versions for now, but do make sure that the program is the correct one for your **version** of your operating system.
+
+3. Launch **R**.
 
 The program should open a window - the "R console" - and greet you with its *input prompt*, awaiting your input:
+
 ```r
  >
 ```
