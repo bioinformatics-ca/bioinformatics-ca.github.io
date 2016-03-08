@@ -8,13 +8,13 @@ image: Bioinfo_Logo.jpg
 ---
 
 #### Contents
-<ul>
+<ol>
 <li> [The Environment](#environment)
-   <ul>
+   <ol>
    <li> [Installation](#installation) </li>
 
    <li> [User Interface](#interface) 
-       <ul>
+       <ol>
        <li> [A Note on R Studio](#RStudio) </li>
       
        <li> [THe Help System](#help) </li>
@@ -22,22 +22,22 @@ image: Bioinfo_Logo.jpg
       <li> [Working Directory](#work) </li>
       
       <li> [.Rprofile - Startup Commands](#rprofile) 
-         <ul>
+         <ol>
          <li> [Unix Systems](#unix) </li>
         
          <li> [Mac OS X Systems](#macs) </li>
         
          <li> [Windows Systems](#windows) </li>
          </li>
-         </ul>
+         </ol>
       <li> [Workspace](#workspace) </li>
       </li>
-      </ul>
+      </ol>
   <li> [Packages](#packages) </li>
   
   <li> [Scripts](#scripts) </li>
 </li>
-</ul>
+</ol>
 2. [Simple Commands](#commands)
 
    2.1 [Operators](#operators)
