@@ -11,37 +11,37 @@ image: Bioinfo_Logo.jpg
 
 [The Environment](#environment)
    
-1. [Installation](#installation) 
+...[Installation](#installation) 
 
-2. [User Interface](#interface) 
+...[User Interface](#interface) 
        
-   2.1 [A Note on R Studio](#RStudio) 
+......[A Note on R Studio](#RStudio) 
       
-   2.2 [THe Help System](#help) 
+......[THe Help System](#help) 
       
-   2.3 [Working Directory](#work) 
+......[Working Directory](#work) 
       
-   2.4 [.Rprofile - Startup Commands](#rprofile) 
+......[.Rprofile - Startup Commands](#rprofile) 
          
-    2.4.1 [Unix Systems](#unix) 
+.........[Unix Systems](#unix) 
         
-    2.4.2 [Mac OS X Systems](#macs) 
+.........[Mac OS X Systems](#macs) 
         
-    2.4.3 [Windows Systems](#windows) 
+.........[Windows Systems](#windows) 
          
-   2.5 [Workspace](#workspace) 
+......[Workspace](#workspace) 
       
-3. [Packages](#packages) 
+...[Packages](#packages) 
   
-4. [Scripts](#scripts) 
+...[Scripts](#scripts) 
 
 [Simple Commands](#commands)
 
-1. [Operators](#operators)
+...[Operators](#operators)
 
-2. [Functions](#functions)
+...[Functions](#functions)
    
-3. [Variables](#variables)
+...[Variables](#variables)
    
 [Scalar Data](#scalars)
 
@@ -55,11 +55,11 @@ image: Bioinfo_Logo.jpg
 
 [Writing Your Own Functions](#writing_functions)
 
-1. [Coding Style](#style)
+...[Coding Style](#style)
 
-2. [Debugging](#debugging)
+...[Debugging](#debugging)
    
-3. [Finishing](#finishing)
+...[Finishing](#finishing)
    
 [Notes](#notes)
 
