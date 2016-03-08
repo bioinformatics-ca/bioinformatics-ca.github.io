@@ -103,107 +103,127 @@ Let's look at some functions of the **R** console and associated windows that re
 
 ##### A Note on R Studio <a id="RStudio"></a>
 
-<div class="mw-collapsible mw-collapsed" data-expandtext="Click for more, if you are interested in R Studio..." data-collapsetext="Collapse" style="width:80%; ">
-[http://www.rstudio.com/ '''R Studio'''] is a free IDE (Integrated Development Environment) for '''R'''... 
-<div class="mw-collapsible-content" style="padding:10px;">
-Future workshops will all use '''R Studio''', even though the Mac OS X GUI for '''R''' has almost all the same functionality, and thus there is little advantage in adding a third-party wrapper around the '''R''' program. If you are working in a Linux or Windows environment, '''R Studio''' does offer tangible advantages, notably syntax-aware code coloring. Navigate to the [http://www.rstudio.com/ '''R Studio''' Website] to download and install. Here is a small list of differences. If you can contribute pros and cons from your personal experience, please let me know.
+[**R Studio**](http://www.rstudio.com/) is a free IDE (Integrated Development Environment) for **R**... 
 
-;pros
-* A consistent interface across all supported platforms; base '''R''' GUIs are not all the same.
+Most workshops will use **R Studio**, even though the Mac OS X GUI for **R** has almost all the same functionality, and thus there is little advantage in adding a third-party wrapper around the **R** program. If you are working in a Linux or Windows environment, **R Studio** does offer tangible advantages, notably syntax-aware code coloring. Navigate to the [**R Studio** Website](http://www.rstudio.com/) to download and install. 
+
+Here is a small list of differences. If you can contribute pros and cons from your personal experience, please let me know.
+
+##### Pros:
+
+* A consistent interface across all supported platforms; base **R** GUIs are not all the same.
+
 * Syntax aware code coloring.
-* Better handling of the '''Stop Execution''' button, which sometimes does not recover a stuck process on the Mac.
+
+* Better handling of the **Stop Execution** button, which sometimes does not recover a stuck process on the Mac.
+
 * Code autocompletion in the script editor. (Depending on your point of view this can be a plus or a minus.)
+
 * The ability to set breakpoints in the script editor.
-* Support for knitr, Sweave, rmarkdown...
+
+* Support for knitr, Sweave, RMarkdown...
+
 * Better support for switching between work on concurrent projects.
 
-;cons
-* The ''tiled'' interface uses more desktop space than the windows of the '''R''' GUI.
-* There are sometimes (rarely) situations where '''R''' functions do not behave in exactly the same way in '''R Studio'''.
-* The supported '''R''' version is not always immediately the most recent release. 
+##### Cons:
 
-</div>
-</div>
-</td>
-</tr>
-</table>
+* The *tiled* interface uses more desktop space than the windows of the **R** GUI.
 
-====The Help system====
-Help is available for all commands and for the R command line syntax. As well, help is available to find the names of commands when you are not sure of them. 
+* There are sometimes (rarely) situations where **R** functions do not behave in exactly the same way in **R Studio**.
+
+* The supported **R** version is not always immediately the most recent release. 
+
+#### The Help system
+
+Help is available for all commands and for the **R** command line syntax. As well, help is available to find the names of commands when you are not sure of them. 
 
 
-<small>("help" is a function, arguments to a function are passed in parentheses "()")</small>
-<source lang="rsplus">
+*("help" is a function, arguments to a function are passed in parentheses "()")*
+
+```r
 > help(rnorm)
 > 
-</source>
+```
 
+*(shorthand for the same thing)*
 
-<small>(shorthand for the same thing)</small>
-<source lang="rsplus">
+```r
 > ?rnorm
 > 
-</source>
+```
 
 
-<small>(what was the name of that again ... ?)</small>
-<source lang="rsplus">
+*(what was the name of that again ... ?)*
+
+```r
 > ?binom     
 No documentation for 'binom' in specified packages and libraries:
 you could try '??binom'
 > ??binom
 > 
-</source>
+```
 
 
-<small>(found "Binomial" in the list of keywords)</small>
-<source lang="rsplus">
+*(found "Binomial" in the list of keywords)*
+
+```r
 > ?Binomial
 > 
-</source>
+```
 
 
 If you need help on operators, place them in quotation marks. Try:
-<source lang="rsplus">
+
+```r
 > ?"+"
 > ?"~"
 > ?"["
 > ?"%in%"
 > 
-</source>
+```
 
 
-That's all fine, but you will soon notice that '''R''''s help documentation is not all that helpful for newcomers (who need the most help). Here's what you might look for.
-* The '''Description''' section describes the function in general technical terms. 
-* The '''Usage''' section tells you what arguments are required (these don't have defaults), what arguments have defaults, and what the defaults are, and whether additional arguments ("...") are allowed. Often a function comes in several variants, you will find them here.
-* The '''Arguments''' section provides detailed information . You should read it, especially regarding whether the arguments are single values, vectors, or other objects, and what effect missing arguments will have.
-* The '''Details''' section might provide common usage and context information. It might also not. Often functions have crucial information buried in an innocuous note here.
-* You have to really understand the '''Value''' section. It explains the output. Importantly, it explains the type of object a function returns - it could be a list, a matrix or something else. The value could also be an object that has special methods defined e.g. for plotting it. In that case, the object is formally a "list", and its named "components" can be retrieved with the usual list syntax (see below).
+That's all fine, but you will soon notice that **R**'s help documentation is not all that helpful for newcomers (who need the most help). Here's what you might look for.
+
+* The **Description** section describes the function in general technical terms. 
+
+* The **Usage** section tells you what arguments are required (these don't have defaults), what arguments have defaults, and what the defaults are, and whether additional arguments ("...") are allowed. Often a function comes in several variants, you will find them here.
+
+* The **Arguments** section provides detailed information . You should read it, especially regarding whether the arguments are single values, vectors, or other objects, and what effect missing arguments will have.
+
+* The **Details** section might provide common usage and context information. It might also not. Often functions have crucial information buried in an innocuous note here.
+
+* You have to really understand the **Value** section. It explains the output. Importantly, it explains the type of object a function returns - it could be a list, a matrix or something else. The value could also be an object that has special methods defined e.g. for plotting it. In that case, the object is formally a "list", and its named "components" can be retrieved with the usual list syntax (see below).
 
 If you look at the bottom of the help function, you will usually find examples of the function's usage; these often make matters more clear than the terse and principled help-text above. 
 
 What you often won't find:
 
 * Clear commented, examples that relate to the most frequent use cases.
-* Explanations '''why''' a particular function is done in a particular way.
+
+* Explanations **why** a particular function is done in a particular way.
+
 * Notes on common errors.
+
 * An exhaustive list of alternatives.
 
-Therefore, my first approach for '''R''' information is usually to Google for what interests me and this is often the quickest way to find working example code. '''R''' has a very large user base and it is becoming very rare that a reasonable question will not have a reasonable answer among the top three hits of a Google search. Also, as a result of a Google search it may turn out that something ''can't'' be done (easily)&ndash;and you won't find things that can't be done in the help system at all. You may want to include {{c|"r language"}} in your search terms, although Google is usually pretty good at figuring out what kind of "r" you are looking for, especially if your query includes a few terms vaguely related to statistics or programming.
+Therefore, my first approach for **R** information is usually to Google for what interests me and this is often the quickest way to find working example code. **R** has a very large user base and it is becoming very rare that a reasonable question will not have a reasonable answer among the top three hits of a Google search. Also, as a result of a Google search it may turn out that something *can't* be done (easily) - and you won't find things that can't be done in the help system at all. You may want to include "r language" in your search terms, although Google is usually pretty good at figuring out what kind of "r" you are looking for, especially if your query includes a few terms vaguely related to statistics or programming.
 
-* There is an active [https://stat.ethz.ch/mailman/listinfo/r-help '''R-help mailing list'''] to which you can post&ndash;or at least search the archives: your question probably has been asked and answered before. A number of SIGs (Special Interest Groups) exist for more specific discussions - e.g. for mac OS, geography, ecology etc. They are [https://stat.ethz.ch/mailman/listinfo listed here].
+* There is an active [**R-help mailing list**](https://stat.ethz.ch/mailman/listinfo/r-help) to which you can post - or at least search the archives: your question probably has been asked and answered before. A number of SIGs (Special Interest Groups) exist for more specific discussions - e.g. for mac OS, geography, ecology etc. They are [listed here](https://stat.ethz.ch/mailman/listinfo).
 
-* Most of the good responses these days are on ''stack overflow'', discussion seems to be shifting to there from the R mailing list. Information on statistics questions can often be found or obtained from the ''CrossValidated'' forum of stackexchange.
-** try this [http://stackoverflow.com/search?q=R+sort+dataframe sample search on ''stackOverflow'']...
-** try this [http://stats.stackexchange.com/search?q=R+bootstrapping+jackknifing+cross-validation sample search on ''CrossValidated'']...
+* Most of the good responses these days are on *stack overflow*, discussion seems to be shifting to there from the R mailing list. Information on statistics questions can often be found or obtained from the *CrossValidated* forum of stackexchange.
 
-* [http://rseek.org '''Rseek'''] is a specialized Google search on '''R'''-related sites. Try "time series analysis" for an example.
+** try this [sample search on *stackOverflow](http://stackoverflow.com/search?q=R+sort+dataframe)...
 
-* The '''bioconductor''' project has its own [https://support.bioconductor.org/ support site on the Web].
+** try this [sample search on ''CrossValidated''](http://stats.stackexchange.com/search?q=R+bootstrapping+jackknifing+cross-validation)...
+
+* [**Rseek**](http://rseek.org ) is a specialized Google search on **R**-related sites. Try "time series analysis" for an example.
+
+* The **bioconductor** project has its own [support site on the Web](https://support.bioconductor.org/).
 
 
 
-&nbsp;
+
 
 ====Working directory====
 To locate a file in a computer, one has to specify the ''filename'' and the directory in which the file is stored; this is sometimes called the ''path'' of the file. The "working directory" for '''R''' is either the direcory in which the '''R'''-program has been installed, or some other directory, as initialized by a startup script. You can execute the command <code>getwd()</code> to list what the "Working Directory" is currently set to:
