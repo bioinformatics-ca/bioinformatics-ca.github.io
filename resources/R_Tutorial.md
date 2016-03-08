@@ -8,36 +8,33 @@ image: Bioinfo_Logo.jpg
 ---
 
 #### Contents
-<ol>
-<li> [The Environment](#environment)
-   <ol>
-   <li> [Installation](#installation) </li>
 
-   <li> [User Interface](#interface) 
-       <ol>
-       <li> [A Note on R Studio](#RStudio) </li>
+1. [The Environment](#environment)
+   
+  1.1 [Installation](#installation) 
+
+  1.2 [User Interface](#interface) 
+       
+       1.2.1 [A Note on R Studio](#RStudio) 
       
-       <li> [THe Help System](#help) </li>
+       1.2.2 [THe Help System](#help) 
       
-      <li> [Working Directory](#work) </li>
+       1.2.3 [Working Directory](#work) 
       
-      <li> [.Rprofile - Startup Commands](#rprofile) 
-         <ol>
-         <li> [Unix Systems](#unix) </li>
+       1.2.4 [.Rprofile - Startup Commands](#rprofile) 
+         
+         1.2.4.1 [Unix Systems](#unix) 
         
-         <li> [Mac OS X Systems](#macs) </li>
+         1.2.4.2 [Mac OS X Systems](#macs) 
         
-         <li> [Windows Systems](#windows) </li>
-         </li>
-         </ol>
-      <li> [Workspace](#workspace) </li>
-      </li>
-      </ol>
-  <li> [Packages](#packages) </li>
+         1.2.4.3 [Windows Systems](#windows) 
+         
+       1.2.5 [Workspace](#workspace) 
+      
+   1.3 [Packages](#packages) 
   
-  <li> [Scripts](#scripts) </li>
-</li>
-</ol>
+   1.4 [Scripts](#scripts) 
+
 2. [Simple Commands](#commands)
 
    2.1 [Operators](#operators)
