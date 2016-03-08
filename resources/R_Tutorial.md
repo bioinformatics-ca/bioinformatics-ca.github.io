@@ -15,29 +15,53 @@ image: Bioinfo_Logo.jpg
    1.2 [User Interface](#interface)
 
       1.2.1 [A Note on R Studio](#RStudio)
+      
       1.2.2 [THe Help System](#help)
+      
       1.2.3 [Working Directory](#work)
+      
       1.2.4 [.Rprofile - Startup Commands](#rprofile)
+      
         1.2.4.1 [Unix Systems](#unix)
+        
         1.2.4.2 [Mac OS X Systems](#macs)
+        
         1.2.4.3 [Windows Systems](#windows)
+        
       1.2.5 [Workspace](#workspace)
+      
   1.3 [Packages](#packages)
+  
   1.4 [Scripts](#scripts)
+  
 2. [Simple Commands](#commands)
+
    2.1 [Operators](#operators)
+
    2.2 [Functions](#functions)
+   
    2.3 [Variables](#variables)
+   
 3. [Scalar Data](#scalars)
+
 4. [Vectors](#vectors)
+
 5. [Matrices](#matrices)
+ 
 6. [Lists](#lists)
+
 7. [Data frames](#data_frames)
+
 8. [Writing Your Own Functions](#writing_functions)
+
    8.1 [Coding Style](#style)
-   8.2 [Debugging](#debugging]
+
+   8.2 [Debugging](#debugging)
+   
    8.3 [Finishing](#finishing)
+   
 9. [Notes](#notes)
+
 10. [Further Reading and Resources](#reading_resources)
 
   
