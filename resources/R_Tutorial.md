@@ -15,21 +15,21 @@ image: Bioinfo_Logo.jpg
 
   1.2 [User Interface](#interface) 
        
-       1.2.1 [A Note on R Studio](#RStudio) 
+      1.2.1 [A Note on R Studio](#RStudio) 
       
-       1.2.2 [THe Help System](#help) 
+      1.2.2 [THe Help System](#help) 
       
-       1.2.3 [Working Directory](#work) 
+      1.2.3 [Working Directory](#work) 
       
-       1.2.4 [.Rprofile - Startup Commands](#rprofile) 
+      1.2.4 [.Rprofile - Startup Commands](#rprofile) 
          
-         1.2.4.1 [Unix Systems](#unix) 
+        1.2.4.1 [Unix Systems](#unix) 
         
-         1.2.4.2 [Mac OS X Systems](#macs) 
+        1.2.4.2 [Mac OS X Systems](#macs) 
         
-         1.2.4.3 [Windows Systems](#windows) 
+        1.2.4.3 [Windows Systems](#windows) 
          
-       1.2.5 [Workspace](#workspace) 
+      1.2.5 [Workspace](#workspace) 
       
    1.3 [Packages](#packages) 
   
