@@ -9,61 +9,61 @@ image: Bioinfo_Logo.jpg
 
 #### Contents
 
-1. [The Environment](#environment)
+[The Environment](#environment)
    
-  1.1 [Installation](#installation) 
+1. [Installation](#installation) 
 
-  1.2 [User Interface](#interface) 
+2. [User Interface](#interface) 
        
-     1.2.1 [A Note on R Studio](#RStudio) 
+   2.1 [A Note on R Studio](#RStudio) 
       
-     1.2.2 [THe Help System](#help) 
+   2.2 [THe Help System](#help) 
       
-     1.2.3 [Working Directory](#work) 
+   2.3 [Working Directory](#work) 
       
-     1.2.4 [.Rprofile - Startup Commands](#rprofile) 
+   2.4 [.Rprofile - Startup Commands](#rprofile) 
          
-       1.2.4.1 [Unix Systems](#unix) 
+    2.4.1 [Unix Systems](#unix) 
         
-       1.2.4.2 [Mac OS X Systems](#macs) 
+    2.4.2 [Mac OS X Systems](#macs) 
         
-       1.2.4.3 [Windows Systems](#windows) 
+    2.4.3 [Windows Systems](#windows) 
          
-     1.2.5 [Workspace](#workspace) 
+   2.5 [Workspace](#workspace) 
       
-   1.3 [Packages](#packages) 
+3. [Packages](#packages) 
   
-   1.4 [Scripts](#scripts) 
+4. [Scripts](#scripts) 
 
-2. [Simple Commands](#commands)
+[Simple Commands](#commands)
 
-   2.1 [Operators](#operators)
+1. [Operators](#operators)
 
-   2.2 [Functions](#functions)
+2. [Functions](#functions)
    
-   2.3 [Variables](#variables)
+3. [Variables](#variables)
    
-3. [Scalar Data](#scalars)
+[Scalar Data](#scalars)
 
-4. [Vectors](#vectors)
+[Vectors](#vectors)
 
-5. [Matrices](#matrices)
+[Matrices](#matrices)
  
-6. [Lists](#lists)
+[Lists](#lists)
 
-7. [Data frames](#data_frames)
+[Data frames](#data_frames)
 
-8. [Writing Your Own Functions](#writing_functions)
+[Writing Your Own Functions](#writing_functions)
 
-   8.1 [Coding Style](#style)
+1. [Coding Style](#style)
 
-   8.2 [Debugging](#debugging)
+2. [Debugging](#debugging)
    
-   8.3 [Finishing](#finishing)
+3. [Finishing](#finishing)
    
-9. [Notes](#notes)
+[Notes](#notes)
 
-10. [Further Reading and Resources](#reading_resources)
+[Further Reading and Resources](#reading_resources)
 
   
   
