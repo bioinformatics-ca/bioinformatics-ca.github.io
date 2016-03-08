@@ -117,7 +117,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 * The [CBW R tutorial](http://bioinformatics.ca/workshop_wiki/index.php/R_tutorial) or [R Tutorial](http://www.cyclismo.org/tutorial/R/) 
 * The [R command cheat sheet](../../resources/R_Short-refcard.pdf)
-* [PlottingReference.pdf](http://bioinformatics.ca/workshop_wiki/images/d/dc/PlottingReference.pdf)
+* [PlottingReference.pdf](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/resources/Plotting.Reference.ipynb)
 
 
 2) **Cytoscape 3.x Preparation tutorials**: Complete the [introductory tutorial to Cytoscape 3.x](http://opentutorials.cgl.ucsf.edu/index.php/Portal:Cytoscape3): 
