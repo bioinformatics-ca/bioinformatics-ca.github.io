@@ -22,11 +22,11 @@ image: Bioinfo_Logo.jpg
       
       1.2.4 [.Rprofile - Startup Commands](#rprofile)
       
-        1.2.4.1 [Unix Systems](#unix)
+       1.2.4.1 [Unix Systems](#unix)
         
-        1.2.4.2 [Mac OS X Systems](#macs)
+       1.2.4.2 [Mac OS X Systems](#macs)
         
-        1.2.4.3 [Windows Systems](#windows)
+       1.2.4.3 [Windows Systems](#windows)
         
       1.2.5 [Workspace](#workspace)
       
