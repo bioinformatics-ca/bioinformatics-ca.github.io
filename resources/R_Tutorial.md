@@ -257,7 +257,7 @@ Besides setting the working directory, other items that might go into such a fil
 
 * functions that you would like to preload.
 
-######... Unix Systems <a id="unix"></a>
+###### ... Unix Systems <a id="unix"></a>
 
 *Navigate to your home directory (<code>cd ~</code>).
 
@@ -267,7 +267,7 @@ Besides setting the working directory, other items that might go into such a fil
 
 *Save the file with a filename of <code>.Rprofile</code>. (Note the dot prefix!)
 
-######... Mac OS X Systems <a id="mac"></a>
+###### ... Mac OS X Systems <a id="mac"></a>
 
 On Macs, filenames that begin with a dot are not normally shown in the Finder. Either you can open a terminal window and use <code>nano</code> to edit, instead of Textedit. Or, you can configure the Finder to show you such so-called "hidden files" by default. To do this:
 
@@ -281,7 +281,7 @@ On Macs, filenames that begin with a dot are not normally shown in the Finder. E
 
 In any case: the procedure is the same as for Unix systems. A text editor you can use is <code>nano</code> in a Terminal window.
 
-######...Windows Systems
+###### ...Windows Systems <a id="windows"></a>
 ...
 
 ##### Workspace <a id="workspace"></a>
@@ -332,7 +332,6 @@ aaindex$PONJ960101
 # plot amino acid codes by hydrophobicity and volume
 plot(aaindex$FASG890101$I, aaindex$PONJ960101$I, xlab="hydrophobicity", ylab="volume", type="n")
 text(aaindex$FASG890101$I, aaindex$PONJ960101$I, labels=a(names(aaindex$FASG890101$I)))
-
 ```
 
 
@@ -367,7 +366,6 @@ if (!require(sos)) {
 }
 
 findFn("moving average")
-
 ```
 
 Note that the **Bioconductor** project has its own installation system the <code>bioclite()</code> function. It is explained [**here**](http://www.bioconductor.org/install/).
@@ -390,7 +388,7 @@ My preferred way of working with **R** is not to type commands into the console.
 * Use the *File* menu to open a *New Document* (on Mac) or *New Script* (on Windows).
 
 * Enter the following code (copy from here and paste):
-*
+
 ```r
 # sample script:
 # define a vector
@@ -399,7 +397,6 @@ a <- c(1, 1, 2, 3, 5, 8, 13)
 a
 # calculate the mean of its values
 mean(a)
-
 ```
 
 * save the file in your working directory (e.g. with the name <code>sample.R</code>).
@@ -422,7 +419,6 @@ a <- c(1, 1, 2, 3, 5, 8, 13)
 print(a)
 # calculate the mean of its values
 print(mean(a))
-
 ```
 
 * Confirm that the <code>print(a)</code> command also works when you execute the line directly from the script.
