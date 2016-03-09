@@ -244,11 +244,7 @@ ul#navmenu, ul.sub1, ul.sub2, ul.sub3 {
 
 ul#navmenu li {
     float: left;
-    border-right: 1px solid #bbb;
-}
-
-ul#navmenu li:last-child {
-	border-rigth: none;
+    border: 1px solid #bbb;
 }
 
 ul#navmenu a {
