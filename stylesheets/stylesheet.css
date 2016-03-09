@@ -237,7 +237,6 @@ div.center {
 
 ul#navmenu, ul.sub1, ul.sub2, ul.sub3 {
    list-style-type: none;
-   background-color: #b26b6b;
    overflow: hidden;
 }
 
@@ -249,7 +248,7 @@ ul#navmenu li {
 ul#navmenu a {
     text-decoration: none;
     display: block;
-    background-color: #FFF;
+    background-color: #b26b6b;
 }
 
 ul#navmenu .sub1 a {
