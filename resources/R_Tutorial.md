@@ -7,81 +7,57 @@ header2: An Introduction to R
 image: Bioinfo_Logo.jpg
 ---
 <div class="navbar">
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li class="dropdown">
-    <a href="#" class="dropbtn">Dropdown</a>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </li>
-</ul>
+   <ul>
+   <li class="dropdown">
+     <a href="#environment" class="dropbtn">Environment</a>
+       <div class="dropdown-content">
+          <a href="#installation">Installation</a>
+          <li class="dropdown">
+           <a href="#interface" class="dropbtn">User Interface</a>
+             <div class="dropdown-content">
+               <a href="#RStudio">A Note on RStudio</a>
+               <a href="#help">The Help System</a>
+               <a href="#work">Working Directory</a>
+               <li class="dropdown">
+               <a href="#rprofile" class="dropbrn">.Rprofile - Startup Commands</a>
+                 <div class="dropdown-content">
+                   <a href="#unix">Unix Systems</a>
+                   <a href="#macs">Mac OS X Systems</a>
+                   <a href="#windows">Windows Systems</a>
+                  </div>
+                </li>
+                <a href="#workspace">Workspace</a>
+              </div>
+            </li>
+          <a href="#packages">Packages</a>
+          <a href="#scripts">Scripts</a>
+        </div>
+    </li>
+    <li class="dropdown">
+     <a href="#commands" class="dropbtn">Simple Commands</a>
+       <div class="dropdown-content">
+          <a href="#operators">Operators</a>
+          <a href="#functions">Functions</a>
+          <a href="#variables">Variables</a>
+        </div>
+      </li>
+      <li><a href="#scalars">Scalar Data</a></li>
+      <li><a href="#vectors">Vectors</a></li>
+      <li><a href="#matrices">Matrices</a></li>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#data_frames">Data Frames</a></li>
+      <li class="dropdown">
+      <a href="#writing_fucntions" class="dropbtn">Writing Functions</a>
+       <div class="dropdown-content">
+          <a href="#style">Coding Style</a>
+          <a href="#debugging">Debugging</a>
+          <a href="#finishing">Finishing</a>
+        </div>
+      </li>
+      <li><a href="#notes">Notes</a></li>
+      <li><a href="#reading_resources">Further Reading and Resources</a></li>
+   </ul>
 </div>
-
-#### Contents
-
-[The Environment](#environment)
-   
-...[Installation](#installation) 
-
-...[User Interface](#interface) 
-       
-......[A Note on R Studio](#RStudio) 
-      
-......[THe Help System](#help) 
-      
-......[Working Directory](#work) 
-      
-......[.Rprofile - Startup Commands](#rprofile) 
-         
-.........[Unix Systems](#unix) 
-        
-.........[Mac OS X Systems](#macs) 
-        
-.........[Windows Systems](#windows) 
-         
-......[Workspace](#workspace) 
-      
-...[Packages](#packages) 
-  
-...[Scripts](#scripts) 
-
-[Simple Commands](#commands)
-
-...[Operators](#operators)
-
-...[Functions](#functions)
-   
-...[Variables](#variables)
-   
-[Scalar Data](#scalars)
-
-[Vectors](#vectors)
-
-[Matrices](#matrices)
- 
-[Lists](#lists)
-
-[Data frames](#data_frames)
-
-[Writing Your Own Functions](#writing_functions)
-
-...[Coding Style](#style)
-
-...[Debugging](#debugging)
-   
-...[Finishing](#finishing)
-   
-[Notes](#notes)
-
-[Further Reading and Resources](#reading_resources)
-
-  
-  
-***
 
 ###  The Environment  <a id="environment"></a>
 
