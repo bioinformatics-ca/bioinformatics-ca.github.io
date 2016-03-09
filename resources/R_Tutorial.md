@@ -12,13 +12,14 @@ image: Bioinfo_Logo.jpg
      <a href="#environment" class="dropbtn">Environment</a>
      <div class="dropdown-content">
         <a href="#installation">Installation</a>
-
+        <ul>
         <li class="dropdown">
            <a href="#interface" class="dropbtn">User Interface</a>
              <div class="dropdown-content">
                 <a href="#RStudio">A Note on RStudio</a>
              </div>
-        </li>     
+        </li> 
+        </ul>    
         <a href="#rprofile">.Rprofile - Startup Commands</a>
         <a href="#packages">Packages</a>
         <a href="#scripts">Scripts</a>
