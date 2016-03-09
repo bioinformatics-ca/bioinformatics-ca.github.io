@@ -7,7 +7,7 @@ header2: An Introduction to R
 image: Bioinfo_Logo.jpg
 ---
 
-<div>
+
 <ul id="navmenu">
   <li><a href="content">Content</a>
      <ul class="sub1">
@@ -48,7 +48,7 @@ image: Bioinfo_Logo.jpg
     </ul>
     </li>
   </ul>  
-</div>
+
 
 
 ###  The Environment  <a id="environment"></a>
