@@ -233,65 +233,139 @@ div.center {
   width: 80em;
 }
 
-.navbar ul {
+/* rules for nav menu */
+
+
+ul#navbar {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	background-color: #9c7e88;
+	background-color: #b26b6b;
+	overflow: hidden;
+	border: 1px solid #bbb;
+}
+
+ul.sub1 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #bf8585;
+	overflow: hidden;
+	border: 1px solid #bbb;
+}
+
+ul.sub2 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #cd9f9f;
+	overflow: hidden;
+	border: 1px solid #bbb;
+}
+
+ul.sub3 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #dab9b9;
 	overflow: hidden;
 	border: 1px solid #bbb;
 }
 
 
-.navbar li {
-	float: left;
+ul#navbar li {
+	width: 125px;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin-right: 4px;
 	border: 1px solid #bbb;
 }
 
-.navbar li:last-child {
+ul#navbar li:last-child {
 	border-right: none;
 }
 
-.navbar li a:hover, .dropdown:hover .dropbtn {
-	background-color: #cd8787;
-}
-
-.navbar li a, .dropbtn {
-	display: inline-block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-li.dropdown {
-	display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #a78c95;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+ul#navbar a {
     text-decoration: none;
     display: block;
-    text-align: left;
+    width: 125px;
+    height: 25px;
+    line-height: 25 px;
+    background-color: #ab5e5e;
+    border: 1px solid #bbb;
+    border-radius: 5px;
 }
 
-.dropdown-content a:hover {
-	background-color: #f1f1f1
-	
+ul#navbar .sub1 a {
+    margin-top: 3px;
 }
 
-.dropdown:hover > .dropdown-content {
+ul#navbar .sub2 a {
+    margin-left: 8px;
+}
+
+ul#navbar .sub3 a {
+    margin-left: 8px;
+}
+
+ul#navbar li:hover > a {
+    background-color: #a15454;
+}
+
+ul#navbar li:hover a:hover {
+    background-color: #944e4e;
+}
+
+ul#navbar ul.sub1 {
+    display: none;
+    position: absolute;
+    top: 26px;
+    left: 0px;
+}
+
+ul#navbar ul.sub2 {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 78px;
+}
+
+ul#navbar ul.sub3 {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 78px;
+}
+
+ul#navbar li:hover .sub1 {
     display: block;
 }
+
+ul#navbar .sub1 li:hover .sub2 {
+    display: block;
+}
+
+ul#navbar .sub1 .sub2 li:hover .sub3 {
+    display: block;
+}
+
+.darrow {
+    font-size: 8pt;
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    color: #a15454;
+}
+
+.rarrow {
+    font-size: 8pt;
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    color: #a15454;
+}
+
 
 
 /* COMMON STYLES */
