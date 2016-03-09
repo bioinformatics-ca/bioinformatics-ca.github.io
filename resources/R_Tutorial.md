@@ -9,41 +9,44 @@ image: Bioinfo_Logo.jpg
 
 <div>
 <ul id="navmenu">
-  <li><a href="#environment">Environment</a>
-     <ul class="sub1">  
-       <li><a href="#installation">Installation</a></li>
-       <li><a href="#interface">User Interface</a>
-           <ul class="sub2">
-               <li><a href="#RStudio">A Note on RStudio</a></li>
+  <li><a href="content">Content</a>
+     <ul class="sub1">
+      <li><a href="#environment">Environment</a>
+         <ul class="sub2">  
+           <li><a href="#installation">Installation</a></li>
+           <li><a href="#interface">User Interface</a>
+               <ul class="sub3">
+                   <li><a href="#RStudio">A Note on RStudio</a></li>
+               </ul>
+           </li>     
+           <li><a href="#rprofile">.Rprofile - Startup Commands</a></li>
+           <li><a href="#packages">Packages</a></li>
+           <li><a href="#scripts">Scripts</a></li>
+        </ul>
+       </li>
+       <li><a href="#commands">Simple Commands</a>
+          <ul class="sub2">
+             <li><a href="#operators">Operators</a></li>
+             <li><a href="#functions">Functions</a></li>
+             <li><a href="#variables">Variables</a></li>
            </ul>
-       </li>     
-       <li><a href="#rprofile">.Rprofile - Startup Commands</a></li>
-       <li><a href="#packages">Packages</a></li>
-       <li><a href="#scripts">Scripts</a></li>
+       </li>
+       <li><a href="#scalars">Scalar Data</a></li>
+       <li><a href="#vectors">Vectors</a></li>
+       <li><a href="#matrices">Matrices</a></li>
+       <li><a href="#lists">Lists</a></li>
+       <li><a href="#data_frames">Data Frames</a></li>
+       <li><a href="#writing_fucntions">Writing Functions</a>
+          <ul class="sub2">
+             <li><a href="#style">Coding Style</a></li>
+             <li><a href="#debugging">Debugging</a></li>
+             <li><a href="#finishing">Finishing</a></li>
+           </ul>
+         </li>
+         <li><a href="#notes">Notes</a></li>
+         <li><a href="#reading_resources">Further Reading and Resources</a></li>
     </ul>
-   </li>
-   <li><a href="#commands">Simple Commands</a>
-      <ul class="sub1">
-         <li><a href="#operators">Operators</a></li>
-         <li><a href="#functions">Functions</a></li>
-         <li><a href="#variables">Variables</a></li>
-       </ul>
-   </li>
-   <li><a href="#scalars">Scalar Data</a></li>
-   <li><a href="#vectors">Vectors</a></li>
-   <li><a href="#matrices">Matrices</a></li>
-   <li><a href="#lists">Lists</a></li>
-   <li><a href="#data_frames">Data Frames</a></li>
-   <li><a href="#writing_fucntions">Writing Functions</a>
-      <ul class="sub1">
-         <li><a href="#style">Coding Style</a></li>
-         <li><a href="#debugging">Debugging</a></li>
-         <li><a href="#finishing">Finishing</a></li>
-       </ul>
-     </li>
-     <li><a href="#notes">Notes</a></li>
-     <li><a href="#reading_resources">Further Reading and Resources</a></li>
-</ul>
+  </ul>  
 </div>
 
 
