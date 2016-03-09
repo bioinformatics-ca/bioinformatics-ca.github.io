@@ -7,7 +7,6 @@ header2: An Introduction to R
 image: Bioinfo_Logo.jpg
 ---
 
-
 <ul id="navmenu">
   <li><a href="content">Content</a>
      <ul class="sub1">
@@ -23,7 +22,7 @@ image: Bioinfo_Logo.jpg
            <li><a href="#packages">Packages</a></li>
            <li><a href="#scripts">Scripts</a></li>
         </ul>
-       </li>
+      </li>
        <li><a href="#commands">Simple Commands</a>
           <ul class="sub2">
              <li><a href="#operators">Operators</a></li>
@@ -42,12 +41,12 @@ image: Bioinfo_Logo.jpg
              <li><a href="#debugging">Debugging</a></li>
              <li><a href="#finishing">Finishing</a></li>
            </ul>
-         </li>
-         <li><a href="#notes">Notes</a></li>
-         <li><a href="#reading_resources">Further Reading and Resources</a></li>
+        </li>
+        <li><a href="#notes">Notes</a></li>
+        <li><a href="#reading_resources">Further Reading and Resources</a></li>
     </ul>
-    </li>
-  </ul>  
+  </li>
+</ul>  
 
 
 
