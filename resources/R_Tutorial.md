@@ -43,6 +43,8 @@ image: Bioinfo_Logo.jpg
      <li><a href="#reading_resources">Further Reading and Resources</a></li>
 </ul>
 
+<br>
+
 ###  The Environment  <a id="environment"></a>
 
 In this section we discuss how to download and install the software, how to configure an **R** session and what work with the **R** environment includes.
