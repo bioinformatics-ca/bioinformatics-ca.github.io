@@ -10,28 +10,13 @@ image: Bioinfo_Logo.jpg
    <ul>
    <li class="dropdown">
      <a href="#environment" class="dropbtn">Environment</a>
-       <div class="dropdown-content">
-          <a href="#installation">Installation</a>
-          <li class="dropdown">
-           <a href="#interface" class="dropbtn">User Interface</a>
-             <div class="dropdown-content">
-               <a href="#RStudio">A Note on RStudio</a>
-               <a href="#help">The Help System</a>
-               <a href="#work">Working Directory</a>
-               <li class="dropdown">
-               <a href="#rprofile" class="dropbrn">.Rprofile - Startup Commands</a>
-                 <div class="dropdown-content">
-                   <a href="#unix">Unix Systems</a>
-                   <a href="#macs">Mac OS X Systems</a>
-                   <a href="#windows">Windows Systems</a>
-                  </div>
-                </li>
-                <a href="#workspace">Workspace</a>
-              </div>
-            </li>
-          <a href="#packages">Packages</a>
-          <a href="#scripts">Scripts</a>
-        </div>
+     <div class="dropdown-content">
+        <a href="#installation">Installation</a>
+        <a href="#interface">User Interface</a>
+        <a href="#rprofile">.Rprofile - Startup Commands</a>
+        <a href="#packages">Packages</a>
+        <a href="#scripts">Scripts</a>
+     </div>
     </li>
     <li class="dropdown">
      <a href="#commands" class="dropbtn">Simple Commands</a>
@@ -40,13 +25,13 @@ image: Bioinfo_Logo.jpg
           <a href="#functions">Functions</a>
           <a href="#variables">Variables</a>
         </div>
-      </li>
-      <li><a href="#scalars">Scalar Data</a></li>
-      <li><a href="#vectors">Vectors</a></li>
-      <li><a href="#matrices">Matrices</a></li>
-      <li><a href="#lists">Lists</a></li>
-      <li><a href="#data_frames">Data Frames</a></li>
-      <li class="dropdown">
+    </li>
+    <li><a href="#scalars">Scalar Data</a></li>
+    <li><a href="#vectors">Vectors</a></li>
+    <li><a href="#matrices">Matrices</a></li>
+    <li><a href="#lists">Lists</a></li>
+    <li><a href="#data_frames">Data Frames</a></li>
+    <li class="dropdown">
       <a href="#writing_fucntions" class="dropbtn">Writing Functions</a>
        <div class="dropdown-content">
           <a href="#style">Coding Style</a>
