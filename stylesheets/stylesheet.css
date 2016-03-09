@@ -236,7 +236,7 @@ div.center {
 /* rules for nav menu */
 
 ul#navmenu, ul.sub1, ul.sub2, ul.sub3 {
-   list-style-type:none;
+   list-style-type: none;
 }
 
 ul#navmenu li {
