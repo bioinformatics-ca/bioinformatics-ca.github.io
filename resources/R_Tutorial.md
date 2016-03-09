@@ -7,11 +7,11 @@ header2: An Introduction to R
 image: Bioinfo_Logo.jpg
 ---
 <ul id="navmenu">
-  <li><a href="#environment">Environment</a><span class="darrow">&#9660;</span>
+  <li><a href="#environment">Environment</a>
      <ul class="sub1">  
        <li><a href="#installation">Installation</a></li>
        <li><a href="#interface">User Interface</a>
-           <ul class="sub2"><span class="rarrow">&#9654;</span> 
+           <ul class="sub2">
                <li><a href="#RStudio">A Note on RStudio</a></li>
            </ul>
        </li>     
@@ -20,7 +20,7 @@ image: Bioinfo_Logo.jpg
        <li><a href="#scripts">Scripts</a></li>
     </ul>
    </li>
-   <li><a href="#commands">Simple Commands</a><span class="darrow">&#9660;</span>
+   <li><a href="#commands">Simple Commands</a>
       <ul class="sub1">
          <li><a href="#operators">Operators</a></li>
          <li><a href="#functions">Functions</a></li>
@@ -32,7 +32,7 @@ image: Bioinfo_Logo.jpg
    <li><a href="#matrices">Matrices</a></li>
    <li><a href="#lists">Lists</a></li>
    <li><a href="#data_frames">Data Frames</a></li>
-   <li><a href="#writing_fucntions">Writing Functions</a><span class="darrow">&#9660;</span>
+   <li><a href="#writing_fucntions">Writing Functions</a>
       <ul class="sub1">
          <li><a href="#style">Coding Style</a></li>
          <li><a href="#debugging">Debugging</a></li>
