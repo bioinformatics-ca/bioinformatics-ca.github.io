@@ -6,50 +6,42 @@ header1: CBW R Tutorial
 header2: An Introduction to R 
 image: Bioinfo_Logo.jpg
 ---
-<div class="navbar">
-   <ul>
-   <li class="dropdown">
-     <a href="#environment" class="dropbtn">Environment</a>
-     <div class="dropdown-content">
-        <a href="#installation">Installation</a>
-        <ul>
-        <li class="dropdown">
-           <a href="#interface" class="dropbtn">User Interface</a>
-             <div class="dropdown-content">
-                <a href="#RStudio">A Note on RStudio</a>
-             </div>
-        </li> 
-        </ul>    
-        <a href="#rprofile">.Rprofile - Startup Commands</a>
-        <a href="#packages">Packages</a>
-        <a href="#scripts">Scripts</a>
-     </div>
-    </li>
-    <li class="dropdown">
-     <a href="#commands" class="dropbtn">Simple Commands</a>
-       <div class="dropdown-content">
-          <a href="#operators">Operators</a>
-          <a href="#functions">Functions</a>
-          <a href="#variables">Variables</a>
-        </div>
-    </li>
-    <li><a href="#scalars">Scalar Data</a></li>
-    <li><a href="#vectors">Vectors</a></li>
-    <li><a href="#matrices">Matrices</a></li>
-    <li><a href="#lists">Lists</a></li>
-    <li><a href="#data_frames">Data Frames</a></li>
-    <li class="dropdown">
-      <a href="#writing_fucntions" class="dropbtn">Writing Functions</a>
-       <div class="dropdown-content">
-          <a href="#style">Coding Style</a>
-          <a href="#debugging">Debugging</a>
-          <a href="#finishing">Finishing</a>
-        </div>
-      </li>
-      <li><a href="#notes">Notes</a></li>
-      <li><a href="#reading_resources">Further Reading and Resources</a></li>
-   </ul>
-</div>
+<ul id="navbar">
+  <li><a href="#environment" class="dropbtn">Environment</a><span class="darrow">&#9660;</span>
+     <ul class="sub1">  
+       <li><a href="#installation">Installation</a></li>
+       <li><a href="#interface">User Interface</a>
+           <ul class="sub2"><span class="rarrow">&#9654;</span> 
+               <li><a href="#RStudio">A Note on RStudio</a></li>
+           </ul>
+       </li>     
+       <li><a href="#rprofile">.Rprofile - Startup Commands</a></li>
+       <li><a href="#packages">Packages</a></li>
+       <li><a href="#scripts">Scripts</a></li>
+    </ul>
+   </li>
+   <li><a href="#commands">Simple Commands</a><span class="darrow">&#9660;</span>
+      <ul class="sub1">
+         <li><a href="#operators">Operators</a></li>
+         <li><a href="#functions">Functions</a></li>
+         <li><a href="#variables">Variables</a></li>
+       </ul>
+   </li>
+   <li><a href="#scalars">Scalar Data</a></li>
+   <li><a href="#vectors">Vectors</a></li>
+   <li><a href="#matrices">Matrices</a></li>
+   <li><a href="#lists">Lists</a></li>
+   <li><a href="#data_frames">Data Frames</a></li>
+   <li><a href="#writing_fucntions">Writing Functions</a><span class="darrow">&#9660;</span>
+      <ul class="sub1">
+         <li><a href="#style">Coding Style</a></li>
+         <li><a href="#debugging">Debugging</a></li>
+         <li><a href="#finishing">Finishing</a></li>
+       </ul>
+     </li>
+     <li><a href="#notes">Notes</a></li>
+     <li><a href="#reading_resources">Further Reading and Resources</a></li>
+</ul>
 
 ###  The Environment  <a id="environment"></a>
 
