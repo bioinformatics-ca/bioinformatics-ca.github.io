@@ -7,7 +7,7 @@ header2: An Introduction to R
 image: Bioinfo_Logo.jpg
 ---
 <ul id="navmenu">
-  <li><a href="#environment" class="dropbtn">Environment</a><span class="darrow">&#9660;</span>
+  <li><a href="#environment">Environment</a><span class="darrow">&#9660;</span>
      <ul class="sub1">  
        <li><a href="#installation">Installation</a></li>
        <li><a href="#interface">User Interface</a>
