@@ -46,6 +46,7 @@ image: Bioinfo_Logo.jpg
          <li><a href="#notes">Notes</a></li>
          <li><a href="#reading_resources">Further Reading and Resources</a></li>
     </ul>
+    </li>
   </ul>  
 </div>
 
