@@ -44,6 +44,8 @@ image: Bioinfo_Logo.jpg
 </ul>
 
 <br>
+<br>
+<br>
 
 ###  The Environment  <a id="environment"></a>
 
