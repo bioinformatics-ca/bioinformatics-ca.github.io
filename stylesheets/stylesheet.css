@@ -239,6 +239,7 @@ div.center {
 	padding: 0;
 	background-color: #9c7e88;
 	overflow: hidden;
+	border: 1px solid #bbb;
 }
 
 
