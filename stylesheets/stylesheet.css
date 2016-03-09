@@ -241,14 +241,18 @@ ul#navmenu, ul.sub1, ul.sub2, ul.sub3, ul.sub4 {
 }
 
 ul#navmenu li {
-    display: inline;
+    position: relative;	
+    float: left;
     border: 1px solid #bbb;
+    margin-right: 4px;
 }
 
 ul#navmenu a {
     text-decoration: none;
     display: block;
     background-color: #b26b6b;
+    border: 1px solid #CCC;
+    border-radius: 5px;
 }
 
 ul#navmenu .sub1 a {
