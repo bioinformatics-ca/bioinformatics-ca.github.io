@@ -6,6 +6,8 @@ header1: CBW R Tutorial
 header2: An Introduction to R 
 image: Bioinfo_Logo.jpg
 ---
+
+<div>
 <ul id="navmenu">
   <li><a href="#environment">Environment</a>
      <ul class="sub1">  
@@ -42,10 +44,8 @@ image: Bioinfo_Logo.jpg
      <li><a href="#notes">Notes</a></li>
      <li><a href="#reading_resources">Further Reading and Resources</a></li>
 </ul>
+</div>
 
-<br>
-<br>
-<br>
 
 ###  The Environment  <a id="environment"></a>
 
