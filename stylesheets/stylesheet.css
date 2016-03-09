@@ -237,8 +237,6 @@ div.center {
 
 ul#navmenu, ul.sub1, ul.sub2, ul.sub3 {
    list-style-type: none;
-   margin: 0;
-   padding: 0;
    overflow: hidden;
 }
 
