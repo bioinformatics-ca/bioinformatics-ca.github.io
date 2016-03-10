@@ -451,3 +451,5 @@ Some useful shortcuts:
 * Typing a newline character automatically indents the following line.
 
 * Selecting some text and typing a quotation mark quotes the text. This also works with single quotation marks, parentheses, square brackets and curly braces.
+
+[&uarr;](#back_to_top)
