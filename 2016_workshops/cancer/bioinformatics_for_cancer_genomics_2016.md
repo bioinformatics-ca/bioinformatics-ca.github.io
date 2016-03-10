@@ -449,8 +449,6 @@ Useful plugins:
   
   Lab practical:
   
-[&uarr;](#back_to_top)
-
 #### Papers:
 
 [Cox Regression Survival Paper](http://www.ncbi.nlm.nih.gov/pubmed/12613350)
