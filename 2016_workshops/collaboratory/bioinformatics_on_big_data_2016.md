@@ -67,14 +67,14 @@ image: CBW_bigdata_icon.jpg
 
 ###  Welcome <a id="welcome"></a>
 
-  *<font color="green">Ann Meyer</font>* 
+  *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
 [&uarr;](#back_to_top)
 
 ###  Module 1: Ethics of Data Usage and Security Best Practices <a id="module_1"></a>
 
-   *<font color="green">Mark Phillips</font>*
+   *<font color="#827e9c">Mark Phillips</font>*
 
   Lecture:
 
@@ -82,7 +82,7 @@ image: CBW_bigdata_icon.jpg
 
 ###  Module 2: How and Where to Launch a VM <a id="module_2"></a>
 
-   *<font color="green">Michael Brudno</font>*
+   *<font color="#827e9c">Michael Brudno</font>*
 
   Lecture:
 
@@ -92,7 +92,7 @@ image: CBW_bigdata_icon.jpg
 
 ###  Module 3: Module 3: Accessing Data in the Cloud <a id="module_3"></a>
 
-   *<font color="green">Francis Ouellette</font>*
+   *<font color="#827e9c">Francis Ouellette</font>*
 
   Lecture:
 
@@ -102,7 +102,7 @@ image: CBW_bigdata_icon.jpg
 
 ###  Module 4: Customizing a VM with New Tools <a id="module_4"></a>
 
-   *<font color="green">George Mihaiescu</font>*
+   *<font color="#827e9c">George Mihaiescu</font>*
   
   Lecture:
 
@@ -114,7 +114,7 @@ image: CBW_bigdata_icon.jpg
 
 ###  Module 5: Sharing a VM <a id="module_5"></a>
 
-   *<font color="green">George Mihaiescu</font>*
+   *<font color="#827e9c">George Mihaiescu</font>*
  
  Lecture:
 
@@ -124,7 +124,7 @@ image: CBW_bigdata_icon.jpg
 
 ###  Module 6: Scaling a VM for the Data <a id="module_6"></a>
 
-   *<font color="green">George Mihaiescu</font>*
+   *<font color="#827e9c">George Mihaiescu</font>*
  
  Lecture:
 
@@ -134,7 +134,7 @@ image: CBW_bigdata_icon.jpg
 
 ###  Module 7: Big Data Analysis in the Cloud <a id="module_7"></a>
 
-   *<font color="green">TBA</font>*
+   *<font color="#827e9c">TBA</font>*
  
  Lecture:
  
