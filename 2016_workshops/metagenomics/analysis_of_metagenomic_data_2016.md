@@ -106,7 +106,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Welcome <a id="welcome"></a>
 
-  *<font color="green">Ann Meyer</font>* 
+  *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
 [&uarr;](#back_to_top)
@@ -115,7 +115,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 1: Introduction to Metagenomics and Computing in the Cloud <a id="module_1"></a>
 
-  *<font color="green">William Hsiao</font>*
+  *<font color="#827e9c">William Hsiao</font>*
   
   Lecture:
   
@@ -127,7 +127,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 2: Marker Gene-based Analysis of Taxonomic Composition <a id="module_2"></a>
 
-  *<font color="green">William Hsiao</font>*
+  *<font color="#827e9c">William Hsiao</font>*
   
   Lecture:
   
@@ -139,7 +139,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 3: Introduction to PICRUSt <a id="module_3"></a>
 
-  *<font color="green">Morgan Langille</font>*
+  *<font color="#827e9c">Morgan Langille</font>*
   
   Lecture:
   
@@ -151,7 +151,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ### Integrated Assignment Part 1<a id="assignment1"></a>
 
-*<font color="green">Thea Van Rossum and Mike Peabody</font>*
+*<font color="#827e9c">Thea Van Rossum and Mike Peabody</font>*
 
 Integrated Assignment: 
 
@@ -165,7 +165,7 @@ Integrated Assignment:
 
 ###  Module 4: Metagenomic Taxonomic Composition <a id="module_4"></a>
 
-  *<font color="green">Morgan Langille</font>*
+  *<font color="#827e9c">Morgan Langille</font>*
   
   Lecture:
   
@@ -177,7 +177,7 @@ Integrated Assignment:
 
 ###  Module 5: Metagenomic Functional Composition <a id="module_5"></a>
 
-  *<font color="green">Morgan Langille</font>*
+  *<font color="#827e9c">Morgan Langille</font>*
   
   Lecture:
   
@@ -189,7 +189,7 @@ Integrated Assignment:
 
 ### Integrated Assignment Part 2<a id="assignment2"></a>
 
-*<font color="green">Thea Van Rossum and Mike Peabody</font>*
+*<font color="#827e9c">Thea Van Rossum and Mike Peabody</font>*
 
 Integrated Assignment: 
 
@@ -201,7 +201,7 @@ Integrated Assignment:
 
 ###  Module 6: Metatranscriptomics  <a id="module_6"></a>
 
-  *<font color="green">John Parkinson</font>*
+  *<font color="#827e9c">John Parkinson</font>*
   
   Lecture:
   
@@ -213,7 +213,7 @@ Integrated Assignment:
 
 ###  Module 7: Biomarker Selection  <a id="module_7"></a>
 
-  *<font color="green">Fiona Brinkman</font>*
+  *<font color="#827e9c">Fiona Brinkman</font>*
   
   Lecture:
   
