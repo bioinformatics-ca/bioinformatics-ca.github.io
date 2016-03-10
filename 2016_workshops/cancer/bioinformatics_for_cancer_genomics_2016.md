@@ -8,7 +8,7 @@ image: CBW_cancerDNA_icon-16.jpg
 ---
 
 <ul id="navmenu">
-  <li><a href="#">Contents</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
@@ -68,15 +68,19 @@ image: CBW_cancerDNA_icon-16.jpg
 
   <a href="http://bioinformatics-ca.github.io/2016_workshops/cancer/BiCG_2016_Schedule_v1.pdf">Schedule for May 30 to June 3, 2016</a>
 
+[&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://todaysmeet.com/CancerGenomics2016">here</a>!
 
+[&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/cancer/laptop_setup_instructions.pdf">here</a>.
+
+[&uarr;](#back_to_top)
   
 ##### Difference Between **R** and **RStudio**
 <br>
@@ -94,6 +98,7 @@ That was the problem when students installed things in **RStudio** at the comman
 <br>
 ... of scripts in the R editor does not seem to work under Windows. If you want highlighted syntax, use RStudio instead.
 
+[&uarr;](#back_to_top)
 
 ###  Pre-Workshop Tutorials <a id="pre_tutorials"></a>
 
@@ -113,7 +118,7 @@ That was the problem when students installed things in **RStudio** at the comman
 3) **UNIX Preparation tutorials**: Please complete tutorials #1-3 on [UNIX Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
 * [Unix Cheat sheet](http://www.rain.org/~mkummel/unix.html) 
 
-
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
@@ -139,7 +144,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 [Expression Data Analysis with Reactome](http://www.ncbi.nlm.nih.gov/pubmed/25754994)
 
-  
+[&uarr;](#back_to_top)  
   
 ### Logging into the Amazon Cloud <a id="amazon_cloud"></a>
 
@@ -149,7 +154,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
  
 * We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download this **link certificate here**. Otherwise if you plan on using Windows (with Putty and Winscp), please download this **link certificate here**.
 
-
+[&uarr;](#back_to_top)
 
 ***
 
@@ -160,6 +165,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="green">Ann Meyer</font>* 
 <br>
 
+[&uarr;](#back_to_top)
+
 ***
 
 ###  Module 1: Introduction to Cancer Genomics <a id="module_1"></a>
@@ -168,6 +175,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   Lecture:
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -191,6 +199,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
  * [cBioPortal for Cancer Genomics](http://www.cbioportal.org/public-portal/web_api.jsp/) 
  * [Savant Genome Browser](http://genomesavant.com/p/home/index/)
   
+[&uarr;](#back_to_top)
 
 ***  
 
@@ -200,6 +209,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   Lecture:
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -216,6 +226,7 @@ Lab practical:
  * [R Statistical Package](http://www.r-project.org/) 
  * [R Studio](http://rstudio.org/) 
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -248,6 +259,8 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 * exampleheader.txt **Put example header here**
 * [explain sam flag app](https://broadinstitute.github.io/picard/explain-flags.html) 
 * [sam flags explained](http://davetang.org/muse/2014/03/06/understanding-bam-flags/) 
+
+[&uarr;](#back_to_top)
 
 ***
 
@@ -285,6 +298,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
  * [Cufflinks/Cuffdiff](http://cufflinks.cbcb.umd.edu/)
  * [CummeRbund](http://compbio.mit.edu/cummeRbund/)
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -305,6 +319,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
  * [Titan](http://compbio.bccrc.ca/software/titan/)
  * [SnpEff/SnpSift](http://snpeff.sourceforge.net/)
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -320,6 +335,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
  * [Strelka](https://sites.google.com/site/strelkasomaticvariantcaller/)
  * [MutationSeq](http://compbio.bccrc.ca/software/mutationseq/)
   
+[&uarr;](#back_to_top)
   
 ***
 
@@ -337,6 +353,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
  * [R Statistical Package](http://www.r-project.org/) 
  * [R Studio](http://rstudio.org/)
   
+[&uarr;](#back_to_top)
   
 ***
 
@@ -350,6 +367,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
   
   Lab practical:
   
+[&uarr;](#back_to_top)
   
 ***
 
@@ -360,7 +378,8 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
   Lecture:
   
   Lab practical:
-  
+
+[&uarr;](#back_to_top)  
 
 ***
 
@@ -418,7 +437,7 @@ Useful plugins:
   * [ReactomeFI](http://wiki.reactome.org/index.php/Reactome_FI_Cytoscape_Plugin)
   * [Many more](http://chianti.ucsd.edu/cyto_web/plugins/index.php)
 
-  
+[&uarr;](#back_to_top)  
   
 ***
 
@@ -430,6 +449,8 @@ Useful plugins:
   
   Lab practical:
   
+[&uarr;](#back_to_top)
+
 #### Papers:
 
 [Cox Regression Survival Paper](http://www.ncbi.nlm.nih.gov/pubmed/12613350)
@@ -438,6 +459,6 @@ Useful plugins:
 
 [Supplementary Data](http://www.cell.com/cms/attachment/588951/4507288/mmc1.pdf)
 
-  
+ [&uarr;](#back_to_top) 
   
   ***
