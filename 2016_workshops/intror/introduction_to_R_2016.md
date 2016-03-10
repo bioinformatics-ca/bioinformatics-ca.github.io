@@ -7,31 +7,27 @@ header2: Workshop pages for students
 image: CBW_introtoR-icon.jpg
 ---
 
-#### Contents
-[Course Schedule](#course_schedule)
+<ul id="navmenu">
+  <li><a href="#">Contents</a>
+     <ul class="sub1">
+     <li><a href="#course_schedule">Course Schedule</a></li>
+     <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
+     <li><a href="#laptop_setup">Laptop Setup Instructions</a></li>
+     <li><a href="#helpful_materials">Helpful Materials</a></li>
+     <li><a href="#pre_readings">Pre-Workshop Readings</a></li>
+      <li><a href="#day1">Day 1</a>
+         <ul class="sub2">  
+           <li><a href="#welcome">Welcome</a></li>
+           <li><a href="#module_1">Module 1</a></li>
+           <li><a href="#module_2">Module 2</a></li>
+           <li><a href="#module_3">Module 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>  
 
-[Workshop Q/A Forum](#q_a_forum)
-
-[Laptop Setup Instructions](#laptop_setup)
-
-[Helpful Materials](#helpful_materials)
-
-[Pre-Workshop Readings](#pre_readings)
-
-**[Day 1](#day_1)**
-
-
-  ...[Welcome](#welcome)
-  
-  ...[Module 1: The R Environment](#module_1)
-  
-  ...[Module 2: Programming Basics](#module_2)
-  
-  ...[Module 3: Using R for Data Analysis](#module_3)
-  
-  
-
-***
+<br>
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
