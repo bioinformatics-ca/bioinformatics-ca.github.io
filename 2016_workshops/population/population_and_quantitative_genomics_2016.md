@@ -8,7 +8,7 @@ image: CBW_population_icon.jpg
 ---
 
 <ul id="navmenu">
-  <li><a href="#">Contents</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
@@ -39,21 +39,25 @@ image: CBW_population_icon.jpg
 
   <a href="http://bioinformatics-ca.github.io/2016_workshops/population/Population_2016_Schedule_v1.pdf">Schedule for July 18 to July 19, 2016</a>
 
+[&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://todaysmeet.com/Population2016">here</a>!
 
+[&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/population/laptop_setup_instructions.pdf">here</a>.
 
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
   Before coming to the workshop, read these.
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -64,6 +68,8 @@ image: CBW_population_icon.jpg
   *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
+[&uarr;](#back_to_top)
+
 ###  Module 1: Concepts in Population Genomics <a id="module_1"></a>
 
   *<font color="#827e9c">Philip Awadalla</font>*
@@ -72,6 +78,7 @@ image: CBW_population_icon.jpg
   
   Lab practical:
 
+[&uarr;](#back_to_top)
 
 ###  Module 2: Extensions in Population Genomics <a id="module_2"></a>
 
@@ -79,6 +86,7 @@ image: CBW_population_icon.jpg
   
   Lecture:
 
+[&uarr;](#back_to_top)
 
 ###  Module 3: Basic Concepts in QTLs <a id="module_3"></a>
 
@@ -88,6 +96,7 @@ image: CBW_population_icon.jpg
   
   Lab practical:
 
+[&uarr;](#back_to_top)
 
 ##  Day 2 <a id="day_2"></a>
 
@@ -99,6 +108,7 @@ image: CBW_population_icon.jpg
   
   Lab practical:
 
+[&uarr;](#back_to_top)
 
 ###  Module 5: Gene x Environment <a id="module_5"></a>
 
@@ -106,6 +116,7 @@ image: CBW_population_icon.jpg
   
   Lecture:
 
+[&uarr;](#back_to_top)
 
 ###  Module 6: Functional Annotation of Mutations and Haplotypes <a id="module_6"></a>
 
@@ -114,3 +125,7 @@ image: CBW_population_icon.jpg
   Lecture:
   
   Lab practical:
+  
+[&uarr;](#back_to_top)
+  
+***  
