@@ -102,7 +102,7 @@ image: CBW_pathway_icon.jpg
 
 ###  Welcome <a id="welcome"></a>
 
-  *<font color="green">Ann Meyer</font>* 
+  *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
 [&uarr;](#back_to_top)
@@ -111,7 +111,7 @@ image: CBW_pathway_icon.jpg
 
 ###  Module 1: Introduction to Pathway and Network Analysis <a id="module_1"></a>
 
-  *<font color="green">Gary Bader</font>*
+  *<font color="#827e9c">Gary Bader</font>*
   
   Lecture:
 
@@ -121,13 +121,13 @@ image: CBW_pathway_icon.jpg
 
 ###  Module 2: Finding Over-Represented Pathways in Gene Lists <a id="module_2"></a>
 
-  *<font color="green">Quaid Morris</font>*
+  *<font color="#827e9c">Quaid Morris</font>*
   
   Lecture:
   
   Lab practical: Enrichment-Based Analysis - Performing ORA
   
-  *<font color="green">Veronique Voisin</font>*
+  *<font color="#827e9c">Veronique Voisin</font>*
 
 [&uarr;](#back_to_top)
 
@@ -135,13 +135,13 @@ image: CBW_pathway_icon.jpg
 
 ###  Module 3: Network Visualization and Analysis with Cytoscape <a id="module_3"></a>
 
-  *<font color="green">Gary Bader</font>*
+  *<font color="#827e9c">Gary Bader</font>*
   
   Lecture:
   
   Lab practical: Cytoscape Demo, Enrichment Map
   
-  *<font color="green">Veronique Voisin</font>*
+  *<font color="#827e9c">Veronique Voisin</font>*
 
 [&uarr;](#back_to_top)
 
@@ -149,7 +149,7 @@ image: CBW_pathway_icon.jpg
 
 ### Integrated Assignment <a id="assignment1"></a>
 
-*<font color="green">Veronique Voisin</font>*
+*<font color="#827e9c">Veronique Voisin</font>*
 
 Integrated Assignment: Enrichment Analysis Using GSEA and g:Profiler
 
@@ -164,7 +164,7 @@ Integrated Assignment: Enrichment Analysis Using GSEA and g:Profiler
 
 Lab practical: Cytoscape Demo, Networks
   
-  *<font color="green">Veronique Voisin</font>*
+  *<font color="#827e9c">Veronique Voisin</font>*
 
 [&uarr;](#back_to_top)
   
@@ -172,13 +172,13 @@ Lab practical: Cytoscape Demo, Networks
 
 ###  Module 4: More Depth on Pathway and Network Analysis <a id="module_4"></a>
 
-  *<font color="green">Lincoln Stein</font>*
+  *<font color="#827e9c">Lincoln Stein</font>*
   
   Lecture:
   
   Lab practical: *De Novo* Subnetwork Clustering Analysis in Reactome
   
-  *<font color="green">Robin Haw</font>*
+  *<font color="#827e9c">Robin Haw</font>*
  
  [&uarr;](#back_to_top) 
 
@@ -186,7 +186,7 @@ Lab practical: Cytoscape Demo, Networks
 
 ###  Module 5: Gene Function Prediction  <a id="module_5"></a>
 
-  *<font color="green">Quaid Morris</font>*
+  *<font color="#827e9c">Quaid Morris</font>*
   
   Lecture:
   
@@ -198,7 +198,7 @@ Lab practical: Cytoscape Demo, Networks
 
 ### Integrated Assignment <a id="assignment2"></a>
 
-*<font color="green">Veronique Voisin</font>*
+*<font color="#827e9c">Veronique Voisin</font>*
 
 Integrated Assignment: Reactome FI and GeneMANIA
 
@@ -210,7 +210,7 @@ Integrated Assignment: Reactome FI and GeneMANIA
 
 ###  Module 6: Regulatory Network Analysis  <a id="module_6"></a>
 
-  *<font color="green">Michael Hoffman</font>*
+  *<font color="#827e9c">Michael Hoffman</font>*
   
   Lecture:
   
