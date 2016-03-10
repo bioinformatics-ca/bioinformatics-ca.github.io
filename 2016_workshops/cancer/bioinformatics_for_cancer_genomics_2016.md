@@ -162,7 +162,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Welcome <a id="welcome"></a>
 
-  *<font color="green">Ann Meyer</font>* 
+  *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
 [&uarr;](#back_to_top)
@@ -171,7 +171,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 1: Introduction to Cancer Genomics <a id="module_1"></a>
 
-  *<font color="green">TBA</font>*
+  *<font color="#827e9c">TBA</font>*
   
   Lecture:
 
@@ -181,7 +181,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 2.1: Databases and Visualization Tools <a id="module_2.1"></a>
 
-  *<font color="green">Francis Ouellette</font>*
+  *<font color="#827e9c">Francis Ouellette</font>*
   
   Lecture:
   
@@ -205,7 +205,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 2.2: Logging into the Cloud <a id="module_2.2"></a>
 
-  *<font color="green">Francis Ouellette</font>*
+  *<font color="#827e9c">Francis Ouellette</font>*
   
   Lecture:
 
@@ -215,7 +215,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  *Optional* **R** Review Session <a id="r_review"></a>
 
-*<font color="green">TBA</font>*
+*<font color="#827e9c">TBA</font>*
 
 Lecture:
 
@@ -234,7 +234,7 @@ Lab practical:
 
 ###  Module 3: Mapping and Genome Rearrangement <a id="module_3"></a>
 
-  *<font color="green">Jared Simpson</font>*
+  *<font color="#827e9c">Jared Simpson</font>*
   
   Lecture:
   
@@ -266,7 +266,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 
 ###  Module 4: Gene Fusion Discovery <a id="module_4"></a>
 
-  *<font color="green">Andrew McPherson</font>*
+  *<font color="#827e9c">Andrew McPherson</font>*
   
   Lecture:
   
@@ -306,7 +306,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 
 ###  Module 5: Copy Number Alterations <a id="module_5"></a>
 
-  *<font color="green">Sohrab Shah</font>*
+  *<font color="#827e9c">Sohrab Shah</font>*
   
   Lecture:
   
@@ -325,7 +325,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 
 ###  Module 6: Somatic Mutations <a id="module_6"></a>
 
-  *<font color="green">Sohrab Shah</font>*
+  *<font color="#827e9c">Sohrab Shah</font>*
   
   Lecture:
   
@@ -343,7 +343,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 
 ###  Module 7: Gene Expression Profiling <a id="module_7"></a>
 
-  *<font color="green">Paul Boutros</font>*
+  *<font color="#827e9c">Paul Boutros</font>*
   
   Lecture:
   
@@ -361,7 +361,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 
 #### Part 1: How to annotate variants and prioritize potentially relevant ones <a id="part_1"></a>
   
-  *<font color="green">Juri Reimand</font>*
+  *<font color="#827e9c">Juri Reimand</font>*
   
   Lecture:
   
@@ -373,7 +373,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 
 #### Part 2: From genes to pathways <a id="part_2"></a>
   
-  *<font color="green">Juri Reimand</font>*
+  *<font color="#827e9c">Juri Reimand</font>*
   
   Lecture:
   
@@ -387,7 +387,7 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 
 #### Part 3: Network Analysis using Reactome <a id="part_3"></a>
 
-*<font color="green">Lincoln Stein and Robin Haw</font>*
+*<font color="#827e9c">Lincoln Stein and Robin Haw</font>*
 
   Lecture:
   
@@ -443,7 +443,7 @@ Useful plugins:
 
 ###  Module 9: Integration of Clinical Data <a id="module_9"></a>
 
-*<font color="green">Anna Lapuk</font>*
+*<font color="#827e9c">Anna Lapuk</font>*
 
   Lecture:
   
