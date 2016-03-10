@@ -8,7 +8,7 @@ image: CBW_metabolomics_icon.jpg
 ---
 
 <ul id="navmenu">
-  <li><a href="#">Contents</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
@@ -39,16 +39,19 @@ image: CBW_metabolomics_icon.jpg
 
   <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/Metabolomics_2016_Schedule_v1.pdf">Schedule for May 26 - May 27, 2016</a>
 
+[&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://todaysmeet.com/Metabolomics2016">here</a>!
 
+[&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/laptop_setup_instructions.pdf">here</a>.
 
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
@@ -64,6 +67,8 @@ image: CBW_metabolomics_icon.jpg
   
   <a href="http://www.ncbi.nlm.nih.gov/pubmed/25897128">MetaboAnalyst 3.0 - Making Metabolomics More Meaningful</a>
 
+[&uarr;](#back_to_top)
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
@@ -73,6 +78,8 @@ image: CBW_metabolomics_icon.jpg
   *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
+[&uarr;](#back_to_top)
+
 ***
 
 ###  Module 1: Introduction to Metabolomics <a id="module_1"></a>
@@ -80,6 +87,8 @@ image: CBW_metabolomics_icon.jpg
   *<font color="#827e9c">David Wishart</font>*
   
   Lecture:
+
+[&uarr;](#back_to_top)
 
 ***
 
@@ -156,6 +165,8 @@ image: CBW_metabolomics_icon.jpg
  * [7GR Software](http://fiehnlab.ucdavis.edu/projects/Seven_Golden_Rules/Software/) 
  * [MyCompoundID](http://mycompoundid.org/) 
 
+[&uarr;](#back_to_top)
+
 ***
 
 ###  Module 3: Databases for Chemical, Spectral, and Biological Data <a id="module_3"></a>
@@ -186,6 +197,8 @@ image: CBW_metabolomics_icon.jpg
  * [Reactome](http://www.reactome.org/) 
  * [BioCyc](http://biocyc.org/) 
 
+[&uarr;](#back_to_top)
+
 ***
 
 ##  Day 2 <a id="day_2"></a>
@@ -195,6 +208,8 @@ image: CBW_metabolomics_icon.jpg
   *<font color="#827e9c">David Wishart</font>*
   
   Lecture:
+
+[&uarr;](#back_to_top)
 
 ***
 
@@ -216,6 +231,8 @@ image: CBW_metabolomics_icon.jpg
 * All measurements should be numerical values (empty for missing values); 
 * For details and screenshot instructions, [click here](http://www.metaboanalyst.ca/faces/docs/Format.xhtml)
 
+[&uarr;](#back_to_top)
+
 ***
 
 ###  Module 6: Future of Metabolomics <a id="module_6"></a>
@@ -223,5 +240,7 @@ image: CBW_metabolomics_icon.jpg
   *<font color="827e9c">David Wishart</font>*
   
   Lecture:
+
+[&uarr;](#back_to_top)
 
 ***
