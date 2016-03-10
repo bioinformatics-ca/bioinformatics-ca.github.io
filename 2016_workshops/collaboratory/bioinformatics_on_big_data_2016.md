@@ -9,7 +9,7 @@ image: CBW_bigdata_icon.jpg
 
 
 <ul id="navmenu">
-  <li><a href="#">Contents</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
@@ -41,22 +41,25 @@ image: CBW_bigdata_icon.jpg
 
 <a href="http://bioinformatics-ca.github.io/2016_workshops/collaboratory/BigData_2016_Schedule_v3.pdf">Schedule for July 14 to July 15, 2016</a>
 
+[&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://todaysmeet.com/Collaboratory2016">here</a>!
 
-
+[&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/collaboratory/laptop_setup_instructions.pdf">here</a>.
 
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
   Before coming to the workshop, read these.
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -67,12 +70,15 @@ image: CBW_bigdata_icon.jpg
   *<font color="green">Ann Meyer</font>* 
 <br>
 
+[&uarr;](#back_to_top)
+
 ###  Module 1: Ethics of Data Usage and Security Best Practices <a id="module_1"></a>
 
    *<font color="green">Mark Phillips</font>*
 
   Lecture:
 
+[&uarr;](#back_to_top)
 
 ###  Module 2: How and Where to Launch a VM <a id="module_2"></a>
 
@@ -82,6 +88,7 @@ image: CBW_bigdata_icon.jpg
 
   Lab practical:
 
+[&uarr;](#back_to_top)
 
 ###  Module 3: Module 3: Accessing Data in the Cloud <a id="module_3"></a>
 
@@ -91,6 +98,7 @@ image: CBW_bigdata_icon.jpg
 
   Lab practical:
 
+[&uarr;](#back_to_top)
 
 ###  Module 4: Customizing a VM with New Tools <a id="module_4"></a>
 
@@ -100,6 +108,7 @@ image: CBW_bigdata_icon.jpg
 
   Lab practical:
 
+[&uarr;](#back_to_top)
 
 ##  Day 2 <a id="day_2"></a>
 
@@ -111,6 +120,7 @@ image: CBW_bigdata_icon.jpg
 
  Lab practical:
 
+[&uarr;](#back_to_top)
 
 ###  Module 6: Scaling a VM for the Data <a id="module_6"></a>
 
@@ -120,9 +130,14 @@ image: CBW_bigdata_icon.jpg
 
  Lab practical:
 
+[&uarr;](#back_to_top)
 
 ###  Module 7: Big Data Analysis in the Cloud <a id="module_7"></a>
 
    *<font color="green">TBA</font>*
  
  Lecture:
+ 
+ [&uarr;](#back_to_top)
+ 
+ ***
