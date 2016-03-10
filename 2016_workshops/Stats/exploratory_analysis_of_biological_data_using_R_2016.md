@@ -8,7 +8,7 @@ image: CBW_R_icon.jpg
 ---
 
 <ul id="navmenu">
-  <li><a href="contents">Contents</a>
+  <li><a href="#">Contents</a>
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
