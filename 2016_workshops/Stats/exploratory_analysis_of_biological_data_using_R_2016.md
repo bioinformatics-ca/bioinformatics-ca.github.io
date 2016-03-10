@@ -85,7 +85,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ###  Welcome <a id="welcome"></a>
 
-  *<font color="green">Ann Meyer</font>* 
+  *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
 [&uarr;](#back_to_top)
@@ -98,7 +98,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ###  Module 1: Exploratory Data Analysis <a id="module_1"></a>
 
-  *<font color="green">Boris Steipe</font>*
+  *<font color="#827e9c">Boris Steipe</font>*
   
   Lecture:
   
@@ -128,7 +128,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ###  Module 2: Regression Analysis <a id="module_2"></a>
 
-  *<font color="green">Boris Steipe</font>*
+  *<font color="#827e9c">Boris Steipe</font>*
   
   Lecture:
   
@@ -146,7 +146,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ###  Module 3: Dimension Reduction <a id="module_3"></a>
 
-  *<font color="green">Boris Steipe</font>*
+  *<font color="#827e9c">Boris Steipe</font>*
   
   Lecture:
   
@@ -158,7 +158,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ### Integrated Assignment Part 1 <a id="assignment1"></a>
 
-*<font color="green">TBA</font>*
+*<font color="#827e9c">TBA</font>*
 
 Part 1:
 
@@ -176,7 +176,7 @@ For your reference:
 
 ###  Module 4: Clustering Analysis <a id="module_4"></a>
 
-  *<font color="green">Boris Steipe</font>*
+  *<font color="#827e9c">Boris Steipe</font>*
   
   Lecture:
   
@@ -216,7 +216,7 @@ Read with:
 
 ###  Module 5: Hypothesis Testing for EDA <a id="module_5"></a>
 
-  *<font color="green">Boris Steipe</font>*
+  *<font color="#827e9c">Boris Steipe</font>*
   
   Lecture:
   
@@ -231,7 +231,7 @@ Read with:
 
 ###  Integrated Assignment Part 2 <a id="assignment2"></a>
 
-  *<font color="green">TBA</font>*
+  *<font color="#827e9c">TBA</font>*
   
   Assignment Part 2:
   
