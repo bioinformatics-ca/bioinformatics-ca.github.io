@@ -8,7 +8,7 @@ image: CBW_High-throughput_icon.jpg
 ---
 
 <ul id="navmenu">
-  <li><a href="#">Contents</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
@@ -43,16 +43,19 @@ image: CBW_High-throughput_icon.jpg
 
   <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/HT-Seq_2016_Schedule_v1.pdf">Schedule for June 9 to June 10, 2016</a>
 
+[&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://todaysmeet.com/HTSeq2016">here</a>!
 
+[&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/laptop_setup_instructions.pdf">here</a>.
 
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Tutorials <a id="pre_tutorials"></a>
 
@@ -71,6 +74,7 @@ image: CBW_High-throughput_icon.jpg
 * link to tutorial
 * link to datasets
 
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
@@ -86,6 +90,7 @@ image: CBW_High-throughput_icon.jpg
   
   * [Genotype and SNP calling from next-generation sequencing data](http://www.ncbi.nlm.nih.gov/pubmed/21587300)
   
+[&uarr;](#back_to_top)
   
 ### Logging into the Amazon Cloud <a id="amazon_cloud"></a>
 
@@ -95,6 +100,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
  
 * We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download this **link certificate here**. Otherwise if you plan on using Windows (with Putty and Winscp), please download this **link certificate here**.
 
+[&uarr;](#back_to_top)
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
@@ -103,6 +110,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="green">Ann Meyer</font>* 
 <br>
+
+[&uarr;](#back_to_top)
 
 ***
 
@@ -114,6 +123,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   Lab practical:
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -144,6 +154,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
  * [The decoy genome](http://www.cureffi.org/2013/02/01/the-decoy-genome/) 
  * [FastQC Good/Bad Examples](http://www.slideshare.net/cursoNGS/ngs-qc-granadajun2011) 
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -155,6 +166,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   Lab practical:
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -163,6 +175,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="green">Jared Simpson</font>*
   
   Lecture:
+
+[&uarr;](#back_to_top)
   
 ***
 
@@ -214,6 +228,7 @@ Discussion/Questions:
 
 Integrated Assignment: 
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -242,6 +257,7 @@ Programs:
  * [snpEFF](http://snpeff.sourceforge.net/) 
  * [IGV](http://www.broadinstitute.org/igv/) 
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -260,6 +276,7 @@ Programs:
   * [lumpy-SV](https://github.com/arq5x/lumpy-sv)
   * [IGV](http://www.broadinstitute.org/igv/)
   
+[&uarr;](#back_to_top)
 
 ***
 
@@ -308,5 +325,7 @@ Galaxy Resources:
 * [Galaxy 101 worked example](https://main.g2.bx.psu.edu/u/aun1/p/galaxy101)
 * [Galaxy servers throughout the world](http://wiki.galaxyproject.org/PublicGalaxyServers)
 * [Published pages](https://main.g2.bx.psu.edu/page/list_published)
+
+[&uarr;](#back_to_top)
 
 ***
