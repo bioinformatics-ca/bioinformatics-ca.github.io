@@ -49,7 +49,7 @@ header2: Workshop pages for students
 
 (where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
 
-[Return to Top](#back_to_top)
+[&uarr;](#back_to_top)
 
 ##### Copying files to your computer
 <br>
@@ -63,7 +63,7 @@ header2: Workshop pages for students
 
  http://cbw#.dyndns.info/ http://cbw#.dyndns.info/
 
-[Return to Top](#back_to_top)
+[&uarr;](#back_to_top)
 
 #### Logging in with Putty (Windows) <a id="putty_login"></a>
 <p>
@@ -87,7 +87,7 @@ To configure Putty, start Putty and do the following:
 
 **Now that Putty is configured**, all you have to do is start putty and double-click on "Amazon node" to login.
 
-[Return to Top](#back_to_top)
+[&uarr;](#back_to_top)
 
 ##### Copying files to your computer
 <br>
@@ -109,7 +109,7 @@ To configure WinScp, start WinScp and do the following:
 
 **Now that WinScp is configured**, all you have to do is start WinScp and double-click on **Amazon node** to start copying files.
 
-[Return to Top](#back_to_top)
+[&uarr;](#back_to_top)
 
 #### File System Layout <a id="file_system_layout"></a>
 <br>
@@ -119,6 +119,6 @@ When you log in, you'll notice that you have two directories: **CourseData** and
 
 * The **workspace** directory is where we will keep our temporary files. By default, we have around 40 GB available for our output files in the workspace directory. If you run out of space, you may need to delete some files from this directory.
 
-[Return to Top](#back_to_top)
+[&uarr;](#back_to_top)
 
 ***
