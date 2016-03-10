@@ -263,21 +263,18 @@ ul#navmenu a {
 }
 
 ul#navmenu .sub1 a {
-    margin-top: 3px;
+    margin-top: 1px;
 }
 
 ul#navmenu .sub2 a {
-    margin-left: 47px;
     width: 125px;
 }
 
 ul#navmenu .sub3 a {
-    margin-left: 97px;
     width: 125px;
 }
 
 ul#navmenu .sub4 a {
-    margin-left: 47px;
     width: 125px;
 }
 
@@ -300,21 +297,21 @@ ul#navmenu ul.sub2 {
     display: none;
     position: absolute;
     top: 0px;
-    left: 78px;
+    left: 125px;
 }
 
 ul#navmenu ul.sub3 {
     display: none;
     position: absolute;
     top: 0px;
-    left: 78px;
+    left: 125px;
 }
 
 ul#navmenu ul.sub4 {
     display: none;
     position: absolute;
     top: 0px;
-    left: 78px;
+    left: 125px;
 }
 
 ul#navmenu li:hover .sub1 {
