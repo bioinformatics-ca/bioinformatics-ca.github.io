@@ -246,7 +246,8 @@ ul#navmenu li {
     text-align: center;
     position: relative;	
     float: left;
-    margin-right: 100%;
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
@@ -268,7 +269,7 @@ ul#navmenu .sub2 a {
 }
 
 ul#navmenu .sub3 a {
-    margin-left: 47px;
+    margin-left: 77px;
     width: 125px;
 }
 
@@ -278,11 +279,11 @@ ul#navmenu .sub4 a {
 }
 
 ul#navmenu li:hover > a {
-    background-color: #b26b6b;
+    background-color: #800000;
 }
 
 ul#navmenu li:hover a:hover {
-    background-color: #600d0d;
+    background-color: #3d0808;
 }
 
 ul#navmenu ul.sub1 {
