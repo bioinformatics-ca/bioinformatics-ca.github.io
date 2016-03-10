@@ -86,14 +86,14 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ###  Welcome <a id="welcome"></a>
 
-  *<font color="green">Ann Meyer</font>* 
+  *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
 [&uarr;](#back_to_top)
 
 ###  Module 1: The **R** Environment <a id="module_1"></a>
 
-  *<font color="green">Boris Steipe</font>*
+  *<font color="#827e9c">Boris Steipe</font>*
   
   Lecture:
   
@@ -130,7 +130,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ###  Module 2: Programming Basics <a id="module_2"></a>
 
-  *<font color="green">Boris Steipe</font>*
+  *<font color="#827e9c">Boris Steipe</font>*
   
   Lecture:
   
@@ -146,7 +146,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ###  Module 3: Using **R** for Data Analysis <a id="module_3"></a>
 
-  *<font color="green">Boris Steipe</font>*
+  *<font color="#827e9c">Boris Steipe</font>*
   
   Lecture:
   
