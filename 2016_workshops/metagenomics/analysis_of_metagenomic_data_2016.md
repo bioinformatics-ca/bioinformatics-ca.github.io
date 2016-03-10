@@ -8,7 +8,7 @@ image: CBW_Metagenome_icon.jpg
 ---
 
 <ul id="navmenu">
-  <li><a href="#">Contents</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
@@ -48,16 +48,19 @@ image: CBW_Metagenome_icon.jpg
 
   <a href="http://bioinformatics-ca.github.io/2016_workshops/metagenomics/Metagenomics_2016_Schedule_v1.pdf">Schedule for June 22 to June 24, 2016</a>
 
+[&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://todaysmeet.com/Metagenomics2016">here</a>!
 
+[&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/laptop_setup_instructions.pdf">here</a>.
 
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Tutorials <a id="pre_tutorials"></a>
 
@@ -73,6 +76,7 @@ image: CBW_Metagenome_icon.jpg
 
 * Filtering and Editing in Cytoscape 3
 
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
@@ -84,6 +88,7 @@ image: CBW_Metagenome_icon.jpg
   
   * [Methylotrophic methanogenic Thermoplasmata implicated in reduced methane emissions from bovine rumen](http://www.ncbi.nlm.nih.gov/pubmed/23385573)
   
+[&uarr;](#back_to_top)
   
 ### Logging into the Amazon Cloud <a id="amazon_cloud"></a>
 
@@ -93,6 +98,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
  
 * We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download this **link certificate here**. Otherwise if you plan on using Windows (with Putty and Winscp), please download this **link certificate here**.
 
+[&uarr;](#back_to_top)
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
@@ -101,6 +108,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="green">Ann Meyer</font>* 
 <br>
+
+[&uarr;](#back_to_top)
 
 ***
 
@@ -112,6 +121,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   Lab practical:
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -123,6 +133,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   Lab practical:
   
+  [&uarr;](#back_to_top)
+  
 ***
 
 ###  Module 3: Introduction to PICRUSt <a id="module_3"></a>
@@ -133,6 +145,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   Lab practical:
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -142,6 +155,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 Integrated Assignment: 
 
+
+[&uarr;](#back_to_top)
 
 ***
 
@@ -155,6 +170,8 @@ Integrated Assignment:
   Lecture:
   
   Lab practical:
+
+[&uarr;](#back_to_top)
   
 ***
 
@@ -165,6 +182,8 @@ Integrated Assignment:
   Lecture:
   
   Lab practical:
+
+[&uarr;](#back_to_top)
   
 ***
 
@@ -174,6 +193,7 @@ Integrated Assignment:
 
 Integrated Assignment: 
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -187,6 +207,8 @@ Integrated Assignment:
   
   Lab practical:
 
+[&uarr;](#back_to_top)
+
 ***
 
 ###  Module 7: Biomarker Selection  <a id="module_7"></a>
@@ -194,5 +216,7 @@ Integrated Assignment:
   *<font color="green">Fiona Brinkman</font>*
   
   Lecture:
+  
+  [&uarr;](#back_to_top)
 
 ***
