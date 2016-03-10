@@ -29,7 +29,7 @@ image: CBW_RNA_seq_icon.jpg
        <li><a href="#day_2">Day 2</a>
           <ul class="sub2">
              <li><a href="#module_4">Module 4</a></li>
-             <li><a href="#module_5">Nodule 5</a></li>
+             <li><a href="#module_5">Module 5</a></li>
            </ul>
        </li>
     </ul>
