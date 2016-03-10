@@ -29,7 +29,7 @@ header2: Workshop pages for students
  
 * On the cloud, we're going to use the default username: **ubuntu**
  
-[Return to Top](#back_to_top)
+[&uarr;](#back_to_top)
 
 #### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a>
 <p>
