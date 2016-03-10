@@ -247,6 +247,7 @@ ul#navmenu li {
     position: relative;	
     float: left;
     margin-right: 100%;
+    list-style-type: none;
 }
 
 ul#navmenu a {
