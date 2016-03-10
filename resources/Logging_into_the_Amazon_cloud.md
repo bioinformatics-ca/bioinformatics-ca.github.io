@@ -8,7 +8,7 @@ header2: Workshop pages for students
 
 
 <ul id="navmenu">
-  <li><a href="#">Contents</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
      <li><a href="#amazon_cloud">Amazon Cloud</a>
          <ul class="sub2">  
