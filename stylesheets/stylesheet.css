@@ -237,7 +237,8 @@ div.center {
 
 ul#navmenu, ul.sub1, ul.sub2, ul.sub3, ul.sub4 {
    list-style-type: none;
-
+   padding: 0;
+   margin: 0;
 }
 
 ul#navmenu li {
@@ -245,8 +246,7 @@ ul#navmenu li {
     text-align: center;
     position: relative;	
     float: left;
-    border: 1px solid #bbb;
-    margin-right: 4px;
+    margin-right: 100%;
 }
 
 ul#navmenu a {
@@ -254,7 +254,7 @@ ul#navmenu a {
     display: block;
     background-color: #b26b6b;
     border: 1px solid #CCC;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 ul#navmenu .sub1 a {
