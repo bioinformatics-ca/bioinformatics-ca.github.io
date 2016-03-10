@@ -8,7 +8,7 @@ image: Bioinfo_Logo.jpg
 ---
 
 <ul id="navmenu">
-  <li><a href="content">Content</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
       <li><a href="#environment">Environment</a>
          <ul class="sub2">  
@@ -63,6 +63,8 @@ image: Bioinfo_Logo.jpg
 
 In this section we discuss how to download and install the software, how to configure an **R** session and what work with the **R** environment includes.
 
+[&uarr;](#back_to_top)
+
 #### Installation <a id="installation"></a> 
 
 1. Navigate to [the CRAN mirror site at the University of Toronto](http://probability.ca/cran/) and follow the link to your computer's operating system.
@@ -83,6 +85,8 @@ Note the following though: it is convenient to copy/paste code, but you don't le
 
 One more thing about the console: use your keyboard's *up-arrow* keys to retrieve previous commands, then enter the line with *left-arrow* to edit it; hit *enter* to execute the modified line. Or, if you are on a Mac, click the striped icon in the console window to show/hide the command line history.
 
+[&uarr;](#back_to_top)
+
 #### User Interface <a id="interface"></a>
 
 R comes with a GUI to lay out common tasks. For example, there are a number of menu items, many of which are similar to other programs you will have worked with ("File", "Edit", "Format", "Window", "Help"  ...). All of these tasks can also be accessed through the command line. In general, GUIs are useful when you are not  sure what you want to do or how to go about it; the command line is much more powerful when you have more experience and know your way around in principle. **R** gives you both options. 
@@ -90,6 +94,8 @@ R comes with a GUI to lay out common tasks. For example, there are a number of m
 In addition to the *Console*, there are a number of other windows that you can open (or that open automatically). They all can be brought to the foreground with the **Windows** menu and include help, plotting, package browser, and other windows.
 
 Let's look at some functions of the **R** console and associated windows that refer to **how** you work, not **what** you do.
+
+[&uarr;](#back_to_top)
 
 ##### A Note on R Studio <a id="RStudio"></a>
 
@@ -122,6 +128,8 @@ Here is a small list of differences. If you can contribute pros and cons from yo
 * There are sometimes (rarely) situations where **R** functions do not behave in exactly the same way in **R Studio**.
 
 * The supported **R** version is not always immediately the most recent release. 
+
+[&uarr;](#back_to_top)
 
 ##### The Help system <a id="help"></a>
 
@@ -211,6 +219,8 @@ Therefore, my first approach for **R** information is usually to Google for what
 
 * The **bioconductor** project has its own [support site on the Web](https://support.bioconductor.org/).
 
+[&uarr;](#back_to_top)
+
 ##### Working directory <a id="work"></a>
 
 To locate a file in a computer, one has to specify the *filename* and the directory in which the file is stored; this is sometimes called the *path* of the file. The "working directory" for **R** is either the direcory in which the **R**-program has been installed, or some other directory, as initialized by a startup script. You can execute the command <code>getwd()</code> to list what the "Working Directory" is currently set to:
@@ -235,6 +245,8 @@ The *Working Directory* functions can also be accessed through the Menu, under *
 
 A nice shortcut on the Mac is that you can drag/drop a folder or file icon into the **R** console or a script window to get the full filename/path. *If you know of equivalent functionality in Linux or Windows, let me know.*
 
+[&uarr;](#back_to_top)
+
 ##### .Rprofile - startup commands <a id="rprofile"></a>
 
 Often, when working on a project, you would like to start off in your working directory right away when you start up **R**, instead of typing the <code>setwd()</code> command. This is easily done in a special **R**-script that is executed automatically on startup. The name of the script is <code>.Rprofile</code> and **R** expects to find it in the user's home directory. You can edit these files with a simple text editor like Textedit (Mac), Notepad (Windows) or Gedit (Linux) - or, of course, by opening it in **R** itself. 
@@ -247,6 +259,8 @@ Besides setting the working directory, other items that might go into such a fil
 
 * functions that you would like to preload.
 
+[&uarr;](#back_to_top)
+
 ###### ... Unix Systems <a id="unix"></a>
 
 *Navigate to your home directory (<code>cd ~</code>).
@@ -257,7 +271,9 @@ Besides setting the working directory, other items that might go into such a fil
 
 *Save the file with a filename of <code>.Rprofile</code>. (Note the dot prefix!)
 
-###### ... Mac OS X Systems <a id="mac"></a>
+[&uarr;](#back_to_top)
+
+###### ... Mac OS X Systems <a id="macs"></a>
 
 On Macs, filenames that begin with a dot are not normally shown in the Finder. Either you can open a terminal window and use <code>nano</code> to edit, instead of Textedit. Or, you can configure the Finder to show you such so-called "hidden files" by default. To do this:
 
@@ -271,8 +287,12 @@ On Macs, filenames that begin with a dot are not normally shown in the Finder. E
 
 In any case: the procedure is the same as for Unix systems. A text editor you can use is <code>nano</code> in a Terminal window.
 
+[&uarr;](#back_to_top)
+
 ###### ...Windows Systems <a id="windows"></a>
 ...
+
+[&uarr;](#back_to_top)
 
 ##### Workspace <a id="workspace"></a>
 
@@ -287,9 +307,10 @@ character(0)
 >
 ```
 
-
 The **R** GUI has a *Workspace Browser* as a menu item.
 
+
+[&uarr;](#back_to_top)
 
 #### Packages <a id="packages"></a>
 
@@ -359,6 +380,8 @@ findFn("moving average")
 ```
 
 Note that the **Bioconductor** project has its own installation system the <code>bioclite()</code> function. It is explained [**here**](http://www.bioconductor.org/install/).
+
+[&uarr;](#back_to_top)
 
 #### Scripts <a id="scripts"></a>
 
