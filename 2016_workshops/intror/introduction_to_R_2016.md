@@ -8,7 +8,7 @@ image: CBW_introtoR-icon.jpg
 ---
 
 <ul id="navmenu">
-  <li><a href="#">Contents</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
@@ -33,15 +33,19 @@ image: CBW_introtoR-icon.jpg
 
   <a href="http://bioinformatics-ca.github.io/2016_workshops/intror/IntroR_2016_Schedule_v1.pdf">Schedule for June 6, 2016</a>
 
+[&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://todaysmeet.com/IntroR2016">here</a>!
 
+[&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/intror/laptop_setup_instructions.pdf">here</a>.
+
+[&uarr;](#back_to_top)
 
 ##### Difference Between **R** and **RStudio**
 <br>
@@ -55,22 +59,26 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ... or you could use the package manger to install libraries.
 
+[&uarr;](#back_to_top)
+
 ##### Syntax highlighting
 <br>
 ... of scripts in the **R** editor does not seem to work under Windows. If you want highlighted syntax, use **RStudio** instead.
 
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
   Before coming to the workshop, read these.
-  
+
+[&uarr;](#back_to_top)  
   
 ### Helpful Materials <a id="helpful_materials"></a>
 
 * The [Introduction to **R** tutorial](http://steipe.biochemistry.utoronto.ca/abc/index.php/R_tutorial) 
 * The R command cheat sheet **put cheat sheet here**
 
-
+[&uarr;](#back_to_top)
 
 ***
 
@@ -80,6 +88,8 @@ That was the problem when students installed things in **RStudio** at the comman
 
   *<font color="green">Ann Meyer</font>* 
 <br>
+
+[&uarr;](#back_to_top)
 
 ###  Module 1: The **R** Environment <a id="module_1"></a>
 
@@ -114,6 +124,7 @@ That was the problem when students installed things in **RStudio** at the comman
 * [The **CRAN** task-view collection](http://cran.r-project.org/web/views/)
 * [**Bioconductor** task views](http://www.bioconductor.org/packages/release/BiocViews.html)
   
+[&uarr;](#back_to_top)
   
 ***
 
@@ -128,6 +139,8 @@ That was the problem when students installed things in **RStudio** at the comman
   Data:
   
   Practical:
+
+[&uarr;](#back_to_top)
 
 ***
 
@@ -147,5 +160,7 @@ That was the problem when students installed things in **RStudio** at the comman
   
   * [Biological identifier conversion]( http://biodbnet.abcc.ncifcrf.gov/)
   * [Gene co-expression database](http://coxpresdb.jp/) 
+
+[&uarr;](#back_to_top)
 
 ***
