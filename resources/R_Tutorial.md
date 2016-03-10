@@ -16,9 +16,18 @@ image: Bioinfo_Logo.jpg
            <li><a href="#interface">User Interface</a>
                <ul class="sub3">
                    <li><a href="#RStudio">A Note on RStudio</a></li>
+                   <li><a href="#help">The Help System</a></li>
+                   <li><a href="#work">Working Directory</a></li>
+                   <li><a href="#rprofile">.Rprofile - Startup Command</a>
+                   	<ul class="sub4">
+                   		<li><a href="#unix">Unix Systems</a></li>
+                   		<li><a href="#macs">Mac OS X Systems</a></li>
+                   		<li><a href="#windows">Windows Systems</a></li>	
+                   	</ul>	
+                  </li>
+                  <li><a href="#workspace">Workspace</a></li>
                </ul>
            </li>     
-           <li><a href="#rprofile">.Rprofile - Startup Commands</a></li>
            <li><a href="#packages">Packages</a></li>
            <li><a href="#scripts">Scripts</a></li>
         </ul>
@@ -46,7 +55,7 @@ image: Bioinfo_Logo.jpg
         <li><a href="#reading_resources">Further Reading and Resources</a></li>
     </ul>
   </li>
-</ul>  
+</ul> 
 
 <br>
 
