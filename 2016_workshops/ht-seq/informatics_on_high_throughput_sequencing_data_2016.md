@@ -108,7 +108,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Welcome <a id="welcome"></a>
 
-  *<font color="green">Ann Meyer</font>* 
+  *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
 [&uarr;](#back_to_top)
@@ -117,7 +117,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 1: Introduction to HT-sequencing and Cloud Computing <a id="module_1"></a>
 
-  *<font color="green">Francis Ouellette</font>*
+  *<font color="#827e9c">Francis Ouellette</font>*
   
   Lecture:
   
@@ -129,7 +129,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 2: Genome Alignment <a id="module_2"></a>
 
-  *<font color="green">Jared Simpson</font>*
+  *<font color="#827e9c">Jared Simpson</font>*
   
   Lecture:
   
@@ -160,7 +160,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 3: Genome Visualization <a id="module_3"></a>
 
-  *<font color="green">TBA</font>*
+  *<font color="#827e9c">TBA</font>*
   
   Lecture:
   
@@ -172,7 +172,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 4: *De Novo* Assembly <a id="module_4"></a>
 
-  *<font color="green">Jared Simpson</font>*
+  *<font color="#827e9c">Jared Simpson</font>*
   
   Lecture:
 
@@ -182,7 +182,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ### Integrated Assignment <a id="assignment"></a>
 
-*<font color="green">TBA</font>*
+*<font color="#827e9c">TBA</font>*
 
 ```bash
 Files are in the following directory of the cloud instance: ~/CourseData/HT_data/Module2/
@@ -237,7 +237,7 @@ Integrated Assignment:
 
 ###  Module 5: Genome Variation <a id="module_5"></a>
 
-  *<font color="green">Guillaume Bourque</font>*
+  *<font color="#827e9c">Guillaume Bourque</font>*
   
   Lecture:
   
@@ -263,7 +263,7 @@ Programs:
 
 ###  Module 6: Genome Structural Variation  <a id="module_6"></a>
 
-  *<font color="green">Guillaume Bourque</font>*
+  *<font color="#827e9c">Guillaume Bourque</font>*
   
   Lecture:
   
@@ -282,7 +282,7 @@ Programs:
 
 ###  Module 7: Bringing it Together with Galaxy  <a id="module_7"></a>
 
-  *<font color="green">Francis Ouellette</font>*
+  *<font color="#827e9c">Francis Ouellette</font>*
   
   Lecture:
   
