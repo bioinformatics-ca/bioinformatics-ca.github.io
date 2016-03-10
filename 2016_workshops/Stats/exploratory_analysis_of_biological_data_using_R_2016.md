@@ -8,7 +8,7 @@ image: CBW_R_icon.jpg
 ---
 
 <ul id="navmenu">
-  <li><a href="#">Contents</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
@@ -41,11 +41,13 @@ image: CBW_R_icon.jpg
 
   <a href="http://bioinformatics-ca.github.io/2016_workshops/Stats/Stats_2016_Schedule_v1.pdf">Schedule for June 7 to June 8, 2016</a>
 
+[&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://todaysmeet.com/EDA2016">here</a>!
 
+[&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
@@ -75,6 +77,7 @@ That was the problem when students installed things in **RStudio** at the comman
 * The [Introduction to **R** tutorial](http://steipe.biochemistry.utoronto.ca/abc/index.php/R_tutorial) 
 * The R command cheat sheet **put cheat sheet here**
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -85,10 +88,13 @@ That was the problem when students installed things in **RStudio** at the comman
   *<font color="green">Ann Meyer</font>* 
 <br>
 
+[&uarr;](#back_to_top)
 
 ### Data Sets for Modules 1 - 5 <a id="data_sets"></a>
 
 **link datasets here**
+
+[&uarr;](#back_to_top)
 
 ###  Module 1: Exploratory Data Analysis <a id="module_1"></a>
 
@@ -116,6 +122,8 @@ That was the problem when students installed things in **RStudio** at the comman
 * [Best Practices for Scientific Computing](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)
 * [Version control in R Studio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
   
+[&uarr;](#back_to_top)
+
 ***
 
 ###  Module 2: Regression Analysis <a id="module_2"></a>
@@ -132,6 +140,7 @@ That was the problem when students installed things in **RStudio** at the comman
 * [Homepage for data exploration with the MIC measure](http://www.exploredata.net/) 
 * [**CRAN**: package MINERVA](http://cran.r-project.org/web/packages/minerva/)  (**R** wrapper for a fast *mine* implementation)
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -143,6 +152,7 @@ That was the problem when students installed things in **RStudio** at the comman
   
   Scripts:
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -157,6 +167,8 @@ Part 2:
 Data Set:
 
 For your reference:
+
+[&uarr;](#back_to_top)
 
 ***
 
@@ -200,6 +212,8 @@ Read with:
   gset <- gset [ [ idx ] ]
 ```
 
+[&uarr;](#back_to_top)
+
 ###  Module 5: Hypothesis Testing for EDA <a id="module_5"></a>
 
   *<font color="green">Boris Steipe</font>*
@@ -213,6 +227,7 @@ Read with:
   * [NGS Differential Transcriptional Analysis](http://www.ncbi.nlm.nih.gov/pubmed/25894390)
   * [Erroneous Analysis of Significance](http://www.ncbi.nlm.nih.gov/pubmed/21878926)
 
+[&uarr;](#back_to_top)
 
 ###  Integrated Assignment Part 2 <a id="assignment2"></a>
 
@@ -223,5 +238,9 @@ Read with:
   Questions in **R** Part 2:
   
   Answer Key Part 2:
+  
+  [&uarr;](#back_to_top)
+
+[&uarr;](#back_to_top)
   
   ***
