@@ -64,14 +64,14 @@ image: CBW_Epigenome-data_icon.jpg
 
 ###  Welcome <a id="welcome"></a>
 
-  *<font color="green">Ann Meyer</font>* 
+  *<font color="#827e9c">Ann Meyer</font>* 
 <br>
 
 [&uarr;](#back_to_top)
 
 ###  Module 1: Introduction to Computing in the Cloud <a id="module_1"></a>
 
-  *<font color="green">TBA</font>*
+  *<font color="#827e9c">TBA</font>*
   
   Lecture:
   
@@ -81,7 +81,7 @@ image: CBW_Epigenome-data_icon.jpg
 
 ###  Module 2: Introduction to ChIP Sequencing and Analysis <a id="module_2"></a>
 
-  *<font color="green">Martin Hirst</font>*
+  *<font color="#827e9c">Martin Hirst</font>*
   
   Lecture:
   
@@ -91,7 +91,7 @@ image: CBW_Epigenome-data_icon.jpg
 
 ###  Module 3: ChIP-Seq Alignment, Peak Calling, and Visualization <a id="module_3"></a>
 
-  *<font color="green">TBA</font>*
+  *<font color="#827e9c">TBA</font>*
   
   Lecture:
   
@@ -103,7 +103,7 @@ image: CBW_Epigenome-data_icon.jpg
 
 ###  Module 4: ntroduction to WGBS and Analysis <a id="module_4"></a>
 
-  *<font color="green">Guillaume Bourque</font>*
+  *<font color="#827e9c">Guillaume Bourque</font>*
   
   Lecture:
   
@@ -113,7 +113,7 @@ image: CBW_Epigenome-data_icon.jpg
 
 ###  Module 5: Downstream Analysis and Integrative Tools <a id="module_5"></a>
 
-  *<font color="green">Guillaume Bourque</font>*
+  *<font color="#827e9c">Guillaume Bourque</font>*
   
   Lecture:
   
