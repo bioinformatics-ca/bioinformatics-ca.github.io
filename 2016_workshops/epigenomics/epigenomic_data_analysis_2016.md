@@ -7,36 +7,32 @@ header2: Workshop pages for students
 image: CBW_Epigenome-data_icon.jpg
 ---
 
-#### Contents
-[Course Schedule](#course_schedule)
+<ul id="navmenu">
+  <li><a href="#">Contents</a>
+     <ul class="sub1">
+     <li><a href="#course_schedule">Course Schedule</a></li>
+     <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
+     <li><a href="#laptop_setup">Laptop Setup Instructions</a></li>
+     <li><a href="#pre_readings">Pre-Workshop Readings</a></li>
+      <li><a href="#day1">Day 1</a>
+         <ul class="sub2">  
+           <li><a href="#welcome">Welcome</a></li>
+           <li><a href="#module_1">Module 1</a></li>
+           <li><a href="#module_2">Module 2</a></li>
+           <li><a href="#module_3">Module 3</a></li>
+        </ul>
+      </li>
+       <li><a href="#day_2">Day 2</a>
+          <ul class="sub2">
+             <li><a href="#module_4">Module 4</a></li>
+             <li><a href="#module_5">Module 5</a></li>
+           </ul>
+       </li>
+    </ul>
+  </li>
+</ul>  
 
-[Workshop Q/A Forum](#q_a_forum)
-
-[Laptop Setup Instructions](#laptop_setup)
-
-[Pre-Workshop Readings](#pre_readings)
-
-**[Day 1](#day_1)**
-
-
-  ...[Welcome](#welcome)
-  
-  ...[Module 1: Introduction to Computing in the Cloud](#module_1)
-  
-  ...[Module 2: Introduction to ChIP Sequencing and Analysis](#module_2)
-  
-  ...[Module 3: ChIP-Seq Alignment, Peak Calling, and Visualization](#module_3)
-  
-  
-**[Day 2](#day_2)**
-
-
-  ...[Module 4: Introduction to WGBS and Analysis](#module_4)
-  
-  ...[Module 5: Downstream Analysis and Integrative Tools](#module_5)
-  
-  
-***
+<br>
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
