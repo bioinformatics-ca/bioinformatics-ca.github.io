@@ -8,7 +8,7 @@ image: CBW_pathway_icon.jpg
 ---
 
 <ul id="navmenu">
-  <li><a href="#">Contents</a>
+  <li><a id="back_to_top">Contents</a>
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
@@ -46,16 +46,19 @@ image: CBW_pathway_icon.jpg
 
   <a href="http://bioinformatics-ca.github.io/2016_workshops/pathways/Pathways_2016_Schedule_v1.pdf">Schedule for June 13 to June 15, 2016</a>
 
+[&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://todaysmeet.com/Pathways2016">here</a>!
 
+[&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/laptop_setup_instructions.pdf">here</a>.
 
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Tutorials <a id="pre_tutorials"></a>
 
@@ -69,6 +72,7 @@ image: CBW_pathway_icon.jpg
 
 * Filtering and Editing in Cytoscape 3
 
+[&uarr;](#back_to_top)
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
@@ -89,7 +93,8 @@ image: CBW_pathway_icon.jpg
   * [Gene set enrichment analysis: a knowledge-based approach for interpreting genome-wide expression profiles](http://www.ncbi.nlm.nih.gov/pubmed/16199517)
   
   * [Expression data analysis with reactome](http://www.ncbi.nlm.nih.gov/pubmed/25754994)
-  
+
+[&uarr;](#back_to_top)  
 
 ***
 
@@ -100,6 +105,8 @@ image: CBW_pathway_icon.jpg
   *<font color="green">Ann Meyer</font>* 
 <br>
 
+[&uarr;](#back_to_top)
+
 ***
 
 ###  Module 1: Introduction to Pathway and Network Analysis <a id="module_1"></a>
@@ -108,6 +115,7 @@ image: CBW_pathway_icon.jpg
   
   Lecture:
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -121,6 +129,7 @@ image: CBW_pathway_icon.jpg
   
   *<font color="green">Veronique Voisin</font>*
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -134,6 +143,7 @@ image: CBW_pathway_icon.jpg
   
   *<font color="green">Veronique Voisin</font>*
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -143,6 +153,7 @@ image: CBW_pathway_icon.jpg
 
 Integrated Assignment: Enrichment Analysis Using GSEA and g:Profiler
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -154,6 +165,8 @@ Integrated Assignment: Enrichment Analysis Using GSEA and g:Profiler
 Lab practical: Cytoscape Demo, Networks
   
   *<font color="green">Veronique Voisin</font>*
+
+[&uarr;](#back_to_top)
   
 ***  
 
@@ -166,7 +179,8 @@ Lab practical: Cytoscape Demo, Networks
   Lab practical: *De Novo* Subnetwork Clustering Analysis in Reactome
   
   *<font color="green">Robin Haw</font>*
-  
+ 
+ [&uarr;](#back_to_top) 
 
 ***
 
@@ -178,6 +192,7 @@ Lab practical: Cytoscape Demo, Networks
   
   Lab practical:
   
+  [&uarr;](#back_to_top)
 
 ***
 
@@ -187,6 +202,7 @@ Lab practical: Cytoscape Demo, Networks
 
 Integrated Assignment: Reactome FI and GeneMANIA
 
+[&uarr;](#back_to_top)
 
 ***
 
@@ -199,6 +215,7 @@ Integrated Assignment: Reactome FI and GeneMANIA
   Lecture:
   
   Lab practical: iRegulon
-  
+
+[&uarr;](#back_to_top)  
 
 ***
