@@ -269,7 +269,7 @@ ul#navmenu .sub2 a {
 }
 
 ul#navmenu .sub3 a {
-    margin-left: 77px;
+    margin-left: 97px;
     width: 125px;
 }
 
@@ -279,7 +279,7 @@ ul#navmenu .sub4 a {
 }
 
 ul#navmenu li:hover > a {
-    background-color: #800000;
+    background-color: #542c2c;
 }
 
 ul#navmenu li:hover a:hover {
