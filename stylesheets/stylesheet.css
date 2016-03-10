@@ -255,7 +255,7 @@ ul#navmenu li {
 ul#navmenu a {
     text-decoration: none;
     display: block;
-    background-color: #b26b6b;
+    background-color: #710f0f;
     border: 1px solid #CCC;
     border-radius: 25px;
 }
@@ -280,11 +280,11 @@ ul#navmenu .sub4 a {
 }
 
 ul#navmenu li:hover > a {
-    background-color: #CFC;
+    background-color: #b26b6b;
 }
 
 ul#navmenu li:hover a:hover {
-    background-color: #FF0;
+    background-color: #600d0d;
 }
 
 ul#navmenu ul.sub1 {
@@ -336,7 +336,7 @@ ul#navmenu .sub1 .sub2 .sub3 li:hover .sub4 {
     position: absolute;
     top: 5px;
     right: 4px;
-    color: #CFC;
+    color: #3d0808;
 }
 
 .rarrow {
@@ -344,6 +344,7 @@ ul#navmenu .sub1 .sub2 .sub3 li:hover .sub4 {
     position: absolute;
     top: 8px;
     right: 4px;
+    color: #3d0808;
 }
 
 
