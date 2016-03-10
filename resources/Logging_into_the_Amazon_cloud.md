@@ -7,17 +7,21 @@ header2: Workshop pages for students
 ---
 
 
-#### Contents <a id="back_to_top"></a>
-* [Logging into the Amazon Cloud](#amazon_cloud)
+<ul id="navmenu">
+  <li><a href="#">Contents</a>
+     <ul class="sub1">
+     <li><a href="#amazon_cloud">Amazon Cloud</a>
+         <ul class="sub2">  
+           <li><a href="#ssh_login">Mac/Linux ssh Login</a></li>
+           <li><a href="#putty_login">Windows Putty Login</a></li>
+           <li><a href="#file_system_layout">File System Layout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>  
 
-  * [Logging in with ssh (Mac/Linux)](#ssh_login)
-
-  * [Logging in with Putty (Windows)](#putty_login)
-
-  * [File System Layout](#file_system_layout) 
-
-
-***
+<br>
 
 ### Logging into the Amazon Cloud <a id="amazon_cloud"></a>
 
