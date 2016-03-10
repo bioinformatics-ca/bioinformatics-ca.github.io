@@ -7,42 +7,35 @@ header2: Workshop pages for students
 image: CBW_R_icon.jpg
 ---
 
-#### Contents
-[Course Schedule](#course_schedule)
+<ul id="navmenu">
+  <li><a href="contents">Contents</a>
+     <ul class="sub1">
+     <li><a href="#course_schedule">Course Schedule</a></li>
+     <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
+     <li><a href="#laptop_setup">Laptop Setup Instructions</a></li>
+     <li><a href="#pre_readings">Pre-Workshop Tutorials</a></li>
+      <li><a href="#day1">Day 1</a>
+         <ul class="sub2">  
+           <li><a href="#welcome">Welcome</a></li>
+           <li><a href="#data_sets">Data Sets for Modules 1 - 5</a><li>
+           <li><a href="#module_1">Module 1</a><li>
+           <li><a href="#module_2">Module 2</a><li>
+           <li><a href="#module_3">Module 3</a><li>
+           <li><a href="#assignment1">Integrated Assignment</a><li>
+        </ul>
+      </li>
+       <li><a href="#day_2">Day 2</a>
+          <ul class="sub2">
+             <li><a href="#module_4">Module 4</a></li>
+             <li><a href="#module_5">Nodule 5</a></li>
+             <li><a href="#assignment2">Integrated Assignment</a></li>
+           </ul>
+       </li>
+    </ul>
+  </li>
+</ul>  
 
-[Workshop Q/A Forum](#q_a_forum)
-
-[Laptop Setup Instructions](#laptop_setup)
-
-[Pre-Workshop Tutorials](#pre_readings)
-
-**[Day 1](#day_1)**
-
-
-  ...[Welcome](#welcome)
-  
-  ...[Data Sets for Modules 1 - 5](#data_sets)
-  
-  ...[Module 1: Exploratory Data Analysis](#module_1)
-  
-  ...[Module 2: Regression Analysis](#module_2)
-  
-  ...[Module 3: Dimension Reduction](#module_3)
-  
-  ...[Integrated Assignment Part 1](#assignment1)
-  
-  
-**[Day 2](#day_2)**
-
-
-  ...[Module 4: Clustering Analysis](#module_4)
-  
-  ...[Module 5: Hypothesis Testing for EDA](#module_5)
-  
-  ...[Integrated Assignment Part 2](#assignment2)
-  
-
-***
+<br>
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
