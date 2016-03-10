@@ -7,50 +7,40 @@ header2: Workshop pages for students
 image: CBW_pathway_icon.jpg
 ---
 
-#### Contents
-[Course Schedule](#course_schedule)
+<ul id="navmenu">
+  <li><a href="#">Contents</a>
+     <ul class="sub1">
+     <li><a href="#course_schedule">Course Schedule</a></li>
+     <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
+     <li><a href="#laptop_setup">Laptop Setup Instructions</a></li>
+     <li><a href="#pre_tutorials">Pre-Workshop Tutorials</a></li>
+     <li><a href="#pre_readings">Pre-Workshop Readings</a></li>
+      <li><a href="#day1">Day 1</a>
+         <ul class="sub2">  
+           <li><a href="#welcome">Welcome</a></li>
+           <li><a href="#module_1">Module 1</a></li>
+           <li><a href="#module_2">Module 2</a></li>
+           <li><a href="#module_3">Module 3</a></li>
+           <li><a href="#assignment1">Integrated Assignment</a></li>
+        </ul>
+      </li>
+       <li><a href="#day_2">Day 2</a>
+          <ul class="sub2">
+             <li><a href="#module_4">Module 4</a></li>
+             <li><a href="#module_5">Module 5</a></li>
+             <li><a href="#assignment2">Integrated Assignment</a></li>
+           </ul>
+       </li>
+       <li><a href="#day_3">Day 3</a>
+          <ul class="sub2">
+             <li><a href="#module_6">Module 6</a></li>
+           </ul>
+       </li>
+    </ul>
+  </li>
+</ul>  
 
-[Workshop Q/A Forum](#q_a_forum)
-
-[Laptop Setup Instructions](#laptop_setup)
-
-[Pre-Workshop Tutorials](#pre_tutorials)
-
-[Pre-Workshop Readings](#pre_readings)
-
-
-**[Day 1](#day_1)**
-
-
-  ...[Welcome](#welcome)
-  
-  ...[Module 1: Introduction to Pathway and Network Analysis](#module_1)
-  
-  ...[Module 2: Finding Over-Represented Pathways in Gene Lists](#module_2)
-  
-  ...[Module 3: Network Visualization and Analysis with Cytoscape ](#module_3)
-
-  ...[Integrated Assignment Part 1](#assignment1)
-  
-  
-**[Day 2](#day_2)**
-
-
-  ...[Module 4: More Depth on Pathway and Network Analysis](#module_4)
-  
-  ...[Module 5: Gene Function Prediction](#module_5)
-  
-  ...[Integrated Assignment Part 2](#assignment2)
-    
-  
-**[Day 3](#day_3)**
-
-  
-  ...[Module 6: Regulatory Network Analysis](#module_6)
-
-  
-
-***
+<br>
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
