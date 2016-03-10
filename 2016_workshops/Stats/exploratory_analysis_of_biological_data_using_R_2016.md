@@ -240,7 +240,5 @@ Read with:
   Answer Key Part 2:
   
   [&uarr;](#back_to_top)
-
-[&uarr;](#back_to_top)
   
   ***
