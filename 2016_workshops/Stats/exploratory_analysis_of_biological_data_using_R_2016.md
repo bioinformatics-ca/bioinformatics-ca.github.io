@@ -17,11 +17,11 @@ image: CBW_R_icon.jpg
       <li><a href="#day1">Day 1</a>
          <ul class="sub2">  
            <li><a href="#welcome">Welcome</a></li>
-           <li><a href="#data_sets">Data Sets for Modules 1 - 5</a><li>
-           <li><a href="#module_1">Module 1</a><li>
-           <li><a href="#module_2">Module 2</a><li>
-           <li><a href="#module_3">Module 3</a><li>
-           <li><a href="#assignment1">Integrated Assignment</a><li>
+           <li><a href="#data_sets">Data Sets for Modules 1 - 5</a></li>
+           <li><a href="#module_1">Module 1</a></li>
+           <li><a href="#module_2">Module 2</a></li>
+           <li><a href="#module_3">Module 3</a></li>
+           <li><a href="#assignment1">Integrated Assignment</a></li>
         </ul>
       </li>
        <li><a href="#day_2">Day 2</a>
