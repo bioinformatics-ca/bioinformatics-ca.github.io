@@ -7,78 +7,62 @@ header2: Workshop pages for students
 image: CBW_cancerDNA_icon-16.jpg
 ---
 
-#### Contents
-[Course Schedule](#course_schedule)
+<ul id="navmenu">
+  <li><a href="#">Contents</a>
+     <ul class="sub1">
+     <li><a href="#course_schedule">Course Schedule</a></li>
+     <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
+     <li><a href="#laptop_setup">Laptop Setup Instructions</a></li>
+     <li><a href="#pre_tutorials">Pre-Workshop Tutorials</a></li>
+     <li><a href="#pre_readings">Pre-Workshop Readings</a></li>
+     <li><a href="#amazon_cloud">Amazon Cloud</a></li>
+      <li><a href="#day1">Day 1</a>
+         <ul class="sub2">  
+           <li><a href="#welcome">Welcome</a></li>
+           <li><a href="#module_1">Module 1</a></li>
+           <li><a href="#module_2.1">Module 2.1</a></li>
+           <li><a href="#module_2.2">Module 2.2</a></li>
+           <li><a href="#r_review">R Review Session</a></li>
+        </ul>
+      </li>
+       <li><a href="#day_2">Day 2</a>
+          <ul class="sub2">
+             <li><a href="#module_3">Module 3</a></li>
+             <li><a href="#module_4">Module 4</a></li>
+           </ul>
+       </li>
+       <li><a href="#day_2">Day 3</a>
+          <ul class="sub2">
+             <li><a href="#module_5">Module 5</a></li>
+             <li><a href="#module_6">Module 6</a></li>
+           </ul>
+       </li>
+       <li><a href="#day_2">Day 4</a>
+          <ul class="sub2">
+             <li><a href="#module_7">Module 7</a></li>
+             <li><a href="#module_8">Module 8</a>
+             	<ul class="sub3">
+             		<li><a href="#part_1">Part 1</a></li>
+             		<li><a href="#part_2">Part 2</a></li>
+           		</ul>
+             </li>
+           </ul>
+       </li>
+       <li><a href="#day_2">Day 5</a>
+          <ul class="sub2">
+             <li><a href="#module_8">Module 8</a>
+             	<ul class="sub3">
+             		<li><a href="#part_3">Part 3</a></li>
+           		</ul>
+             </li>
+             <li><a href="#module_9">Module 9</a></li>
+           </ul>
+       </li>
+    </ul>
+  </li>
+</ul>  
 
-[Workshop Q/A Forum](#q_a_forum)
-
-[Laptop Setup Instructions](#laptop_setup)
-
-[Pre-Workshop Tutorials](#pre_tutorials)
-
-[Pre-Workshop Readings](#pre_readings)
-
-[Logging into the Amazon Cloud](#amazon_cloud)
-
-...[Logging in with ssh (Mac/Linux)](#ssh_login)
-
-...[Logging in with Putty (Windows)](#putty_login)
-
-...[File System Layout](#file_system_layout)
-
-**[Day 1](#day_1)**
-
-
-  ...[Welcome](#welcome)
-  
-  ...[Module 1: Introduction to Cancer Genomics](#module_1)
-  
-  ...[Module 2.1: Databases and Visualization Tools](#module_2.1)
-  
-  ...[Module 2.1: Logging into the Cloud](#module_2.2)
-  
-  ...[R Review Session](#r_review)
-
-
-**[Day 2](#day_2)**
-
-
-  ...[Module 3: Mapping and Genome Rearrangement](#module_3)
-  
-  ...[Module 4: Gene Fusion Discovery](#module_4)
-  
-
-**[Day 3](#day_3)**
-
-  
-  ...[Module 5: Copy Number Alterations](#module_5)
-  
-  ...[Module 6: Somatic Mutations](#module_6)
-  
-
-**[Day 4](#day_4)**
-
-
-  ...[Module 7: Gene Expression Profiling](#module_7)
-  
-  ...[Module 8: Variants to Networks](#module_8)
-  
-  ......[Part 1: How to annotate variants and prioritize potentially relevant ones ](#part_1)
-  
-  ......[Part 2: How to annotate variants and prioritize potentially relevant ones ](#part_2)
-  
-  
-  **[Day 5](#day_5)**
-  
-  
-  ......[Part 3: How to annotate variants and prioritize potentially relevant ones ](#part_3)
-  
-  ...[Module 9: Integration of Clinical Data ](#module_9)
-  
-  
-
-***
-***
+<br>
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
@@ -159,86 +143,11 @@ That was the problem when students installed things in **RStudio** at the comman
   
 ### Logging into the Amazon Cloud <a id="amazon_cloud"></a>
 
+Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into_the_Amazon_cloud/).
+
 * These instructions will **ONLY** be relevant in class, as the Cloud will not be accessible from home in advance of the class.
-
-* We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download this **link certificate here**. Otherwise if you plan on using Windows (with Putty and Winscp), please download this **link certificate here**. 
-
-* On the cloud, we're going to use the default username: **ubuntu**
-
-#### Logging in with ssh (Mac/Linux) <a id="ssh_login"></a>
-<p>
-<h5> Logging in </h5>
-</p>
-
-* Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
-
-```bash
- chmod 600 CBWCG.pem
-```
-
-* To log in to the node, use the -i command line argument to specify your certificate:
-
-```bash
- ssh -i CBWCG.pem ubuntu@cbw#.dyndns.info
-```
-
-(where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
-
-##### Copying files to your computer
-<br>
-* To copy files from an instance, use scp in a similar fashion:
-
-```bash
- scp -i CBWCG.pem ubuntu@cbw#.dyndns.info:CourseData/genome/g1k/human_g1k_v37.fasta.fai .
-```
-
-* Everything created in your workspace on the cloud is also available by a web server on your cloud instance.  Simply go to the following in your browser:
-
- http://cbw#.dyndns.info/ http://cbw#.dyndns.info/
-
-#### Logging in with Putty (Windows) <a id="putty_login"></a>
-<p>
-<h5> Logging in </h5>
-</p>
-To configure Putty, start Putty and do the following:
-
-* Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number less is than 10, please add 0 in front of it.)
-
-* In the left hand categories,under the Connection category choose Data.  In the auto-login username field write ***ubuntu***.
-
-* In the left hand categories, in the Connection category next to SSH click on the **+**. Click on Auth. In the private-key file for authentication field, hit browse and find the CBWCG.ppk certificate that you downloaded above.
-
-* In the left hand categories, click on Session.  In the Saved Sessions field write **Amazon node** and click save.
-
-**Now that Putty is configured**, all you have to do is start putty and double-click on "Amazon node" to login.
-
-##### Copying files to your computer
-<br>
-To configure WinScp, start WinScp and do the following:
-
-* On the right-hand buttons click "New".
-
-* Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
-
-* Fill in the "User name" field with **ubuntu**
-
-* Leave the password field empty
-
-* In the "private key file" field press the "..." button to browse for the CBWCG.ppk certificate.
-
-* Click the "Save..." button and in the "Save session as" field write "Amazon node" .
-
-
-**Now that WinScp is configured**, all you have to do is start WinScp and double-click on **Amazon node** to start copying files.
-
-#### File System Layout <a id="file_system_layout"></a>
-<br>
-When you log in, you'll notice that you have two directories: **CourseData** and **workspace**.
-
-* The **CourseData** directory will contain the files that you'll need to complete your lab assignments.
-
-* The **workspace** directory is where we will keep our temporary files. By default, we have around 40 GB available for our output files in the workspace directory. If you run out of space, you may need to delete some files from this directory.
-
+ 
+* We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download this **link certificate here**. Otherwise if you plan on using Windows (with Putty and Winscp), please download this **link certificate here**.
 
 
 
