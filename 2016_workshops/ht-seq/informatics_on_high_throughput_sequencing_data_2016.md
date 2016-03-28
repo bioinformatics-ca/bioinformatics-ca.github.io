@@ -71,7 +71,7 @@ image: CBW_High-throughput_icon.jpg
 
 3) **IGV Tutorial**: Review how to use IGV Genome Browser if you have not used this tool before.
 
-* [IGV tutorial](../blob/master/resources/IGV_Tutorial.pdf)
+* [IGV tutorial](../../resources/IGV_Tutorial.pdf)
 * link to datasets
 
 [&uarr;](#back_to_top)
