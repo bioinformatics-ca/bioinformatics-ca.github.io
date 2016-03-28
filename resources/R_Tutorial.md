@@ -456,7 +456,7 @@ Some useful shortcuts:
 
 ###  Simple Commands  <a id="commands"></a>
 
-The **R** command line evaluates expressions. Expressions can contain constants, variables, operators and functions of the various datatypes '''R''' recognizes.
+The **R** command line evaluates expressions. Expressions can contain constants, variables, operators and functions of the various datatypes **R** recognizes.
 
 [&uarr;](#back_to_top)
 
