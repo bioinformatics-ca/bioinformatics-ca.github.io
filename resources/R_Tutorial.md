@@ -552,3 +552,43 @@ barplot(1:10, col=rgStripes)
 ```
 
 [&uarr;](#back_to_top)
+
+### Scalar data <a id="scalars"></a>
+
+*Scalars* are single numbers, the "atomic" parts of more complex datatypes. We have covered many of the properties of scalars above, e.g. the use of constants and their assignment to variables. To round this off, here are some remarks on the types of scalars **R** uses and on *coercion*, or casting one datatype into another. The following scalar types are supported:
+
+* Boolean constants: <code>TRUE</code> and <code>FALSE</code>. This type has the "mode" *logical*;
+* Integers, floats (floating point numbers) and complex numbers.  These types have the mode *numeric*;
+* Strings. These have the mode *character*.
+
+Other modes exist, such as <code>list</code>, <code>function</code> and <code>expression</code>, all of which can be combined into complex objects.
+
+The function <code>mode()</code> returns the mode of an object and <code>typeof()</code> returns its type. Consider:
+
+```r
+a <- 3 > 5; a; mode(a); typeof(a) # Note: a > 5 is a logical expression, its value is FALSE.
+a <- 3 < 5; a; mode(a); typeof(a)
+
+a <- 3.0;   a;  mode(a); typeof(a) # Double precision floating point number
+a <- 3.0e0; a;  mode(a); typeof(a) # Same value, exponential notation
+
+a <- 3;     a;  mode(a); typeof(a) # Note: numbers are double precision floats by default.
+a <- as.integer(3);  a;  mode(a); typeof(a) # If we really want an integer, we must coerce to type integer.
+
+a <- "3"; a;  mode(a); typeof(a) # Forcing the number to be interpreted as a character.
+
+# More coercions. For each of these, first think what result you would expect:
+as.numeric("3") # character as numeric
+as.numeric("3.141592653") # string as numeric
+as.numeric("pi") # another string as numeric
+as.numeric(pi) # not a string, but a predefined constant
+
+as.logical(0)
+as.logical(1)
+as.logical(-1)
+as.logical(pi) # any non-zero number is TRUE ...
+as.logical("pi") # ... but not non-numeric types. NA is "Not Available".
+```
+
+[&uarr;](#back_to_top)
+
