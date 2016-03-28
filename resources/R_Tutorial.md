@@ -1042,15 +1042,15 @@ This concludes our introduction to **R**. We haven't actually done anything sign
 
 ### Further reading and resources <a id="reading_resources"></a>
 
-&nbsp;&nbsp;&nbsp;[**R** on Wikipedia](https://en.wikipedia.org/wiki/R_(programming_language))
+[**R** on Wikipedia](https://en.wikipedia.org/wiki/R_(programming_language))
 
 [Introduction to **R** at CRAN](http://cran.r-project.org/doc/manuals/R-intro.html)
 
-[User-contributed documents about **R** at CRAN](http://cran.r-project.org/other-docs.html)  &ndash; including for example E. Paradis' ***R** for Beginners* and J. Lemon's *Kickstarting **R***.
+[User-contributed documents about **R** at CRAN](http://cran.r-project.org/other-docs.html)  &ndash; including for example E. Paradis' _**R** for Beginners_ and J. Lemon's _Kickstarting **R**_.
 
 [The "Task-views" section of CRAN](http://cran.r-project.org/web/views/): thematically organized collections of **R**-packages.
 
-[The **"Views"** section of Bioconductor](http://www.bioconductor.org/packages/release/BiocViews.html), and <br />[Bioconductor annotated **workflows**](http://www.bioconductor.org/help/workflows/).
+[The **"Views"** section of Bioconductor](http://www.bioconductor.org/packages/release/BiocViews.html), and [Bioconductor annotated **workflows**](http://www.bioconductor.org/help/workflows/).
 
 [**Quick-R** how-to's](http://www.statmethods.net/index.html)
 
