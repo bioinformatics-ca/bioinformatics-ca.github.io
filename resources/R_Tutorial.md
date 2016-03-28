@@ -453,3 +453,102 @@ Some useful shortcuts:
 * Selecting some text and typing a quotation mark quotes the text. This also works with single quotation marks, parentheses, square brackets and curly braces.
 
 [&uarr;](#back_to_top)
+
+###  Simple Commands  <a id="commands"></a>
+
+The **R** command line evaluates expressions. Expressions can contain constants, variables, operators and functions of the various datatypes '''R''' recognizes.
+
+[&uarr;](#back_to_top)
+
+#### Operators <a id="operators"></a>
+
+The common arithmetic operators are recognized in the usual way. Try the following operators on numbers:
+
+```r
+5
+5 + 3
+5 + 1 / 2
+3 * 2 + 1
+3 * (2 + 1)
+2^3 # Exponentiation
+8 ^ (1/3) # Third root via exponentiation
+7 %% 2  # Modulo operation (remainder of integer division)
+7 %/% 2 # Integer division
+```
+
+[&uarr;](#back_to_top)
+
+#### Functions <a id="functions"></a>
+
+**R** is considered an (impure) [functional programming language](https://en.wikipedia.org/wiki/Functional_programming) and thus the focus of **R** programs is on functions. They key advantage is that this encourages programming without side-effects and this makes it easier to reason about the correctness of programs. Arguments are passed into functions as parameters, and results are returned. The return values can either be assigned to a variable, or used directly as the parameter in another function. 
+
+Functions are either *built-in*, loaded in specific packages (see above), or they can be easily defined by you (see below). In general a function is invoked through a name, followed by one or more arguments (also *parameters*) in parentheses, separated by commas. Whenever I refer to a function, I write the parentheses to identify it as such and not a constant or other keyword eg. <code>log()</code>. Here are some examples for you to try and play with:
+
+```r
+cos(pi) #"pi" is a predefined constant.
+sin(pi) # Note the rounding error. This number is not really different from zero.
+sin(30 * pi/180) # Trigonometric functions use radians as their argument - this conversion calculates sin(30 degrees)
+exp(1) # "e" is not predefined, but easy to calculate.
+log(exp(1)) # functions can be arguments to functions - they are evaluated from the inside out.
+log(10000) / log(10) # log() calculates natural logarithms; convert to any base by dividing by the log of the base. Here: log to base 10.
+exp(complex(r=0, i=pi)) #Euler's identity
+```
+
+There are several ways to populate the argument list for a function and **R** makes a reasonable guess what you want to do. Consider the specification of a complex number in Euler's identity above. The function <code>complex()</code> can work with a number of arguments that are given in the documentation (see: <code>?complex</code>). These include <code>length.out</code>, <code>real</code>, <code>imaginary</code>, and some more. The <code>length.out</code> argument creates a vector with one or more complex numbers. If nothing else is specified, this will be a vector of complex zero(s). If there are two, or three arguments, they will be placed in the respective slots. However, since the arguments are **named**, we can also define which slot of the argument list they should populate. Consider the following to illustrate this:
+
+```r
+complex(1)
+complex(4)
+complex(1, 2) # imaginary part missing - defaults to zero
+complex(1, 2, 3) # one complex number
+complex(4, 2, 3) # four complex numbers
+complex(real = 0, imaginary = pi) # defining via named parameters
+complex(imaginary = pi, real = 0) # same thing - if names are used, order is not important
+complex(re = 0, im = pi) # names can be abbreviated ...
+complex(r = 0, i = pi) # ... to the shortest string that is unique among the named parameters. Use this with discretion to keep your code readable.
+complex(i = pi, 1, 0) # Think: what have I done here? Why does this work?
+exp(complex(i = pi, 1, 0)) # (The complex number above is the same one as in Euler's identity.)
+```
+
+[&uarr;](#back_to_top)
+
+#### Variables <a id="variables"></a>
+
+In order to store the results of evaluations, you can freely assign them to variables. Variables are created internally whenever you first use them (*i.e.* they are allocated and instantiated). Variable names are case sensitive. There are a small number of reserved strings, and a very small number of predefined constants, such as <code>pi</code>. However these constants can be overwritten - be careful. Read more at:
+
+ ```r
+?make.names
+?reserved
+```
+
+To assign a value to a constant, use the assignment operator <code><-<code>. This is the default way of assigning values in **R**. You could also use the <code>=</code> sign, but there are subtle differences. (See: <code>"<-"<code>). There is a variant of the assignment operator <code><<-</code> which is sometimes used inside functions. It assigns to a global context. This is possible, but not preferred since it generates a side effect of a function.
+
+```r
+a <- 5
+a
+a + 3
+b <- 8
+b
+a + b
+a == b # not assignment: equality test
+a != b # not equal
+a < b  # less than
+
+```
+
+Note that **all** of **R**'s data types (as well as functions and other objects) can be assigned to variables.
+
+There are very few syntactic restrictions on variable names ([discussed eg. here](http://stackoverflow.com/questions/9195718/variable-name-restrictions-in-r)) but this does not mean esoteric names are good. For the sake of your sanity, use names that express the meaning of the variable, and that are unique. Many **R** developers use <code>dotted.variable.names</code>, my personal preference is to write <code>camelCaseNames</code>. And while the single letters <code>c f n s Q</code> are syntactically valid variable names, they coincide with commands for the debugger browser and will execute debugger commands, rather than displaying variable values when you are debugging. . Finally, try not to use variable names that coincide with parameter labels in functions. Alas, you see this often in code, but in my opinion this is intellectually lazy and leads to code that is hard to read.
+
+```r
+# I don't like...
+col <- c("red", "grey")
+hist(rnorm(200), col=col)
+
+# I prefer...
+rgStripes <- c("red", "grey")
+barplot(1:10, col=rgStripes)
+
+```
+
+[&uarr;](#back_to_top)
