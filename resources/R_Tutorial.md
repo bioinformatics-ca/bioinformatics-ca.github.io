@@ -553,7 +553,7 @@ barplot(1:10, col=rgStripes)
 
 [&uarr;](#back_to_top)
 
-### Scalar data <a id="scalars"></a>
+### Scalar Data <a id="scalars"></a>
 
 *Scalars* are single numbers, the "atomic" parts of more complex datatypes. We have covered many of the properties of scalars above, e.g. the use of constants and their assignment to variables. To round this off, here are some remarks on the types of scalars **R** uses and on *coercion*, or casting one datatype into another. The following scalar types are supported:
 
@@ -591,4 +591,184 @@ as.logical("pi") # ... but not non-numeric types. NA is "Not Available".
 ```
 
 [&uarr;](#back_to_top)
+
+### Vectors <a id="vectors"></a>
+
+Since we (almost) never do statistics on scalar quantities, **R** obviously needs ways to handle collections of data items. In its the simplest form such a collection is a **vector**: an ordered list of items of the same type. Vectors are created from scratch with the <code>c()</code> function which **c**oncatenates individual items into a list, or with various sequencing functions. Vectors have properties, such as length; individual items  in vectors can be combined in useful ways. All elements of a vector must be of the same type. If they are not, they are coerced silently to the most general type (which is often <code>character</code>).
+
+```r
+#Create a vector and list its contents and length:
+f <- c(1, 1, 3, 5, 8, 13, 21)
+f
+length(f)
+
+# Various ways to retrieve values from the vector.
+f[1] # By index: "1" is first element. 
+f[length(f)] # length() is the index of the last element.
+1:4 # This is the range operator
+f[1:4] # using the range operator (it generates a sequence and returns it in a vector)
+f[4:1] # same thing, backwards
+seq(from=2, to=6, by=2) # The seq() function is a flexible, generic way to generate sequences
+seq(2, 6, 2) # Same thing: arguments in default order
+f[seq(2, 6, 2)]
+
+# since a scalar is a vector of length 1, does this work?
+5[1]
+
+
+# ...using an index vector with positive indices
+a <- c(1, 3, 4, 1) # the elements of index vectors must be valid indices of the target vector. The index vector can be of any length.
+f[a] # Here, four elements are retrieved from f[]
+
+# ...using an index vector with negative indices
+a <- -(1:4) # If elements of index vectors are negative integers, the corresponding elements are excluded.
+f[a] # Here, the first four elements are omitted from f[]
+f[-((length(f)-3):length(f))] # Here, the last four elements are omitted from f[]
+
+# ...using a logical vector
+f>4 # A logical expression operating on the target vector returns a vector of logical elements. It has the same length as the target vector.
+f[f>4]; # We can use this logical vector to extract only elements for which the logical expression evaluates as TRUE
+
+
+# Example: extending the Fibonacci series for three steps. 
+# Think: How does this work? What numbers are we adding here and why does the result end up in the vector?
+f <- c(f, f[length(f)-1] + f[length(f)]); f 
+f <- c(f, f[length(f)-1] + f[length(f)]); f 
+f <- c(f, f[length(f)-1] + f[length(f)]); f 
+
+
+# coercion
+c(1, 2.0, "3", TRUE)
+[1] "1"    "2"    "3"    "TRUE" 
+```
+
+Many operations on scalars can be simply extended to vectors and **R** computes them **very** efficiently by iterating over the elements in the vector.
+
+```r
+f
+f+1
+f*2
+
+# computing with two vectors of same length
+a <- f[-1]; a # like f[], but omitting the first element
+b <- f[1:(length(f)-1)]; b # like f[], but shortened by the least element
+c <- a / b # the "golden ratio", phi (~1.61803 or (1+sqrt(5))/2 ), an irrational number, is approximated by the ratio of two consecutive Fibonacci numbers.
+c
+abs(c - ((1+sqrt(5))/2)) # Calculating the error of the approximation, element by element
+```
+
+
+[&uarr;](#back_to_top)
+
+### Matrices <a id="matrices"></a>
+
+If we need to operate with several vectors, or multi-dimensional data, we make use of *matrices* or more generally *k*-dimensional *arrays* **R**. Matrix operations are very similar to vector operations, in fact a matrix actually is a vector for which the number of rows and columns have been defined.
+
+The most basic form of such definition is the <code>dim()</code> function. Consider:
+
+```r
+a <- 1:12; a
+dim(a) <- c(2,6); a
+dim(a) <- c(2,2,3); a
+```
+
+<code>dim()</code> also allows you to retrieve the number of rows and columns. For example:
+
+```r
+dim(a)    # returns a vector
+dim(a)[3]  # only the third value of the vector
+```
+
+If you have a two-dimensional matrix, the function <code>nrow()</code> and <code>ncol()</code> will also give you the number of rows and columns, respectively. Obviously, <code>dim(mat)[1]</code> is the same as <code>nrow(a)</code>.
+
+As an alternative to <code>dim()</code>, matrices can be defined using the <code>matrix()</code> or <code>array()</code> functions (see there), or "glued" together from vectors by rows or columns, using the  <code>rbind()</code> or  <code>cbind()</code> functions respectively:
+
+```r
+a <- 1:4
+b <- 5:8
+c <- rbind(a, b); c
+d <- cbind(a, b); d
+e <- cbind(d, 9:12); e
+```
+
+Addressing (retrieving) individual elements or slices from matrices is simply done by specifying the appropriate indices, where a missing index indicates that the entire row or column is to be retrieved
+
+```r
+e[1,] # first row
+e[,2] # second column
+e[3,2] # element at index row=3, column = 2
+e[3:4, 1:2] # submatrix
+```
+
+Note that **R** has numerous functions to compute with matrices, such as transposition, multiplication, inversion, calculating eigenvalues and eigenvectors and more.
+
+[&uarr;](#back_to_top)
+
+### Lists
+
+While the elements of matrices and arrays all have to be of the same type, lists are more generally ordered collections of *components*. Lists are created with the <code>list()</code> function, which works similar to the <code>c()</code> function. Components are accessed through their index in double square brackets, or through their name, if the name has been defined. Here is an example:
+
+```r
+pUC19 <- list(size=2686, marker="ampicillin", ori="ColE1", accession="L01397", BanI=c(235, 408, 550, 1647) )
+pUC19[[1]]
+pUC19[[2]]
+pUC19$ori
+pUC19$BanI[2]
+
+```
+
+
+[&uarr;](#back_to_top)
+
+### Data frames <a id="data_frames"></a>
+
+Data frames combine features of lists and matrices, they are one of the most important data objects in **R**, because the result of reading an input file is usually a data frame. Lets create a little datafile and save it in the current working directory. You can use the "New document" command from the menu and save the following data as e.g. <code>vectors.tsv</code> (".tsv" for "tab separated values").
+
+```r
+ Name	Size	Marker	Ori	Sites
+ pUC19	2686	Amp	ColE1	EcoRI, SacI, SmaI, BamHI, XbaI, PstI, HindIII
+ pBR322	4361	Amp, Tet	ColE1	EcoRI, ClaI, HindIII
+ pACYC184	4245	Tet, Cam	p15A	ClaI, HindIII
+ ```
+
+This data set uses tabs as column separators and it has a header line. Similar files can be exported from Excel or other spreadsheet programs. Read this as a data frame as follows:
+
+```r
+Vectors <- read.table("vectors.tsv", sep="\t", header=TRUE, stringsAsFactors = FALSE)
+Vectors
+```
+
+Note the argument <code>stringsAsFactors = FALSE</code>. If this is <code>TRUE</code> instead, **R** will convert all strings in the input to factors and this may lead to problems. Make it a habit to turn this behaviour off, you can always turn a column of strings into factors when you actually mean to have factors.
+
+You can edit the data through a spreadsheet-like interface with the <code>edit()</code> function.
+
+```r
+V2 <- edit(Vectors)
+```
+
+
+Here is a collection of examples of subsetting data from this frame:
+
+```r
+Vectors[1, ]
+Vectors[2, ]
+Vectors[ ,2 ]
+
+Vectors$Name
+
+Vectors$Size > 3000
+Vectors$Name[Vectors$Size > 3000]
+Vectors$Name[Vectors$Ori != "ColE1"]
+
+Vectors[order(Vectors$Size), ]
+
+grep("Tet", Vectors$Marker)
+Vectors[grep("Tet", Vectors$Marker), ]
+Vectors[grep("Tet", Vectors$Marker), "Ori"]
+as.vector(Vectors[grep("Tet", Vectors$Marker), "Ori"])
+
+```
+
+[&uarr;](#back_to_top)
+
 
