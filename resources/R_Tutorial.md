@@ -771,4 +771,273 @@ as.vector(Vectors[grep("Tet", Vectors$Marker), "Ori"])
 
 [&uarr;](#back_to_top)
 
+### Writing Functions <a id="writing_functions"></a> 
+
+Writing your own functions in **R** is easy and gives you access to flexible, powerful and reusable solutions. Functions are assigned to function names and invoking the function returns some value, vector or other data object. Data gets **into** the function via the function's arguments, data is **returned** from a function in the <code>return()</code> statement. One and only one object is returned from a function. However the object can be a list, and thus contain values of arbitrary complexity. 
+
+The **scope** of functions is local, all variables within a function are lost upon return, and global variables are not overwritten by a definition within a function. However variables that are defined outside the function are also available inside.
+
+Here is a simple example: a function that takes a binomial species name as input and creates a five-letter code as output:
+
+```r
+biCode <- function(s) { 
+	substr(s, 4, 6) <- substr(strsplit(s,"\\s+")[[1]][2], 1, 2)
+	return (toupper(substr(s, 1, 5)))
+}
+
+biCode("Homo sapiens")              # HOMSA
+biCode("saccharomyces cerevisiae")  # SACCE
+```
+
+We can use loops and control structures inside functions. For example the following creates a series of *n* Fibonacci numbers.
+
+```r
+fibSeq <- function(n) { 
+   if (n < 1) { return( c(0) ) }
+   else if (n ==  1) { return( c(1) ) }
+   else if (n ==  2) { return( c(1, 1) ) }
+   else {
+      v <- c(1, 1)
+      for ( i in 3:n ) {
+         v <- c(v, v[length(v)-1] + v[length(v)])
+      }
+      return( v )
+   }
+}
+```
+
+
+##### Coding style <a id="style"></a>
+
+Code is read much more often than it is written and it should always be your goal to write as clearly as possible. **R** has many complex idioms, and as a functional language that can generally insert functions anywhere into expressions it is possible to write very terse, expressive code. Don't do it. Pace yourself, and make sure your reader can follow your flow of thought. More often than not the poor soul who will be confused by a particularly witty use of the language will be you, yourself, half a year later. There is an astute observation by Brian Kernighan that applies completely:
+
+> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
+
+
+A number of guides for **R** coding style are available but I recommend:
+ 
+* Use informative **filenames** for code sources; give them the extension <code>.R</code>
+
+* Give your **sources** headers stating purpose, author, date and version information, and note bugs and issues.
+
+* Give your **functions** headers that describe purpose, arguments (including required datatypes), and return values. Callers should be able to work with the function without having to read the code.
+
+* Use lots of **comments**. Never describe what the code does, but explain **why**. 
+
+* Use **separators** (<code># --- SECTION -----------------</code>) to structure your code.
+
+* **Indent** comment hashes to align with the expressions in a block.
+
+* Use only <code><-</code> for assignment, not <code>=</code>
+
+* ...but do use <code>=</code> when defining parameters of functions.
+
+* Don't use <code><<-</code> (global assignment) except in very unusual cases.
+
+* Use <code>camelCase</code> for variable names, never use the <code>confusing.dot.style</code>.
+
+* Define parameters at the beginning of the code, use all caps variable names (<code>MAXWIDTH</code>). Never have "magic numbers" appear in your code.
+
+* In mathematical expressions, always use **parentheses** to define priority. Never rely on convention. <code>(( 1 + 2 ) / 3 ) * 4</code>
+
+* Always separate operators and arguments with spaces.
+
+* Never separate function names and the brackets that enclose argument lists.
+
+* Don't abbreviate argument names.
+
+* Try to limit yourself to ~80 characters per line. 
+
+* Always use braces <code>{</code>}, even if you write single line if statements and loops.
+
+* Always use a **space** after a comma, and never before a comma.
+
+* Always **explicitly return** values from functions, never rely on returning the last expression.
+
+* Use spaces to **align** repeating parts of code, so errors become easier to spot.
+
+* **Don't repeat** code. Use functions instead.
+
+* Write out crucial arguments to functions, even if you think you know that this is redundant with the default.
+
+* Never reassign reserved words.
+
+* Don't use <code>c</code> as a variable name since <code>c()</code> is a function.
+
+* Don't use semicolons, and don't write more than one command on a line.
+
+* Don't use <code>attach()</code>.
+
+* Use <code>for (i in seq(along=x)) {...</code>}   not <code>for (i in 1:length(x)) {...</code>} because of an unwanted loop if <code>x ###  NULL</code>
+
+* If possible, do not grow data structures, but create the whole structure with <code>NULL</code> values, then modify them. This is **much** faster
+
+
+###### Specific naming conventions I like:
+
+<code>isValid</code>, <code>hasNeighbour</code>  ... Boolean variables  
+<code>findRange()</code>, <code>getLimits()</code> ... simple function names  
+<code>initializeTable()</code> ... not <code>initTab()</code>  
+<code>node</code> ... one element; <code>nodeVector</code> ... more elements  
+<code>nPoints</code> ... for number-of  
+<code>setNo</code>  ... identify an individual  
+<code>isError</code> ... not <code>isNotError</code>: avoid double negation  
+
+
+Consider using the [**formatR**](http://cran.r-project.org/web/packages/formatR/index.html) package for consistent code.
+
+
+And seriously - [XKCD: Code Quality](http://xkcd.com/1513/)
+
+[&uarr;](#back_to_top)
+
+#### Debugging <a id="debugging"></a>
+
+Don't even *think* of sprinkling <code>print()</code> statements into your code to help you find out where something went wrong, when it goes wrong. From the beginning of your programming work, make yourself familiar with the debug functions. There are three simple concepts to remember: 
+
+* Debugging is done by entering a "browser" mode that allows you to step through a function.
+
+* Call <code>debug(*function*)</code> to invoke the mode when the function is next executed,  <code>undebug(*function*)</code> to clear the debugging mode.
+
+* Insert <code>browser()</code> into your function code to enter the browser mode. This sets a *breakpoint* into your function; use  <code>if (condition) browser()</code> to insert a *conditional breakpoint* (or watchpoint).
+
+Here is an example: let's write a rollDice-function, i.e. a function that creates a vector of *n* integers between 1 and MAX - the number of faces on your die.
+
+```r
+rollDice <- function(len=1, MIN=1, MAX=6) {
+	v <- rep(0, len)
+    for (i in 1:len) {
+    	x <- runif(1, min=MIN, max=MAX)
+    	x <- as.integer(x)
+    	v[i] <- x
+    }
+	return(v)
+}
+```
+
+Lets try running this...
+
+```r
+rollDice()
+table(rollDice(1000))
+```
+
+Problem: we see only values from 1 to 5. Why? Lets flag the function for debugging...
+
+```r
+debug(rollDice)
+rollDice(10)
+debugging in: rollDice(10)
+debug at #1: {
+    v <- rep(0, len)
+    for (i in 1:len) {
+        x <- runif(1, min = MIN, max = MAX)
+        x <- as.integer(x)
+    	v[i] <- x
+    }
+    return(v)
+}
+Browse[2]> 
+debug at #2: v <- rep(0, len)
+Browse[2]> 
+debug at #3: for (i in 1:len) {
+    x <- runif(1, min = MIN, max = MAX)
+    x <- as.integer(x)
+    v[i] <- x
+}
+Browse[2]> 
+debug at #4: x <- runif(1, min = MIN, max = MAX)
+Browse[2]> 
+debug at #5: x <- as.integer(x)
+Browse[2]> x   # Here we examine the current value of x
+[1] 4.506351
+Browse[2]> 
+debug at #6: v[i] <- x
+Browse[2]> 
+debug at #4: x <- runif(1, min = MIN, max = MAX)
+Browse[2]> v
+[1] 4      # Aha: as.integer() truncates, but doesn't round!
+Browse[2]> Q
+```
+
+
+We need to change the range of the random input values...
+
+```r
+rollDice <- function(len=1, MIN=1, MAX=6) {
+	v <- rep(0, len)
+    for (i in 1:len) {
+    	x <- runif(1, min=MIN, max=MAX+1)
+    	x <- as.integer(x)
+    	v[i] <- x
+    }
+	return(v)
+}
+table(rollDice(1000))
+```
+
+
+Now the output looks correct.
+
+```r
+# Disclaimer: this function would be better
+# written as ...
+
+rollDice <- function(len=1, MIN=1, MAX=6) {
+	return(as.integer(runif(len, min=MIN, max=MAX+1)))
+}
+
+# Check:
+table(rollDice(1000))
+# ... since runif() can return a vector of deviates,
+# but we would not be able to check the value of
+# individual trials.
+
+
+# Disclaimer 2: the function relies on a side-effect of as.integer(), which is
+# to drop the digits after the comma when it converts. More explicit and
+# therefore clearer would be to use the function floor() instead. Here, the
+# truncation is not a side effect, but the desired behaviour. This is
+# actually important: there is no guarantee how as.integer() constructs an
+# integer from a float, it could e.g. round, instead of truncating. But rounding
+# would give a wrong distribution! An error that may be hard to spot. (You
+# can easily try using the round() function and think about how the result is wrong.)
+
+# A better alternative is thus to write:
+
+rollDice <- function(len=1, MIN=1, MAX=6) {
+	return(floor(runif(len, min=MIN, max=MAX+1)))
+}
+
+
+# Disclaimer 3
+# A base R function exists that already rolls dice in the required way: sample()
+
+table(sample(1:6, 1000, replace=TRUE))
+```
+
+
+
+For visual debugging with **R Studio**, see [**here**](http://www.r-bloggers.com/visual-debugging-with-rstudio/).
+
+For a deeper excursion into **R** debugging, see [this overview by Duncan Murdoch at UWO](http://www.stats.uwo.ca/faculty/murdoch/software/debuggingR/debug.shtml), and [Roger Peng's introduction to R debugging tools](http://www.biostat.jhsph.edu/~rpeng/docs/R-debug-tools.pdf).
+
+
+[&uarr;](#back_to_top)
+
+#### Finishing <a id="finishing"></a> 
+
+This concludes our introduction to **R**. We haven't actually done anything significant with the language yet, but we have developed the basic skills to begin. The next steps should be:
+
+* read data;
+* organize it;
+* explore it with descriptive statistics;
+* explore patterns, structures and relationships within the data graphically;
+* formulate hypotheses;
+* test the hypotheses.
+
+
+
+[&uarr;](#back_to_top)
+
 
