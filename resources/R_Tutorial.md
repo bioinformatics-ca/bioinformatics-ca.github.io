@@ -521,7 +521,7 @@ In order to store the results of evaluations, you can freely assign them to vari
 ?reserved
 ```
 
-To assign a value to a constant, use the assignment operator <code> &lt;- <code>. This is the default way of assigning values in **R**. You could also use the <code>=</code> sign, but there are subtle differences. (See: <code>?"&lt;-"<code>). There is a variant of the assignment operator <code> &lt;&lt;- </code> which is sometimes used inside functions. It assigns to a global context. This is possible, but not preferred since it generates a side effect of a function.
+To assign a value to a constant, use the assignment operator <code> &lt;- </code>. This is the default way of assigning values in **R**. You could also use the <code>=</code> sign, but there are subtle differences. (See: <code>?"&lt;-"</code>). There is a variant of the assignment operator <code> &lt;&lt;- </code> which is sometimes used inside functions. It assigns to a global context. This is possible, but not preferred since it generates a side effect of a function.
 
 ```r
 a <- 5
