@@ -75,7 +75,7 @@ That was the problem when students installed things in **RStudio** at the comman
   You need to be familiar with the material covered in the Introduction to **R** tutorial, below. The tutorial should be very accessible even if you have never used R before.
   
 * The [Introduction to **R** tutorial](http://steipe.biochemistry.utoronto.ca/abc/index.php/R_tutorial) 
-* The R command cheat sheet **put cheat sheet here**
+* The [R command cheat sheet](../../resources/R_Short-refcard.pdf)
 
 [&uarr;](#back_to_top)
 
