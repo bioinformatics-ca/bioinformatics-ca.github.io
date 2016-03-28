@@ -76,7 +76,7 @@ That was the problem when students installed things in **RStudio** at the comman
 ### Helpful Materials <a id="helpful_materials"></a>
 
 * The [Introduction to **R** tutorial](http://steipe.biochemistry.utoronto.ca/abc/index.php/R_tutorial) 
-* The R command cheat sheet **put cheat sheet here**
+* The [R command cheat sheet](../../resources/R_Short-refcard.pdf)
 
 [&uarr;](#back_to_top)
 
