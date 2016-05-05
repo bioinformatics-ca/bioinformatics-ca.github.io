@@ -127,9 +127,20 @@ image: CBW_metabolomics_icon.jpg
   
   
 ##### NMR:
+
+<ul>
+<li> <a href="link_to_data">CBW_NRM_Data.zip</a> </li>
+<li> <a href="link_to_data">CBW_NRM_result.zip</a> </li>
+</ul>
   
 ##### GC-MS:
-  
+
+<ul>
+<li> <a href="link_to_data">Example_Jul0914_mxXML.zip</a> </li>
+<li> <a href="link_to_data">Example_Jul1114_mzXML.zip</a> </li>
+<li> <a href="link_to_data">CBW_GCMS_result.zip</a> </li>
+</ul>
+
 ##### LC-MS:
   
   Small test datasets:
@@ -138,12 +149,23 @@ image: CBW_metabolomics_icon.jpg
   
   Group WT: wild type; Group KO: knock out.  Platform: HPLC Single Quad.
   
+<ul>
+<li> <a href="link_to_data">WT.zip</a> </li>
+<li> <a href="link_to_data">KO.zip</a> </li>
+<li> <a href="link_to_data">CBW_FaahKO_results.zip</a> </li>
+</ul>
   
   Large test datasets:
   
   Description: a subset of 38 samples from the study <a href="http://www.ebi.ac.uk/metabolights/MTBLS146">Pregnancy-Induced Metabolic Phenotype Variations in Maternal Plasma</a>.
   
   Group A: 13-16 weeks; Group B: 9-12 weeks.  Platform: HPLC Orbitrap
+  
+<ul>
+<li> <a href="link_to_data">GroupA.zip</a> </li>
+<li> <a href="link_to_data">GroupB.zip</a> </li>
+<li> <a href="link_to_data">CBW_XCMS_results.zip</a> </li>
+</ul>
   
   
 #### Links:
