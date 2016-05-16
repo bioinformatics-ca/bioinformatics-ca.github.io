@@ -33,19 +33,19 @@ bwa mem is the leading algorithm for mapping short Illumina reads to a reference
 In the following command we provide bwa with the location of the reference genome - in this exercise we use the human reference genome prepared by the [1000 Genomes project](http://www.1000genomes.org/category/reference/) - and a FASTQ file containing the paired end reads for the tumour sample. In this case the paired end reads are in *interleaved* format where the two halves of a pair are in consecutive FASTQ records. The output file is in the SAM format. When mapping a whole-genome sequencing run it will take many hours to run - in this tutorial we only use a subset of the reads so this step doesn't take very long.
 
 ```
-bwa mem -t 4 ~/CourseData/CG_data/Module3/human_g1k_v37.fasta ~/CourseData/CG_data/Module3/reads.tumour.fastq > sample.sam
+bwa mem -t 4 -p ~/CourseData/CG_data/Module3/human_g1k_v37.fasta ~/CourseData/CG_data/Module3/reads.tumour.fastq > sample.sam
 ```
 
 
 ## Exploring the alignments
 
-SAM is a plain-text format that can be viewed from the command line. You can use the head command to look at your alignments:
+SAM is a plain-text format that can be viewed from the command line. You can use the head command to look at the alignments:
 
 ```
 head -100 sample.sam
 ```
 
-You will see the SAM header containing metadata followed by a few alignments.
+You will see the SAM header containing metadata followed by a few alignments. You can refer to the slides presented earlier to figure our what each field means.
 
 In this SAM file, the reads are ordered by their position in the original FASTQ file. Most programs want to work with the alignments ordered by their position on the reference genome. We'll use samtools to sort the alignment file. To do this, we need to first convert the SAM (text) to the BAM (binary) format. We use the `samtools view -Sb` command to do this, and pipe the output directly into samtools sort.
 
