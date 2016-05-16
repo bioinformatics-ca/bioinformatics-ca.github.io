@@ -58,6 +58,8 @@ image: Bioinfo_Logo.jpg
 
 <br>
 
+This tutorial was created by [Boris Steipe](http://steipe.biochemistry.utoronto.ca/). 
+
 ###  The Environment  <a id="environment"></a>
 
 In this section we discuss how to download and install the software, how to configure an **R** session and what work with the **R** environment includes.
