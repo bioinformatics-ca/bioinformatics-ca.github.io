@@ -37,7 +37,7 @@ image: CBW_metabolomics_icon.jpg
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/Metabolomics_2016_Schedule_v1.pdf">Schedule for May 26 - May 27, 2016</a>
+  <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/Metabolomics_2016_Schedule_v3.pdf">Schedule for May 26 - May 27, 2016</a>
 
 [&uarr;](#back_to_top)
 
