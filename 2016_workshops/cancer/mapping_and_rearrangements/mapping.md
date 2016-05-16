@@ -9,7 +9,7 @@ image: CBW_cancerDNA_icon-16.jpg
 
 # Introduction
 
-In this tutorial we will use [bwa](https://github.com/lh3/bwa) to map reads in the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) to a reference genome.
+In this tutorial we will use [bwa](https://github.com/lh3/bwa) to map reads to the human reference genome.
 
 The data that we will use is from a breast cancer cell line, HCC1395. In the second part of this module we will use [lumpy](https://github.com/arq5x/lumpy-sv) to find genome rearrangements using the mapped reads. Module 4 will show you how to discover fusion genes using the same data set.
 
@@ -22,8 +22,8 @@ First, let's create a directory to hold our results:
 
 ```
 cd ~/workspace
-mkdir module3
-cd module3
+mkdir Module3
+cd Module3
 ```
 
 ## Mapping using bwa-mem
