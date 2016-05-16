@@ -68,13 +68,13 @@ samtools index tumour.sorted.bam
 Now that the BAM is indexed, we can view the alignments for any region of the genome:
 
 ```
-samtools view tumour.sorted.bam 9:108,330,800-108,333,000
+samtools view tumour.sorted.bam 9:14,196,000-14,197,000
 ```
 
 As a tab-delimited file, the SAM format is easy to manipulate with common unix tools like grep, awk, cut, sort. For example, this command uses cut to extract just the reference coordinates from the alignments:
 
 ```
-samtools view tumour.sorted.bam 9:14,196,000-14,197,000
+samtools view tumour.sorted.bam 9:14,196,000-14,197,000 | cut -f3-4
 ```
 
 
