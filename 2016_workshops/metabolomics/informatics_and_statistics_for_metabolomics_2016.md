@@ -37,13 +37,13 @@ image: CBW_metabolomics_icon.jpg
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/Metabolomics_2016_Schedule_v1.pdf">Schedule for May 26 - May 27, 2016</a>
+  <a href="http://bioinformatics-ca.github.io/2016_workshops/metabolomics/Metabolomics_2016_Schedule_v3.pdf">Schedule for May 26 - May 27, 2016</a>
 
 [&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
-  Post your workshop questions <a href="http://todaysmeet.com/Metabolomics2016">here</a>!
+  Post your workshop questions <a href="https://noteapp.com/Metabolomics2016">here</a>!
 
 [&uarr;](#back_to_top)
 
