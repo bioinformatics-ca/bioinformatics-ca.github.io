@@ -53,7 +53,7 @@ lumpy \
 The output is in VCF format: https://samtools.github.io/hts-specs/VCFv4.2.pdf
 
 ```
-cat sample.vcf
+cat tumour.vcf
 ```
 
 Lumpy found about 36 SV events in the small sample of reads that we are using for the tutorial. The VCF file includes useful information about the variant calls.  The SVTYPE attribute tells us the structural variation type. Many of the events are deletions (SVTYPE=DEL).  The PE and SR tags in each line tell us how many paired-end and split-reads support each call. The calls with many
@@ -64,7 +64,7 @@ Lumpy found about 36 SV events in the small sample of reads that we are using fo
 
 If you do not have IGV open, follow the instructions in lab 1.
 
-Navigate to the genomic location 9:14,205,626-14,206,175.
+Navigate to the genomic location `9:14,205,626-14,206,175`.
 This region contains a small deletion that lumpy-sv found.
 Right-click on an alignment and select 'view as pairs'
 If you hover or click on one of the reads that is colored red
