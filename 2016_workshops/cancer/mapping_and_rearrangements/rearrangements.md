@@ -52,60 +52,35 @@ lumpy \
 
 The output is in VCF format: https://samtools.github.io/hts-specs/VCFv4.2.pdf
 
+```
 cat sample.vcf
+```
 
-Lumpy found about 260 SV events. The VCF file includes useful information about the variant calls.
-The SVTYPE attribute tells us the structural variation type. Most of the events are deletions (SVTYPE=DEL).
-The PE and SR tags in each line tell us how many paired-end and split-reads support each call. The calls with many
+Lumpy found about 36 SV events in the small sample of reads that we are using for the tutorial. The VCF file includes useful information about the variant calls.  The SVTYPE attribute tells us the structural variation type. Many of the events are deletions (SVTYPE=DEL).  The PE and SR tags in each line tell us how many paired-end and split-reads support each call. The calls with many
  supporting reads are usually more likely to be true structural variants.
 
-Let's filter the list of events by only looking at those that are supported by 15 reads:
-
-```
-~/CourseData/CG_data/Module3/scripts/filter-by-support --min-support 15 sample.vcf
-```
-
-Only 44 events are supported by at least 15 reads. Let's now take a closer look in IGV.
 
 ## Viewing rearrangements in IGV and classifying eventscd kkkcd 
-# If you do not have IGV open, follow the instructions in lab 1.
 
-# Navigate to the genomic location 20:32,407,585-32,416,459
-# This region contains a deletion that lumpy-sv found.
-# Right-click on an alignment and select 'view as pairs'
-# If you hover or click on one of the reads that is colored red
-# you can view its insert size. You will notice many of the pairs
-# have an insert size of around 3000bp. These 'stretched' pairs
-# support the deletion. The coverage track in IGV shows
-# the deleted region has lower coverage, which also supports the call.
+If you do not have IGV open, follow the instructions in lab 1.
 
-# Navigate to 20:33,113,802-33,118,238 to view a second deletion.
+Navigate to the genomic location 9:14,205,626-14,206,175.
+This region contains a small deletion that lumpy-sv found.
+Right-click on an alignment and select 'view as pairs'
+If you hover or click on one of the reads that is colored red
+you can view its insert size. You will notice many of the pairs
+have an insert size over 600bp. These 'stretched' pairs
+support the deletion. The coverage track in IGV shows
+the deleted region has lower coverage, which also supports the call.
 
-# Navigate to the location 20:25,967,655-25,976,529
-# This region also shows 'stretched' pairs but there is no drop in coverage.
-# If you examine the orientation of the pairs you will notice that they are both
-# on the same strand (+/+ or -/-). Remember, we expect the pairs to be on opposite
-# strands (+/- or -/+). This means the event is probably an inversion.
+Navigate to 9:108,329,845-108,347,463 to view a second, larger, deletion.
 
-# Did lumpy find this call? Lets search the output for an event around this location
-# We'll use awk to find all events on chromosome 29, between position 25,900,000 and 26,000,000
+Navigate to the location 6:89,554,173-89,554,839. In this case there are a number of pairs colored blue that indicate the other half of the pair maps to a different chromosome. If you click on one of these pairs you will see the other half maps to chromosome 1. There are many such pairs, and they have high mapping quality, which suggests this event might be a true rearrangement. If you right-click on one of the colored pairs and select "Go to mate" IGV will jump to the corresponding region on chromosome 1. In the coverage track you will notice that the depth of read changes at the breakpoint on both chromosome 6 and chromosome 1. This suggests the rearrangement might also involve a copy number abnormality.
 
-cat sample.vcf | awk '$1 == 20 && $2 >= 25900000 && $2 < 26000000'
+If you load the BAM of the normal sample you will notice there is no copy number change and no paired reads indicating the rearrangement, suggesting this is a somatic event - a change that only occurs in the tumour genome.  At location `12:24,104,965-24,106,007` there is another example of a somatic genome rearrangement.
 
-# Lumpy found 5 events in this region. 4 of them are small deletions supported by less than 10 paired-end reads
-# and no split reads. Lumpy also found a large inversion supported by 78 paired-end reads. This is the event we saw in IGV.
-# It was not supported by split reads but this is not unusual for inversions. The paired-end evidence is high so
-# we have confidence this is a true inversion.
+Naviate to the location `4:12,098,102-12,104,063` to view an example of a small inversion - note the orientation of the pairs as they are both on the "-" strand whereas we expect normal pairs to be "+"/"-". At `3:80,227,206-80,230,293` there is an example of a much larger inversion.
 
-# View the event at 20:26,318,238-26,318,791
-# This region is difficult. Notice that the coverage significantly
-# increases in the region and there are many reads mapped with mismatches
-# and low mapping quality.
-# Many of the pairs of the reads map to different chromosomes. It is difficult
-# to tell what is happening in this case.
+Finally view the rearrangement at `6:46,608,429-46,609,095`, this event is a gene fusion - it will be discussed later in Module 4.
 
-# For the remainder of the lab view other events and try to determine if they are real.
-
-#
-# End of lab 2
-#
+For the remainder of the lab view other events and try to determine if they are real.
