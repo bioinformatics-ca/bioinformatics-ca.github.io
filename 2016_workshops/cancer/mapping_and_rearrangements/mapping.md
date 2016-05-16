@@ -33,7 +33,7 @@ bwa mem is the leading algorithm for mapping short Illumina reads to a reference
 In the following command we provide bwa with the location of the reference genome - in this exercise we use the human reference genome prepared by the [1000 Genomes project](http://www.1000genomes.org/category/reference/) - and a FASTQ file containing the paired end reads for the tumour sample. In this case the paired end reads are in *interleaved* format where the two halves of a pair are in consecutive FASTQ records. The output file is in the SAM format. When mapping a whole-genome sequencing run it will take many hours to run - in this tutorial we only use a subset of the reads so this step doesn't take very long.
 
 ```
-bwa mem -t 4 -p ~/CourseData/CG_data/Module3/human_g1k_v37.fasta ~/CourseData/CG_data/Module3/reads.tumour.fastq > sample.sam
+bwa mem -t 4 -p ~/CourseData/CG_data/Module3/human_g1k_v37.fasta ~/CourseData/CG_data/Module3/reads.tumour.fastq > tumour.sam
 ```
 
 
@@ -42,58 +42,58 @@ bwa mem -t 4 -p ~/CourseData/CG_data/Module3/human_g1k_v37.fasta ~/CourseData/CG
 SAM is a plain-text format that can be viewed from the command line. You can use the head command to look at the alignments:
 
 ```
-head -100 sample.sam
+head -100 tumour.sam
 ```
 
-You will see the SAM header containing metadata followed by a few alignments. You can refer to the slides presented earlier to figure our what each field means.
+You will see the SAM header containing metadata followed by a few alignments. You can refer to the slides from the lecture to determine the meaning of each field.
 
 In this SAM file, the reads are ordered by their position in the original FASTQ file. Most programs want to work with the alignments ordered by their position on the reference genome. We'll use samtools to sort the alignment file. To do this, we need to first convert the SAM (text) to the BAM (binary) format. We use the `samtools view -Sb` command to do this, and pipe the output directly into samtools sort.
 
 ```
-samtools view -Sb sample.sam | samtools sort -o sample.sorted.bam
+samtools view -Sb tumour.sam | samtools sort -o tumour.sorted.bam
 ```
 
 The samtools view command can also be used to convert BAM to SAM
 
 ```
-samtools view sample.sorted.bam | head -100
+samtools view tumour.sorted.bam | head -100
 ```
 
 samtools also provides functions to request the alignments for particular regions of the reference genome. To do this we first need to build an index of the BAM file, which allows samtools to quickly extract the alignments for a region without reading the entire BAM file:
 
 ```
-samtools index sample.sorted.bam
+samtools index tumour.sorted.bam
 ```
 
 Now that the BAM is indexed, we can view the alignments for any region of the genome:
 
 ```
-samtools view sample.sorted.bam 20:26,000,000-26,010,000
+samtools view tumour.sorted.bam 20:26,000,000-26,010,000
 ```
 
 As a tab-delimited file, the SAM format is easy to manipulate with common unix tools like grep, awk, cut, sort. For example, this command uses cut to extract just the reference coordinates from the alignments:
 
 ```
-samtools view sample.sorted.bam 20:26,000,000-26,010,000 | cut -f3-4
+samtools view tumour.sorted.bam 20:26,000,000-26,010,000 | cut -f3-4
 ```
 
 
 The `samtools flagstat` command gives us a summary of the alignments:
 
 ```
-samtools flagstat sample.sorted.bam
+samtools flagstat tumour.sorted.bam
 ```
 
 We can use `samtools idxstats` to count the number of reads mapped to each chromosome:
 
 ```
-samtools idxstats sample.sorted.bam
+samtools idxstats tumour.sorted.bam
 ```
 
 This command will just display the number of reads mapped to chromosome 20
 
 ```
-samtools idxstats sample.sorted.bam | awk '$1 == "20"'
+samtools idxstats tumour.sorted.bam | awk '$1 == "20"'
 ```
 
 ## Examining alignments
@@ -105,7 +105,7 @@ There are 18 reads that show a "G" base at this position.
 The individual's genotype at this position is likely A/G.
 
 ```
-samtools mpileup -f ~/CourseData/CG_data/Module3/human_g1k_v37.fasta -r 20:32,001,292-32,001,292 sample.sorted.bam
+samtools mpileup -f ~/CourseData/CG_data/Module3/human_g1k_v37.fasta -r 20:32,001,292-32,001,292 tumour.sorted.bam
 ```
 
 Load the data into IGV by performing the following:
