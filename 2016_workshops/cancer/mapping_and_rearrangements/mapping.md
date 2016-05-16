@@ -30,10 +30,10 @@ cd Module3
 
 bwa mem is the leading algorithm for mapping short Illumina reads to a reference genome. You can read about how it works [here](http://arxiv.org/abs/1303.3997). We'll now run bwa mem to map HCC1395 reads to the human reference genome. 
 
-In the following command we provide bwa with the location of the reference genome - in this exercise we use the human reference genome prepared by the ]1000 Genomes project](http://www.1000genomes.org/category/reference/) - and a FASTQ file containing the paired end reads for the tumour sample. In this case the paired end reads are in *interleaved* format where the two halves of a pair are in consecutive FASTQ records. The output file is in the SAM format. When mapping a whole-genome sequencing run it will take many hours to run - in this tutorial we'll only use a subset of the reads that will map quickly.
+In the following command we provide bwa with the location of the reference genome - in this exercise we use the human reference genome prepared by the ]1000 Genomes project](http://www.1000genomes.org/category/reference/) - and a FASTQ file containing the paired end reads for the tumour sample. In this case the paired end reads are in *interleaved* format where the two halves of a pair are in consecutive FASTQ records. The output file is in the SAM format. When mapping a whole-genome sequencing run it will take many hours to run - in this tutorial we only use a subset of the reads that will map quickly.
 
 ```
-bwa mem -t 4 ~/CourseData/CG_data/Module3/human_g1k_v37.fasta ~/CourseData/CG_data/Module3/HCC1395_sample_1.fastq ~/CourseData/CG_data/Module3/HCC1395_sample_2.fastq > sample.sam
+bwa mem -t 4 ~/CourseData/CG_data/Module3/human_g1k_v37.fasta ~/CourseData/CG_data/Module3/reads.tumour.fastq > sample.sam
 ```
 
 
