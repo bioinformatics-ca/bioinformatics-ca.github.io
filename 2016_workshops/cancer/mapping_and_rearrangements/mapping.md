@@ -74,7 +74,7 @@ samtools view tumour.sorted.bam 9:108,330,800-108,333,000
 As a tab-delimited file, the SAM format is easy to manipulate with common unix tools like grep, awk, cut, sort. For example, this command uses cut to extract just the reference coordinates from the alignments:
 
 ```
-samtools view tumour.sorted.bam 9:108,330,800-108,333,000 | cut -f3-4
+samtools view tumour.sorted.bam 9:14,196,000-14,197,000
 ```
 
 
@@ -105,7 +105,7 @@ There are 18 reads that show a "G" base at this position.
 The individual's genotype at this position is likely A/G.
 
 ```
-samtools mpileup -f ~/CourseData/CG_data/Module3/human_g1k_v37.fasta -r 20:32,001,292-32,001,292 tumour.sorted.bam
+samtools mpileup -f ~/CourseData/CG_data/Module3/human_g1k_v37.fasta -r 9:14,196,087-14,196,087 tumour.sorted.bam
 ```
 
 Load the data into IGV by performing the following:
@@ -114,23 +114,9 @@ Load the data into IGV by performing the following:
    Open IGV and change the genome from hg19 to 'human_g1k_v37'
    Choose 'Load from URL' from the file menu
    Type: http://cbw#.dyndns.info/Module3/tumour.sorted.bam where # is your student ID
-   Navigate to 20:32,001,292
+   Navigate to 14,196,087
 ```
 
 Notice that the alignments have high mapping quality.
 
-Now we will view the alignments for a different position:
-
-```
-samtools mpileup -f ~/CourseData/CG_data/Module3/human_g1k_v37.fasta -r 20:25,997,273-25,997,273 sample.sorted.bam
-```
-
-In this case, 11 reads show a T base at this position.
-Look at the alignments in IGV by navigating to 20:25,997,273. 
-The reads colored white have mapping quality 0.
-This means the alignment is ambiguous and should not be trusted.
-It is unclear whether the T->C alignments are true SNPs.
-
-This is the end of lab 1. You can use the remaining time to explore the alignments
-and ask questions if you notice anything unusual or interesting.
-
+This is the end of the mapping tutorial. In the remaining time you can also map reads for the matched-normal sample for this cell line. The reads are in `~/CourseData/CG_data/Module3/reads.tumour.fastq`.
