@@ -59,7 +59,7 @@ The samtools view command can also be used to convert BAM to SAM
 samtools view tumour.sorted.bam | head -100
 ```
 
-samtools also provides functions to request the alignments for particular regions of the reference genome. To do this we first need to build an index of the BAM file, which allows samtools to quickly extract the alignments for a region without reading the entire BAM file:
+samtools also provides functions to view the alignments for a particular region of the reference genome. To do this we first need to build an index of the BAM file, which allows samtools to quickly extract the alignments for a region without reading the entire BAM file:
 
 ```
 samtools index tumour.sorted.bam
@@ -68,13 +68,13 @@ samtools index tumour.sorted.bam
 Now that the BAM is indexed, we can view the alignments for any region of the genome:
 
 ```
-samtools view tumour.sorted.bam 20:26,000,000-26,010,000
+samtools view tumour.sorted.bam 9:108,330,800-108,333,000
 ```
 
 As a tab-delimited file, the SAM format is easy to manipulate with common unix tools like grep, awk, cut, sort. For example, this command uses cut to extract just the reference coordinates from the alignments:
 
 ```
-samtools view tumour.sorted.bam 20:26,000,000-26,010,000 | cut -f3-4
+samtools view tumour.sorted.bam 9:108,330,800-108,333,000 | cut -f3-4
 ```
 
 
@@ -93,7 +93,7 @@ samtools idxstats tumour.sorted.bam
 This command will just display the number of reads mapped to chromosome 20
 
 ```
-samtools idxstats tumour.sorted.bam | awk '$1 == "20"'
+samtools idxstats tumour.sorted.bam | awk '$1 == "9"'
 ```
 
 ## Examining alignments
@@ -113,7 +113,7 @@ Load the data into IGV by performing the following:
 ```
    Open IGV and change the genome from hg19 to 'human_g1k_v37'
    Choose 'Load from URL' from the file menu
-   Type: http://cbw#.entrydns.org/module3/sample.sorted.bam where # is your student ID
+   Type: http://cbw#.dyndns.info/Module3/tumour.sorted.bam where # is your student ID
    Navigate to 20:32,001,292
 ```
 
