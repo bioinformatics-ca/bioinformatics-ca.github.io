@@ -101,7 +101,7 @@ samtools idxstats tumour.sorted.bam | awk '$1 == "9"'
 You can view all of the aligned reads for a particular reference base using mpileup.
 The following command will show the read bases and their quality scores at a heterozygous SNP.
 The "." and "," symbols indicate bases that match the reference. 
-There are 18 reads that show a "G" base at this position. 
+There are 39 reads that show a "G" base at this position. 
 The individual's genotype at this position is likely A/G.
 
 ```
@@ -114,9 +114,9 @@ Load the data into IGV by performing the following:
    Open IGV and change the genome from hg19 to 'human_g1k_v37'
    Choose 'Load from URL' from the file menu
    Type: http://cbw#.dyndns.info/Module3/tumour.sorted.bam where # is your student ID
-   Navigate to 14,196,087
+   Navigate to 9:14,196,087
 ```
 
 Notice that the alignments have high mapping quality.
 
-This is the end of the mapping tutorial. In the remaining time you can also map reads for the matched-normal sample for this cell line. The reads are in `~/CourseData/CG_data/Module3/reads.tumour.fastq`.
+This is the end of the mapping tutorial. In the remaining time you can also map reads for the matched-normal sample for this cell line. The reads are in `~/CourseData/CG_data/Module3/reads.normal.fastq`.
