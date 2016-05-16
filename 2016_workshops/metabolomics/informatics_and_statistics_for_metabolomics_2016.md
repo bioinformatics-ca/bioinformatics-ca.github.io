@@ -57,15 +57,13 @@ image: CBW_metabolomics_icon.jpg
 
   Before coming to the workshop, read these.
   
-  <a href="http://www.ncbi.nlm.nih.gov/pubmed/17626065">Current Progress in Computational Metabolomics</a>
+  <a href="http://www.ncbi.nlm.nih.gov/pubmed/22533540">XCMS Online: a web-based platform to process untargeted metabolic data</a>
   
-  <a href="http://www.ncbi.nlm.nih.gov/pubmed/21083105">Computational Strategies for Metabolite Identification in Metabolomics</a>
+  <a href="http://www.ncbi.nlm.nih.gov/pubmed/26017271">Accurate, Fully-Automated NMR Spectral Profiling for Metabolomics</a>
   
   <a href="http://www.ncbi.nlm.nih.gov/pubmed/23161693">HMDB 3.0 - The Human Metabolome Database in 2013</a>
   
-  <a href="http://www.ncbi.nlm.nih.gov/pubmed/21633943">Metabolomic Data Processing, Analysis, and Interpretation using MetaboAnalyst</a>
-  
-  <a href="http://www.ncbi.nlm.nih.gov/pubmed/25897128">MetaboAnalyst 3.0 - Making Metabolomics More Meaningful</a>
+  <a href="http://www.ncbi.nlm.nih.gov/pubmed/27010335">Introduction to Cheminformatics</a>
 
 [&uarr;](#back_to_top)
 
