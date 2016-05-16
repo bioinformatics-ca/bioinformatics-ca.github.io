@@ -1,5 +1,6 @@
 ---
 layout: post3
+permalink: /bioinformatics_for_cancer_genomics_2016/mapping
 title: Bioinformatics for Cancer Genomics 2016 Read Mapping Tutorial
 header1: Bioinformatics for Cancer Genomics 2016
 header2: Read Mapping Tutorial
