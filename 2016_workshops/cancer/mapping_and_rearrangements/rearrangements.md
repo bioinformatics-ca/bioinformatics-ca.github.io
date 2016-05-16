@@ -45,8 +45,8 @@ Now we are ready to run lumpy. The following command is long so we break it into
 lumpy \
     -mw 4 \
     -tt 0 \
-    -pe id:sample,bam_file:sample.discordants.bam,histo_file:sample.lib1.histo,mean:330,stdev:50,read_length:101,min_non_overlap:101,discordant_z:5,back_distance:10,weight:1,min_mapping_threshold:20 \
-    -sr id:sample,bam_file:sample.splitters.bam,back_distance:10,weight:1,min_mapping_threshold:20 \
+    -pe id:tumour,bam_file:tumour.discordants.bam,histo_file:sample.lib1.histo,mean:350,stdev:70,read_length:101,min_non_overlap:101,discordant_z:5,back_distance:10,weight:1,min_mapping_threshold:20 \
+    -sr id:tumour,bam_file:tumour.splitters.bam,back_distance:10,weight:1,min_mapping_threshold:20 \
     > sample.vcf
 ```
 
@@ -67,8 +67,7 @@ Let's filter the list of events by only looking at those that are supported by 1
 
 Only 44 events are supported by at least 15 reads. Let's now take a closer look in IGV.
 
-## Viewing rearrangements in IGV and classifying events
-
+## Viewing rearrangements in IGV and classifying eventscd kkkcd 
 # If you do not have IGV open, follow the instructions in lab 1.
 
 # Navigate to the genomic location 20:32,407,585-32,416,459
