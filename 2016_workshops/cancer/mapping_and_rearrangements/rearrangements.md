@@ -47,7 +47,7 @@ lumpy \
     -tt 0 \
     -pe id:tumour,bam_file:tumour.discordants.bam,histo_file:sample.lib1.histo,mean:350,stdev:70,read_length:101,min_non_overlap:101,discordant_z:5,back_distance:10,weight:1,min_mapping_threshold:20 \
     -sr id:tumour,bam_file:tumour.splitters.bam,back_distance:10,weight:1,min_mapping_threshold:20 \
-    > sample.vcf
+    > tumour.vcf
 ```
 
 The output is in VCF format: https://samtools.github.io/hts-specs/VCFv4.2.pdf
