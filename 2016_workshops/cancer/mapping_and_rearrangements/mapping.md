@@ -47,13 +47,13 @@ head -100 tumour.sam
 
 You will see the SAM header containing metadata followed by a few alignments. You can refer to the slides from the lecture to determine the meaning of each field.
 
-In this SAM file, the reads are ordered by their position in the original FASTQ file. Most programs want to work with the alignments ordered by their position on the reference genome. We'll use samtools to sort the alignment file. To do this, we need to first convert the SAM (text) to the BAM (binary) format. We use the `samtools view -Sb` command to do this, and pipe the output directly into samtools sort.
+In this SAM file, the reads are ordered by their position in the original FASTQ file. Most programs want to work with the alignments ordered by their position on the reference genome. We'll use [samtools](https://github.com/samtools/samtools) to sort the alignment file. To do this, we need to first convert the SAM (text) to the BAM (binary) format. We use the `samtools view -Sb` command to do this, and pipe the output directly into samtools sort.
 
 ```
 samtools view -Sb tumour.sam | samtools sort -o tumour.sorted.bam
 ```
 
-The samtools view command can also be used to convert BAM to SAM
+The samtools view command can also be used to convert BAM to SAM:
 
 ```
 samtools view tumour.sorted.bam | head -100
@@ -101,7 +101,7 @@ samtools idxstats tumour.sorted.bam | awk '$1 == "9"'
 You can view all of the aligned reads for a particular reference base using mpileup.
 The following command will show the read bases and their quality scores at a heterozygous SNP.
 The "." and "," symbols indicate bases that match the reference. 
-There are 39 reads that show a "G" base at this position. 
+There are 38 reads that show a "G" base at this position. 
 The individual's genotype at this position is likely A/G.
 
 ```

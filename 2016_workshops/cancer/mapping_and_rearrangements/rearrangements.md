@@ -7,13 +7,10 @@ header2: Genome Rearrangement Tutorial
 image: CBW_cancerDNA_icon-16.jpg
 ---
 
-# Introduction
+## Introduction
 
 In this tutorial we will use [lumpy-sv](https://github.com/arq5x/lumpy-sv) to perform the structural rearrangement analysis
-using the BAM file from step 1.
-
-
-# Genome Rearrangment Tutorial
+using the BAM file for the HCC1395 reads we mapped in step 1.
 
 ## Preparing Input
 
@@ -60,7 +57,7 @@ Lumpy found about 36 SV events in the small sample of reads that we are using fo
  supporting reads are usually more likely to be true structural variants.
 
 
-## Viewing rearrangements in IGV and classifying eventscd kkkcd 
+## Viewing rearrangements in IGV and classifying events
 
 If you do not have IGV open, follow the instructions in lab 1.
 
