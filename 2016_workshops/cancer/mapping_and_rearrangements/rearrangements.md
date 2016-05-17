@@ -72,7 +72,7 @@ Navigate to `9:108,329,845-108,347,463` to view a second, larger, deletion.
 
 Navigate to the location `6:89,554,173-89,554,839`. In this case there are a number of pairs colored blue that indicate the other half of the pair maps to a different chromosome. If you click on one of these pairs you will see the other half maps to chromosome 1. There are many such pairs, and they have high mapping quality, which suggests this event might be a true rearrangement. If you right-click on one of the colored pairs and select "Go to mate" IGV will jump to the corresponding region on chromosome 1. In the coverage track you will notice that the read depth changes at the breakpoint on both chromosome 6 and chromosome 1. This suggests the rearrangement might also involve a copy number abnormality.
 
-If you load the BAM of the normal sample you will notice there is no copy number change and no paired reads indicating the rearrangement, suggesting this is a somatic event - a change that only occurs in the tumour genome.  At location `12:24,104,965-24,106,007` there is another example of a somatic genome rearrangement.
+If you load the BAM of the normal sample you will notice there is no copy number change and no paired reads indicating the rearrangement in the normal sample, suggesting this is a somatic event - a change that only occurs in the tumour genome.  At location `12:24,104,965-24,106,007` there is another example of a somatic genome rearrangement.
 
 Naviate to the location `4:12,098,102-12,104,063` to view an example of a small inversion - note the orientation of the pairs as they are both on the `-` strand (`-/-` orientation) whereas we expect normal pairs to be `+/-`. At `3:80,227,206-80,230,293` there is an example of a much larger inversion.
 
