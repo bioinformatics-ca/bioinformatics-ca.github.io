@@ -47,13 +47,13 @@ lumpy \
     > tumour.vcf
 ```
 
-The output is in VCF format: https://samtools.github.io/hts-specs/VCFv4.2.pdf
+The output is in [VCF format](https://samtools.github.io/hts-specs/VCFv4.2.pdf)
 
 ```
 cat tumour.vcf
 ```
 
-Lumpy found about 36 SV events in the small sample of reads that we are using for the tutorial. The VCF file includes useful information about the variant calls.  The SVTYPE attribute tells us the structural variation type. Many of the events are deletions (SVTYPE=DEL).  The PE and SR tags in each line tell us how many paired-end and split-reads support each call. The calls with many
+Lumpy found about 50 rearrangement events in the small sample of reads that we are using for the tutorial. The VCF file includes useful information about the variant calls.  The SVTYPE attribute tells us the structural variation type. Many of the events are deletions (SVTYPE=DEL).  The PE and SR tags in each line tell us how many paired-end and split-reads support each call. The calls with many
  supporting reads are usually more likely to be true structural variants.
 
 
@@ -63,12 +63,13 @@ If you do not have IGV open, follow the instructions in lab 1.
 
 Navigate to the genomic location `9:14,205,626-14,206,175`.
 This region contains a small deletion that lumpy-sv found.
-Right-click on an alignment and select 'view as pairs'
+You can right-click on an alignment and select 'view as pairs' to have IGV draw a line linking the two ends of a read.
 If you hover or click on one of the reads that is colored red
 you can view its insert size. You will notice many of the pairs
-have an insert size over 600bp. These 'stretched' pairs
-support the deletion. The coverage track in IGV shows
-the deleted region has lower coverage, increasing our confidence in the call.
+have a larger-than-expected insert size. These 'stretched' pairs
+support the deletion. 
+The coverage track in IGV shows the deleted region has lower coverage, increasing our confidence in the call. 
+It is very likely this is a true deletion.
 
 Navigate to `9:108,329,845-108,347,463` to view a second, larger, deletion.
 
