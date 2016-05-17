@@ -64,21 +64,18 @@ If you do not have IGV open, follow the instructions in lab 1.
 Navigate to the genomic location `9:14,205,626-14,206,175`.
 This region contains a small deletion that lumpy-sv found.
 You can right-click on an alignment and select 'view as pairs' to have IGV draw a line linking the two ends of a read.
-If you hover or click on one of the reads that is colored red
-you can view its insert size. You will notice many of the pairs
-have a larger-than-expected insert size. These 'stretched' pairs
-support the deletion. 
-The coverage track in IGV shows the deleted region has lower coverage, increasing our confidence in the call. 
+You will notice many of the pairs have a larger-than-expected insert size - IGV colors these pairs red. 
+These 'stretched' pairs support the deletion. Also, there are quite a few reads whose alignment ends right at the breakpoint, which also supports the deletion, as does the aburpt drop in coverage.
 It is very likely this is a true deletion.
 
 Navigate to `9:108,329,845-108,347,463` to view a second, larger, deletion.
 
-Navigate to the location `6:89,554,173-89,554,839`. In this case there are a number of pairs colored blue that indicate the other half of the pair maps to a different chromosome. If you click on one of these pairs you will see the other half maps to chromosome 1. There are many such pairs, and they have high mapping quality, which suggests this event might be a true rearrangement. If you right-click on one of the colored pairs and select "Go to mate" IGV will jump to the corresponding region on chromosome 1. In the coverage track you will notice that the depth of read changes at the breakpoint on both chromosome 6 and chromosome 1. This suggests the rearrangement might also involve a copy number abnormality.
+Navigate to the location `6:89,554,173-89,554,839`. In this case there are a number of pairs colored blue that indicate the other half of the pair maps to a different chromosome. If you click on one of these pairs you will see the other half maps to chromosome 1. There are many such pairs, and they have high mapping quality, which suggests this event might be a true rearrangement. If you right-click on one of the colored pairs and select "Go to mate" IGV will jump to the corresponding region on chromosome 1. In the coverage track you will notice that the read depth changes at the breakpoint on both chromosome 6 and chromosome 1. This suggests the rearrangement might also involve a copy number abnormality.
 
 If you load the BAM of the normal sample you will notice there is no copy number change and no paired reads indicating the rearrangement, suggesting this is a somatic event - a change that only occurs in the tumour genome.  At location `12:24,104,965-24,106,007` there is another example of a somatic genome rearrangement.
 
-Naviate to the location `4:12,098,102-12,104,063` to view an example of a small inversion - note the orientation of the pairs as they are both on the "-" strand whereas we expect normal pairs to be "+"/"-". At `3:80,227,206-80,230,293` there is an example of a much larger inversion.
+Naviate to the location `4:12,098,102-12,104,063` to view an example of a small inversion - note the orientation of the pairs as they are both on the `-` strand (`-/-` orientation) whereas we expect normal pairs to be `+/-`. At `3:80,227,206-80,230,293` there is an example of a much larger inversion.
 
 Finally view the rearrangement at `6:46,608,429-46,609,095`, this event is a gene fusion - it will be discussed later in Module 4.
 
-For the remainder of the lab view other events and try to determine if they are real.
+For the remainder of the lab view other events that lumpy found and try to determine what type of rearrangement they are.
