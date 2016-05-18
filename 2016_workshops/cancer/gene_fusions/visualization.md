@@ -92,8 +92,7 @@ We will be working with predictions from deFuse.  The output of deFuse is a tab 
 
 
 ```r
-results_url = "http://cbwmain.dyndns.info/Module4/packages/cbw_tutorial/gene_fusions/data/HCC1395/defuse/results.filtered.tsv"
-data = read.table(results_url, sep="\t", header=T, stringsAsFactors=F)
+data = read.table("/Users/amcphers/Projects/cbw_tutorial/gene_fusions/data/HCC1395/defuse/results.filtered.tsv", sep="\t", header=T, stringsAsFactors=F)
 ```
 
 Use the `colnames` function to take a look at the data provided by deFuse.
@@ -144,7 +143,7 @@ colnames(data)
 
 Many features and annotations are provided.  We will primarily be intersted in the chromosome, strand, start and end annotations, and `cluster_id` which is the unique identifier assigned to each prediction.
 
-We will concentrate on the EIF3K-CYP39A1 fusion.  Filter the data for this fusion.
+We will concentrate on the XXX fusion.  Filter the data for this fusion.
 
 
 ```r
@@ -158,17 +157,20 @@ gene_names
 
 ```r
 fusion = data[data$gene_name1 %in% gene_names & data$gene_name2 %in% gene_names,][2,]
-fusion$splitr_sequence <- NULL
 fusion
 ```
 
 ```
-##     cluster_id splitr_count splitr_span_pvalue splitr_pos_pvalue
-## 315    4311846          155        1.62879e-06         0.8150972
-##     splitr_min_pvalue adjacent altsplice break_adj_entropy1
-## 315         0.6862973        N         N           3.316957
-##     break_adj_entropy2 break_adj_entropy_min breakpoint_homology
-## 315           3.393843              3.316957                   6
+##     cluster_id
+## 315    4311846
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               splitr_sequence
+## 315 AGTGCATGATCGACCAGGCACATCAAGAAGAACGGCCAATCCGACAGATTTTGTACCTCGGGGACCTGCTGGAGACCTGCCATTTCCAGGCCTTCTGGCAAGCCCTGGATGAAAACATGGACCTCTTGGAAGGTATAACTGGCTTTGAAGACTCTGTCCGAAAGTTTATCTGCCATGTTGTGGGTATCACTTACCAGCACATTGACCGCTGGCTGCTGGCCGAGATGCTCGGGGATCTGTCG|GCATCAATTCCAAAGAATGTCTTTTTAGCACTGCATGAAAAACTCTATATTATGTTGAAAGGGAAAATGGGGACTGTCAATCTCCATCAGTTTACTGGGCAACTGACTGAAGAATTACATGAACAACTGGAGAATTTAGGCACTCATGGGACAATGGACCTGAACAACTTAGTAAGACATCTCCTTTATCCAGTCACAGTGAATATGCTCTTTAATAAAAGTTTGTTTTCCACAAACAAGAAAAAAATCAAGGAGTTCCATCAGTATTTTCAAGTTTATGATGAAGATTTTGAGTATGGGTCCCAGTTGCCAGAGTGTCTTCTAAGAAACTGGTCAAAATCCAAAAAGTGGTTCCTGG
+##     splitr_count splitr_span_pvalue splitr_pos_pvalue splitr_min_pvalue
+## 315          155        1.62879e-06         0.8150972         0.6862973
+##     adjacent altsplice break_adj_entropy1 break_adj_entropy2
+## 315        N         N           3.316957           3.393843
+##     break_adj_entropy_min breakpoint_homology
+## 315              3.316957                   6
 ##     breakseqs_estislands_percident cdna_breakseqs_percident deletion
 ## 315                              0              0.005789249        N
 ##     est_breakseqs_percident eversion exonboundaries expression1
@@ -306,16 +308,7 @@ It is also possible to plot read alignments and coverage directly from a bam fil
 
 
 ```r
-bam_url = "http://cbwmain.dyndns.info/Module4/HCC1395/rnaseq/genes/HCC1395_EIF3K.bam"
-bai_url = "http://cbwmain.dyndns.info/Module4/HCC1395/rnaseq/genes/HCC1395_EIF3K.bam.bai"
-
-bam_file <- basename(bam_url)
-bai_file <- basename(bai_url)
-
-download.file(bam_url, bam_file)
-download.file(bai_url, bai_file)
-
-alTrack <- AlignmentsTrack(bam_file,
+alTrack <- AlignmentsTrack("/Users/amcphers/Projects/cbw_tutorial/Aligned.sortedByCoord.out.bam",
   isPaired = TRUE, type = "coverage")
 
 plotTracks(list(itrack, gtrack, alTrack, biomTrack, fusionTrack),
@@ -382,16 +375,7 @@ brkendTrack <- HighlightTrack(trackList = list(fusionTrack),
   end = fusion$genomic_break_pos2,
   inBackground = FALSE, col = "darkred", fill = NA)
 
-bam_url = "http://cbwmain.dyndns.info/Module4/HCC1395/rnaseq/genes/HCC1395_CYP39A1.bam"
-bai_url = "http://cbwmain.dyndns.info/Module4/HCC1395/rnaseq/genes/HCC1395_CYP39A1.bam.bai"
-
-bam_file <- basename(bam_url)
-bai_file <- basename(bai_url)
-
-download.file(bam_url, bam_file)
-download.file(bai_url, bai_file)
-
-alTrack <- AlignmentsTrack(bam_file,
+alTrack <- AlignmentsTrack("/Users/amcphers/Projects/cbw_tutorial/Aligned.sortedByCoord.out.bam",
   isPaired = TRUE, type = "coverage")
 
 plot.start = min(fusionexons2@ranges@start) - 2000
