@@ -2,6 +2,8 @@
 
 This page describes where to get and how to install the software used for this lab module. 
 
+* [Installing Array Normalization Packages](#installingarraynormalizationpackages)
+
 ## Installing Array Normalization Packages
 
 We will use the procedure described on the [penncnv site](http://www.openbioinformatics.org/penncnv/penncnv_tutorial_affy_gw6.html). This page also contains links to most of the software we need to download.
