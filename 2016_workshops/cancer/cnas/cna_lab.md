@@ -55,7 +55,7 @@ Oncosnp locations:
 
 ```{.bash}
 ONCOSNP_DIR=/usr/local/oncosnp
-MCR_DIR=/home/ubuntu/CourseData/software/MATLAB/MCR/v82
+MCR_DIR=/opt/MATLAB/MATLAB_Component_Runtime/v77
 ```
 
 GC content files for oncosnp:
