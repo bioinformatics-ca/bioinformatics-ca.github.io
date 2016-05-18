@@ -32,6 +32,8 @@ For predicting CNVs from the array data we will use [OncoSNP](https://sites.goog
 Here we will download OncoSNP version 1.4:
 
 ```{.bash}
+mkdir oncosnp
+cd oncosnp
 wget http://www.well.ox.ac.uk/~cyau/oncosnp/oncosnp_v1.4.run
 bash oncosnp_v1.4.run          # enter your oncosnp password
 ```
