@@ -12,8 +12,8 @@ We will use the procedure described on the [penncnv site](http://www.openbioinfo
 > Note: You will need to register with Affymetrix to download the library files, specifically the .cdf file, from the [affimetrix site](http://www.affymetrix.com/support/technical/byproduct.affx?product=genomewidesnp_6). The [aroma-project](http://www.aroma-project.org/docs) has a copy available which we will download since it can be done from the cloud.
 
 ```{.bash}
-wget https://github.com/WGLab/PennCNV/archive/v1.0.3.tar.gz penncnv.latest.tar.gz
-tar -xzvf penncnv.latest.tar.gz
+wget https://github.com/WGLab/PennCNV/archive/v1.0.3.tar.gz
+tar -xzvf v1.0.3.tar.gz
 
 wget http://www.openbioinformatics.org/penncnv/download/gw6.tar.gz
 tar -xzvf gw6.tar.gz
