@@ -27,7 +27,7 @@ gunzip GenomeWideSNP_6.cdf.gz
 
 ## Installing OncoSNP
 
-For predicting CNVs from the array data we will use OncoSNP in this lab. The files for OncoSNP can be downloaded from <https://sites.google.com/site/oncosnp/user-guide/downloads>. Before you can use OncoSNP, you will need to register with the author and he will supply a password which you can use to unlock the downloaded files.
+For predicting CNVs from the array data we will use [OncoSNP](https://sites.google.com/site/oncosnp/) in this lab. The files for OncoSNP can be downloaded from <https://sites.google.com/site/oncosnp/user-guide/downloads>. Before you can use OncoSNP, you will need to register with the author and he will supply a password which you can use to unlock the downloaded files.
 
 Here we will download OncoSNP version 1.4:
 
