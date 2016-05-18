@@ -1,6 +1,6 @@
 # Lab Module 5 - Software Installation Instructions
 
-This page describes where to get and how to install the software used for this lab module. 
+This page describes where to get and how to install the software used for this lab module. The table of contents of this page are:
 
 * [Installing Array Normalization Packages](#installing-array-normalization-packages)
 * [Installing Oncosnp](#installing-oncosnp)
