@@ -2,7 +2,8 @@
 
 This page describes where to get and how to install the software used for this lab module. 
 
-* [Installing Array Normalization Packages](#installingarraynormalizationpackages)
+* [Installing Array Normalization Packages](#installing-array-normalization-packages)
+* [Installing Oncosnp](#installing-oncosnp)
 
 ## Installing Array Normalization Packages
 
