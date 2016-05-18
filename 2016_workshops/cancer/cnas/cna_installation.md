@@ -51,9 +51,9 @@ The `MCRinstaller.run` installer will ask you where to install the MATLAB MCR fi
 We will also need to download GC content files for the relevant build of the genome. For this tutorial we will use the hg19 (build 37) files.
 
 ```{.bash}
-wget ftp://ftp.stats.ox.ac.uk/pub/yau/quantisnp2/download/b36.tar.gz
-tar -zxvf b36.tar.gz
-export GC_DIR=$INSTALL_DIR/b36
+wget http://www.well.ox.ac.uk/~cyau/gc/b37.zip
+tar -zxvf b37.zip
+export GC_DIR=$INSTALL_DIR/b37
 ```
 
 ## Installing HMMCopy
