@@ -1,4 +1,9 @@
-# Lab Module 5 - Copy Number Analysis
+---
+layout: post3
+title: Lab Module 5 - Copy Number Analysis
+header1: Bioinformatics for Cancer Genomics 2016
+header2: Lab Module 5 - Copy Number Analysis
+---
 
 ## Setup
 
@@ -6,22 +11,22 @@ First login into the server.
 
 Now enter the ~/workspace directory
 
-```{.bash}
+~~~bash
 cd ~/workspace
-```
+~~~
 
 Create a directory for this module and enter this directory:
 
-```{.bash}
+~~~bash
 mkdir Module5
 cd Module5
-```
+~~~
 
 Now let's create a link to some helper scripts we will need for this module:
 
-```{.bash}
+~~~bash
 ln -s /home/ubuntu/CourseData/CG_data/Module5/scripts
-```
+~~~
 
 ## Environment
 
@@ -29,44 +34,44 @@ In this section, we will set some environment variables to help facilitate the e
 
 > These variables that you set will only persist in this current session you are in. If you log out and log back into the server, you will have to set these variables again.
 
-```{.bash}
+~~~bash
 INSTALL_DIR=/home/ubuntu/CourseData/CG_data/Module5/install
-```
+~~~
 
 Set the directory to where the Affymetrix SNP 6.0 normalization files are:
 
-```{.bash}
+~~~bash
 GW6_DIR=$INSTALL_DIR/gw6
-```
+~~~
 
 Set the directory to where Affymetrix power tools is installed:
 
-```{.bash}
+~~~bash
 APT_DIR=$INSTALL_DIR/apt-1.17.0-x86_64-intel-linux
-```
+~~~
 
 Set the path to cell definition file for Affymetrix SNP 6.0:
 
-```{.bash}
+~~~bash
 SNP6_CDF=$INSTALL_DIR/GenomeWideSNP_6.cdf
-```
+~~~
 
 Oncosnp locations:
 
-```{.bash}
+~~~bash
 ONCOSNP_DIR=/usr/local/oncosnp
 MCR_DIR=/opt/MATLAB/MATLAB_Component_Runtime/v77
-```
+~~~
 
 GC content files for oncosnp:
 
-```{.bash}
+~~~bash
 GC_DIR=/home/ubuntu/CourseData/CG_data/Module5/install/b37
-```
+~~~
 
 Summary of all the above environment commands (for copy and pasting convenience):
 
-```{.bash}
+~~~bash
 INSTALL_DIR=/home/ubuntu/CourseData/CG_data/Module5/install/
 GW6_DIR=$INSTALL_DIR/gw6
 APT_DIR=$INSTALL_DIR/apt-1.17.0-x86_64-intel-linux
@@ -74,7 +79,7 @@ SNP6_CDF=$INSTALL_DIR/GenomeWideSNP_6.cdf
 ONCOSNP_DIR=/usr/local/oncosnp
 MCR_DIR=/home/ubuntu/CourseData/software/MATLAB/MCR/v82
 GC_DIR=/home/ubuntu/CourseData/CG_data/Module5/install/b37
-```
+~~~
 
 ## Analysis Of CNAs using Arrays
 
@@ -82,16 +87,16 @@ For calling copy number variants from Affymetrix SNP 6.0 data, we will be using 
 
 ### Fetch Array Data
 
-```{.bash}
+~~~bash
 ln -s /home/ubuntu/CourseData/CG_data/HCC1395
-```
+~~~
 
 Create a list of the cel files to be used by downstream tools.  In practice we would normalize many arrays in a batch.  For demonstration purposes we use just a single tumour.
 
-```{.bash}
+~~~bash
 echo cel_files > cel_file_list.txt
 echo `pwd`/HCC1395/cel/GSM888107.CEL >> cel_file_list.txt
-```
+~~~
 
 ### Step 1 - Array Normalization
 
@@ -99,55 +104,55 @@ The first step in array analysis is to normalize the data and extract the log R 
 
 The sketch file gives the reference signal distribution to be used for normalization.
 
-```{.bash}
+~~~bash
 SKETCH_FILE=$GW6_DIR/lib/hapmap.quant-norm.normalization-target.txt
-```
+~~~
 
 The cluster file defines genotype clusters from HapMap, and is used for small batches.
 
-```{.bash}
+~~~bash
 CLUSTER_FILE=$GW6_DIR/lib/hapmap.genocluster
-```
+~~~
 
 Chromosome positions for each probe.
 
-```{.bash}
+~~~bash
 LOC_FILE=$GW6_DIR/lib/affygw6.hg19.pfb
-```
+~~~
 
 Once these reference files have been defined, we can now perform probeset summarization:
 
-```{.bash}
+~~~bash
 $APT_DIR/bin/apt-probeset-summarize --cdf-file $SNP6_CDF \
     --analysis quant-norm.sketch=50000,pm-only,med-polish,expr.genotype=true \
     --target-sketch $SKETCH_FILE --out-dir results/apt \
     --cel-files cel_file_list.txt --chip-type GenomeWideEx_6 \
     --chip-type GenomeWideSNP_6
-```
+~~~
 
 ### Step 2 -  Extract BAF & LRR
 
 Now that normalization is complete, we can extract the B-allele frequencies (BAF) and log R ratios (LRR).
 
-```{.bash}
+~~~bash
 mkdir -p results/array
 $GW6_DIR/bin/normalize_affy_geno_cluster.pl $CLUSTER_FILE \
     results/apt/quant-norm.pm-only.med-polish.expr.summary.txt \
     -locfile $LOC_FILE -out results/array/gw6.lrr_baf.txt
-```
+~~~
 
 The BAF and LRR values for every sample in the batch will be placed into a single file. The next step will be split them into sample specific BAF and LRR files for downstream analyses (even though we only have one sample, we will still do this to follow a consistent workflow):
 
-```{.bash}
+~~~bash
 perl scripts/penncnv/kcolumn.pl results/array/gw6.lrr_baf.txt split 2 -tab -head 3 \
     -name --output results/array/gw6
-```
+~~~
 
 The sample-specific BAF and LRR files will be placed in `results/array/gw6*`. The file structure is one probe per line, giving the position, normalized log R and BAF for each probe.
 
-```{.bash}
+~~~bash
 less -S results/array/gw6.GSM888107
-```
+~~~
 
 | Name          | Chr | Position | GSM888107.CEL Log R Ratio | GSM888107.CEL.B Allele Freq |
 |---------------|-----|----------|---------------------------|-----------------------------|
@@ -163,22 +168,22 @@ Press the `q` key to exit the less program when you are finished viewing the fil
 
 The OncoSNP manual recommends only using the SNP probes and not the CNA probes for analysis. This is because the CNA probes only give you information on one allele and thus may confound the analysis. You can refer the "Can I use Affymetrix data?" question in the [FAQ section](https://sites.google.com/site/oncosnp/frequently-asked-questions) for more information about this.
 
-```{.bash}
+~~~bash
 grep -v -P 'CN_\d+' results/array/gw6.GSM888107 > results/array/gw6.GSM888107.snp_probes
-```
+~~~
 
 
 ### Step 3 - Call CNA
 
 Now that we have the BAF and LRR data we will use OncoSNP to analyze this data.  Create a working directory for OncoSNP.
 
-```{.bash}
+~~~bash
 mkdir -p results/oncosnp
-```
+~~~
 
 OncoSNP has many command line parameters, and most will not change between runs of different datasets. Below is an example of how you could run it:
 
-```{.bash}
+~~~bash
 $ONCOSNP_DIR/run_oncosnp.sh $MCR_DIR \
 	--sampleid HCC1395 \
 	--tumour-file results/array/gw6.GSM888107.snp_probes \
@@ -195,7 +200,7 @@ $ONCOSNP_DIR/run_oncosnp.sh $MCR_DIR \
 	--chr 21 \
 	--hgtables $ONCOSNP_DIR/configuration/hgTables_b37.txt \
 	> results/oncosnp/run.log 2> results/oncosnp/run.err &
-```
+~~~
 
 Some important parameters to consider:
 
@@ -207,45 +212,45 @@ Some important parameters to consider:
 
 The `&` character at the end of the above command sends the job to run in the background. Rather then print the progress of the job to screen, this command will send output of OncoSNP to a log file. We can monitor the progress of the program by examining this file.
 
-```{.bash}
+~~~bash
 less -S results/oncosnp/run.log
-```
+~~~
 
 Similarly the errors are also sent to a file which we can explore.
 
-```{.bash}
+~~~bash
 less -S results/oncosnp/run.err
-```
+~~~
 
 We can see if the script is still running by looking at our background jobs
 
-```{.bash}
+~~~bash
 jobs
-```
+~~~
 
 To bring the job back into the foreground, type
 
-```{.bash}
+~~~bash
 fg
-```
+~~~
 
 To put it in the background again, suspend it using conrol-z, then type
 
-```{.bash}
+~~~bash
 bg
-```
+~~~
 
 When the program finishes we can go to the output folder and browse the results.
 
-```{.bash}
+~~~bash
 ls -lh results/oncosnp
-```
+~~~
 
 The first key file is the .qc file which outputs some basic quality control values and some parameters. Probably the most interesting value is the stromal contamination i.e. fraction of normal cells. Two values are reported by default because OncoSNP does multiple analysis runs (initialized two different baseline ploidy configurations: diploid and non-diploid). The first value is the most probable.
 
-```{.bash}
+~~~bash
 less -S results/oncosnp/HCC1395.qc
-```
+~~~
 
 | LogRRatioShift | NormalContent | Copy Number (Average) | Log-likelihood | OutlierRate | LogRRatioStd | BAlleleFreqStd | PloidyNo |
 |----------------|---------------|-----------------------|----------------|-------------|--------------|----------------|----------|
@@ -254,9 +259,9 @@ less -S results/oncosnp/HCC1395.qc
 
 Next is .cnvs file which contains the smoothed segments with there copy number prediction.
 
-```{.bash}
+~~~bash
 less -S results/oncosnp/HCC1395.cnvs
-```
+~~~
 
 | Chromosome | StartPosition | EndPosition | CopyNumber | LOH | Rank | Loglik       | nProbes | NormalFraction | TumourState | PloidyNo | MajorCopyNumber | MinorCopyNumber |
 |------------|---------------|-------------|------------|-----|------|--------------|---------|----------------|-------------|----------|-----------------|-----------------|
@@ -269,15 +274,15 @@ less -S results/oncosnp/HCC1395.cnvs
 
 The last file we will look at is the .cnv file. This is essentially a more informative version of the .cnvs file. One column of particular interest is the "Tumour State" column. This is an integer >= 1 which represents the most likely state of the HMM for that segment. 
 
-```{.bash}
+~~~bash
 less -S results/oncosnp/HCC1395.cnvs
-```
+~~~
 
 The final interesting file that OncoSNP produces is the plots HCC1395.\*.ps.gz.  Download this file from:
 
-```{.bash}
+~~~bash
 http://cbwxx.dyndns.info/Module5/results/oncosnp
-```
+~~~
 Try to open up and visualize the chromosome plots from OncoSNP. If you have trouble opening these files, then you can also download them from the wiki. 
 
 ## Analysis Of CNAs using Sequencing Data
@@ -290,9 +295,9 @@ The sample we will be using is the same breast cancer cell line we used for the 
 
 The raw sequencing data has been downloaded and aligned for you (See data preparation). Create a hardlink to the folder containing these data (if not already completed from the "Analysis of CNA using Array" section already)
 
-```{.bash}
+~~~bash
 ln -s /home/ubuntu/CourseData/CG_data/HCC1395
-```
+~~~
 
 ### Get Input Data
 
@@ -309,53 +314,53 @@ Generating these files can take a bit of time. So for this lab, they have been a
 
 Copy the tumour and normal read count data:
 
-```{.bash}
+~~~bash
 mkdir -p hmmCopy/wig
 cp /home/ubuntu/CourseData/CG_data/Module5/hmmCopy/wig/* hmmCopy/wig
-```
+~~~
 
 Copy the tumour allele count data:
 
-```{.bash}
+~~~bash
 mkdir -p titan/bcftools/tables
 cp /home/ubuntu/CourseData/CG_data/Module5/titan/bcftools/tables/* titan/bcftools/tables/
-```
+~~~
 
 Create a link for the folder containing the genome reference along with its mappability and GC content file:
 
-```{.bash}
+~~~bash
 ln -s /home/ubuntu/CourseData/CG_data/ref_data
-```
+~~~
 
 ### Running TITAN
 
 Once these input files have been retrieved/generated, we can now run TITAN. An R script `scripts/run_titan.R` is provided to run TITAN.
 
-```{.bash}
+~~~bash
 Rscript scripts/run_titan.R &> run_titan.log &
-```
+~~~
 
 Just like the OncoSNP run, this will run in the background. You can check the progress of the job by going:
 
-```{.bash}
+~~~bash
 less -S run_titan.log
-```
+~~~
 
 Press "q" to escape the less command when you are done viewing. This will take a few minutes to run. Take this time to review the script itself. Please ask any questions regarding the content of the script:
 
-```{.bash}
+~~~bash
 less -S scripts/run_titan.R
-```
+~~~
 
 This script will create the directory `results/titan` which contains the TITAN results. This script will generate plots, but requires X11 forwarding to work since we are working on a server. For demonstration purposes, the corresponding chromosome plots for this run can be downloaded on the wiki.
 
 Additionally segment and IGV compatible segment (.seg) files can be generated using a Perl script:
 
-```{.bash}
+~~~bash
 perl scripts/createTITANsegmentfiles.pl -id=test -infile=results/titan/HCC1395_exome_tumour.results.txt \
 -outfile=results/titan/HCC1395_exome_tumour.results.segs.txt \
 -outIGV=results/titan/HCC1395_exome_tumour.results.segs
-```
+~~~
 
 The relevance of these segment .seg files will be discussed at the end of this lab.
 
@@ -363,9 +368,9 @@ The relevance of these segment .seg files will be discussed at the end of this l
 
 The workflow for applying TITAN to genome is the same as applying it to exomes. The only difference is that you don't need to specify the capture region in genomes as you do in exomes. This occurs in the `scripts/run_titan.R` specially at line 24:
 
-```{.bash}
+~~~bash
 cnData <- correctReadDepth(tumWig, normWig, gcWig, mapWig, genomeStyle = "NCBI", targetedSequence = exomeCaptureSpaceDf)
-```
+~~~
 
 Where the `targetedSequence` parameter specifies the capture space. If you are using genomes, then don't specify this parameter. Everything else should be the same.
 
