@@ -306,11 +306,14 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
 
 ###  Module 5: Copy Number Alterations <a id="module_5"></a>
 
-  *<font color="#827e9c">Sohrab Shah</font>*
+*<font color="#827e9c">Sohrab Shah</font>*
   
-  Lecture:
+Lecture:
   
-  Lab practical:
+Lab practical: 
+
+* Lab Lecture
+* [Lab Module 5 - Copy Number Analysis](/2016_workshops/cancer/cnas/cna_lab.html)
   
 #### Links:
 
