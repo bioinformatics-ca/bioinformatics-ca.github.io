@@ -84,7 +84,7 @@ image: CBW_metabolomics_icon.jpg
 
   *<font color="#827e9c">David Wishart</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metabolomics2016module1)
 
 [&uarr;](#back_to_top)
 
@@ -94,9 +94,9 @@ image: CBW_metabolomics_icon.jpg
 
   *<font color="#827e9c">David Wishart and Jeff Xia</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metabolomics2016module2)
   
-  Lab practical:
+  [Lab practical](https://bioinformatics.ca/metabolomics2016module2lab)
   
   
 #### Break-out Groups:
@@ -193,7 +193,7 @@ image: CBW_metabolomics_icon.jpg
 
   *<font color="#827e9c">David Wishart</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metabolomics2016module3)
   
   Optional Exercises:
   
@@ -227,7 +227,7 @@ image: CBW_metabolomics_icon.jpg
 
   *<font color="#827e9c">David Wishart</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metabolomics2016module4)
 
 [&uarr;](#back_to_top)
 
@@ -237,9 +237,9 @@ image: CBW_metabolomics_icon.jpg
 
   *<font color="827e9c">David Wishart and Jeff Xia</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metabolomics2016module5)
   
-  Lab practical:
+  [Lab practical](https://bioinformatics.ca/metabolomics2016module5lab)
   
   
 #### Data Input:
@@ -259,7 +259,7 @@ image: CBW_metabolomics_icon.jpg
 
   *<font color="827e9c">David Wishart</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metabolomics2016module6)
 
 [&uarr;](#back_to_top)
 
