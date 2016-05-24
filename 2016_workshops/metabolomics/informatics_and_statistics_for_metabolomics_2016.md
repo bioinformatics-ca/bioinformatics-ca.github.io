@@ -103,7 +103,7 @@ image: CBW_metabolomics_icon.jpg
   
   Begin with your assigned data set and then move through to the next data set when done.
   
-  Student #01-10 - Begin with NMR and <a href="http://cbw.bayesil.ca/">CBW-Bayesil</a>.
+  Student #01-10 - Begin with NMR and <a href="http://tmic.bayesil.ca">Bayesil</a>.
   
   
 ##### Sub-groups for NMR
