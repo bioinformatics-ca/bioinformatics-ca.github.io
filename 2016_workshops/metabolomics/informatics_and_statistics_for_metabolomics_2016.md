@@ -127,16 +127,16 @@ image: CBW_metabolomics_icon.jpg
 ##### NMR:
 
 <ul>
-<li> <a href="link_to_data">CBW_NRM_Data.zip</a> </li>
-<li> <a href="link_to_data">CBW_NRM_result.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/CBW_NMR_Data.zip">CBW_NRM_Data.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/CBW_NMR_result.zip">CBW_NRM_result.zip</a> </li>
 </ul>
   
 ##### GC-MS:
 
 <ul>
-<li> <a href="link_to_data">Example_Jul0914_mxXML.zip</a> </li>
-<li> <a href="link_to_data">Example_Jul1114_mzXML.zip</a> </li>
-<li> <a href="link_to_data">CBW_GCMS_result.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/Example_Jul0914_mzXML.zip">Example_Jul0914_mxXML.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/Example_Jul1114_mzXML.zip">Example_Jul1114_mzXML.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/CBW_GCMS_result.zip">CBW_GCMS_result.zip</a> </li>
 </ul>
 
 ##### LC-MS:
@@ -148,9 +148,9 @@ image: CBW_metabolomics_icon.jpg
   Group WT: wild type; Group KO: knock out.  Platform: HPLC Single Quad.
   
 <ul>
-<li> <a href="link_to_data">WT.zip</a> </li>
-<li> <a href="link_to_data">KO.zip</a> </li>
-<li> <a href="link_to_data">CBW_FaahKO_results.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/WT.zip">WT.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/KO.zip">KO.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/FaahKO_results.zip">CBW_FaahKO_results.zip</a> </li>
 </ul>
   
   Large test datasets:
@@ -160,9 +160,9 @@ image: CBW_metabolomics_icon.jpg
   Group A: 13-16 weeks; Group B: 9-12 weeks.  Platform: HPLC Orbitrap
   
 <ul>
-<li> <a href="link_to_data">GroupA.zip</a> </li>
-<li> <a href="link_to_data">GroupB.zip</a> </li>
-<li> <a href="link_to_data">CBW_XCMS_results.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/GroupA.zip">GroupA.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/GroupB.zip">GroupB.zip</a> </li>
+<li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/XCMS_results.zip">CBW_XCMS_results.zip</a> </li>
 </ul>
   
   
@@ -225,7 +225,7 @@ image: CBW_metabolomics_icon.jpg
 
 ###  Module 4: Backgrounder in Statistical Methods <a id="module_4"></a>
 
-  *<font color="#827e9c">David Wishart</font>*
+  *<font color="#827e9c">Jeff Xia</font>*
   
   [Lecture](https://bioinformatics.ca/metabolomics2016module4)
 
