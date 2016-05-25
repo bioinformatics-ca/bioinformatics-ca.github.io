@@ -152,11 +152,12 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 * These instructions will **ONLY** be relevant in class, as the Cloud will not be accessible from home in advance of the class.
  
-* We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download this **link certificate here**. Otherwise if you plan on using Windows (with Putty and Winscp), please download this **link certificate here**.
+* We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download [this certificate](http://cbwmain.dyndns.info/private/CBWCG.pem). Otherwise if you plan on using Windows (with Putty and Winscp), please download [this certificate](http://cbwmain.dyndns.info/private/CBWCG.ppk).
 * On the cloud, we're going to use the default username: **ubuntu**
 
 #### Logging in with ssh (Mac/Linux)
 **Loggin in**
+
 - Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 ```
 chmod 600 CBWCG.pem
@@ -168,6 +169,7 @@ ssh -i CBWCG.pem ubuntu@cbw#.dyndns.info
 (where # is your assigned student number. Your student number is the number on the participant list. If your number less than 10, please add 0 in front of it.)
 
 **Copying files to your computer**
+
 - To copy files from an instance, use scp in a similar fashion: 
 ```
 scp -i CBWCG.pem ubuntu@cbw#.dyndns.info:CourseData/genome/g1k/human_g1k_v37.fasta.fai .
