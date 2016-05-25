@@ -1,0 +1,239 @@
+---
+title: "Lab Module 5 - Analyze CNA Data"
+author: "Fong Chun Chan (fongchunchan@gmail.com); @fongchunchan"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+---
+
+# Introduction
+
+In this R Markdown document, we explore the HCC1395 CNA predictions from OncoSNP and TITAN. The objective is to demonstrate some other analyses that can be performed on these results using R.
+
+> This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>. Inside of RStudio when you click the **Knit** button in the document, it will be generate an html includes both content as well as the output of any embedded R code chunks within the document. 
+
+Let's start by loading the R packages that you will need for doing these analyses.
+
+```{r setup, message = FALSE}
+library("data.table")
+library("ggplot2")
+library("plyr")
+library("dplyr")
+library("stringr")
+library("knitr")
+library("reshape2")
+```
+
+# OncoSNP Analysis
+
+Let's load the OncoSNP data. 
+
+```{r}
+# load the modified OncoSNP cnvs file
+# this file has LRR and BAF values added for each segment
+oncosnpDt <- fread("HCC1395.logR.baf.cnvs")
+oncosnpDt <- oncosnpDt[, chr := factor(chr, levels = c(1:22, "X"))]
+
+# summarize the tumour states more broadly
+# this allows for easier visualization of the data
+# as this is a cell-line, we treat all germline states as somatic
+oncosnpDt <- oncosnpDt %>%
+	mutate(state.modified = ifelse(state == 1, "HOMD", 
+													ifelse(state == 2, "HETD",
+													ifelse(state == 3, "NEU",
+													ifelse(state == 4, "3N_GAIN",
+													ifelse(state %in% c(5:13), "4-8N_GAIN",
+													ifelse(state %in% c(14:20), "LOH",
+													ifelse(state %in% c(21:28), "LOH", NA))))))))
+
+# generate the length of each chromosome
+chrLenDt <- oncosnpDt %>%
+	mutate(segLen = end - start + 1) %>%
+	group_by(chr) %>%
+	summarize(chrLen = sum(segLen))
+
+# set colors for each copy number state
+states.col <- c("HOMD" = "#1F78B4",
+                "HETD" = "#A6CEE3", 
+								"NEU" = "lightgrey", 
+								"3N_GAIN" = "#FB9A99", 
+								"4-8N_GAIN" = "#E31A1C", 
+								"LOH" = "#33A02C",
+								"GERMLINE" = "#006837")
+
+oncosnpDt.qc <- fread("HCC1395.qc")
+
+# rename columns more easier processing downstream
+setnames(oncosnpDt.qc, 
+				 c("Log-likelihood", "LogRRatioShift", "Copy Number (Average)"), 
+				 c("loglikelihood", "LRR.shift", "ploidy"))
+
+rawProbeDt <- fread("HCC1395.ploidyConfig_1.rawProbe")
+rawProbeDt <- rawProbeDt[, chr := factor(chr, levels = c(1:22, "X"))]
+setkey(rawProbeDt, probeID)
+
+#' Given a stateRankDf (from rankState1 to rankState5) and a maxrank, it will 
+#' return the state with the highest rank. If the highest rank is NA, then 
+#' it will go down the list of ranks until it finds a state that is not NA
+#' 
+#' @param 
+summarizeProbeState <- function( stateRankDf, maxRank = 5 ){
+	states.summarized <- stateRankDf[, maxRank ]
+	if ( maxRank != 1 ){
+		for ( i in (maxRank-1):1 ){
+			states.summarized[is.na(states.summarized)] <- stateRankDf[is.na(states.summarized), i]
+		}
+	}
+	return( states.summarized )
+}
+
+#' This function is used to label the facet-grids
+facet_labeller <- function(var, value){
+    value <- as.character(value)
+    if (var=="cnMeasure") { 
+        value[value == "logRShifted"] <- "LRR"
+        value[value == "baf"] <- "BAF"
+    }
+    return(value)
+}
+
+stateRankDf <- rawProbeDt[, str_c('rankState', 1:5), with = FALSE] %>%
+	data.frame
+rawProbeDt <- cbind(rawProbeDt, finalState = summarizeProbeState(stateRankDf, maxRank = 5))
+rawProbeDt <- rawProbeDt %>%
+	mutate(finalState.modified = ifelse(finalState == 1, "HOMD", 
+                               ifelse(finalState == 2, "HETD",
+															 ifelse(finalState == 3, "NEU",
+														   ifelse(finalState == 4, "3N_GAIN",
+															 ifelse(finalState %in% c(5:13), "4-8N_GAIN",
+															 ifelse(finalState %in% c(14:20), "LOH",
+															 ifelse(finalState %in% c(21:28), "LOH", NA))))))))
+
+rawProbeDt.melt <- rawProbeDt %>%
+	melt(id.vars = c("probeID", "chr", "pos", "finalState.modified"), 
+			 measure.vars = c("logRShifted", "baf"), 
+			 variable.name = "cnMeasure")
+
+```
+
+## Quality Control
+
+Let's first take a look at the quality control metrics from OncoSNP
+
+```{r}
+kable(oncosnpDt.qc)
+```
+
+This table informs us on the statistics of the two OncoSNP runs. That is:
+
+1. One run initialized to diploid
+2. One run initialized to non-diploid
+
+The row with the `PloidyNo = 1` is the OncoSNP run that has the higher probability of being the correct one. The log-likelihood (i.e. probabilities) are actually quite similar, however the predicted ploidy is similar. This is an ideal scenario as both initialization coverged to similar solutions for the ploidy level.
+
+## Segment Analysis
+
+Let's first take a look how the copy number alteration segments distribute across the genome.
+
+```{r}
+oncosnpDt %>%
+	mutate(segLen = end - start + 1) %>%
+	left_join(chrLenDt) %>%
+	mutate(segChrProp = segLen / chrLen) %>%
+	arrange(chr, state) %>%
+	ggplot(aes(x = chr, y = segChrProp, fill = factor(state.modified))) +
+	geom_bar(stat = "identity", position = "fill") +
+	scale_fill_manual(name = "Tumour State", values = states.col) +
+	xlab("Chromosome") +
+	ylab("Proportion of Chromosome")
+```
+
+OncoSNP by default will assign a copy number state (1 of 28) that a segment belongs to. In this lab, we've collapsed these states into 1 of 6 to simply visualization:
+
+1) 3N\_GAIN: 3 copies
+2) 4-8N\_GAIN: 4-8 copies
+3) HETD: Heterozygous Deletion
+4) HOMD: Homozygous Deletion
+5) LOH: Loss of Heterozygous 
+6) NEU: Neutral
+
+## Chromosome Plots
+
+Let's take a closer took at some of the LRR and BAF plots for each chromosome. The benefit of using R here is we can add some more additional annotations such as colors to the tumour states. Here we plot just the first chromosome. 
+
+```{r, fig.width = 15, fig.height = 10}
+rawProbeDt.melt %>%
+	filter(chr == 1) %>%
+	ggplot(aes(pos, value, color = factor(finalState.modified))) + 
+	geom_point(shape = 1) + 
+	facet_grid(cnMeasure ~ ., scales = "free", labeller = facet_labeller) + 
+	scale_color_manual(name = "Tumour State", values = states.col) +
+	xlab("Position") + 
+	ylab("")
+```
+
+Feel free to change the chromosome and even plot more focal regions by setting the range on the `pos` column. For instance, here we plot a focal region on chromosome 1 (50 - 100MB):
+
+```{r, fig.width = 15, fig.height = 10}
+rawProbeDt.melt %>%
+	filter(chr == 1, pos > 50000000, pos < 100000000) %>% 
+	ggplot(aes(pos, value, color = factor(finalState.modified))) + 
+	geom_point(shape = 1) + 
+	facet_grid(cnMeasure ~ ., scales = "free", labeller = facet_labeller) + 
+	scale_color_manual(name = "Tumour State", values = states.col) +
+	xlab("Position") + 
+	ylab("")
+```
+
+# TITAN Analysis
+
+Now let's take a look at the TITAN results
+
+```{r}
+titanDt <- fread("HCC1395_exome_tumour.results.segs.txt")
+titanDt <- titanDt[, Chromosome := factor(Chromosome, levels = c(1:22, "X"))]
+
+# generate the length of each chromosome
+chrLenDt.titan <- titanDt %>%
+	mutate(segLen = End_Position - Start_Position + 1) %>%
+	group_by(Chromosome) %>%
+	summarize(chrLen = sum(segLen))
+
+# set colors for each copy number state
+titan.states.col <- c("HOMD" = "#1F78B4",
+											"DLOH" = "#A6CEE3", 
+											"HET" = "lightgrey", 
+											"GAIN" = "#FB9A99", 
+											"BCNA" = "#E31A1C", 
+											"UBCNA" = "#E31A1C", 
+											"ASCNA" = "#E31A1C", 
+											"NLOH" = "#33A02C", 
+											"ALOH" = "#33A02C")
+
+```
+
+## Segment Analysis
+
+Just like OncoSNP, we have the ability to look at the copy number alteration distribution across the genome.
+
+```{r}
+titanDt %>%
+	mutate(segLen = End_Position - Start_Position + 1) %>%
+	left_join(chrLenDt.titan) %>% 
+	mutate(segChrProp = segLen / chrLen) %>% 
+	arrange(Chromosome, TITAN_state) %>%
+	ggplot(aes(x = Chromosome, y = segChrProp, fill = factor(TITAN_call))) +
+	geom_bar(stat = "identity", position = "fill") +
+	xlab("Chromosome") +
+	ylab("Proportion of Chromosome") +
+	scale_fill_manual(name = "Tumour State", values = titan.states.col)
+```
+
+You may notice that states have different state names between OncoSNP and TITAN. Each program typically has their own nomenclature on how states are defined. It's important to understand the state names. For TITAN, this information can be found in the paper.
+
+## Chromosome Plots
+
+Detailed chromosome plots are provided by TITAN already. For exome data, these plots will be much more sparse since we don't have the same coverge as in genomes. We won't reproduce these plots in R, but you can use the code above as a framework.
