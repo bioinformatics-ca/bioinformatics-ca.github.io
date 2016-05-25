@@ -153,7 +153,7 @@ image: CBW_metabolomics_icon.jpg
 <li> <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/FaahKO_results.zip">CBW_FaahKO_results.zip</a> </li>
 </ul>
   
-  Large test datasets:
+  Large test datasets (warning: may take ~2 hours to upload this dataset to the XCMS Online server!):
   
   Description: a subset of 38 samples from the study <a href="http://www.ebi.ac.uk/metabolights/MTBLS146">Pregnancy-Induced Metabolic Phenotype Variations in Maternal Plasma</a>.
   
@@ -184,6 +184,11 @@ image: CBW_metabolomics_icon.jpg
  * [HighChem](http://www.highchem.com/formula-generator/) 
  * [7GR Software](http://fiehnlab.ucdavis.edu/projects/Seven_Golden_Rules/Software/) 
  * [MyCompoundID](http://mycompoundid.org/) 
+ 
+#### Module 2 Data Output
+
+Place your data file in [this google folder](https://goo.gl/nTRMQa).
+
 
 [&uarr;](#back_to_top)
 
