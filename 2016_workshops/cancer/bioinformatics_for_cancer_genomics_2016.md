@@ -110,12 +110,14 @@ That was the problem when students installed things in **RStudio** at the comman
 
 
 2) **Cytoscape 3.x Preparation tutorials**: Complete the [introductory tutorial to Cytoscape 3.x](http://opentutorials.cgl.ucsf.edu/index.php/Portal:Cytoscape3): 
+
 * Introduction to Cytoscape3 - User Interface
 * Introduction to Cytoscape3 - Welcome Screen
 * Introduction to Cytoscape 3.1 - Networks, Data, Styles, Layouts and App Manager
 
 
 3) **UNIX Preparation tutorials**: Please complete tutorials #1-3 on [UNIX Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
+
 * [Unix Cheat sheet](http://www.rain.org/~mkummel/unix.html) 
 
 [&uarr;](#back_to_top)
