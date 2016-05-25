@@ -195,9 +195,6 @@ image: CBW_metabolomics_icon.jpg
   
   [Lecture](https://bioinformatics.ca/metabolomics2016module3)
   
-  Optional Exercises:
-  
- 
 #### Links:
   
  * [HMDB](http://hmdb.ca/) 
@@ -250,6 +247,11 @@ image: CBW_metabolomics_icon.jpg
 * Three types of labels: feature names, sample names and group labels (must directly follow sample names);
 * All measurements should be numerical values (empty for missing values); 
 * For details and screenshot instructions, [click here](http://www.metaboanalyst.ca/faces/docs/Format.xhtml)
+
+* [CBW_NMR_result.csv](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/CBW_NMR_result.csv) (Bayesil output - need to remove annotations lines starting with #, keep one type of ID - name/HMDB ID)
+* [CBW_GCMS_examples_cleaned_2015.csv](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/CBW_GCMS_examples_cleaned_2015.csv) (Auto-GCMS output - need to remove <LOD and NA values ) 
+* [FAAH_cleaned_metaboanalyst.csv](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/FAAH_cleaned_metaboanalyst.csv) (peak intensity table from XCMSonline - small LC-MS data)
+* [XCMS_cleaned_metaboanalyst.csv](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/XCMS_cleaned_metaboanalyst.csv) (peak intensity table from XCMSonline - big LC-MS data)
 
 [&uarr;](#back_to_top)
 
