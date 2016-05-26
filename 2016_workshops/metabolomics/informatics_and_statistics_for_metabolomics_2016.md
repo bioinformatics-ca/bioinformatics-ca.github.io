@@ -69,7 +69,7 @@ image: CBW_metabolomics_icon.jpg
 
 ### Class Picture
 
-<img src="../images/Metab_student_picture_May_26_2016.jpeg" width=200/>
+<img src="../../images/Metab_student_picture_May_26_2016.jpeg" width=200/>
 
 ***
 
