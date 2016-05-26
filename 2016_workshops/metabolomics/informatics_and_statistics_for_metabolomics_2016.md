@@ -247,6 +247,12 @@ Place your data file in [this google folder](https://goo.gl/nTRMQa).
   
   [Lab practical](https://bioinformatics.ca/metabolomics2016module5lab)
   
+  Extras:
+  
+  [MetaboAnalyst Tutorial 1](https://bioinformatics.ca/metaboanalysttutorial12016)
+  
+  [MetaboAnalyst Tutorial 2](https://bioinformatics.ca/metaboanalysttutorial22016)
+  
   
 #### Data Input:
   
