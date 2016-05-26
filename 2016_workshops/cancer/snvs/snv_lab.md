@@ -1,4 +1,9 @@
-# Lab Module 6 - Somatic Mutations
+---
+layout: post3
+title: Lab Module 6 - Somatic Mutations
+header1: Bioinformatics for Cancer Genomics 2016
+header2: Lab Module 6 - Somatic Mutations Analysis
+---
 
 ## Setup
 
