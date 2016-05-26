@@ -60,7 +60,7 @@ Oncosnp locations:
 
 ~~~bash
 ONCOSNP_DIR=/usr/local/oncosnp
-MCR_DIR=/opt/MATLAB/MATLAB_Component_Runtime/v77
+MCR_DIR=/usr/local/MATLAB/MATLAB_Compiler_Runtime/v82
 ~~~
 
 GC content files for oncosnp:
@@ -83,7 +83,7 @@ GC_DIR=/home/ubuntu/CourseData/CG_data/Module5/install/b37
 
 ## Analysis Of CNAs using Arrays
 
-For calling copy number variants from Affymetrix SNP 6.0 data, we will be using breast cancer cell-line (HC1395). The array data for HCC1395 has already been downloaded for you. 
+For calling copy number variants from Affymetrix SNP 6.0 data, we will be using breast cancer cell-line (HC1395). The array data for HCC1395 has already been downloaded for you.
 
 ### Fetch Array Data
 
@@ -157,11 +157,11 @@ less -S results/array/gw6.GSM888107
 | Name          | Chr | Position | GSM888107.CEL Log R Ratio | GSM888107.CEL.B Allele Freq |
 |---------------|-----|----------|---------------------------|-----------------------------|
 | SNP_A-2131660 | 1   | 1156131  | 0.3040                    | 0.0501                      |
-| SNP_A-1967418 | 1   | 2234251  | <nowiki>-</nowiki>0.0355                   | 1.0000                      |
-| SNP_A-1969580 | 1   | 2329564  | <nowiki>-</nowiki>0.2625                   | 0.9403                      |
-| SNP_A-4263484 | 1   | 2553624  | <nowiki>-</nowiki>0.3366                   | 0.9780                      |
-| SNP_A-1978185 | 1   | 2936870  | <nowiki>-</nowiki>0.0276                   | 0.0528                      |
-| SNP_A-4264431 | 1   | 2951834  | <nowiki>-</nowiki>0.1812                   | 0.0272                      |
+| SNP_A-1967418 | 1   | 2234251  | -0.0355                   | 1.0000                      |
+| SNP_A-1969580 | 1   | 2329564  | -0.2625                   | 0.9403                      |
+| SNP_A-4263484 | 1   | 2553624  | -0.3366                   | 0.9780                      |
+| SNP_A-1978185 | 1   | 2936870  | -0.0276                   | 0.0528                      |
+| SNP_A-4264431 | 1   | 2951834  | -0.1812                   | 0.0272                      |
 | SNP_A-1980898 | 1   | 3095126  | 0.0830                    | 0.9793                      |
 
 Press the `q` key to exit the less program when you are finished viewing the file.
@@ -190,7 +190,7 @@ $ONCOSNP_DIR/run_oncosnp.sh $MCR_DIR \
 	--output-dir results/oncosnp \
 	--fulloutput --plot \
 	--gcdir $GC_DIR \
-	--paramsfile $ONCOSNP_DIR/data/cyau/temp/oncosnp/configuration/hyperparameters-affy.dat \
+	--paramsfile $ONCOSNP_DIR/configuration/hyperparameters-affy.dat \
 	--levelsfile $ONCOSNP_DIR/configuration/levels-affy.dat \
 	--subsample 30 \
 	--emiters 1 \
@@ -206,8 +206,8 @@ Some important parameters to consider:
 
 * --tumour-file: Specify the location of where the BAF and LRR values are for the sample
 * --chr: Specify the chromosome you want to run on. In this example, we run only on chromosome 21 since it can take awhile for the whole genome. Don't specify this parameter for whole genome analysis.
-* --stroma: This parameter can be specified for normal content adjustment. As this is a cell-line, we did not set this. 
-* --intratumor: This parameter can be specified for correcting intratumor heterogeneity. As this is a cell-line, we did not set this. 
+* --stroma: This parameter can be specified for normal content adjustment. As this is a cell-line, we did not set this.
+* --intratumor: This parameter can be specified for correcting intratumor heterogeneity. As this is a cell-line, we did not set this.
 * --normal-file: If you have a matching normal, you can specify it here. OncoSNP will then perform a paired analysis mode. As we have no matching normal here, we leave this parameter unspecified.
 
 The `&` character at the end of the above command sends the job to run in the background. Rather then print the progress of the job to screen, this command will send output of OncoSNP to a log file. We can monitor the progress of the program by examining this file.
@@ -272,7 +272,7 @@ less -S results/oncosnp/HCC1395.cnvs
 | 21         | 43993615      | 44503173    | 2          | 2   | 4    | 56.394753    | 200     | 0.0            | 21          | 1        | 2               | 0               |
 | 21         | 14369207      | 14775085    | 3          | 0   | 5    | 7.201958     | 24      | 0.0            | 4           | 1        | 2               | 1               |
 
-The last file we will look at is the .cnv file. This is essentially a more informative version of the .cnvs file. One column of particular interest is the "Tumour State" column. This is an integer >= 1 which represents the most likely state of the HMM for that segment. 
+The last file we will look at is the .cnv file. This is essentially a more informative version of the .cnvs file. One column of particular interest is the "Tumour State" column. This is an integer >= 1 which represents the most likely state of the HMM for that segment.
 
 ~~~bash
 less -S results/oncosnp/HCC1395.cnvs
@@ -283,7 +283,7 @@ The final interesting file that OncoSNP produces is the plots HCC1395.\*.ps.gz. 
 ~~~bash
 http://cbwxx.dyndns.info/Module5/results/oncosnp
 ~~~
-Try to open up and visualize the chromosome plots from OncoSNP. If you have trouble opening these files, then you can also download them from the wiki. 
+Try to open up and visualize the chromosome plots from OncoSNP. If you have trouble opening these files, then you can also download them from the wiki.
 
 ## Analysis Of CNAs using Sequencing Data
 
@@ -378,10 +378,12 @@ Where the `targetedSequence` parameter specifies the capture space. If you are u
 
 ### Visualizing Seg Files in IGV
 
-Both OncoSNP and TITAN will produce sample-specific chromosome plots of the copy number data. If you are comparing across multiple samples, you can use the .seg files for this. This format for copy number has become a de facto standard format for reporting copy number results. You can go to the [IGV website](https://www.broadinstitute.org/igv/SEG) for more specific details regarding the SEG format. 
+Both OncoSNP and TITAN will produce sample-specific chromosome plots of the copy number data. If you are comparing across multiple samples, you can use the .seg files for this. This format for copy number has become a de facto standard format for reporting copy number results. You can go to the [IGV website](https://www.broadinstitute.org/igv/SEG) for more specific details regarding the SEG format.
 
 The seg file from the METABRIC can be downloaded from the wiki and opened in IGV for visualizing. Make sure to change the genome to hg18 as the data was generated using hg18.
 
 ### Analyzing the CNA Results in R
 
-We can use a programming language like R to do further analyses on the results. Download the "CNA Data Analysis Package" from the wiki now. Extract it, and open the analyze-CNA.Rmd file in RStudio.
+We can use a programming language like R to do further analyses on the results. A "CNA Data Analysis Package" has been provided for you to do the analysis. The files 
+
+from the wiki now. Extract it, and open the analyze-CNA.Rmd file in RStudio.
