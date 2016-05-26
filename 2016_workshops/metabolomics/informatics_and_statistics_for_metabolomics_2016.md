@@ -67,6 +67,10 @@ image: CBW_metabolomics_icon.jpg
 
 [&uarr;](#back_to_top)
 
+### Class Picture
+
+<img src="../images/Metab_student_picture_May_26_2016.jpeg" width=200/>
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
