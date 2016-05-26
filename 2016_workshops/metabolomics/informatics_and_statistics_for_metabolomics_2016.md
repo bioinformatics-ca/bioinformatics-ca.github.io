@@ -118,7 +118,7 @@ image: CBW_metabolomics_icon.jpg
   
   Student #11-20 - Begin with GC-MS and <a href="http://gcms.wishartlab.com/">GCMS</a>.
   
-  Student #21-34 - Begin with LC-MS and <a href="http://xcmsonline.scripps.edu/index.php">XCMS Online</a>.
+  Student #21-34 - Begin with LC-MS and <a href="http://xcmsonline.scripps.edu/index.php">XCMS Online</a>. **note: this tool might not currently be working** 
   
   
 #### Data Set and Results Files:
