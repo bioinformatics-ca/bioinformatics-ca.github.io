@@ -180,6 +180,10 @@ rawProbeDt.melt %>%
   ylab("")
 ```
 
+Take note of the separation of the alleles in the BAF plot in LOH regions.
+
+> Do you understand the BAF signal in the “3N GAIN” region?
+
 Feel free to change the chromosome and even plot more focal regions by setting the range on the `pos` column. For instance, here we plot a focal region on chromosome 1 (50 - 100MB):
 
 ```{r, fig.width = 15, fig.height = 10}
@@ -192,6 +196,8 @@ rawProbeDt.melt %>%
   xlab("Position") + 
   ylab("")
 ```
+
+> Can you figure out how to visualize the chromosome plot of chromosome 19?
 
 # TITAN Analysis
 
