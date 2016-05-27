@@ -318,7 +318,7 @@ Lab practical:
   * [Software Installation](2016_workshops/cancer/cnas/cna_installation.html)
     + This page contains information on how to install the different software used in the lab module.
 
-  * [Data Preparation](2016_workshops/cancer/cnas/cna_prepdata.html)
+  * [Data Preparation](/2016_workshops/cancer/cnas/cna_prepdata.html)
     + This page contains information on how the data was prepared to be used for lab module.
   
 #### Links:

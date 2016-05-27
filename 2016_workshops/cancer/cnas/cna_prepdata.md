@@ -1,4 +1,9 @@
-# Lab Module 5 - Data Preparation
+---
+layout: post3
+title: Lab Module 5 - Data Preparation
+header1: Bioinformatics for Cancer Genomics 2016
+header2: Lab Module 5 - Data Preparation
+---
 
 ## Introduction
 
