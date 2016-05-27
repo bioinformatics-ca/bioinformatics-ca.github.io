@@ -382,7 +382,7 @@ We will be visualizing the seg file from the [METABRIC project](http://www.natur
 We can use a programming language like R to do further analyses on the results. A "CNA Data Analysis Package" has been provided for you to do the analysis. This package has been put on the server for you to access so let's first copy these files to your working directory:
 
 ~~~bash
-cp -r /home/ubuntu/CourseData/CG_data/Module5/cna_data_analysis_package
+cp -r /home/ubuntu/CourseData/CG_data/Module5/cna_data_analysis_package .
 ~~~
 
 Now let's open your RStudio instance by going to your web browser and entering:
@@ -394,10 +394,9 @@ http://cbwxx.dyndns.info:8080
 Where the xx is your student number. Once inside RStudio, go to File -> Open File and then find the `analyze_cna_results.Rmd` and open it. Now set the working directory:
 
 ~~~r
-setwd("~/workspace/Module5/cna_data_analysis_package
+setwd("~/workspace/Module5/cna_data_analysis_package")
 ~~~
 
 What this means is that we are setting the working directory to a certain location in the file system. This allows us to refer to file paths relatively. In practice, one shouldn't do this since it makes the code harder to transfer to others for reproducbility. But for the sake of this tutorial, we will set it for convenience. 
 
 Now follow the instructions in the RMarkdown to perform further analyses.
-
