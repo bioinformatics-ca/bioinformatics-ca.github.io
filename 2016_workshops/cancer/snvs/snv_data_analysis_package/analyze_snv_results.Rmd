@@ -121,6 +121,8 @@ strelkaDt.filtered %>%
 
 There appears to be quite a widespread of allelic ratios in the sample. The allelic ratio sitting on the lower end of the range may potentially be false positives.
 
+> Why don’t we see “humps” in the density distribution at 0.5 allelic ratio?
+
 ## Substitution Patterns
 
 Let's look at some of the substitution patterns:
@@ -266,6 +268,10 @@ museqDt.filtered %>%
   xlab("Trinucleotide Context") +
   ylab("Number of Mutations")
 ```
+
+Here we are plotting the number of mutations in each trinucleotide context for each substitution pattern.
+
+> There are 12 possible single base mutations (i.e. C->A, C->G, etc). Yet we show only 6 of them. Why is this?
 
 # R Session
 ***
