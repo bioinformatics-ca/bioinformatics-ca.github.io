@@ -314,13 +314,20 @@ Lab practical:
 
   * Lab Lecture
   * [Lab Module](/2016_workshops/cancer/cnas/cna_lab.html)
-  * Data Analysis Package
-  * [Software Installation](2016_workshops/cancer/cnas/cna_installation.html)
+  * [Data Analysis Package](/2016_workshops/cancer/cnas/cna_data_analysis_package)
+    + Contains the various files and Rmarkdown file that will be used to do further exploration and analysis on copy number data.
+  * [Software Installation](/2016_workshops/cancer/cnas/cna_installation.html)
     + This page contains information on how to install the different software used in the lab module.
-
   * [Data Preparation](/2016_workshops/cancer/cnas/cna_prepdata.html)
     + This page contains information on how the data was prepared to be used for lab module.
-  
+
+#### Data for Lab Practical
+
+* [METABRIC Seg File](/2016_workshops/cancer/cnas/segs/METABRIC_DatasetI997.seg)
+
+#### Plots for Lab Practical
+
+
 #### Links:
 
  * [PennCNV-Affy](http://penncnv.openbioinformatics.org/en/latest/user-guide/affy/): In-depth guide into pre-processing of Affymetrix 6.0 microarrays for OncoSNP
