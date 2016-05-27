@@ -312,8 +312,14 @@ Lecture:
   
 Lab practical: 
 
-* Lab Lecture
-* [Lab Module 5 - Copy Number Analysis](/2016_workshops/cancer/cnas/cna_lab.html)
+  * Lab Lecture
+  * [Lab Module](/2016_workshops/cancer/cnas/cna_lab.html)
+  * Data Analysis Package
+  * [Software Installation](2016_workshops/cancer/cnas/cna_installation.html)
+    + This page contains information on how to install the different software used in the lab module.
+
+  * [Data Preparation](2016_workshops/cancer/cnas/cna_prepdata.html)
+    + This page contains information on how the data was prepared to be used for lab module.
   
 #### Links:
 
@@ -331,8 +337,13 @@ Lab practical:
   *<font color="#827e9c">Sohrab Shah</font>*
   
   Lecture:
+
+  Lab practical: 
   
-  Lab practical:
+  * [Lab Lecture]()
+  * [Somatic Mutations Analysis](/2016_workshops/cancer/snvs/snv_lab.html)
+  * [Data Analysis Package](/2016_workshops/cancer/snvs/snv_data_analysis_package)
+  * [Data Preparation](/2016_workshops/cancer/snvs/prepdata.html)
   
 #### Links:
  * [Strelka](https://sites.google.com/site/strelkasomaticvariantcaller/)
