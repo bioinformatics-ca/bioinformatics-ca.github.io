@@ -1,4 +1,9 @@
-# Module 5 Somatic Mutations - Data Preparation
+---
+layout: post3
+title: Lab Module 6 - Data Preparation
+header1: Bioinformatics for Cancer Genomics 2016
+header2: Lab Module 6 - Data Preparation
+---
 
 ## Introduction
 
@@ -10,17 +15,17 @@ We will restrict our analysis to a 1 Mb region (7Mb and 8Mb) within chromosome 1
 
 Use `samtools` to create bam files containing only alignments within this region.  The argument `17:7000000-8000000` specifies the region, and `-b` specifies the output is bam (default output is sam format).
 
-```
+~~~bash
 mkdir data
 samtools view -b HCC1395/exome/HCC1395_exome_tumour.bam 17:7000000-8000000 \
     > data/HCC1395_exome_tumour.17.7MB-8MB.bam
 samtools view -b HCC1395/exome/HCC1395_exome_normal.bam 17:7000000-8000000 \
     > data/HCC1395_exome_normal.17.7MB-8MB.bam
-```
+~~~
 
 Create an index for each bam file.
 
-```
+~~~bash
 samtools index data/HCC1395_exome_tumour.17.7MB-8MB.bam
 samtools index data/HCC1395_exome_normal.17.7MB-8MB.bam
-```
+~~~
