@@ -77,7 +77,7 @@ GW6_DIR=$INSTALL_DIR/gw6
 APT_DIR=$INSTALL_DIR/apt-1.17.0-x86_64-intel-linux
 SNP6_CDF=$INSTALL_DIR/GenomeWideSNP_6.cdf
 ONCOSNP_DIR=/usr/local/oncosnp
-MCR_DIR=/home/ubuntu/CourseData/software/MATLAB/MCR/v82
+MCR_DIR=/usr/local/MATLAB/MATLAB_Compiler_Runtime/v82
 GC_DIR=/home/ubuntu/CourseData/CG_data/Module5/install/b37
 ~~~
 
@@ -141,7 +141,7 @@ $GW6_DIR/bin/normalize_affy_geno_cluster.pl $CLUSTER_FILE \
     -locfile $LOC_FILE -out results/array/gw6.lrr_baf.txt
 ~~~
 
-The BAF and LRR values for every sample in the batch will be placed into a single file. The next step will be split them into sample specific BAF and LRR files for downstream analyses (even though we only have one sample, we will still do this to follow a consistent workflow):
+The BAF and LRR values for every sample in the batch will be placed into a single file. The next step will be to split them into sample specific BAF and LRR files for downstream analyses (even though we only have one sample, we will still do this to follow a consistent workflow):
 
 ~~~bash
 perl scripts/penncnv/kcolumn.pl results/array/gw6.lrr_baf.txt split 2 -tab -head 3 \
@@ -204,11 +204,11 @@ $ONCOSNP_DIR/run_oncosnp.sh $MCR_DIR \
 
 Some important parameters to consider:
 
-* --tumour-file: Specify the location of where the BAF and LRR values are for the sample
-* --chr: Specify the chromosome you want to run on. In this example, we run only on chromosome 21 since it can take awhile for the whole genome. Don't specify this parameter for whole genome analysis.
-* --stroma: This parameter can be specified for normal content adjustment. As this is a cell-line, we did not set this.
-* --intratumor: This parameter can be specified for correcting intratumor heterogeneity. As this is a cell-line, we did not set this.
-* --normal-file: If you have a matching normal, you can specify it here. OncoSNP will then perform a paired analysis mode. As we have no matching normal here, we leave this parameter unspecified.
+* `--tumour-file`: Specify the location of where the BAF and LRR values are for the sample
+* `--chr`: Specify the chromosome you want to run on. In this example, we run only on chromosome 21 since it can take awhile for the whole genome. Don't specify this parameter for whole genome analysis.
+* `--stroma`: This parameter can be specified for normal content adjustment. As this is a cell-line, we did not set this.
+* `--intratumor`: This parameter can be specified for correcting intratumor heterogeneity. As this is a cell-line, we did not set this.
+* `--normal-file`: If you have a matching normal, you can specify it here. OncoSNP will then perform a paired analysis mode. As we have no matching normal here, we leave this parameter unspecified.
 
 The `&` character at the end of the above command sends the job to run in the background. Rather then print the progress of the job to screen, this command will send output of OncoSNP to a log file. We can monitor the progress of the program by examining this file.
 
