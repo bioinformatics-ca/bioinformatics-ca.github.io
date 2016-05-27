@@ -267,3 +267,9 @@ museqDt.filtered %>%
   ylab("Number of Mutations")
 ```
 
+# R Session
+***
+
+```{r}
+sessionInfo()
+```

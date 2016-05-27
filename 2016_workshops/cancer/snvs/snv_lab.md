@@ -48,7 +48,7 @@ SNPEFF_DIR=/usr/local/snpEff
 
 Summary of all the above environment commands (for copy and pasting convenience):
 
-~~~
+~~~bash
 MUTATIONSEQ_DIR=/usr/local/museq
 SNPEFF_DIR=/usr/local/snpEff
 ~~~
@@ -57,19 +57,19 @@ SNPEFF_DIR=/usr/local/snpEff
 
 We will be using the same exome data on the HCC1395 breast cancer cell line that was used in Module 5 (Copy Number Alterations). The tumour and normal bam files have been placed on the server. Create a link to the location of the bam files to allow us to access them quickly.
 
-~~~
+~~~bash
 ln -s /home/ubuntu/CourseData/CG_data/HCC1395
 ~~~
 
 Additionally, we will need the reference genome for the mutation calling. This has also been placed on the server. We shall create a link to this file for easy access:
 
-~~~
+~~~bash
 ln -s /home/ubuntu/CourseData/CG_data/ref_data
 ~~~
 
 We will restrict our analysis to a 1 Mb region (7Mb and 8Mb) within chromosome 17. These bam files along with their indices have been generated for you already (please see the data preparation page for details on how to generate these smaller bams):
 
-~~~
+~~~bash
 ls HCC1395/exome/HCC1395_exome*.17*
 ~~~
 
@@ -84,19 +84,19 @@ If you are unfamiliar with the sam/bam format, take some time to look at the ali
 
 The header information contains information about the reference genome and read groups (per read information about sample/flow cell/lane etc).
 
-~~~
+~~~bash
 samtools view -H HCC1395/exome/HCC1395_exome_tumour.17.7MB-8MB.bam | less -S
 ~~~
 
 The main contents of the file contain read alignments, tab separated, one line per alignment.
 
-~~~
+~~~bash
 samtools view HCC1395/exome/HCC1395_exome_tumour.17.7MB-8MB.bam | less -S
 ~~~
 
 Samtools will also calculate statistics about the reads and alignments.  Unfortunately this information is not cached, and thus this command will take considerable time on a regular sized bam.
 
-~~~
+~~~bash
 samtools flagstat HCC1395/exome/HCC1395_exome_tumour.17.7MB-8MB.bam
 ~~~
 
@@ -106,24 +106,24 @@ samtools flagstat HCC1395/exome/HCC1395_exome_tumour.17.7MB-8MB.bam
 
 We will first call mutations using Strelka. Create a local copy of the Strelka config file.  Strelka provides aligner specific config files for bwa, eland, and isaac.  Each file contains default configuration parameters that work well with the aligner.  The bam files we are working with were created using bwa, so we select that config file and make a local copy to make changes.
 
-~~~
+~~~bash
 mkdir config
 cp /usr/local/etc/strelka_config_bwa_default.ini config/strelka_config_bwa.ini
 ~~~
 
 Since we will be using exome data for this, we need to change the `isSkipDepthFilters` parameter in the strelka_config_bwa.ini file. Let's create a new config file for exome analysis:
 
-~~~
+~~~bash
 cp config/strelka_config_bwa.ini config/strelka_config_bwa_exome.ini
 ~~~
 
 Now let's edit the `config/strelka_config_bwa_exome.ini` and change the `isSkipDepthFilters = 0` to `isSkipDepthFilters = 1`.  We will use the text editor nano for this:
 
-~~~
+~~~bash
 nano config/strelka_config_bwa_exome.ini
 ~~~
 
-Please let us know if you have any issues editing the file. The reason why we do this is described on the [Strelka FAQ page](https://sites.google.com/site/strelkasomaticvariantcaller/home/faq):
+Once you've made the edit, you can exit nano by pressing `ctrl-x` then pressing `y` to save the changes. Please let us know if you have any issues editing the file. The reason why we do this is described on the [Strelka FAQ page](https://sites.google.com/site/strelkasomaticvariantcaller/home/faq):
 
 > The depth filter is designed to filter out all variants which are called above a multiple of the mean chromosome depth, the default configuration is set to filter variants with a depth greater than 3x the chromosomal mean. If you are using exome/targeted sequencing data, the depth filter should be turned off...
 >
@@ -203,7 +203,7 @@ Filtering on these results are left to the end-user. A threshold of 0.85 on PR (
 
 ## Converting the VCF format into a tabular format
 
-The VCF format is sometimes not useful for visualization and data exploration purposes which often requires the data to be in tabular format. We can convert from VCF format to tabular format using the extractField() function from SnpSift/SnpEff. Since each mutation caller has a different set of output values in the VCF file, the command needs be adjusted for the mutation caller.
+The VCF format is sometimes not useful for visualization and data exploration purposes which often requires the data to be in tabular format. We can convert from VCF format to tabular format using the `extractField()` function from SnpSift/SnpEff. Since each mutation caller has a different set of output values in the VCF file, the command needs be adjusted for the mutation caller.
 
 For example, to convert the Strelka VCF file into a tabular format:
 
@@ -225,12 +225,12 @@ The -e parameter specifies how to represent empty fields. In this case, the "." 
 
 A common step after prediction of SNVs is to visualize these mutations in IGV. Let's load these bam into IGV. Open IGV, then:
 
-1. Change the genome to hg19 (if it isn't already)
-1. File -> Load from URL 
+* Change the genome to hg19 (if it isn't already)
+* File -> Load from URL 
     + http://cbwxx.dyndns.info/Module6/HCC1395/exome/HCC1395_exome_tumour.17.7MB-8MB.bam
     + http://cbwxx.dyndns.info/Module6/HCC1395/exome/HCC1395_exome_normal.17.7MB-8MB.bam
 
-Where the xx is your student number. Once the tumour and normal bam have been loaded into IGV, we can investigate a few predicted positions in IGV:
+**Where the xx is your student number**. Once the tumour and normal bam have been loaded into IGV, we can investigate a few predicted positions in IGV:
 
 * 17:7491818
 * 17:7578406
@@ -244,24 +244,24 @@ Manually inspecting these predicted SNVs in IGV is a good way to verify the pred
 
 While IGV is good for visualizing individual mutations, looking at more global characteristics would require loading the data into an analysis language like R:
 
-We will use exome-wide SNV predictions for Strelka and MutationSeq for these analyses. These processed tabular text files along with the `analyzeSNVResults.Rmd` RMarkdown file have already been provided for you. Let's first copy these files to their working directory:
+We will use exome-wide SNV predictions for Strelka and MutationSeq for these analyses. These processed tabular text files along with the `analyze_snv_results.Rmd` RMarkdown file have already been provided for you. Let's first copy these files to their working directory:
 
-~~~
+~~~bash
 cp -r /home/ubuntu/CourseData/CG_data/Module6/snv_data_analysis_package .
 ~~~
 
 Now let's open your RStudio instance by going to your web browser and entering:
 
-```
+~~~
 http://cbwxx.dyndns.info:8080
-```
+~~~
 
-Where the xx is your student number. Once inside RStudio, go to File -> Open File and then find the analyze_snv_results.Rmd and open it. Now set the working directory:
+**Where the xx is your student number**. Once inside RStudio, go to File -> Open File and then find the `analyze_snv_results.Rmd` and open it. Now set the working directory:
 
 ~~~r
 setwd("~/workspace/Module6/snv_data_analysis_package/")
 ~~~
 
-What this means is that we are setting the working directory to a certain location in the file system. This allows us to refer to file paths relatively. In practice, one shouldn't do this since it makes the code harder to transfer to others for reproducbility. But for the sake of this tutorial, we will set it for convenience. 
+What this means is that we are setting the working directory to a certain location in the file system. This allows us to refer to file paths relatively. **In practice, one shouldn't do this since it makes the code harder to transfer to others for reproducbility.** But for the sake of this tutorial, we will set it for convenience. 
 
 Now follow the instructions in the RMarkdown to perform further analyses.
