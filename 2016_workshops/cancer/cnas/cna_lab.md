@@ -375,7 +375,7 @@ Where the `targetedSequence` parameter specifies the capture space. If you are u
 
 Both OncoSNP and TITAN will produce sample-specific chromosome plots of the copy number data. If you are comparing across multiple samples, you can use the .seg files for this. This format for copy number has become a de facto standard format for reporting copy number results. You can go to the [IGV website](https://www.broadinstitute.org/igv/SEG) for more specific details regarding the SEG format.
 
-We will be visualizing the seg file from the [METABRIC project](http://www.nature.com/nature/journal/v486/n7403/full/nature10983.html) which can be [downloaded from the wiki](2016_workshops/cancer/cnas/segs/METABRIC_DatasetI997.seg) and opened in IGV for visualizing. Make sure to change the genome to hg18 as the data was generated using hg18.
+We will be visualizing the seg file from the [METABRIC project](http://www.nature.com/nature/journal/v486/n7403/full/nature10983.html) which can be [downloaded from the wiki](segs/METABRIC_DatasetI997.seg) and opened in IGV for visualizing. Make sure to change the genome to hg18 as the data was generated using hg18.
 
 ### Analyzing the CNA Results in R
 
