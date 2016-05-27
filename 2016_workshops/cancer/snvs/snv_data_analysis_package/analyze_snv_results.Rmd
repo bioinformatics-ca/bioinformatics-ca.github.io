@@ -1,0 +1,269 @@
+---
+title: "Lab Module 6 - Analyze SNV Data"
+author: "Fong Chun Chan (fongchunchan@gmail.com; @fongchunchan)"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+---
+
+# Introduction
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+Inside of RStudio when you click the **Knit** button in the document, it will be generate an html includes both content as well as the output of any embedded R code chunks within the document. 
+
+We will be using this R Markdown document to explore the SNV data from HCC1395 in more detail. First let's load some packages that are needed:
+
+```{r setup, message = FALSE}
+library("data.table")
+library("ggplot2")
+library("plyr")
+library("dplyr")
+library("stringr")
+```
+
+# Strelka Analysis
+
+Let's start by loading the Strelka results. Some pre-processing is done on the tabular results to make them easier to work with. See if you can understand what is happening:
+
+```{r warning = FALSE}
+strelkaDt <- fread("HCC1395.strelka.full.txt", header = T)
+
+# rename columns so easier to reference later on
+setnames(strelkaDt, "#CHROM", "CHROM")
+setnames(strelkaDt, colnames(strelkaDt), gsub("GEN\\[0\\]", "normal", colnames(strelkaDt)))
+setnames(strelkaDt, colnames(strelkaDt), gsub("GEN\\[1\\]", "tumour", colnames(strelkaDt)))
+
+# convert CHROM variable in an ordered factor
+strelkaDt <- strelkaDt[, CHROM := factor(CHROM, levels = c(1:22, "X"))]
+
+# Converting QSS scores to probability
+strelkaDt <- strelkaDt[, QSS_prob := round(1-10^(-QSS_NT/10), 3)]
+
+# Generating allelic ratios 
+# Strelka returns the number of reads in tier1 and tier2 for each base
+# We need to parse this information to retrieve the tumour read depth for the 
+# most probable variant allele at this position
+tumour.AU.tier1 <- str_split(strelkaDt[, tumour.AU], ",") %>%
+  lapply("[[", 1) %>%
+  unlist %>%
+  as.numeric
+
+tumour.CU.tier1 <- str_split(strelkaDt[, tumour.CU], ",") %>%
+  lapply("[[", 1) %>%
+  unlist %>%
+  as.numeric
+
+tumour.GU.tier1 <- str_split(strelkaDt[, tumour.GU], ",") %>%
+  lapply("[[", 1) %>%
+  unlist %>%
+  as.numeric
+
+tumour.TU.tier1 <- str_split(strelkaDt[, tumour.TU], ",") %>%
+  lapply("[[", 1) %>%
+  unlist %>%
+  as.numeric
+
+strelkaDt <- strelkaDt[, tumour.AU := tumour.AU.tier1]
+strelkaDt <- strelkaDt[, tumour.CU := tumour.CU.tier1]
+strelkaDt <- strelkaDt[, tumour.GU := tumour.GU.tier1]
+strelkaDt <- strelkaDt[, tumour.TU := tumour.TU.tier1]
+strelkaDt <- strelkaDt[ALT == "A", tumour.AR := tumour.AU / tumour.DP]
+strelkaDt <- strelkaDt[ALT == "C", tumour.AR := tumour.CU / tumour.DP]
+strelkaDt <- strelkaDt[ALT == "G", tumour.AR := tumour.GU / tumour.DP]
+strelkaDt <- strelkaDt[ALT == "T", tumour.AR := tumour.TU / tumour.DP]
+
+# apply the following filters:
+# 1) only consider autosome chromosomes
+# 2) remove outlier high-coverage positions
+# 3) multiple variant allele positions are ignored for simplicity
+strelkaDt.filtered <- strelkaDt %>%
+  filter(CHROM %in% c(1:22, "X")) %>%
+  filter(tumour.DP < 200) %>%
+  filter(ALT %in% c("A", "C", "T", "G")) 
+```
+
+## Mutational Load
+
+Let's look at the mutational load (i.e. number of mutations) across the genome.
+
+```{r}
+strelkaDt.filtered %>%
+  ggplot(aes(x = CHROM)) +
+  geom_bar() +
+  xlab("Chromosome") + 
+  ylab("Number of Mutations") +
+  ggtitle("Mutational Load")
+```
+
+It seems that chromosomes 6, 16, and X appear to harbour the largest number of SNVs across all chromosomes.  
+
+## Allelic Ratio
+
+Let's take a look at the allelic ratio of these mutations now.
+
+```{r}
+strelkaDt.filtered %>%
+  ggplot(aes(x = tumour.DP, y = tumour.AR)) +
+  geom_point() +
+  xlab("Tumour Read Depth") +
+  ylab("Tumour Allelic Ratio")
+
+strelkaDt.filtered %>%
+  ggplot(aes(x = tumour.AR)) +
+  geom_density() +
+  xlab("Tumour Allelic Ratio") +
+  ylab("Density")
+```
+
+There appears to be quite a widespread of allelic ratios in the sample. The allelic ratio sitting on the lower end of the range may potentially be false positives.
+
+## Substitution Patterns
+
+Let's look at some of the substitution patterns:
+
+```{r, fig.width = 10}
+strelkaDt.filtered %>%
+  ggplot(aes(x = REF, fill = REF)) +
+  geom_bar() + 
+  xlab("Reference Base") + 
+  ylab("Number of Mutations") +
+  ggtitle("Number of Mutations Affecting Reference Base")
+```
+
+```{r, fig.width = 10}
+strelkaDt.filtered %>%
+  mutate(subPattern = str_c(REF, "->", ALT)) %>%
+  ggplot(aes(x = subPattern, fill = REF)) +
+  geom_bar() + 
+  xlab("Substitution Pattern") + 
+  ylab("Number of Mutations") +
+  ggtitle("Substitution Pattern Distribution")
+```
+
+These plots suggest that mutations affecting the reference base G occur the most. Specifically, G-\>T appears to the most prevalent mutation pattern. 
+
+Now let's take a look at these substitution patterns across the different chromosomes.
+
+```{r, fig.width = 12, fig.height = 8}
+strelkaDt.filtered %>%
+  mutate(subPattern = str_c(REF, "->", ALT)) %>%
+  ggplot(aes(x = subPattern, fill = REF)) +
+  geom_bar() + 
+  facet_wrap(~ CHROM) +
+  theme( axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
+  xlab("Substitution Pattern") + 
+  ylab("Number of Mutations") +
+  ggtitle("Substitution Pattern Distribution Across Each Chromosome")
+```
+
+# MutationSeq Analysis
+
+Let's analyze the MutationSeq results now. Load the MutationSeq predicted SNVs. These have been filtered for `PR > 0.85`.
+
+```{r}
+museqDt <- fread("HCC1395.museq.full.txt", header = TRUE)
+setnames(museqDt, "#CHROM", "CHROM")
+museqDt <- museqDt[, CHROM := factor(CHROM, levels = c(1:22, "X"))]
+museqDt <- museqDt %>%
+  mutate(TA.AR = TA / (TR + TA),
+         T.DP = TR + TA )
+
+museqDt.filtered <- museqDt %>%
+  filter(CHROM %in% c(1:22, "X")) %>%
+  filter(T.DP <= 200) %>%
+  filter(ALT %in% c("A", "C", "T", "G")) 
+```
+
+## Mutational Load
+
+```{r}
+museqDt.filtered %>%
+  ggplot(aes(x = CHROM)) +
+  geom_bar() +
+  xlab("Chromosome") + 
+  ylab("Number of Mutations") +
+  ggtitle("Mutational Load")
+```
+
+The mutational load across the different chromosomes is very similar to what we saw from the Strelka results.
+
+## Allelic Ratio
+
+Let's take a look at the allelic ratio of these mutations now.
+
+```{r}
+museqDt.filtered %>%
+  ggplot(aes(x = T.DP, y = TA.AR)) +
+  geom_point() +
+  xlab("Tumour Read Depth") +
+  ylab("Tumour Allelic Ratio")
+
+museqDt.filtered %>%
+  ggplot(aes(x = TA.AR)) +
+  geom_density() +
+  xlab("Tumour Allelic Ratio") +
+  ylab("Density")
+```
+
+Again very similar to what we saw from the Strelka results.
+
+## Substitution Patterns
+
+Let's look at some of the substitution patterns:
+
+```{r, fig.width = 10}
+museqDt.filtered %>%
+  ggplot(aes(x = REF, fill = REF)) +
+  geom_bar() + 
+  xlab("Reference Base") + 
+  ylab("Number of Mutations") +
+  ggtitle("Number of Mutations Affecting Reference Base")
+```
+
+```{r, fig.width = 10}
+museqDt.filtered %>%
+  mutate(subPattern = str_c(REF, "->", ALT)) %>%
+  ggplot(aes(x = subPattern, fill = REF)) +
+  geom_bar() + 
+  xlab("Substitution Pattern") + 
+  ylab("Number of Mutations") +
+  ggtitle("Substitution Pattern Distribution")
+```
+
+Similar to the Strelka results, we see that G-> mutations appear to be most common from the MutationSeq predictions. However, the most prevalent of these mutations is G->A mutations and not G->T as predicted by Strelka.
+
+Let's impose these substitution patterns across the different chromosomes:
+
+```{r, fig.width = 10, fig.height = 8}
+museqDt.filtered %>%
+  mutate(subPattern = str_c(REF, "->", ALT)) %>%
+  ggplot(aes(x = subPattern, fill = REF)) +
+  geom_bar() + 
+  facet_wrap(~ CHROM) +
+  theme( axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
+  xlab("Substitution Pattern") + 
+  ylab("Number of Mutations") +
+  ggtitle("Substitution Pattern Distribution Across Each Chromosome")
+```
+
+MutationSeq also returns the trinucleotide context of each mutation. We can plot such data:
+
+```{r, fig.width = 10}
+TC.levels <- museqDt.filtered %>%
+  arrange(REF, ALT, TC) %>% 
+  select(TC) %>%
+  distinct %>%
+  .$TC
+
+museqDt.filtered %>%
+  ggplot(aes(x = factor(TC, levels = TC.levels), fill = REF)) +
+  geom_bar() +
+  theme( axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
+  xlab("Trinucleotide Context") +
+  ylab("Number of Mutations")
+```
+
