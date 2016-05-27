@@ -254,10 +254,10 @@ less -S results/oncosnp/HCC1395.qc
 
 | LogRRatioShift | NormalContent | Copy Number (Average) | Log-likelihood | OutlierRate | LogRRatioStd | BAlleleFreqStd | PloidyNo |
 |----------------|---------------|-----------------------|----------------|-------------|--------------|----------------|----------|
-| <nowiki>-</nowiki>0.1710        | 0.0           | 2.0                   | 1156.17639     | 0.010       | 0.237        | 0.041          | 1        |
-| <nowiki>-</nowiki>0.1099        | 0.0           | 1.9                   | 1098.29187     | 0.010       | 0.237        | 0.041          | 2        |
+| -0.1710        | 0.0           | 2.0                   | 1156.17639     | 0.010       | 0.237        | 0.041          | 1        |
+| -0.1099        | 0.0           | 1.9                   | 1098.29187     | 0.010       | 0.237        | 0.041          | 2        |
 
-Next is .cnvs file which contains the smoothed segments with there copy number prediction.
+Next is .cnvs file which contains the smoothed segments with there copy number prediction. One column of particular interest is the "Tumour State" column. This is an integer >= 1 which represents the most likely copy number state for that segment.
 
 ~~~bash
 less -S results/oncosnp/HCC1395.cnvs
@@ -272,17 +272,12 @@ less -S results/oncosnp/HCC1395.cnvs
 | 21         | 43993615      | 44503173    | 2          | 2   | 4    | 56.394753    | 200     | 0.0            | 21          | 1        | 2               | 0               |
 | 21         | 14369207      | 14775085    | 3          | 0   | 5    | 7.201958     | 24      | 0.0            | 4           | 1        | 2               | 1               |
 
-The last file we will look at is the .cnv file. This is essentially a more informative version of the .cnvs file. One column of particular interest is the "Tumour State" column. This is an integer >= 1 which represents the most likely state of the HMM for that segment.
-
-~~~bash
-less -S results/oncosnp/HCC1395.cnvs
-~~~
-
-The final interesting file that OncoSNP produces is the plots HCC1395.\*.ps.gz.  Download this file from:
+The final interesting file that OncoSNP produces is the plots `HCC1395.*.ps.gz`.  Download this file from:
 
 ~~~bash
 http://cbwxx.dyndns.info/Module5/results/oncosnp
 ~~~
+
 Try to open up and visualize the chromosome plots from OncoSNP. If you have trouble opening these files, then you can also download them from the wiki.
 
 ## Analysis Of CNAs using Sequencing Data
@@ -303,14 +298,14 @@ ln -s /home/ubuntu/CourseData/CG_data/HCC1395
 
 We will be using TITAN, available as a R Bioconductor package (TitanCNA), for the copy number analysis. The program has the ability to perform the normalization, extraction of LRR/BAF, and calling of CNAs. But before we can use TITAN, we need a few input files:
 
-1. Tumour/Normal read count data
-	* Total number of reads within a bin size (default 1000) across the genome
-2. Tumour allele counts for normal heterozygous positions
-	* Number of reads that support the different alleles at the heterozygous positions
-3. Genome reference mappability file
-4. Genome reference GC content file
+* Tumour/Normal read count data
+  + Total number of reads within a bin size (default 1000) across the genome
+* Tumour allele counts for normal heterozygous positions
+  + Number of reads that support the different alleles at the heterozygous positions
+* Genome reference mappability file
+* Genome reference GC content file
 
-Generating these files can take a bit of time. So for this lab, they have been already been generated for you and can be copied for running (Please see the "Data Preparation" page for details on how these files were generated).
+Generating these files can take a bit of time. So for this lab, they have been already been generated for you and can be copied for running (Please see the "[Data Preparation](cna_prepdata.html)" page for details on how these files were generated).
 
 Copy the tumour and normal read count data:
 
