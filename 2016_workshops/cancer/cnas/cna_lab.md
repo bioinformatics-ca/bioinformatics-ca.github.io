@@ -375,10 +375,29 @@ Where the `targetedSequence` parameter specifies the capture space. If you are u
 
 Both OncoSNP and TITAN will produce sample-specific chromosome plots of the copy number data. If you are comparing across multiple samples, you can use the .seg files for this. This format for copy number has become a de facto standard format for reporting copy number results. You can go to the [IGV website](https://www.broadinstitute.org/igv/SEG) for more specific details regarding the SEG format.
 
-The seg file from the METABRIC can be downloaded from the wiki and opened in IGV for visualizing. Make sure to change the genome to hg18 as the data was generated using hg18.
+We will be visualizing the seg file from the [METABRIC project](http://www.nature.com/nature/journal/v486/n7403/full/nature10983.html) which can be [downloaded from the wiki](2016_workshops/cancer/cnas/segs/METABRIC_DatasetI997.seg) and opened in IGV for visualizing. Make sure to change the genome to hg18 as the data was generated using hg18.
 
 ### Analyzing the CNA Results in R
 
-We can use a programming language like R to do further analyses on the results. A "CNA Data Analysis Package" has been provided for you to do the analysis. The files 
+We can use a programming language like R to do further analyses on the results. A "CNA Data Analysis Package" has been provided for you to do the analysis. This package has been put on the server for you to access so let's first copy these files to your working directory:
 
-from the wiki now. Extract it, and open the analyze-CNA.Rmd file in RStudio.
+~~~bash
+cp -r /home/ubuntu/CourseData/CG_data/Module5/cna_data_analysis_package
+~~~
+
+Now let's open your RStudio instance by going to your web browser and entering:
+
+```
+http://cbwxx.dyndns.info:8080
+```
+
+Where the xx is your student number. Once inside RStudio, go to File -> Open File and then find the `analyze_cna_results.Rmd` and open it. Now set the working directory:
+
+~~~r
+setwd("~/workspace/Module5/cna_data_analysis_package
+~~~
+
+What this means is that we are setting the working directory to a certain location in the file system. This allows us to refer to file paths relatively. In practice, one shouldn't do this since it makes the code harder to transfer to others for reproducbility. But for the sake of this tutorial, we will set it for convenience. 
+
+Now follow the instructions in the RMarkdown to perform further analyses.
+
