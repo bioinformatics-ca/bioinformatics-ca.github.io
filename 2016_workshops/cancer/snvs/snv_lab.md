@@ -256,4 +256,12 @@ Now let's open your RStudio instance by going to your web browser and entering:
 http://cbwxx.dyndns.info:8080
 ```
 
-Where the xx is your student number. Once inside RStudio, go to File -> Open File and then find the analyze_snv_results.Rmd and open it. Now follow the instructions in the RMarkdown to perform further analyses.
+Where the xx is your student number. Once inside RStudio, go to File -> Open File and then find the analyze_snv_results.Rmd and open it. Now set the working directory:
+
+~~~r
+setwd("~/workspace/Module6/snv_data_analysis_package/")
+~~~
+
+What this means is that we are setting the working directory to a certain location in the file system. This allows us to refer to file paths relatively. In practice, one shouldn't do this since it makes the code harder to transfer to others for reproducbility. But for the sake of this tutorial, we will set it for convenience. 
+
+Now follow the instructions in the RMarkdown to perform further analyses.
