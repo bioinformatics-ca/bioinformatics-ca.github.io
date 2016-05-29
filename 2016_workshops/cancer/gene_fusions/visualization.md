@@ -143,7 +143,7 @@ colnames(data)
 
 Many features and annotations are provided.  We will primarily be intersted in the chromosome, strand, start and end annotations, and `cluster_id` which is the unique identifier assigned to each prediction.
 
-We will concentrate on the XXX fusion.  Filter the data for this fusion.
+We will concentrate on the EIF3K-CYP39A1 fusion.  Filter the data for this fusion.
 
 
 ```r
@@ -306,9 +306,10 @@ plotTracks(list(itrack, gtrack, biomTrack, fusionTrack), from = plot.start, to =
 
 It is also possible to plot read alignments and coverage directly from a bam file using the AlignmentsTrack.  The bam file should ideally have ucsc chromosome names to have the optimal compatibility with `GViz`.  Set the `sizes` argument so that the alignments track doesnt take over the entire plot.
 
-
 ```r
-alTrack <- AlignmentsTrack("/Users/amcphers/Projects/cbw_tutorial/Aligned.sortedByCoord.out.bam",
+download.file("http://cbwmain.dyndns.info/Module4/bams/genes/HCC1395_EIF3K.bam", "HCC1395_EIF3K.bam")
+download.file("http://cbwmain.dyndns.info/Module4/bams/genes/HCC1395_EIF3K.bam.bai", "HCC1395_EIF3K.bam.bai")
+alTrack <- AlignmentsTrack("HCC1395_EIF3K.bam",
   isPaired = TRUE, type = "coverage")
 
 plotTracks(list(itrack, gtrack, alTrack, biomTrack, fusionTrack),
@@ -325,7 +326,6 @@ Try other _types_ of alignment plotting, by setting the `type` argument to "cove
 We will visualize the fusion break end using a highlight track overlayed on the fusion track.
 
 Create the highlight track starting and ending at the fusion break end.  Apply to the fusion track.
-
 
 ```r
 brkendTrack <- HighlightTrack(trackList = list(fusionTrack),
@@ -375,7 +375,10 @@ brkendTrack <- HighlightTrack(trackList = list(fusionTrack),
   end = fusion$genomic_break_pos2,
   inBackground = FALSE, col = "darkred", fill = NA)
 
-alTrack <- AlignmentsTrack("/Users/amcphers/Projects/cbw_tutorial/Aligned.sortedByCoord.out.bam",
+download.file("http://cbwmain.dyndns.info/Module4/bams/genes/HCC1395_CYP39A1.bam", "HCC1395_CYP39A1.bam")
+download.file("http://cbwmain.dyndns.info/Module4/bams/genes/HCC1395_CYP39A1.bam.bai", "HCC1395_CYP39A1.bam.bai")
+
+alTrack <- AlignmentsTrack("HCC1395_CYP39A1.bam",
   isPaired = TRUE, type = "coverage")
 
 plot.start = min(fusionexons2@ranges@start) - 2000
