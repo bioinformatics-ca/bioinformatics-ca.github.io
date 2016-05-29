@@ -92,7 +92,7 @@ We will be working with predictions from deFuse.  The output of deFuse is a tab 
 
 
 ```r
-data = read.table("/Users/amcphers/Projects/cbw_tutorial/gene_fusions/data/HCC1395/defuse/results.filtered.tsv", sep="\t", header=T, stringsAsFactors=F)
+data = read.table("http://cbwmain.dyndns.info/Module4/cbw_tutorial/data/HCC1395/defuse/results.filtered.tsv", sep="\t", header=T, stringsAsFactors=F)
 ```
 
 Use the `colnames` function to take a look at the data provided by deFuse.
@@ -515,7 +515,6 @@ Create a `GRanges` object for the fusions.  To do this, we must first create a G
 First step, create a `GRanges` object of all the data, using the `c()` function to concatenate chromosome, strand and position.  Add the `mate` metadata field to represent the end of the fusion for each entry in the `GRanges` object.  
 
 > Important: you must provide a `SeqInfo` object as `ggbio` requires information about the chromosome lengths 
-
 
 ```r
 fusion_ends = GRanges(
