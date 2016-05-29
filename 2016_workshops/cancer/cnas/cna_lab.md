@@ -1,8 +1,8 @@
 ---
 layout: post3
-title: Lab Module 5 - Copy Number Analysis
+title: Lab Module 5 - Copy Number Alterations
 header1: Bioinformatics for Cancer Genomics 2016
-header2: Lab Module 5 - Copy Number Analysis
+header2: Lab Module 5 - Copy Number Alterations
 ---
 
 ## Setup
