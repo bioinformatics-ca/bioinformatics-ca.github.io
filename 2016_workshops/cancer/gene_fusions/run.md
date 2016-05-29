@@ -58,6 +58,10 @@ export PATH="/home/ubuntu/CourseData/CG_data/Module4/anaconda/bin:$PATH"
 
 
 
+# Reference Genome
+
+We will be using a modified reference genome comprising a single chromosome to allow for quicker running times.
+
 ## Environment setup
 
 Create variables for the reference genome and gene models.
@@ -158,7 +162,7 @@ chimerascan_html_table.py --read-throughs \
 You can view the resulting html report at the following url in your browser, where you need to replace `#` with your instance id.
 
 ~~~
-http://cbw#.dyndns.info/Module4/analysis/chimerascan/HCC1395_downsampled/chimeras.html
+http://cbw#.dyndns.info/Module4/analysis/chimerascan/HCC1395/chimeras.html
 ~~~
 
 
