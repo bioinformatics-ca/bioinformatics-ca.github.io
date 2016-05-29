@@ -17,15 +17,23 @@ mkdir /mnt/workspace/Module4/
 cd /mnt/workspace/Module4/
 ~~~
 
-Gene fusion prediction tools have been installed on the instance, create
-links to the installed binaries, libraries, and reference genome data.
+All content for this tutorial is located in a bitbucket repo at
+`https://dranew@bitbucket.org/dranew/cbw_tutorial.git`.  Some of the data, scripts and config files from this repo will be used in the tutorial.  Link the repo directory to your workspace.
 
 ~~~ bash
-ln -s /media/cbwdata/CG_data/Module4/tutorial_data/bin
-ln -s /media/cbwdata/CG_data/Module4/tutorial_data/lib/
-ln -s /media/cbwdata/CG_data/Module4/tutorial_data/packages
-ln -s /media/cbwdata/CG_data/Module4/tutorial_data/refdata
-ln -s /media/cbwdata/CG_data/Module4/tutorial_data/share
+ln -s /media/cbwdata/CG_data/Module4/cbw_tutorial
+~~~
+
+The reference genomes have been indexed and fusion caller specific setup scripts have been run for you.  Instructions for your reference are available in the install section of the tutorial.  Link the ref data to your workspace.
+
+~~~ bash
+ln -s /media/cbwdata/CG_data/Module4/refdata
+~~~
+
+Sample data has been prepared for you, link to your workspace.
+
+~~~ bash
+ln -s /media/cbwdata/CG_data/Module4/sampledata
 ~~~
 
 Set the `$TUTORIAL_HOME` environment variable so subsequent commands know the 
@@ -42,88 +50,11 @@ TUTORIAL_HOME=/mnt/workspace/Module4
 For this tutorial, we now assume the environment variable `$TUTORIAL_HOME`
 has been set to an existing directory to which the user has write access.
 
-Add tutorial binaries to the path.
+All binaries used in this tutorial will be installed using [`conda`](https://www.continuum.io/downloads).  Modify the `PATH` environment variable to point to binaries in the anaconda installation.
 
-~~~ bash
-export PATH=$TUTORIAL_HOME/bin:$PATH
 ~~~
-
-Create a variable pointing to the directory of the picard tools install.
-
-~~~ bash
-PICARD_DIR=$TUTORIAL_HOME/packages/picard-tools-1.130/
+export PATH="/home/ubuntu/CourseData/CG_data/Module4/anaconda/bin:$PATH"
 ~~~
-
-Create a variable pointing to the directory of the igvtools install.
-
-~~~ bash
-IGVTOOLS_DIR=$TUTORIAL_HOME/packages/IGVTools/
-~~~
-
-
-
-## Install additional libraries
-
-### R ada for deFuse
-
-Install the additional R package 'ada' locally.
-
-~~~ bash
-mkdir /mnt/workspace/Module4/rlib/
-
-Rscript -e "install.packages('ada', \
-	repos='http://cran.us.r-project.org', \
-	lib='/mnt/workspace/Module4/rlib/')"
-~~~
-
-Add the local R library path to the `$R_LIBS_USER` environment variable.
-Use `export` so that it is available to subprocesses, in particular the
-`R` subprocess.
-
-~~~ bash
-export R_LIBS_USER=/mnt/workspace/Module4/rlib/
-~~~
-
-### `Set::IntervalTree` for STAR-Fusion
-
-Install the `Set::IntervalTree` perl module required by star-fusion.
-
-~~~ bash
-mkdir $TUTORIAL_HOME/perlpackages
-cd $TUTORIAL_HOME/perlpackages
-
-git clone https://github.com/amcpherson/Set-IntervalTree.git
-cd Set-IntervalTree
-
-mkdir $TUTORIAL_HOME/perllib
-perl Makefile.PL PREFIX=$TUTORIAL_HOME/perllib LIB=$TUTORIAL_HOME/perllib
-make
-make install
-~~~
-
-Add the local perl library path to the `$PERL5LIB` environment variable.
-Use `export` so that it is available to perl subprocesses.
-
-~~~ bash
-export PERL5LIB=$PERL5LIB:$TUTORIAL_HOME/perllib
-~~~
-
-### Python `jinja2` for chimerascan
-
-First install the `jinja2` python package locally.
-
-~~~ bash
-pip install jinja2 -t /mnt/workspace/Module4/pythonlib
-~~~
-
-Add the install directory to the python path environment variable so
-that python can find the package.
-
-~~~ bash
-export PYTHONPATH=$PYTHONPATH:$TUTORIAL_HOME/pythonlib
-~~~
-
-
 
 
 
@@ -132,7 +63,7 @@ export PYTHONPATH=$PYTHONPATH:$TUTORIAL_HOME/pythonlib
 Create variables for the reference genome and gene models.
 
 ~~~ bash
-TUTORIAL_CHROMOSOME=1
+TUTORIAL_CHROMOSOME=2
 ENSEMBL_GTF_FILENAME=$TUTORIAL_HOME/refdata/Homo_sapiens.GRCh37.75.gtf
 GENCODE_GTF_FILENAME=$TUTORIAL_HOME/refdata/gencode.v19.annotation.gtf
 ENSEMBL_GENOME_FILENAME=$TUTORIAL_HOME/refdata/Homo_sapiens.GRCh37.75.dna.chromosome.$TUTORIAL_CHROMOSOME.fa
@@ -148,6 +79,11 @@ GMAP_REF_ID=chr$TUTORIAL_CHROMOSOME
 GMAP_INDEX_DIR=$TUTORIAL_HOME/refdata/gmap/
 ~~~
 
+For STAR, set the directory for the indices.
+
+~~~ bash
+STAR_GENOME_INDEX=$TUTORIAL_HOME/refdata/star/
+~~~
 
 
 # HCC1395 sample data
@@ -189,12 +125,6 @@ trinity: 12 minutes
 
 ## Environment setup
 
-Add local library to python path
-
-~~~ bash
-export PYTHONPATH=$PYTHONPATH:$TUTORIAL_HOME/lib/python2.7/site-packages
-~~~
-
 Set variable for index directory.
 
 ~~~ bash
@@ -210,7 +140,7 @@ the sample specific output directory
 
 ~~~ bash
 mkdir -p $TUTORIAL_HOME/analysis/chimerascan/$SAMPLE_ID/
-python $TUTORIAL_HOME/bin/chimerascan_run.py -p 4 \
+chimerascan_run.py -p 4 \
     $CHIMERASCAN_INDEX \
     $SAMPLE_FASTQ_1 $SAMPLE_FASTQ_2 \
     $TUTORIAL_HOME/analysis/chimerascan/$SAMPLE_ID/
@@ -220,9 +150,15 @@ After chimerascan has completed we can run an additional script to create an
 html output to browse the results.
 
 ~~~ bash
-python $TUTORIAL_HOME/bin/chimerascan_html_table.py --read-throughs \
-	-o $TUTORIAL_HOME/analysis/chimerascan/$SAMPLE_ID/chimeras.html \
-	$TUTORIAL_HOME/analysis/chimerascan/$SAMPLE_ID/chimeras.bedpe
+chimerascan_html_table.py --read-throughs \
+    -o $TUTORIAL_HOME/analysis/chimerascan/$SAMPLE_ID/chimeras.html \
+    $TUTORIAL_HOME/analysis/chimerascan/$SAMPLE_ID/chimeras.bedpe
+~~~
+
+You can view the resulting html report at the following url in your browser, where you need to replace `#` with your instance id.
+
+~~~
+http://cbw#.dyndns.info/Module4/analysis/chimerascan/HCC1395_downsampled/chimeras.html
 ~~~
 
 
@@ -234,10 +170,8 @@ python $TUTORIAL_HOME/bin/chimerascan_html_table.py --read-throughs \
 Set variable for the config filename and the two scripts.
 
 ~~~ bash
-DEFUSE_CONFIG=$TUTORIAL_HOME/refdata/defuse/config.txt
-CREATEREF_SCRIPT=$TUTORIAL_HOME/packages/defuse/scripts/create_reference_dataset.pl
-DEFUSE_SCRIPT=$TUTORIAL_HOME/packages/defuse/scripts/defuse.pl
-DEFUSE_SCRIPT_DIR=$TUTORIAL_HOME/packages/defuse/scripts/
+DEFUSE_CONFIG=$TUTORIAL_HOME/cbw_tutorial/config/defuse_chr1.txt
+DEFUSE_REF_DATA=$TUTORIAL_HOME/refdata/defuse/
 ~~~
 
 
@@ -251,11 +185,22 @@ and the configuration filename.
 ~~~ bash
 mkdir -p $TUTORIAL_HOME/analysis/defuse/$SAMPLE_ID/
 
-perl $DEFUSE_SCRIPT \
-	-c $DEFUSE_CONFIG \
-	-1 $SAMPLE_FASTQ_1 \
-	-2 $SAMPLE_FASTQ_2 \
-	-o $TUTORIAL_HOME/analysis/defuse/$SAMPLE_ID/
+defuse_run.pl \
+    -c $DEFUSE_CONFIG \
+    -d $DEFUSE_REF_DATA \
+    -1 $SAMPLE_FASTQ_1 \
+    -2 $SAMPLE_FASTQ_2 \
+    -o $TUTORIAL_HOME/analysis/defuse/$SAMPLE_ID/
+~~~
+
+The results are output as a table in TSV format at `$TUTORIAL_HOME/analysis/defuse/$SAMPLE_ID/results.filtered.tsv`.  They can be viewed in R or MS Excel.  To view the read evidence for a specific fuion, use the `defuse_get_reads.pl` script.
+
+~~~
+defuse_get_reads.pl \
+    -c $DEFUSE_CONFIG \
+    -d $DEFUSE_REF_DATA \
+    -o $TUTORIAL_HOME/analysis/defuse/$SAMPLE_ID/ \
+    -i 20
 ~~~
 
 
@@ -267,12 +212,7 @@ Specify the directory in which the reference genome data will be stored.
 
 ~~~ bash
 STAR_GENOME_INDEX=$TUTORIAL_HOME/refdata/star/
-~~~
-
-Create a variable for the location of the star-fusion perl script for easy running of star-fusion.
-
-~~~ bash
-STAR_FUSION_SCRIPT=$TUTORIAL_HOME/packages/STAR-Fusion/STAR-Fusion
+STAR_FUSION_GENOME_INDEX=$TUTORIAL_HOME/refdata/star/GRCh37_gencode_v19_CTAT_lib/
 ~~~
 
 
@@ -281,27 +221,25 @@ STAR_FUSION_SCRIPT=$TUTORIAL_HOME/packages/STAR-Fusion/STAR-Fusion
 
 ### Run the star aligner
 
-Running STAR on paired end read fastqs can be performed in a single step.  Set the prefix
-argument `--outFileNamePrefix` to specify the location of the output.
+Running STAR on paired end read fastqs can be performed in a single step.  Set the prefix argument `--outFileNamePrefix` to specify the location of the output.
 
-Assume we have end 1 and end 2 files as `$SAMPLE_FASTQ_1` and `$SAMPLE_FASTQ_2` environment
-variables pointing to paired fastq files for sample `$SAMPLE_ID`.
+Assume we have end 1 and end 2 files as `$SAMPLE_FASTQ_1` and `$SAMPLE_FASTQ_2` environment variables pointing to paired fastq files for sample `$SAMPLE_ID`.
 
 ~~~ bash
 mkdir -p $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/
 STAR --runThreadN 4 \
-	--outSAMtype BAM SortedByCoordinate \
-	--outSAMstrandField intronMotif \
-	--outFilterIntronMotifs RemoveNoncanonicalUnannotated \
-	--outReadsUnmapped None \
-	--chimSegmentMin 15 \
-	--chimJunctionOverhangMin 15 \
-	--chimOutType WithinBAM \
+    --outSAMtype BAM SortedByCoordinate \
+    --outSAMstrandField intronMotif \
+    --outFilterIntronMotifs RemoveNoncanonicalUnannotated \
+    --outReadsUnmapped None \
+    --chimSegmentMin 15 \
+    --chimJunctionOverhangMin 15 \
+    --chimOutType WithinBAM \
     --alignMatesGapMax 200000 \
     --alignIntronMax 200000 \
-	--genomeDir $STAR_GENOME_INDEX \
-	--readFilesIn $SAMPLE_FASTQ_1 $SAMPLE_FASTQ_2 \
-	--outFileNamePrefix $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/
+    --genomeDir $STAR_GENOME_INDEX \
+    --readFilesIn $SAMPLE_FASTQ_1 $SAMPLE_FASTQ_2 \
+    --outFileNamePrefix $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/
 ~~~
 
 > Note: In order to obtain alignments of chimeric reads potentially supporting fusions, we
@@ -326,8 +264,8 @@ allow viewing of read depth across the genome at all scales, and will
 speed up IGV viewing of the bam file.
 
 ~~~ bash
-$IGVTOOLS_DIR/igvtools count $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Aligned.sortedByCoord.out.bam \
-	$TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Aligned.sortedByCoord.out.bam.tdf hg19
+igvtools count $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Aligned.sortedByCoord.out.bam \
+    $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Aligned.sortedByCoord.out.bam.tdf hg19
 ~~~
 
 You can view the bam file in IGV at:
@@ -344,23 +282,21 @@ The STAR fusion caller parses the chimeric alignments produced by the STAR align
 and predicts fusions from these alignments.
 
 ~~~ bash
-perl $STAR_FUSION_SCRIPT \
-	--chimeric_out_sam $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.sam \
-	--chimeric_junction $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.junction \
-	--ref_GTF $GENCODE_GTF_FILENAME \
-	--out_prefix $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/starfusion
+STAR-Fusion \
+    --chimeric_junction $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.junction \
+    --genome_lib_dir $STAR_FUSION_GENOME_INDEX \
+    --output_dir $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/starfusion
 ~~~
 
-The fusion reads are output to the sam file `Chimeric.out.sam`.  To view these in
-IGV, first import into bam format, sort, and then index.
+The fusion reads are output to the sam file `Chimeric.out.sam`.  To view these in IGV, first import into bam format, sort, and then index.
 
 ~~~ bash
 samtools view -bt $UCSC_GENOME_FILENAME \
-	$TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.sam \
-	| samtools sort - $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out
+    $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.sam \
+    | samtools sort - -o $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.bam
 samtools index $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.bam
-$IGVTOOLS_DIR/igvtools count $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.bam \
-	$TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.bam.tdf hg19
+igvtools count $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.bam \
+    $TUTORIAL_HOME/analysis/star/$SAMPLE_ID/Chimeric.out.bam.tdf hg19
 ~~~
 
 You can view the bam file of fusion reads in IGV at:
@@ -378,16 +314,6 @@ at this location `chr1:176,901,821-176,904,807`.
 # Run the tophat-fusion gene fusion prediction tool
 
 ## Environment setup
-
-Set the package dependent on the system, linux or osx.
-
-~~~ bash
-if [[ `uname` == 'Linux' ]]; then
-    TOPHAT_PACKAGE=tophat-2.0.14.Linux_x86_64
-elif [[ `uname` == 'Darwin' ]]; then
-    TOPHAT_PACKAGE=tophat-2.0.14.OSX_x86_64
-fi
-~~~
 
 Location of tophat-fusion specific gene models, ensembl but with chr prefix.
 
@@ -418,8 +344,7 @@ tophat2 -p 4 \
     $SAMPLE_FASTQ_1 $SAMPLE_FASTQ_2
 ~~~
 
-The second step requires us to soft link some of the reference data into a directory with
-a specific structure.  We then run the tophat-fusion post-processing step.
+The second step requires us to soft link some of the reference data into a directory with a specific structure.  We then run the tophat-fusion post-processing step.
 
 ~~~ bash
 mkdir -p $TUTORIAL_HOME/analysis/tophatfusion/$SAMPLE_ID/tophat_$SAMPLE_ID
@@ -440,36 +365,25 @@ tophat-fusion-post \
 
 # Run the Trinity RNA-Seq assembler / GMAP contig mapper
 
-## Environment
-
-The trinity package contains some perl modules, add the directory containing these modules
-to the perl library directory, so perl knows where to find them.
-
-~~~ bash
-export PERL5LIB=$TUTORIAL_HOME/packages/trinityrnaseq_r20140413p1/PerlLib/:$PERL5LIB
-~~~
-
 
 
 ## Execution
 
 ### Assemble using Trinity
 
-Create a directory for the trinity analysis.  Run trinity with fastq (fq) as the 
-sequence type.  Specify memory and threads, and provide the fastq paths and output
-paths.
+Create a directory for the trinity analysis.  Run trinity with fastq (fq) as the sequence type.  Specify memory and threads, and provide the fastq paths and output paths.
 
 ~~~ bash
-mkdir -p $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/
+mkdir -p $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/trinity/
 
 cp $SAMPLE_FASTQ_1 $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/sample_reads_1.fq
 cp $SAMPLE_FASTQ_2 $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/sample_reads_2.fq
 
 Trinity \
-	--seqType fq --JM 12G --CPU 4 \
-	--left $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/sample_reads_1.fq \
-	--right $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/sample_reads_2.fq \
-	--output $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/
+    --seqType fq --max_memory 12G --CPU 4 \
+    --left $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/sample_reads_1.fq \
+    --right $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/sample_reads_2.fq \
+    --output $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/trinity/
 ~~~
 
 ### Align using GMap
@@ -478,14 +392,14 @@ Use gmap to map the resulting contigs to the reference genome and produce a GFF3
 file.
 
 ~~~ bash
-cd $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/
+cd $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/trinity
 
 gmap \
-	-f gff3_gene \
-	-D $GMAP_INDEX_DIR \
-	-d $GMAP_REF_ID \
-	Trinity.fasta \
-	> Trinity.gff3
+    -f gff3_gene \
+    -D $GMAP_INDEX_DIR \
+    -d $GMAP_REF_ID \
+    Trinity.fasta \
+    > Trinity.gff3
 ~~~
 
 ### Postprocess
@@ -495,10 +409,10 @@ script to simply pull out chimeric contigs.  Realistically, further processing
 would be required to identify true fusions.
 
 ~~~ bash
-cd $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/
+cd $TUTORIAL_HOME/analysis/trinity/$SAMPLE_ID/trinity
 
-python $TUTORIAL_HOME/packages/cbw_tutorial/gene_fusions/scripts/gmap_extract_fusions.py \
-	Trinity.gff3 Trinity.fasta Fusions.fasta
+python $TUTORIAL_HOME/cbw_tutorial/scripts/gmap_extract_fusions.py \
+    Trinity.gff3 Trinity.fasta Fusions.fasta
 ~~~
 
 The following sequence is the ASTN1-FAM5B fusion.
