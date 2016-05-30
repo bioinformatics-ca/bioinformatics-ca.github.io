@@ -185,7 +185,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/bicg-module-2-part-1-2016)
   
-  [Lab practical](https://bioinformatics.ca/bicg-module-2-lab-2016)
+  [Lab practical for ICGC](https://bioinformatics.ca/bicg-module-2-lab-2016)
+  
+  [Lab practical for IGV](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/cancer/IGV_lab.md)
   
 #### Links:
   
@@ -257,17 +259,22 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Andrew McPherson</font>*
   
-  Lecture:
+Lecture:
   
-  Lab practical:
-  
+Lab practical:
+
+ * [Setup instructions](/2016_workshops/cancer/gene_fusions/install.html)
+ * [Part 1 - Prediction](/2016_workshops/cancer/gene_fusions/run.html)
+ * [Part 2 - Exploration](/2016_workshops/cancer/gene_fusions/exploration.html)
+ * [Part 3 - Visualization](/2016_workshops/cancer/gene_fusions/visualization.html)
+
 #### Papers and Background Material:
 
-
- * [Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks](http://www.ncbi.nlm.nih.gov/pubmed/22383036)
- 
- * [ENCODE RNA-seq Standards](https://genome.ucsc.edu/ENCODE/protocols/dataStandards/ENCODE_RNAseq_Standards_V1.0.pdf)
-
+ * [A survey of best practices for RNA-seq data analysis](http://dx.doi.org/10.1186/s13059-016-0881-8)
+ * [The impact of translocations and gene fusions on cancer causation](http://dx.doi.org/10.1038/nrc2091)
+ * [The emerging complexity of gene fusions in cancer](http://dx.doi.org/10.1038/nrc3947)
+ * [The landscape and therapeutic relevance of cancer-associated transcript fusions](http://dx.doi.org/10.1038/onc.2014.406)
+ * [Fusion genes and their discovery using high throughput sequencing](http://dx.doi.org/10.1016/j.canlet.2013.01.011)
 
 #### Links:
 
