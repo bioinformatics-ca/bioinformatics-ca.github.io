@@ -77,13 +77,13 @@ You should see listing of chromosomes in this reference genome. Choose **1**, fo
 
 Navigate to **chr1:10,000-11,000** by entering this into the location field (in the top-left corner of the interface) and clicking **Go**. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.
 
-[[Image:igv-1.png|thumb|626px|center|Navigition using Location text field. Sequence track displayed as sequence of colours.]]
+![Navigition using Location text field. Sequence track displayed as sequence of colours.](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv-1.png)
 
 IGV displays the sequence of letters in a genome as a sequence of colours (e.g. A = green). This makes repetitive sequences, like the ones found at the start of this region, easy to identify.
 
 You can navigate to a gene of interest by typing it in the same box the genomic coordinates are in and pressing Enter/Return. Try it for your favourite gene, or BRCA1 if you can't decide. 
 
-[[Image:igv-genes.png|thumb|261px|center|Gene model.]]
+![Gene model.](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv-genes.png)
 
 Genes are represented as lines and boxes. Lines represent intronic regions, and boxes represent exotic regions. The arrows indicate the strand on which the gene lies.
 
@@ -93,7 +93,7 @@ When loaded, tracks are stacked on top of each other. You can identify which tra
 
 Sometimes, it's really useful to save where you are, or to load regions of interest. For this purpose, there is A **Region Navigator** in IGV. To access it, click Regions > Region Navigator. While you browse around the genome, you can save some bookmarks by pressing the Add button at any time.
 
-[[Image:igv-bookmarks.png|thumb|407px|center|Bookmarks in IGV.]]
+![Bookmarks in IGV.](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv-bookmarks.png)
 
 ## Loading Read Alignments
 
@@ -106,7 +106,7 @@ We will be using the breast cancer cell line HCC1143 to visualize alignments.  F
 
 Copy the files to your local drive, and in IGV choose **File > Load from File...**, select the bam file, and click **OK**.  Note that the bam and index files must be in the same directory for IGV to load these properly.
 
-[[Image:igv_load_bam.png|thumb|630px|center|Load BAM track from File]]
+![Load BAM track from File](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Image:igv_load_bam.png)
 
 ## Visualizing read alignments
 
@@ -119,15 +119,15 @@ To start our exploration, right click on the track-name, and select the followin
 
 Experiment with the various settings by right clicking the read alignment track and toggling the options. Think about which would be best for specific tasks (e.g. quality control, SNP calling, CNV finding).
 
-[[Image:igv_sort_and_group.png|thumb|400px|center|Read information.]]
+![Read information.](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Image:igv_sort_and_group.png)
 
 You will see reads represented by grey or white bars stacked on top of each other, where they were aligned to the reference genome. The reads are pointed to indicate their orientation (i.e. the strand on which they are mapped).  Mouse over any read and notice that a lot of information is available. To toggle read display from "hover" to "click", select the yellow box and change the setting.
 
-[[Image:igv_show_details_on_click.png|thumb|600px|center|Read information.]]
+![Read information.](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_show_details_on_click.png)
 
 Once you select a read, you will learn what many of these metrics mean, and how to use them to assess the quality of your datasets.  At each base that the read sequence **mismatches** the reference, the colour of the base represents the letter that exists in the read (using the same colour legend used for displaying the reference).
 
-[[Image:igv_click_read.png|thumb|800px|center|Read information.]]
+![Read information.](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_click_read.png)
 
 # Visualization Part 2: Inspecting SNPs, SNVs, and SVs 
 
@@ -141,7 +141,7 @@ Navigate to position "chr21:19,479,237-19,479,814"
   * Sort alignments by “base”
   * Color alignments by “read strand”  
  
-[[Image:igv_example1_color.png|thumb|630px|center|Example1. Good quality SNVs/SNPs]]
+![Example1. Good quality SNVs/SNPs](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_example1_color.png)
 
  **Notes:**
  
@@ -160,11 +160,11 @@ Navigate to position "chr21:19,518,412-19,518,497"
  # Group alignments by "read strand"
  # Center on the second "T", and Sort alignments by “base” on the forward strand reads
 
-[[Image:igv_example2a.png|thumb|630px|center|Example2]]
+![Example2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_example2a.png)
 
  * center on the one base deletion, and Sort alignments by “base” on the reverse strand reads
  
-[[Image:igv_example2b.png|thumb|630px|center|Example2]]
+![Example2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_example2b.png)
 
  **Notes:**
  
@@ -182,7 +182,7 @@ Note that the range contains areas where coverage drops to zero in a few places.
  * load GC track 
    * see concordance of coverage with GC content
 
-[[Image:igv_example3.png|thumb|630px|center|Example3]]
+![Example3](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_example3.png)
 
  **Question:**
  
@@ -194,7 +194,7 @@ Navigate to region "chr21:19,666,833-19,667,007"
   
   * sort by base
 
-[[Image:igv_example4.png|thumb|630px|center|Example4]]
+![Example4](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_example4.png)
 
  **Note:**
  
@@ -206,8 +206,9 @@ Navigate to region "chr21:19,800,320-19,818,162"
 
 * load repeat track
 
-[[Image:igv_load_repeats.png|thumb|330px|center|Load repeats]]
-[[Image:igv_example5.png|thumb|630px|center|Example5]]
+![Load repeats](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_load_repeats.png)
+
+![Example5](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_example5.png)
 
  **Notes:**
  
@@ -222,7 +223,7 @@ Navigate to region "chr21:19,324,469-19,331,468"
  * turn on "View as Pairs" and "Expanded" view
  * click on a red read pair to pull up information on alignments
 
-[[Image:igv_example6.png|thumb|630px|center|Example6]]
+![Example6](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_example6.png)
 
  **Notes:**
  
@@ -234,7 +235,7 @@ Navigate to region "chr21:19,324,469-19,331,468"
 
 Navigate to region "chr21:19,102,154-19,103,108"
 
-[[Image:igv_example7.png|thumb|630px|center|Example7]]
+![Example7](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_example7.png)
 
  **Notes:**
  
@@ -250,7 +251,7 @@ Navigate to region "chr21:19,089,694-19,095,362"
  * Group by Pair Orientation
  * Color by Pair Orientation
 
-[[Image:igv_example8.png|thumb|630px|center|Example8]]
+![Example8](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/igv_example8.png)
 
  **Notes:**
  
