@@ -183,7 +183,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Francis Ouellette</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/bicg-module-2-part-1-2016)
   
   [Lab practical](https://bioinformatics.ca/bicg-module-2-lab-2016)
   
