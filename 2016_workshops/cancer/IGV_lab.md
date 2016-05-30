@@ -67,13 +67,13 @@ We will also load additional tracks from **Server**:
 * GC Percentage
 * dbSNP 1.3.1 or 1.3.7
 
-[[Image:igv_load.data.tracks.png|thumb|550px|center|Load hg19 genome and additional data tracks]]
+![Load hg19 genome and additional data tracks](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Igv_load_data_tracks.png)
 
 ### Navigation
 
 You should see listing of chromosomes in this reference genome. Choose **1**, for chromosome 1.
 
-[[Image:igv-chromosomes.png|thumb|635px|center|Chromosome chooser]]
+![Chromosome chooser](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Igv-chromosomes.png)
 
 Navigate to **chr1:10,000-11,000** by entering this into the location field (in the top-left corner of the interface) and clicking **Go**. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.
 
