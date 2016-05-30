@@ -1,6 +1,6 @@
 ---
 layout: post2
-permalink: /bioinformatics_for_cancer_genomics_2016/
+permalink: /bioinformatics_for_cancer_genomics_IGV_lab_2016/
 title: Bioinformatics for Cancer Genomics 2016 Student Page
 header1: Bioinformatics for Cancer Genomics 2016
 header2: Workshop pages for students
