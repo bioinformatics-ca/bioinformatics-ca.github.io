@@ -36,6 +36,12 @@ Sample data has been prepared for you, link to your workspace.
 ln -s /media/cbwdata/CG_data/Module4/sampledata
 ~~~
 
+For visualization purposes, a list of bams is available for reads aligning to fused genes.  Link those into your workspace.
+
+~~~ bash
+ln -s /media/cbwdata/CG_data/Module4/bams
+~~~
+
 Set the `$TUTORIAL_HOME` environment variable so subsequent commands know the 
 locatioin of installed binaries, libraries, and reference genome data.  Also,
 subsequent analyses will fall into subdirectories of `$TUTORIAL_HOME`.
@@ -310,7 +316,7 @@ http://cbw#.dyndns.info/Module4/analysis/star/HCC1395/Chimeric.out.bam
 ~~~
 
 where you need to replace # with your student ID.  Fusion reads can be found
-at this location `chr1:176,901,821-176,904,807`.
+at this location `chr2:160,832,184-160,837,535`.
 
 
 
