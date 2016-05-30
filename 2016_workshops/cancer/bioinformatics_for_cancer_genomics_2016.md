@@ -263,10 +263,10 @@ Lecture:
   
 Lab practical:
 
- * [Setup instructions](gene_fusions/install)
- * [Part 1 - Prediction](gene_fusions/run)
- * [Part 2 - Exploration](gene_fusions/exploration)
- * [Part 3 - Visualization](gene_fusions/visualization)
+ * [Setup instructions](/2016_workshops/cancer/gene_fusions/install.html)
+ * [Part 1 - Prediction](/2016_workshops/cancer/gene_fusions/run.html)
+ * [Part 2 - Exploration](/2016_workshops/cancer/gene_fusions/exploration.html)
+ * [Part 3 - Visualization](/2016_workshops/cancer/gene_fusions/visualization.html)
 
 #### Papers and Background Material:
 
