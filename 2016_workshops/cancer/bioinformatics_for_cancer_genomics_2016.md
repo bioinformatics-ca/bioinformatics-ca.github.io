@@ -259,13 +259,14 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Andrew McPherson</font>*
   
-  Lecture:
+Lecture:
   
-  Lab practical:
-   * [Setup instructions](gene_fusions/install)
-   * [Part 1 - Prediction](gene_fusions/run)
-   * [Part 2 - Exploration](gene_fusions/exploration)
-   * [Part 3 - Visualization](gene_fusions/visualization)
+Lab practical:
+
+ * [Setup instructions](gene_fusions/install)
+ * [Part 1 - Prediction](gene_fusions/run)
+ * [Part 2 - Exploration](gene_fusions/exploration)
+ * [Part 3 - Visualization](gene_fusions/visualization)
 
 #### Papers and Background Material:
 
