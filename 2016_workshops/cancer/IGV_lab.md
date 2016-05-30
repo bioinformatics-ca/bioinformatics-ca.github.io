@@ -1,11 +1,13 @@
 ---
 layout: post2
 permalink: /bioinformatics_for_cancer_genomics_IGV_lab_2016/
-title: Bioinformatics for Cancer Genomics 2016 Student Page
-header1: Bioinformatics for Cancer Genomics 2016
+title: BiCG IGV Lab
+header1: Bioinformatics for Cancer Genomics IGV Lab 2016
 header2: Workshop pages for students
 image: CBW_cancerDNA_icon-16.jpg
 ---
+
+This lab was created by Sorana Morrissy.
 
 ## Introduction
 
