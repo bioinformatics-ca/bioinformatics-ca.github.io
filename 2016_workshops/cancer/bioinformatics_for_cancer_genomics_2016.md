@@ -238,7 +238,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Jared Simpson</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/bicg-module-3-2016)
   
   Lab practicals: [Part 1 - Mapping](mapping) and [Part 2 - Rearrangements](rearrangement)
   
@@ -259,7 +259,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Andrew McPherson</font>*
   
-Lecture:
+[Lecture and Lab](https://bioinformatics.ca/bicg-module-4-2016)
   
 Lab practical:
 
