@@ -90,7 +90,7 @@ We can use `samtools idxstats` to count the number of reads mapped to each chrom
 samtools idxstats tumour.sorted.bam
 ```
 
-This command will just display the number of reads mapped to chromosome 20
+This command will just display the number of reads mapped to chromosome 9:
 
 ```
 samtools idxstats tumour.sorted.bam | awk '$1 == "9"'
