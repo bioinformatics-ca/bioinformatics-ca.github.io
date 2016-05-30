@@ -213,7 +213,7 @@ Navigate to region "chr21:19,800,320-19,818,162"
  **Notes:**
  
  * Mapping quality plunges in all reads (white instead of grey).  Once we load repeat elements, we see that
- *: there are two LINE elements that cause this.
+   * : there are two LINE elements that cause this.
 
 ## Homozygous deletion 
 
