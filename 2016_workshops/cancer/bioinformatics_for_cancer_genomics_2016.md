@@ -262,14 +262,18 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   Lecture:
   
   Lab practical:
-  
+   * [Setup instructions](gene_fusions/install)
+   * [Part 1 - Prediction](gene_fusions/run)
+   * [Part 2 - Exploration](gene_fusions/exploration)
+   * [Part 3 - Visualization](gene_fusions/visualization)
+
 #### Papers and Background Material:
 
-
- * [Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks](http://www.ncbi.nlm.nih.gov/pubmed/22383036)
- 
- * [ENCODE RNA-seq Standards](https://genome.ucsc.edu/ENCODE/protocols/dataStandards/ENCODE_RNAseq_Standards_V1.0.pdf)
-
+ * [A survey of best practices for RNA-seq data analysis](http://dx.doi.org/10.1186/s13059-016-0881-8)
+ * [The impact of translocations and gene fusions on cancer causation](http://dx.doi.org/10.1038/nrc2091)
+ * [The emerging complexity of gene fusions in cancer](http://dx.doi.org/10.1038/nrc3947)
+ * [The landscape and therapeutic relevance of cancer-associated transcript fusions](http://dx.doi.org/10.1038/onc.2014.406)
+ * [Fusion genes and their discovery using high throughput sequencing](http://dx.doi.org/10.1016/j.canlet.2013.01.011)
 
 #### Links:
 
