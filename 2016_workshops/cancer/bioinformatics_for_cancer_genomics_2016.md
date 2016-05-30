@@ -238,7 +238,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   Lecture:
   
-  Lab practicals: [Part 1 - Mapping](mapping) and [Part 2 - Rearrangements](rearrangements)
+  Lab practicals: [Part 1 - Mapping](mapping) and [Part 2 - Rearrangements](rearrangement)
   
   **Bonus**
 You can view your results (BAM and BAM.BAI file) in the IGV browser by using the URL for that file from your Cloud instance. We have a web server running on the Amazon cloud for each instance. In a browser, like Firefox, type in your server name (cbw#.dyndns.info) and all files under your workspace will be shown there. Find your Bam and Bam.Bai file, right click it and 'copy the link location'. Start IGV and choose 'load from URL' from File menu, and then paste the location you just copied and you will see the Bam file you just generated in IGV! Narrow down the view to chromosome 15 or 17 where the break points were identified.
