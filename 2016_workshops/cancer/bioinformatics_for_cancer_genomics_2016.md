@@ -249,17 +249,9 @@ You can view your results (BAM and BAM.BAI file) in the IGV browser by using the
  * [Tools for Mapping High-throughput Sequencing Data Paper (2012)](http://www.ncbi.nlm.nih.gov/pubmed/23060614) 
  * [SAM/BAM file specifications](http://samtools.sourceforge.net/SAM1.pdf) 
  * [samtools](http://samtools.sourceforge.net/) 
- * [Picard](http://picard.sourceforge.net) 
  * [bwa](http://bio-bwa.sourceforge.net/) 
- * [GASV](http://compbio.cs.brown.edu/software.html) 
- * [BreakDancer](http://breakdancer.sourceforge.net/) 
+ * [lumpy-sv](https://github.com/arq5x/lumpy-sv) 
   
-##### Extras:
-
-* exampleheader.txt **Put example header here**
-* [explain sam flag app](https://broadinstitute.github.io/picard/explain-flags.html) 
-* [sam flags explained](http://davetang.org/muse/2014/03/06/understanding-bam-flags/) 
-
 [&uarr;](#back_to_top)
 
 ***
