@@ -172,7 +172,7 @@ Navigate to position "chr21:19,518,412-19,518,497"
  
  * The alt allele is either a deletion or insertion of one or two "T"s
  * The remaining bases are mismatched, because the alignment is now out of sync
- * The dpSNP entry at this location (rs74604068) is an A->T, and in all likelyhood an artifact 
+ * The dbSNP entry at this location (rs74604068) is an A->T, and in all likelihood an artifact 
  * (i.e. the common variants included some cases that are actually common misalignments caused by repeats)
 
 ## Coverage by GC 
