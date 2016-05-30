@@ -66,7 +66,7 @@ image: CBW_cancerDNA_icon-16.jpg
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/2016_workshops/cancer/BiCG_2016_Schedule_v4.pdf">Schedule for May 30 to June 3, 2016</a>
+  <a href="http://bioinformatics-ca.github.io/2016_workshops/cancer/BiCG_2016_Schedule_final.pdf">Schedule for May 30 to June 3, 2016</a>
 
 [&uarr;](#back_to_top)
 
