@@ -308,9 +308,6 @@ Lab practical:
   
 [Lab practical](https://bioinformatics.ca/bicg-module-5-lab-2016) 
 
-  * Lab Lecture
-    + These are the lab slides as an introduction to the lab practical.
-
   * [Lab Module](/2016_workshops/cancer/cnas/cna_lab.html)
     + This is the instructions for the lab practical.
 
