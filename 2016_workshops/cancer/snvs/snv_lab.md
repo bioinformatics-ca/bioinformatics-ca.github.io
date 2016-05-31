@@ -117,7 +117,7 @@ Since we will be using exome data for this, we need to change the `isSkipDepthFi
 cp config/strelka_config_bwa.ini config/strelka_config_bwa_exome.ini
 ~~~
 
-Now let's edit the `config/strelka_config_bwa_exome.ini` and change the `isSkipDepthFilters = 0` to `isSkipDepthFilters = 1`.  We will use the text editor nano for this:
+Now let's edit the `config/strelka_config_bwa_exome.ini` and change the `isSkipDepthFilters = 0` to `isSkipDepthFilters = 1`.  We will use the text editor nano (or any other editor you are comfortable with) for this:
 
 ~~~bash
 nano config/strelka_config_bwa_exome.ini
