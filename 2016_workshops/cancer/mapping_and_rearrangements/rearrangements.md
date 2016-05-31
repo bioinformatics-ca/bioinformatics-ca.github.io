@@ -36,7 +36,7 @@ cat tumour.sam | tail -n+100000 | ~/CourseData/CG_data/Module3/scripts/pairend_d
 
 ## Running Lumpy
 
-Now we are ready to run lumpy. The following command is long so we break it into multiple lines by using the `\` symbol. You should still be able to copy-and-paste it into your terminal. We are passing the discordant read BAM file in with the -pe flag, and the split read BAM file in with the -se flag. 
+Now we are ready to run lumpy. The following command is long so we break it into multiple lines by using the `\` symbol. You should still be able to copy-and-paste it into your terminal. We are passing the discordant read BAM file in with the -pe flag, and the split read BAM file in with the -sr flag. 
 
 ```
 lumpy \
