@@ -504,3 +504,11 @@ Useful plugins:
  [&uarr;](#back_to_top) 
   
   ***
+
+## Data for the Workshop ##
+
+### Data Sets ###
+- [Module 3 data](http://www.hpc4health.ca/cbw/2016/CG_data/Module3.tar.gz)
+ 
+### Results from Instructor's Instance on Amazon ###
+- [Module3 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module3_result.tar.gz)
