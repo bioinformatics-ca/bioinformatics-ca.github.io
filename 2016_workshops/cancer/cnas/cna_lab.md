@@ -278,7 +278,7 @@ The final interesting file that OncoSNP produces is the plots `HCC1395.*.ps.gz`.
 http://cbwxx.dyndns.info/Module5/results/oncosnp
 ~~~
 
-Try to open up and visualize the chromosome plots from OncoSNP. If you have trouble opening these files, then you can also download them from the wiki.
+Where **xx** is your student number. Try to open up and visualize the chromosome plots from OncoSNP. If you have trouble opening these files, then you can also download them from the wiki.
 
 ## Analysis Of CNAs using Sequencing Data
 
