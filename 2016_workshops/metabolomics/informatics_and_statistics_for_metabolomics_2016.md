@@ -69,7 +69,7 @@ image: CBW_metabolomics_icon.jpg
 
 ### Class Picture
 
-![Class Picture](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Metab_student_picture_May_26_2016.jpg)
+![Class Picture](http://bioinformatics-ca.github.io/images/Metab_student_picture_May_26_2016.jpg)
 
 [Link to download picture](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/images/Metab_student_picture_May_26_2016.jpg)
 
