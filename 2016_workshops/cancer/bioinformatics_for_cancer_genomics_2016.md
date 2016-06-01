@@ -518,8 +518,10 @@ Useful plugins:
 - [Module 3 data](http://www.hpc4health.ca/cbw/2016/CG_data/Module3.tar.gz)
 - Module 4 data: [bams](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/bams.tar.gz), [cbw_tutorial](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/cbw_tutorial.tar.gz), [refdata](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/refdata.tar.gz), [sampledata](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/sampledata.tar.gz)
 - Module 5 data: [data](http://www.hpc4health.ca/cbw/2016/CG_data/Module5.tar.gz) [ref_data](http://www.hpc4health.ca/cbw/2016/CG_data/ref_data.tar.gz)
+- [Module 6 data](http://www.hpc4health.ca/cbw/2016/CG_data/Module6.tar.gz) 
  
 ### Results from Instructor's Instance on Amazon ###
 - [Module3 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module3_result.tar.gz)
 - [Module4 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/analysis.tar.gz)
 - [Module5 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module5_result.tar.gz)
+- [Module6 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module6_result.tar.gz)
