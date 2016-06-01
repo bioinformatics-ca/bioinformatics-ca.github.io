@@ -159,7 +159,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ### Class Photo
 
-![Class Picture](http://bioinformatics-ca.github.io/2016_workshops/images/cbw-may-30-bicg.jpeg)
+![Class Picture](http://bioinformatics-ca.github.io/images/cbw-may-30-bicg.jpeg)
 [Link to Download Class Photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/cbw-may-30-bicg.jpeg)
 
 ***
