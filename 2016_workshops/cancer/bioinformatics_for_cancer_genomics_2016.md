@@ -514,6 +514,7 @@ Useful plugins:
 ## Data for the Workshop ##
 
 ### Data Sets ###
+- HCC1395 data: [CEL](http://www.hpc4health.ca/cbw/2016/CG_data/HCC1395/cel.tar.gz) [exome](http://www.hpc4health.ca/cbw/2016/CG_data/HCC1395/exome.tar.gz) [rnaseq](http://www.hpc4health.ca/cbw/2016/CG_data/HCC1395/rnaseq.tar.gz)
 - [Module 3 data](http://www.hpc4health.ca/cbw/2016/CG_data/Module3.tar.gz)
 - Module 4 data: [bams](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/bams.tar.gz), [cbw_tutorial](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/cbw_tutorial.tar.gz), [refdata](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/refdata.tar.gz), [sampledata](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/sampledata.tar.gz)
  
