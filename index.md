@@ -31,7 +31,7 @@ image: bioinformatics_LOGO.jpg
   <td><a href="http://bioinformatics-ca.github.io/exploratory_analysis_of_biological_data_2016/">Exploratory Analysis of Biological Data Using R 2016 </a> </td><td> Toronto, ON </td><td> June 7 to June 8, 2016</td>
   </tr>
   <tr>
-  <td><a href="http://bioinformatics-ca.github.io/informatics_for_high-throughput_sequencing_data_2016/">Informatics on High Throughput Sequencing Data 2016 </a> </td><td> Montreal, QC </td><td> June 9 to June 10, 2016</td>
+  <td><a href="http://bioinformatics-ca.github.io/informatics_on_high-throughput_sequencing_data_2016/">Informatics on High Throughput Sequencing Data 2016 </a> </td><td> Montreal, QC </td><td> June 9 to June 10, 2016</td>
   </tr>
   <tr>
   <td><a href="http://bioinformatics-ca.github.io/pathway_and_network_analysis_of_omics_data_2016/">Pathway and Network Analysis of -omics Data 2016 </a> </td><td> Toronto, ON </td><td> June 13 to June 15, 2016</td>
