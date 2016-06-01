@@ -41,7 +41,7 @@ image: CBW_High-throughput_icon.jpg
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/HT-Seq_2016_Schedule_v1.pdf">Schedule for June 9 to June 10, 2016</a>
+  <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/ht-seq/HT-seq_2016_Schedule_v4_final.pdf">Schedule for June 9 to June 10, 2016</a>
 
 [&uarr;](#back_to_top)
 
