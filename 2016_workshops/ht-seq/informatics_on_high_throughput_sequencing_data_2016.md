@@ -53,7 +53,7 @@ image: CBW_High-throughput_icon.jpg
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
-  Instructions to setup your laptop can be found <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/ht-seq/HT-seq_2016_Schedule_v4_final.pdf">here</a>.
+  Instructions to setup your laptop can be found <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/ht-seq/Laptop%20Programs%20to%20Install.pdf">here</a>.
 
 [&uarr;](#back_to_top)
 
