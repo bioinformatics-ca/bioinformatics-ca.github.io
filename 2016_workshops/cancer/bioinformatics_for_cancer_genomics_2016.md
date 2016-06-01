@@ -156,6 +156,12 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 [&uarr;](#back_to_top)
 
+
+### Class Photo
+
+![Class Picture](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/cbw-may-30-bicg.jpeg)
+[Link to Download Class Photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/cbw-may-30-bicg.jpeg)
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
