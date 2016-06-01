@@ -1,8 +1,8 @@
 ---
 layout: post2
-permalink: /informatics_for_high-throughput_sequencing_data_2016/
-title: Informatics for High-Throughput Sequencing Data 2016 Student Page
-header1: Informatics for High-Throughput Sequencing Data 2016
+permalink: /informatics_on_high-throughput_sequencing_data_2016/
+title: Informatics on High-Throughput Sequencing Data 2016 Student Page
+header1: Informatics on High-Throughput Sequencing Data 2016
 header2: Workshop pages for students
 image: CBW_High-throughput_icon.jpg
 ---
