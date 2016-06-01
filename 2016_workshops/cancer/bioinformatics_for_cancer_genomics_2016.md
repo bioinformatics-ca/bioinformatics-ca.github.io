@@ -515,6 +515,8 @@ Useful plugins:
 
 ### Data Sets ###
 - [Module 3 data](http://www.hpc4health.ca/cbw/2016/CG_data/Module3.tar.gz)
+- Module 4 data: [bams](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/bams.tar.gz), [cbw_tutorial](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/cbw_tutorial.tar.gz), [refdata](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/refdata.tar.gz), [sampledata](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/sampledata.tar.gz)
  
 ### Results from Instructor's Instance on Amazon ###
 - [Module3 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module3_result.tar.gz)
+- [Module4 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module4/analysis.tar.gz)
