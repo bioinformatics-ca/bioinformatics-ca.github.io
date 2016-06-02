@@ -76,6 +76,10 @@ image: CBW_cancerDNA_icon-16.jpg
 
 [&uarr;](#back_to_top)
 
+### Workshop Survey
+
+We appreciate your feedback on your experience at the workshop.  Please complete our [survey](https://www.surveymonkey.com/r/MWHBLCS) at the end of the workshop.
+
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/cancer/laptop_setup_instructions.pdf">here</a>.
