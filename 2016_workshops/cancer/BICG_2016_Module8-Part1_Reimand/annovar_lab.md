@@ -12,7 +12,7 @@ image: CBW_cancerDNA_icon-16.jpg
 First login into the server.
 
 ~~~bash
-ssh -i CBWCG.pem ubuntu@cbw##.dyndns.info
+ssh -i CBW.pem ubuntu@cbw##.dyndns.info
 ~~~
 
 Now enter the ~/workspace directory
@@ -196,7 +196,7 @@ The output you will see is:
 From a separate local machine terminal instance, copy the output file back to your local machine
 
 ~~~bash
-scp -i CBWCG.pem ubuntu@cbw##.dyndns.info://home/ubuntu/workspace/Module8/Passed.somatic.snvs.vcf.annovar.out.txt.hg19_multianno.txt ./
+scp -i CBW.pem ubuntu@cbw##.dyndns.info://home/ubuntu/workspace/Module8/passed.somatic.snvs.vcf.annovar.out.txt.hg19_multianno.txt ./
 ~~~
 
 You can open the file in Excel (select "tab-delimited" when opening the file). Click the "DATA" tab at the menu bar, then click the big "Filter" button. Then click any one of the headings to filter out variants, essentially by clicking the check boxes. 
