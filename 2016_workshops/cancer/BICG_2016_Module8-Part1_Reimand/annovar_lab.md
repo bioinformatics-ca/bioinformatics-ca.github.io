@@ -28,10 +28,10 @@ mkdir Module8
 cd Module8
 ~~~
 
-Download the Data Set Input - VCF file to your local computer.  In a separate local machine terminal instance, move into the directory where you have downloaded the VCF to and copy the VCF to the workspace.
+Download the Data Set Input to your instance.
 
 ~~~bash
-scp -i CBWCG.pem ./passed.somatic.snvs.vcf ubuntu@cbw##.dyndns.info://home/ubuntu/workspace/Module8
+wget https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/cancer/BICG_2016_Module8-Part1_Reimand/Passed.somatic.snvs.vcf
 ~~~
 
 Convert the VCF file to an annovar input file.
