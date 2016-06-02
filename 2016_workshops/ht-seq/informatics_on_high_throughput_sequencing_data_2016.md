@@ -41,19 +41,19 @@ image: CBW_High-throughput_icon.jpg
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/HT-Seq_2016_Schedule_v1.pdf">Schedule for June 9 to June 10, 2016</a>
+  <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/HT-seq_2016_Schedule_v4_final.pdf">Schedule for June 9 to June 10, 2016</a>
 
 [&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
-  Post your workshop questions <a href="http://todaysmeet.com/HTSeq2016">here</a>!
+  Post your workshop questions <a href="https://noteapp.com/HTSeq2016">here</a>!
 
 [&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
-  Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/laptop_setup_instructions.pdf">here</a>.
+  Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/Laptop%20Programs%20to%20Install.pdf">here</a>.
 
 [&uarr;](#back_to_top)
 
@@ -117,7 +117,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 1: Introduction to HT-sequencing and Cloud Computing <a id="module_1"></a>
 
-  *<font color="#827e9c">Francis Ouellette</font>*
+  *<font color="#827e9c">Zhibin Lu</font>*
   
   Lecture:
   
@@ -160,7 +160,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 3: Genome Visualization <a id="module_3"></a>
 
-  *<font color="#827e9c">TBA</font>*
+  *<font color="#827e9c">Florence Cavalli</font>*
   
   Lecture:
   
@@ -182,7 +182,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ### Integrated Assignment <a id="assignment"></a>
 
-*<font color="#827e9c">TBA</font>*
+*<font color="#827e9c">Florence Cavalli</font>*
 
 ```bash
 Files are in the following directory of the cloud instance: ~/CourseData/HT_data/Module2/
@@ -282,7 +282,7 @@ Programs:
 
 ###  Module 7: Bringing it Together with Galaxy  <a id="module_7"></a>
 
-  *<font color="#827e9c">Francis Ouellette</font>*
+  *<font color="#827e9c">David Morais</font>*
   
   Lecture:
   

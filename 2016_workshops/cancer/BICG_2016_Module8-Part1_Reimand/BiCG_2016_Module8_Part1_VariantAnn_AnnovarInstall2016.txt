@@ -1,0 +1,99 @@
+Annovar installation:
+====================
+
+
+
+1) Download latest annovar by registering here : http://www.openbioinformatics.org/annovar/annovar_download_form.php 
+
+	Downloaded archive file should contain all perl scripts necessary to run annovar ( eg: annovar.latest.tar.gz )
+
+2) Decompress the archive using following command:
+
+	tar -xvf annovar.latest.tar.gz
+
+	This will generate a directory named "annovar" which contain perl scripts and databases.
+        
+        You should see following files/directories in "annovar" directory:
+        annotate_variation.pl
+        coding_change.pl
+        convert2annovar.pl
+        example
+        humandb
+        retrieve_seq_from_fasta.pl
+        table_annovar.pl
+        variants_reduction.pl
+    
+
+3)Installing necessary databases:
+
+cd annovar  ( ie, go to the directory where annovar scripts are installed)
+
+
+./annotate_variation.pl -downdb -buildver hg19 -webfrom annovar refGene humandb/      
+./annotate_variation.pl -downdb -buildver hg19 -webfrom annovar 1000g2014oct humandb/
+./annotate_variation.pl -downdb -buildver hg19 -webfrom annovar snp138 humandb/
+./annotate_variation.pl -downdb -buildver hg19 -webfrom annovar esp6500siv2_all  humandb/
+./annotate_variation.pl -downdb -buildver hg19 -webfrom annovar cg69  humandb/
+./annotate_variation.pl -downdb -buildver hg19 -webfrom annovar ljb26_all  humandb/
+./annotate_variation.pl -downdb -buildver hg19 -webfrom annovar cosmic70  humandb/
+./annotate_variation.pl -downdb -buildver hg19 -webfrom annovar exac02  humandb/
+./annotate_variation.pl -downdb -buildver hg19 -webfrom annovar caddgt10  humandb/
+./annotate_variation.pl -downdb -buildver hg19 -webfrom annovar clinvar_20150330  humandb/
+./annotate_variation.pl -buildver hg19 -downdb genomicSuperDups humandb/
+./annotate_variation.pl -downdb -buildver hg19 phastConsElements46way humandb/
+
+Above commands will download and setup all necessary databases and indexes in  humandb/ directory. This includes following files:
+ 
+hg19_AFR.sites.2014_10.txt
+hg19_AFR.sites.2014_10.txt.idx
+hg19_ALL.sites.2014_10.txt
+hg19_ALL.sites.2014_10.txt.idx
+hg19_AMR.sites.2014_10.txt
+hg19_AMR.sites.2014_10.txt.idx
+hg19_avdblist.txt
+hg19_caddgt10.txt
+hg19_caddgt10.txt.idx
+hg19_cg69.txt
+hg19_cg69.txt.idx
+hg19_clinvar_20140929.txt
+hg19_clinvar_20140929.txt.idx
+hg19_cosmic70.txt
+hg19_cosmic70.txt.idx
+hg19_EAS.sites.2014_10.txt
+hg19_EAS.sites.2014_10.txt.idx
+hg19_esp6500siv2_aa.txt
+hg19_esp6500siv2_aa.txt.idx
+hg19_esp6500siv2_all.txt
+hg19_esp6500siv2_all.txt.idx
+hg19_esp6500siv2_ea.txt
+hg19_esp6500siv2_ea.txt.idx
+hg19_EUR.sites.2014_10.txt
+hg19_EUR.sites.2014_10.txt.idx
+hg19_exac02.txt
+hg19_exac02.txt.idx
+hg19_genomicSuperDups.txt
+hg19_ljb26_all.txt
+hg19_ljb26_all.txt.idx
+hg19_ljb26_ma.txt
+hg19_ljb26_ma.txt.idx
+hg19_ljb26_mt.txt
+hg19_ljb26_mt.txt.idx
+hg19_ljb26_pp2hdiv.txt
+hg19_ljb26_pp2hdiv.txt.idx
+hg19_ljb26_pp2hvar.txt
+hg19_ljb26_pp2hvar.txt.idx
+hg19_ljb26_sift.txt
+hg19_ljb26_sift.txt.idx
+hg19_phastConsElements46wayPlacental.txt
+hg19_refGeneMrna.fa
+hg19_refGene.txt
+hg19_refGeneVersion.txt
+hg19_SAS.sites.2014_10.txt
+hg19_SAS.sites.2014_10.txt.idx
+hg19_snp138.txt
+hg19_snp138.txt.idx
+
+
+ 
+Quick start guide:
+http://www.openbioinformatics.org/annovar/annovar_startup.html
