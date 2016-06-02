@@ -254,19 +254,68 @@ museqDt.filtered %>%
 
 MutationSeq also returns the trinucleotide context of each mutation. We can plot such data:
 
-```{r, fig.width = 10}
-TC.levels <- museqDt.filtered %>%
-  arrange(REF, ALT, TC) %>% 
-  select(TC) %>%
-  distinct %>%
-  .$TC
+```{r, fig.width = 20}
+bases.complement <- c("A" = "T",
+                      "C" = "G",
+                      "G" = "C", 
+                      "T" = "A")
 
-museqDt.filtered %>%
-  ggplot(aes(x = factor(TC, levels = TC.levels), fill = REF)) +
+# Setup the Specific Possible Mutations
+base.mutation <- 
+  c("A->C", 
+    "A->G",
+    "A->T",
+    "C->A",
+    "C->T",
+    "C->G")
+           
+#' Change Trinucleotide Context
+#' 
+#' This function changes the trinucleotide context to account for strand i
+#' symmetry.
+#'
+#' @param tc Current trinucleotide context
+#' @return Complemented trinucleotide context
+#' @export
+change_tc_function <- function(tc, ref) {
+  tc.bases <- strsplit(tc, "") %>%
+    unlist()
+
+  tc.bases[2] <- ref
+
+  #tc.bases <- mapvalues(tc.bases, bases, bases.complement, warn_missing = FALSE)
+  paste(tc.bases, collapse = "")
+}
+ 
+museq.filtered.df <- tbl_df(museqDt.filtered)
+museq.filtered.modified.df <- 
+  museq.filtered.df %>%
+  mutate(REF_modified = mapvalues(REF, c("A", "G"), c("T", "C")),
+         ALT_modified = ifelse(REF %in% c("A", "G"), 
+                               mapvalues(ALT, 
+                                         names(bases.complement), 
+                                         unname(bases.complement)),
+                               ALT)) %>%
+  rowwise() %>%
+  mutate(TC_modified = ifelse(REF %in% c("T", "G"), 
+                              change_tc_function(TC, REF), 
+                              TC)) %>%
+  mutate(ref_to_alt = paste(REF_modified, ">", ALT_modified, sep = ""))
+
+TC.modified <- 
+  museq.filtered.modified.df[["TC_modified"]] %>%
+  unique() %>%
+  sort()
+
+museq.filtered.modified.df %>%
+  ggplot(aes(x = factor(TC_modified, levels = TC.modified),
+             fill = ref_to_alt)) +
+  facet_grid(. ~ ref_to_alt, scales = "free_x") +
   geom_bar() +
-  theme( axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
   xlab("Trinucleotide Context") +
-  ylab("Number of Mutations")
+  ylab("Number of Mutations") +
+  scale_fill_discrete(name = "Mutation Type")
 ```
 
 Here we are plotting the number of mutations in each trinucleotide context for each substitution pattern.
