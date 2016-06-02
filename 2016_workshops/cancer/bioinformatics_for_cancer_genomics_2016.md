@@ -223,7 +223,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  *Optional* **R** Review Session <a id="r_review"></a>
 
-*<font color="#827e9c">Florence Cavallie</font>*
+*<font color="#827e9c">Florence Cavalli</font>*
 
 [Lecture](https://bioinformatics.ca/bicg-module-r-review-2016-lecture)
 
