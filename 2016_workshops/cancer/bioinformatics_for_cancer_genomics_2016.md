@@ -563,3 +563,4 @@ Useful plugins:
 - [Module5 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module5_result.tar.gz)
 - [Module6 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module6_result.tar.gz)
 - [Module7 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module7_result.tar.gz)
+- [Module8 result](http://www.hpc4health.ca/cbw/2016/CG_data/Module8_result.tar.gz)
