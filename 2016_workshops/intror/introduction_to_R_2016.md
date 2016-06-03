@@ -99,10 +99,13 @@ That was the problem when students installed things in **RStudio** at the comman
   
   Scripts:
   
-  * **R** script template
-  * First steps
+  * [**R** script template](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/intror/ScriptTemplate.txt)  
+  * [First steps](http://bioinformatics-ca.github.io/intror_first_steps_2016/)  
   
   Data:
+
+* [Fig_3-CharacteristicGenes.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/intror/Fig_3-CharacteristicGenes.txt)  
+* [Supplementary data: Table_S3.xls](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/intror/Table_S3.xls)  
   
   Practical:
   
@@ -132,8 +135,6 @@ That was the problem when students installed things in **RStudio** at the comman
 
   *<font color="#827e9c">Boris Steipe</font>*
   
-  Lecture:
-  
   Scripts:
   
   Data:
@@ -147,9 +148,7 @@ That was the problem when students installed things in **RStudio** at the comman
 ###  Module 3: Using **R** for Data Analysis <a id="module_3"></a>
 
   *<font color="#827e9c">Boris Steipe</font>*
-  
-  Lecture:
-  
+
   Scripts:
   
   Resources:
