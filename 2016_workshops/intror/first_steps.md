@@ -142,10 +142,11 @@ x <- pi
 
 ~~~r
 sprintf() # gives the most control
-sprintf("%50.49f", pi)
+sprintf("%50.49f", pi)  
 ~~~
 
- #### Digression: Anatomy of a function ...
+
+#### Digression: Anatomy of a function ...
 
 
  Various functions exist to display the properties of R objects. Here
