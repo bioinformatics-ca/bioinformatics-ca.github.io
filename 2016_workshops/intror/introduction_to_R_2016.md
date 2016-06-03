@@ -14,7 +14,6 @@ image: CBW_introtoR-icon.jpg
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
      <li><a href="#laptop_setup">Laptop Setup Instructions</a></li>
      <li><a href="#helpful_materials">Helpful Materials</a></li>
-     <li><a href="#pre_readings">Pre-Workshop Readings</a></li>
       <li><a href="#day1">Day 1</a>
          <ul class="sub2">  
            <li><a href="#welcome">Welcome</a></li>
@@ -74,12 +73,6 @@ That was the problem when students installed things in **RStudio** at the comman
 ... of scripts in the **R** editor does not seem to work under Windows. If you want highlighted syntax, use **RStudio** instead.
 
 [&uarr;](#back_to_top)
-
-###  Pre-workshop Readings <a id="pre_readings"></a>
-
-  Before coming to the workshop, read these.
-
-[&uarr;](#back_to_top)  
   
 ### Helpful Materials <a id="helpful_materials"></a>
 
