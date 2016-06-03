@@ -418,5 +418,3 @@ c(B220synonyms, "CD19") %in% toupper(sup3$genes)
 
  To do more than that, we really need to look at writing "programs".
 
-
- [End]
