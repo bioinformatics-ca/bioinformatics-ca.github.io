@@ -1,8 +1,8 @@
 ---
 layout: post2
-permalink: /intror_first_steps_2016/
-title: IntroR First Steps 2016
-header1: IntroR First Steps 2016
+permalink: /intror_module2-3_2016/
+title: IntroR Module 2-3 2016
+header1: IntroR Module 2-3 2016
 header2: Workshop pages for students
 image: CBW_introtoR-icon.jpg
 ---
