@@ -172,9 +172,7 @@ typeInfo <- function(x) {
  That's a useful utility to have. Let's take it apart.
  Now: where do we put it?
 
-
-
- ### Creating vectors
+### Creating vectors
 
 
  Recapitulate:
@@ -208,7 +206,7 @@ genes <- c("Spic", "Cebpb", "Lyz2", "Sfpi1", "Nfkbiz")
  Consolidate working with text: convert a binomial scientific name into a 5-letter label.
 
 
- #### Glueing vectors together to make matrices:
+#### Glueing vectors together to make matrices:
 
 
  Task: make a vector with cell-types, according to Fig. 3, use `rep()` expressions, don't type out every line.
@@ -222,10 +220,10 @@ genes <- c("Spic", "Cebpb", "Lyz2", "Sfpi1", "Nfkbiz")
 
 
 
- ## Lists
+## Lists
 
 
- ### Data frames
+### Data frames
  
 
  A data frame is a matrix or a "set" of data. It is a list of vectors and/or factors of the same length, that are related "across", such that data in the same position come from the same experimental unit (subject, animal, etc).
