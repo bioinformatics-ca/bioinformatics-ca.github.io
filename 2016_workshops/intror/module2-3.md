@@ -96,10 +96,10 @@ for (i in 2:ncol(sup3)) {
  1 - For the top 10 Monocy.
  
  2 - translate their gene symbols to Entrez
-     IDs using http://biodbnet.abcc.ncifcrf.gov/
+     IDs using <http://biodbnet.abcc.ncifcrf.gov/>
      
  3 - see whether they are co-expressed (i.e.
-     presumably coregulated) at http://coxpresdb.jp/
+     presumably coregulated) at <http://coxpresdb.jp/>
 
 
 
