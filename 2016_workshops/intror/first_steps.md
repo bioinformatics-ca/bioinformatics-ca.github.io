@@ -340,9 +340,9 @@ is.ordered(sampleGrades)
  Factors are useful since they support a number of analysis methods such as ordering boxplots, or calculating 
 
  For more on factors, have a look at this factor tutorial by Jenny Bryan: 
- http://www.stat.ubc.ca/~jenny/STAT545A/block08_bossYourFactors.html
+ <http://www.stat.ubc.ca/~jenny/STAT545A/block08_bossYourFactors.html>
  and this discussion on their use:
- http://stackoverflow.com/questions/3445316/factors-in-r-more-than-an-annoyance
+ <http://stackoverflow.com/questions/3445316/factors-in-r-more-than-an-annoyance>
  
 
  But for our purposes, the default behavior of R, to treat all strings as factors is entirely unwanted and needs to be turned off. Always use the parameter stringsAsFactors = FALSE to achieve this. If you don't you are in for some bad surprises if e.g. there is a character "contaminant" in a numeric column.
