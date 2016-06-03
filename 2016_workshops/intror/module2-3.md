@@ -9,6 +9,7 @@ image: CBW_introtoR-icon.jpg
 
  
  ================================================== 
+ 
  Canadian Bioinformatics Workshops Series           
  Toronto, May 20 2015                               
  Introduction to R                                  
