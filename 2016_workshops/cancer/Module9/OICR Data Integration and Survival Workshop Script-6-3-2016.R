@@ -1,5 +1,14 @@
 ############################
 #
+#   OICR Cancer Workshop Module 9: Data Integration and Survival Workshop
+#   Lab Script
+#   
+#   Lauren Erdman
+#   
+############################
+
+############################
+#
 #   NOTE: THIS CODE REQUIRES THE FOLLOWING PACKAGES TO BE INSTALLED
 #   SNFtool
 #   RColorBrewer

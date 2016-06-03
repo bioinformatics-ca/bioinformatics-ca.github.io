@@ -1,6 +1,7 @@
 ---
 title: "OICR Module 9 Data Integration and Survival Workshop"
-output: html_document
+author: "Lauren Erdman, Goldenberg Lab"
+output: pdf_document
 ---
 
 #####   NOTE: THIS CODE REQUIRES THE FOLLOWING PACKAGES TO BE INSTALLED
@@ -11,10 +12,9 @@ output: html_document
 
 ###First install packages and set working directory
 ```{r}
-## command line package installation
-install.packages(pkgs = c("SNFtool","RColorBrewer","survival","rms"))
+# install.packages(pkgs = c("SNFtool","RColorBrewer","survival","rms"))
 
-setwd("Your working directory here")
+setwd("C:/Users/Owner/Desktop/Goldenberg Lab/OICR Workshop Materials/Data/")
 
 ```
 
