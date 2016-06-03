@@ -542,6 +542,8 @@ Useful plugins:
   
   [RData](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/cancer/Module9/OICR-Survival-Workshop-Data-revised-6-3-2016.RData)
   
+  [R Commands](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/cancer/Module9/OICR%20Data%20Integration%20and%20Survival%20Workshop%20Script-6-3-2016.R)
+  
 #### Tools:
 
 [Predict tool](http://www.predict.nhs.uk/predict.html)
