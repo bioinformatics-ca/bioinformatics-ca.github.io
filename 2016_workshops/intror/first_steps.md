@@ -7,7 +7,8 @@ header2: Workshop pages for students
 image: CBW_introtoR-icon.jpg
 ---
 
- ==================================================
+ ==================================================  
+ 
  Canadian Bioinformatics Workshops Series           
  Toronto, May 20 2015                               
  Introduction to R                                  
