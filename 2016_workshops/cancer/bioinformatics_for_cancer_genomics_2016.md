@@ -536,7 +536,11 @@ Useful plugins:
 
 *<font color="#827e9c">Anna Goldenberg and Lauren Erdman</font>*
 
-  [Lecture and Lab](https://bioinformatics.ca/bicg-module-9-2016)
+  [Lecture](https://bioinformatics.ca/bicg-module-9-2016)
+  
+  [Updated Lab](https://bioinformatics.ca/bicg-module-9-lab-2016)
+  
+  [RData](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/cancer/Module9/OICR-Survival-Workshop-Data-revised-6-3-2016.RData)
   
 #### Tools:
 
