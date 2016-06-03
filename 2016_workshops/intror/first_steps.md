@@ -10,7 +10,7 @@ image: CBW_introtoR-icon.jpg
  ==================================================  
  
  Canadian Bioinformatics Workshops Series           
- Toronto, May 20 2015                               
+ Toronto, June 6, 2016                                
  Introduction to R                                  
                                                     
  Faculty: Boris Steipe <boris.steipe@utoronto.ca>   
@@ -30,7 +30,7 @@ image: CBW_introtoR-icon.jpg
  Let's set the current "working directory" to your CBW
  workshop directory. You have a workshop directory, right?
 
- where are you now?
+ Where are you now?
 
 ~~~r
 getwd()
@@ -44,14 +44,14 @@ setwd("/path/of/your/course\ directory")  #"escape" blank spaces
 list.files()
 ~~~
 
- A note for Windows: the "\" (backslash) has a particular
+ A note for Windows: the `\` (backslash) has a particular
  meaning in strings: it "escapes" the following character.
- Therefore something like setwd("C:\My\R\files\") will NOT
+ Therefore something like `setwd("C:\My\R\files\")` will NOT
  work. You have to "escape the escape character" to turn it
- into a "literal" backslash: setwd("C:\\My\\R\\files\\") or
- R will translate for you: setwd("C:/My/R/files/")
+ into a "literal" backslash: `setwd("C:\\My\\R\\files\\")` or
+ R will translate for you: `setwd("C:/My/R/files/")`
 
- I usually write setwd("whatever/path") as the first command
+ I usually write `setwd("whatever/path")` as the first command
  in my scripts. More on that when we start writing programs.
 
  But how do you know what the full path for the working
@@ -88,10 +88,10 @@ list.files()
 length(dir("~", pattern = ".txt"))
 ~~~
 
- In the console, use <up-arrow>, <left-arrow> etc. to
+ In the console, use `<up-arrow>`, `<left-arrow>` etc. to
  retrieve and edit previous commands.
 
- You can use source("filename") to execute an entire
+ You can use `source("filename")` to execute an entire
  script at once.
 
 
@@ -141,11 +141,11 @@ x <- pi
  Task: find out how to control the number of digits printed in a print() expression.
 
 ~~~r
- sprintf() # gives the most control
+sprintf() # gives the most control
 sprintf("%50.49f", pi)
 ~~~
 
- Digression: Anatomy of a function ...
+ #### Digression: Anatomy of a function ...
 
 
  Various functions exist to display the properties of R objects. Here
@@ -172,11 +172,11 @@ typeInfo <- function(x) {
 
 
 
- Creating vectors
+ ### Creating vectors
 
  Recapitulate:
  
- ~~~r
+~~~r  
 v <- c(1, 1, 2, 3, 5, 8)
 v
 v <- c(v, 13, 25)
@@ -186,7 +186,7 @@ v
 seq(-0.5, 0.5, by = 0.1)
 rep("Ha", 3)
 
-genes <- c("Spic", "Cebpb", "Lyz2", "Sfpi1", "Nfkbiz")
+genes <- c("Spic", "Cebpb", "Lyz2", "Sfpi1", "Nfkbiz")  
 ~~~
 
  These are some of the genes that are markers for
@@ -204,15 +204,15 @@ genes <- c("Spic", "Cebpb", "Lyz2", "Sfpi1", "Nfkbiz")
  Task:
  Consolidate working with text: convert a binomial scientific name into a 5-letter label.
 
- Glueing vectors together to make matrices:
+ #### Glueing vectors together to make matrices:
 
- Task: make a vector with cell-types, according to Fig. 3, use rep() expressions, don't type out every line.
+ Task: make a vector with cell-types, according to Fig. 3, use `rep()` expressions, don't type out every line.
 
 
  Task: Make a matrix from the gene names, so that each row contains the cell type and a characterisitc gene.
 
 
- Task: use cbind() to assemble the two vectors into one matrix.
+ Task: use `cbind()` to assemble the two vectors into one matrix.
 
 
 
@@ -229,23 +229,23 @@ genes <- c("Spic", "Cebpb", "Lyz2", "Sfpi1", "Nfkbiz")
 
  Importantly, the columns can have different type!
 
-~~~r
+~~~r  
 myDF <- data.frame(genes = c("Abc1", "Qrz", "Fubr31"),
                    expr = c(168059, 23490578, 34),
                    induced = c(TRUE, FALSE, FALSE))
 myDF[-2,]
-typeInfo(myDF)
+typeInfo(myDF)  
 ~~~
 
  What is it with the factors? ...
 
 
-~~~r
+~~~r  
 myDF <- data.frame(genes = c("Abc1", "Qrz", "Fubr31"),
                    expr = c(168059, 23490578, 34),
                    induced = c(TRUE, FALSE, FALSE),
                    stringsAsFactors = FALSE)
-typeInfo(myDF)
+typeInfo(myDF)  
 ~~~
 
 
@@ -279,7 +279,7 @@ typeInfo(myDF)
  http://cran.r-project.org/doc/manuals/R-data.html
  See:
  
- ~~~r
+~~~r
 ?read.table  #... includes read.csv and read.delim
 ?read.fwf    #... for "fixed width format"
 ?readLines   #... for reading in text-files line by line
@@ -309,7 +309,7 @@ typeInfo(myDF)
 
  To illustrate.
  
- ~~~r
+~~~r
 genders <- factor(c("m", "f", "f", "m", "f"))
 genders
 typeInfo(genders)
@@ -353,7 +353,7 @@ myDF3     # :-)
  Task:
  Repair the sup3 data.frame - realod it with stringsAsFactors = FALSE
 
-~~~R
+~~~r
 sup3[1:10,]
 head(sup3)
 tail(sup3)
@@ -410,7 +410,7 @@ B220synonyms %in% toupper(sup3$genes)
 
  Positive control!
  
- ~~~r
+~~~r
 c(B220synonyms, "CD19") %in% toupper(sup3$genes)
 ~~~
 
