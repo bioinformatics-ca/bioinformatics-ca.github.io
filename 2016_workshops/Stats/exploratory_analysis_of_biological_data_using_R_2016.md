@@ -13,7 +13,6 @@ image: CBW_R_icon.jpg
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
      <li><a href="#laptop_setup">Laptop Setup Instructions</a></li>
-     <li><a href="#pre_readings">Pre-Workshop Tutorials</a></li>
       <li><a href="#day1">Day 1</a>
          <ul class="sub2">  
            <li><a href="#welcome">Welcome</a></li>
@@ -45,13 +44,21 @@ image: CBW_R_icon.jpg
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
-  Post your workshop questions <a href="http://todaysmeet.com/EDA2016">here</a>!
+  Post your workshop questions <a href="http://noteapp.com/EDAinR">here</a>!
 
 [&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
-  Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/population/laptop_setup_instructions.pdf">here</a>.
+1) Install the most recent version of R for your operating system by following the links from <http://www.r-project.org/>  
+ 
+2) Download and install the most recent version of R Studio desktop from <http://www.rstudio.com/>
+ 
+3) Make sure you have a robust internet browser such as Firefox, Safari or Chrome (not Internet Explorer).
+ 
+4) Make sure you have a PDF viewer (e.g. Adobe Acrobat, Preview or similar) or that you can read PDF files in your Web browser.
+ 
+5) Create a project directory for data files and source code for this workshop.
   
 ##### Difference Between **R** and **RStudio**
 <br>
