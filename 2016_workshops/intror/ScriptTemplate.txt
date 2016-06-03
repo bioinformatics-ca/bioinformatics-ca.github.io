@@ -1,0 +1,53 @@
+# scriptTemplate.R
+#
+# Purpose: 
+# Version:
+# Date:
+# Author:
+# 
+# Input:
+# Output:
+# Dependencies:
+#
+# ToDo:
+# Notes:
+# ==========================================================
+
+setwd("CBWDIR")
+
+# ====  PARAMETERS  ========================================
+
+inFile <- "genes.csv"   # explain contents of this file
+RT <- 8.314 * (273.16 + 25.0)  # explain meaning of constant
+
+
+# ====  PACKAGES  =========================================
+
+if (!require(RUnit, quietly=TRUE)) {
+	install.packages("RUnit")
+	library(RUnit)
+}
+
+
+# ====  FUNCTIONS  =========================================
+
+# Define functions or source external files
+source("CBWDIR/Utilities.R")
+
+
+# ====  ANALYSIS  ==========================================
+
+
+geneList <- read.csv("TRAF7_coex_list.csv", stringsAsFactors=FALSE)
+
+
+# ====  TESTS  =============================================
+
+test_myFunctionTaxID <- function() {
+	checkEquals(myFunction(c("taxID: 9606", "KLF4")), "9606")
+	checkException(myFunction(c("ZFP36", "KLF4")), silent=TRUE)
+}
+
+
+
+# [END]
