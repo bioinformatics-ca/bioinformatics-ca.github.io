@@ -194,8 +194,7 @@ genes <- c("Spic", "Cebpb", "Lyz2", "Sfpi1", "Nfkbiz")
  monocytes...
 
  Often our data can be copied and pasted: open the text file
- for "Fig_3-CharacteristicGenes".
- http://bioinformatics.ca/workshop_wiki/images/b/b8/Fig_3-CharacteristicGenes.txt
+ for [Fig_3-CharacteristicGenes](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/intror/Fig_3-CharacteristicGenes.txt)
 
  Task: how do we get this data into a vector?
        First think of a way to do this by hand.
@@ -266,8 +265,11 @@ typeInfo(myDF)
  A word on Excel: it's a very good spreadsheet program, it is miserable and often wrong on statistics, and it makes horrible, horrible plots.
 
  To elaborate - see the two links below:
- http://www.practicalstats.com/xlsstats/excelstats.html
- http://www.burns-stat.com/documents/tutorials/spreadsheet-addiction/
+ 
+ <http://www.practicalstats.com/xlsstats/excelstats.html>
+ 
+ <http://www.burns-stat.com/documents/tutorials/spreadsheet-addiction/>
+ 
  ... these are not merely cosmetic problems!
 
  Therefore: Ok to keep data in Excel spreadsheets if you must - but read it into R for any analysis!
@@ -287,15 +289,22 @@ typeInfo(myDF)
 ~~~
 
  Excel spreadsheets should be converted to csv or tsv format. Alternatively the package xlsreadwrite is available via CRAN ... see
- http://cran.r-project.org/web/packages/xlsReadWrite/ ... but I think this is unsound practice.
+ <http://cran.r-project.org/web/packages/xlsReadWrite/> ... but I think this is unsound practice.
 
  Task:
- 1 - load the data in Table_S3.xls on the Wiki into Excel, and save it as a .csv (comma separated values) file.
+ 
+ 1 - load the data in [Table_S3.xls](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/intror/Table_S3.xls) into Excel, and save it as a .csv (comma separated values) file.
+ 
  2 - Examine the file (a plain text file) in a text-editor (such as R). 
+ 
  3 - Read the table into R, assigning it to a variable. I usually give the first input of data the variable name "rawDat" since it will usually be processed before it becomes meaningful for analysis.
+ 
  4 - Use head() to look at the beginning of the object.
+ 
  5 - Remove any unneeded header rows.
+ 
  6 - Give the columns names that reflect the cell type (cf.  Figure 2c), and the stimulus status.
+ 
  7 - Use typeInfo() to analyse the object you have created.
 
  Much output. For a heavy-duty function, we should rewrite type info to limit the output ...
