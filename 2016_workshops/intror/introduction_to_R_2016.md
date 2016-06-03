@@ -149,7 +149,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
   *<font color="#827e9c">Boris Steipe</font>*
 
-  Scripts:
+  [Scripts](http://bioinformatics-ca.github.io/intror_module2-3_2016/)
   
   Resources:
   
