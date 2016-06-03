@@ -125,7 +125,8 @@ findFn("directory")
 ### Getting data into R
 
 
- Assigning variables
+#### Assigning variables
+
 
 ~~~r
 x <- "1"
@@ -175,6 +176,7 @@ typeInfo <- function(x) {
 
  ### Creating vectors
 
+
  Recapitulate:
  
 ~~~r  
@@ -205,7 +207,9 @@ genes <- c("Spic", "Cebpb", "Lyz2", "Sfpi1", "Nfkbiz")
  Task:
  Consolidate working with text: convert a binomial scientific name into a 5-letter label.
 
+
  #### Glueing vectors together to make matrices:
+
 
  Task: make a vector with cell-types, according to Fig. 3, use `rep()` expressions, don't type out every line.
 
@@ -219,8 +223,6 @@ genes <- c("Spic", "Cebpb", "Lyz2", "Sfpi1", "Nfkbiz")
 
 
  ## Lists
-
-
 
 
  ### Data frames
