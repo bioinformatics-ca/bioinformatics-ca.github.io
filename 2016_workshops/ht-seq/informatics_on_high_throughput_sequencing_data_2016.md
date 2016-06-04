@@ -96,9 +96,7 @@ image: CBW_High-throughput_icon.jpg
 
 Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into_the_Amazon_cloud/).
 
-* These instructions will **ONLY** be relevant in class, as the Cloud will not be accessible from home in advance of the class.
- 
-* We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download this **link certificate here**. Otherwise if you plan on using Windows (with Putty and Winscp), please download this **link certificate here**.
+* We have set up 30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. If you plan on using Linux or Mac OS X, please download [this certificate](http://cbwmain.dyndns.info/private/CBWCG.pem). Otherwise if you plan on using Windows (with Putty and Winscp), please download [this certificate](http://cbwmain.dyndns.info/private/CBWCG.ppk).
 
 [&uarr;](#back_to_top)
 
