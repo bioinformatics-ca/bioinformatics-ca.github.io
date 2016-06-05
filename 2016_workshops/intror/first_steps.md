@@ -22,7 +22,7 @@ image: CBW_introtoR-icon.jpg
  
 ### Let's begin:
 
-1. Place a <span style="color: #EF40D1;">**pink**</span> PostIt on your laptop screen so we know you are working on these instructions.
+1. Place a <span style="color:#EF40D1">**pink**</span> PostIt on your laptop screen so we know you are working on these instructions.
 2. Open this page in a browser on your computer.
 3. You should have **R** installed. If you don't, [**install R now**](http://cran.utstat.utoronto.ca/).
 4. You should have **RStudio** installed. If you don't, [**install RStudio now**](https://www.rstudio.com/products/rstudio/download/).
