@@ -19,13 +19,54 @@ image: CBW_introtoR-icon.jpg
                                                     
  ==================================================
 
+ 
+### Let's begin:
 
+1. Place a <span style="color: #EF40D1;">**pink**</span> PostIt on your laptop screen so we know you are working on these instructions.
+2. Open this page in a browser on your computer.
+3. You should have **R** installed. If you don't, [**install R now**](http://cran.utstat.utoronto.ca/).
+4. You should have **RStudio** installed. If you don't, [**install RStudio now**](https://www.rstudio.com/products/rstudio/download/).
+5. Replace the  <span style="color: #EF40D1;">**pink**</span> PostIt <span style="color: #50EF40;">**green**</span> with a green one so we know you are done with this checkpoint.
+
+---
  
 ### Environment and user interface
 
 
 #### Set up your workspace
 
+Most of the workshop materials will be bundled in RStudio *projects* that you download on your computer. Let's spend a moment to figure out where to put the project files, to keep things organized. We'll discuss
+
+1. organizing your hard-drive;
+2. organizing project directories.
+
+Supporting slides are [here](https://docs.google.com/presentation/d/1PDktUsib1RHqlgK62m2AJ9q3olHbhONElNFMga87AZA/edit?usp=sharing) in case you need them.
+
+
+#### Install the first project
+
+1. open **RStudio**
+2. Select **File &rarr; NewProject...**
+3. Click on **Version Control**
+4. Click on **Git**
+5. Enter https://github.com/hyginn/R_Intro-Environment as the **Repository URL**.
+6. Click on **Browse...** to find your **training** directory...
+7. (The *project-directory name* should autofill to ``)
+8. Click **Create Project**; the project files should be downloaded and ask you to type `init()` to begin.
+9. Place a <span style="color: #50EF40;">**green**</span> PostIt if this has worked for you; place a <span style="color: #EF40D1;">**pink**</span> PostIt if you run into issues or have questions.
+
+
+---
+
+**From here onward, we will work with the scripts contained in the project files!
+
+---
+
+
+
+
+
+### First steps
 
  Let's set the current "working directory" to your CBW
  workshop directory. You have a workshop directory, right?
