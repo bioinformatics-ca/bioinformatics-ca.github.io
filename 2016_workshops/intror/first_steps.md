@@ -22,11 +22,11 @@ image: CBW_introtoR-icon.jpg
  
 ### Let's begin:
 
-1. Place a <span style="color:#EF40D1">**pink**</span> PostIt on your laptop screen so we know you are working on these instructions.
+1. Place a **pink** PostIt on your laptop screen so we know you are working on these instructions.
 2. Open this page in a browser on your computer.
 3. You should have **R** installed. If you don't, [**install R now**](http://cran.utstat.utoronto.ca/).
 4. You should have **RStudio** installed. If you don't, [**install RStudio now**](https://www.rstudio.com/products/rstudio/download/).
-5. Replace the  <span style="color: #EF40D1;">**pink**</span> PostIt <span style="color: #50EF40;">**green**</span> with a green one so we know you are done with this checkpoint.
+5. Replace the **pink** PostIt with a **green** one so we know you are done with this checkpoint.
 
 ---
  
@@ -53,12 +53,12 @@ Supporting slides are [here](https://docs.google.com/presentation/d/1PDktUsib1RH
 6. Click on **Browse...** to find your **training** directory...
 7. (The *project-directory name* should autofill to ``)
 8. Click **Create Project**; the project files should be downloaded and ask you to type `init()` to begin.
-9. Place a <span style="color: #50EF40;">**green**</span> PostIt if this has worked for you; place a <span style="color: #EF40D1;">**pink**</span> PostIt if you run into issues or have questions.
+9. Place a **green** PostIt if this has worked for you; place a **pink** PostIt if you run into issues or have questions.
 
 
 ---
 
-**From here onward, we will work with the scripts contained in the project files!
+**From here onward, we will work with the scripts contained in the project files!**
 
 ---
 
