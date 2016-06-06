@@ -62,7 +62,7 @@ image: CBW_High-throughput_icon.jpg
   1) **R Preparation tutorials**: You are expected to have completed the following tutorials in **R** beforehand. The tutorial should be very accessible even if you have never used **R** before.
 
 * The [CBW R tutorial](http://bioinformatics-ca.github.io/CBW_R_Tutorial/)
-* [Quick and Dirty Guide to **R**](http://ww2.coastal.edu/kingw/statistics/R-tutorials/text/quick&dirty_R_revised_080715.txt)
+* [Quick and Dirty Guide to **R**](http://ww2.coastal.edu/kingw/statistics/R-tutorials/text/quick&dirty_R.txt)
 * The [R command cheat sheet](../../resources/R_Short-refcard.pdf)
 
 2) **UNIX Preparation tutorials**: Please complete tutorials #1-3 on UNIX at http://www.ee.surrey.ac.uk/Teaching/Unix/
@@ -71,8 +71,7 @@ image: CBW_High-throughput_icon.jpg
 
 3) **IGV Tutorial**: Review how to use IGV Genome Browser if you have not used this tool before.
 
-* [IGV tutorial](../../resources/IGV_Tutorial.pdf)
-* link to datasets
+* [IGV tutorial](http://bioinformatics-ca.github.io/bioinformatics_for_cancer_genomics_IGV_lab_2016/)
 
 [&uarr;](#back_to_top)
 
