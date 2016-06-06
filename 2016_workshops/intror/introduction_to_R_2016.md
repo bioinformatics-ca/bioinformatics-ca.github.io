@@ -44,7 +44,7 @@ Please complete our [survey](https://www.surveymonkey.com/r/FFVC5DL).  We value 
 
 [&uarr;](#back_to_top)
 
-###
+### Class Photo
 
 ![Class photo](https://bioinformatics-ca.github.io/2016_workshops/intror/cbw-june-6.jpeg)
 
