@@ -49,7 +49,7 @@ This tutorial was intended for **IGV v2.3**, which is available on the [Download
 
 Your instructors may update the lab with clarifications or more bonus sections.
 
-# Visualization Part 1: Getting familiar with IGV=
+# Visualization Part 1: Getting familiar with IGV
 
 We will be visualizing read alignments using the
 [Integrative Genomics Viewer](http://www.broadinstitute.org/igv/home), 
