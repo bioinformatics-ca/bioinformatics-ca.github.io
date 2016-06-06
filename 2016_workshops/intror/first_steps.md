@@ -80,7 +80,7 @@ Supporting slides are [here](https://docs.google.com/presentation/d/1PDktUsib1RH
 1. In RStudio Select **File &rarr; NewProject...**
 3. Click on **Version Control**
 4. Click on **Git**
-5. Enter `https://github.com/hyginn/R_Intro` as the **Repository URL**.
+5. Enter `https://github.com/hyginn/R-Intro` as the **Repository URL**.
 6. Click on **Browse...** to find your **training** directory...
 7. (The *project-directory name* should autofill to `R_Intro`)
 8. Click **Create Project**; the project files should be downloaded and the *console* should prompt you to type `init()` to begin.
