@@ -46,7 +46,7 @@ Please complete our [survey](https://www.surveymonkey.com/r/FFVC5DL).  We value 
 
 ###
 
-[Class photo](https://bioinformatics-ca.github.io/2016_workshops/intror/cbw-june-6.jpeg)
+![Class photo](https://bioinformatics-ca.github.io/2016_workshops/intror/cbw-june-6.jpeg)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
