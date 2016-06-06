@@ -37,6 +37,10 @@ image: CBW_introtoR-icon.jpg
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="https://noteapp.com/IntroR2016">here</a>!
+  
+### Workshop Survey
+
+Please complete our [survey](https://www.surveymonkey.com/r/FFVC5DL).  We value your feedback and use it to make future workshops better!
 
 [&uarr;](#back_to_top)
 
