@@ -63,17 +63,56 @@ Supporting slides are [here](https://docs.google.com/presentation/d/1PDktUsib1RH
 
 ---
 
-&nbsp;
+**Before we move on: [**let's list our progress!**](https://docs.google.com/document/d/1bYo3ds6NP1UXc9jpFEz4riATyPN4Kwf_TKIu4LrAzsI/edit?usp=sharing)
+
+---
 
 &nbsp;
 
 &nbsp;
 
-&nbsp;
+
+
+### First steps with R: expressions, functions, data ...
+
+#### Install the second (main) project of the day:
+
+1. In RStudio Select **File &rarr; NewProject...**
+3. Click on **Version Control**
+4. Click on **Git**
+5. Enter `https://github.com/hyginn/R_Intro` as the **Repository URL**.
+6. Click on **Browse...** to find your **training** directory...
+7. (The *project-directory name* should autofill to `R_Intro`)
+8. Click **Create Project**; the project files should be downloaded and the *console* should prompt you to type `init()` to begin.
+9. Type `init()` into the *console* pane.
+9. Place a **green** PostIt if this has worked for you; place a **pink** PostIt if you run into issues or have questions.
+
+---
+
+**Continue with the scripts and resources contained in the project files!**
+
+---
+
+**Before we break up: [**let's list our progress!**](https://docs.google.com/document/d/1bYo3ds6NP1UXc9jpFEz4riATyPN4Kwf_TKIu4LrAzsI/edit?usp=sharing)
+
+---
+
+
+### Useful Resources
+* The R help mailing list: https://stat.ethz.ch/mailman/listinfo/r-help
+* Rseek: the specialized search engine for R topics: http://rseek.org/
+* R questions on stackoverflow: http://stackoverflow.com/questions/tagged/r
+* The Comprehensive R Archive Network CRAN: http://cran.r-project.org/
+* The CRAN task-view collection: http://cran.r-project.org/web/views/
+* Bioconductor task views: http://www.bioconductor.org/packages/release/BiocViews.html
 
 
 
-### First steps
+
+
+<!--
+
+The material below has all been moved into the project files. This is kept only for reference, it is now outdated.  bs 2016-06-06
 
  Let's set the current "working directory" to your CBW
  workshop directory. You have a workshop directory, right?
@@ -477,3 +516,5 @@ c(B220synonyms, "CD19") %in% toupper(sup3$genes)
 
  To do more than that, we really need to look at writing "programs".
 
+[END]
+-->
