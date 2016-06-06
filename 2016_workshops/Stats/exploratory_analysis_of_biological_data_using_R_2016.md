@@ -97,19 +97,13 @@ That was the problem when students installed things in **RStudio** at the comman
 
 [&uarr;](#back_to_top)
 
-### Data Sets for Modules 1 - 5 <a id="data_sets"></a>
-
-**link datasets here**
-
 [&uarr;](#back_to_top)
 
 ###  Module 1: Exploratory Data Analysis <a id="module_1"></a>
 
   *<font color="#827e9c">Boris Steipe</font>*
   
-  Lecture:
-  
-  Scripts:
+  [Lecture](https://bioinformatics.ca/eda-module-1-2016)
   
   Resources:
   
@@ -137,7 +131,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
   *<font color="#827e9c">Boris Steipe</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/eda-module-2-2016)
   
   Scripts:
   
@@ -155,7 +149,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
   *<font color="#827e9c">Boris Steipe</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/eda-module-3-2016)
   
   Scripts:
 
@@ -165,7 +159,7 @@ That was the problem when students installed things in **RStudio** at the comman
 
 ### Integrated Assignment Part 1 <a id="assignment1"></a>
 
-*<font color="#827e9c">TBA</font>*
+*<font color="#827e9c">Lauren Erdman and Ben Brew</font>*
 
 Part 1:
 
@@ -185,7 +179,7 @@ For your reference:
 
   *<font color="#827e9c">Boris Steipe</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/eda-module-4-2016)
   
   Scripts:
   
@@ -225,7 +219,7 @@ Read with:
 
   *<font color="#827e9c">Boris Steipe</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/eda-module-5-2016)
   
   Scripts:
   
