@@ -97,7 +97,6 @@ That was the problem when students installed things in **RStudio** at the comman
 
 [&uarr;](#back_to_top)
 
-[&uarr;](#back_to_top)
 
 ###  Module 1: Exploratory Data Analysis <a id="module_1"></a>
 
