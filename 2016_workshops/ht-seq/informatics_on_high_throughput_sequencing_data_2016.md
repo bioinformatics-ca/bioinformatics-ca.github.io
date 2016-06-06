@@ -126,7 +126,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ###  Module 2: Genome Alignment <a id="module_2"></a>
 
-  *<font color="#827e9c">Jared Simpson</font>*
+  *<font color="#827e9c">Mathieu Bourgey</font>*
   
   Lecture:
   
