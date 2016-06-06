@@ -111,12 +111,9 @@ That was the problem when students installed things in **RStudio** at the comman
 
 3) **IGV Tutorial**: Review how to use IGV Genome Browser if you have not used this tool before.
 
-* The [IGV Tutorial](../../resources/IGV_Tutorial.pdf)
-* *Datasets too large for Github*
+* The [IGV Tutorial](http://bioinformatics-ca.github.io/bioinformatics_for_cancer_genomics_IGV_lab_2016/)
 
-4) **Sequencing Terminology**:
-
-* *Coming soon*
+4) [Sequencing Terminology](http://www.ncbi.nlm.nih.gov/projects/genome/glossary.shtml)
 
 [&uarr;](#back_to_top)
 
