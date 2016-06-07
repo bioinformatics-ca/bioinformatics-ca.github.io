@@ -162,9 +162,9 @@ That was the problem when students installed things in **RStudio** at the comman
   
 ---
 
-**In RStudio, make a new project from `https://github.com/hyginn/R_EDA-Regression` as the **Repository URL**
+**In RStudio, make a new project from `https://github.com/hyginn/R_EDA-Regression` as the Repository URL**
 
-**Before we move on: [**let's list our progress!**](https://docs.google.com/document/d/1l6vE8ImKPuE-s8Xltpx9NpSl6YaE4t2pY8qicH05Ihs/edit?usp=sharing)
+**Before we move on: [let's list our progress!**](https://docs.google.com/document/d/1l6vE8ImKPuE-s8Xltpx9NpSl6YaE4t2pY8qicH05Ihs/edit?usp=sharing)
 
 ---
   
@@ -186,9 +186,9 @@ That was the problem when students installed things in **RStudio** at the comman
   
 ---
 
-**In RStudio, make a new project from `https://github.com/hyginn/R_EDA-DimensionReduction` as the **Repository URL**
+**In RStudio, make a new project from `https://github.com/hyginn/R_EDA-DimensionReduction` as the Repository URL**
 
-**Before we move on: [**let's list our progress!**](https://docs.google.com/document/d/1l6vE8ImKPuE-s8Xltpx9NpSl6YaE4t2pY8qicH05Ihs/edit?usp=sharing)
+**Before we move on: [let's list our progress!**](https://docs.google.com/document/d/1l6vE8ImKPuE-s8Xltpx9NpSl6YaE4t2pY8qicH05Ihs/edit?usp=sharing)
 
 ---
 
