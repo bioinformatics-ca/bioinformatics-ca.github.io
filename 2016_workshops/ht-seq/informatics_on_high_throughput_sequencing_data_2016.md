@@ -324,4 +324,4 @@ Galaxy Resources:
 
 ***
 
-![test image](https://github.com/mbourgey/CBW_HTseq_module2/blob/c4e60b9f58dd25d5f871c06c428627b85562a778/img/QualityBoxPlot.png)
+![test image](https://github.com/mbourgey/CBW_HTseq_module2/blob/c4e60b9f58dd25d5f871c06c428627b85562a778/img/QualityBoxPlot.png?raw=true)
