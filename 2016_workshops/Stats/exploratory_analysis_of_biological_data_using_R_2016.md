@@ -203,6 +203,8 @@ That was the problem when students installed things in **RStudio** at the comman
 
 *<font color="#827e9c">Lauren Erdman and Ben Brew</font>*
 
+[Lecture](https://bioinformatics.ca/eda-integrated-assignment-2016)
+
 Part 1:
 
 Part 2:
