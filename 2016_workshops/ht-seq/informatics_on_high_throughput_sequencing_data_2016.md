@@ -323,3 +323,5 @@ Galaxy Resources:
 [&uarr;](#back_to_top)
 
 ***
+
+![test image](https://github.com/mbourgey/CBW_HTseq_module2/img/QualityBoxPlot.png)
