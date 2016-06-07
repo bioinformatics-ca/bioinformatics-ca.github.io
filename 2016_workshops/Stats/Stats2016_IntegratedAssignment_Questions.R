@@ -29,7 +29,7 @@
 # SECTION 2  Import the data into R
 #
 
-# 2a  Load the "CCLE" R library by using the library() function.
+# 2a  Load the "CCLE" data by using the load() function.
 setwd("YOUR WORKING DIRECTORY")
 
 # 2b  Import the data into the workspace
