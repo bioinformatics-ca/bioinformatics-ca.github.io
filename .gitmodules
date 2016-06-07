@@ -1,0 +1,3 @@
+[submodule "2016_workshops/ht-seq/Module2_lab"]
+	path = 2016_workshops/ht-seq/Module2_lab
+	url = git@github.com:mbourgey/CBW_HTseq_module2.git
