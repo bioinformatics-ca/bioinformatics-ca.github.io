@@ -12,7 +12,7 @@ image: CBW_R_icon.jpg
      <ul class="sub1">
      <li><a href="#course_schedule">Course Schedule</a></li>
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
-     <li><a href="#laptop_setup">Laptop Setup Instructions</a></li>
+     <li><a href="#setup">Laptop Setup Instructions</a></li>
       <li><a href="#day1">Day 1</a>
          <ul class="sub2">  
            <li><a href="#welcome">Welcome</a></li>
@@ -48,18 +48,28 @@ image: CBW_R_icon.jpg
 
 [&uarr;](#back_to_top)
 
-###  Laptop Setup Instructions <a id="laptop_setup"></a>
+### Setup Instructions <a id="setup"></a>
 
-1) Install the most recent version of R for your operating system by following the links from <http://www.r-project.org/>  
- 
-2) Download and install the most recent version of R Studio desktop from <http://www.rstudio.com/>
- 
-3) Make sure you have a robust internet browser such as Firefox, Safari or Chrome (not Internet Explorer).
- 
-4) Make sure you have a PDF viewer (e.g. Adobe Acrobat, Preview or similar) or that you can read PDF files in your Web browser.
- 
-5) Create a project directory for data files and source code for this workshop.
-  
+
+Let's begin - start here by installing the first "project" we will work with, as soon as you come in:
+
+1. Place a **pink** PostIt on your laptop screen so we know you are working on these instructions.
+2. Make sure you have a "workshop directory" (perhaps called "training") in which you install all the RStudio "projects" we will be working with.
+3. You must have **R** installed. If you don't, [**install R now**](http://cran.utstat.utoronto.ca/).
+4. You must have **RStudio** installed. If you don't, [**install RStudio now**](https://www.rstudio.com/products/rstudio/download/).
+5. open **RStudio**
+6. Select **File &rarr; NewProject...**
+7. Click on **Version Control**
+8. Click on **Git**
+9. Enter `https://github.com/hyginn/R_EDA-Introduction` as the **Repository URL**.
+10. Click on **Browse...** to find your **training** directory...
+11. (The *project-directory name* should autofill to `R_EDA-Introduction`)
+12. Click **Create Project**; the project files should be downloaded and the *console* should prompt you to type `init()` to begin.
+13. Type `init()` into the *console* pane.
+14. Place a **green** PostIt if this has worked for you; place a **pink** PostIt if you run into issues or have questions.
+
+---
+<!--
 ##### Difference Between **R** and **RStudio**
 <br>
 **RStudio** doesn't know where libraries are installed, when they are not installed through the **RStudio** package manager. To tell **RStudio** the location, you can define the path in a startup file. Create a file called .Renviron . Inside there:
@@ -87,6 +97,7 @@ That was the problem when students installed things in **RStudio** at the comman
 [&uarr;](#back_to_top)
 
 ***
+-->
 
 ##  Day 1 <a id="day_1"></a>
 
@@ -125,6 +136,7 @@ That was the problem when students installed things in **RStudio** at the comman
 [&uarr;](#back_to_top)
 
 ***
+
 
 ###  Module 2: Regression Analysis <a id="module_2"></a>
 
