@@ -116,9 +116,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Zhibin Lu</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/htseq-module-1-2016)
   
-  Lab practical:
 
 [&uarr;](#back_to_top)
 
@@ -128,9 +127,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Mathieu Bourgey</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/htseq-module-2-2016)
   
-  Lab practical:
+  [Lab practical](https://bioinformatics.ca/htseq-module-2-lab-2016)
   
   Programs:
   
@@ -159,9 +158,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Florence Cavalli</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/htseq-module-3-2016)
   
-  Lab practical:
+  [Lab practical](https://bioinformatics-ca.github.io/2016_workshops/cancer/IGV_lab.md)
 
 [&uarr;](#back_to_top)
 
@@ -171,7 +170,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Jared Simpson</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/htseq-module-4-2016)
 
 [&uarr;](#back_to_top)
   
@@ -236,17 +235,15 @@ Integrated Assignment:
 
   *<font color="#827e9c">Guillaume Bourque</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/htseq-module-5-2016)
   
-  Lab practical:
+  [Lab practical](https://bioinformatics-ca.github.io/informatics_for_high-throughput_data_sequencing_2016_module5_lab/)
   
   [VCF format](https://samtools.github.io/hts-specs/VCFv4.2.pdf)
   
 **Pro-tip**: A great resource for putting together a GATK-based variant calling pipeline is the [GATK Best practices](http://www.broadinstitute.org/gatk/guide/topic?name=best-practices) page. This page will guide you in your quest to produce the best variant calls possible using GATK.
 
 **Pro-tip 2**: Another useful program for generating summary statistics on vcf files, filtering vcf files, and comparing multiple vcf files is [vcftools](http://vcftools.sourceforge.net/). 
-
-Data set:
 
 Programs:
 
@@ -262,7 +259,7 @@ Programs:
 
   *<font color="#827e9c">Guillaume Bourque</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/htseq-module-6-2016)
   
   Lab practical:
   
@@ -281,7 +278,7 @@ Programs:
 
   *<font color="#827e9c">David Morais</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/htseq-module-7-2016)
   
   Lab practical:
   
