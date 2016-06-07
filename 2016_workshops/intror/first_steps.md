@@ -63,7 +63,7 @@ Supporting slides are [here](https://docs.google.com/presentation/d/1PDktUsib1RH
 
 ---
 
-**Before we move on: [**let's list our progress!**](https://docs.google.com/document/d/1bYo3ds6NP1UXc9jpFEz4riATyPN4Kwf_TKIu4LrAzsI/edit?usp=sharing)
+**Before we move on: [**let's list our progress!**](https://docs.google.com/document/d/1l6vE8ImKPuE-s8Xltpx9NpSl6YaE4t2pY8qicH05Ihs/edit?usp=sharing)
 
 ---
 
