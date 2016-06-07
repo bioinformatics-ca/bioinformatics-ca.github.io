@@ -46,6 +46,10 @@ image: CBW_R_icon.jpg
 
   Post your workshop questions <a href="http://noteapp.com/EDAinR">here</a>!
   
+### Workshop Survey
+
+Your feedback is important to us.  Please complete our [workshop survey](https://www.surveymonkey.com/r/2C5BTPB).
+  
 ### Class Photo
 
 ![Class photo](https://bioinformatics-ca.github.io/2016_workshops/Stats/CBW-June-7.jpeg)
