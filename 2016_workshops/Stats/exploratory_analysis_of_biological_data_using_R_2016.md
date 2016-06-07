@@ -45,6 +45,10 @@ image: CBW_R_icon.jpg
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://noteapp.com/EDAinR">here</a>!
+  
+### Class Photo
+
+![Class photo](https://bioinformatics-ca.github.io/2016_workshops/Stats/CBW-June-7.jpeg)
 
 [&uarr;](#back_to_top)
 
