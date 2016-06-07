@@ -123,11 +123,20 @@ That was the problem when students installed things in **RStudio** at the comman
   
   [Lecture](https://bioinformatics.ca/eda-module-1-2016)
   
+---
+
+**Before we move on: [let's list our progress!](https://docs.google.com/document/d/1l6vE8ImKPuE-s8Xltpx9NpSl6YaE4t2pY8qicH05Ihs/edit?usp=sharing)
+**
+
+---
+
+  
+<!--
   Resources:
   
   * [Single-cell RNA-Seq defines cell type](http://www.ncbi.nlm.nih.gov/pubmed/24531970)
   * [Beyond Bar and Line-Graphs](http://www.ncbi.nlm.nih.gov/pubmed/25901488)
-  
+-->  
   Helpful Links:
   
 * [The **R** help mailing list](https://stat.ethz.ch/mailman/listinfo/r-help)
@@ -152,7 +161,14 @@ That was the problem when students installed things in **RStudio** at the comman
   
   [Lecture](https://bioinformatics.ca/eda-module-2-2016)
   
-  Scripts:
+---
+
+**In RStudio, make a new project from `https://github.com/hyginn/R_EDA-Regression` as the Repository URL**
+
+**Before we move on: [let's list our progress!](https://docs.google.com/document/d/1l6vE8ImKPuE-s8Xltpx9NpSl6YaE4t2pY8qicH05Ihs/edit?usp=sharing)
+**
+
+---
   
   Links:
   
@@ -170,7 +186,14 @@ That was the problem when students installed things in **RStudio** at the comman
   
   [Lecture](https://bioinformatics.ca/eda-module-3-2016)
   
-  Scripts:
+---
+
+**In RStudio, make a new project from `https://github.com/hyginn/R_EDA-DimensionReduction` as the Repository URL**
+
+**Before we move on: [let's list our progress!](https://docs.google.com/document/d/1l6vE8ImKPuE-s8Xltpx9NpSl6YaE4t2pY8qicH05Ihs/edit?usp=sharing)
+**
+
+---
 
 [&uarr;](#back_to_top)
 
