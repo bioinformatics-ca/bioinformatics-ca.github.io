@@ -28,8 +28,10 @@ The paramaters that need to be set or changed are specified in the text below (a
 
 1) Load the data 
 ** Get Data/Upload File
+
 “Paste/Fetch Data” box:
 NA12878_CBW_chr1_R1.fastq.gz
+
 http://cbw##.dyndns.info/HTSeq_module2/raw_reads/NA12878/NA12878_CBW_chr1_R1.fastq.gz
 
 NA12878_CBW_chr1_R2.fastq.gz
