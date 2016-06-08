@@ -97,7 +97,7 @@ You can view these reports at http://cbw##.dyndns.info/module5/other_files/fastQ
 
 ***Note:*** You need to replace ## by your student number. 
 
-<a name="variants"></a>
+
 ## Calling variants with GATK
 
 If you recall from the previous module, we first mapped the reads to hg19 and then we removed duplicate reads and realigned the reads around the indels.
@@ -141,7 +141,7 @@ NA12878.bwa.sort.bam.bai  NA12878.bwa.sort.rmdup.realign.bai  NA12878.bwa.sort.r
 NA12878.bwa.sort.bam.vcf  NA12878.bwa.sort.rmdup.realign.bam  other_files
 </code></pre>
 
-<a name="investigating"></a>
+
 ## Investigating the SNP calls
 
 Use less to take a look at the vcf files:
@@ -234,7 +234,7 @@ You can find a slightly more advanced awk script that separates the SNPs from th
 
 ***Can you find the largest INDEL?***
 
-<a name="filter"></a>
+
 ## Filter the variants
 
 Typically variant callers will only perform a minimal amount of filtering when presenting variant calls. In the case of GATK, we are actively removing any variant with score less than 10. Any variant with a score less than 30 is labeled with the filter "LowQual".
@@ -275,7 +275,7 @@ NA12878.bwa.sort.bam.vcf      NA12878.bwa.sort.rmdup.realign.bam.filter.vcf     
 NA12878.bwa.sort.bam.vcf.idx  NA12878.bwa.sort.rmdup.realign.bam.filter.vcf.idx
 </code></pre>
 
-<a name="function"></a>
+
 ## Adding functional consequence
 
 The next step in trying to make sense of the variant calls is to assign functional consequence to each variant.
@@ -318,7 +318,7 @@ NA12878.bwa.sort.rmdup.realign.bam                    snpEff_genes.txt
 NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf  snpEff_summary.html
 </code></pre> 
 
-<a name="consequence"></a>
+
 ## Investigating the functional consequence of variants
 
 You can learn more about the meaning of snpEff annotations [here] (http://snpeff.sourceforge.net/SnpEff_manual.html#output).
@@ -369,7 +369,7 @@ Let's continue by looking for variants with a moderate impact:
 
 ***How many variants had a moderate impact? What effect categories were represented in these variants?***
 
-<a name="dbSNP"></a>
+
 ## Adding dbSNP annotations
 
 Go back to looking at your last vcf file:
@@ -424,12 +424,12 @@ NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf.idx  snpEff_summary.h
 NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
 </code></pre>
 
-<a name="script"></a>
+
 ## Overall script
 
 **NOTE:** If you ever become truly lost in this lab, you can use the lab script to automatically perform all of the steps listed here. If you are logged into your CBW account, just run: ~/CourseData/HT_data/Module5/other_files/RunModule5.sh. You can also download the file if you want to bring it home with you. 
 
-<a name="trio"></a>
+
 ## (Optional) Investigating the trio
 
 At this point we have aligned and called variants in one individual. However, we actually have FASTQ and BAM files for three family members!
@@ -444,7 +444,7 @@ As additional practice, perform the same steps for the other two individuals (he
 
 4. GATK produces even better variant calling results if all three BAM files are specified at the same time (i.e. specifying multiple `-I filename` options). Try this and then perform the rest of module 5 on the trio vcf file. ***Does this seem to improve your variant calling results? Does it seem to reduce the trio conflict rate?***
 
-<a name="ackno"></a>
+
 ## Acknowledgements
 
 This module is heavily based on a previous module prepared by Michael Stromberg. 
