@@ -12,13 +12,7 @@ This lab was created by Florence Cavalli.
 ## Table of contents
 1. [Introduction](#introduction)
 2. [Align DNA with BWA-MEM](#align)
-3. [Characterize the fragment size distribution](#fragments)
-4. [Run DELLY to detect SVs](#delly)
-5. [Setting up IGV for SV visualization](#IGV)
-6. [Explore the SVs](#explore)
-7. [Overall script](#script)
-8. [(Optional) Look for other SVs](#otherSV)
-9. [Acknowledgements](#ackno)
+
 
 
 
@@ -54,7 +48,7 @@ http://cbw##.dyndns.info/HTSeq_module2/reference/dbSNP_135_chr1.vcf.gz
 
 replace ## by your student id
 
-![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_load_data.png) 
+![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Load_data.png) 
 #### 2) Convert the data to use Trimmomatic
 
 ** NGS: QC and manipulation/FASTAQ groomer
