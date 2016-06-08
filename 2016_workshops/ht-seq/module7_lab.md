@@ -65,7 +65,7 @@ It creates 4 files two for R1 and two for R2 (paired and unpaired?)
 Use paired results for the alignment
 
 
-4) align the reads with BWA-mem
+#### 4) align the reads with BWA-mem
 
 ** NGS: Mapping/Map with BWA-MEM 
 
