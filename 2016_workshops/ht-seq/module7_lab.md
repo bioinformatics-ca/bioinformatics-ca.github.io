@@ -23,7 +23,7 @@ This lab was created by Florence Cavalli.
 9. [Mark duplicates](#markdup)
 10. [Recalibration](#recalibration)
 11. [Extract Metrics](#extracmetrics)
-12. [Call SNPs in NA12878 using the sorted, realigned removed duplicates bam files](#callsnp)
+12. [Call SNPs](#callsnp)
 13. [Filter the variants](#filtervariant)
 14. [Annotate the vcf file](#annotate)
 [Look at the "History options" menu](#menu)
@@ -205,11 +205,11 @@ View collectInsertSize Metrics and pdf file
 View Collect Alignment Summary metrics
 
 
-Variant calling an annotation from Module 5
+ -> Variant calling and annotation from Module 5
 
-Use your the aligned, sorted  with removed duplicates files that you just created (or download the one you used in Module 5  from the server (NA12878.bwa.sort.rmdup.realign.bam))
+To continue you can use the aligned, sorted and duplicates removed files that you just created or download the one you used in Module 5  from the server (NA12878.bwa.sort.rmdup.realign.bam).
 
-#### 12) Call SNPs in NA12878 using the sorted, realigned removed duplicates bam files
+#### 12) Call SNPs
 <a name="callsnp"></a>
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller
 - BAM file -> marked duplicates
