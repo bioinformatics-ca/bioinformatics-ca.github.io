@@ -45,11 +45,11 @@ http://cbw##.dyndns.info/HTSeq_module2/reference/dbSNP_135_chr1.vcf.gz
 replace ## by your student id
 
 
-### 2) convert the data to use Trimmomatic
+#### 2) convert the data to use Trimmomatic
 
 ** NGS: QC and manipulation/FASTAQ groomer
 
-### 3) Trim the read and remove adapter sequence with Trimmomoatic
+#### 3) Trim the read and remove adapter sequence with Trimmomoatic
 ** NGS: QC and manipulation/Trimmomatic 
 
 - On FASTAQ groomer data 
@@ -87,19 +87,19 @@ PL:ILLUMINA
 
 *** This step takes some time to run
 
-5) Sort the sam/bam 
+#### 5) Sort the sam/bam 
 
 ** NGS: Picard/SortSam sort SAM/BAM dataset
 - On aligned bam file
 - Sort order: coordinate
 - Select validation stringency: Silent
 
-6) Create single interval  
+#### 6) Create single interval  
 
 ** Text manipulation/Create Single Interval
 - Chr1:17704860-18004860
 
-7) Indel realignment
+#### 7) Indel realignment
 
 ** NGS GATK Tools/RealignerTargetCreator 
 - Bam file : Bam sorted in coordinate order
@@ -118,14 +118,14 @@ PL:ILLUMINA
 - Restrict realignment to provided intervals: Realigner Target create results
 
 
-7) FixMates
+#### 8) FixMates
 
 **NGS: Picard/FixMateInformation 
 - Select SAM/BAM dataset or dataset collection ->Indel Realigner result
 - Select validation stringency -> Silent
 other default parameter
 
-8) Mark duplicates
+#### 9) Mark duplicates
 
 **NGS: Picard/MarkDuplicates 
 - Select SAM/BAM dataset or dataset collection -> FixMateInformation result
@@ -133,7 +133,7 @@ other default parameter
 
 You can look at the Markduplicate metrics
 
-8) Recalibration
+#### 10) Recalibration
 ** NGS GATK Tools/BaseRecalibrator is not available!
 So we can use "Count covariates" and "Table recalibration". These two step are teh equivalent of BaseRecalibrator which is present in a newer version of GATK
 
@@ -149,7 +149,7 @@ So we can use "Count covariates" and "Table recalibration". These two step are t
 - Reference genome: hg19_Chr1.fa
 
 
-9) Extract Metrics
+#### 11) Extract Metrics
 ** NGS GATK Tools/Depth of Coverage on BAM files
 - Summary coverage threshold
 - insert 4 threshold at 10, 25, 50 and 100
@@ -187,7 +187,7 @@ Variant calling an annotation from Module 5
 
 Use your the aligned, sorted  with removed duplicates files that you just created (or download the one you used in Module 5  from the server (NA12878.bwa.sort.rmdup.realign.bam))
 
-10) Call SNPs in NA12878 using the sorted, realigned removed duplicates bam files
+#### 12) Call SNPs in NA12878 using the sorted, realigned removed duplicates bam files
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller
 - BAM file -> marked duplicates
 - reference genome -> hg19_chr1.fa
@@ -201,7 +201,7 @@ Use your the aligned, sorted  with removed duplicates files that you just create
 Have a look at the vcf file
 
 
-11) Filter the variants
+#### 13) Filter the variants
 
 Typically variant callers will only perform a minimal amount of filtering when presenting variant calls. In the case of GATK, we are actively removing any variant with score less than 10. Any variant with a score less than 30 is labeled with the filter “LowQual”.
 
@@ -223,7 +223,7 @@ filter Expression:MQ < 40.0 Filter name:MQFilter
 
 You can look at the output vcf file that contains some filter annotation
 
-12) Annotate the vcf file
+#### 14) Annotate the vcf file
 with snpEff
 ** NGS: Variant Analysis/SnpEff Variant effect and annotation
 - Sequence changes: Variant Filtration result
