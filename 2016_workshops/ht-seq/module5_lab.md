@@ -138,7 +138,7 @@ At this point, you should have the following result files
 <pre><code>ubuntu@ip-10-182-231-187:~/workspace/module5$ ls
 NA12878.bwa.sort.bam      NA12878.bwa.sort.bam.vcf.idx        NA12878.bwa.sort.rmdup.realign.bam.vcf
 NA12878.bwa.sort.bam.bai  NA12878.bwa.sort.rmdup.realign.bai  NA12878.bwa.sort.rmdup.realign.bam.vcf.idx
-NA12878.bwa.sort.bam.vcf  NA12878.bwa.sort.rmdup.realign.bam  other\_files
+NA12878.bwa.sort.bam.vcf  NA12878.bwa.sort.rmdup.realign.bam  other_files
 </code></pre>
 
 <a name="investigating"></a>
@@ -166,8 +166,7 @@ vcf is a daunting format at first glance, but you can find some basic informatio
 
 Use the following command to pull out differences between the two files: 
 <pre><code>diff <(grep ^chr NA12878.bwa.sort.bam.vcf | cut -f1-2 | sort) \
-<(grep ^chr NA12878.bwa.sort.rmdup.realign.bam.vcf | cut -f1-2 | sort)
-</code></pre>
+<(grep ^chr NA12878.bwa.sort.rmdup.realign.bam.vcf | cut -f1-2 | sort)</code></pre>
 
 ###Use IGV to investigate the SNPs
 
@@ -223,7 +222,8 @@ INDELs can be found by looking for rows where the reference base column and the 
 
 Here's an awk expression that almost picks out the INDELs: 
 
-<pre><code>grep -v "^#" NA12878.bwa.sort.rmdup.realign.bam.vcf | awk '{ if(length($4) != length($5)) { print $0 } }' \
+<pre><code>grep -v "^#" NA12878.bwa.sort.rmdup.realign.bam.vcf \
+| awk '{ if(length($4) != length($5)) { print $0 } }' \
 | less -S
 </code></pre>
 
@@ -243,9 +243,10 @@ To perform more rigorous filtering, another program must be used. In our case, w
 **NOTE:** The best practice when using GATK is to use the *VariantRecalibrator*. In our data set, we had too few variants to accurately use the variant recalibrator and therefore we used the *VariantFiltration* tool instead. 
 
 <pre><code>java -Xmx2g -jar /usr/local/GATK/GenomeAnalysisTK.jar -T VariantFiltration \
--R other_files/hg19.fa --variant NA12878.bwa.sort.rmdup.realign.bam.vcf -o NA12878.bwa.sort.rmdup.realign.bam.filter.vcf --filterExpression "QD < 2.0" \
---filterExpression "FS > 200.0" --filterExpression "MQ < 40.0" --filterName QDFilter \
---filterName FSFilter --filterName MQFilter
+-R other_files/hg19.fa --variant NA12878.bwa.sort.rmdup.realign.bam.vcf \
+-o NA12878.bwa.sort.rmdup.realign.bam.filter.vcf --filterExpression "QD < 2.0" \
+--filterExpression "FS > 200.0" --filterExpression "MQ < 40.0" \
+--filterName QDFilter --filterName FSFilter --filterName MQFilter
 </code></pre>
 
 `-Xmx2g` instructs java to allow up 2 GB of RAM to be used for GATK. 
@@ -280,9 +281,10 @@ The next step in trying to make sense of the variant calls is to assign function
 
 At the most basic level, this involves using gene annotations to determine if variants are sense, missense, or nonsense. 
 
-<pre><code>java -Xmx2G -jar other\_files/snpEff/snpEff.jar eff \
+<pre><code>java -Xmx2G -jar other_files/snpEff/snpEff.jar eff \
 -c other_files/snpEff/snpEff.config -v -no-intergenic \
--i vcf -o vcf hg19 NA12878.bwa.sort.rmdup.realign.bam.filter.vcf > NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
+-i vcf -o vcf hg19 NA12878.bwa.sort.rmdup.realign.bam.filter.vcf \
+> NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
 </code></pre>
 
 `-Xmx2g` instructs java to allow up 4 GB of RAM to be used for snpEff. 
@@ -310,9 +312,9 @@ NA12878.bwa.sort.bam                                  NA12878.bwa.sort.rmdup.rea
 NA12878.bwa.sort.bam.bai                              NA12878.bwa.sort.rmdup.realign.bam.filter.vcf.idx
 NA12878.bwa.sort.bam.vcf                              NA12878.bwa.sort.rmdup.realign.bam.vcf
 NA12878.bwa.sort.bam.vcf.idx                          NA12878.bwa.sort.rmdup.realign.bam.vcf.idx
-NA12878.bwa.sort.rmdup.realign.bai                    other\_files
-NA12878.bwa.sort.rmdup.realign.bam                    snpEff\_genes.txt
-NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf  snpEff\_summary.html
+NA12878.bwa.sort.rmdup.realign.bai                    other_files
+NA12878.bwa.sort.rmdup.realign.bam                    snpEff_genes.txt
+NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf  snpEff_summary.html
 </code></pre> 
 
 <a name="consequence"></a>
@@ -332,7 +334,7 @@ The annotation is presented in the INFO field using the new ANN format. For more
 
 Here's an example of a typical annotation: 
 
-<pre><code>ANN=C|intron\_variant|MODIFIER|PADI6|PADI6|transcript|NM_207421.4|Coding|5/16|c.553+80T>C||||||
+<pre><code>ANN=C|intron_variant|MODIFIER|PADI6|PADI6|transcript|NM_207421.4|Coding|5/16|c.553+80T>C||||||
 </code></pre>
 
 ***What does the example annotation actually mean?***
@@ -415,9 +417,9 @@ NA12878.bwa.sort.bam.bai                                        NA12878.bwa.sort
 NA12878.bwa.sort.bam.vcf                                        NA12878.bwa.sort.rmdup.realign.bam.filter.vcf.idx
 NA12878.bwa.sort.bam.vcf.idx                                    NA12878.bwa.sort.rmdup.realign.bam.vcf
 NA12878.bwa.sort.rmdup.realign.bai                              NA12878.bwa.sort.rmdup.realign.bam.vcf.idx
-NA12878.bwa.sort.rmdup.realign.bam                              other\_files
-NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf      snpEff\_genes.txt
-NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf.idx  snpEff\_summary.html
+NA12878.bwa.sort.rmdup.realign.bam                              other_files
+NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf      snpEff_genes.txt
+NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf.idx  snpEff_summary.html
 NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
 </code></pre>
 
