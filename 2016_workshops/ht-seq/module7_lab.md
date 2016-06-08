@@ -44,7 +44,7 @@ http://cbw##.dyndns.info/HTSeq_module2/reference/dbSNP_135_chr1.vcf.gz
 
 replace ## by your student id
 
-![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img_galaxy/Galaxy_load_data.png) 
+![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_load_data.png) 
 #### 2) Convert the data to use Trimmomatic
 
 ** NGS: QC and manipulation/FASTAQ groomer
