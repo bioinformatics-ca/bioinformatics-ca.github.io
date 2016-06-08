@@ -24,7 +24,7 @@ The paramaters that need to be set or changed are specified in the text below (a
 
 ** indicate the tool to use that you need to select from the left column
 
-### 1) Load the data 
+#### 1) Load the data 
 
 ** Get Data/Upload File
 
@@ -250,7 +250,7 @@ Operate on Genomic intervals
 Look at or download your filtered and annotated variant calls as vcf files
 
 
-# Look at the "History options" menu
+#### Look at the "History options" menu
 - Extract workflow
 - Save your workflow
 - Share your workflow
