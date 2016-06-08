@@ -279,7 +279,8 @@ Programs:
   
   [Lecture](https://bioinformatics.ca/htseq-module-7-2016)
   
-  Lab practical:
+  [Lab practical](https://bioinformatics-ca.github.io/informatics_for_high-throughput_data_sequencing_2016_module7_lab/)
+
   
   Data set:
   
