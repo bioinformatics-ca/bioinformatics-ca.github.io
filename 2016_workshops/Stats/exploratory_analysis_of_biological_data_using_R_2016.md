@@ -203,13 +203,15 @@ That was the problem when students installed things in **RStudio** at the comman
 
 *<font color="#827e9c">Lauren Erdman and Ben Brew</font>*
 
-Part 1:
+[Lecture](https://bioinformatics.ca/eda-integrated-assignment-2016)
 
-Part 2:
+[Assignment](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/Stats/Stats2016_IntegratedAssignment.docx)
 
-Data Set:
+[Assignment Questions](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/Stats/Stats2016_IntegratedAssignment_Questions.R)
 
-For your reference:
+[Data Set](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/Stats/ccleCgc.rda)
+
+[Plot.R](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/Stats/plot.R)
 
 [&uarr;](#back_to_top)
 
