@@ -31,8 +31,8 @@ This lab was created by Florence Cavalli.
 
 ## Introduction
 <a name="introduction"></a>
-This workshop will show you how to use Galaxy and performed the anaylis you ran in Module 2 and Module 5 with Galaxy.
-We are therefore using the dataset from NA12878 patient (reads extracted from region chr1:17704860-18004860)
+In this practical we will use Galaxy to performe the anaylis you ran in Module 2 and Module 5.
+We are therefore using the dataset from patient NA12878 (reads extracted from region chr1:17704860-18004860)
 
 We will use the galaxy website: https://usegalaxy.org/
 Start by loging on the website with your username
