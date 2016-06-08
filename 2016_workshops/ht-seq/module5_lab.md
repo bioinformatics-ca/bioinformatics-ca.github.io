@@ -22,7 +22,7 @@ This lab was created by Guillaume Bourque.
 10. [Acknowledgements](#ackno)
 
 <a name="introduction"></a>
-## Introduction
+##Introduction
 
 In one of the previous modules, we have aligned the reads from NA12878 (daughter) in a small region on chromosome 1. In this module, we will use the data in the BAM files to call variants and then we'll perform some annotation and filtration.
 
@@ -56,13 +56,13 @@ Our read were extracted from the following regions:
 </tr>
 </tbody></table>
 
-### Preliminaries
+###Preliminaries
 
-#### Amazon node
+####Amazon node
 
 Read these [directions] (http://bioinformatics-ca.github.io/logging_into_the_Amazon_cloud/) for information on how to log in to your assigned Amazon node. 
 
-#### Work directory
+####Work directory
 
 Create a new directory that will store all of the files created in this lab.
 
@@ -75,7 +75,7 @@ ln -s ~/CourseData/HT_data/Module5/* .
 ***Note:***
     The `ln -s` command adds symbolic links of all of the files contained in the (read-only) `~/CourseData/HT_data/Module5` directory.
     
-#### Input files
+####Input files
 
 Our starting data set consists of 100 bp paired-end Illumina reads from the child (NA12878) that have been aligned to hg19 during one of the previous modules (NA12878.bwa.sort.bam). We also have the same data after duplicate removal and realignment around indels NA12878.bwa.sort.rmdup.realign.bam.
 
@@ -142,7 +142,7 @@ NA12878.bwa.sort.bam.vcf  NA12878.bwa.sort.rmdup.realign.bam  other\_files
 </code></pre>
 
 <a name="investigating"></a>
-## Investigating the SNP calls
+##Investigating the SNP calls
 
 Use less to take a look at the vcf files:
 
@@ -162,14 +162,14 @@ vcf is a daunting format at first glance, but you can find some basic informatio
 
 ***Did we find the same number of variants using the files before and after duplicate removal and realignment?***
 
-### Looking for differences between the two vcf files
+###Looking for differences between the two vcf files
 
 Use the following command to pull out differences between the two files: 
 <pre><code>diff <(grep ^chr NA12878.bwa.sort.bam.vcf | cut -f1-2 | sort) \
 <(grep ^chr NA12878.bwa.sort.rmdup.realign.bam.vcf | cut -f1-2 | sort)
 </code></pre>
 
-### Use IGV to investigate the SNPs
+###Use IGV to investigate the SNPs
 
 The best way to see and understand the differences between the two vcf files will be to look at them in IGV.
 
@@ -274,7 +274,7 @@ NA12878.bwa.sort.bam.vcf.idx  NA12878.bwa.sort.rmdup.realign.bam.filter.vcf.idx
 </code></pre>
 
 <a name="function"></a>
-## Adding functional consequence
+##Adding functional consequence
 
 The next step in trying to make sense of the variant calls is to assign functional consequence to each variant.
 
@@ -301,7 +301,7 @@ At the most basic level, this involves using gene annotations to determine if va
 
 `NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf` specifies our output vcf filename 
 
-### File check ###
+###File check
 
 At this point, you should have the following files:
 
@@ -422,12 +422,12 @@ NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
 </code></pre>
 
 <a name="script"></a>
-## Overall script
+##Overall script
 
 **NOTE:** If you ever become truly lost in this lab, you can use the lab script to automatically perform all of the steps listed here. If you are logged into your CBW account, just run: ~/CourseData/HT\_data/Module5/other\_files/RunModule5.sh. You can also download the file if you want to bring it home with you. 
 
 <a name="trio"></a>
-## (Optional) Investigating the trio
+##(Optional) Investigating the trio
 
 At this point we have aligned and called variants in one individual. However, we actually have FASTQ and BAM files for three family members!
 
@@ -442,6 +442,6 @@ As additional practice, perform the same steps for the other two individuals (he
 4. GATK produces even better variant calling results if all three BAM files are specified at the same time (i.e. specifying multiple `-I filename` options). Try this and then perform the rest of module 5 on the trio vcf file. ***Does this seem to improve your variant calling results? Does it seem to reduce the trio conflict rate?***
 
 <a name="ackno"></a>
-## Acknowledgements
+##Acknowledgements
 
 This module is heavily based on a previous module prepared by Michael Stromberg. 
