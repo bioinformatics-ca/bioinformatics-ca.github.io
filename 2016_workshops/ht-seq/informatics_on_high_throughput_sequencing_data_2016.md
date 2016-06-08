@@ -129,7 +129,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/htseq-module-2-2016)
   
-  [Lab practical](https://bioinformatics.ca/htseq-module-2-lab-2016)
+  [Lab practical](http://bioinformatics-ca.github.io/informatics_for_high-throughput_data_sequencing_2016_module2_lab)
   
   Programs:
   
