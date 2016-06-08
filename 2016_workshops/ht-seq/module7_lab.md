@@ -7,13 +7,23 @@ header2: Module 7 lab
 image: CBW_High-throughput_icon.jpg
 ---
 # CBW HT-seq Module 7 - Galaxy lab
+This lab was created by Florence Cavalli.
 
- 
-by Florence Cavalli
+## Table of contents
+1. [Introduction](#introduction)
+2. [Align DNA with BWA-MEM](#align)
+3. [Characterize the fragment size distribution](#fragments)
+4. [Run DELLY to detect SVs](#delly)
+5. [Setting up IGV for SV visualization](#IGV)
+6. [Explore the SVs](#explore)
+7. [Overall script](#script)
+8. [(Optional) Look for other SVs](#otherSV)
+9. [Acknowledgements](#ackno)
+
 
 
 ## Introduction
-
+<a name="introduction"></a>
 This workshop will show you how to use Galaxy and performed the anaylis you ran in Module 2 and Module 5 with Galaxy.
 We are therefore using the dataset from NA12878 patient (reads extracted from region chr1:17704860-18004860)
 
