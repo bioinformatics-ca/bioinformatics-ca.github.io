@@ -10,9 +10,22 @@ image: CBW_High-throughput_icon.jpg
 This lab was created by Florence Cavalli.
 
 ## Table of contents
-1. [Introduction](#introduction)
-2. [Align DNA with BWA-MEM](#align)
-
+[Introduction](#introduction)
+1. [Load the data](#load)
+2. [Convert the data to use Trimmomatic](#convert)
+3. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)
+4. [Align the reads with BWA-mem](#align)
+5. [Sort the sam/bam](#sort)
+6. [Create single interval](#interval)  
+7. [Indel realignment](#indelRealign)
+8. [FixMates](#fixmates)
+9. [Mark duplicates](#markdup)
+10. [Recalibration](#recalibration)
+11. [Extract Metrics](#extracmetrics)
+12. [Call SNPs in NA12878 using the sorted, realigned removed duplicates bam files](#callsnp)
+13. [Filter the variants](#filtervariant)
+14. [Annotate the vcf file](#annotate)
+[Look at the "History options" menu](#menu)
 
 
 
@@ -30,7 +43,7 @@ The paramaters that need to be set or changed are specified in the text below (a
 ![tool](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_tools.png) 
 
 #### 1) Load the data 
-
+<a name="data"></a>
 ** Get Data/Upload File
 
 “Paste/Fetch Data” box:
@@ -51,10 +64,11 @@ replace ## by your student id
 
 ![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Load_data.png) 
 #### 2) Convert the data to use Trimmomatic
-
+<a name="convert"></a>
 ** NGS: QC and manipulation/FASTAQ groomer
 
 #### 3) Trim the read and remove adapter sequence with Trimmomoatic
+<a name="trim"></a>
 ** NGS: QC and manipulation/Trimmomatic 
 
 - On FASTAQ groomer data 
@@ -71,7 +85,7 @@ Use paired results for the alignment
 
 
 #### 4) Align the reads with BWA-mem
-
+<a name="align"></a>
 ** NGS: Mapping/Map with BWA-MEM 
 
 - Set the Read group -RG option
@@ -93,19 +107,19 @@ PL:ILLUMINA
 *** This step takes some time to run
 
 #### 5) Sort the sam/bam 
-
+<a name="sort"></a>
 ** NGS: Picard/SortSam sort SAM/BAM dataset
 - On aligned bam file
 - Sort order: coordinate
 - Select validation stringency: Silent
 
 #### 6) Create single interval  
-
+<a name="interval"></a>
 ** Text manipulation/Create Single Interval
 - Chr1:17704860-18004860
 
 #### 7) Indel realignment
-
+<a name="indelRealign"></a>
 ** NGS GATK Tools/RealignerTargetCreator 
 - Bam file : Bam sorted in coordinate order
 - Using reference file hg19_chr1.fa
@@ -124,14 +138,14 @@ PL:ILLUMINA
 
 
 #### 8) FixMates
-
+<a name="fixmates"></a>
 **NGS: Picard/FixMateInformation 
 - Select SAM/BAM dataset or dataset collection ->Indel Realigner result
 - Select validation stringency -> Silent
 other default parameter
 
 #### 9) Mark duplicates
-
+<a name="markdup"></a>
 **NGS: Picard/MarkDuplicates 
 - Select SAM/BAM dataset or dataset collection -> FixMateInformation result
 - Select validation stringency -> Silent
@@ -139,6 +153,7 @@ other default parameter
 You can look at the Markduplicate metrics
 
 #### 10) Recalibration
+<a name="recalibration"></a>
 ** NGS GATK Tools/BaseRecalibrator is not available!
 So we can use "Count covariates" and "Table recalibration". These two step are teh equivalent of BaseRecalibrator which is present in a newer version of GATK
 
@@ -155,6 +170,7 @@ So we can use "Count covariates" and "Table recalibration". These two step are t
 
 
 #### 11) Extract Metrics
+<a name="extracmetrics"></a>
 ** NGS GATK Tools/Depth of Coverage on BAM files
 - Summary coverage threshold
 - insert 4 threshold at 10, 25, 50 and 100
@@ -193,6 +209,7 @@ Variant calling an annotation from Module 5
 Use your the aligned, sorted  with removed duplicates files that you just created (or download the one you used in Module 5  from the server (NA12878.bwa.sort.rmdup.realign.bam))
 
 #### 12) Call SNPs in NA12878 using the sorted, realigned removed duplicates bam files
+<a name="callsnp"></a>
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller
 - BAM file -> marked duplicates
 - reference genome -> hg19_chr1.fa
@@ -207,7 +224,7 @@ Have a look at the vcf file
 
 
 #### 13) Filter the variants
-
+<a name="filtervariant"></a>
 Typically variant callers will only perform a minimal amount of filtering when presenting variant calls. In the case of GATK, we are actively removing any variant with score less than 10. Any variant with a score less than 30 is labeled with the filter “LowQual”.
 
 To perform more rigorous filtering, another program must be used. In our case, we will use the VariantFiltration tool in GATK.
@@ -229,6 +246,7 @@ filter Expression:MQ < 40.0 Filter name:MQFilter
 You can look at the output vcf file that contains some filter annotation
 
 #### 14) Annotate the vcf file
+<a name="annotate"></a>
 with snpEff
 ** NGS: Variant Analysis/SnpEff Variant effect and annotation
 - Sequence changes: Variant Filtration result
@@ -256,6 +274,7 @@ Look at or download your filtered and annotated variant calls as vcf files
 
 
 #### Look at the "History options" menu
+<a name="menu"></a>
 - Extract workflow
 - Save your workflow
 - Share your workflow
