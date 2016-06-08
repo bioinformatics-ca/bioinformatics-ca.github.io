@@ -66,9 +66,13 @@ bam  fastq  pairend_distro.py  reference  RunModule6.sh
 Looking in the bam directory, you should see:
 
 <pre><code>ubuntu@ip-10-164-192-186:~/workspace/module6$ ls bam
-backup                       NA12878.molelculo.chr20.bam.bai  NA12878_S1.chr20.20X.pairs.posSorted.bam      NA12891_S1.chr20.20X.pairs.posSorted.bam.bai  README.md
-discordants                  NA12878.pacbio.chr20.bam         NA12878_S1.chr20.20X.pairs.posSorted.bam.bai  NA12892_S1.chr20.20X.pairs.posSorted.bam      validated
-NA12878.molelculo.chr20.bam  NA12878.pacbio.chr20.bam.bai     NA12891_S1.chr20.20X.pairs.posSorted.bam      NA12892_S1.chr20.20X.pairs.posSorted.bam.bai
+backup                                    NA12878_S1.chr20.20X.pairs.posSorted.bam.bai
+discordants                               NA12891_S1.chr20.20X.pairs.posSorted.bam
+NA12878.molelculo.chr20.bam               NA12891_S1.chr20.20X.pairs.posSorted.bam.bai
+NA12878.molelculo.chr20.bam.bai           NA12892_S1.chr20.20X.pairs.posSorted.bam
+NA12878.pacbio.chr20.bam                  NA12892_S1.chr20.20X.pairs.posSorted.bam.bai
+NA12878.pacbio.chr20.bam.bai              README.md
+NA12878_S1.chr20.20X.pairs.posSorted.bam  validated
 </code></pre>
 
 ##  Align DNA with BWA-MEM
@@ -241,6 +245,8 @@ Now NA12891 and NA12892:
 delly call -t DEL -g reference/hg19.fa -o NA12892.bcf -x reference/hg19.excl \
   bam/NA12892_S1.chr20.20X.pairs.posSorted.bam
 </code></pre>
+
+***Cheat:*** If these commands are taking too long, simply run the command `cp delly_call/* .`
 
 ### Merge calls
 
