@@ -286,19 +286,19 @@ Programs:
   
 ```bash
 NA12878_CBW_chr1_R1.fastq.gz
-http://cbwxx.dyndns.info/module2/NA12878_CBW_chr1_R1.fastq.gz
+http://cbw##.dyndns.info/HTSeq_module2/raw_reads/NA12878/NA12878_CBW_chr1_R1.fastq.gz
 
 NA12878_CBW_chr1_R2.fastq.gz
-http://cbwxx.dyndns.info/module2/NA12878_CBW_chr1_R2.fastq.gz
+http://cbw##.dyndns.info/HTSeq_module2/raw_reads/NA12878/NA12878_CBW_chr1_R2.fastq.gz
 
 hg19_chr1.fa
-http://cbwxx.dyndns.info/module7/hg19_chr1.fa
+http://cbw##.dyndns.info/Module7/hg19_chr1.fa
 
 dbSNP_135_chr1.vcf.gz
-http://cbwxx.dyndns.info/module2/dbSNP_135_chr1.vcf.gz
+http://cbw##.dyndns.info/HTSeq_module2/reference/dbSNP_135_chr1.vcf.gz
 ```
 
-Note: xx is your student number.
+Note: ## is your student number.
 
 Galaxy workflow part 1 (cloud): 
 
