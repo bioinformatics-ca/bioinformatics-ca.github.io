@@ -28,7 +28,6 @@ This lab was created by Florence Cavalli.
 [Look at the "History options" menu](#menu)
 
 
-
 ## Introduction
 <a name="introduction"></a>
 This workshop will show you how to use Galaxy and performed the anaylis you ran in Module 2 and Module 5 with Galaxy.
