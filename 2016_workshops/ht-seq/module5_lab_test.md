@@ -1,4 +1,4 @@
-This lab was created by Guillaume Bourque.
+This lab was created by Guillaume Bourqueee.
 
 ## Table of contents
 1. [Introduction](#introduction)
