@@ -22,6 +22,7 @@ This lab was created by Guillaume Bourque.
 10. [Acknowledgements](#ackno)
 
 <a name="introduction"></a>
+
 ## Introduction
 
 In one of the previous modules, we have aligned the reads from NA12878 (daughter) in a small region on chromosome 1. In this module, we will use the data in the BAM files to call variants and then we'll perform some annotation and filtration.
