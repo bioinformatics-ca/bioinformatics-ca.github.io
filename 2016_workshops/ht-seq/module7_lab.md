@@ -10,6 +10,7 @@ image: CBW_High-throughput_icon.jpg
 This lab was created by Florence Cavalli.
 
 ## Table of contents
+
 [Introduction](#introduction)
 1. [Load the data](#load)
 2. [Convert the data to use Trimmomatic](#convert)
