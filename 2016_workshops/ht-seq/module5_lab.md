@@ -263,7 +263,7 @@ To perform more rigorous filtering, another program must be used. In our case, w
 
 ***What is QD, FS, and MQ?***
 
-### File check
+#### File check
 
 At this point, you should have the following result files:
 
@@ -303,7 +303,7 @@ At the most basic level, this involves using gene annotations to determine if va
 
 `NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf` specifies our output vcf filename 
 
-### File check
+#### File check
 
 At this point, you should have the following files:
 
@@ -407,7 +407,7 @@ grep -v ^# NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf | grep -c 
 
 ***Can you find a variant that wasn't in dbSNP?***
 
-### File Check
+#### File Check
 
 At this point, you should have the following files:
 
