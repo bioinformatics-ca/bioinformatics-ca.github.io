@@ -160,7 +160,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/htseq-module-3-2016)
   
-  [Lab practical](https://bioinformatics-ca.github.io/2016_workshops/cancer/IGV_lab.md)
+  [Lab practical](https://bioinformatics-ca.github.io/informatics_for_high-throughput_data_sequencing_2016_module3_lab/)
 
 [&uarr;](#back_to_top)
 
