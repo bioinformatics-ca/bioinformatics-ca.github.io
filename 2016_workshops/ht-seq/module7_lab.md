@@ -48,9 +48,11 @@ replace ## by your student id
 
 
 2) convert the data to use Trimmomatic
+
 ** NGS: QC and manipulation/FASTAQ groomer
 
 3) Trim the read and remove adapter sequence with Trimmomoatic
+
 ** NGS: QC and manipulation/Trimmomatic 
 
 - On FASTAQ groomer data 
@@ -66,7 +68,8 @@ It creates 4 files two for R1 and two for R2 (paired and unpaired?)
 Use paired results for the alignment
 
 
-4) aligne the read with BWA-mem
+4) align the reads with BWA-mem
+
 ** NGS: Mapping/Map with BWA-MEM 
 
 - Set the Read group -RG option
@@ -88,16 +91,19 @@ PL:ILLUMINA
 *** This step takes some time to run
 
 5) Sort the sam/bam 
+
 ** NGS: Picard/SortSam sort SAM/BAM dataset
 - On aligned bam file
 - Sort order: coordinate
 - Select validation stringency: Silent
 
 6) Create single interval  
+
 ** Text manipulation/Create Single Interval
 - Chr1:17704860-18004860
 
 7) Indel realignment
+
 ** NGS GATK Tools/RealignerTargetCreator 
 - Bam file : Bam sorted in coordinate order
 - Using reference file hg19_chr1.fa
@@ -116,17 +122,19 @@ PL:ILLUMINA
 
 
 7) FixMates
+
 **NGS: Picard/FixMateInformation 
 - Select SAM/BAM dataset or dataset collection ->Indel Realigner result
 - Select validation stringency -> Silent
 other default parameter
 
 8) Mark duplicates
+
 **NGS: Picard/MarkDuplicates 
 - Select SAM/BAM dataset or dataset collection -> FixMateInformation result
 - Select validation stringency -> Silent
 
-You can loook at the Markduplicate metrics
+You can look at the Markduplicate metrics
 
 8) Recalibration
 ** NGS GATK Tools/BaseRecalibrator is not available!
