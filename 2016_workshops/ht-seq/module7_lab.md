@@ -11,13 +11,9 @@ This lab was created by Florence Cavalli.
 
 ## Table of contents
 [Introduction](#introduction)
-
 1. [Load the data](#load)
-
 2. [Convert the data to use Trimmomatic](#convert)
-
 3. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)
-
 4. [Align the reads with BWA-mem](#align)
 5. [Sort the sam/bam](#sort)
 6. [Create single interval](#interval)  
@@ -41,6 +37,7 @@ We will use the galaxy website: https://usegalaxy.org/
 Start by loging on the website with your username
 
 The paramaters that need to be set or changed are specified in the text below (and in the images), keep the rest of the parameters with their default values
+
 ** indicate the tool to use that you need to select from the left column
 
 ![tool](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_tools.png) 
