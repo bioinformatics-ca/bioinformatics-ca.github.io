@@ -21,8 +21,6 @@ This lab was created by Guillaume Bourque.
 9. [(Optional) Investigating the trio](#trio)
 10. [Acknowledgements](#ackno)
 
-
-
 ## Introduction
 <a name="introduction"></a>
 
@@ -62,7 +60,7 @@ Our read were extracted from the following regions:
 
 #### Amazon node
 
-Read these [directions] (http://bioinformatics-ca.github.io/logging_into_the_Amazon_cloud/) for information on how to log in to your assigned Amazon node. 
+Read these [directions](http://bioinformatics-ca.github.io/logging_into_the_Amazon_cloud/) for information on how to log in to your assigned Amazon node. 
 
 #### Work directory
 
@@ -98,7 +96,6 @@ If you're interested, you can also look at the fastQC reports for the original f
 You can view these reports at http://cbw##.dyndns.info/module5/other_files/fastQC_reports/.
 
 ***Note:*** You need to replace ## by your student number. 
-
 
 ## Calling variants with GATK
 <a name="variants"></a>
@@ -144,7 +141,6 @@ NA12878.bwa.sort.bam.bai  NA12878.bwa.sort.rmdup.realign.bai  NA12878.bwa.sort.r
 NA12878.bwa.sort.bam.vcf  NA12878.bwa.sort.rmdup.realign.bam  other_files
 </code></pre>
 
-
 ## Investigating the SNP calls
 <a name="investigating"></a>
 
@@ -156,7 +152,7 @@ less NA12878.bwa.sort.rmdup.realign.bam.vcf
 
 A bit hard to read... Better with the `-S` option?
 
-vcf is a daunting format at first glance, but you can find some basic information about the format [here] (http://www.1000genomes.org/wiki/Analysis/vcf4.0) or [here] (http://bioinformatics.ca/workshop_wiki/images/f/ff/VcfInfoFields_2013.pdf).
+vcf is a daunting format at first glance, but you can find some basic information about the format [here](http://www.1000genomes.org/wiki/Analysis/vcf4.0) or [here](http://bioinformatics.ca/workshop_wiki/images/f/ff/VcfInfoFields_2013.pdf).
 
 ***How do you figure out what the genotype is for each variant?***
 
@@ -177,7 +173,7 @@ Use the following command to pull out differences between the two files:
 
 The best way to see and understand the differences between the two vcf files will be to look at them in IGV.
 
-If you need, the IGV color codes can be found here: [IGV color code] (https://www.broadinstitute.org/igv/interpreting_insert_size)
+If you need, the IGV color codes can be found here: [IGV color code](https://www.broadinstitute.org/igv/interpreting_insert_size)
 
 
 **Option 1:** You can view your files (bam and vcf files) in the IGV browser by using the URL for that file from your Cloud instance. We have a web server running on the Amazon cloud for each instance.
@@ -232,12 +228,11 @@ Here's an awk expression that almost picks out the INDELs:
 | less -S
 </code></pre>
 
-You can find a slightly more advanced awk script that separates the SNPs from the INDELs [here] (https://www.biostars.org/p/7403/).
+You can find a slightly more advanced awk script that separates the SNPs from the INDELs [here](https://www.biostars.org/p/7403/).
 
 ***Did you find any INDELs?***
 
 ***Can you find the largest INDEL?***
-
 
 ## Filter the variants
 <a name="filter"></a>
@@ -279,7 +274,6 @@ NA12878.bwa.sort.bam.bai      NA12878.bwa.sort.rmdup.realign.bam                
 NA12878.bwa.sort.bam.vcf      NA12878.bwa.sort.rmdup.realign.bam.filter.vcf      other_files
 NA12878.bwa.sort.bam.vcf.idx  NA12878.bwa.sort.rmdup.realign.bam.filter.vcf.idx
 </code></pre>
-
 
 ## Adding functional consequence
 <a name="function"></a>
@@ -324,18 +318,17 @@ NA12878.bwa.sort.rmdup.realign.bam                    snpEff_genes.txt
 NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf  snpEff_summary.html
 </code></pre> 
 
-
 ## Investigating the functional consequence of variants
 <a name="consequence"></a>
 
-You can learn more about the meaning of snpEff annotations [here] (http://snpeff.sourceforge.net/SnpEff_manual.html#output).
+You can learn more about the meaning of snpEff annotations [here](http://snpeff.sourceforge.net/SnpEff_manual.html#output).
 
 Use less to look at the new vcf file: 
 
 <pre><code>less NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
 </code></pre>
 
-The annotation is presented in the INFO field using the new ANN format. For more information on this field see [here] (http://snpeff.sourceforge.net/VCFannotationformat_v1.0.pdf). Typically, we have: 
+The annotation is presented in the INFO field using the new ANN format. For more information on this field see [here](http://snpeff.sourceforge.net/VCFannotationformat_v1.0.pdf). Typically, we have: 
 
 <pre><code>ANN=Allele|Annotation|Putative impact|Gene name|Gene ID|Feature type|Feature ID|Transcript biotype|Rank / Total|HGVS.c|...
 </code></pre>
@@ -375,7 +368,6 @@ Let's continue by looking for variants with a moderate impact:
 </code></pre>
 
 ***How many variants had a moderate impact? What effect categories were represented in these variants?***
-
 
 ## Adding dbSNP annotations
 <a name="dbSNP"></a>
@@ -432,12 +424,10 @@ NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf.idx  snpEff_summary.h
 NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
 </code></pre>
 
-
 ## Overall script
 <a name="script"></a>
 
 **NOTE:** If you ever become truly lost in this lab, you can use the lab script to automatically perform all of the steps listed here. If you are logged into your CBW account, just run: ~/CourseData/HT_data/Module5/other_files/RunModule5.sh. You can also download the file if you want to bring it home with you. 
-
 
 ## (Optional) Investigating the trio
 <a name="trio"></a>
@@ -446,14 +436,13 @@ At this point we have aligned and called variants in one individual. However, we
 
 As additional practice, perform the same steps for the other two individuals (her parents): NA12891 and NA12892. Here are some additional things that you might want to look at:
 
-1. ***If you load up all three realigned BAM files and all three final vcf files into IGV, do the variants look plausible?*** Use a [Punnett square] (https://en.wikipedia.org/wiki/Punnett_square) to help evaluate this. i.e. if both parents have a homozygous reference call and the child has a homozygous variant call at that locus, this might indicate a trio conflict.
+1. ***If you load up all three realigned BAM files and all three final vcf files into IGV, do the variants look plausible?*** Use a [Punnett square](https://en.wikipedia.org/wiki/Punnett_square) to help evaluate this. i.e. if both parents have a homozygous reference call and the child has a homozygous variant call at that locus, this might indicate a trio conflict.
 
 2. ***Do you find any additional high or moderate impact variants in either of the parents?***
 
 3. ***Do all three family members have the same genotype for Rs7538876 and Rs2254135?***
 
 4. GATK produces even better variant calling results if all three BAM files are specified at the same time (i.e. specifying multiple `-I filename` options). Try this and then perform the rest of module 5 on the trio vcf file. ***Does this seem to improve your variant calling results? Does it seem to reduce the trio conflict rate?***
-
 
 ## Acknowledgements
 <a name="ackno"></a>

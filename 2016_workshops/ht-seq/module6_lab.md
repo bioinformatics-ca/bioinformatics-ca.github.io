@@ -25,7 +25,7 @@ This lab was created by Guillaume Bourque.
 
 The goal of this practical session is to identify structural variants (SVs) in a human genome by identifying both discordant paired-end alignments and split-read alignments that. If you recall from the lecture, discordant paired-end alignments conflict with the alignment patterns that we expect (i.e., concordant alignments) for the DNA library and sequencing technology we have used. For example, given a ~500bp paired-end Illumina library, we expect pairs to align in F/R orientation and we expect the ends of the pair to align roughly 500bp apart. Pairs that align too far apart suggest a potential deletion in the DNA sample's genome. As you may have guessed, the trick is how we define what "too far" is --- this depends on the fragment size distribution of the data. Split-read alignments contain SV breakpoints and consequently, then DNA sequences up- and down-stream of the breakpoint align to disjoint locations in the reference genome.
 
-In this session, we will use [DELLY](https://github.com/tobiasrausch/delly), a SV detection tool. DELLY is an integrated structural variant prediction method that can discover, genotype and visualize deletions, tandem duplications, inversions and translocations at single-nucleotide resolution in short-read massively parallel sequencing data. It uses paired-ends and split-reads to sensitively and accurately delineate genomic rearrangements throughout the genome. If you are interested in DELLY, you can read the full manuscript [here] (http://bioinformatics.oxfordjournals.org/content/28/18/i333.abstract).
+In this session, we will use [DELLY](https://github.com/tobiasrausch/delly), a SV detection tool. DELLY is an integrated structural variant prediction method that can discover, genotype and visualize deletions, tandem duplications, inversions and translocations at single-nucleotide resolution in short-read massively parallel sequencing data. It uses paired-ends and split-reads to sensitively and accurately delineate genomic rearrangements throughout the genome. If you are interested in DELLY, you can read the full manuscript [here](http://bioinformatics.oxfordjournals.org/content/28/18/i333.abstract).
 
 The dataset we are using comes from the [Illumina Platinum Genomes Project](http://www.illumina.com/platinumgenomes/), which is a 50X-coverage dataset of the NA12891/NA12892/NA12878 trio. The raw data can be downloaded from the following [URL](http://www.ebi.ac.uk/ena/data/view/ERP001960).
 
@@ -78,7 +78,7 @@ NA12878_S1.chr20.20X.pairs.posSorted.bam  validated
 ##  Align DNA with BWA-MEM
 <a name="align"></a>
 
-This step has been done for you in the interest of time, but the commands are shown so that you can reproduce the results later. The advantage of using [BWA-MEM] (http://bio-bwa.sourceforge.net/) in the context of SV discovery is that it produces both paired-end and split-read alignments in a single BAM output file. In contrast, prior to BWA-MEM, one typically had to use two different aligners in order to produce both high quality paired-end and split-read alignments.
+This step has been done for you in the interest of time, but the commands are shown so that you can reproduce the results later. The advantage of using [BWA-MEM](http://bio-bwa.sourceforge.net/) in the context of SV discovery is that it produces both paired-end and split-read alignments in a single BAM output file. In contrast, prior to BWA-MEM, one typically had to use two different aligners in order to produce both high quality paired-end and split-read alignments.
 
 In the alignment commands, note the use of the -M parameter to mark shorter split hits as secondary.
 
@@ -118,7 +118,7 @@ In the alignment commands, note the use of the -M parameter to mark shorter spli
 ## Characterize the fragment size distribution
 <a name="fragments"></a>
 
-We have used BWA-MEM to align all of the Illumina paired-end sequences (in FASTQ format) to the human genome. Before we can attempt to identify structural variants via discordant alignments, we must first characterize the fragment size distribution --- this describes the size of concordant (i.e., they align in the expected orientation and with the expected distance between the ends) alignments, and the corollary is that we can also use the size distribution to decide the size threshold for discordant alignments. The following script, taken from the distribution of [LUMPY] (https://github.com/arq5x/lumpy-sv) extracts F/R pairs from a BAM file and computes the mean and stdev of the F/R alignments. It also generates a density plot of the fragment size distribution.
+We have used BWA-MEM to align all of the Illumina paired-end sequences (in FASTQ format) to the human genome. Before we can attempt to identify structural variants via discordant alignments, we must first characterize the fragment size distribution --- this describes the size of concordant (i.e., they align in the expected orientation and with the expected distance between the ends) alignments, and the corollary is that we can also use the size distribution to decide the size threshold for discordant alignments. The following script, taken from the distribution of [LUMPY](https://github.com/arq5x/lumpy-sv) extracts F/R pairs from a BAM file and computes the mean and stdev of the F/R alignments. It also generates a density plot of the fragment size distribution.
 
 Calculation of the fragment distribution for NA12878. 
 
@@ -222,7 +222,7 @@ Spend some time thinking about what this plot means for identifying discordant a
 ## Run DELLY to detect SVs
 <a name="delly"></a>
 
-For germline SVs, calling is done by sample or in small batches to increase SV sensitivity & breakpoint precision. At this point we will only call ***deletions***. Here are the steps adapted from the DELLY [readme] (https://github.com/tobiasrausch/delly/blob/master/README.md).
+For germline SVs, calling is done by sample or in small batches to increase SV sensitivity & breakpoint precision. At this point we will only call ***deletions***. Here are the steps adapted from the DELLY [readme](https://github.com/tobiasrausch/delly/blob/master/README.md).
 
 ### Call deletions
 
