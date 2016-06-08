@@ -261,13 +261,12 @@ Programs:
   
   [Lecture](https://bioinformatics.ca/htseq-module-6-2016)
   
-  Lab practical:
-  
-  Data set:
+  [Lab practical](https://bioinformatics-ca.github.io/informatics_for_high-throughput_data_sequencing_2016_module6_lab/)
   
   Programs:
   
-  * [lumpy-SV](https://github.com/arq5x/lumpy-sv)
+  * [DELLY](https://github.com/arq5x/lumpy-sv)
+  * [bcftools(https://samtools.github.io/bcftools/)
   * [IGV](http://www.broadinstitute.org/igv/)
   
 [&uarr;](#back_to_top)
