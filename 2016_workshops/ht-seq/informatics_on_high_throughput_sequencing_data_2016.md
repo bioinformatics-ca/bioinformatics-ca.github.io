@@ -180,13 +180,13 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 *<font color="#827e9c">Florence Cavalli</font>*
 
-We will performed similar analysis as in module 2 but using the other 2 patient for the pedigree NA12891 and NA12891
+We will performed similar analysis as in Module 2 but using the other the mother and father samples so sample NA12891 and NA12891.
 ```bash
 Files are in the following directory of the cloud instance: ~/CourseData/HT_data/Module2/
- * NA12891_CBW_chr1_R1.fastq.gz
- * NA12891_CBW_chr1_R2.fastq.gz
- * NA12892_CBW_chr1_R1.fastq.gz
- * NA12892_CBW_chr1_R2.fastq.gz
+ * raw_reads/NA12891_CBW_chr1_R1.fastq.gz
+ * raw_reads/NA12891_CBW_chr1_R2.fastq.gz
+ * raw_reads/NA12892_CBW_chr1_R1.fastq.gz
+ * raw_reads/NA12892_CBW_chr1_R2.fastq.gz
 ```
 
 ```bash
