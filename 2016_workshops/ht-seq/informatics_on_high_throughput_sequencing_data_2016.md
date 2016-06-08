@@ -266,7 +266,7 @@ Programs:
   Programs:
   
   * [DELLY](https://github.com/arq5x/lumpy-sv)
-  * [bcftools(https://samtools.github.io/bcftools/)
+  * [bcftools](https://samtools.github.io/bcftools/)
   * [IGV](http://www.broadinstitute.org/igv/)
   
 [&uarr;](#back_to_top)
