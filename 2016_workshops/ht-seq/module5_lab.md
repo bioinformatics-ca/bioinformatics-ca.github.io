@@ -93,7 +93,7 @@ If you're interested, you can also look at the fastQC reports for the original f
 
 `~workspace/module5/other_files/fastQC_reports`
 
-You can view these reports at http://cbw##.dyndns.info/module5/other\_files/fastQC\_reports/.
+You can view these reports at http://cbw##.dyndns.info/module5/other_files/fastQC_reports/.
 
 ***Note:*** You need to replace ## by your student number. 
 
@@ -105,11 +105,11 @@ If you recall from the previous module, we first mapped the reads to hg19 and th
 Let's call SNPs in NA12878 using both the original and the improved bam files:
 
 <pre><code>java -Xmx2g -jar /usr/local/GATK/GenomeAnalysisTK.jar -T UnifiedGenotyper -l INFO \
- -R other\_files/hg19.fa -I NA12878.bwa.sort.bam -stand\_call\_conf 30 -stand\_emit\_conf 10 \
+ -R other_files/hg19.fa -I NA12878.bwa.sort.bam -stand_call_conf 30 -stand_emit_conf 10 \
  -o NA12878.bwa.sort.bam.vcf -nt 4 -glm BOTH -L chr1:17704860-18004860
 java -Xmx2g -jar /usr/local/GATK/GenomeAnalysisTK.jar -T UnifiedGenotyper -l INFO \
--R other_files/hg19.fa -I NA12878.bwa.sort.rmdup.realign.bam -stand\_call\_conf 30 \
--stand\_emit\_conf 10 -o NA12878.bwa.sort.rmdup.realign.bam.vcf -nt 4 \
+-R other_files/hg19.fa -I NA12878.bwa.sort.rmdup.realign.bam -stand_call_conf 30 \
+-stand_emit_conf 10 -o NA12878.bwa.sort.rmdup.realign.bam.vcf -nt 4 \
 -glm BOTH -L chr1:17704860-18004860
 </code></pre>
 
@@ -382,8 +382,8 @@ The third column in the vcf file is reserved for identifiers. Perhaps the most c
 
 Use the following command to generate dbSNP rsIDs for our vcf file: 
 
-<pre><code>java -Xmx2g -jar /usr/local/GATK/GenomeAnalysisTK.jar -T VariantAnnotator -R other\_files/hg19.fa \
---dbsnp other\_files/dbSNP\_135\_chr1.vcf.gz --variant NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf \
+<pre><code>java -Xmx2g -jar /usr/local/GATK/GenomeAnalysisTK.jar -T VariantAnnotator -R other_files/hg19.fa \
+--dbsnp other_files/dbSNP_135_chr1.vcf.gz --variant NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf \
 -o NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf -L chr1:17704860-18004860
 </code></pre>
 
@@ -426,7 +426,7 @@ NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
 <a name="script"></a>
 ##Overall script
 
-**NOTE:** If you ever become truly lost in this lab, you can use the lab script to automatically perform all of the steps listed here. If you are logged into your CBW account, just run: ~/CourseData/HT\_data/Module5/other\_files/RunModule5.sh. You can also download the file if you want to bring it home with you. 
+**NOTE:** If you ever become truly lost in this lab, you can use the lab script to automatically perform all of the steps listed here. If you are logged into your CBW account, just run: ~/CourseData/HT_data/Module5/other_files/RunModule5.sh. You can also download the file if you want to bring it home with you. 
 
 <a name="trio"></a>
 ##(Optional) Investigating the trio
