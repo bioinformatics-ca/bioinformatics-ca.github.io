@@ -27,6 +27,7 @@ Start by loging on the website with your username
 The paramaters that need to be set or changed are specified in the text below (and in the images), keep the rest of the parameters with their default values
 
 ** indicate the tool to use that you need to select from the left column
+![tool](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_tools.png) 
 
 #### 1) Load the data 
 
