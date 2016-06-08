@@ -123,6 +123,8 @@ That was the problem when students installed things in **RStudio** at the comman
   
   [Lecture](https://bioinformatics.ca/eda-module-1-2016)
   
+  Link to R Project repo: Enter `https://github.com/hyginn/R_EDA-Introduction` as the **Repository URL**.
+  
 ---
 
 **Before we move on: [let's list our progress!](https://docs.google.com/document/d/1l6vE8ImKPuE-s8Xltpx9NpSl6YaE4t2pY8qicH05Ihs/edit?usp=sharing)
@@ -161,6 +163,8 @@ That was the problem when students installed things in **RStudio** at the comman
   
   [Lecture](https://bioinformatics.ca/eda-module-2-2016)
   
+  Link to R Project repo: Enter `https://github.com/hyginn/R_EDA-Regression` as the **Repository URL**.
+  
 ---
 
 **In RStudio, make a new project from `https://github.com/hyginn/R_EDA-Regression` as the Repository URL**
@@ -185,6 +189,8 @@ That was the problem when students installed things in **RStudio** at the comman
   *<font color="#827e9c">Boris Steipe</font>*
   
   [Lecture](https://bioinformatics.ca/eda-module-3-2016)
+  
+  Link to R Project repo: Enter `https://github.com/hyginn/R_EDA-DimensionReduction` as the **Repository URL**.
   
 ---
 
@@ -227,7 +233,7 @@ That was the problem when students installed things in **RStudio** at the comman
   
   Scripts:
   
-  Links:
+  Link to R Project repo: Enter `https://github.com/hyginn/R_EDA-Clustering` as the **Repository URL**.
   
 * [Comparison of Clustering Methods](http://www.ncbi.nlm.nih.gov/pubmed/19240124)
 * [**R**-"task view": Cluster Analysis](http://cran.r-project.org/web/views/Cluster.html)  (and Finite Mixture Models)
@@ -267,7 +273,7 @@ Read with:
   
   Scripts:
   
-  Links:
+  Link to R Project repo: Enter `https://github.com/hyginn/R_EDA-HypothesisTesting` as the **Repository URL**.
   
   * [NGS Differential Transcriptional Analysis](http://www.ncbi.nlm.nih.gov/pubmed/25894390)
   * [Erroneous Analysis of Significance](http://www.ncbi.nlm.nih.gov/pubmed/21878926)
