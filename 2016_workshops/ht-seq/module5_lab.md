@@ -101,6 +101,7 @@ You can view these reports at http://cbw##.dyndns.info/module5/other_files/fastQ
 
 
 ## Calling variants with GATK
+<a name="variants"></a>
 
 If you recall from the previous module, we first mapped the reads to hg19 and then we removed duplicate reads and realigned the reads around the indels.
 
@@ -145,6 +146,7 @@ NA12878.bwa.sort.bam.vcf  NA12878.bwa.sort.rmdup.realign.bam  other_files
 
 
 ## Investigating the SNP calls
+<a name="investigating"></a>
 
 Use less to take a look at the vcf files:
 
@@ -238,6 +240,7 @@ You can find a slightly more advanced awk script that separates the SNPs from th
 
 
 ## Filter the variants
+<a name="filter"></a>
 
 Typically variant callers will only perform a minimal amount of filtering when presenting variant calls. In the case of GATK, we are actively removing any variant with score less than 10. Any variant with a score less than 30 is labeled with the filter "LowQual".
 
@@ -279,6 +282,7 @@ NA12878.bwa.sort.bam.vcf.idx  NA12878.bwa.sort.rmdup.realign.bam.filter.vcf.idx
 
 
 ## Adding functional consequence
+<a name="function"></a>
 
 The next step in trying to make sense of the variant calls is to assign functional consequence to each variant.
 
@@ -322,6 +326,7 @@ NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf  snpEff_summary.html
 
 
 ## Investigating the functional consequence of variants
+<a name="consequence"></a>
 
 You can learn more about the meaning of snpEff annotations [here] (http://snpeff.sourceforge.net/SnpEff_manual.html#output).
 
@@ -373,6 +378,7 @@ Let's continue by looking for variants with a moderate impact:
 
 
 ## Adding dbSNP annotations
+<a name="dbSNP"></a>
 
 Go back to looking at your last vcf file:
 
@@ -428,11 +434,13 @@ NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
 
 
 ## Overall script
+<a name="script"></a>
 
 **NOTE:** If you ever become truly lost in this lab, you can use the lab script to automatically perform all of the steps listed here. If you are logged into your CBW account, just run: ~/CourseData/HT_data/Module5/other_files/RunModule5.sh. You can also download the file if you want to bring it home with you. 
 
 
 ## (Optional) Investigating the trio
+<a name="trio"></a>
 
 At this point we have aligned and called variants in one individual. However, we actually have FASTQ and BAM files for three family members!
 
@@ -448,5 +456,6 @@ As additional practice, perform the same steps for the other two individuals (he
 
 
 ## Acknowledgements
+<a name="ackno"></a>
 
 This module is heavily based on a previous module prepared by Michael Stromberg. 
