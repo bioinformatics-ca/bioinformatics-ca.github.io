@@ -29,7 +29,7 @@ In this session, we will use [DELLY](https://github.com/tobiasrausch/delly), a S
 
 The dataset we are using comes from the [Illumina Platinum Genomes Project](http://www.illumina.com/platinumgenomes/), which is a 50X-coverage dataset of the NA12891/NA12892/NA12878 trio. The raw data can be downloaded from the following [URL](http://www.ebi.ac.uk/ena/data/view/ERP001960).
 
-![Pedigree](img/Pedigree.png)  
+![Pedigree](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Pedigree.png)  
 
 Our focus will be on chromosome 20, as processing three whole human genomes worth of data is intractable given the time allowed for this session. 
 
@@ -328,7 +328,7 @@ http://cbwXX.dyndns.info/module6/bam/NA12892_S1.chr20.20X.pairs.posSorted.bam
 
 You should see something like this:
 
-![Deletion](img/del1.png)
+![Deletion](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/del1.png)
 
 You can try to configure IGV such that we can more clearly see the alignments that support the SV prediction.
 
