@@ -24,9 +24,7 @@ The paramaters that need to be set or changed are specified in the text below (a
 
 ** indicate the tool to use that you need to select from the left column
 
-### Data files
-
-1) Load the data 
+### 1) Load the data 
 
 ** Get Data/Upload File
 
@@ -47,12 +45,11 @@ http://cbw##.dyndns.info/HTSeq_module2/reference/dbSNP_135_chr1.vcf.gz
 replace ## by your student id
 
 
-2) convert the data to use Trimmomatic
+### 2) convert the data to use Trimmomatic
 
 ** NGS: QC and manipulation/FASTAQ groomer
 
-3) Trim the read and remove adapter sequence with Trimmomoatic
-
+### 3) Trim the read and remove adapter sequence with Trimmomoatic
 ** NGS: QC and manipulation/Trimmomatic 
 
 - On FASTAQ groomer data 
