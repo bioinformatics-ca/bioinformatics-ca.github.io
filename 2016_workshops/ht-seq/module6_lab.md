@@ -25,9 +25,9 @@ This lab was created by Guillaume Bourque.
 
 The goal of this practical session is to identify structural variants (SVs) in a human genome by identifying both discordant paired-end alignments and split-read alignments that. If you recall from the lecture, discordant paired-end alignments conflict with the alignment patterns that we expect (i.e., concordant alignments) for the DNA library and sequencing technology we have used. For example, given a ~500bp paired-end Illumina library, we expect pairs to align in F/R orientation and we expect the ends of the pair to align roughly 500bp apart. Pairs that align too far apart suggest a potential deletion in the DNA sample's genome. As you may have guessed, the trick is how we define what "too far" is --- this depends on the fragment size distribution of the data. Split-read alignments contain SV breakpoints and consequently, then DNA sequences up- and down-stream of the breakpoint align to disjoint locations in the reference genome.
 
-In this session, we will use [DELLY] (https://github.com/tobiasrausch/delly), a SV detection tool. DELLY is an integrated structural variant prediction method that can discover, genotype and visualize deletions, tandem duplications, inversions and translocations at single-nucleotide resolution in short-read massively parallel sequencing data. It uses paired-ends and split-reads to sensitively and accurately delineate genomic rearrangements throughout the genome. If you are interested in DELLY, you can read the full manuscript [here] (http://bioinformatics.oxfordjournals.org/content/28/18/i333.abstract).
+In this session, we will use [DELLY](https://github.com/tobiasrausch/delly), a SV detection tool. DELLY is an integrated structural variant prediction method that can discover, genotype and visualize deletions, tandem duplications, inversions and translocations at single-nucleotide resolution in short-read massively parallel sequencing data. It uses paired-ends and split-reads to sensitively and accurately delineate genomic rearrangements throughout the genome. If you are interested in DELLY, you can read the full manuscript [here] (http://bioinformatics.oxfordjournals.org/content/28/18/i333.abstract).
 
-The dataset we are using comes from the [Illumina Platinum Genomes Project] (http://www.illumina.com/platinumgenomes/), which is a 50X-coverage dataset of the NA12891/NA12892/NA12878 trio. The raw data can be downloaded from the following [URL] (http://www.ebi.ac.uk/ena/data/view/ERP001960).
+The dataset we are using comes from the [Illumina Platinum Genomes Project](http://www.illumina.com/platinumgenomes/), which is a 50X-coverage dataset of the NA12891/NA12892/NA12878 trio. The raw data can be downloaded from the following [URL](http://www.ebi.ac.uk/ena/data/view/ERP001960).
 
 ![Pedigree](img/Pedigree.png)  
 
@@ -37,7 +37,7 @@ Our focus will be on chromosome 20, as processing three whole human genomes wort
 
 #### Amazon node
 
-Read these [directions] (http://bioinformatics-ca.github.io/logging_into_the_Amazon_cloud/) for information on how to log in to your assigned Amazon node. 
+Read these [directions](http://bioinformatics-ca.github.io/logging_into_the_Amazon_cloud/) for information on how to log in to your assigned Amazon node. 
 
 #### Work directory
 
@@ -60,7 +60,7 @@ In this step, we created a new directory that will store all of the files create
 
 At this point you should have the following files:  
 <pre><code>ubuntu@ip-10-164-192-186:~/workspace/module6$ ls
-bam  fastq  pairend_distro.py  reference  RunModule6.sh
+bam  delly_call  fastq  pairend_distro.py  reference  RunModule6.sh
 </code></pre>
 
 Looking in the bam directory, you should see:
@@ -147,10 +147,9 @@ Calculation of the fragment distribution for NA12892.
 At this point you should have the following files:
 
 <pre><code>ubuntu@ip-10-164-192-186:~/workspace/module6$ ls
-bam                                NA12891_S1.chr20.20X.pairs.histo   pairend_distro.py
-fastq                              NA12891_S1.chr20.20X.pairs.params  reference
-NA12878_S1.chr20.20X.pairs.histo   NA12892_S1.chr20.20X.pairs.histo   RunModule6.sh
-NA12878_S1.chr20.20X.pairs.params  NA12892_S1.chr20.20X.pairs.params
+bam         NA12878_S1.chr20.20X.pairs.histo   NA12891_S1.chr20.20X.pairs.params  pairend_distro.py
+delly_call  NA12878_S1.chr20.20X.pairs.params  NA12892_S1.chr20.20X.pairs.histo   reference
+fastq       NA12891_S1.chr20.20X.pairs.histo   NA12892_S1.chr20.20X.pairs.params  RunModule6.sh
 </code></pre>
 
 Let's take a peak at the first few lines of the histogram file that was produced:
@@ -196,11 +195,11 @@ Now, within R, execute the following commands:
 At this point, you should have the following files: 
 
 <pre><code>ubuntu@ip-10-164-192-186:~/workspace/module6$ ls
-bam                                NA12891.fragment.hist.pdf          NA12892_S1.chr20.20X.pairs.params
-fastq                              NA12891_S1.chr20.20X.pairs.histo   pairend_distro.py
-NA12878.fragment.hist.pdf          NA12891_S1.chr20.20X.pairs.params  reference
-NA12878_S1.chr20.20X.pairs.histo   NA12892.fragment.hist.pdf          RunModule6.sh
-NA12878_S1.chr20.20X.pairs.params  NA12892_S1.chr20.20X.pairs.histo
+bam                               NA12878_S1.chr20.20X.pairs.params  NA12892_S1.chr20.20X.pairs.histo
+delly_call                        NA12891.fragment.hist.pdf          NA12892_S1.chr20.20X.pairs.params
+fastq                             NA12891_S1.chr20.20X.pairs.histo   pairend_distro.py
+NA12878.fragment.hist.pdf         NA12891_S1.chr20.20X.pairs.params  reference
+NA12878_S1.chr20.20X.pairs.histo  NA12892.fragment.hist.pdf          RunModule6.sh
 </code></pre>
 
 If successful, you should be able to access the 3 PDF files at the following URLs: 
@@ -290,9 +289,10 @@ bcftools view germline.bcf > germline.vcf
 At this point you should have the following files:
 
 <pre><code>ubuntu@ip-10-164-192-186:~/workspace/module6$ ls
-bam               NA12878.fragment.hist.pdf          NA12892.bcf
-del.bcf           NA12878.geno.bcf                   NA12892.bcf.csi
-del.bcf.csi       NA12878.geno.bcf.csi               NA12892.fragment.hist.pdf
+bam               NA12878.bcf.csi                    NA12891_S1.chr20.20X.pairs.params
+del.bcf           NA12878.fragment.hist.pdf          NA12892.bcf
+del.bcf.csi       NA12878.geno.bcf                   NA12892.bcf.csi
+delly_call        NA12878.geno.bcf.csi               NA12892.fragment.hist.pdf
 fastq             NA12878_S1.chr20.20X.pairs.histo   NA12892.geno.bcf
 germline.bcf      NA12878_S1.chr20.20X.pairs.params  NA12892.geno.bcf.csi
 germline.bcf.csi  NA12891.bcf                        NA12892_S1.chr20.20X.pairs.histo
@@ -301,7 +301,6 @@ merged.bcf        NA12891.fragment.hist.pdf          pairend_distro.py
 merged.bcf.csi    NA12891.geno.bcf                   reference
 merged.vcf        NA12891.geno.bcf.csi               RunModule6.sh
 NA12878.bcf       NA12891_S1.chr20.20X.pairs.histo
-NA12878.bcf.csi   NA12891_S1.chr20.20X.pairs.params
 </code></pre>
 
 ## Setting up IGV for SV visualization
