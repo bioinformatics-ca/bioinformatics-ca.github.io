@@ -55,14 +55,14 @@ replace ## by your student id
 3) Trim the read and remove adapter sequence with Trimmomoatic
 ** NGS: QC and manipulation/Trimmomatic 
 
-On FASTAQ groomer data 
-ILLUMINACLIP step
-TruSeq3 (paired-end, for MiSeq and HiSeq)
-2
-30
-15
-TRAILING:20 
-MINLEN:32
+- On FASTAQ groomer data 
+- ILLUMINACLIP step
+- TruSeq3 (paired-end, for MiSeq and HiSeq)
+- 2
+- 30
+- 15
+- TRAILING:20 
+- MINLEN:32
 
 It creates 4 files two for R1 and two for R2 (paired and unpaired?)
 Use paired results for the alignment
@@ -71,8 +71,8 @@ Use paired results for the alignment
 4) aligne the read with BWA-mem
 ** NGS: Mapping/Map with BWA-MEM 
 
-Set the Read group -RG option
-Set Read group information?
+- Set the Read group -RG option
+- Set Read group information?
 Set read group SAM/BAM specification
 with the following info
 ID:NA12878
