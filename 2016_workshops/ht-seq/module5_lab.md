@@ -166,7 +166,8 @@ vcf is a daunting format at first glance, but you can find some basic informatio
 
 Use the following command to pull out differences between the two files: 
 <pre><code>diff <(grep ^chr NA12878.bwa.sort.bam.vcf | cut -f1-2 | sort) \
-<(grep ^chr NA12878.bwa.sort.rmdup.realign.bam.vcf | cut -f1-2 | sort)</code></pre>
+<(grep ^chr NA12878.bwa.sort.rmdup.realign.bam.vcf | cut -f1-2 | sort)
+</code></pre>
 
 ### Use IGV to investigate the SNPs
 
