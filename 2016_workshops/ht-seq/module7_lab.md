@@ -33,19 +33,15 @@ The paramaters that need to be set or changed are specified in the text below (a
 “Paste/Fetch Data” box:
 
 NA12878_CBW_chr1_R1.fastq.gz
-
 http://cbw##.dyndns.info/HTSeq_module2/raw_reads/NA12878/NA12878_CBW_chr1_R1.fastq.gz
 
 NA12878_CBW_chr1_R2.fastq.gz
-
 http://cbw##.dyndns.info/HTSeq_module2/raw_reads/NA12878/NA12878_CBW_chr1_R2.fastq.gz
 
 hg19_chr1.fa
-
 http://cbw##.dyndns.info/Module7/hg19_chr1.fa
 
 dbSNP_135_chr1.vcf.gz
-
 http://cbw##.dyndns.info/HTSeq_module2/reference/dbSNP_135_chr1.vcf.gz
 
 replace ## by your student id
