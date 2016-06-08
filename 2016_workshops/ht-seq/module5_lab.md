@@ -84,7 +84,7 @@ If you type ls, you should have something like:
 <pre><code>ubuntu@ip-10-182-231-187:~/workspace/module5$ ls
 NA12878.bwa.sort.bam      NA12878.bwa.sort.rmdup.realign.bai  other_files
 NA12878.bwa.sort.bam.bai  NA12878.bwa.sort.rmdup.realign.bam
-</pre></code>
+</code></pre>
 `other_files` is a directory that contains additional reference files and scripts that we will need during the module.
 
 ***Do you know what are the*** `.bai` ***files?***
@@ -111,7 +111,7 @@ java -Xmx2g -jar /usr/local/GATK/GenomeAnalysisTK.jar -T UnifiedGenotyper -l INF
 -R other_files/hg19.fa -I NA12878.bwa.sort.rmdup.realign.bam -stand\_call\_conf 30 \
 -stand\_emit\_conf 10 -o NA12878.bwa.sort.rmdup.realign.bam.vcf -nt 4 \
 -glm BOTH -L chr1:17704860-18004860
-</pre></code>
+</code></pre>
 
 `-Xmx2g` instructs java to allow up 2 GB of RAM to be used for GATK.
  
@@ -139,7 +139,7 @@ At this point, you should have the following result files
 NA12878.bwa.sort.bam      NA12878.bwa.sort.bam.vcf.idx        NA12878.bwa.sort.rmdup.realign.bam.vcf
 NA12878.bwa.sort.bam.bai  NA12878.bwa.sort.rmdup.realign.bai  NA12878.bwa.sort.rmdup.realign.bam.vcf.idx
 NA12878.bwa.sort.bam.vcf  NA12878.bwa.sort.rmdup.realign.bam  other\_files
-</pre></code>
+</code></pre>
 
 <a name="investigating"></a>
 ## Investigating the SNP calls
@@ -148,7 +148,7 @@ Use less to take a look at the vcf files:
 
 <pre><code>less NA12878.bwa.sort.bam.vcf
 less NA12878.bwa.sort.rmdup.realign.bam.vcf
-</pre></code>
+</code></pre>
 
 A bit hard to read... Better with the `-S` option?
 
@@ -167,7 +167,7 @@ vcf is a daunting format at first glance, but you can find some basic informatio
 Use the following command to pull out differences between the two files: 
 <pre><code>diff <(grep ^chr NA12878.bwa.sort.bam.vcf | cut -f1-2 | sort) \
 <(grep ^chr NA12878.bwa.sort.rmdup.realign.bam.vcf | cut -f1-2 | sort)
-</pre></code>
+</code></pre>
 
 ### Use IGV to investigate the SNPs
 
@@ -192,7 +192,7 @@ After you have loaded the two bam files, load the two vcf files (NA12878.bwa.sor
 <pre><code>NA12878.bwa.sort.bam      NA12878.bwa.sort.bam.vcf.idx        NA12878.bwa.sort.rmdup.realign.bam.vcf
 NA12878.bwa.sort.bam.bai  NA12878.bwa.sort.rmdup.realign.bai  NA12878.bwa.sort.rmdup.realign.bam.vcf.idx
 NA12878.bwa.sort.bam.vcf  NA12878.bwa.sort.rmdup.realign.bam
-</pre></code>
+</code></pre>
 
 To do this you can use the procedure that was described previously.
 
@@ -225,7 +225,7 @@ Here's an awk expression that almost picks out the INDELs:
 
 <pre><code>grep -v "^#" NA12878.bwa.sort.rmdup.realign.bam.vcf | awk '{ if(length($4) != length($5)) { print $0 } }' \
 | less -S
-</pre></code>
+</code></pre>
 
 You can find a slightly more advanced awk script that separates the SNPs from the INDELs [here] (https://www.biostars.org/p/7403/).
 
@@ -246,7 +246,7 @@ To perform more rigorous filtering, another program must be used. In our case, w
 -R other_files/hg19.fa --variant NA12878.bwa.sort.rmdup.realign.bam.vcf -o NA12878.bwa.sort.rmdup.realign.bam.filter.vcf --filterExpression "QD < 2.0" \
 --filterExpression "FS > 200.0" --filterExpression "MQ < 40.0" --filterName QDFilter \
 --filterName FSFilter --filterName MQFilter
-</pre></code>
+</code></pre>
 
 `-Xmx2g` instructs java to allow up 2 GB of RAM to be used for GATK. 
 
@@ -271,7 +271,7 @@ NA12878.bwa.sort.bam          NA12878.bwa.sort.rmdup.realign.bai                
 NA12878.bwa.sort.bam.bai      NA12878.bwa.sort.rmdup.realign.bam                 NA12878.bwa.sort.rmdup.realign.bam.vcf.idx
 NA12878.bwa.sort.bam.vcf      NA12878.bwa.sort.rmdup.realign.bam.filter.vcf      other_files
 NA12878.bwa.sort.bam.vcf.idx  NA12878.bwa.sort.rmdup.realign.bam.filter.vcf.idx
-</pre></code>
+</code></pre>
 
 <a name="function"></a>
 ## Adding functional consequence
@@ -283,7 +283,7 @@ At the most basic level, this involves using gene annotations to determine if va
 <pre><code>java -Xmx2G -jar other\_files/snpEff/snpEff.jar eff \
 -c other_files/snpEff/snpEff.config -v -no-intergenic \
 -i vcf -o vcf hg19 NA12878.bwa.sort.rmdup.realign.bam.filter.vcf > NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
-</pre></code>
+</code></pre>
 
 `-Xmx2g` instructs java to allow up 4 GB of RAM to be used for snpEff. 
 
@@ -313,7 +313,7 @@ NA12878.bwa.sort.bam.vcf.idx                          NA12878.bwa.sort.rmdup.rea
 NA12878.bwa.sort.rmdup.realign.bai                    other\_files
 NA12878.bwa.sort.rmdup.realign.bam                    snpEff\_genes.txt
 NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf  snpEff\_summary.html
-</pre></code> 
+</code></pre> 
 
 <a name="consequence"></a>
 ## Investigating the functional consequence of variants
@@ -323,17 +323,17 @@ You can learn more about the meaning of snpEff annotations [here] (http://snpeff
 Use less to look at the new vcf file: 
 
 <pre><code>less NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
-</pre></code>
+</code></pre>
 
 The annotation is presented in the INFO field using the new ANN format. For more information on this field see [here] (http://snpeff.sourceforge.net/VCFannotationformat_v1.0.pdf). Typically, we have: 
 
 <pre><code>ANN=Allele|Annotation|Putative impact|Gene name|Gene ID|Feature type|Feature ID|Transcript biotype|Rank / Total|HGVS.c|...
-</pre></code>
+</code></pre>
 
 Here's an example of a typical annotation: 
 
 <pre><code>ANN=C|intron\_variant|MODIFIER|PADI6|PADI6|transcript|NM_207421.4|Coding|5/16|c.553+80T>C||||||
-</pre></code>
+</code></pre>
 
 ***What does the example annotation actually mean?***
 
@@ -342,7 +342,7 @@ Next, you should view or download the report generated by snpEff.
 Use the procedure described previously to retrieve:
 
 <pre><code>snpEff_summary.html
-</pre></code>
+</code></pre>
  
 Next, open the file in any web browser.
 
@@ -353,7 +353,7 @@ One nice feature in snpEff is that it tries to assess the impact of each variant
 Let's begin by looking for variants with a high impact:
 
 <pre><code>grep HIGH NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
-</pre></code>
+</code></pre>
 
 ***How many variants had a high impact? What effect categories were represented in these variants?***
 
@@ -362,7 +362,7 @@ Let's begin by looking for variants with a high impact:
 Let's continue by looking for variants with a moderate impact:
 
 <pre><code>grep MODERATE NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
-</pre></code>
+</code></pre>
 
 ***How many variants had a moderate impact? What effect categories were represented in these variants?***
 
@@ -372,7 +372,7 @@ Let's continue by looking for variants with a moderate impact:
 Go back to looking at your last vcf file:
 
 <pre><code>less -S NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
-</pre></code>
+</code></pre>
 
 ***What do you see in the third column?***
 
@@ -383,7 +383,7 @@ Use the following command to generate dbSNP rsIDs for our vcf file:
 <pre><code>java -Xmx2g -jar /usr/local/GATK/GenomeAnalysisTK.jar -T VariantAnnotator -R other\_files/hg19.fa \
 --dbsnp other\_files/dbSNP\_135\_chr1.vcf.gz --variant NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf \
 -o NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf -L chr1:17704860-18004860
-</pre></code>
+</code></pre>
 
 `-Xmx2g` instructs java to allow up 2 GB of RAM to be used for GATK. 
 
@@ -401,7 +401,7 @@ Use the following command to generate dbSNP rsIDs for our vcf file:
 
 <pre><code>grep -v ^# NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf | grep PASS | grep -c rs
 grep -v ^# NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf | grep -c PASS
-</pre></code>
+</code></pre>
 
 ***Can you find a variant that wasn't in dbSNP?***
 
@@ -419,7 +419,7 @@ NA12878.bwa.sort.rmdup.realign.bam                              other\_files
 NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf      snpEff\_genes.txt
 NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.dbsnp.vcf.idx  snpEff\_summary.html
 NA12878.bwa.sort.rmdup.realign.bam.filter.snpeff.vcf
-</pre></code>
+</code></pre>
 
 <a name="script"></a>
 ## Overall script
@@ -445,5 +445,3 @@ As additional practice, perform the same steps for the other two individuals (he
 ## Acknowledgements
 
 This module is heavily based on a previous module prepared by Michael Stromberg. 
-
-
