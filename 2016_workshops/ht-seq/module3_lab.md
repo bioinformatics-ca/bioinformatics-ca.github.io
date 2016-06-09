@@ -252,7 +252,7 @@ Navigate to region "chr21:19,089,694-19,095,362"
 
  * Expanded view
  * Group by Pair Orientation
- * Color by Pair Orientation
+ * Color by Insert size and pair Orientation
 
 ![Example8](https://bioinformatics-ca.github.io/images/Igv_example8.png)
 
