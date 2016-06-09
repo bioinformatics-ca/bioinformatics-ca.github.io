@@ -237,8 +237,9 @@ Navigate to region "chr21:19,324,469-19,331,468"
 ## Mis-alignment 
 
 Navigate to region "chr21:19,102,154-19,103,108"
-* Group alignments by "pair orientation"
-* Color alignments by "insert size and pair orientation"
+* turn on "View as Pairs" and "Expanded" view
+* Group alignments by "Pair orientation"
+* Color alignments by "Insert size and pair orientation"
 
 ![Example7](https://bioinformatics-ca.github.io/images/Igv_example7.png)
 
@@ -253,8 +254,8 @@ Navigate to region "chr21:19,102,154-19,103,108"
 Navigate to region "chr21:19,089,694-19,095,362"
 
  * Expanded view
- * Group by Pair Orientation
- * Color by Insert size and pair Orientation
+ * Group by "Pair orientation"
+ * Color alignments by "Insert size and pair orientation"
 
 ![Example8](https://bioinformatics-ca.github.io/images/Igv_example8.png)
 
