@@ -184,7 +184,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 *<font color="#827e9c">Florence Cavalli</font>*
 
-We will performed similar analysis as in Module 2 but using the other the mother and father samples so sample NA12891 and NA12891.
+We will performed similar analysis as in Module 2 but using the mother and father samples so sample NA12891 and NA12891.
 
 ```bash
 Files are in the following directory of the cloud instance: ~/CourseData/HT_data/Module2/
@@ -207,7 +207,7 @@ Files are in the following directory of the cloud instance: ~/CourseData/HT_data
  rm *
  
  # Create symbolic links for all of the files contained in the Module2 directory
- # this includes the hg19 genome, the FASTQ files, and dbSNP annotation
+ # this includes the hg19 genome and the FASTQ files
  
  ln -s ~/CourseData/HT_data/Module2/* .
  ls
@@ -215,21 +215,22 @@ Files are in the following directory of the cloud instance: ~/CourseData/HT_data
 
 
 Task list:
-
-1. Align the raw data to the human reference genome.
-2. Sort the reads and perform duplicate removal.
-3. Index the sorted bam file.
-4. Perform indel cleaning.
-5. Visualize the alignments.
+1. Check read QC with BVAtools
+2. Trim unreliable bases from the read ends using Trimmomatic
+3. Align the reads to the reference using BWA
+4. Sort the alignments by chromosome position using PICARD
+5. Realign short indels using GATK
+6. Fixe mate issues using PICARD.
+7. Recalibrate the Base Quality using GATK.
+8. Generate alignment metrics using GATK and PICARD.
 
 
 Discussion/Questions:
-
 1. Explain the purpose of each step.
 2. Which software tool can be used for each step. 
 
 
-Integrated Assignment: 
+Integrated Assignment script
 
 [&uarr;](#back_to_top)
 
