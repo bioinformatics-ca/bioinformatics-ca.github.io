@@ -183,9 +183,13 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 We will performed similar analysis as in Module 2 but using the other the mother and father samples so sample NA12891 and NA12891.
 ```bash
 Files are in the following directory of the cloud instance: ~/CourseData/HT_data/Module2/
+
  * raw_reads/NA12891_CBW_chr1_R1.fastq.gz
+ 
  * raw_reads/NA12891_CBW_chr1_R2.fastq.gz
+ 
  * raw_reads/NA12892_CBW_chr1_R1.fastq.gz
+ 
  * raw_reads/NA12892_CBW_chr1_R2.fastq.gz
 ```
 
@@ -324,5 +328,3 @@ Galaxy Resources:
 [&uarr;](#back_to_top)
 
 ***
-
-![test image](https://github.com/mbourgey/CBW_HTseq_module2/blob/c4e60b9f58dd25d5f871c06c428627b85562a778/img/QualityBoxPlot.png?raw=true)
