@@ -51,7 +51,7 @@ image: CBW_High-throughput_icon.jpg
   
 ### Workshop Survey
 
-We value your feedback.  PLease fill out [our survey](https://www.surveymonkey.com/r/8SQZPHT) to help us make our workshops better.
+We value your feedback.  Please fill out [our survey](https://www.surveymonkey.com/r/8SQZPHT) to help us make our workshops better.
 
 [&uarr;](#back_to_top)
 
