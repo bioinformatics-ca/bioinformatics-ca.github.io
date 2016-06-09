@@ -139,6 +139,7 @@ Platform unit (PU): runNA12878_1
 ![align1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_1.png) 
 ![align2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_2.png) 
 ![align3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_3.png) 
+![align4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_4.png) 
 
 *** This step takes some time to run
 
