@@ -245,7 +245,9 @@ Discussion/Questions:
 2. Which software tool can be used for each step. 
 
 
-Integrated Assignment script
+[Integrated Assignment script](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/2016_workshop/ht-seq/Integrated_assignment_commands_parents.sh)
+
+
 
 [&uarr;](#back_to_top)
 
