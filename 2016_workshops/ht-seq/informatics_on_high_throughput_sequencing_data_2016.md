@@ -55,6 +55,10 @@ We value your feedback.  PLease fill out [our survey](https://www.surveymonkey.c
 
 [&uarr;](#back_to_top)
 
+### Class Photo
+
+![Class photo](https://bioinformatics-ca.github.io/2016_workshops/ht-seq/class_photo.png)
+
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/Laptop%20Programs%20to%20Install.pdf">here</a>.
