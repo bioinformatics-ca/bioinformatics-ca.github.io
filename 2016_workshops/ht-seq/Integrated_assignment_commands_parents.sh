@@ -1,4 +1,4 @@
-# Written by Matthieu Bourgey as part of Module 2
+# Written by Mathieu Bourgey as part of Module 2
 #set up
 export ROOT_DIR=~/workspace/Integrated_assignment
 export TRIMMOMATIC_JAR=$ROOT_DIR/tools/Trimmomatic-0.36/trimmomatic-0.36.jar
