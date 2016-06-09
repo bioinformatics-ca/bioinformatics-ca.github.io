@@ -115,27 +115,35 @@ File check:
 ![file3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_3.png) 
 
 
-#### 4) Align the reads with BWA-mem
+#### 4) Align the reads with BWA-MEM
 <a name="align"></a>
 ** NGS: Mapping/Map with BWA-MEM 
 
-- Set the Read group -RG option
-- Set Read group information?
-- Set read group SAM/BAM specification
+- Will you select a reference genome from your history or use a built-in index? : Use a genome from history or build index
+- Use the following dataset as the reference sequence: hg19_chr1.fa
+- Select first set of reads: Trimmomactic on FASTQ groomer (R1 paired)
+- Select second set of reads: Trimmomactic on FASTQ groomer (R2 paired)
+- Set the read groups information : Set read group SAM/BAM specification
 with the following info
-ID:NA12878
-SM:NA12878
-LB:NA12878
-PU:runNA12878_1
-CN:Broad Institute
-PL:ILLUMINA
+Read group identifier (ID): NA12878
+Read group sample name (SM): NA12878
+Platform/technology used to produce the reads (PL): ILLUMINA
+Library name (LB):NA12878
+Sequencing center that produced the read (CN): Broad Institute
+Platform unit (PU): runNA12878_1
 
--Select Analysis node
- Full list of option
- Yes to -M option (for compatibility with Picard)
+- Select Analysis node: 3. Full list of option
+- Set input/output options : Set
+- Mark shorter split hits of a chimeric alignment in the FLAG field as 'secondary alignment' instead of 'supplementary alignment': Yes -M; For Picard<1.96 compatibility
 
+![align1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_1.png) 
+![align2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_2.png) 
+![align3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_3.png) 
 
 *** This step takes some time to run
+
+
+![file4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_4.png) 
 
 #### 5) Sort the sam/bam 
 <a name="sort"></a>
