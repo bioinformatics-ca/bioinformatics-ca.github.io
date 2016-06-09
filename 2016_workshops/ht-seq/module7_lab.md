@@ -11,22 +11,22 @@ This lab was created by Florence Cavalli.
 
 ## Table of contents
 
-[Introduction](#introduction)
-1. [Load the data](#load)
-2. [Convert the FASTQ quality format](#convert)
-3. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)
-4. [Align the reads with BWA-mem](#align)
-5. [Sort the sam/bam](#sort)
-6. [Create single interval](#interval)  
-7. [Indel realignment](#indelRealign)
-8. [FixMates](#fixmates)
-9. [Mark duplicates](#markdup)
-10. [Recalibration](#recalibration)
-11. [Extract Metrics](#extracmetrics)
-12. [Call SNPs](#callsnp)
-13. [Filter the variants](#filtervariant)
-14. [Annotate the vcf file](#annotate)
-[The "History options" menu](#menu)
+ - [Introduction](#introduction)
+ 1. [Load the data](#load)   
+ 2. [Convert the FASTQ quality format](#convert) 
+ 3. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)
+ 4. [Align the reads with BWA-mem](#align)
+ 5. [Sort the sam/bam](#sort)
+ 6. [Create single interval](#interval)  
+ 7. [Indel realignment](#indelRealign)
+ 8. [FixMates](#fixmates)
+ 9. [Mark duplicates](#markdup)
+ 10. [Recalibration](#recalibration)
+ 11. [Extract Metrics](#extracmetrics)
+ 12. [Call SNPs](#callsnp)
+ 13. [Filter the variants](#filtervariant)
+ 14. [Annotate the vcf file](#annotate)
+ - [The "History options" menu](#menu)
 
 
 ## Introduction
