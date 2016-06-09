@@ -81,7 +81,7 @@ File check:
 ** NGS: QC and manipulation/FASTAQ groomer convert between various FASTQ quality formats
 - File to groom : NA12878_CBW_chr1_R1.fastq
 
-![dataLoaded](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_groomer.png) 
+![groomer](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_groomer.png) 
 
 Run the FASTAQ groomer on the NA12878_CBW_chr1_R1.fastq as well
 
@@ -102,6 +102,9 @@ File check:
 - Select Trimmomatic operation to perform
 -- TRAILING:20 
 -- MINLEN:32
+
+![trim1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Trim_1.png) 
+![trim2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Trim_2.png) 
 
 This creates 4 files, for paired and unpaired reads for both R1 and R2
 
