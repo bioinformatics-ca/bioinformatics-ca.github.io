@@ -69,9 +69,11 @@ When the data is loaded and/or a task have finished to run the files created are
 For example after loading the data you should see the following in the history column on the right
 
 File check:
+
 ![file1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_1.png) 
 
 **NOTE**: numbers and paths of the file may vary with usage
+
 **NOTE**: the icons on the right of each file allow you to "Poke an eye", edit the attribute or delete the file
 
 #### 2) Convert the FASTQ quality format
@@ -84,6 +86,7 @@ File check:
 Run the FASTAQ groomer on the NA12878_CBW_chr1_R1.fastq as well
 
 File check:
+
 ![file2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2.png) 
 
 #### 3) Trim the read and remove adapter sequence with Trimmomoatic
@@ -101,9 +104,11 @@ File check:
 -- MINLEN:32
 
 This creates 4 files, for paired and unpaired reads for both R1 and R2
+
 Use the paired results for the alignment
 
 File check:
+
 ![file3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_3.png) 
 
 
