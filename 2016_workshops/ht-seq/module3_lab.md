@@ -103,8 +103,9 @@ We will be using the breast cancer cell line HCC1143 to visualize alignments.  F
 
 *HCC1143 Alignments to hg19:* 
 
-* http://bioinformatics.ca/workshop_wiki/images/5/54/HCC1143.normal.21.19M-20M.bam
-* http://bioinformatics.ca/workshop_wiki/images/a/a0/HCC1143.normal.21.19M-20M.bam.bai
+* [HCC1143.normal.21.19M-20M.bam](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/HCC1143.normal.21.19M-20M.bam)
+* [HCC1143.normal.21.19M-20M.bam.bai](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/HCC1143.normal.21.19M-20M.bam.bai)
+
 
 Copy the files to your local drive, and in IGV choose **File > Load from File...**, select the bam file, and click **OK**.  Note that the bam and index files must be in the same directory for IGV to load these properly.
 
