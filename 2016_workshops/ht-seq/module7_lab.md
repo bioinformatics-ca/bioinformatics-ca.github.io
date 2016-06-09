@@ -26,7 +26,7 @@ This lab was created by Florence Cavalli.
 12. [Call SNPs](#callsnp)
 13. [Filter the variants](#filtervariant)
 14. [Annotate the vcf file](#annotate)
-[Look at the "History options" menu](#menu)
+[The "History options" menu](#menu)
 
 
 ## Introduction
@@ -64,6 +64,12 @@ http://cbw##.dyndns.info/HTSeq_module2/reference/dbSNP_135_chr1.vcf.gz
 replace ## by your student id
 
 ![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Load_data.png) 
+
+When data is loaded and/or a task have finished to run the files created are green. Grey indicates that the task is queueing, yellow that the task is beeing processed and red that an error occurred.
+For example after loading the data you should see the following in the right column:
+
+![dataLoaded](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_1.png) 
+
 #### 2) Convert the data to use Trimmomatic
 <a name="convert"></a>
 ** NGS: QC and manipulation/FASTAQ groomer
@@ -276,11 +282,11 @@ Look at or download your filtered and annotated variant calls as vcf files
 
 #### The "History options" menu
 <a name="menu"></a>
-you can
+You can
 - Extract workflow
 - Save your workflow
 - Share your workflow
-...
+- ...
 
 ![history](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_history.png) 
 
