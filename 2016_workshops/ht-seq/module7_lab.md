@@ -65,8 +65,8 @@ replace ## by your student id
 
 ![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Load_data.png) 
 
-When data is loaded and/or a task have finished to run the files created are green. Grey indicates that the task is queueing, yellow that the task is beeing processed and red that an error occurred.
-For example after loading the data you should see the following in the right column:
+When the data is loaded and/or a task have finished to run the files created are green. Grey indicates that the task is queueing, yellow that the task is beeing processed and red that an error occurred.
+For example after loading the data you should see the following in the history column on the right:
 
 ![dataLoaded](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_1.png) 
 
@@ -87,8 +87,8 @@ For example after loading the data you should see the following in the right col
 - TRAILING:20 
 - MINLEN:32
 
-It creates 4 files two for R1 and two for R2 (paired and unpaired?)
-Use paired results for the alignment
+It creates 4 files, for paired and unpaired reads for both R1 and R2
+Use the paired results for the alignment
 
 
 #### 4) Align the reads with BWA-mem
