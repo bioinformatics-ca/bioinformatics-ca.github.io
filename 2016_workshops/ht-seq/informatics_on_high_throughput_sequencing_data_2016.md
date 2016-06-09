@@ -196,37 +196,50 @@ Files are in the following directory of the cloud instance: ~/CourseData/HT_data
 ```
 
 ```bash
- # Create a directory to work in
- # this is where we'll place all of our output files
- 
- mkdir -p ~/workspace/Integrated_assignment
- cd ~/workspace/Integrated_assignment
- 
- # Erase any files that might already be there</b>
- 
+#set up
+export ROOT_DIR=~/workspace/Integrated_assignment
+export TRIMMOMATIC_JAR=$ROOT_DIR/tools/Trimmomatic-0.36/trimmomatic-0.36.jar
+export PICARD_JAR=$ROOT_DIR/tools/picard-tools-1.141/picard.jar
+export GATK_JAR=$ROOT_DIR/tools/GenomeAnalysisTK-3.5/GenomeAnalysisTK.jar
+export BVATOOLS_JAR=$ROOT_DIR/tools/bvatools-1.6/bvatools-1.6-full.jar
+export REF=$ROOT_DIR/reference/
+
+# Create a directory to work in (workspace/Integrated_assignment)
+# this is where we'll place all of our output files
+
+mkdir -p $ROOT_DIR
+cd $ROOT_DIR
+
+# Erase any files that might already be there</b>
  rm *
  
- # Create symbolic links for all of the files contained in the Module2 directory
- # this includes the hg19 genome and the FASTQ files
- 
- ln -s ~/CourseData/HT_data/Module2/* .
- ls
+# Create symbolic links for all of the files contained in the Module2 directory
+# this includes the hg19 genome and the FASTQ files
+ln -s ~/CourseData/HT_data/Module2/* .
+ls
 ```
-
 
 Task list:
 1. Check read QC with BVAtools
+
 2. Trim unreliable bases from the read ends using Trimmomatic
+
 3. Align the reads to the reference using BWA
+
 4. Sort the alignments by chromosome position using PICARD
+
 5. Realign short indels using GATK
+
 6. Fixe mate issues using PICARD.
+
 7. Recalibrate the Base Quality using GATK.
+
 8. Generate alignment metrics using GATK and PICARD.
 
 
 Discussion/Questions:
 1. Explain the purpose of each step.
+
 2. Which software tool can be used for each step. 
 
 
