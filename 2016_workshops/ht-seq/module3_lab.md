@@ -7,7 +7,7 @@ header2: Module 3 lab
 image: CBW_High-throughput_icon.jpg
 ---
 # CBW HT-seq Module 3 - IGV lab
-This lab was created by Sorana Morrissy updated by Florence Cavalli.
+This lab was created by Sorana Morrissy updated by Florence Cavalli
 
 ## Introduction
 
