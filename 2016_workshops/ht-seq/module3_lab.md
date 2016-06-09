@@ -160,8 +160,8 @@ Navigate to position "chr21:19,479,237-19,479,814"
 
 Navigate to position "chr21:19,518,412-19,518,497"
 
- # Group alignments by "read strand"
- # Center on the second "T", and Sort alignments by “base” on the forward strand reads
+ * Group alignments by "read strand"
+ * Center on the second "T", and Sort alignments by “base” on the forward strand reads
 
 ![Example2](https://bioinformatics-ca.github.io/images/Igv_example2a.png)
 
