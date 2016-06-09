@@ -7,11 +7,11 @@ header2: Module 7 lab
 image: CBW_High-throughput_icon.jpg
 ---
 # CBW HT-seq Module 7 - Galaxy lab
-This lab was created by Florence Cavalli.
+This lab was created by Florence Cavalli
 
 ## Table of contents
 
- - [Introduction](#introduction)
+ [Introduction](#introduction)
  1. [Load the data](#load)   
  2. [Convert the FASTQ quality format](#convert) 
  3. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)
@@ -26,7 +26,7 @@ This lab was created by Florence Cavalli.
  12. [Call SNPs](#callsnp)
  13. [Filter the variants](#filtervariant)
  14. [Annotate the vcf file](#annotate)
- - [The "History options" menu](#menu)
+ [The "History options" menu](#menu)
 
 
 ## Introduction
@@ -93,15 +93,15 @@ File check:
 <a name="trim"></a>
 ** NGS: QC and manipulation/Trimmomatic 
 
-- Input FASTQ file: FASTQ groomer resulst for R1 and R2 
-- Perform initial ILLUMINACLIP step :Yes
--- Adapter sequence to use : TruSeq3 (paired-end, for MiSeq and HiSeq)
--- Maximum mismatch count which will still allow a full match to be performed : 2
--- How accurate the match between the two 'adapter ligated' reads must be for PE palindrome read alignment: 30
--- How accurate the match between any adapter etc. sequence must be against a read: 15
-- Select Trimmomatic operation to perform
--- TRAILING:20 
--- MINLEN:32
+- Input FASTQ file: FASTQ groomer resulst for R1 and R2   
+- Perform initial ILLUMINACLIP step :Yes   
+-- Adapter sequence to use : TruSeq3 (paired-end, for MiSeq and HiSeq)   
+-- Maximum mismatch count which will still allow a full match to be performed : 2   
+-- How accurate the match between the two 'adapter ligated' reads must be for PE palindrome read alignment: 30   
+-- How accurate the match between any adapter etc. sequence must be against a read: 15   
+- Select Trimmomatic operation to perform   
+-- TRAILING:20   
+-- MINLEN:32   
 
 ![trim1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Trim_1.png) 
 ![trim2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Trim_2.png) 
@@ -114,27 +114,26 @@ File check:
 
 ![file3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_3.png) 
 
-
-#### 4) Align the reads with BWA-MEM
 <a name="align"></a>
+#### 4) Align the reads with BWA-MEM
 ** NGS: Mapping/Map with BWA-MEM 
 
-- Will you select a reference genome from your history or use a built-in index? : Use a genome from history or build index
-- Use the following dataset as the reference sequence: hg19_chr1.fa
-- Select first set of reads: Trimmomactic on FASTQ groomer (R1 paired)
-- Select second set of reads: Trimmomactic on FASTQ groomer (R2 paired)
-- Set the read groups information : Set read group SAM/BAM specification
-with the following info
-Read group identifier (ID): NA12878
-Read group sample name (SM): NA12878
-Platform/technology used to produce the reads (PL): ILLUMINA
-Library name (LB):NA12878
-Sequencing center that produced the read (CN): Broad Institute
-Platform unit (PU): runNA12878_1
+- Will you select a reference genome from your history or use a built-in index? : Use a genome from history or build index   
+- Use the following dataset as the reference sequence: hg19_chr1.fa   
+- Select first set of reads: Trimmomactic on FASTQ groomer (R1 paired)   
+- Select second set of reads: Trimmomactic on FASTQ groomer (R2 paired)   
+- Set the read groups information : Set read group SAM/BAM specification   
+with the following info  
+Read group identifier (ID): NA12878  
+Read group sample name (SM): NA12878   
+Platform/technology used to produce the reads (PL): ILLUMINA   
+Library name (LB):NA12878   
+Sequencing center that produced the read (CN): Broad Institute   
+Platform unit (PU): runNA12878_1   
 
-- Select Analysis node: 3. Full list of option
-- Set input/output options : Set
-- Mark shorter split hits of a chimeric alignment in the FLAG field as 'secondary alignment' instead of 'supplementary alignment': Yes -M; For Picard<1.96 compatibility
+- Select Analysis node: 3. Full list of option   
+- Set input/output options : Set  
+- Mark shorter split hits of a chimeric alignment in the FLAG field as 'secondary alignment' instead of 'supplementary alignment': Yes   -M; For Picard<1.96 compatibility  
 
 ![align1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_1.png) 
 ![align2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_2.png) 
@@ -152,180 +151,173 @@ Platform unit (PU): runNA12878_1
 
 ![file4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_4.png) 
 
-#### 5) Sort the sam/bam 
 <a name="sort"></a>
-** NGS: Picard/SortSam sort SAM/BAM dataset
-- On aligned bam file
-- Sort order: coordinate
-- Select validation stringency: Silent
+#### 5) Sort the sam/bam 
 
-#### 6) Create single interval  
+** NGS: Picard/SortSam sort SAM/BAM dataset   
+- On aligned bam file   
+- Sort order: coordinate   
+- Select validation stringency: Silent   
+
 <a name="interval"></a>
-** Text manipulation/Create Single Interval
-- Chr1:17704860-18004860
+#### 6) Create single interval  
+** Text manipulation/Create Single Interval   
+- Chr1:17704860-18004860  
 
-#### 7) Indel realignment
 <a name="indelRealign"></a>
-** NGS GATK Tools/RealignerTargetCreator 
-- Bam file : Bam sorted in coordinate order
-- Using reference file hg19_chr1.fa
-- Basic or advance GATK option
- Advanced
- Operate on Genomic intervals -> Set -L parameter with your "Create single interval" data
- Keep other parameters as default
+#### 7) Indel realignment
+** NGS GATK Tools/RealignerTargetCreator    
+- Bam file : Bam sorted in coordinate order   
+- Using reference file hg19_chr1.fa   
+- Basic or advance GATK option   
+ Advanced   
+ Operate on Genomic intervals -> Set -L parameter with your "Create single interval" data   
+ Keep other parameters as default   
 
 
-** NGS GATK Tools/IndelRealigner 
-- Choose the source for the reference list: History
-- Bam file : Bam sorted in coordinate order
-- Using reference file hg19_chr1.fa
+** NGS GATK Tools/IndelRealigner   
+- Choose the source for the reference list: History   
+- Bam file : Bam sorted in coordinate order   
+- Using reference file hg19_chr1.fa   
 
-- Restrict realignment to provided intervals: Realigner Target create results
+- Restrict realignment to provided intervals: Realigner Target create results   
 
 
-#### 8) FixMates
 <a name="fixmates"></a>
-**NGS: Picard/FixMateInformation 
-- Select SAM/BAM dataset or dataset collection ->Indel Realigner result
-- Select validation stringency -> Silent
-other default parameter
+#### 8) FixMates
+**NGS: Picard/FixMateInformation   
+- Select SAM/BAM dataset or dataset collection ->Indel Realigner result   
+- Select validation stringency -> Silent   
+other default parameter   
 
-#### 9) Mark duplicates
 <a name="markdup"></a>
-**NGS: Picard/MarkDuplicates 
-- Select SAM/BAM dataset or dataset collection -> FixMateInformation result
-- Select validation stringency -> Silent
+#### 9) Mark duplicates
+**NGS: Picard/MarkDuplicates   
+- Select SAM/BAM dataset or dataset collection -> FixMateInformation result   
+- Select validation stringency -> Silent   
 
 You can look at the Markduplicate metrics
 
-#### 10) Recalibration
 <a name="recalibration"></a>
-** NGS GATK Tools/BaseRecalibrator is not available!
-So we can use "Count covariates" and "Table recalibration". These two step are teh equivalent of BaseRecalibrator which is present in a newer version of GATK
+#### 10) Recalibration
+** NGS GATK Tools/BaseRecalibrator is not available!   
+So we can use "Count covariates" and "Table recalibration". These two step are teh equivalent of BaseRecalibrator which is present in a newer version of GATK   
 
 ** NGS: GATK Tools/Count Covariates on BAM files
-- On marked duplicat file
-- Reference genome: hg19_Chr1.fa
-- Select all the unselect Tile covariate
+- On marked duplicat file   
+- Reference genome: hg19_Chr1.fa   
+- Select all the unselect Tile covariate   
 
+** NGS: GATK Tools/Table Recalibration on BAM files   
+- Covariates table recalibration file: Count Covariate   
+- Bam File: Mark duplicate   
+- Reference genome: hg19_Chr1.fa   
 
-** NGS: GATK Tools/Table Recalibration on BAM files
-- Covariates table recalibration file: Count Covariate
-- Bam File: Mark duplicate
-- Reference genome: hg19_Chr1.fa
-
-
-#### 11) Extract Metrics
 <a name="extracmetrics"></a>
-** NGS GATK Tools/Depth of Coverage on BAM files
-- Summary coverage threshold
-- insert 4 threshold at 10, 25, 50 and 100
-- Basic or Advanced GATK options
-  Advanced
-Operate on Genomic intervals
--- L "create single interval
+#### 11) Extract Metrics
+** NGS GATK Tools/Depth of Coverage on BAM files   
+- Summary coverage threshold   
+- insert 4 threshold at 10, 25, 50 and 100   
+- Basic or Advanced GATK options   
+  Advanced   
+Operate on Genomic intervals   
+-- L "create single interval   
 
--Basic or Advanced Analysis options
- Advanced
-"Omit the output of the depth of coverage at each base" set to Yes
+-Basic or Advanced Analysis options   
+ Advanced   
+"Omit the output of the depth of coverage at each base" set to Yes   
 
-
-** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes
-- SAM/BAM  dataset -> Table recalibration BAM file
-- Reference genome: hg19_Chr1.fa
-- reference 
-- The level(s) at which to accumulate metrics set to -> Library
-- Select validation stringency -> silent
+** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes   
+- SAM/BAM  dataset -> Table recalibration BAM file   
+- Reference genome: hg19_Chr1.fa   
+- reference   
+- The level(s) at which to accumulate metrics set to -> Library   
+- Select validation stringency -> silent   
 
 
 View collectInsertSize Metrics and pdf file
 
-
-** NGS: Picard/Collect Alignment Summary Metrics writes a file containing summary alignment metrics
-- SAM/BAM  dataset -> Table recalibration BAM file
-- Reference genome: hg19_Chr1.fa
-- The level(s) at which to accumulate metrics set to -> Library
-- Select validation stringency -> silent
+** NGS: Picard/Collect Alignment Summary Metrics writes a file containing summary alignment metrics   
+- SAM/BAM  dataset -> Table recalibration BAM file   
+- Reference genome: hg19_Chr1.fa   
+- The level(s) at which to accumulate metrics set to -> Library   
+- Select validation stringency -> silent   
 
 View Collect Alignment Summary metrics
-
 
  -> Variant calling and annotation from Module 5
 
 To continue you can use the aligned, sorted and duplicates removed files that you just created or download the one you used in Module 5  from the server (NA12878.bwa.sort.rmdup.realign.bam).
 
-#### 12) Call SNPs
 <a name="callsnp"></a>
-** NGS GATK Tools/Unified Genotyper SNP and indel caller
-- BAM file -> marked duplicates
-- reference genome -> hg19_chr1.fa
-- The minimum phred-scaled confidence threshold at which variants not at 'trigger' track sites should be emitted (and filtered if less than the calling threshold): 10
+#### 12) Call SNPs   
+** NGS GATK Tools/Unified Genotyper SNP and indel caller   
+- BAM file -> marked duplicates   
+- reference genome -> hg19_chr1.fa   
+- The minimum phred-scaled confidence threshold at which variants not at 'trigger' track sites should be emitted (and filtered if less than the calling threshold): 10   
 
-- Basic or Advanced GATK options
- Advanced
- Operate on Genomic intervals
--- L "create single interval
+- Basic or Advanced GATK options   
+ Advanced   
+ Operate on Genomic intervals   
+-- L "create single interval   
 
-Have a look at the vcf file
+Have a look at the vcf file   
 
 
-#### 13) Filter the variants
 <a name="filtervariant"></a>
-Typically variant callers will only perform a minimal amount of filtering when presenting variant calls. In the case of GATK, we are actively removing any variant with score less than 10. Any variant with a score less than 30 is labeled with the filter “LowQual”.
+#### 13) Filter the variants   
+Typically variant callers will only perform a minimal amount of filtering when presenting variant calls. In the case of GATK, we are actively removing any variant with score less than 10. Any variant with a score less than 30 is labeled with the filter “LowQual”.   
 
 To perform more rigorous filtering, another program must be used. In our case, we will use the VariantFiltration tool in GATK.
 
 NOTE: The best practice when using GATK is to use the VariantRecalibrator. In our data set, we had too few variants to accurately use the variant recalibrator and therefore we used the VariantFiltration tool instead.
 
-
-** NGS GATK Tools/Variant Filtration on VCF files
-- BAM file -> marked duplicates
+** NGS GATK Tools/Variant Filtration on VCF files   
+- BAM file -> marked duplicates   
 - Reference genome -> hg19_chr1.fa
 
-- Variant filter
-set the 3 following filters
-filter Expression:QD < 2.0 Filter name:QDFilter
-filter Expression:FS > 200.0" Filter name:FSFilter 
-filter Expression:MQ < 40.0 Filter name:MQFilter
-
+- Variant filter   
+set the 3 following filters  
+filter Expression:QD < 2.0 Filter name:QDFilter   
+filter Expression:FS > 200.0" Filter name:FSFilter    
+filter Expression:MQ < 40.0 Filter name:MQFilter   
 
 You can look at the output vcf file that contains some filter annotation
 
-#### 14) Annotate the vcf file
 <a name="annotate"></a>
-with snpEff
-** NGS: Variant Analysis/SnpEff Variant effect and annotation
-- Sequence changes: Variant Filtration result
-- Both input and output as vcf file (default)
-- Genome source: GRCh37.74:hg19
-- Filter out
-  select "Do not show INTERGENIC changes"
+#### 14) Annotate the vcf file   
+with snpEff   
+** NGS: Variant Analysis/SnpEff Variant effect and annotation   
+- Sequence changes: Variant Filtration result   
+- Both input and output as vcf file (default)   
+- Genome source: GRCh37.74:hg19   
+- Filter out   
+  select "Do not show INTERGENIC changes"   
 
 Look at the output (vcf file and stats)
 
-
 with GATK VariantAnnotator 
 
-** NGS GATK Tools/VariantAnnotator
-- Variant file to annotate: SnpEff file
-- reference genome: hg19_chr1.fa
--Provide a dbSNP reference-ordered data file
- set dbSNP: dbSNP_135_chr1.vcf.gz
-- Basic or Advanced GATK options
-Advanced
-Operate on Genomic intervals
--- L -> create single interval"
+** NGS GATK Tools/VariantAnnotator   
+- Variant file to annotate: SnpEff file   
+- reference genome: hg19_chr1.fa   
+-Provide a dbSNP reference-ordered data file   
+ set dbSNP: dbSNP_135_chr1.vcf.gz   
+- Basic or Advanced GATK options  
+Advanced   
+Operate on Genomic intervals   
+-- L -> create single interval"  
 
 Look at or download your filtered and annotated variant calls as vcf files
 
 
-#### The "History options" menu
 <a name="menu"></a>
-You can
-- Extract workflow
-- Save your workflow
-- Share your workflow
-- ...
+#### The "History options" menu
+You can  
+- Extract workflow  
+- Save your workflow   
+- Share your workflow   
+- ...   
 
 ![history](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_history.png) 
 
