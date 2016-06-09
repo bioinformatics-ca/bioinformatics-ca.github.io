@@ -274,17 +274,22 @@ Operate on Genomic intervals
 Look at or download your filtered and annotated variant calls as vcf files
 
 
-#### Look at the "History options" menu
+#### The "History options" menu
 <a name="menu"></a>
+you can
 - Extract workflow
 - Save your workflow
 - Share your workflow
 ...
 
-- continue using the tools on galaxy…
-- continue exploring/analysing/visualizing your data and results..
+![history](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_history.png) 
+
+Now you can
+- continue using the tools on Galaxy
+- continue exploring/analysing/visualizing your data and results !
 
 
 There are lots of tutorial, mainling list, videos for help  (such as https://vimeo.com/galaxyproject)/
 
+**We hope that you enjoyed using Galaxy!**
 
