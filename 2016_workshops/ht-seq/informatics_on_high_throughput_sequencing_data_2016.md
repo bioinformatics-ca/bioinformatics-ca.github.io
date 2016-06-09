@@ -184,7 +184,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 *<font color="#827e9c">Florence Cavalli</font>*
 
-We will performed the same analysis as in Module 2 but using the mother and father samples so sample NA12891 and NA12891.
+We will perform the same analysis as in Module 2 but using the mother and father samples i.e sample NA12891 and NA12891.
 
 ```bash
 Files are in the following directory of the cloud instance: ~/CourseData/HT_data/Module2/
