@@ -48,6 +48,10 @@ image: CBW_High-throughput_icon.jpg
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="https://noteapp.com/HTSeq2016">here</a>!
+  
+### Workshop Survey
+
+We value your feedback.  PLease fill out [our survey](https://www.surveymonkey.com/r/8SQZPHT) to help us make our workshops better.
 
 [&uarr;](#back_to_top)
 
