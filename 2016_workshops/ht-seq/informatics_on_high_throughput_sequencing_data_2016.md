@@ -221,28 +221,28 @@ ls
 
 Task list:
 
-1. Check read QC with BVAtools
+1. Check read QC
 
-2. Trim unreliable bases from the read ends using Trimmomatic
+2. Trim unreliable bases from the read ends
 
-3. Align the reads to the reference using BWA
+3. Align the reads to the reference
 
-4. Sort the alignments by chromosome position using PICARD
+4. Sort the alignments by chromosome position
 
-5. Realign short indels using GATK
+5. Realign short indels
 
-6. Fixe mate issues using PICARD.
+6. Fixe mate issues
 
-7. Recalibrate the Base Quality using GATK.
+7. Recalibrate the Base Quality
 
-8. Generate alignment metrics using GATK and PICARD.
+8. Generate alignment metrics
 
 
 Discussion/Questions:
 
-1. Explain the purpose of each step.
+1. Explain the purpose of each step
 
-2. Which software tool can be used for each step. 
+2. Which software tool can be used for each step 
 
 
 [Integrated Assignment script](https://bioinformatics-ca.github.io/2016_workshops/ht-seq/Integrated_assignment_commands_parents.sh)
