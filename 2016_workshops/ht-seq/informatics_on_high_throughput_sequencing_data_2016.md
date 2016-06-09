@@ -184,7 +184,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 *<font color="#827e9c">Florence Cavalli</font>*
 
-We will performed similar analysis as in Module 2 but using the mother and father samples so sample NA12891 and NA12891.
+We will performed the same analysis as in Module 2 but using the mother and father samples so sample NA12891 and NA12891.
 
 ```bash
 Files are in the following directory of the cloud instance: ~/CourseData/HT_data/Module2/
@@ -220,6 +220,7 @@ ls
 ```
 
 Task list:
+
 1. Check read QC with BVAtools
 
 2. Trim unreliable bases from the read ends using Trimmomatic
@@ -238,6 +239,7 @@ Task list:
 
 
 Discussion/Questions:
+
 1. Explain the purpose of each step.
 
 2. Which software tool can be used for each step. 
