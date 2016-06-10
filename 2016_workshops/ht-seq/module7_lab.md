@@ -49,7 +49,7 @@ Start by loging on the website with your username
 <a name="data"></a>
 ** Get Data/Upload File
 
-“Paste/Fetch Data” box:
+“Paste/Fetch Data” box:   
 
 - NA12878_CBW_chr1_R1.fastq.gz   
 http://cbw##.dyndns.info/HTSeq_module2/raw_reads/NA12878/NA12878_CBW_chr1_R1.fastq.gz
