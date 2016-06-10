@@ -458,11 +458,11 @@ with GATK VariantAnnotator
 
 ...
 
-![Anno3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_anno_3.png) 
+![Anno4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_anno_4.png) 
 
 ...
 
-![Anno4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_anno_4.png) 
+![Anno3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_anno_3.png) 
 
 
 File check:
