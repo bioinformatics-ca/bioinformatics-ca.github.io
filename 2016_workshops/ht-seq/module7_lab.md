@@ -476,6 +476,7 @@ Look at or download your filtered and annotated variant vcf files
 <a name="menu"></a>
 #### The "History options" menu
 You can  
+- See saved histories
 - Extract workflow  
 - Save your workflow   
 - Share your workflow   
