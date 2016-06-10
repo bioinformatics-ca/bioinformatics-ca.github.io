@@ -409,7 +409,7 @@ NOTE: The best practice when using GATK is to use the VariantRecalibrator. In ou
 - Variant filter   
 set the 3 following filters  
 -- filter Expression: QD < 2.0 Filter, name: QDFilter   
--- filter Expression: FS > 200.0" Filter, name: FSFilter    
+-- filter Expression: FS > 200.0 Filter, name: FSFilter    
 -- filter Expression: MQ < 40.0 Filter, name: MQFilter   
 
 ![varFil1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_VarFil_1.png) 
@@ -423,7 +423,7 @@ File check:
 ![file14](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_14.png) 
 
 
-You can look at the output vcf file that contains some filter annotation
+You can look at the output vcf file that contains "filter" annotation
 
 <a name="annotate"></a>
 #### 16) Annotate the variants
@@ -443,15 +443,15 @@ File check:
 
 ![file15b](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_15b.png) 
 
-You can download the SnpEff stat html page and vcf file.
+You can download the SnpEff stat html page and vcf file
 
 with GATK VariantAnnotator 
 
 ** NGS GATK Tools/VariantAnnotator   
 - Choose the source for the reference list: History   
-- Variant file to annotate: SnpEff file   
+- Variant file to annotate: SnpEff vcf file   
 - Using reference file: hg19_chr1.fa   
-- Provide a dbSNP reference-ordered data file: set dbSNP
+- Provide a dbSNP reference-ordered data file: set dbSNP   
  -- ROD file: dbSNP_135_chr1.vcf.gz   
 - Basic or Advanced GATK options: Advanced   
 -- Operate on Genomic intervals: Genomic intervals : created interval on chr1    
