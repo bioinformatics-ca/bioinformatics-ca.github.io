@@ -27,7 +27,7 @@ This lab was created by Florence Cavalli
  13. [Extract Metrics](#extracmetrics)   
  14. [Call SNPs](#callsnp)   
  15. [Filter the variants](#filtervariant)   
- 16. [Annotate the vcf file](#annotate)   
+ 16. [Annotate the variants](#annotate)   
  [The "History options" menu](#menu)
 
 
@@ -420,7 +420,7 @@ File check:
 You can look at the output vcf file that contains some filter annotation
 
 <a name="annotate"></a>
-#### 16) Annotate the vcf file   
+#### 16) Annotate the variants
 with snpEff   
 ** NGS: Variant Analysis/SnpEff Variant effect and annotation   
 - Sequence changes: Variant Filtration result   
