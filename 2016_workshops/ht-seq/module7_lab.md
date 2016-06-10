@@ -42,7 +42,7 @@ Start by loging on the website with your username
 
 **The paramaters that need to be set or changed are specified in the text below (and in the images), keep the rest of the parameters with their default values**
 
-** indicates the tool to use that you need to select from the left column
+** indicates the tool to use for each step. You need to select it from the left column   
 
 ![tool](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_tools.png) 
 
@@ -68,7 +68,7 @@ replace ## by your student id
 
 ![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Load_data.png) 
 
-When the data is loaded and/or a task has finished to run the file created is green. Grey indicates that the task is queueing, yellow that the task is beeing processed and red that an error occurred.   
+When the data is loaded and/or a task has finished to run, the file created is green. Grey indicates that the task is queueing, yellow that the task is beeing processed and red that an error occurred.   
 For example after loading the data, you should see the following in the history column on the right
 
 File check:
@@ -109,7 +109,7 @@ You can use FastQC at several points in your analysis on fastq, bam or sam files
 
 ![groomer](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_groomer.png) 
 
-Run FASTAQ groomer on the NA12878_CBW_chr1_R2.fastq as well
+Run FASTAQ groomer on the NA12878_CBW_chr1_R2.fastq file as well
 
 File check:
 
@@ -124,9 +124,9 @@ File check:
 -- Maximum mismatch count which will still allow a full match to be performed : 2   
 -- How accurate the match between the two 'adapter ligated' reads must be for PE palindrome read alignment: 30   
 -- How accurate the match between any adapter etc. sequence must be against a read: 15   
-- Select Trimmomatic operation to perform   
--- TRAILING:20   
--- MINLEN:32   
+- Select Trimmomatic operation to perform : insert Trimmomatic option   
+-- TRAILING: 20   
+-- MINLEN: 32   
 
 ![trim1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Trim_1.png) 
 ![trim2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Trim_2.png) 
@@ -210,7 +210,7 @@ File check:
 - Bam file: sorted Bam file
 - Using reference file: hg19_chr1.fa   
 - Basic or advance GATK option: Advanced   
- -- Operate on Genomic intervals: Genomic intervals : created interval in chr1
+ -- Operate on Genomic intervals: Genomic intervals : created interval on chr1
  
 ![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_1.png) 
 
@@ -299,7 +299,7 @@ File check:
 - Summary coverage threshold
  --for summary file outputs, report the % of bases covered to >= this number: 10, 25, 50 and 100   **(insert 4 thresholds)**
 - Basic or Advanced GATK options: Advanced   
-  -- Operate on Genomic intervals: Genomic intervals : created interval in chr1   
+  -- Operate on Genomic intervals: Genomic intervals : created interval on chr1   
 - Basic or Advanced Analysis options: Advanced   
  -- "Omit the output of the depth of coverage at each base": Yes      
 
@@ -375,7 +375,7 @@ To continue you can use the aligned, sorted and marked duplicates and quality re
 - Using reference genome: hg19_Chr1.fa         
 - The minimum phred-scaled confidence threshold at which variants not at 'trigger' track sites should be emitted (and filtered if less than the calling threshold): 10   
 - Basic or Advanced GATK options: Advanced   
- -- Operate on Genomic intervals: Genomic intervals : created interval in chr1    
+ -- Operate on Genomic intervals: Genomic intervals : created interval on chr1    
 
 ![uni1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Unifier_1.png) 
 
@@ -450,7 +450,7 @@ with GATK VariantAnnotator
 - Provide a dbSNP reference-ordered data file: set dbSNP
  -- ROD file: dbSNP_135_chr1.vcf.gz   
 - Basic or Advanced GATK options: Advanced   
--- Operate on Genomic intervals: Genomic intervals : created interval in chr1    
+-- Operate on Genomic intervals: Genomic intervals : created interval on chr1    
 
 ![Anno1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_anno_1.png) 
 
