@@ -424,8 +424,6 @@ You can look at the output vcf file that contains some filter annotation
 with snpEff   
 ** NGS: Variant Analysis/SnpEff Variant effect and annotation   
 - Sequence changes: Variant Filtration result   
-- Both input and output as vcf file (default)   
-- Genome source: GRCh37.74:hg19   
 - Filter output  
  --select "Do not show INTERGENIC changes"   
 
@@ -444,12 +442,27 @@ You can download the SnpEff stat html page and vcf file.
 with GATK VariantAnnotator 
 
 ** NGS GATK Tools/VariantAnnotator   
+- Choose the source for the reference list: History   
 - Variant file to annotate: SnpEff file   
-- reference genome: hg19_chr1.fa   
--Provide a dbSNP reference-ordered data file   
- set dbSNP: dbSNP_135_chr1.vcf.gz   
+- Using reference file: hg19_chr1.fa   
+- Provide a dbSNP reference-ordered data file: set dbSNP
+ -- ROD file: dbSNP_135_chr1.vcf.gz   
 - Basic or Advanced GATK options: Advanced   
 -- Operate on Genomic intervals: Genomic intervals : created interval in chr1    
+
+![Anno1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_anno_1.png) 
+
+...
+
+![Anno2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_anno_2.png) 
+
+...
+
+![Anno3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_anno_3.png) 
+
+...
+
+![Anno4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_anno_4.png) 
 
 
 File check:
@@ -471,6 +484,7 @@ You can
 ![history](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_history.png) 
 
 Now you can
+- run your workflow on other samples
 - continue using the tools on Galaxy
 - continue exploring/analysing/visualizing your data and results !
 
