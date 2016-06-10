@@ -492,6 +492,7 @@ Use the workflow tab
 
 ![workflow](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_workflow_2.png) 
 
+
 - Continue using the tools on Galaxy
 - Continue exploring/analysing/visualizing your data and results!
 
