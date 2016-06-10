@@ -86,11 +86,12 @@ File check:
 
 We create an interval corresponding to the region of interest (we extracted reads from this region for this example dataset) to be used later on by different tools
 
-** Text manipulation/Create Single Interval   
-- Chromosome: chr1   
-- Start position: 17704860  
-- End position: 18004860    
-- Name: chr1 interval
+** Text manipulation/Create Single Interval
+ 
+ - Chromosome: chr1   
+ - Start position: 17704860  
+ - End position: 18004860    
+ - Name: chr1 interval
 
 ![createInterval](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_create_interval.png) 
 
