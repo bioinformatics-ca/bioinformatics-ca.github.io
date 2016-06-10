@@ -285,8 +285,7 @@ File check:
 ** NGS GATK Tools/Depth of Coverage on BAM files   
 - Choose the source for the reference list: History
 - Bam file: Table recalibration result bam
-- Using reference genome:hg19_Chr1.fa 
-- 
+- Using reference genome:hg19_Chr1.fa...
 - Summary coverage threshold
  --for summary file outputs, report the % of bases covered to >= this number: 10, 25, 50 and 100   **(insert 4 threshold)**
 - Basic or Advanced GATK options: Advanced   
