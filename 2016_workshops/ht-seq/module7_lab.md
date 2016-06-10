@@ -194,7 +194,7 @@ File check:
 #### 7) Sort the sam/bam 
 <a name="sort"></a>
 
-** NGS: Picard/SortSam sort SAM/BAM dataset   
+** NGS: Picard/SortSam sort SAM/BAM dataset  
  - Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
  - Sort order: coordinate   
  - Select validation stringency: Silent   
