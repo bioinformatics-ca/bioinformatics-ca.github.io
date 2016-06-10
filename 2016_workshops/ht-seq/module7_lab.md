@@ -282,7 +282,6 @@ So we can use "Count covariates" and "Table recalibration". These two steps are 
 
 ![table](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_table.png) 
 
-
 File check:
 
 ![file11](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_11.png) 
