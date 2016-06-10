@@ -407,6 +407,7 @@ View "collectInsertSize Metrics" and pdf file
 
 
 #### Variant calling and annotation from Module 5
+
 #### All the following steps are detailed in the Module 5 practical
 
 To continue you can use the aligned, sorted, marked duplicates and quality recalibrated files that you just created or download the one you used in Module 5 from the server (http://cbw##.dyndns.info/module5/NA12878.bwa.sort.rmdup.realign.bam, ## being your student id).
