@@ -82,6 +82,7 @@ File check:
 
 <a name="interval"></a>
 #### 2) Create single interval  
+
 We create an interval corresponding to the region of interest (we extracted reads from this region for this example dataset) to be used later on by different tools
 
 ** Text manipulation/Create Single Interval   
