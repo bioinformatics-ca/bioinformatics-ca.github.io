@@ -354,7 +354,6 @@ View "Collect Alignment Summary metrics"
 
 ![sumI2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumInsert_2.png) 
 
-
 File check:
 
 ![file12c](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12c.png) 
