@@ -96,7 +96,7 @@ File check:
 ![file2bis](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2bis.png) 
 
 
-***All the following steps are detailed in the Module 2 practical***
+##*All the following steps are detailed in the Module 2 practical*
 
 <a name="quality"></a>
 #### 3) Check the quality
