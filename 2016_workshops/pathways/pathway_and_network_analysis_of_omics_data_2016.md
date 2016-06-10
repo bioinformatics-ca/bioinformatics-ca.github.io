@@ -127,6 +127,14 @@ image: CBW_pathway_icon.jpg
   
   Lab practical: Enrichment-Based Analysis - Performing ORA
   
+  Introduction: 
+  
+  Exercise 1: 
+  Data for exercise 1 here:
+  
+  Exercise 2:
+  Data for exercise 2 here:
+  
   *<font color="#827e9c">Veronique Voisin</font>*
 
 [&uarr;](#back_to_top)
