@@ -79,7 +79,7 @@ File check:
 
 <a name="interval"></a>
 #### 2) Create single interval  
-We create an interval corresponding to the region of interest (we extracted reads from this region for this example dataset) to be use later on by different tools
+We create an interval corresponding to the region of interest (we extracted reads from this region for this example dataset) to be used later on by different tools
 
 ** Text manipulation/Create Single Interval   
 - Chromosome: chr1
@@ -195,13 +195,17 @@ File check:
 <a name="indelRealign"></a>
 #### 8) Indel realignment
 ** NGS GATK Tools/RealignerTargetCreator    
-- Bam file: Bam sorted in coordinate order   
+- Choose the source for the reference list: From history
+- Bam file: sorted Bam file
 - Using reference file: hg19_chr1.fa   
-- Basic or advance GATK option   
- Advanced   
- Operate on Genomic intervals -> Set -L parameter with your "Create single interval" data   
- Keep other parameters as default   
+- Basic or advance GATK option: Advanced   
+ -- Operate on Genomic intervals: Genomic intervals : created interval in chr1
+ 
+![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_1.png) 
 
+...
+
+![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_2.png) 
 
 ** NGS GATK Tools/IndelRealigner   
 - Choose the source for the reference list: History   
@@ -210,6 +214,9 @@ File check:
 
 - Restrict realignment to provided intervals: Realigner Target create results   
 
+File check:
+
+![file8](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_8.png) 
 
 <a name="fixmates"></a>
 #### 9) FixMates
@@ -218,11 +225,22 @@ File check:
 - Select validation stringency -> Silent   
 other default parameter   
 
+File check:
+
+![file9](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_9.png) 
+
+
 <a name="markdup"></a>
 #### 10) Mark duplicates
 **NGS: Picard/MarkDuplicates   
 - Select SAM/BAM dataset or dataset collection -> FixMateInformation result   
 - Select validation stringency -> Silent   
+
+
+File check:
+
+![file10](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_10.png) 
+
 
 You can look at the Markduplicate metrics
 
@@ -240,6 +258,11 @@ So we can use "Count covariates" and "Table recalibration". These two step are t
 - Covariates table recalibration file: Count Covariate   
 - Bam File: Mark duplicate   
 - Reference genome: hg19_Chr1.fa   
+
+File check:
+
+![file11](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_11.png) 
+
 
 <a name="extracmetrics"></a>
 #### 12) Extract Metrics
@@ -271,6 +294,11 @@ View collectInsertSize Metrics and pdf file
 - The level(s) at which to accumulate metrics set to -> Library   
 - Select validation stringency -> silent   
 
+File check:
+
+![file12](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12.png) 
+
+
 View Collect Alignment Summary metrics
 
  -> Variant calling and annotation from Module 5
@@ -288,6 +316,11 @@ To continue you can use the aligned, sorted and duplicates removed files that yo
  Advanced   
  Operate on Genomic intervals   
 -- L "create single interval   
+
+File check:
+
+![file13](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_13.png) 
+
 
 Have a look at the vcf file   
 
@@ -309,6 +342,12 @@ set the 3 following filters
 filter Expression:QD < 2.0 Filter name:QDFilter   
 filter Expression:FS > 200.0" Filter name:FSFilter    
 filter Expression:MQ < 40.0 Filter name:MQFilter   
+
+
+File check:
+
+![file14](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_14.png) 
+
 
 You can look at the output vcf file that contains some filter annotation
 
@@ -335,6 +374,11 @@ with GATK VariantAnnotator
 Advanced   
 Operate on Genomic intervals   
 -- L -> create single interval"  
+
+File check:
+
+![file15](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_15.png) 
+
 
 Look at or download your filtered and annotated variant calls as vcf files
 
