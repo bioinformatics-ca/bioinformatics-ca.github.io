@@ -123,9 +123,10 @@ image: CBW_pathway_icon.jpg
 
   *<font color="#827e9c">Quaid Morris</font>*
   
-  Lecture:
+#### Lecture:
   
-  Lab practical: Enrichment-Based Analysis - Performing ORA
+#### Lab practical: Enrichment-Based Analysis - Performing ORA
+  *<font color="#827e9c">Veronique Voisin</font>*
   
   Introduction: 
   
@@ -141,7 +142,7 @@ image: CBW_pathway_icon.jpg
   
   Precomputed results for exercise 2: 
   
-  *<font color="#827e9c">Veronique Voisin</font>*
+
 
 [&uarr;](#back_to_top)
 
