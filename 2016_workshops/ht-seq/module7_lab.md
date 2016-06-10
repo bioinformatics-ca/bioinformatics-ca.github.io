@@ -214,7 +214,8 @@ File check:
 - Using reference file: hg19_chr1.fa   
 - Restrict realignment to provided intervals: Realigner Target create results   
 
-![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_1.png) 
+![indel](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_indel.png) 
+
 File check:
 
 ![file8](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_8.png) 
@@ -222,14 +223,14 @@ File check:
 <a name="fixmates"></a>
 #### 9) FixMates
 **NGS: Picard/FixMateInformation   
-- Select SAM/BAM dataset or dataset collection ->Indel Realigner result   
-- Select validation stringency -> Silent   
-other default parameter   
+- Select SAM/BAM dataset or dataset collection: Indel Realigner result bam
+- Select validation stringency: Silent   
+
+![fixemate](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_fixemates.png) 
 
 File check:
 
 ![file9](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_9.png) 
-
 
 <a name="markdup"></a>
 #### 10) Mark duplicates
