@@ -12,7 +12,6 @@ This lab was created by Florence Cavalli
 ## Table of contents
 
  [Introduction](#introduction)   
- 
  1. [Load the data](#load)   
  2. [Create single interval](#interval)  
  3. [Check the quality](#quality) 
@@ -35,6 +34,7 @@ This lab was created by Florence Cavalli
 
 ## Introduction
 <a name="introduction"></a>
+
 In this practical we will use Galaxy to perform the analysis you ran in Module 2 and Module 5.
 We are therefore using the dataset from patient NA12878 (reads extracted from region chr1:17704860-18004860)
 
