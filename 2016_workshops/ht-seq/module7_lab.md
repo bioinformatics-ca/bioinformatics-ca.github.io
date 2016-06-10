@@ -195,9 +195,9 @@ File check:
 <a name="sort"></a>
 
 ** NGS: Picard/SortSam sort SAM/BAM dataset  
- - Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
- - Sort order: coordinate   
- - Select validation stringency: Silent   
+  - Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
+  - Sort order: coordinate   
+  - Select validation stringency: Silent   
 
 ![sort](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_sort.png) 
 
