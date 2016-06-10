@@ -483,13 +483,17 @@ You can
 
 ![history](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_history.png) 
 
-Now you can
-- run your workflow on other samples
-- continue using the tools on Galaxy
-- continue exploring/analysing/visualizing your data and results !
+Use the workflow tab   
+- Edit your worklow   
+- rename input and output files   
+- run your workflow on other samples   
+
+![workflow](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_workflow.png) 
+
+- Continue using the tools on Galaxy
+- Continue exploring/analysing/visualizing your data and results !
 
 
 There are lots of tutorial, mainling list, videos for help  (such as https://vimeo.com/galaxyproject)
-
 **We hope that you enjoyed using Galaxy!**
 
