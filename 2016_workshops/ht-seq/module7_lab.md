@@ -216,6 +216,7 @@ We will convert the bam file to a sam file to be able to look at it
 You can run this at different point of your analysis
 
 ** NGS: SAMtools/BAM-to-SAM
+
   - BAM File to Convert: sorted Bam file
 
 ![convertBam](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_convert_bam.png) 
@@ -228,7 +229,8 @@ File check:
 #### 9) Indel realignment
 <a name="indelRealign"></a>
 
-** NGS GATK Tools/RealignerTargetCreator    
+** NGS GATK Tools/RealignerTargetCreator  
+
   - Choose the source for the reference list: History
   - Bam file: sorted Bam file
   - Using reference file: hg19_chr1.fa   
@@ -241,7 +243,8 @@ File check:
 
 ![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_2.png) 
 
-** NGS GATK Tools/IndelRealigner   
+** NGS GATK Tools/IndelRealigner  
+
   - Choose the source for the reference list: History
   - Bam file: sorted Bam file
   - Using reference file: hg19_chr1.fa   
@@ -257,7 +260,8 @@ File check:
 #### 10) FixMates
 <a name="fixmates"></a>
 
-**NGS: Picard/FixMateInformation   
+**NGS: Picard/FixMateInformation 
+
   - Select SAM/BAM dataset or dataset collection: Indel Realigner result bam
   - Select validation stringency: Silent   
 
@@ -271,7 +275,8 @@ File check:
 #### 11) Mark duplicates
 <a name="markdup"></a>
 
-**NGS: Picard/MarkDuplicates   
+**NGS: Picard/MarkDuplicates  
+
   - Select SAM/BAM dataset or dataset collection: FixMateInformation result   
   - Select validation stringency: Silent   
 
@@ -293,10 +298,12 @@ Have a look at the "Markduplicate metrics"
 #### 12) Base Recalibration
 <a name="recalibration"></a>
 
-** NGS GATK Tools/BaseRecalibrator is not available!   
+** NGS GATK Tools/BaseRecalibrator is not available!  
+
 So we can use "Count covariates" and "Table recalibration". These two steps are the equivalent of BaseRecalibrator which is present in a newer version of GATK   
 
 ** NGS: GATK Tools/Count Covariates on BAM files
+
   - Choose the source for the reference list: History
   - Bam file: marked duplicates file   
   - Using reference genome: hg19_chr1.fa   
@@ -305,7 +312,8 @@ So we can use "Count covariates" and "Table recalibration". These two steps are 
 ![countCov](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_countcov.png) 
 
 
-** NGS: GATK Tools/Table Recalibration on BAM files   
+** NGS: GATK Tools/Table Recalibration on BAM files  
+
   - Covariates table recalibration file: Count Covariate 
   - Choose the source for the reference list: History
   - Bam File: Marked duplicates file  
@@ -323,6 +331,7 @@ File check:
 <a name="extracmetrics"></a>
 
 ** NGS GATK Tools/Depth of Coverage on BAM files   
+
  - Choose the source for the reference list: History
  - Bam file: Table recalibration result bam file
  - Using reference genome: hg19_chr1.fa   
@@ -355,7 +364,8 @@ File check:
 
 ![file12a](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12a.png) 
 
-** NGS: Picard/Collect Alignment Summary Metrics writes a file containing summary alignment metrics   
+** NGS: Picard/Collect Alignment Summary Metrics writes a file containing summary alignment metrics 
+
  - SAM/BAM  dataset: Table recalibration result bam file   
  - Choose the source for the reference list: History   
  - Using reference genome: hg19_chr1.fa   
@@ -374,7 +384,8 @@ File check:
 
 View "Collect Alignment Summary metrics"
 
-** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes   
+** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes  
+
  - SAM/BAM  dataset: Table recalibration result bam file      
  - Choose the source for the reference list: History   
  - Using reference genome: hg19_chr1.fa   
@@ -404,7 +415,8 @@ To continue you can use the aligned, sorted, marked duplicates and quality recal
 #### 14) Call SNPs   
 <a name="callsnp"></a>
 
-** NGS GATK Tools/Unified Genotyper SNP and indel caller   
+** NGS GATK Tools/Unified Genotyper SNP and indel caller  
+
  - Choose the source for the reference list: History   
  - BAM file: Table recalibration result bam file   
  - Using reference genome: hg19_chr1.fa         
@@ -436,11 +448,14 @@ To perform more rigorous filtering, another program must be used. In our case, w
 NOTE: The best practice when using GATK is to use the VariantRecalibrator. In our data set, we had too few variants to accurately use the variant recalibrator and therefore we used the VariantFiltration tool instead.
 
 ** NGS GATK Tools/Variant Filtration on VCF files   
+
  - Choose the source for the reference list: History
  - Variant file to annotate: Unified genotyper results file 
  - Using reference genome: hg19_chr1.fa         
  - Variant filter   
+ 
 set the 3 following filters  
+
  -- filter Expression: QD < 2.0 Filter, name: QDFilter   
  -- filter Expression: FS > 200.0 Filter, name: FSFilter    
  -- filter Expression: MQ < 40.0 Filter, name: MQFilter   
@@ -465,6 +480,7 @@ You can look at the output vcf file that contains "filter" annotation
 with snpEff   
 
 ** NGS: Variant Analysis/SnpEff Variant effect and annotation   
+
  - Sequence changes: Variant Filtration result   
  - Filter output  
   --select "Do not show INTERGENIC changes"   
@@ -484,6 +500,7 @@ You can download the SnpEff stat html page and vcf file
 with GATK VariantAnnotator 
 
 ** NGS GATK Tools/VariantAnnotator   
+
  - Choose the source for the reference list: History   
  - Variant file to annotate: SnpEff vcf file   
  - Using reference file: hg19_chr1.fa   
@@ -520,6 +537,7 @@ Look at or download your filtered and annotated variant vcf files
 <a name="menu"></a>
 
 You can  
+
  - See saved histories
  - Extract workflow  
  - Save your workflow   
