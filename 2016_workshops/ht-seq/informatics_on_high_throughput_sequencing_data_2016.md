@@ -358,6 +358,7 @@ Galaxy Resources:
 - [Module 2 data](http://www.hpc4health.ca/cbw/2016/HT_data/Module2.tar.gz)
 - [Module 5 data](http://www.hpc4health.ca/cbw/2016/HT_data/Module5.tar.gz)
 - [Module 6 data](http://www.hpc4health.ca/cbw/2016/HT_data/Module6.tar.gz)
+- [Module 7 data](http://www.hpc4health.ca/cbw/2016/HT_data/Module7.tar)
  
 ### Results from Instructor's Instance on Amazon ###
 - [Module2 result](http://www.hpc4health.ca/cbw/2016/HT_data/Module2_result.tar.gz)
