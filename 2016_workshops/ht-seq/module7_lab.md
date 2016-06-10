@@ -28,7 +28,8 @@ This lab was created by Florence Cavalli
  14. [Call SNPs](#callsnp)   
  15. [Filter the variants](#filtervariant)   
  16. [Annotate the variants](#annotate)   
- [The "History options" menu](#menu)
+ [The "History options" menu](#menu)...
+ [Workflows](#workflow)
 
 
 ## Introduction
@@ -483,6 +484,9 @@ You can
 - ...   
 
 ![history](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_history.png) 
+
+<a name="workflow"></a>
+#### Workflow
 
 Use the workflow tab   
 - Edit your worklow   
