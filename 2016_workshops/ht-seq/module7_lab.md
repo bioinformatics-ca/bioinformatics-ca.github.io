@@ -503,7 +503,7 @@ Use the workflow tab
 ![workflow](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_workflow_2.png) 
 
 
-For information (we will do not it as part of the practical), you can run a tool and/or a given workflow on several samples at once. You will need to "Build List of Dataset Pairs" then run the tools on "Dataset collection"
+For information (we will not do it as part of the practical), you can run a tool and/or a given workflow on several samples at once. You will need to "Build List of Dataset Pairs" then run the tools on "Dataset collection"
 
 ![s1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_severalSample_1.png) 
 
@@ -511,7 +511,7 @@ For information (we will do not it as part of the practical), you can run a tool
 
 ![s2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_severalSample_2.png) 
 
-- create your pairs 
+- Create your pairs 
 - Run a tool on your dataset collection
 
 ![s3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_severalSample_3.png) 
