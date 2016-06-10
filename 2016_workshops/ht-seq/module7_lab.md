@@ -11,7 +11,7 @@ This lab was created by Florence Cavalli
 
 ## Table of contents
 
- [Introduction](#introduction)
+ [Introduction](#introduction)   
  1. [Load the data](#load)   
  2. [Convert the FASTQ quality format](#convert) 
  3. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)
@@ -25,7 +25,7 @@ This lab was created by Florence Cavalli
  11. [Extract Metrics](#extracmetrics)
  12. [Call SNPs](#callsnp)
  13. [Filter the variants](#filtervariant)
- 14. [Annotate the vcf file](#annotate)
+ 14. [Annotate the vcf file](#annotate)   
  [The "History options" menu](#menu)
 
 
