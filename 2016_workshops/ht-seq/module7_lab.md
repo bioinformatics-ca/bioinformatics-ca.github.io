@@ -96,8 +96,10 @@ File check:
 
 <a name="quality"></a>
 #### 3) Check the quality
-BVAtools is not available on the galaxy website. You can use ** NGS: QC and manipulation/FastQC Read Quality reports instead.   
+BVAtools is not available on the galaxy website.   
+You can use ** NGS: QC and manipulation/FastQC Read Quality reports instead.   
 Since the tool in not avaible we will not run it but this is a ** very important step of the analysis**
+You can use FastQC at several point in your analysis on fastq, bam or sam files
 
 <a name="convert"></a>
 #### 4) Convert the FASTQ quality format
