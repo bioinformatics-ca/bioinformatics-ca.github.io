@@ -238,13 +238,19 @@ File check:
 - Select SAM/BAM dataset or dataset collection -> FixMateInformation result   
 - Select validation stringency -> Silent   
 
+![markdup](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_markdup_1.png) 
+
+...
+
+![markdup2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_markdup_2.png) 
+
 
 File check:
 
 ![file10](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_10.png) 
 
 
-You can look at the Markduplicate metrics
+Have a look at the "Markduplicate metrics"
 
 <a name="recalibration"></a>
 #### 11) Recalibration
