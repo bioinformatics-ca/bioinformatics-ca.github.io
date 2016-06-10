@@ -11,7 +11,7 @@ This lab was created by Florence Cavalli
 
 ## Table of contents
 
- [Introduction](#introduction)
+ [Introduction](#introduction)   
  1. [Load the data](#load)   
  2. [Create single interval](#interval)  
  3. [Check the quality](#quality) 
