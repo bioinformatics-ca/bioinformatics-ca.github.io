@@ -377,6 +377,7 @@ To continue you can use the aligned, sorted and marked duplicates and quality re
 
 ![uni1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Unifier_1.png) 
 
+...
 
 ![uni2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Unifier_2.png) 
 
@@ -396,15 +397,20 @@ To perform more rigorous filtering, another program must be used. In our case, w
 NOTE: The best practice when using GATK is to use the VariantRecalibrator. In our data set, we had too few variants to accurately use the variant recalibrator and therefore we used the VariantFiltration tool instead.
 
 ** NGS GATK Tools/Variant Filtration on VCF files   
-- BAM file: marked duplicates   
-- Reference genome: hg19_chr1.fa
-
+- Choose the source for the reference list: History
+- Variant file to annotate: Unified genotyper results file 
+- Using reference genome: hg19_chr1.fa         
 - Variant filter   
 set the 3 following filters  
-filter Expression:QD < 2.0 Filter name:QDFilter   
-filter Expression:FS > 200.0" Filter name:FSFilter    
-filter Expression:MQ < 40.0 Filter name:MQFilter   
+-- filter Expression:QD < 2.0 Filter name:QDFilter   
+-- filter Expression:FS > 200.0" Filter name:FSFilter    
+-- filter Expression:MQ < 40.0 Filter name:MQFilter   
 
+![varFil1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_VarFil_1.png) 
+
+...
+
+![varFil2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_VarFil_2.png) 
 
 File check:
 
@@ -423,7 +429,9 @@ with snpEff
 - Filter out   
   select "Do not show INTERGENIC changes"   
 
-Look at the output (vcf file and stats)
+![file15a](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_15a.png) 
+
+
 
 with GATK VariantAnnotator 
 
@@ -438,10 +446,10 @@ with GATK VariantAnnotator
 
 File check:
 
-![file15](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_15.png) 
+![file15b](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_15b.png) 
 
 
-Look at or download your filtered and annotated variant calls as vcf files
+Look at or download your filtered and annotated variant vcf files
 
 
 <a name="menu"></a>
