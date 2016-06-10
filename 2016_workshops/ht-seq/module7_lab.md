@@ -87,9 +87,9 @@ File check:
 We create an interval corresponding to the region of interest (we extracted reads from this region for this example dataset) to be used later on by different tools
 
 ** Text manipulation/Create Single Interval   
-- Chromosome: chr1
-- Start position: 17704860
-- End position: 18004860  
+- Chromosome: chr1   
+- Start position: 17704860  
+- End position: 18004860    
 - Name: chr1 interval
 
 ![createInterval](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_create_interval.png) 
@@ -114,7 +114,7 @@ You can use FastQC at several points in your analysis on fastq, bam or sam files
 #### 4) Convert the FASTQ quality format
 <a name="convert"></a>
 
-** NGS: QC and manipulation/FASTAQ groomer convert between various FASTQ quality formats
+** NGS: QC and manipulation/FASTAQ groomer convert between various FASTQ quality formats   
 - File to groom : NA12878_CBW_chr1_R1.fastq
 
 ![groomer](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_groomer.png) 
@@ -129,7 +129,7 @@ File check:
 #### 5) Trim the read and remove adapter sequence with Trimmomoatic
 <a name="trim"></a>
 
-** NGS: QC and manipulation/Trimmomatic 
+** NGS: QC and manipulation/Trimmomatic   
 - Input FASTQ file: FASTQ groomer results for xxx_R1.fastq and xxx_R2.fastq files   
 - Perform initial ILLUMINACLIP step :Yes   
 -- Adapter sequence to use : TruSeq3 (paired-end, for MiSeq and HiSeq)   
