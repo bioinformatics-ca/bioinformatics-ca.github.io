@@ -402,9 +402,9 @@ NOTE: The best practice when using GATK is to use the VariantRecalibrator. In ou
 - Using reference genome: hg19_chr1.fa         
 - Variant filter   
 set the 3 following filters  
--- filter Expression: QD < 2.0 Filter, name:QDFilter   
--- filter Expression: FS > 200.0" Filter,  name:FSFilter    
--- filter Expression: MQ < 40.0 Filter, name:MQFilter   
+-- filter Expression: QD < 2.0 Filter, name: QDFilter   
+-- filter Expression: FS > 200.0" Filter, name: FSFilter    
+-- filter Expression: MQ < 40.0 Filter, name: MQFilter   
 
 ![varFil1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_VarFil_1.png) 
 
@@ -426,12 +426,20 @@ with snpEff
 - Sequence changes: Variant Filtration result   
 - Both input and output as vcf file (default)   
 - Genome source: GRCh37.74:hg19   
-- Filter out   
-  select "Do not show INTERGENIC changes"   
+- Filter output  
+ --select "Do not show INTERGENIC changes"   
+
+![SnpEff1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SnpEff_1.png) 
+
+...
+
+![SnpEff2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SnpEff_2.png) 
+
+File check:
 
 ![file15a](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_15a.png) 
 
-
+You can download the SnpEff stat html page and vcf file.
 
 with GATK VariantAnnotator 
 
