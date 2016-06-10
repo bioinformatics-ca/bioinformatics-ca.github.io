@@ -402,9 +402,9 @@ NOTE: The best practice when using GATK is to use the VariantRecalibrator. In ou
 - Using reference genome: hg19_chr1.fa         
 - Variant filter   
 set the 3 following filters  
--- filter Expression:QD < 2.0 Filter name:QDFilter   
--- filter Expression:FS > 200.0" Filter name:FSFilter    
--- filter Expression:MQ < 40.0 Filter name:MQFilter   
+-- filter Expression: QD < 2.0 Filter, name:QDFilter   
+-- filter Expression: FS > 200.0" Filter,  name:FSFilter    
+-- filter Expression: MQ < 40.0 Filter, name:MQFilter   
 
 ![varFil1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_VarFil_1.png) 
 
