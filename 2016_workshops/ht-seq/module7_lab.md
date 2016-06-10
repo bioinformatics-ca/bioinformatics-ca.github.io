@@ -11,20 +11,20 @@ This lab was created by Florence Cavalli
 
 ## Table of contents
 
- [Introduction](#introduction)   
+ [Introduction](#introduction)
  1. [Load the data](#load)   
- 2. [Convert the FASTQ quality format](#convert) 
- 3. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)
- 4. [Align the reads with BWA-mem](#align)
- 5. [Sort the sam/bam](#sort)
- 6. [Create single interval](#interval)  
- 7. [Indel realignment](#indelRealign)
- 8. [FixMates](#fixmates)
- 9. [Mark duplicates](#markdup)
- 10. [Recalibration](#recalibration)
- 11. [Extract Metrics](#extracmetrics)
- 12. [Call SNPs](#callsnp)
- 13. [Filter the variants](#filtervariant)
+ 2. [Create single interval](#interval)  
+ 3. [Convert the FASTQ quality format](#convert)   
+ 4. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)   
+ 5. [Align the reads with BWA-mem](#align)   
+ 6. [Sort the sam/bam](#sort)   
+ 7. [Indel realignment](#indelRealign)   
+ 8. [FixMates](#fixmates)   
+ 9. [Mark duplicates](#markdup)   
+ 10. [Recalibration](#recalibration)   
+ 11. [Extract Metrics](#extracmetrics)   
+ 12. [Call SNPs](#callsnp)   
+ 13. [Filter the variants](#filtervariant)   
  14. [Annotate the vcf file](#annotate)   
  [The "History options" menu](#menu)
 
@@ -76,8 +76,19 @@ File check:
 
 **NOTE**: The icons on the right of each file allow you to "Poke an eye", edit the attribute or delete the file
 
+<a name="interval"></a>
+#### 2) Create single interval  
+** Text manipulation/Create Single Interval   
+- Chr1:17704860-18004860  
+
+![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_create_interval.png) 
+
+File check:
+![file2bis](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2bis.png) 
+
+
 <a name="convert"></a>
-#### 2) Convert the FASTQ quality format
+#### 3) Convert the FASTQ quality format
 ** NGS: QC and manipulation/FASTAQ groomer convert between various FASTQ quality formats
 - File to groom : NA12878_CBW_chr1_R1.fastq
 
@@ -90,7 +101,7 @@ File check:
 ![file2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2.png) 
 
 <a name="trim"></a>
-#### 3) Trim the read and remove adapter sequence with Trimmomoatic
+#### 4) Trim the read and remove adapter sequence with Trimmomoatic
 ** NGS: QC and manipulation/Trimmomatic 
 - Input FASTQ file: FASTQ groomer results for xxx_R1.fastq and xxx_R2.fastq files   
 - Perform initial ILLUMINACLIP step :Yes   
@@ -111,10 +122,10 @@ Use the paired results for the alignment
 
 File check:
 
-![file3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_3.png) 
+![file3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_4.png) 
 
 <a name="align"></a>
-#### 4) Align the reads with BWA-MEM
+#### 5) Align the reads with BWA-MEM
 ** NGS: Mapping/Map with BWA-MEM 
 
 - Will you select a reference genome from your history or use a built-in index? : Use a genome from history or build index   
@@ -147,20 +158,19 @@ File check:
 *** This step takes some time to run
 
 
-![file4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_4.png) 
+![file4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_5.png) 
 
 <a name="sort"></a>
-#### 5) Sort the sam/bam 
+#### 6) Sort the sam/bam 
 
 ** NGS: Picard/SortSam sort SAM/BAM dataset   
 - On aligned bam file   
 - Sort order: coordinate   
 - Select validation stringency: Silent   
 
-<a name="interval"></a>
-#### 6) Create single interval  
-** Text manipulation/Create Single Interval   
-- Chr1:17704860-18004860  
+File check:
+![file2bis](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_6.png) 
+
 
 <a name="indelRealign"></a>
 #### 7) Indel realignment
