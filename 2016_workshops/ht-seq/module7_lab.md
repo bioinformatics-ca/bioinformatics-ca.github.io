@@ -293,7 +293,7 @@ File check:
 ** NGS GATK Tools/Depth of Coverage on BAM files   
 - Choose the source for the reference list: History
 - Bam file: Table recalibration result bam
-- Using reference genome:hg19_Chr1.fa...
+- Using reference genome:hg19_Chr1.fa   
 - Summary coverage threshold
  --for summary file outputs, report the % of bases covered to >= this number: 10, 25, 50 and 100   **(insert 4 thresholds)**
 - Basic or Advanced GATK options: Advanced   
@@ -320,32 +320,49 @@ File check:
 ![cov4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_cov_4.png) 
 
 
-![file12](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12.png) 
-
-** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes   
-- SAM/BAM  dataset: Table recalibration BAM file   
-- Reference genome: hg19_Chr1.fa   
-- reference   
-- The level(s) at which to accumulate metrics set to: Library   
-- Select validation stringency: Silent   
-
-
-View collectInsertSize Metrics and pdf file
+![file12a](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12a.png) 
 
 ** NGS: Picard/Collect Alignment Summary Metrics writes a file containing summary alignment metrics   
 - SAM/BAM  dataset: Table recalibration BAM file   
-- Reference genome: hg19_Chr1.fa   
+- Choose the source for the reference list: History   
+- Using reference genome: hg19_Chr1.fa   
 - The level(s) at which to accumulate metrics set to: Library   
-- Select validation stringency: silent   
+- Select validation stringency: Silent   
+
+![sumA1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumAlign_1.png) 
+
+...
+
+![sumA2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumAlign_2.png) 
 
 File check:
 
-![file12](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12.png) 
-
+![file12b](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12b.png) 
 
 View "Collect Alignment Summary metrics"
 
- -> Variant calling and annotation from Module 5
+** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes   
+- SAM/BAM  dataset: Table recalibration BAM file   
+- Choose the source for the reference list: History   
+- Using reference genome: hg19_Chr1.fa   
+- The level(s) at which to accumulate metrics set to: Library   
+- Select validation stringency: Silent   
+
+![sumI1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumInsert_1.png) 
+
+...
+
+![sumI2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumInsert_2.png) 
+
+
+File check:
+
+![file12c](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12c.png) 
+
+View "collectInsertSize Metrics" and pdf file
+
+
+**Variant calling and annotation from Module 5***
 
 To continue you can use the aligned, sorted and duplicates removed files that you just created or download the one you used in Module 5  from the server (NA12878.bwa.sort.rmdup.realign.bam).
 
