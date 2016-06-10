@@ -80,8 +80,9 @@ File check:
 
 **NOTE**: The icons on the right of each file allow you to "Poke an eye", edit the attribute or delete the file
 
-<a name="interval"></a>
+
 #### 2) Create single interval  
+<a name="interval"></a>
 
 We create an interval corresponding to the region of interest (we extracted reads from this region for this example dataset) to be used later on by different tools
 
@@ -100,16 +101,18 @@ File check:
 
 ####All the following steps are detailed in the Module 2 practical
 
-<a name="quality"></a>
+
 #### 3) Check the quality
+<a name="quality"></a>
 
 BVAtools is not available on the galaxy website   
 You can use ** NGS: QC and manipulation/FastQC Read Quality reports instead   
 Since the tool in not avaible we will not run it but this is a **very important step of the analysis**, don't skip it!     
 You can use FastQC at several points in your analysis on fastq, bam or sam files
 
-<a name="convert"></a>
+
 #### 4) Convert the FASTQ quality format
+<a name="convert"></a>
 
 ** NGS: QC and manipulation/FASTAQ groomer convert between various FASTQ quality formats
 - File to groom : NA12878_CBW_chr1_R1.fastq
@@ -122,8 +125,9 @@ File check:
 
 ![file3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_3.png) 
 
-<a name="trim"></a>
+
 #### 5) Trim the read and remove adapter sequence with Trimmomoatic
+<a name="trim"></a>
 
 ** NGS: QC and manipulation/Trimmomatic 
 - Input FASTQ file: FASTQ groomer results for xxx_R1.fastq and xxx_R2.fastq files   
@@ -147,8 +151,9 @@ File check:
 
 ![file4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_4.png) 
 
-<a name="align"></a>
+
 #### 6) Align the reads with BWA-MEM
+<a name="align"></a>
 
 ** NGS: Mapping/Map with BWA-MEM 
 
@@ -185,8 +190,9 @@ File check:
 
 ![file5](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_5.png) 
 
-<a name="sort"></a>
+
 #### 7) Sort the sam/bam 
+<a name="sort"></a>
 
 ** NGS: Picard/SortSam sort SAM/BAM dataset   
 - Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
@@ -199,8 +205,9 @@ File check:
 
 ![file6](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_6.png) 
 
-<a name="convertBam"></a>
+
 #### 8) Convert bam to sam file (optional)
+<a name="convertBam"></a>
 
 We will convert the bam file to a sam file to be able to look at it   
 You can run this at different point of your analysis
@@ -214,8 +221,9 @@ File check:
 
 ![file7](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_7.png) 
 
-<a name="indelRealign"></a>
+
 #### 9) Indel realignment
+<a name="indelRealign"></a>
 
 ** NGS GATK Tools/RealignerTargetCreator    
 - Choose the source for the reference list: History
@@ -242,8 +250,9 @@ File check:
 
 ![file8](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_8.png) 
 
-<a name="fixmates"></a>
+
 #### 10) FixMates
+<a name="fixmates"></a>
 
 **NGS: Picard/FixMateInformation   
 - Select SAM/BAM dataset or dataset collection: Indel Realigner result bam
@@ -255,8 +264,9 @@ File check:
 
 ![file9](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_9.png) 
 
-<a name="markdup"></a>
+
 #### 11) Mark duplicates
+<a name="markdup"></a>
 
 **NGS: Picard/MarkDuplicates   
 - Select SAM/BAM dataset or dataset collection: FixMateInformation result   
@@ -276,8 +286,9 @@ File check:
 
 Have a look at the "Markduplicate metrics"
 
-<a name="recalibration"></a>
+
 #### 12) Base Recalibration
+<a name="recalibration"></a>
 
 ** NGS GATK Tools/BaseRecalibrator is not available!   
 So we can use "Count covariates" and "Table recalibration". These two steps are the equivalent of BaseRecalibrator which is present in a newer version of GATK   
@@ -304,8 +315,9 @@ File check:
 ![file11](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_11.png) 
 
 
-<a name="extracmetrics"></a>
+
 #### 13) Extract Metrics
+<a name="extracmetrics"></a>
 
 ** NGS GATK Tools/Depth of Coverage on BAM files   
 - Choose the source for the reference list: History
@@ -385,8 +397,9 @@ View "collectInsertSize Metrics" and pdf file
 
 To continue you can use the aligned, sorted, marked duplicates and quality recalibrated files that you just created or download the one you used in Module 5 from the server (http://cbw##.dyndns.info/module5/NA12878.bwa.sort.rmdup.realign.bam, ## being your student id).
 
-<a name="callsnp"></a>
+
 #### 14) Call SNPs   
+<a name="callsnp"></a>
 
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller   
 - Choose the source for the reference list: History   
@@ -409,8 +422,9 @@ File check:
 
 Have a look at the vcf file   
 
-<a name="filtervariant"></a>
+
 #### 15) Filter the variants  
+<a name="filtervariant"></a>
 
 Typically variant callers will only perform a minimal amount of filtering when presenting variant calls. In the case of GATK, we are actively removing any variant with score less than 10. Any variant with a score less than 30 is labeled with the filter “LowQual”.   
 
@@ -441,8 +455,9 @@ File check:
 
 You can look at the output vcf file that contains "filter" annotation
 
-<a name="annotate"></a>
+
 #### 16) Annotate the variants
+<a name="annotate"></a>
 
 with snpEff   
 
@@ -497,8 +512,9 @@ File check:
 Look at or download your filtered and annotated variant vcf files
 
 
-<a name="menu"></a>
+
 #### The "History options" menu
+<a name="menu"></a>
 
 You can  
 - See saved histories
@@ -509,8 +525,9 @@ You can
 
 ![history](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_history.png) 
 
-<a name="workflow"></a>
+
 #### Workflow
+<a name="workflow"></a>
 
 Use the workflow tab   
 - Edit your worklow   
