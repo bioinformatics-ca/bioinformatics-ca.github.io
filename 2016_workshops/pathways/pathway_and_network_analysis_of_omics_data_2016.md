@@ -44,13 +44,13 @@ image: CBW_pathway_icon.jpg
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/2016_workshops/pathways/Pathways_2016_Schedule_v1.pdf">Schedule for June 13 to June 15, 2016</a>
+  <a href="http://bioinformatics-ca.github.io/2016_workshops/pathways/Pathways_2016_Schedule_v3.pdf">Schedule for June 13 to June 15, 2016</a>
 
 [&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
-  Post your workshop questions <a href="http://todaysmeet.com/Pathways2016">here</a>!
+  Post your workshop questions <a href="https://noteapp.com/Pathways2016">here</a>!
 
 [&uarr;](#back_to_top)
 
