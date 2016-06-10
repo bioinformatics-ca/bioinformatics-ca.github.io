@@ -213,7 +213,7 @@ We will convert the bam file to a sam file to be able to look at it
 You can run this at different point of your analysis
 
 ** NGS: SAMtools/BAM-to-SAM
- - BAM File to Convert: sorted Bam file
+  - BAM File to Convert: sorted Bam file
 
 ![convertBam](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_convert_bam.png) 
 
@@ -226,10 +226,10 @@ File check:
 <a name="indelRealign"></a>
 
 ** NGS GATK Tools/RealignerTargetCreator    
- - Choose the source for the reference list: History
- - Bam file: sorted Bam file
- - Using reference file: hg19_chr1.fa   
- - Basic or advance GATK option: Advanced   
+  - Choose the source for the reference list: History
+  - Bam file: sorted Bam file
+  - Using reference file: hg19_chr1.fa   
+  - Basic or advance GATK option: Advanced   
   -- Operate on Genomic intervals: Genomic intervals : created interval on chr1
  
 ![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_1.png) 
@@ -239,10 +239,10 @@ File check:
 ![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_2.png) 
 
 ** NGS GATK Tools/IndelRealigner   
- - Choose the source for the reference list: History
- - Bam file: sorted Bam file
- - Using reference file: hg19_chr1.fa   
- - Restrict realignment to provided intervals: Realigner Target create results   
+  - Choose the source for the reference list: History
+  - Bam file: sorted Bam file
+  - Using reference file: hg19_chr1.fa   
+  - Restrict realignment to provided intervals: Realigner Target create results   
 
 ![indel](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_indel.png) 
 
@@ -255,8 +255,8 @@ File check:
 <a name="fixmates"></a>
 
 **NGS: Picard/FixMateInformation   
- - Select SAM/BAM dataset or dataset collection: Indel Realigner result bam
- - Select validation stringency: Silent   
+  - Select SAM/BAM dataset or dataset collection: Indel Realigner result bam
+  - Select validation stringency: Silent   
 
 ![fixemate](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_fixemates.png) 
 
@@ -269,8 +269,8 @@ File check:
 <a name="markdup"></a>
 
 **NGS: Picard/MarkDuplicates   
- - Select SAM/BAM dataset or dataset collection: FixMateInformation result   
- - Select validation stringency: Silent   
+  - Select SAM/BAM dataset or dataset collection: FixMateInformation result   
+  - Select validation stringency: Silent   
 
 ![markdup](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_markdup_1.png) 
 
@@ -294,19 +294,19 @@ Have a look at the "Markduplicate metrics"
 So we can use "Count covariates" and "Table recalibration". These two steps are the equivalent of BaseRecalibrator which is present in a newer version of GATK   
 
 ** NGS: GATK Tools/Count Covariates on BAM files
- - Choose the source for the reference list: History
- - Bam file: marked duplicates file   
- - Using reference genome: hg19_chr1.fa   
- - Covariates to be used in the recalibration: Select all, then unselect "Tile covariate"
+  - Choose the source for the reference list: History
+  - Bam file: marked duplicates file   
+  - Using reference genome: hg19_chr1.fa   
+  - Covariates to be used in the recalibration: Select all, then unselect "Tile covariate"
 
 ![countCov](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_countcov.png) 
 
 
 ** NGS: GATK Tools/Table Recalibration on BAM files   
- - Covariates table recalibration file: Count Covariate 
- - Choose the source for the reference list: History
- - Bam File: Marked duplicates file  
- - Using reference genome:hg19_chr1.fa   
+  - Covariates table recalibration file: Count Covariate 
+  - Choose the source for the reference list: History
+  - Bam File: Marked duplicates file  
+  - Using reference genome:hg19_chr1.fa   
 
 ![table](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_table.png) 
 
