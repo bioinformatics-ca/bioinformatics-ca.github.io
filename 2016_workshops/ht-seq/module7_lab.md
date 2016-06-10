@@ -34,10 +34,10 @@ This lab was created by Florence Cavalli
 In this practical we will use Galaxy to performe the anaylis you ran in Module 2 and Module 5.
 We are therefore using the dataset from patient NA12878 (reads extracted from region chr1:17704860-18004860)
 
-We will use the galaxy website: https://usegalaxy.org/
+We will use the galaxy website: https://usegalaxy.org/   
 Start by loging on the website with your username
 
-The paramaters that need to be set or changed are specified in the text below (and in the images), keep the rest of the parameters with their default values
+**The paramaters that need to be set or changed are specified in the text below (and in the images), keep the rest of the parameters with their default values**
 
 ** indicate the tool to use that you need to select from the left column
 
@@ -65,19 +65,19 @@ replace ## by your student id
 
 ![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Load_data.png) 
 
-When the data is loaded and/or a task have finished to run the files created are green. Grey indicates that the task is queueing, yellow that the task is beeing processed and red that an error occurred.
+When the data is loaded and/or a task have finished to run the files created are green. Grey indicates that the task is queueing, yellow that the task is beeing processed and red that an error occurred.   
 For example after loading the data you should see the following in the history column on the right
 
 File check:
 
 ![file1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_1.png) 
 
-**NOTE**: numbers and paths of the file may vary with usage
+**NOTE**: Numbers and paths of the files may vary with usage
 
-**NOTE**: the icons on the right of each file allow you to "Poke an eye", edit the attribute or delete the file
+**NOTE**: The icons on the right of each file allow you to "Poke an eye", edit the attribute or delete the file
 
-#### 2) Convert the FASTQ quality format
 <a name="convert"></a>
+#### 2) Convert the FASTQ quality format
 ** NGS: QC and manipulation/FASTAQ groomer convert between various FASTQ quality formats
 - File to groom : NA12878_CBW_chr1_R1.fastq
 
@@ -89,10 +89,9 @@ File check:
 
 ![file2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2.png) 
 
-#### 3) Trim the read and remove adapter sequence with Trimmomoatic
 <a name="trim"></a>
+#### 3) Trim the read and remove adapter sequence with Trimmomoatic
 ** NGS: QC and manipulation/Trimmomatic 
-
 - Input FASTQ file: FASTQ groomer resulst for R1 and R2   
 - Perform initial ILLUMINACLIP step :Yes   
 -- Adapter sequence to use : TruSeq3 (paired-end, for MiSeq and HiSeq)   
