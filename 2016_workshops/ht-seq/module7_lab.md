@@ -100,7 +100,7 @@ File check:
 ![file2bis](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2bis.png) 
 
 
-####All the following steps are detailed in the Module 2 practical
+#### All the following steps are detailed in the Module 2 practical
 
 
 #### 3) Check the quality
@@ -116,7 +116,7 @@ You can use FastQC at several points in your analysis on fastq, bam or sam files
 <a name="convert"></a>
 
 ** NGS: QC and manipulation/FASTAQ groomer convert between various FASTQ quality formats   
-- File to groom : NA12878_CBW_chr1_R1.fastq
+ - File to groom : NA12878_CBW_chr1_R1.fastq
 
 ![groomer](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_groomer.png) 
 
@@ -131,15 +131,15 @@ File check:
 <a name="trim"></a>
 
 ** NGS: QC and manipulation/Trimmomatic   
-- Input FASTQ file: FASTQ groomer results for xxx_R1.fastq and xxx_R2.fastq files   
-- Perform initial ILLUMINACLIP step :Yes   
--- Adapter sequence to use : TruSeq3 (paired-end, for MiSeq and HiSeq)   
--- Maximum mismatch count which will still allow a full match to be performed : 2   
--- How accurate the match between the two 'adapter ligated' reads must be for PE palindrome read alignment: 30   
--- How accurate the match between any adapter etc. sequence must be against a read: 15   
-- Select Trimmomatic operation to perform : insert Trimmomatic option   
--- TRAILING: 20   
--- MINLEN: 32   
+ - Input FASTQ file: FASTQ groomer results for xxx_R1.fastq and xxx_R2.fastq files   
+ - Perform initial ILLUMINACLIP step :Yes   
+ -- Adapter sequence to use : TruSeq3 (paired-end, for MiSeq and HiSeq)   
+ -- Maximum mismatch count which will still allow a full match to be performed : 2   
+ -- How accurate the match between the two 'adapter ligated' reads must be for PE palindrome read alignment: 30   
+ -- How accurate the match between any adapter etc. sequence must be against a read: 15   
+ - Select Trimmomatic operation to perform : insert Trimmomatic option   
+ -- TRAILING: 20   
+ -- MINLEN: 32   
 
 ![trim1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Trim_1.png) 
 ![trim2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Trim_2.png) 
@@ -158,21 +158,21 @@ File check:
 
 ** NGS: Mapping/Map with BWA-MEM 
 
-- Will you select a reference genome from your history or use a built-in index? : Use a genome from history or build index   
-- Use the following dataset as the reference sequence: hg19_chr1.fa   
-- Select first set of reads: Trimmomactic on FASTQ groomer (R1 paired)   
-- Select second set of reads: Trimmomactic on FASTQ groomer (R2 paired)   
-- Set the read groups information : Set read group SAM/BAM specification   
+ - Will you select a reference genome from your history or use a built-in index? : Use a genome from history or build index   
+ - Use the following dataset as the reference sequence: hg19_chr1.fa   
+ - Select first set of reads: Trimmomactic on FASTQ groomer (R1 paired)   
+ - Select second set of reads: Trimmomactic on FASTQ groomer (R2 paired)   
+ - Set the read groups information : Set read group SAM/BAM specification   
    with the following info  
--- Read group identifier (ID): NA12878  
--- Read group sample name (SM): NA12878   
--- Platform/technology used to produce the reads (PL): ILLUMINA   
--- Library name (LB):NA12878   
--- Sequencing center that produced the read (CN): Broad Institute   
--- Platform unit (PU): runNA12878_1      
-- Select Analysis node: 3. Full list of option   
-- Set input/output options : Set  
-- Mark shorter split hits of a chimeric alignment in the FLAG field as 'secondary alignment' instead of 'supplementary alignment': Yes   -M; For Picard<1.96 compatibility  
+ -- Read group identifier (ID): NA12878  
+ -- Read group sample name (SM): NA12878   
+ -- Platform/technology used to produce the reads (PL): ILLUMINA   
+ -- Library name (LB):NA12878   
+ -- Sequencing center that produced the read (CN): Broad Institute   
+ -- Platform unit (PU): runNA12878_1      
+ - Select Analysis node: 3. Full list of option   
+ - Set input/output options : Set  
+ - Mark shorter split hits of a chimeric alignment in the FLAG field as 'secondary alignment' instead of 'supplementary alignment': Yes   -M; For Picard<1.96 compatibility  
 
 ![align1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_1.png) 
 ![align2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_align_2.png) 
@@ -196,9 +196,9 @@ File check:
 <a name="sort"></a>
 
 ** NGS: Picard/SortSam sort SAM/BAM dataset   
-- Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
-- Sort order: coordinate   
-- Select validation stringency: Silent   
+ - Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
+ - Sort order: coordinate   
+ - Select validation stringency: Silent   
 
 ![sort](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_sort.png) 
 
@@ -214,7 +214,7 @@ We will convert the bam file to a sam file to be able to look at it
 You can run this at different point of your analysis
 
 ** NGS: SAMtools/BAM-to-SAM
-- BAM File to Convert: sorted Bam file
+ - BAM File to Convert: sorted Bam file
 
 ![convertBam](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_convert_bam.png) 
 
@@ -227,11 +227,11 @@ File check:
 <a name="indelRealign"></a>
 
 ** NGS GATK Tools/RealignerTargetCreator    
-- Choose the source for the reference list: History
-- Bam file: sorted Bam file
-- Using reference file: hg19_chr1.fa   
-- Basic or advance GATK option: Advanced   
- -- Operate on Genomic intervals: Genomic intervals : created interval on chr1
+ - Choose the source for the reference list: History
+ - Bam file: sorted Bam file
+ - Using reference file: hg19_chr1.fa   
+ - Basic or advance GATK option: Advanced   
+  -- Operate on Genomic intervals: Genomic intervals : created interval on chr1
  
 ![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_1.png) 
 
@@ -240,10 +240,10 @@ File check:
 ![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_2.png) 
 
 ** NGS GATK Tools/IndelRealigner   
-- Choose the source for the reference list: History
-- Bam file: sorted Bam file
-- Using reference file: hg19_chr1.fa   
-- Restrict realignment to provided intervals: Realigner Target create results   
+ - Choose the source for the reference list: History
+ - Bam file: sorted Bam file
+ - Using reference file: hg19_chr1.fa   
+ - Restrict realignment to provided intervals: Realigner Target create results   
 
 ![indel](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_indel.png) 
 
@@ -256,8 +256,8 @@ File check:
 <a name="fixmates"></a>
 
 **NGS: Picard/FixMateInformation   
-- Select SAM/BAM dataset or dataset collection: Indel Realigner result bam
-- Select validation stringency: Silent   
+ - Select SAM/BAM dataset or dataset collection: Indel Realigner result bam
+ - Select validation stringency: Silent   
 
 ![fixemate](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_fixemates.png) 
 
@@ -270,8 +270,8 @@ File check:
 <a name="markdup"></a>
 
 **NGS: Picard/MarkDuplicates   
-- Select SAM/BAM dataset or dataset collection: FixMateInformation result   
-- Select validation stringency: Silent   
+ - Select SAM/BAM dataset or dataset collection: FixMateInformation result   
+ - Select validation stringency: Silent   
 
 ![markdup](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_markdup_1.png) 
 
@@ -295,19 +295,19 @@ Have a look at the "Markduplicate metrics"
 So we can use "Count covariates" and "Table recalibration". These two steps are the equivalent of BaseRecalibrator which is present in a newer version of GATK   
 
 ** NGS: GATK Tools/Count Covariates on BAM files
-- Choose the source for the reference list: History
-- Bam file: marked duplicates file   
-- Using reference genome: hg19_chr1.fa   
-- Covariates to be used in the recalibration: Select all, then unselect "Tile covariate"
+ - Choose the source for the reference list: History
+ - Bam file: marked duplicates file   
+ - Using reference genome: hg19_chr1.fa   
+ - Covariates to be used in the recalibration: Select all, then unselect "Tile covariate"
 
 ![countCov](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_countcov.png) 
 
 
 ** NGS: GATK Tools/Table Recalibration on BAM files   
-- Covariates table recalibration file: Count Covariate 
-- Choose the source for the reference list: History
-- Bam File: Marked duplicates file  
-- Using reference genome:hg19_chr1.fa   
+ - Covariates table recalibration file: Count Covariate 
+ - Choose the source for the reference list: History
+ - Bam File: Marked duplicates file  
+ - Using reference genome:hg19_chr1.fa   
 
 ![table](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_table.png) 
 
@@ -321,16 +321,16 @@ File check:
 <a name="extracmetrics"></a>
 
 ** NGS GATK Tools/Depth of Coverage on BAM files   
-- Choose the source for the reference list: History
-- Bam file: Table recalibration result bam file
-- Using reference genome: hg19_chr1.fa   
-- Partition type for depth of coverage: select sample and readgroup
-- Summary coverage threshold   
- -- for summary file outputs, report the % of bases covered to >= this number: 10, 25, 50 and 100   **(insert 4 thresholds)**
-- Basic or Advanced GATK options: Advanced   
+ - Choose the source for the reference list: History
+ - Bam file: Table recalibration result bam file
+ - Using reference genome: hg19_chr1.fa   
+ - Partition type for depth of coverage: select sample and readgroup
+ - Summary coverage threshold   
+  -- for summary file outputs, report the % of bases covered to >= this number: 10, 25, 50 and 100   **(insert 4 thresholds)**
+ - Basic or Advanced GATK options: Advanced   
   -- Operate on Genomic intervals: Genomic intervals : created interval on chr1   
-- Basic or Advanced Analysis options: Advanced   
- -- "Omit the output of the depth of coverage at each base": Yes      
+ - Basic or Advanced Analysis options: Advanced   
+  -- "Omit the output of the depth of coverage at each base": Yes      
 
 ![cov1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_cov_1bis.png) 
 
@@ -354,11 +354,11 @@ File check:
 ![file12a](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12a.png) 
 
 ** NGS: Picard/Collect Alignment Summary Metrics writes a file containing summary alignment metrics   
-- SAM/BAM  dataset: Table recalibration result bam file   
-- Choose the source for the reference list: History   
-- Using reference genome: hg19_chr1.fa   
-- The level(s) at which to accumulate metrics set to: Read group, Sample      
-- Select validation stringency: Silent   
+ - SAM/BAM  dataset: Table recalibration result bam file   
+ - Choose the source for the reference list: History   
+ - Using reference genome: hg19_chr1.fa   
+ - The level(s) at which to accumulate metrics set to: Read group, Sample      
+ - Select validation stringency: Silent   
 
 ![sumA1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumAlign_1.png) 
 
@@ -373,11 +373,11 @@ File check:
 View "Collect Alignment Summary metrics"
 
 ** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes   
-- SAM/BAM  dataset: Table recalibration result bam file      
-- Choose the source for the reference list: History   
-- Using reference genome: hg19_chr1.fa   
-- The level(s) at which to accumulate metrics set to: Read group
-- Select validation stringency: Silent   
+ - SAM/BAM  dataset: Table recalibration result bam file      
+ - Choose the source for the reference list: History   
+ - Using reference genome: hg19_chr1.fa   
+ - The level(s) at which to accumulate metrics set to: Read group
+ - Select validation stringency: Silent   
 
 ![sumI1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumInsert_1.png) 
 
@@ -393,8 +393,8 @@ View "collectInsertSize Metrics" and pdf file
 
 
 
-####Variant calling and annotation from Module 5
-####All the following steps are detailed in the Module 5 practical
+#### Variant calling and annotation from Module 5
+#### All the following steps are detailed in the Module 5 practical
 
 To continue you can use the aligned, sorted, marked duplicates and quality recalibrated files that you just created or download the one you used in Module 5 from the server (http://cbw##.dyndns.info/module5/NA12878.bwa.sort.rmdup.realign.bam, ## being your student id).
 
@@ -403,11 +403,11 @@ To continue you can use the aligned, sorted, marked duplicates and quality recal
 <a name="callsnp"></a>
 
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller   
-- Choose the source for the reference list: History   
-- BAM file: Table recalibration result bam file   
-- Using reference genome: hg19_chr1.fa         
-- The minimum phred-scaled confidence threshold at which variants not at 'trigger' track sites should be emitted (and filtered if less than the calling threshold): 10   
-- Basic or Advanced GATK options: Advanced   
+ - Choose the source for the reference list: History   
+ - BAM file: Table recalibration result bam file   
+ - Using reference genome: hg19_chr1.fa         
+ - The minimum phred-scaled confidence threshold at which variants not at 'trigger' track sites should be emitted (and filtered if less than the calling threshold): 10   
+ - Basic or Advanced GATK options: Advanced   
  -- Operate on Genomic intervals: Genomic intervals : created interval on chr1    
 
 ![uni1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Unifier_1.png) 
@@ -434,14 +434,14 @@ To perform more rigorous filtering, another program must be used. In our case, w
 NOTE: The best practice when using GATK is to use the VariantRecalibrator. In our data set, we had too few variants to accurately use the variant recalibrator and therefore we used the VariantFiltration tool instead.
 
 ** NGS GATK Tools/Variant Filtration on VCF files   
-- Choose the source for the reference list: History
-- Variant file to annotate: Unified genotyper results file 
-- Using reference genome: hg19_chr1.fa         
-- Variant filter   
+ - Choose the source for the reference list: History
+ - Variant file to annotate: Unified genotyper results file 
+ - Using reference genome: hg19_chr1.fa         
+ - Variant filter   
 set the 3 following filters  
--- filter Expression: QD < 2.0 Filter, name: QDFilter   
--- filter Expression: FS > 200.0 Filter, name: FSFilter    
--- filter Expression: MQ < 40.0 Filter, name: MQFilter   
+ -- filter Expression: QD < 2.0 Filter, name: QDFilter   
+ -- filter Expression: FS > 200.0 Filter, name: FSFilter    
+ -- filter Expression: MQ < 40.0 Filter, name: MQFilter   
 
 ![varFil1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_VarFil_1.png) 
 
@@ -463,9 +463,9 @@ You can look at the output vcf file that contains "filter" annotation
 with snpEff   
 
 ** NGS: Variant Analysis/SnpEff Variant effect and annotation   
-- Sequence changes: Variant Filtration result   
-- Filter output  
- --select "Do not show INTERGENIC changes"   
+ - Sequence changes: Variant Filtration result   
+ - Filter output  
+  --select "Do not show INTERGENIC changes"   
 
 ![SnpEff1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SnpEff_1.png) 
 
@@ -482,13 +482,13 @@ You can download the SnpEff stat html page and vcf file
 with GATK VariantAnnotator 
 
 ** NGS GATK Tools/VariantAnnotator   
-- Choose the source for the reference list: History   
-- Variant file to annotate: SnpEff vcf file   
-- Using reference file: hg19_chr1.fa   
-- Provide a dbSNP reference-ordered data file: set dbSNP   
- -- ROD file: dbSNP_135_chr1.vcf.gz   
-- Basic or Advanced GATK options: Advanced   
--- Operate on Genomic intervals: Genomic intervals : created interval on chr1    
+ - Choose the source for the reference list: History   
+ - Variant file to annotate: SnpEff vcf file   
+ - Using reference file: hg19_chr1.fa   
+ - Provide a dbSNP reference-ordered data file: set dbSNP   
+  -- ROD file: dbSNP_135_chr1.vcf.gz   
+ - Basic or Advanced GATK options: Advanced   
+ -- Operate on Genomic intervals: Genomic intervals : created interval on chr1    
 
 ![Anno1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_anno_1.png) 
 
@@ -518,11 +518,11 @@ Look at or download your filtered and annotated variant vcf files
 <a name="menu"></a>
 
 You can  
-- See saved histories
-- Extract workflow  
-- Save your workflow   
-- Share your workflow   
-- ...   
+ - See saved histories
+ - Extract workflow  
+ - Save your workflow   
+ - Share your workflow   
+ - ...   
 
 ![history](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_history.png) 
 
@@ -531,10 +531,10 @@ You can
 <a name="workflow"></a>
 
 Use the workflow tab   
-- Edit your worklow   
-- Rename input and output files   
-- Run your workflow on other samples   
-...
+ - Edit your worklow   
+ - Rename input and output files   
+ - Run your workflow on other samples   
+ ...
 
 ![workflow](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_workflow_2.png) 
 
@@ -543,19 +543,19 @@ For information (we will not do it as part of the practical), you can run a tool
 
 ![s1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_severalSample_1.png) 
 
-- Select your input samples 
+ - Select your input samples 
 
 ![s2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_severalSample_2.png) 
 
-- Create your pairs 
-- Run a tool on your dataset collection
+ - Create your pairs 
+ - Run a tool on your dataset collection
 
 ![s3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_severalSample_3.png) 
 
 Next, you could...   
-- Create a new history, upload your input samples and run you workflow on them
-- Continue using the tools on Galaxy
-- Continue exploring/analysing/visualizing your data and results!
+ - Create a new history, upload your input samples and run you workflow on them
+ - Continue using the tools on Galaxy
+ - Continue exploring/analysing/visualizing your data and results!
 
 There are lots of tutorial, mainling list, videos for help  (such as https://vimeo.com/galaxyproject)   
 **We hope that you enjoyed using Galaxy!**
