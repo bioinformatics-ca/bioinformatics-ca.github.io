@@ -487,6 +487,7 @@ Use the workflow tab
 - Edit your worklow   
 - rename input and output files   
 - run your workflow on other samples   
+...
 
 ![workflow](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_workflow.png) 
 
