@@ -22,7 +22,7 @@ This lab was created by Florence Cavalli
  8. [Indel realignment](#indelRealign)   
  9. [FixMates](#fixmates)   
  10. [Mark duplicates](#markdup)   
- 11. [Recalibration](#recalibration)   
+ 11. [Base recalibration](#recalibration)   
  12. [Extract Metrics](#extracmetrics)   
  13. [Call SNPs](#callsnp)   
  14. [Filter the variants](#filtervariant)   
@@ -196,7 +196,7 @@ File check:
 <a name="indelRealign"></a>
 #### 8) Indel realignment
 ** NGS GATK Tools/RealignerTargetCreator    
-- Choose the source for the reference list: From history
+- Choose the source for the reference list: History
 - Bam file: sorted Bam file
 - Using reference file: hg19_chr1.fa   
 - Basic or advance GATK option: Advanced   
@@ -209,7 +209,7 @@ File check:
 ![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_2.png) 
 
 ** NGS GATK Tools/IndelRealigner   
-- Choose the source for the reference list: From history
+- Choose the source for the reference list: History
 - Bam file: sorted Bam file
 - Using reference file: hg19_chr1.fa   
 - Restrict realignment to provided intervals: Realigner Target create results   
@@ -235,8 +235,8 @@ File check:
 <a name="markdup"></a>
 #### 10) Mark duplicates
 **NGS: Picard/MarkDuplicates   
-- Select SAM/BAM dataset or dataset collection -> FixMateInformation result   
-- Select validation stringency -> Silent   
+- Select SAM/BAM dataset or dataset collection: FixMateInformation result   
+- Select validation stringency: Silent   
 
 ![markdup](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_markdup_1.png) 
 
@@ -253,19 +253,27 @@ File check:
 Have a look at the "Markduplicate metrics"
 
 <a name="recalibration"></a>
-#### 11) Recalibration
+#### 11) Base Recalibration
 ** NGS GATK Tools/BaseRecalibrator is not available!   
-So we can use "Count covariates" and "Table recalibration". These two step are teh equivalent of BaseRecalibrator which is present in a newer version of GATK   
+So we can use "Count covariates" and "Table recalibration". These two steps are the equivalent of BaseRecalibrator which is present in a newer version of GATK   
 
 ** NGS: GATK Tools/Count Covariates on BAM files
-- On marked duplicat file   
-- Reference genome: hg19_Chr1.fa   
-- Select all the unselect Tile covariate   
+- Choose the source for the reference list: History
+- Bam file: marked duplicates file   
+- Using reference genome: hg19_Chr1.fa   
+- Covariates to be used in the recalibration: Select all, then unselect "Tile covariate"
+
+![countCov](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_countcov.png) 
+
 
 ** NGS: GATK Tools/Table Recalibration on BAM files   
-- Covariates table recalibration file: Count Covariate   
-- Bam File: Mark duplicate   
-- Reference genome: hg19_Chr1.fa   
+- Covariates table recalibration file: Count Covariate 
+- Choose the source for the reference list: History
+- Bam File: Marked duplicates file  
+- Using reference genome:hg19_Chr1.fa   
+
+![table](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_table.png) 
+
 
 File check:
 
