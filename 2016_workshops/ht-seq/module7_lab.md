@@ -497,6 +497,7 @@ Use the workflow tab
 ![workflow](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_workflow_2.png) 
 
 
+- Create a new history, upload your input samples and run you workflow on them
 - Continue using the tools on Galaxy
 - Continue exploring/analysing/visualizing your data and results!
 
