@@ -102,7 +102,6 @@ File check:
 
 #### All the following steps are detailed in the Module 2 practical
 
-
 #### 3) Check the quality
 <a name="quality"></a>
 
