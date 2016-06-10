@@ -293,6 +293,7 @@ File check:
 - Choose the source for the reference list: History
 - Bam file: Table recalibration result bam
 - Using reference genome:hg19_Chr1.fa   
+- Partition type for depth of coverage: select Sample and readgroup
 - Summary coverage threshold
  --for summary file outputs, report the % of bases covered to >= this number: 10, 25, 50 and 100   **(insert 4 thresholds)**
 - Basic or Advanced GATK options: Advanced   
@@ -325,7 +326,7 @@ File check:
 - SAM/BAM  dataset: Table recalibration BAM file   
 - Choose the source for the reference list: History   
 - Using reference genome: hg19_Chr1.fa   
-- The level(s) at which to accumulate metrics set to: Read group, Samples   
+- The level(s) at which to accumulate metrics set to: Read group, Sample      
 - Select validation stringency: Silent   
 
 ![sumA1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumAlign_1.png) 
@@ -344,7 +345,7 @@ View "Collect Alignment Summary metrics"
 - SAM/BAM  dataset: Table recalibration BAM file   
 - Choose the source for the reference list: History   
 - Using reference genome: hg19_Chr1.fa   
-- The level(s) at which to accumulate metrics set to: Read group, Samples   
+- The level(s) at which to accumulate metrics set to: Read group, Sample      
 - Select validation stringency: Silent   
 
 ![sumI1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumInsert_1.png) 
@@ -362,7 +363,7 @@ View "collectInsertSize Metrics" and pdf file
 
 **Variant calling and annotation from Module 5***
 
-To continue you can use the aligned, sorted and duplicates removed files that you just created or download the one you used in Module 5  from the server (NA12878.bwa.sort.rmdup.realign.bam).
+To continue you can use the aligned, sorted and marked duplicates and quality recalibration files that you just created or download the one you used in Module 5 from the server (http://cbw##.dyndns.info/module5/NA12878.bwa.sort.rmdup.realign.bam, ## being your student id).
 
 <a name="callsnp"></a>
 #### 14) Call SNPs   
