@@ -270,7 +270,7 @@ So we can use "Count covariates" and "Table recalibration". These two steps are 
 ** NGS: GATK Tools/Count Covariates on BAM files
 - Choose the source for the reference list: History
 - Bam file: marked duplicates file   
-- Using reference genome: hg19_Chr1.fa   
+- Using reference genome: hg19_chr1.fa   
 - Covariates to be used in the recalibration: Select all, then unselect "Tile covariate"
 
 ![countCov](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_countcov.png) 
@@ -280,7 +280,7 @@ So we can use "Count covariates" and "Table recalibration". These two steps are 
 - Covariates table recalibration file: Count Covariate 
 - Choose the source for the reference list: History
 - Bam File: Marked duplicates file  
-- Using reference genome:hg19_Chr1.fa   
+- Using reference genome:hg19_chr1.fa   
 
 ![table](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_table.png) 
 
@@ -294,7 +294,7 @@ File check:
 ** NGS GATK Tools/Depth of Coverage on BAM files   
 - Choose the source for the reference list: History
 - Bam file: Table recalibration result bam
-- Using reference genome:hg19_Chr1.fa   
+- Using reference genome:hg19_chr1.fa   
 - Partition type for depth of coverage: select Sample and readgroup
 - Summary coverage threshold
  --for summary file outputs, report the % of bases covered to >= this number: 10, 25, 50 and 100   **(insert 4 thresholds)**
@@ -327,7 +327,7 @@ File check:
 ** NGS: Picard/Collect Alignment Summary Metrics writes a file containing summary alignment metrics   
 - SAM/BAM  dataset: Table recalibration BAM file   
 - Choose the source for the reference list: History   
-- Using reference genome: hg19_Chr1.fa   
+- Using reference genome: hg19_chr1.fa   
 - The level(s) at which to accumulate metrics set to: Read group, Sample      
 - Select validation stringency: Silent   
 
@@ -346,7 +346,7 @@ View "Collect Alignment Summary metrics"
 ** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes   
 - SAM/BAM  dataset: Table recalibration BAM file   
 - Choose the source for the reference list: History   
-- Using reference genome: hg19_Chr1.fa   
+- Using reference genome: hg19_chr1.fa   
 - The level(s) at which to accumulate metrics set to: Read group, Sample      
 - Select validation stringency: Silent   
 
@@ -372,7 +372,7 @@ To continue you can use the aligned, sorted and marked duplicates and quality re
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller   
 - Choose the source for the reference list: History   
 - BAM file: Table recalibration result bam 
-- Using reference genome: hg19_Chr1.fa         
+- Using reference genome: hg19_chr1.fa         
 - The minimum phred-scaled confidence threshold at which variants not at 'trigger' track sites should be emitted (and filtered if less than the calling threshold): 10   
 - Basic or Advanced GATK options: Advanced   
  -- Operate on Genomic intervals: Genomic intervals : created interval on chr1    
