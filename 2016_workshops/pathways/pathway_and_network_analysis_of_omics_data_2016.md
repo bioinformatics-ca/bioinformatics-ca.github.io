@@ -130,10 +130,16 @@ image: CBW_pathway_icon.jpg
   Introduction: 
   
   Exercise 1: 
+  
   Data for exercise 1 here:
   
+  Precomputed results for Exercise 1: 
+  
   Exercise 2:
+  
   Data for exercise 2 here:
+  
+  Precomputed results for exercise 2: 
   
   *<font color="#827e9c">Veronique Voisin</font>*
 
