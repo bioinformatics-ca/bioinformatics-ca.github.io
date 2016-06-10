@@ -18,14 +18,15 @@ This lab was created by Florence Cavalli
  4. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)   
  5. [Align the reads with BWA-mem](#align)   
  6. [Sort the sam/bam](#sort)   
- 7. [Indel realignment](#indelRealign)   
- 8. [FixMates](#fixmates)   
- 9. [Mark duplicates](#markdup)   
- 10. [Recalibration](#recalibration)   
- 11. [Extract Metrics](#extracmetrics)   
- 12. [Call SNPs](#callsnp)   
- 13. [Filter the variants](#filtervariant)   
- 14. [Annotate the vcf file](#annotate)   
+ 7. [Convert bam to sam](#convertBam)   
+ 8. [Indel realignment](#indelRealign)   
+ 9. [FixMates](#fixmates)   
+ 10. [Mark duplicates](#markdup)   
+ 11. [Recalibration](#recalibration)   
+ 12. [Extract Metrics](#extracmetrics)   
+ 13. [Call SNPs](#callsnp)   
+ 14. [Filter the variants](#filtervariant)   
+ 15. [Annotate the vcf file](#annotate)   
  [The "History options" menu](#menu)
 
 
@@ -81,9 +82,10 @@ File check:
 ** Text manipulation/Create Single Interval   
 - Chr1:17704860-18004860  
 
-![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_create_interval.png) 
+![createInterval](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_create_interval.png) 
 
 File check:
+
 ![file2bis](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2bis.png) 
 
 <a name="convert"></a>
@@ -97,7 +99,7 @@ Run FASTAQ groomer on the NA12878_CBW_chr1_R2.fastq as well
 
 File check:
 
-![file2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2.png) 
+![file3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_3.png) 
 
 <a name="trim"></a>
 #### 4) Trim the read and remove adapter sequence with Trimmomoatic
@@ -121,7 +123,7 @@ Use the paired results for the alignment
 
 File check:
 
-![file3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_4.png) 
+![file4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_4.png) 
 
 <a name="align"></a>
 #### 5) Align the reads with BWA-MEM
@@ -157,22 +159,34 @@ File check:
 *** This step takes some time to run
 
 
-![file4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_5.png) 
+![file5](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_5.png) 
 
 <a name="sort"></a>
 #### 6) Sort the sam/bam 
 
 ** NGS: Picard/SortSam sort SAM/BAM dataset   
-- On aligned bam file   
+- Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
 - Sort order: coordinate   
 - Select validation stringency: Silent   
 
-File check:
-![file2bis](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_6.png) 
+![sort](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_sort.png) 
 
+File check:
+![file6](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_6.png) 
 
 <a name="indelRealign"></a>
-#### 7) Indel realignment
+#### 7) Convert bam to sam file (optianal)   
+We will convert teh bam file to a sam file to be able to look at it   
+
+** NGS: SAMtools/BAM-to_SAM
+- BAM File to Convert: sorted Bam
+
+![convertBam](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_convert_bam.png) 
+File check:
+![file7](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_7.png) 
+
+<a name="indelRealign"></a>
+#### 8) Indel realignment
 ** NGS GATK Tools/RealignerTargetCreator    
 - Bam file : Bam sorted in coordinate order   
 - Using reference file hg19_chr1.fa   
@@ -191,14 +205,14 @@ File check:
 
 
 <a name="fixmates"></a>
-#### 8) FixMates
+#### 9) FixMates
 **NGS: Picard/FixMateInformation   
 - Select SAM/BAM dataset or dataset collection ->Indel Realigner result   
 - Select validation stringency -> Silent   
 other default parameter   
 
 <a name="markdup"></a>
-#### 9) Mark duplicates
+#### 10) Mark duplicates
 **NGS: Picard/MarkDuplicates   
 - Select SAM/BAM dataset or dataset collection -> FixMateInformation result   
 - Select validation stringency -> Silent   
@@ -206,7 +220,7 @@ other default parameter
 You can look at the Markduplicate metrics
 
 <a name="recalibration"></a>
-#### 10) Recalibration
+#### 11) Recalibration
 ** NGS GATK Tools/BaseRecalibrator is not available!   
 So we can use "Count covariates" and "Table recalibration". These two step are teh equivalent of BaseRecalibrator which is present in a newer version of GATK   
 
@@ -221,7 +235,7 @@ So we can use "Count covariates" and "Table recalibration". These two step are t
 - Reference genome: hg19_Chr1.fa   
 
 <a name="extracmetrics"></a>
-#### 11) Extract Metrics
+#### 12) Extract Metrics
 ** NGS GATK Tools/Depth of Coverage on BAM files   
 - Summary coverage threshold   
 - insert 4 threshold at 10, 25, 50 and 100   
@@ -257,7 +271,7 @@ View Collect Alignment Summary metrics
 To continue you can use the aligned, sorted and duplicates removed files that you just created or download the one you used in Module 5  from the server (NA12878.bwa.sort.rmdup.realign.bam).
 
 <a name="callsnp"></a>
-#### 12) Call SNPs   
+#### 13) Call SNPs   
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller   
 - BAM file -> marked duplicates   
 - reference genome -> hg19_chr1.fa   
@@ -272,7 +286,7 @@ Have a look at the vcf file
 
 
 <a name="filtervariant"></a>
-#### 13) Filter the variants   
+#### 14) Filter the variants   
 Typically variant callers will only perform a minimal amount of filtering when presenting variant calls. In the case of GATK, we are actively removing any variant with score less than 10. Any variant with a score less than 30 is labeled with the filter “LowQual”.   
 
 To perform more rigorous filtering, another program must be used. In our case, we will use the VariantFiltration tool in GATK.
@@ -292,7 +306,7 @@ filter Expression:MQ < 40.0 Filter name:MQFilter
 You can look at the output vcf file that contains some filter annotation
 
 <a name="annotate"></a>
-#### 14) Annotate the vcf file   
+#### 15) Annotate the vcf file   
 with snpEff   
 ** NGS: Variant Analysis/SnpEff Variant effect and annotation   
 - Sequence changes: Variant Filtration result   
