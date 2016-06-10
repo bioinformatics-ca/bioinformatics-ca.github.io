@@ -293,11 +293,11 @@ File check:
 #### 13) Extract Metrics
 ** NGS GATK Tools/Depth of Coverage on BAM files   
 - Choose the source for the reference list: History
-- Bam file: Table recalibration result bam
+- Bam file: Table recalibration result bam file
 - Using reference genome: hg19_chr1.fa   
 - Partition type for depth of coverage: select sample and readgroup
 - Summary coverage threshold   
- --for summary file outputs, report the % of bases covered to >= this number: 10, 25, 50 and 100   **(insert 4 thresholds)**
+ -- for summary file outputs, report the % of bases covered to >= this number: 10, 25, 50 and 100   **(insert 4 thresholds)**
 - Basic or Advanced GATK options: Advanced   
   -- Operate on Genomic intervals: Genomic intervals : created interval on chr1   
 - Basic or Advanced Analysis options: Advanced   
@@ -325,7 +325,7 @@ File check:
 ![file12a](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12a.png) 
 
 ** NGS: Picard/Collect Alignment Summary Metrics writes a file containing summary alignment metrics   
-- SAM/BAM  dataset: Table recalibration BAM file   
+- SAM/BAM  dataset: Table recalibration result bam file   
 - Choose the source for the reference list: History   
 - Using reference genome: hg19_chr1.fa   
 - The level(s) at which to accumulate metrics set to: Read group, Sample      
@@ -344,7 +344,7 @@ File check:
 View "Collect Alignment Summary metrics"
 
 ** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes   
-- SAM/BAM  dataset: Table recalibration BAM file   
+- SAM/BAM  dataset: Table recalibration result bam file      
 - Choose the source for the reference list: History   
 - Using reference genome: hg19_chr1.fa   
 - The level(s) at which to accumulate metrics set to: Read group, Sample      
@@ -371,7 +371,7 @@ To continue you can use the aligned, sorted and marked duplicates and quality re
 #### 14) Call SNPs   
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller   
 - Choose the source for the reference list: History   
-- BAM file: Table recalibration result bam 
+- BAM file: Table recalibration result bam file   
 - Using reference genome: hg19_chr1.fa         
 - The minimum phred-scaled confidence threshold at which variants not at 'trigger' track sites should be emitted (and filtered if less than the calling threshold): 10   
 - Basic or Advanced GATK options: Advanced   
