@@ -493,7 +493,6 @@ Use the workflow tab
 - Continue using the tools on Galaxy
 - Continue exploring/analysing/visualizing your data and results !
 
-
 There are lots of tutorial, mainling list, videos for help  (such as https://vimeo.com/galaxyproject)
 **We hope that you enjoyed using Galaxy!**
 
