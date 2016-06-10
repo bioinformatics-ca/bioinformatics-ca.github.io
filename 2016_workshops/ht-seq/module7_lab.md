@@ -80,7 +80,10 @@ File check:
 <a name="interval"></a>
 #### 2) Create single interval  
 ** Text manipulation/Create Single Interval   
-- Chr1:17704860-18004860  
+- Chromosome: chr1
+- Start position: 17704860
+- End position: 18004860  
+- Name: chr1 interval
 
 ![createInterval](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_create_interval.png) 
 
@@ -171,6 +174,7 @@ File check:
 ![sort](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_sort.png) 
 
 File check:
+
 ![file6](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_6.png) 
 
 <a name="indelRealign"></a>
