@@ -285,21 +285,17 @@ File check:
 ** NGS GATK Tools/Depth of Coverage on BAM files   
 - Summary coverage threshold   
 - insert 4 threshold at 10, 25, 50 and 100   
-- Basic or Advanced GATK options   
-  Advanced   
-Operate on Genomic intervals   
--- L "create single interval   
-
--Basic or Advanced Analysis options   
- Advanced   
-"Omit the output of the depth of coverage at each base" set to Yes   
+- Basic or Advanced GATK options: Advanced   
+  -- Operate on Genomic intervals: Genomic intervals : created interval in chr1   
+- Basic or Advanced Analysis options: Advanced   
+ -- "Omit the output of the depth of coverage at each base": Yes      
 
 ** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes   
-- SAM/BAM  dataset -> Table recalibration BAM file   
+- SAM/BAM  dataset: Table recalibration BAM file   
 - Reference genome: hg19_Chr1.fa   
 - reference   
-- The level(s) at which to accumulate metrics set to -> Library   
-- Select validation stringency -> silent   
+- The level(s) at which to accumulate metrics set to: Library   
+- Select validation stringency: Silent   
 
 
 View collectInsertSize Metrics and pdf file
