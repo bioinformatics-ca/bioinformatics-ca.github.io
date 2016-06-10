@@ -28,7 +28,7 @@ This lab was created by Florence Cavalli
  14. [Call SNPs](#callsnp)   
  15. [Filter the variants](#filtervariant)   
  16. [Annotate the variants](#annotate)   
- [The "History options" menu](#menu)...
+ [The "History options" menu](#menu)   
  [Workflows](#workflow)
 
 
@@ -496,7 +496,7 @@ Use the workflow tab
 
 ![workflow](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_workflow_2.png) 
 
-
+Next   
 - Create a new history, upload your input samples and run you workflow on them
 - Continue using the tools on Galaxy
 - Continue exploring/analysing/visualizing your data and results!
