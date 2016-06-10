@@ -326,7 +326,7 @@ File check:
 - SAM/BAM  dataset: Table recalibration BAM file   
 - Choose the source for the reference list: History   
 - Using reference genome: hg19_Chr1.fa   
-- The level(s) at which to accumulate metrics set to: Library   
+- The level(s) at which to accumulate metrics set to: Read group, Samples   
 - Select validation stringency: Silent   
 
 ![sumA1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumAlign_1.png) 
@@ -345,7 +345,7 @@ View "Collect Alignment Summary metrics"
 - SAM/BAM  dataset: Table recalibration BAM file   
 - Choose the source for the reference list: History   
 - Using reference genome: hg19_Chr1.fa   
-- The level(s) at which to accumulate metrics set to: Library   
+- The level(s) at which to accumulate metrics set to: Read group, Samples   
 - Select validation stringency: Silent   
 
 ![sumI1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_SumInsert_1.png) 
