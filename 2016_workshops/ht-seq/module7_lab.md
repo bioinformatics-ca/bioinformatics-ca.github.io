@@ -189,11 +189,12 @@ File check:
 
 ![file6](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_6.png) 
 
-<a name="indelRealign"></a>
+<a name="convertBam"></a>
 #### 8) Convert bam to sam file (optional)   
 We will convert the bam file to a sam file to be able to look at it   
+You can run this at different point of your analysis
 
-** NGS: SAMtools/BAM-to_SAM
+** NGS: SAMtools/BAM-to-SAM
 - BAM File to Convert: sorted Bam file
 
 ![convertBam](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_convert_bam.png) 
