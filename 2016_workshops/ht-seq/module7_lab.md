@@ -95,6 +95,9 @@ File check:
 
 ![file2bis](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2bis.png) 
 
+
+*** All the following steps are detailed in the Module 2 practical***
+
 <a name="quality"></a>
 #### 3) Check the quality
 BVAtools is not available on the galaxy website   
@@ -363,9 +366,10 @@ File check:
 View "collectInsertSize Metrics" and pdf file
 
 
-**Variant calling and annotation from Module 5***
+***Variant calling and annotation from Module 5***
+*** All the following steps are detailed in the Module 5 practical***
 
-To continue you can use the aligned, sorted and marked duplicates and quality recalibration files that you just created or download the one you used in Module 5 from the server (http://cbw##.dyndns.info/module5/NA12878.bwa.sort.rmdup.realign.bam, ## being your student id).
+To continue you can use the aligned, sorted, marked duplicates and quality recalibrated files that you just created or download the one you used in Module 5 from the server (http://cbw##.dyndns.info/module5/NA12878.bwa.sort.rmdup.realign.bam, ## being your student id).
 
 <a name="callsnp"></a>
 #### 14) Call SNPs   
