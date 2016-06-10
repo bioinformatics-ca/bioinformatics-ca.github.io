@@ -303,7 +303,7 @@ File check:
 - Basic or Advanced Analysis options: Advanced   
  -- "Omit the output of the depth of coverage at each base": Yes      
 
-![cov1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_cov_1.png) 
+![cov1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_cov_1bis.png) 
 
 ...
 
