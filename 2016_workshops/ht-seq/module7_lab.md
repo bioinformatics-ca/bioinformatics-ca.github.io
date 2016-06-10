@@ -502,6 +502,12 @@ Use the workflow tab
 
 ![workflow](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_workflow_2.png) 
 
+You can run a given workflow on several samples. You will need to "Build List of Dataset Pairs" the run the tools on "Dataset collection"
+
+![s1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_severalSample_1.png) 
+![s2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_severalSample_2.png) 
+![s3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_severalSample_3.png) 
+
 Next   
 - Create a new history, upload your input samples and run you workflow on them
 - Continue using the tools on Galaxy
