@@ -490,7 +490,7 @@ Use the workflow tab
 - Run your workflow on other samples   
 ...
 
-![workflow](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_workflow.png) 
+![workflow](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_workflow_bis.png) 
 
 - Continue using the tools on Galaxy
 - Continue exploring/analysing/visualizing your data and results!
