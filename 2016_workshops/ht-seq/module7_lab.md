@@ -86,7 +86,6 @@ File check:
 File check:
 ![file2bis](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2bis.png) 
 
-
 <a name="convert"></a>
 #### 3) Convert the FASTQ quality format
 ** NGS: QC and manipulation/FASTAQ groomer convert between various FASTQ quality formats
