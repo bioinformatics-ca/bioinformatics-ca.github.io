@@ -163,6 +163,7 @@ File check:
 
 *** This step takes some time to run
 
+File check:
 
 ![file5](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_5.png) 
 
@@ -208,12 +209,12 @@ File check:
 ![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_2.png) 
 
 ** NGS GATK Tools/IndelRealigner   
-- Choose the source for the reference list: History   
-- Bam file : Bam sorted in coordinate order   
-- Using reference file hg19_chr1.fa   
-
+- Choose the source for the reference list: From history
+- Bam file: sorted Bam file
+- Using reference file: hg19_chr1.fa   
 - Restrict realignment to provided intervals: Realigner Target create results   
 
+![realignertarget](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_realigner_target_1.png) 
 File check:
 
 ![file8](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_8.png) 
