@@ -195,6 +195,7 @@ File check:
 <a name="sort"></a>
 
 ** NGS: Picard/SortSam sort SAM/BAM dataset  
+
   - Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
   
   - Sort order: coordinate 
