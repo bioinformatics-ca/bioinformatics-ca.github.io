@@ -301,17 +301,17 @@ File check:
 View collectInsertSize Metrics and pdf file
 
 ** NGS: Picard/Collect Alignment Summary Metrics writes a file containing summary alignment metrics   
-- SAM/BAM  dataset -> Table recalibration BAM file   
+- SAM/BAM  dataset: Table recalibration BAM file   
 - Reference genome: hg19_Chr1.fa   
-- The level(s) at which to accumulate metrics set to -> Library   
-- Select validation stringency -> silent   
+- The level(s) at which to accumulate metrics set to: Library   
+- Select validation stringency: silent   
 
 File check:
 
 ![file12](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12.png) 
 
 
-View Collect Alignment Summary metrics
+View "Collect Alignment Summary metrics"
 
  -> Variant calling and annotation from Module 5
 
@@ -320,14 +320,11 @@ To continue you can use the aligned, sorted and duplicates removed files that yo
 <a name="callsnp"></a>
 #### 13) Call SNPs   
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller   
-- BAM file -> marked duplicates   
-- reference genome -> hg19_chr1.fa   
+- BAM file: marked duplicates   
+- reference genome: hg19_chr1.fa      
 - The minimum phred-scaled confidence threshold at which variants not at 'trigger' track sites should be emitted (and filtered if less than the calling threshold): 10   
-
-- Basic or Advanced GATK options   
- Advanced   
- Operate on Genomic intervals   
--- L "create single interval   
+- Basic or Advanced GATK options: Advanced   
+ -- Operate on Genomic intervals: Genomic intervals : created interval in chr1    
 
 File check:
 
