@@ -31,7 +31,7 @@ This lab was created by Florence Cavalli
 
 ## Introduction
 <a name="introduction"></a>
-In this practical we will use Galaxy to performe the anaylis you ran in Module 2 and Module 5.
+In this practical we will use Galaxy to perform the analysis you ran in Module 2 and Module 5.
 We are therefore using the dataset from patient NA12878 (reads extracted from region chr1:17704860-18004860)
 
 We will use the galaxy website: https://usegalaxy.org/   
@@ -39,7 +39,7 @@ Start by loging on the website with your username
 
 **The paramaters that need to be set or changed are specified in the text below (and in the images), keep the rest of the parameters with their default values**
 
-** indicate the tool to use that you need to select from the left column
+** indicates the tool to use that you need to select from the left column
 
 ![tool](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_tools.png) 
 
@@ -65,8 +65,8 @@ replace ## by your student id
 
 ![data](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Load_data.png) 
 
-When the data is loaded and/or a task have finished to run the files created are green. Grey indicates that the task is queueing, yellow that the task is beeing processed and red that an error occurred.   
-For example after loading the data you should see the following in the history column on the right
+When the data is loaded and/or a task has finished to run the file created is green. Grey indicates that the task is queueing, yellow that the task is beeing processed and red that an error occurred.   
+For example after loading the data, you should see the following in the history column on the right
 
 File check:
 
@@ -83,7 +83,7 @@ File check:
 
 ![groomer](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_groomer.png) 
 
-Run the FASTAQ groomer on the NA12878_CBW_chr1_R1.fastq as well
+Run FASTAQ groomer on the NA12878_CBW_chr1_R2.fastq as well
 
 File check:
 
@@ -92,7 +92,7 @@ File check:
 <a name="trim"></a>
 #### 3) Trim the read and remove adapter sequence with Trimmomoatic
 ** NGS: QC and manipulation/Trimmomatic 
-- Input FASTQ file: FASTQ groomer resulst for R1 and R2   
+- Input FASTQ file: FASTQ groomer results for xxx_R1.fastq and xxx_R2.fastq files   
 - Perform initial ILLUMINACLIP step :Yes   
 -- Adapter sequence to use : TruSeq3 (paired-end, for MiSeq and HiSeq)   
 -- Maximum mismatch count which will still allow a full match to be performed : 2   
@@ -122,14 +122,13 @@ File check:
 - Select first set of reads: Trimmomactic on FASTQ groomer (R1 paired)   
 - Select second set of reads: Trimmomactic on FASTQ groomer (R2 paired)   
 - Set the read groups information : Set read group SAM/BAM specification   
-with the following info  
-Read group identifier (ID): NA12878  
-Read group sample name (SM): NA12878   
-Platform/technology used to produce the reads (PL): ILLUMINA   
-Library name (LB):NA12878   
-Sequencing center that produced the read (CN): Broad Institute   
-Platform unit (PU): runNA12878_1   
-
+   with the following info  
+-- Read group identifier (ID): NA12878  
+-- Read group sample name (SM): NA12878   
+-- Platform/technology used to produce the reads (PL): ILLUMINA   
+-- Library name (LB):NA12878   
+-- Sequencing center that produced the read (CN): Broad Institute   
+-- Platform unit (PU): runNA12878_1      
 - Select Analysis node: 3. Full list of option   
 - Set input/output options : Set  
 - Mark shorter split hits of a chimeric alignment in the FLAG field as 'secondary alignment' instead of 'supplementary alignment': Yes   -M; For Picard<1.96 compatibility  
