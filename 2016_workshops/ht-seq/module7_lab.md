@@ -435,7 +435,7 @@ with snpEff
 
 File check:
 
-![file15a](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_15a.png) 
+![file15b](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_15b.png) 
 
 You can download the SnpEff stat html page and vcf file.
 
@@ -467,7 +467,7 @@ with GATK VariantAnnotator
 
 File check:
 
-![file15b](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_15b.png) 
+![file15a](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_15a.png) 
 
 
 Look at or download your filtered and annotated variant vcf files
