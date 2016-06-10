@@ -29,7 +29,7 @@ This lab was created by Florence Cavalli
  15. [Filter the variants](#filtervariant)   
  16. [Annotate the variants](#annotate)   
  [The "History options" menu](#menu)   
- [Workflows](#workflow)
+ [Workflow](#workflow)
 
 
 ## Introduction
