@@ -368,11 +368,17 @@ To continue you can use the aligned, sorted and duplicates removed files that yo
 <a name="callsnp"></a>
 #### 14) Call SNPs   
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller   
-- BAM file: marked duplicates   
-- reference genome: hg19_chr1.fa      
+- Choose the source for the reference list: History   
+- BAM file: Table recalibration result bam 
+- Using reference genome: hg19_Chr1.fa         
 - The minimum phred-scaled confidence threshold at which variants not at 'trigger' track sites should be emitted (and filtered if less than the calling threshold): 10   
 - Basic or Advanced GATK options: Advanced   
  -- Operate on Genomic intervals: Genomic intervals : created interval in chr1    
+
+![uni1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Unifier_1.png) 
+
+
+![uni2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_Unifier_2.png) 
 
 File check:
 
@@ -380,7 +386,6 @@ File check:
 
 
 Have a look at the vcf file   
-
 
 <a name="filtervariant"></a>
 #### 15) Filter the variants   
@@ -391,8 +396,8 @@ To perform more rigorous filtering, another program must be used. In our case, w
 NOTE: The best practice when using GATK is to use the VariantRecalibrator. In our data set, we had too few variants to accurately use the variant recalibrator and therefore we used the VariantFiltration tool instead.
 
 ** NGS GATK Tools/Variant Filtration on VCF files   
-- BAM file -> marked duplicates   
-- Reference genome -> hg19_chr1.fa
+- BAM file: marked duplicates   
+- Reference genome: hg19_chr1.fa
 
 - Variant filter   
 set the 3 following filters  
@@ -427,10 +432,9 @@ with GATK VariantAnnotator
 - reference genome: hg19_chr1.fa   
 -Provide a dbSNP reference-ordered data file   
  set dbSNP: dbSNP_135_chr1.vcf.gz   
-- Basic or Advanced GATK options  
-Advanced   
-Operate on Genomic intervals   
--- L -> create single interval"  
+- Basic or Advanced GATK options: Advanced   
+-- Operate on Genomic intervals: Genomic intervals : created interval in chr1    
+
 
 File check:
 
@@ -455,7 +459,7 @@ Now you can
 - continue exploring/analysing/visualizing your data and results !
 
 
-There are lots of tutorial, mainling list, videos for help  (such as https://vimeo.com/galaxyproject)/
+There are lots of tutorial, mainling list, videos for help  (such as https://vimeo.com/galaxyproject)
 
 **We hope that you enjoyed using Galaxy!**
 
