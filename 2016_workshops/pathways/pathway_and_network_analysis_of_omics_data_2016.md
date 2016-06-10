@@ -56,15 +56,13 @@ image: CBW_pathway_icon.jpg
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
-  Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/laptop_setup_instructions.pdf">here</a>.
+  Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/pathways/laptop_setup_instructions.pdf">here</a>.
 
 [&uarr;](#back_to_top)
 
 ###  Pre-workshop Tutorials <a id="pre_tutorials"></a>
 
-  1) **R Preparation tutorials**: **Add tutorials in R**
-
-2) **Cytoscape Preparation tutorials**: Complete the [introductory tutorial to Cytoscape](http://opentutorials.cgl.ucsf.edu/index.php/Portal:Cytoscape3)
+1) **Cytoscape Preparation tutorials**: Complete the [introductory tutorial to Cytoscape](http://opentutorials.cgl.ucsf.edu/index.php/Portal:Cytoscape3)
 
 * Introduction to Cytoscape3 - User Interface
 
