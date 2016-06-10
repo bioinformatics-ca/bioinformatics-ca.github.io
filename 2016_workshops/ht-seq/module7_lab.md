@@ -12,6 +12,7 @@ This lab was created by Florence Cavalli
 ## Table of contents
 
  [Introduction](#introduction)   
+ 
  1. [Load the data](#load)   
  2. [Create single interval](#interval)  
  3. [Check the quality](#quality) 
@@ -100,6 +101,7 @@ File check:
 
 <a name="quality"></a>
 #### 3) Check the quality
+
 BVAtools is not available on the galaxy website   
 You can use ** NGS: QC and manipulation/FastQC Read Quality reports instead   
 Since the tool in not avaible we will not run it but this is a **very important step of the analysis**, don't skip it!     
@@ -107,6 +109,7 @@ You can use FastQC at several points in your analysis on fastq, bam or sam files
 
 <a name="convert"></a>
 #### 4) Convert the FASTQ quality format
+
 ** NGS: QC and manipulation/FASTAQ groomer convert between various FASTQ quality formats
 - File to groom : NA12878_CBW_chr1_R1.fastq
 
@@ -120,6 +123,7 @@ File check:
 
 <a name="trim"></a>
 #### 5) Trim the read and remove adapter sequence with Trimmomoatic
+
 ** NGS: QC and manipulation/Trimmomatic 
 - Input FASTQ file: FASTQ groomer results for xxx_R1.fastq and xxx_R2.fastq files   
 - Perform initial ILLUMINACLIP step :Yes   
@@ -144,6 +148,7 @@ File check:
 
 <a name="align"></a>
 #### 6) Align the reads with BWA-MEM
+
 ** NGS: Mapping/Map with BWA-MEM 
 
 - Will you select a reference genome from your history or use a built-in index? : Use a genome from history or build index   
@@ -181,6 +186,7 @@ File check:
 
 <a name="sort"></a>
 #### 7) Sort the sam/bam 
+
 ** NGS: Picard/SortSam sort SAM/BAM dataset   
 - Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
 - Sort order: coordinate   
@@ -193,7 +199,8 @@ File check:
 ![file6](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_6.png) 
 
 <a name="convertBam"></a>
-#### 8) Convert bam to sam file (optional)   
+#### 8) Convert bam to sam file (optional)
+
 We will convert the bam file to a sam file to be able to look at it   
 You can run this at different point of your analysis
 
@@ -208,6 +215,7 @@ File check:
 
 <a name="indelRealign"></a>
 #### 9) Indel realignment
+
 ** NGS GATK Tools/RealignerTargetCreator    
 - Choose the source for the reference list: History
 - Bam file: sorted Bam file
@@ -235,6 +243,7 @@ File check:
 
 <a name="fixmates"></a>
 #### 10) FixMates
+
 **NGS: Picard/FixMateInformation   
 - Select SAM/BAM dataset or dataset collection: Indel Realigner result bam
 - Select validation stringency: Silent   
@@ -247,6 +256,7 @@ File check:
 
 <a name="markdup"></a>
 #### 11) Mark duplicates
+
 **NGS: Picard/MarkDuplicates   
 - Select SAM/BAM dataset or dataset collection: FixMateInformation result   
 - Select validation stringency: Silent   
@@ -267,6 +277,7 @@ Have a look at the "Markduplicate metrics"
 
 <a name="recalibration"></a>
 #### 12) Base Recalibration
+
 ** NGS GATK Tools/BaseRecalibrator is not available!   
 So we can use "Count covariates" and "Table recalibration". These two steps are the equivalent of BaseRecalibrator which is present in a newer version of GATK   
 
@@ -294,6 +305,7 @@ File check:
 
 <a name="extracmetrics"></a>
 #### 13) Extract Metrics
+
 ** NGS GATK Tools/Depth of Coverage on BAM files   
 - Choose the source for the reference list: History
 - Bam file: Table recalibration result bam file
@@ -374,6 +386,7 @@ To continue you can use the aligned, sorted, marked duplicates and quality recal
 
 <a name="callsnp"></a>
 #### 14) Call SNPs   
+
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller   
 - Choose the source for the reference list: History   
 - BAM file: Table recalibration result bam file   
@@ -396,7 +409,8 @@ File check:
 Have a look at the vcf file   
 
 <a name="filtervariant"></a>
-#### 15) Filter the variants   
+#### 15) Filter the variants  
+
 Typically variant callers will only perform a minimal amount of filtering when presenting variant calls. In the case of GATK, we are actively removing any variant with score less than 10. Any variant with a score less than 30 is labeled with the filter “LowQual”.   
 
 To perform more rigorous filtering, another program must be used. In our case, we will use the VariantFiltration tool in GATK.
@@ -428,7 +442,9 @@ You can look at the output vcf file that contains "filter" annotation
 
 <a name="annotate"></a>
 #### 16) Annotate the variants
+
 with snpEff   
+
 ** NGS: Variant Analysis/SnpEff Variant effect and annotation   
 - Sequence changes: Variant Filtration result   
 - Filter output  
@@ -482,6 +498,7 @@ Look at or download your filtered and annotated variant vcf files
 
 <a name="menu"></a>
 #### The "History options" menu
+
 You can  
 - See saved histories
 - Extract workflow  
