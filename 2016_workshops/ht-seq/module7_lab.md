@@ -366,6 +366,7 @@ File check:
 View "collectInsertSize Metrics" and pdf file
 
 
+
 ####Variant calling and annotation from Module 5
 ####All the following steps are detailed in the Module 5 practical
 
