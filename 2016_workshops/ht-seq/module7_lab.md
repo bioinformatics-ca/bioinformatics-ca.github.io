@@ -14,19 +14,20 @@ This lab was created by Florence Cavalli
  [Introduction](#introduction)
  1. [Load the data](#load)   
  2. [Create single interval](#interval)  
- 3. [Convert the FASTQ quality format](#convert)   
- 4. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)   
- 5. [Align the reads with BWA-mem](#align)   
- 6. [Sort the sam/bam](#sort)   
- 7. [Convert bam to sam](#convertBam)   
- 8. [Indel realignment](#indelRealign)   
- 9. [FixMates](#fixmates)   
- 10. [Mark duplicates](#markdup)   
- 11. [Base recalibration](#recalibration)   
- 12. [Extract Metrics](#extracmetrics)   
- 13. [Call SNPs](#callsnp)   
- 14. [Filter the variants](#filtervariant)   
- 15. [Annotate the vcf file](#annotate)   
+ 3. [Check the quality](#quality) 
+ 4. [Convert the FASTQ quality format](#convert)   
+ 5. [Trim the read and remove adapter sequence with Trimmomoatic](#trim)   
+ 6. [Align the reads with BWA-mem](#align)   
+ 7. [Sort the sam/bam](#sort)   
+ 8. [Convert bam to sam](#convertBam)   
+ 9. [Indel realignment](#indelRealign)   
+ 10. [FixMates](#fixmates)   
+ 11. [Mark duplicates](#markdup)   
+ 12. [Base recalibration](#recalibration)   
+ 13. [Extract Metrics](#extracmetrics)   
+ 14. [Call SNPs](#callsnp)   
+ 15. [Filter the variants](#filtervariant)   
+ 16. [Annotate the vcf file](#annotate)   
  [The "History options" menu](#menu)
 
 
@@ -93,8 +94,13 @@ File check:
 
 ![file2bis](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_2bis.png) 
 
+<a name="quality"></a>
+#### 3) Check the quality
+BVAtools is not available on the galaxy website. You can use ** NGS: QC and manipulation/FastQC Read Quality reports instead.   
+Since the tool in not avaible we will not run it but this is a ** very important step of the analysis**
+
 <a name="convert"></a>
-#### 3) Convert the FASTQ quality format
+#### 4) Convert the FASTQ quality format
 ** NGS: QC and manipulation/FASTAQ groomer convert between various FASTQ quality formats
 - File to groom : NA12878_CBW_chr1_R1.fastq
 
@@ -107,7 +113,7 @@ File check:
 ![file3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_3.png) 
 
 <a name="trim"></a>
-#### 4) Trim the read and remove adapter sequence with Trimmomoatic
+#### 5) Trim the read and remove adapter sequence with Trimmomoatic
 ** NGS: QC and manipulation/Trimmomatic 
 - Input FASTQ file: FASTQ groomer results for xxx_R1.fastq and xxx_R2.fastq files   
 - Perform initial ILLUMINACLIP step :Yes   
@@ -131,7 +137,7 @@ File check:
 ![file4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_4.png) 
 
 <a name="align"></a>
-#### 5) Align the reads with BWA-MEM
+#### 6) Align the reads with BWA-MEM
 ** NGS: Mapping/Map with BWA-MEM 
 
 - Will you select a reference genome from your history or use a built-in index? : Use a genome from history or build index   
@@ -168,7 +174,7 @@ File check:
 ![file5](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_5.png) 
 
 <a name="sort"></a>
-#### 6) Sort the sam/bam 
+#### 7) Sort the sam/bam 
 ** NGS: Picard/SortSam sort SAM/BAM dataset   
 - Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
 - Sort order: coordinate   
@@ -181,7 +187,7 @@ File check:
 ![file6](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_6.png) 
 
 <a name="indelRealign"></a>
-#### 7) Convert bam to sam file (optional)   
+#### 8) Convert bam to sam file (optional)   
 We will convert the bam file to a sam file to be able to look at it   
 
 ** NGS: SAMtools/BAM-to_SAM
@@ -194,7 +200,7 @@ File check:
 ![file7](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_7.png) 
 
 <a name="indelRealign"></a>
-#### 8) Indel realignment
+#### 9) Indel realignment
 ** NGS GATK Tools/RealignerTargetCreator    
 - Choose the source for the reference list: History
 - Bam file: sorted Bam file
@@ -221,7 +227,7 @@ File check:
 ![file8](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_8.png) 
 
 <a name="fixmates"></a>
-#### 9) FixMates
+#### 10) FixMates
 **NGS: Picard/FixMateInformation   
 - Select SAM/BAM dataset or dataset collection: Indel Realigner result bam
 - Select validation stringency: Silent   
@@ -233,7 +239,7 @@ File check:
 ![file9](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_9.png) 
 
 <a name="markdup"></a>
-#### 10) Mark duplicates
+#### 11) Mark duplicates
 **NGS: Picard/MarkDuplicates   
 - Select SAM/BAM dataset or dataset collection: FixMateInformation result   
 - Select validation stringency: Silent   
@@ -253,7 +259,7 @@ File check:
 Have a look at the "Markduplicate metrics"
 
 <a name="recalibration"></a>
-#### 11) Base Recalibration
+#### 12) Base Recalibration
 ** NGS GATK Tools/BaseRecalibrator is not available!   
 So we can use "Count covariates" and "Table recalibration". These two steps are the equivalent of BaseRecalibrator which is present in a newer version of GATK   
 
@@ -281,7 +287,7 @@ File check:
 
 
 <a name="extracmetrics"></a>
-#### 12) Extract Metrics
+#### 13) Extract Metrics
 ** NGS GATK Tools/Depth of Coverage on BAM files   
 - Choose the source for the reference list: History
 - Bam file: Table recalibration result bam
@@ -292,6 +298,27 @@ File check:
   -- Operate on Genomic intervals: Genomic intervals : created interval in chr1   
 - Basic or Advanced Analysis options: Advanced   
  -- "Omit the output of the depth of coverage at each base": Yes      
+
+![cov1](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_cov_1.png) 
+
+...
+
+![cov2](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_cov_2.png) 
+
+...
+
+![cov3](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_cov_3.png) 
+
+...
+
+![cov5](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_cov_5.png) 
+
+...
+
+![cov4](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_cov_4.png) 
+
+
+![file12](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_12.png) 
 
 ** NGS: Picard/CollectInsertSizeMetrics plots distribution of insert sizes   
 - SAM/BAM  dataset: Table recalibration BAM file   
@@ -321,7 +348,7 @@ View "Collect Alignment Summary metrics"
 To continue you can use the aligned, sorted and duplicates removed files that you just created or download the one you used in Module 5  from the server (NA12878.bwa.sort.rmdup.realign.bam).
 
 <a name="callsnp"></a>
-#### 13) Call SNPs   
+#### 14) Call SNPs   
 ** NGS GATK Tools/Unified Genotyper SNP and indel caller   
 - BAM file: marked duplicates   
 - reference genome: hg19_chr1.fa      
@@ -338,7 +365,7 @@ Have a look at the vcf file
 
 
 <a name="filtervariant"></a>
-#### 14) Filter the variants   
+#### 15) Filter the variants   
 Typically variant callers will only perform a minimal amount of filtering when presenting variant calls. In the case of GATK, we are actively removing any variant with score less than 10. Any variant with a score less than 30 is labeled with the filter “LowQual”.   
 
 To perform more rigorous filtering, another program must be used. In our case, we will use the VariantFiltration tool in GATK.
@@ -364,7 +391,7 @@ File check:
 You can look at the output vcf file that contains some filter annotation
 
 <a name="annotate"></a>
-#### 15) Annotate the vcf file   
+#### 16) Annotate the vcf file   
 with snpEff   
 ** NGS: Variant Analysis/SnpEff Variant effect and annotation   
 - Sequence changes: Variant Filtration result   
