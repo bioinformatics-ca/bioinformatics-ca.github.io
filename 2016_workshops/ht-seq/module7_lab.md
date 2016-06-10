@@ -163,7 +163,6 @@ File check:
 
 <a name="sort"></a>
 #### 6) Sort the sam/bam 
-
 ** NGS: Picard/SortSam sort SAM/BAM dataset   
 - Select SAM/BAM dataset or dataset collection: map with BWA-MEM file
 - Sort order: coordinate   
@@ -175,21 +174,23 @@ File check:
 ![file6](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_6.png) 
 
 <a name="indelRealign"></a>
-#### 7) Convert bam to sam file (optianal)   
-We will convert teh bam file to a sam file to be able to look at it   
+#### 7) Convert bam to sam file (optional)   
+We will convert the bam file to a sam file to be able to look at it   
 
 ** NGS: SAMtools/BAM-to_SAM
-- BAM File to Convert: sorted Bam
+- BAM File to Convert: sorted Bam file
 
 ![convertBam](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_convert_bam.png) 
+
 File check:
+
 ![file7](http://bioinformatics-ca.github.io/2016_workshops/ht-seq/img/Galaxy_file_7.png) 
 
 <a name="indelRealign"></a>
 #### 8) Indel realignment
 ** NGS GATK Tools/RealignerTargetCreator    
-- Bam file : Bam sorted in coordinate order   
-- Using reference file hg19_chr1.fa   
+- Bam file: Bam sorted in coordinate order   
+- Using reference file: hg19_chr1.fa   
 - Basic or advance GATK option   
  Advanced   
  Operate on Genomic intervals -> Set -L parameter with your "Create single interval" data   
