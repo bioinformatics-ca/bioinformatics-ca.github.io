@@ -225,9 +225,17 @@ Integrated Assignment: Reactome FI and GeneMANIA
 
   *<font color="#827e9c">Michael Hoffman</font>*
   
-  Lecture:
+#### Lecture:
   
-  Lab practical: iRegulon
+#### Lab practical: iRegulon
+
+Document:
+
+Data:
+
+Precomputed results:
+To use the precomputed results: 1) launch Cytoscape ; 2) open the "prostate_cancer_genemania_network.cys" file ; 3) go to App > iRegulon > 'Load results from file...'
+
 
 [&uarr;](#back_to_top)  
 
