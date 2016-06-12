@@ -111,7 +111,7 @@ image: CBW_pathway_icon.jpg
 
   *<font color="#827e9c">Gary Bader</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/pathways-module-1)
 
 [&uarr;](#back_to_top)
 
@@ -121,7 +121,7 @@ image: CBW_pathway_icon.jpg
 
   *<font color="#827e9c">Quaid Morris</font>*
   
-#### Lecture:
+[Lecture](https://bioinformatics.ca/pathways-module-2)
   
 #### Lab practical: Enrichment-Based Analysis - Performing ORA
   *<font color="#827e9c">Veronique Voisin</font>*
@@ -150,7 +150,7 @@ image: CBW_pathway_icon.jpg
 
   *<font color="#827e9c">Gary Bader</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/pathways-module-3)
   
   Lab practical: Cytoscape Demo, Enrichment Map
   
@@ -187,7 +187,7 @@ Lab practical: Cytoscape Demo, Networks
 
   *<font color="#827e9c">Lincoln Stein</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/pathways-module-4)
   
   Lab practical: *De Novo* Subnetwork Clustering Analysis in Reactome
   
@@ -201,7 +201,7 @@ Lab practical: Cytoscape Demo, Networks
 
   *<font color="#827e9c">Quaid Morris</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/pathways-module-5)
   
   Lab practical:
   
@@ -225,7 +225,7 @@ Integrated Assignment: Reactome FI and GeneMANIA
 
   *<font color="#827e9c">Michael Hoffman</font>*
   
-#### Lecture:
+[Lecture](https://bioinformatics.ca/pathways-module-6)
   
 #### Lab practical: iRegulon
 
