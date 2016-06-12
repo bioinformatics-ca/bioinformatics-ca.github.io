@@ -172,17 +172,6 @@ Integrated Assignment: Enrichment Analysis Using GSEA and g:Profiler
 
 ##  Day 2 <a id="day_2"></a>
 
-
-###  Module 3: Network Visualization and Analysis with Cytoscape
-
-Lab practical: Cytoscape Demo, Networks
-  
-  *<font color="#827e9c">Veronique Voisin</font>*
-
-[&uarr;](#back_to_top)
-  
-***  
-
 ###  Module 4: More Depth on Pathway and Network Analysis <a id="module_4"></a>
 
   *<font color="#827e9c">Lincoln Stein</font>*
