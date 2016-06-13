@@ -15,15 +15,15 @@ By Veronique Voisin
 
 ## Goal of the exercise:
 
-1. Create an EnrichmentMap and navigate through the network
+**Create an EnrichmentMap and navigate through the network**
 
 During this exercise, you will learn how to create an EnrichmentMap from gene-set enrichment results. The enrichment tool chosen for this exercise is GSEA but an enrichment map can be created from various gene-set tools using the generic format or the more specific g:Profiler or BiNGO interface.
 
-2. Post analysis (add drug target gene-sets to the network)
+**Post analysis (add drug target gene-sets to the network)**
 
 As second part of the exercise, you will learn how to expand the network by adding an extra layer of information.
 
-3. Autoannotate
+**Autoannotate**
 
 A last optional exercise guides you toward the creation of automatically generated cluster labels to the network.
 
@@ -44,11 +44,11 @@ The output results of GSEA are 2 tables:
 
 ### EnrichmentMap
 
-*	A red circle (node) is a pathway specific of the mesenchymal type.
+*	A <font color="red">red circle (node)</font> is a pathway specific of the mesenchymal type.
 
-*	A blue circle (node) is a pathway specific of the immunoreactive type.
+*	A <font color="blue">blue circle (node)</font> is a pathway specific of the immunoreactive type.
 
-*	Green edges represent genes in common between 2 pathways (nodes).
+*	<font color="green">Green edges</font> represent genes in common between 2 pathways (nodes).
 
 *	A cluster of nodes represent overlapping and related pathways and may represent a common biological process.
 
@@ -84,7 +84,9 @@ Launch Cytoscape and open Enrichment Map App
 1a. Double click on the Cytoscape icon
 
 1b. Open Enrichment Map App
+
 * In the top menu bar:
+
    * Click on Apps -> Enrichment Map -> CreateEnrichment Map
  
 ![EM1](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM1.png?raw=true)
