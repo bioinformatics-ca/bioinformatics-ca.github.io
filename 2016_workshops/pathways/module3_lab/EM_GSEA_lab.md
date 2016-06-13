@@ -86,9 +86,8 @@ Launch Cytoscape and open Enrichment Map App
 1b. Open Enrichment Map App
 * In the top menu bar:
    * Click on Apps -> Enrichment Map -> CreateEnrichment Map
-
  
-
+![EM1](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM1.png?raw=true)
 
 ### Step 2 
 
@@ -124,15 +123,13 @@ Create an EnrichmentMap
 
 2c. Click on *Build*
 
- 
-
+![EM2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM2.png?raw=true) 
 
 Unformatted results:
 
 Note: layout will be different for each user (there is a random seed in the layout algorithm) but it does not change the results or interpretation (the connections are the same, only the display is different).
 
- 
-
+![EM4](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM4.png?raw=true) 
 
 ### Step 3 
 
@@ -140,18 +137,21 @@ Navigate the Enrichment Map to gain a better understanding of a EnrichmentMap ne
 
 General layout of Cytoscape panel: In addition to the main window where the network is displayed, there are 3 panels: the Control Panel on the left side, the Results Panel on the right side and the Table Panel at the bottom of the window. 
 
- 
+![EM5](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM5.png?raw=true) 
 
 Steps: 
 
 3a. In the menu bar, select *View Show Graphic details*. It will turn the squared nodes into circles and the gene-set labels will be visible. 
   
-
+![EM6](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM6.png?raw=true)
 
 3b: Zoom in or out using + or - in toolbar or scroll button on mouse until you are able to read the labels comfortably.
  
+![EM7](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM7.png?raw=true)
 
 3c:  Use the bird’s eye view (located at the bottom of the control panel) to navigate around the network by moving the blue rectangle using the mouse or trackpad.
+
+![EM8](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM8.png?raw=true)
   
 3d: Click on an individual node of interest.
 
@@ -159,13 +159,13 @@ For this example, you could use *Integrin signalling pathway*.
 
 TIP: If you are unable to locate *Integrin signalling pathway*, type it in the search box.  Selected nodes appear yellow (or highlighted) in the network
 
-
 3e. In the Table Panel in the *Heat map (nodes)* tab change:
 
 * Normalization from "Data as is" to *Row Normalize Data*
 
 *	Sorting from *Hierarchical clustering* to *GSEARanking-Dataset 1*
 
+![EM9](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM9.png?raw=true)
   
 Tip: Genes in the heatmap that are highlighted yellow represent genes part of the leading edge for this gene set, i.e. contributed the most to the enriched phenotype. Leading edge genes will only be highlighted if an individual node has been selected and the Enrichment Map was created from GSEA results.
 
@@ -182,11 +182,11 @@ Use Filters to automatically select nodes on the map: Move the blue nodes to the
 
 4d. The blue nodes are now automatically selected. Zoom out to be able to look at the entire network and drag all blue nodes to the left side of the screen.
   
-
+![EM10](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM10.png?raw=true)
 
 4e. Optional. Change *is* to *is not* to select the red nodes.
   
-
+![EM11](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM11.png?raw=true)
 
 Note: the red pathways (nodes) are specific of the mesenchymal phenotype. There were listed in the *pos* table of the GSEA results. The enrichment score (ES) in this table are all positive values. The blue pathways are specific of the immunoreactive phenotype and were listed in the *neg* table of the GSEA results. The ES in this table are all negative values. This information has been used to set the filtering criteria.
 
@@ -204,6 +204,8 @@ Optional exercise. Add drug target gene-sets to the network (Known Signature, Po
 5d. In the *Gene-Sets* section, click on the box (...) located at the right side of the *SigGMT* field to look for the *Human_DrugBank_approved_symbol_selected.gmt* file and click on *Open*.
 
 5e. Click on *Run* located at the bottom of the panel.
+
+![EM12](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM12.png?raw=true)
   
 Note: Four additional nodes are now added to the network and visible as yellow triangles. Pink edges represent their overlap with the nodes of our network. These additional nodes represent gene targets of some approved drugs and these genes are either specific of the mesenchymal type (pink edges connected to red nodes) or specific of the immunoreactive type (pink edges connected to blue nodes).
 
@@ -216,17 +218,21 @@ Important note: the Apps WordCloud, ClusterMaker and Autoannotate have to be ins
 
 6a. In the menu bar, select *Apps*, *AutoAnnotate*, *New Annotation Set …*. An *Autoannotate: Create Annotation Set* window pops up.  
 
+![EM13](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM13.png?raw=true)
+
 6b. Click on *Create Annotations*. An *AutoAnnotate* window pops up with the message *AutoAnnotate will manage all groups in this network view*.
 
 6c. Click *OK*.
   
+![EM14](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM14.png?raw=true)
 
-
- 
+![EM15](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM15.png?raw=true)
 
 Note: The network is now subdivided into clusters that are represented by ellipses. Each of these clusters are composed of pathways (nodes) interconnected by many common genes. These pathways represent similar biological processes. The app WordCloud take all the labels of the pathways in one cluster and summarize them as a unique cluster label displayed at the top of each ellipse. 
 
 Tips: further editing and formatting can be performed on the AutoAnnote results using the *AutoAnnotate Display* in the *Results Panels* located at the right side of the window. For example, it is possible to change Ellipse to Rectangle, uncheck *Scale font by cluster size* and increase the *Font Scale* using the scaling bar.
+
+![EM16](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM16.png?raw=true)
  
 
 
