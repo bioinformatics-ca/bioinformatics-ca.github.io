@@ -169,6 +169,8 @@ image: CBW_pathway_icon.jpg
 
 [Integrated Assignment: Enrichment Analysis Using GSEA and g:Profiler](http://bioinformatics-ca.github.io/PNAOD_integrated_assingment_1_2016/)
 
+[Answers](https://bioinformatics.ca/pathways-integrated-assignment-1-answers-2016)
+
 [&uarr;](#back_to_top)
 
 ***
