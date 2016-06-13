@@ -47,7 +47,7 @@ Our goal is to use the gene list from the BE specific genes to familiarize ourse
 
 5.  Set Benjamini-Hochberg as the significance threshold.
 
-6.  Run analysis of the genes differentially altered between BE and normal: [BEvsNC_BEonly_gprofiler.txt]().
+6.  Run analysis of the genes differentially altered between BE and normal: [BEonly_genelist.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/integrated_assignment_1/BEonly_genelist.txt).
 
 7.  What is the most significant GO:term? What is the p-value for this GO:term?
 
