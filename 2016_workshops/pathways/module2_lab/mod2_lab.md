@@ -59,40 +59,39 @@ Before starting this exercise, download the 2 required files:
 
 Launch GSEA.
 
+![Launch GSEA](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA1.png?raw=true)
+
 ### Step 2.
 
 Load Data
 
 2a. Locate the ‘Load data’ icon at the upper left corner of the window and click on it.
 
-2b. In the central panel, select ‘Method 1’ and ‘Browse for files’. A new window pops up. 
+![Load data](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA2.png?raw=true)
+
+2b. In the central panel, select ‘Method 1’ and ‘Browse for files’. A new window pops up.
+
+![Browse files](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA3.png?raw=true)
 
 2c. Browse your computer to locate the 2 files : *Human_GOBP_AllPathways_no_GO_iea_May_24_2016_symbol.gmt* and *MesenchymalvsImmunoreactive_edger_ranks.rnk*. 
 
 2d. Click on *Choose*. A message pops us when the files are loaded successfully. 
 
+![Locate files](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA4.png?raw=true)
+
 2e. Click on *OK*.
 
+![Success](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA5.png?raw=true)
+
 Tip: Alternatively, you can choose *Method 3* to *drag and drop files here*; you need to click on the *Load these files!* button in this case.
-
-
-
- 
-
- 
-
-
- 
-
-
- 
-
 
 ### Step3.
 
 Adjust parameters
 
-3a. Under the *Tools* menu select *GseaPreRanked*
+3a. Under the *Tools* menu select *GseaPreRanked*.
+
+![GseaPreRanked](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA6.png?raw=true)
 
 3b. *Run GSEA on a Pre-Ranked gene list* tab will appear.
 
@@ -103,14 +102,20 @@ Specify the following parameters:
 *	click on the radio button (…) located at the right of the blank field.
 
 *	Wait 5-10sec for the gene-set selection window to appear.
+	
+![Gene sets database](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA7.png?raw=true)
 
 *	Use the right arrow in the top field to see the Gene matrix (local gmx/gmt) tab.
 
 *	Click to highlight *Human_GOBP_AllPathways_no_GO_iea_May_24_2016_symbol.gmt*.
 
 *	click on *OK* at the bottom of the window.
+	
+![Gene sets database](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA8.png?raw=true)
 
 *	*Human_GOBP_AllPathways_no_GO_iea_December_24_2015_symbol.gmt* is now visible in the field corresponding to Gene sets database.
+
+![Gene sets database](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA9.png?raw=true)
 
 3d. Number of permutations - 100. The number of permutations is the number of times that the gene-sets will be randomized in order to create a null distribution to calculate the FDR.
 
@@ -131,17 +136,6 @@ Note: *Number of permutations* is set to 100 to reduce the run time during this 
 
 Tip: set *Enrichment Statistics* to p1 if you want to add more weight on the most top up-regulated and top down-regulated. *P1* is a more stringent parameter and it will result in less gene-sets significant under FDR <0.05.
 
-
-
- 
-
-
- 
-
- 
-
- 
-
 ### Step 4. 
 
 Run GSEA
@@ -152,21 +146,19 @@ TIP: Expand the window size if the run button is not visible
 
 4b. On the panel located on the left side of the GSEA window, the bottom panel called *the GSEA report table* will show that it has created a process with a message that it is *Running*.
 
+![Running](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA10.png?raw=true)
+
+![Run Messages](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA11.png?raw=true)
+
 On completion the status message will be updated to *Success…*.
+
+![Success](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA12.png?raw=true)
 
 TIP: There is no progress bar to indicate to the user how much time is left to complete the process. Depending on the size of your dataset and compute power a GSEA run can take from a few minutes to a few hours. To check on the status of the GSEA run in the bottom left hand corner you can click on the *+* (red circle in below Figure) to see the updating status. Printouts in the format *shuffleGeneSet for GeneSet 5816/5821 nperm: 1000* indicate how many permutations have been done (5816) out of the total that need to be performed (5821).
 
 TIP:if the permutations have been completed but the status is still running, it means that GSEA is creating the report
 
 TROUBLESHOOTING: Java Heap Space error. If GSEA returns an error *Java Heap space* it means that GSEA has run out of memory. If you are running GSEA from the webstart other than the 4GB option then you will need to download a new version that allows for more memory allocation. The current maximum memory allocation that the GSEA webstart allows for is 4GB. If you are using this version and still receive the java heap error you will need to download the GSEA java jar file and launch it from the command line as described in  step 1.
-
- 
-
- 
-
- 
-
- 
 
 ### Step 5. 
 
@@ -188,18 +180,21 @@ TIP: A small number (a few hundred genesets if using baderlab genesets) could in
 
 5e. Explore the tabular format of the results.
 
- 
+![Results1](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA13.png?raw=true)
 
-5
- 
-  
+![Results 2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA14.png?raw=true)
 
+![Results3](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA15.png?raw=true)
 
+![Results4](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA16.png?raw=true)
 
 Mesenchymal
- 
+
+![Mesenchymal](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA17.png?raw=true)
 
 Immunoreactive
+
+![Immunoreactive](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA18.png?raw=true)
  
 
 [Link to information about GSEA results](http://www.baderlab.org/CancerStemCellProject/VeroniqueVoisin/AdditionalResources/GSEA#GSEA_enrichment_scores_and_statistics)
