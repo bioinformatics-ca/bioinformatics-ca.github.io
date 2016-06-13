@@ -11,6 +11,7 @@ image: CBW_pathway_icon.jpg
 
 # Integrated assignment: g:Profiler/EnrichmentMap
 
+By Veronique Voisin
 
 ## Goal 
 
