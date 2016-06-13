@@ -53,30 +53,10 @@ Step |	Action |
 9	| Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add. Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network? 	 
 10	| On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular, the aligned, and the force_directed layouts.  	
 11	| Choose your favorite layout and save the  network as an image  using the *Network image As Shown* option from the *save*  menu.  	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 EXERCISE 1 - STEPS 1-4
 
+Step |	Action |
+--- | --- |
 1	Go to GeneMANIA’s homepage at http://www.genemania.org/	
 2	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
 3	Enter the following gene: GRN	
@@ -86,6 +66,8 @@ EXERCISE 1 - STEPS 1-4
 
 EXERCISE 1 - STEP 5
 
+Step |	Action |
+--- | --- |
 5	When your search results load, examine the network. 
 Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). 
 Tip: zoom in and zoom out using trackpad or mouse scrolling up and down using the mouse or trackpad or zoom in to the maximum using the  specific icon ( ) . 	
@@ -99,12 +81,16 @@ Tip: zoom in and zoom out using trackpad or mouse scrolling up and down using th
 
 EXERCISE 1 - STEP 6:
 
+Step |	Action |
+--- | --- |
 6	Clicking on a node gives information about the name of gene, the possibility to add, remove this gene or search with this gene only. Click on the GRN node and explore the displayed information. 	
 
  
 
 Exercise 1. Step 7
 
+Step |	Action |
+--- | --- |
 7	Locate the Functions summary tab (bottom left icon  ). What are the functions significantly associated with  this network ?  GRN is the central node of this network: which function would you predict for GRN?
 How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/) , pubMed (http://www.ncbi.nlm.nih.gov/pubmed/) )?	
 
@@ -112,6 +98,8 @@ How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/)
 
 Step 8 
 
+Step |	Action |
+--- | --- |
 8	Locate the gene with the strongest association with GRN. Tip: this gene is the largest node on the network. 
 
 
@@ -119,7 +107,8 @@ Answer is SORT1
 
 Step 9
 
-
+Step |	Action |
+--- | --- |
 9	Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add   . Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network ( ) ? 	 
 
  
@@ -141,6 +130,8 @@ Step 9
 
 Step 10
 
+Step |	Action |
+--- | --- |
 10	On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular ( ) , the aligned ( ) and the force_directed ( ) layouts.  	
 
 Circular layout
@@ -153,6 +144,8 @@ Force directed layout
 
 Exercise 1. Step 11
 
+Step |	Action |
+--- | --- |
 11	Choose your favorite layout and save the  network as an image  using the “Network image As Shown” option from the “save”  menu.  	
 
  
@@ -176,7 +169,8 @@ To start this exercise, you need to download the “30_prostate_cancer_genes.txt
 
 Skills: GeneMANIA search using a gene list; Navigating Search Results; Exploring  Networks and advanced options; Uploading a custom network. 
 
-Step	Action	  
+Step |	Action |
+--- | --- |	  
 1	Go to GeneMANIA’s homepage at http://www.genemania.org/	
 2	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
 3	Copy and paste genes in the file 30_prostate_cancer_genes.txt  	
@@ -206,6 +200,8 @@ Tips:  these observations of the number of connections make easier to understand
 
 Exercise 2 - Steps 1 to 4
 
+Step |	Action |
+--- | --- |
 1	Go to GeneMANIA’s homepage at http://www.genemania.org/	
 2	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
 3	Copy and paste genes in the file 30_prostate_cancer_genes.txt  	
@@ -227,6 +223,9 @@ Exercise 2 - Steps 1 to 4
 
 
 Exercise 2 . Step 5
+
+Step |	Action |
+--- | --- |
 5	When your search results load, examine the network. 
 Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). Move nodes around by selecting them with a mouse to investigate how they are connected.
 	
@@ -235,6 +234,8 @@ Genes you searched with are indicated with stripes, related genes added by GeneM
 
 Exercise 2. Step 6.
 
+Step |	Action |
+--- | --- |
 6	Click any link (edge) connecting two nodes to highlight information about it. 
 Note: Clicking on an edge between 2 nodes will display information about all interaction networks that connect  these 2 nodes. It indicates the reference (publication) for these interactions. The colors indicate the type of interaction (co-expression, shared protein domains, co-localization, physical interactions and predicted). 
 	
@@ -245,6 +246,8 @@ Note: Clicking on an edge between 2 nodes will display information about all int
 
 Exercise 2. Step 7
 
+Step |	Action |
+--- | --- |
 7	Locate the Networks summary tab (on the right ) and look at what data
 has been used to create the network and predictions.
 Note that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. 
@@ -262,7 +265,9 @@ At the top of the Networks summary tab, try Expand “none”, then “top” an
 
 
 Exercise 2 - Step 8
- 
+
+Step |	Action |
+--- | --- | 
 8	Highlight all connections corresponding to each network by clicking the name of each network category. Click on  “Shared protein domains” and see which genes are connected by predicted protein protein interaction. You can do the same for “Co-localization” , “Co-expression”  and “Physical interactions”. 
 Tips:  these observations of the number of connections make easier to understand why co-expression and shared protein domains get the higher percent weight on this network: they are helping to connect more genes than physical interactions and predicted; A higher weight means that this network helped more to find related genes. 	
 
@@ -271,12 +276,16 @@ Tips:  these observations of the number of connections make easier to understand
 
 Exercise 2 - Step 9
 
+Step |	Action |
+--- | --- |
 9	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched in this list of prostate genes.	
 
 
  
 Exercise 2 - Step 10
 
+Step |	Action |
+--- | --- |
 10	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon  . Explore the results.
 `	
 
@@ -287,11 +296,16 @@ Exercise 2 - Step 10
 
 Exercise 2 - Step 11
 
+Step |	Action |
+--- | --- |
 11	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched with these new settings.	
 
  
 
 Exercise - Step 12
+
+Step |	Action |
+--- | --- |
 12	Upload a custom network to GeneMANIA: in ‘advanced options  ’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (tip: click on “Uploaded” in the Networks tab). 
 	
 
@@ -304,6 +318,9 @@ Exercise - Step 12
  
 
 Exercise 2 - Step 13.
+
+Step |	Action |
+--- | --- |
 13	Try additional parameters of the ‘advanced options ’ by selecting “Customise advanced options’‘ and look at how the changes you made influenced the results. For example change ‘Network weighting’ method or ‘Max resultant genes: ’.  	
 
  
@@ -323,6 +340,8 @@ For this exercise, you are working on a gene list created by combining 3 user de
 Skills: GeneMANIA search using a gene list; Navigating Search Results; Exploring  Functions; Adding attributes; Create a report. 
   
 Step	Action	Check  
+Step |	Action | Check |
+--- | --- | --- |
 1	Go to GeneMANIA’s homepage at http://www.genemania.org/	
 3	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
 4	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon    and wait for the results.	
