@@ -150,7 +150,9 @@ image: CBW_pathway_icon.jpg
 
   *<font color="#827e9c">Gary Bader</font>*
   
-  [Lecture](https://bioinformatics.ca/pathways-module-3)
+  [Lecture Part 1](https://bioinformatics.ca/pathways-module-3)
+  
+  [Lecture Part 2](https://bioinformatics.ca/pathways-module-3-part-2-2016)
   
 #### Lab practical: Cytoscape Demo, Enrichment Map
   *<font color="#827e9c">Veronique Voisin</font>*
