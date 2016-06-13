@@ -128,15 +128,11 @@ image: CBW_pathway_icon.jpg
   
   Introduction: 
   
-  Exercise 1: 
-  
-  Data for exercise 1 here:
+  [Exercise 1](http://bioinformatics-ca.github.io/PNAOD_module2_lab_GSEA_2016/)
   
   Precomputed results for Exercise 1: 
   
-  Exercise 2:
-  
-  Data for exercise 2 here:
+  [Exercise 2](http://bioinformatics-ca.github.io/PNAOD_module2_lab_gprofiler_2016/)
   
   Precomputed results for exercise 2: 
   
