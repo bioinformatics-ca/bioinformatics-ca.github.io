@@ -156,6 +156,8 @@ image: CBW_pathway_icon.jpg
   *<font color="#827e9c">Veronique Voisin</font>*
   
   [Exercise 1](http://bioinformatics-ca.github.io/PNAOD_module3_lab_EM_GSEA_2016/)
+  
+  [Exercise 2](http://bioinformatics-ca.github.io/PNAOD_module3_lab_EM_gprofiler_2016/)
 
 [&uarr;](#back_to_top)
 
