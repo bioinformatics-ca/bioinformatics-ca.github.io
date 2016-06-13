@@ -167,7 +167,7 @@ image: CBW_pathway_icon.jpg
 
 *<font color="#827e9c">Veronique Voisin</font>*
 
-Integrated Assignment: Enrichment Analysis Using GSEA and g:Profiler
+[Integrated Assignment: Enrichment Analysis Using GSEA and g:Profiler](http://bioinformatics-ca.github.io/PNAOD_integrated_assingment_1_2016/)
 
 [&uarr;](#back_to_top)
 
