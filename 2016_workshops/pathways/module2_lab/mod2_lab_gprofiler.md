@@ -13,7 +13,7 @@ image: CBW_pathway_icon.jpg
 
 ## Introduction
 
-The practical lab contains one exercise. This exercise uses g:Profiler (http://biit.cs.ut.ee/gprofiler/) to perform gene-set enrichment analysis. 
+The practical lab contains one exercise. This exercise uses [g:Profiler](http://biit.cs.ut.ee/gprofiler/) to perform gene-set enrichment analysis. 
 
 ### Goal of the exercise
 
