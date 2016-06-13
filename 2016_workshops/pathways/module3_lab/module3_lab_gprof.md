@@ -26,7 +26,7 @@ The data used in this exercise is gene expression data obtained from high throug
 
 *	A <font color="red">red circle</font> (node) is a pathway specific of the mesenchymal type.
 
-*	<font color="green">Green edges<font> represent genes in common between 2 pathways (nodes).
+*	<font color="green">Green edges</font> represent genes in common between 2 pathways (nodes).
 
 *	A cluster of nodes represent overlapping and related pathways and may represent a common biological process.
 
