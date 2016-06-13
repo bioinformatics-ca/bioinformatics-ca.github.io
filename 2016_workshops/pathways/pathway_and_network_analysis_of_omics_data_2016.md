@@ -130,7 +130,7 @@ image: CBW_pathway_icon.jpg
 #### Lab practical: Enrichment-Based Analysis - Performing ORA
   *<font color="#827e9c">Veronique Voisin</font>*
   
-  Introduction: 
+  [Introduction](https://bioinformatics.ca/pathways-module-2-lab-2016) 
   
   [Exercise 1](http://bioinformatics-ca.github.io/PNAOD_module2_lab_GSEA_2016/)
   
@@ -152,9 +152,10 @@ image: CBW_pathway_icon.jpg
   
   [Lecture](https://bioinformatics.ca/pathways-module-3)
   
-  Lab practical: Cytoscape Demo, Enrichment Map
-  
+#### Lab practical: Cytoscape Demo, Enrichment Map
   *<font color="#827e9c">Veronique Voisin</font>*
+  
+  [Exercise 1](http://bioinformatics-ca.github.io/PNAOD_module3_lab_EM_GSEA_2016/)
 
 [&uarr;](#back_to_top)
 
