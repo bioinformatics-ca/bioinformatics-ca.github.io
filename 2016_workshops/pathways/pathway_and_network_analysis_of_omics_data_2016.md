@@ -51,6 +51,10 @@ image: CBW_pathway_icon.jpg
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="https://noteapp.com/Pathways2016">here</a>!
+  
+### Class Photo
+
+![Class photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/pathways_class_pic.jpeg?raw=true)
 
 [&uarr;](#back_to_top)
 
