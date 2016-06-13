@@ -1,22 +1,36 @@
+---
+layout: post2
+permalink: /PNAOD_module2_lab_2016/
+title: Pathway and Network Analysis of -Omics Data 2016 Module 2 Lab
+header1: Pathway and Network Analysis of -Omics Data 2016
+header2: Module 2 Lab
+image: CBW_pathway_icon.jpg
+---
 
- Over-representation analysis (ORA) practical lab
-GSEA
+**This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US). This means that you are able to copy, share and modify the work, as long as the result is distributed under the same license.**
 
+# Over-Representation Analysis (ORA) Practical Lab: GSEA
 
+by Veronique Voisin
 
-Introduction
+## Introduction
 
-This practical lab contains one exercise. It uses GSEA (http://www.broadinstitute.org/gsea/index.jsp) to perform a gene-set enrichment analysis. 
+This practical lab contains one exercise. It uses [GSEA](http://www.broadinstitute.org/gsea/index.jsp) to perform a gene-set enrichment analysis. 
 
-Goal of the exercise
+### Goal of the exercise
+
 Learn how to run GSEA and explore the results.
 
-Data
-The data used in this exercise is gene expression (transcriptomics) obtained from high throughput RNA sequencing. They correspond to Ovarian serous cystadenocarcinoma samples. This cohort was previously stratified into four distinct expression subtypes [ PMID:21720365 ] and a subset of the immunoreactive and mesenchymal subtypes are compared to demonstrate the GSEA workflow.
-How was the data processed?
-Gene expression from the TCGA Ovarian serous cystadenocarcinoma RNASeq V2 cohort was downloaded on 2015-05-22 from cBioPortal for Cancer Genomics (http://www.cbioportal.org/data_sets.jsp) [ PMID:19910308 ]. Differential expression for all genes between the mesenchymal and immunoreactive groups was estimated using edgeR . 
+### Data
 
-Exercise
+The data used in this exercise is gene expression (transcriptomics) obtained from high-throughput RNA sequencing. They correspond to Ovarian serous cystadenocarcinoma samples. This cohort was previously stratified into four distinct expression subtypes [PMID:21720365](http://www.ncbi.nlm.nih.gov/pubmed/21720365) and a subset of the immunoreactive and mesenchymal subtypes are compared to demonstrate the GSEA workflow.
+
+#### How was the data processed?
+
+Gene expression from the TCGA Ovarian serous cystadenocarcinoma RNASeq V2 cohort was downloaded on 2015-05-22 from [cBioPortal for Cancer Genomics](http://www.cbioportal.org/data_sets.jsp). Differential expression for all genes between the mesenchymal and immunoreactive groups was estimated using [edgeR](http://www.ncbi.nlm.nih.gov/pubmed/19910308). 
+
+### Exercise
+
 Our goal is to upload the 2 required files into GSEA, set up the parameters, run GSEA, open and explore the gene-set enrichment results. The 2 required files are a rank file (.rnk) and a pathway file (.gmt).
 
 To generate a rank file (.rnk),  a score (-log10 * pvalue * sign(logFC)) was calculated from the EdgeR differential expression results. It is used to rank the genes from top up-regulated to top down-regulated (all genes are included). The pathway database (.gmt) used for the GSEA analysis was downloaded from http://baderlab.org/GeneSets . This file contains gene-sets obtained from  MsigDB-c2, NCI, Biocarta, IOB, Netpath, HumanCyc, Reactome and the Gene Ontology (GO) databases. More information on how EdgeR was performed is included  at the bottom of the page in the ‘Additional Information’ section .
