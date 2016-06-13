@@ -42,7 +42,7 @@ Before starting this exercise, download the  required file [mesenvsimmuno_meseno
 
 Launch g:Profiler.
 
-1a. Open (g:Profiler)[ http://biit.cs.ut.ee/gprofiler/] in your web browser.
+1a. Open [g:Profiler](http://biit.cs.ut.ee/gprofiler/) in your web browser.
 
 ![gprofiler](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA19.png?raw=true)
 
