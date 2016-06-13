@@ -188,11 +188,11 @@ TIP: A small number (a few hundred genesets if using baderlab genesets) could in
 
 ![Results4](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA16.png?raw=true)
 
-Mesenchymal
+#### Mesenchymal
 
 ![Mesenchymal](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA17.png?raw=true)
 
-Immunoreactive
+#### Immunoreactive
 
 ![Immunoreactive](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA18.png?raw=true)
  
