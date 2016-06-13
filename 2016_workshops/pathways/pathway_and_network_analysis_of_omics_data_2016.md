@@ -193,9 +193,11 @@ image: CBW_pathway_icon.jpg
   
   [Lecture](https://bioinformatics.ca/pathways-module-4)
   
-  Lab practical: *De Novo* Subnetwork Clustering Analysis in Reactome
+#### Lab practical: *De Novo* Subnetwork Clustering Analysis in Reactome
   
   *<font color="#827e9c">Robin Haw</font>*
+  
+  [Exercise](http://bioinformatics-ca.github.io/PNAOD_module4_lab_2016/)
  
  [&uarr;](#back_to_top) 
 
