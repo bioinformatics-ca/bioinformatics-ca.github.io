@@ -119,6 +119,6 @@ Nodes connected by blue lines are NE (dataset2)
 
 4.  Examine the results. Save the file.
 
-![IN4](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/in4.png?raw=true)
+![IN5](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/in5.png?raw=true)
 
 
