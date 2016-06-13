@@ -171,6 +171,14 @@ image: CBW_pathway_icon.jpg
 
 [Answers](https://bioinformatics.ca/pathways-integrated-assignment-1-answers-2016)
 
+#### Data Processing
+
+[Matrix](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/integrated_assignment_1/data_processing/GSE39491_series_matrix.txt)
+
+[RScript](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/integrated_assignment_1/data_processing/code_integrated_assignment_BEvsNE.R)
+
+[Metadata](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/integrated_assignment_1/data_processing/metadata.csv)
+
 [&uarr;](#back_to_top)
 
 ***
