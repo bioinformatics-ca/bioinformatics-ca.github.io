@@ -60,7 +60,7 @@ Tip: open the file in a simple text editor such as Notepad or Textedit to copy t
 
 Adjust parameters. 
 
-4a. Select the following ‘Options’ by checking the corresponding boxes:
+4a. Select the following *Options* by checking the corresponding boxes:
 
 * *Significant only* - select options if you want g:Profiler to return only pathways that are significant (FDR < 0.05).
 
