@@ -59,7 +59,7 @@ Launch Cytoscape and open Enrichment Map App
 
   *	Click on Apps -> Enrichment Map -> Create Enrichment Map
 
- 
+![EM1](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM1.png?raw=true) 
 
 ## Step 2
 
@@ -91,16 +91,13 @@ Create an EnrichmentMap
  
   *	Select *Jaccard* similarity cutoff and set the value to 0.25 
 
-
+![EM17](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM17.png?raw=true)
  
-
-
-
 2c. Click on *Build* button at the bottom of the Enrichment Map Input panel.
 
 Unformatted results
 
- 
+![EM18](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM18.png?raw=true) 
 
 
 ## Step 3 
@@ -120,5 +117,7 @@ When the node is selected, it is highlighted in <font color="yellow">yellow</fon
 *	Set Normalization to *Row Normalize Data*
 
 You can now visualize the genes in the MESENCHYME DEVELOPMENT pathway that are higher expressed in the mesenchymal samples when compared to the immunoreactive samples. 
+
+![EM19](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/EM19.png?raw=true)
 
 
