@@ -1,6 +1,6 @@
 ---
 layout: post2
-permalink: /PNAOD_module2_lab_2016/
+permalink: /PNAOD_module2_lab_GSEA_2016/
 title: Pathway and Network Analysis of -Omics Data 2016 Module 2 Lab
 header1: Pathway and Network Analysis of -Omics Data 2016
 header2: Module 2 Lab
