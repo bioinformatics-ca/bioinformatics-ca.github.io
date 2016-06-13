@@ -134,11 +134,11 @@ image: CBW_pathway_icon.jpg
   
   [Exercise 1](http://bioinformatics-ca.github.io/PNAOD_module2_lab_GSEA_2016/)
   
-  Precomputed results for Exercise 1: 
+  [Precomputed results for Exercise 1](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module2_lab/Mesen_vs_Immuno_edgeR.GseaPreranked.1465326037884.zip)
   
   [Exercise 2](http://bioinformatics-ca.github.io/PNAOD_module2_lab_gprofiler_2016/)
   
-  Precomputed results for exercise 2: 
+  [Precomputed results for exercise 2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module2_lab/gprofiler_results_mesenchymal.txt) 
   
 
 
