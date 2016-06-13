@@ -44,6 +44,8 @@ Launch g:Profiler.
 
 1a. Open (g:Profiler)[ http://biit.cs.ut.ee/gprofiler/] in your web browser.
 
+![gprofiler](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA19.png?raw=true)
+
 ### Step 2
 
 Ensure that *Organism* is set to *Homo sapiens*.
@@ -87,15 +89,13 @@ Deselect all the other gene-set boxes.
 
 *Significance threshold*: set to Benjamini-HochBerg FDR
 
-Options
+#### Options
 
+![Options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA20.png?raw=true)
 
+#### Gene-sets
 
-
-
-
-Gene-sets
-
+![Gene sets](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA21.png?raw=true)
 
 
 ### Step 5
@@ -106,11 +106,9 @@ Run g:Profiler.
 
 TIP: If after clicking on *g:Profiler* button the analysis completes but there is the following message above results file - *Warning: Some gene identifiers are ambiguous. Resolve these manually?*. Click on the link to see which genes names were not resolved. For each ambiguous gene select its correct mapping. Ambiguous mapping is often caused by multiple ensembl ids for a given gene and are easy to resolve as a user. Resubmit query.
 
+![Run](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA22.png?raw=true)
 
-
-
-
-
+![Warning](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA23.png?raw=true)
 
 ### Step 6
 
@@ -122,13 +120,7 @@ Once g:Profiler finishes to run, a link to the results appears at the bottom of 
 
 Note: we will use a similar file to create an Enrichment Map in Module 3 - Practical lab.
 
-
-
-
-
-
-
-
+![Download Results](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA24.png?raw=true)
 
 ### Step 7
 
@@ -152,9 +144,7 @@ Note: the p-value and FDR columns contain identical values because g:Profiler di
 
 Tip: we have downloaded the Generic Enrichment Map format because our goal is to create an Enrichment Map out of the g:Profiler results. If your aim is to have a quick look at the functions enriched in your gene list, you can use the default Graphical (PNG) output type. 
 
-
-
-
+![Explore](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/ORA25.png?raw=true)
 
 The term *extracellular matrix organization* coming from the Gene Ontology database (*GO:0030198*) is the most significant gene-set (=the lowest FDR value).  Many gene-sets from the top of this list are related to each other and have genes in common. 
 
@@ -163,9 +153,6 @@ The term *extracellular matrix organization* coming from the Gene Ontology datab
 
 Optional:   
 If time permits, play with input  parameters, e.g. add *TRANSFAC TFBS* and *miRBase microRNAs* databases, rerun the query by clicking on the *g:Profile!* button and explore the new results. 
-
-
-
 
 TIP:Instead of using the g:Profiler website g:profiler can be run directly from R using the gProfilerR package. (See supplemental protocol at Protocol 1 - gProfiler from R for more details. 
 
