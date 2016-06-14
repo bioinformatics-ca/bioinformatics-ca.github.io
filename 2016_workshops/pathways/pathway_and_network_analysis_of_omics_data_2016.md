@@ -52,6 +52,10 @@ image: CBW_pathway_icon.jpg
 
   Post your workshop questions <a href="https://noteapp.com/Pathways2016">here</a>!
   
+### Survey
+
+Your feedback is important to us!  Please fill out [our survey](https://www.surveymonkey.com/r/8NTDNNK).
+
 ### Class Photo
 
 ![Class photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/pathways_class_pic.jpeg?raw=true)
