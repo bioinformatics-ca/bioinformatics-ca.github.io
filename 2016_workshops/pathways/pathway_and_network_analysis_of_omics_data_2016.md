@@ -237,12 +237,19 @@ image: CBW_pathway_icon.jpg
   
 #### Lab practical: iRegulon
 
-Document:
+*<font color="#827e9c">Veronique Voisin</font>*
 
-Data:
+[Lab practical](http://bioinformatics-ca.github.io/PNAOD_module6_lab_iRegulon_2016/)
 
-Precomputed results:
-To use the precomputed results: 1) launch Cytoscape ; 2) open the "prostate_cancer_genemania_network.cys" file ; 3) go to App > iRegulon > 'Load results from file...'
+[Precomputed results](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module6_lab/prostate_cancer_genemania_network.cys)
+
+To use the precomputed results: 
+
+1) launch Cytoscape 
+
+2) open the "prostate_cancer_genemania_network.cys" file 
+
+3) go to App > iRegulon > 'Load results from file...'
 
 
 [&uarr;](#back_to_top)  
