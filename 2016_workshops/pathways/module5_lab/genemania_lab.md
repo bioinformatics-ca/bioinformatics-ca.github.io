@@ -66,19 +66,19 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 ### EXERCISE 1 - STEPS 1-4
 
 
-1. Go to GeneMANIA’s homepage at <http://www.genemania.org/>.	
+* Go to GeneMANIA’s homepage at <http://www.genemania.org/>.	
 
-2. In the search window, ensure that the model organism is set to *Homo sapiens*.	
+* In the search window, ensure that the model organism is set to *Homo sapiens*.	
 
-3. Enter the following gene: GRN.	
+* Enter the following gene: GRN.	
 
-4. Click on the search icon and wait for the results.	
+* Click on the search icon and wait for the results.	
 
  
 
 ### EXERCISE 1 - STEP 5
 
-5. When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). **Tip**: zoom in and zoom out using trackpad or mouse scrolling up and down using the mouse or trackpad or zoom in to the maximum using the  specific icon ( ) . 	
+* When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). **Tip**: zoom in and zoom out using trackpad or mouse scrolling up and down using the mouse or trackpad or zoom in to the maximum using the  specific icon ( ) . 	
 
 
  
@@ -90,14 +90,14 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 ### EXERCISE 1 - STEP 6
 
 
-6. Clicking on a node gives information about the name of gene, the possibility to add, remove this gene or search with this gene only. Click on the GRN node and explore the displayed information. 	
+* Clicking on a node gives information about the name of gene, the possibility to add, remove this gene or search with this gene only. Click on the GRN node and explore the displayed information. 	
 
  
 
 ### Exercise 1 - STEP 7
 
 
-7. Locate the Functions summary tab (bottom left icon  ). What are the functions significantly associated with  this network ?  GRN is the central node of this network: which function would you predict for GRN?
+* Locate the Functions summary tab (bottom left icon  ). What are the functions significantly associated with  this network ?  GRN is the central node of this network: which function would you predict for GRN?
 How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/) , pubMed (http://www.ncbi.nlm.nih.gov/pubmed/) )?	
 
  
@@ -105,7 +105,7 @@ How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/)
 ### Exercise 1 - STEP 8 
 
 
-8. Locate the gene with the strongest association with GRN. **Tip**: this gene is the largest node on the network. 
+* Locate the gene with the strongest association with GRN. **Tip**: this gene is the largest node on the network. 
 
 
 Answer is SORT1
@@ -113,7 +113,7 @@ Answer is SORT1
 ### Execerise 1 - STEP 9
 
 
-9. Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add   . Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network ( ) ? 	 
+* Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add   . Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network ( ) ? 	 
 
  
 
@@ -135,7 +135,7 @@ Answer is SORT1
 ### Exercise 1 - STEP 10
 
 
-10. On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular ( ) , the aligned ( ) and the force_directed ( ) layouts.  	
+* On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular ( ) , the aligned ( ) and the force_directed ( ) layouts.  	
 
 Circular layout
  
@@ -148,7 +148,7 @@ Force directed layout
 ### Exercise 1 - STEP 11
 
 
-11. Choose your favorite layout and save the  network as an image  using the “Network image As Shown” option from the “save”  menu.  	
+* Choose your favorite layout and save the  network as an image  using the “Network image As Shown” option from the “save”  menu.  	
 
  
 
@@ -230,7 +230,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 5
 
 
-5.	When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). Move nodes around by selecting them with a mouse to investigate how they are connected.
+*	When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). Move nodes around by selecting them with a mouse to investigate how they are connected.
 	
 
  
@@ -238,7 +238,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 6.
 
 
-6.	Click any link (edge) connecting two nodes to highlight information about it. **Note**: Clicking on an edge between 2 nodes will display information about all interaction networks that connect  these 2 nodes. It indicates the reference (publication) for these interactions. The colors indicate the type of interaction (co-expression, shared protein domains, co-localization, physical interactions and predicted). 
+*	Click any link (edge) connecting two nodes to highlight information about it. **Note**: Clicking on an edge between 2 nodes will display information about all interaction networks that connect  these 2 nodes. It indicates the reference (publication) for these interactions. The colors indicate the type of interaction (co-expression, shared protein domains, co-localization, physical interactions and predicted). 
 	
 
  
@@ -248,7 +248,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 7
 
 
-7.	Locate the Networks summary tab (on the right ) and look at what data has been used to create the network and predictions. **Note** that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. At the top of the Networks summary tab, try Expand “none”, then “top” and “all”  to get information about the sources of the different networks. 
+*	Locate the Networks summary tab (on the right ) and look at what data has been used to create the network and predictions. **Note** that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. At the top of the Networks summary tab, try Expand “none”, then “top” and “all”  to get information about the sources of the different networks. 
 	
 
 
@@ -264,21 +264,21 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 8
 
 
-8.	Highlight all connections corresponding to each network by clicking the name of each network category. Click on  “Shared protein domains” and see which genes are connected by predicted protein protein interaction. You can do the same for “Co-localization” , “Co-expression”  and “Physical interactions”. **Tips**:  these observations of the number of connections make easier to understand why co-expression and shared protein domains get the higher percent weight on this network: they are helping to connect more genes than physical interactions and predicted; A higher weight means that this network helped more to find related genes. 	
+*	Highlight all connections corresponding to each network by clicking the name of each network category. Click on  “Shared protein domains” and see which genes are connected by predicted protein protein interaction. You can do the same for “Co-localization” , “Co-expression”  and “Physical interactions”. **Tips**:  these observations of the number of connections make easier to understand why co-expression and shared protein domains get the higher percent weight on this network: they are helping to connect more genes than physical interactions and predicted; A higher weight means that this network helped more to find related genes. 	
 
 
  
 
 ### Exercise 2 - STEP 9
 
-9.	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched in this list of prostate genes.	
+*	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched in this list of prostate genes.	
 
 
  
 ### Exercise 2 - STEP 10
 
 
-10.	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon  . Explore the results.
+*	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon  . Explore the results.
 	
 
  
@@ -289,14 +289,14 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 11
 
 
-11.	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched with these new settings.	
+*	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched with these new settings.	
 
  
 
 ### Exercise - STEP 12
 
 
-12.	Upload a custom network to GeneMANIA: in ‘advanced options’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
+*	Upload a custom network to GeneMANIA: in ‘advanced options’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
 	
 
  
@@ -310,7 +310,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 13.
 
 
-13.	Try additional parameters of the ‘advanced options ’ by selecting “Customise advanced options’‘ and look at how the changes you made influenced the results. For example change ‘Network weighting’ method or ‘Max resultant genes: ’.  	
+*	Try additional parameters of the ‘advanced options ’ by selecting “Customise advanced options’‘ and look at how the changes you made influenced the results. For example change ‘Network weighting’ method or ‘Max resultant genes: ’.  	
 
  
 How to get the 30 prostate cancer gene list:
@@ -364,21 +364,21 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 ### Exercise 3 - STEP 4
 
-4.	Locate the Functions summary tab (bottom left ) and look at functions returned by GeneMANIA	
+*	Locate the Functions summary tab (bottom left ) and look at functions returned by GeneMANIA	
 
  
 
 
 ### Exercise 3 - STEP 5
 
-5.	In the functions summary tab,  check some functions to color genes included in these functions. To follow this tutorial, you can for example color the “response to insulin” , “DNA recombination” and“vitamin transport” functions. **Tip**: You need to scroll down to found DNA recombination and vitamin transport as these pathways have an FDR greater than the one for “response to insulin”. 	
+*	In the functions summary tab,  check some functions to color genes included in these functions. To follow this tutorial, you can for example color the “response to insulin” , “DNA recombination” and“vitamin transport” functions. **Tip**: You need to scroll down to found DNA recombination and vitamin transport as these pathways have an FDR greater than the one for “response to insulin”. 	
 
  
 
 
 ### Exercise 3 - STEPS 6 
 
-6.	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon    and wait for the results. Explore the network.
+*	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon    and wait for the results. Explore the network.
 
 **Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
 
@@ -389,14 +389,14 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 ### Exercise 3 - STEP 7
 
-7.	Locate our favorite gene PDPK1 on the network, select it by moving the mouse cursor to its node and wait there for a second. It will highlight this gene and all its connections. 
+*	Locate our favorite gene PDPK1 on the network, select it by moving the mouse cursor to its node and wait there for a second. It will highlight this gene and all its connections. 
 **Tip**: make sure that the black box displaying the details for PDPK1 is closed.	
 
  
 
 ### Exercise 3 - STEP 8
 
-8.	Generate and save a report of your results by locating the save  menu  , and selecting “Report”. The PDF report provides a detailed description of your search and results.	
+*	Generate and save a report of your results by locating the save  menu  , and selecting “Report”. The PDF report provides a detailed description of your search and results.	
 
  
 
@@ -405,7 +405,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 ### Exercise 3 - STEP 9
 
-9.	Investigate the “history” function by clicking on the related icon  located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
+*	Investigate the “history” function by clicking on the related icon  located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
 
  
 
@@ -453,7 +453,7 @@ in Functions tab:
 
 #### In advanced options: 
 
-*	Network weighting? GeneMANIA can use a few different methods to weight networks when combining all networks to form the final composite network that results from a search. The default settings are usually appropriate, but you can choose a weighting method in the advanced option panel. (more details at http://pages.genemania.org/help/).
+*	Network weighting? GeneMANIA can use a few different methods to weight networks when combining all networks to form the final composite network that results from a search. The default settings are usually appropriate, but you can choose a weighting method in the advanced option panel. (more details at <http://pages.genemania.org/help/>).
 
 *	Related genes: are genes added by GeneMANIA in addition to the genes from the query. It helps to grow the network and then to predict function of the query gene(s).
 
@@ -466,7 +466,7 @@ in Functions tab:
 
 *	mixed gene list is AKT1 AKT1S1 AKT2 ATM ATR BRCA1 BRCA2 CHEK1 CHEK2 FANCF FOLR1 FOLR2 FOLR3 FOXO1 FOXO3 MDC1 MLH1 MLST8 MSH2 MTOR PARP1 PDPK1 PIK3CA PIK3R1 PIK3R2 PTEN RAD51 RHEB RICTOR RPTOR SLC19A1 TSC1 TSC2
 
-*	**Tip**: look at GeneMANIA help pages when you run an analysis on your own after the workshop: http://pages.genemania.org/help/
+*	**Tip**: look at GeneMANIA help pages when you run an analysis on your own after the workshop: <http://pages.genemania.org/help/>.
 
 
 
