@@ -41,26 +41,26 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
 2.	Create a network using the  ‘prostate_cancer_genemania_network.txt’ file.
 
-●	In the menu bar select ‘File > Import > Network >File…. A file open dialog pops up.
+   ●	In the menu bar select ‘File > Import > Network >File…. A file open dialog pops up.
 
-●	Browse and locate the prostate_cancer_genemania_network.txt’ file.  Click the ‘Open’ button. An “Import Network From Table” dialog pops up.
+   ●	Browse and locate the prostate_cancer_genemania_network.txt’ file.  Click the ‘Open’ button. An “Import Network From Table” dialog pops up.
 
-●	Select the column ‘Entity 1’ .
+   ●	Select the column ‘Entity 1’ .
 
-●	Expand the menu using the arrow on the right and click the green circle button to set this column as ‘Source Node’. 
+   ●	Expand the menu using the arrow on the right and click the green circle button to set this column as ‘Source Node’. 
 
-●	Select the column ‘Entity 2’. 
+   ●	Select the column ‘Entity 2’. 
 
-●	Click the red bullseye to set this column as ‘Target Node’.
+   ●	Click the red bullseye to set this column as ‘Target Node’.
 
-●	Click the ‘OK’ button.
+   ●	Click the ‘OK’ button.
 
-The main window now displays the created network. Each node represents a gene. Edges represent the relationships (e.g physical interactions, co-expression)  between the genes (nodes) that were calculated by GeneMANIA in the previous exercise.
-Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a network from a file.	
+   The main window now displays the created network. Each node represents a gene. Edges represent the relationships (e.g physical interactions, co-expression)  between the genes (nodes) that were calculated by GeneMANIA in the previous exercise.
+   Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a network from a file.	
 
 3.	Improve the layout.  
 
-●	In the menu bar, select Layout >yFiles Layouts >Organic.	
+   ●	In the menu bar, select Layout >yFiles Layouts >Organic.	
 
 4.	Select all nodes in the network. To do this using the mouse, drag from an empty space to the left of and above every node to an empty space to the right of and beneath every node. The selected nodes are now colored yellow.	
 
