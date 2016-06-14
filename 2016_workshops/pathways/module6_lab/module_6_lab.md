@@ -177,12 +177,12 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 ## ANSWERS EXERCISE 1
 
 
-1.	Launch Cytoscape. Close the “Welcome to Cytoscape” window, if it’s enabled.	
+1)	Launch Cytoscape. Close the “Welcome to Cytoscape” window, if it’s enabled.	
 
 Double click on the   Cytoscape  icon.
 
 
-2.	Create a network using the  ‘prostate_cancer_genemania_network.txt’ file.
+2)	Create a network using the  ‘prostate_cancer_genemania_network.txt’ file.
 
 ●	In the menu bar select ‘File > Import > Network >File…. A file open dialog pops up.
 
@@ -200,42 +200,42 @@ Double click on the   Cytoscape  icon.
 The main window now displays the created network. Each node represents a gene. Edges represent the relationships (e.g physical interactions, co-expression)  between the genes (nodes) that were calculated by GeneMANIA in the previous exercise.
 Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a network from a file.	
 
-2a
+2a)
  
 
-2b
+2b)
  
 
-2c
+2c)
  
 
-2d
- 
-
-
-
-2e
+2d)
  
 
 
-3.	Improve the layout.
+
+2e)
+ 
+
+
+3)	Improve the layout.
 
 ●	In the menu bar, select Layout > Files Layouts > Organic.	
 
-3a
+3a)
  
 
-3b
- 
-
-
-4.	Select all nodes in the network. To do this using the mouse, drag from an empty space to the left of and above every node to an empty space to the right of and beneath every node. The selected nodes are now colored yellow.	
-
-
+3b)
  
 
 
-5	In the menu bar, select Apps > iRegulon > Predict regulators and targets.A ‘Predict regulators and targets’ dialog pops up. 
+4)	Select all nodes in the network. To do this using the mouse, drag from an empty space to the left of and above every node to an empty space to the right of and beneath every node. The selected nodes are now colored yellow.	
+
+
+ 
+
+
+5)	In the menu bar, select Apps > iRegulon > Predict regulators and targets.A ‘Predict regulators and targets’ dialog pops up. 
 
 ●	Using the default parameters, click the ‘Submit’ button at the bottom of the page.A progress bar will pop up.
 
@@ -245,15 +245,15 @@ Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a n
 
 
 
-5a
+5a)
  
-5b
+5b)
 
  
 
 
 
-6	Explore the results. 
+6)	Explore the results. 
 
 ●	Locate the ‘Results Panel’ on the right side of the window. 
 
@@ -267,7 +267,7 @@ Tip: mouse over column names to get a tooltip describing their meaning in more d
  
 
 
-7	Explore the enrichment results in the Motifs tab from the Results Panel. It is a list of all DNA binding motifs that appear in more than one gene region from the prostate cancer gene list. They are ranked by the strongest Normalized Enrichment Score (NES). Some DNA binding motifs in the databases are related to a specific transcription factor, but others are not.
+7)	Explore the enrichment results in the Motifs tab from the Results Panel. It is a list of all DNA binding motifs that appear in more than one gene region from the prostate cancer gene list. They are ranked by the strongest Normalized Enrichment Score (NES). Some DNA binding motifs in the databases are related to a specific transcription factor, but others are not.
 
 ●	Check that ‘Motifs’ is the selected tab of the ‘Results Panel’.
 
@@ -288,7 +288,7 @@ Tip: some explanation about the results are located at the end of this document 
 
 
 
-8	Explore the enrichment results in the Tracks tab. It is a list of all ChIP-seq datasets (or “tracks”) sorted by strongest enrichment from genes inour network. 
+8)	Explore the enrichment results in the Tracks tab. It is a list of all ChIP-seq datasets (or “tracks”) sorted by strongest enrichment from genes inour network. 
 
 ●	Select the  ‘Tracks’ tab of the ‘Results Panel’.
 
@@ -306,7 +306,7 @@ Answer:
 T4 is a track cluster associated with 2 tracks. The first track is ranked number 4 and the second track is ranked number 8. The transcription factor is TCF12. The 2 tracks are probably biological replicates (Rep1, Rep2) of a same Chip-seq experiment. They have only 1 target in common (DHRS2) but 4 targets (DHRS) are from the same protein family (shared protein domains). On the Transcription Factors view (see section below), all these target genes are combined under cluster T4 corresponding to TCF12. T7 is also associated with 2 tracks and correspond to SMC3.
 
 
-9	Explore the enrichment results in the Transcription Factors tabview. Each row is a TF that is a potential co-regulator of the genes in our network. Each row represents a cluster that combines related motifs or tracks or both.
+9)	Explore the enrichment results in the Transcription Factors tabview. Each row is a TF that is a potential co-regulator of the genes in our network. Each row represents a cluster that combines related motifs or tracks or both.
 
 ●	Select the ‘Transcription Factors’ tab of the ‘Results Panels’. 
 
@@ -320,7 +320,7 @@ MTF1 is associated with the motif cluster M1. This cluster contains 6 related mo
 One motif (homer-M00129) selected as example in the above screenshot is directly annotated to the TFs NRF1 and ZSCAN10 as indicated by green checked signs. 
 
 
-10	How did iRegulon perform? Is MTF1 (metal-transcription factor 1) known to be expressed or to play a role in prostate cancer?
+10)	How did iRegulon perform? Is MTF1 (metal-transcription factor 1) known to be expressed or to play a role in prostate cancer?
 
 Tip: Open your web browser and search the web for [MTF1 “prostate cancer”].	
 
@@ -331,7 +331,7 @@ PMID:23157640
 
 
 
-11	Add MTF1 to the network.
+11)	Add MTF1 to the network.
 
 ●	Check that the Transcription Factors tab is selected. 
 
@@ -340,14 +340,14 @@ PMID:23157640
 ●	Click the ‘Add regulator’ icon   located at the upper left corner of the ‘Results Panel’.
 This adds MTF1 to the network as a yellow node, with the edges linking to its 11 potential targets, all highlighted as purple nodes.	
 
-11a
+11a)
  
 
-11b
+11b)
  
 
 
-12	Create a subnetwork to better visualize the predicted targets.
+12)	Create a subnetwork to better visualize the predicted targets.
 
 ●	Select the MTF1 node in the network by clicking on it. 
 
@@ -355,17 +355,17 @@ This adds MTF1 to the network as a yellow node, with the edges linking to its 11
 
 ●	Use the ‘New network from selection’ icon  to create a subnetwork. 	
 
-12a
+12a)
  
 
 
 
-12b
+12b)
  
 
 
 
-13	Add to the figure information on the types of interactions obtained from GeneMANIA and stored as additional information in the ‘prostate_cancer_genemania_network.txt’ file.
+13)	Add to the figure information on the types of interactions obtained from GeneMANIA and stored as additional information in the ‘prostate_cancer_genemania_network.txt’ file.
 
 ●	In the Control Panel at the left of the window, select the ‘Style’ tab. At the bottom of the panel, select the ‘Edge’ tab. 
 
@@ -381,15 +381,15 @@ This adds MTF1 to the network as a yellow node, with the edges linking to its 11
 The edges should now be colored by the types of interactions. 	
 
 
-13a
+13a)
  
 
 
-13b
+13b)
  
 
 
-14	Save current results  as an iRegulon (iRF) file.
+14)	Save current results  as an iRegulon (iRF) file.
 
 ●	In the ‘Results Panel’ toolbar, click the ‘Save current results  as an iRegulon (iRF) file’ button  .
 
@@ -397,12 +397,12 @@ The edges should now be colored by the types of interactions.
 Tip: you can reuse these iRegulon results by loading this iRF file using the ‘Load saved results’ icon  . 
 
 
-14a
+14a)
  
 
 
 
-15	Save the Cytoscape session .
+15)	Save the Cytoscape session .
 
 ●	In the Cytoscape menu bar, select File > Save as.
 
@@ -424,10 +424,10 @@ This exercise will teach you to use the metatargetome function of iRegulon. This
 
 ### Steps
 
-1.	Launch Cytoscape.
+1)	Launch Cytoscape.
 If Cytoscape is already opened,  do File > New > Session. A ‘Current session will be lost. Do you want to continue?’ dialog opens. Click on ‘OK’. 	
 
-2.	Create the metatargetome for MTF1.
+2)	Create the metatargetome for MTF1.
 
 ●	From the menu bar , select File > Apps > iRegulon> Query TF-target database.A ‘Query TF-target database for a factor’ window pops up.
 
@@ -438,7 +438,7 @@ If Cytoscape is already opened,  do File > New > Session. A ‘Current session w
 ●	Click the ‘Submit’ button.	
 
 
-3.	Create the metatargetome for LARP4. Follow same steps as above.
+3)	Create the metatargetome for LARP4. Follow same steps as above.
 
 ●	From the Cytoscape menu bar, select File > Apps>iRegulon> Query TF-target database.
 
@@ -448,7 +448,7 @@ If Cytoscape is already opened,  do File > New > Session. A ‘Current session w
 
 ●	Click the ‘Submit’ button.	
 
-4.	Merge the two networks to visualize their shared target genes.
+4)	Merge the two networks to visualize their shared target genes.
 From the Cytoscape menu bar, select Tools > Merge > Networks….An ‘Advanced Network Merge’ window pops up.
 
 ●	Check that the ‘Union’ option is selected. 
@@ -464,13 +464,13 @@ Cytoscape now displays the two networks in the same window, linked by the two ge
 
 ### ANSWERS EXERCISE 2
 
-1	Launch Cytoscape.
+1)	Launch Cytoscape.
 
 If Cytoscape is already opened,  do File > New > Session. A ‘Current session will be lost. Do you want to continue?’ dialog opens. Click on ‘OK’. 	
 
 Double click on the   Cytoscape  icon.
 
-2	Create the metatargetome for MTF1.
+2)	Create the metatargetome for MTF1.
 
 ●	From the menu bar , select File > Apps > iRegulon> Query TF-target database.A ‘Query TF-target database for a factor’ window pops up.
 
@@ -480,18 +480,18 @@ Double click on the   Cytoscape  icon.
 
 ●	Click the ‘Submit’ button.	
 
-2a
+2a)
  
 
-2b
+2b)
  
 
-2c
+2c)
  
 
 
 
-3	Create the metatargetome for LARP4. Follow same steps as above.
+3)	Create the metatargetome for LARP4. Follow same steps as above.
 
 ●	From the Cytoscape menu bar, select File > Apps>iRegulon> Query TF-target database.
 
@@ -501,15 +501,15 @@ Double click on the   Cytoscape  icon.
 
 ●	Click the ‘Submit’ button.	
 
-3a
+3a)
  
 
-3b
+3b)
  
 
 
 
-4	Merge the two networks to visualize their shared target genes.
+4)	Merge the two networks to visualize their shared target genes.
 From the Cytoscape menu bar, select Tools > Merge > Networks….An ‘Advanced Network Merge’ window pops up.
 
 ●	Check that the ‘Union’ option is selected. 
@@ -523,17 +523,17 @@ From the Cytoscape menu bar, select Tools > Merge > Networks….An ‘Advanced N
 ●	Click the ‘Merge’ button.
 Cytoscape now displays the two networks in the same window, linked by the two genes they have in common.
 
-4a
+4a)
  
 
-4b
+4b)
  
 
-4c
+4c)
  
 
 
-#### END  OF EXERCISE\
+#### END  OF EXERCISE
 
 
 ### Notes about iRegulon:
