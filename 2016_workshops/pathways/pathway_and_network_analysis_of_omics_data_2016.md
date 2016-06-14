@@ -197,6 +197,8 @@ image: CBW_pathway_icon.jpg
   
   *<font color="#827e9c">Robin Haw</font>*
   
+  [Lecture](https://bioinformatics.ca/pathways-module-4-lab-slide-2016)
+  
   [Exercise](http://bioinformatics-ca.github.io/PNAOD_module4_lab_2016/)
  
  [&uarr;](#back_to_top) 
