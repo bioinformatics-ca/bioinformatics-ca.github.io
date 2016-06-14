@@ -42,8 +42,8 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 
 Step |	Action |
 --- | --- |
-1	| Go to GeneMANIA’s homepage at <http://www.genemania.org/>	
-2	| In the search window, ensure that the model organism is set to *Homo sapiens*.	
+1	| Go to GeneMANIA’s homepage at <http://www.genemania.org/><br>	
+2	| In the search window, ensure that the model organism is set to *Homo sapiens*.<br>	
 3	| Enter the following gene: GRN	
 4	| Click on the search icon and wait for the results.	
 5	| When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). **Tip**: zoom in and zoom out using trackpad or mouse scrolling up and down using the mouse or trackpad or zoom in to the maximum using the  specific icon. 	
