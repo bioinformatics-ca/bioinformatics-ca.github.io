@@ -29,11 +29,11 @@ Analyze somatic mutation data to identify biology that contributes to ovarian ca
 
 *	Choose “2015 (Latest)” Version. 
 
-*	Upload/Browse “OVCA_TCGA_MAF.txt” file. 
+*	Upload/Browse [OVCA_TCGA_MAF.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/cancer/OVCA_TCGA_MAF.txt) file. 
 
 *	Select “NCI MAF” (Mutation Annotation File) and Choose sample cutoff value of 4. 
 
-*	Do not select “Fetch FI annotations”. 
+*	**Do not** select “Fetch FI annotations”. 
 
 *	Click OK.
 
@@ -67,7 +67,7 @@ Analyze somatic mutation data to identify biology that contributes to ovarian ca
 
 11.	How many modules are statistically significant in the CoxPH analysis? 
 
-*	Hint: Analyze Module Functions>Survival Analysis>Upload/Browse “OVCA_TCGA_Clinical.txt”. Click OK.
+*	Hint: Analyze Module Functions>Survival Analysis>Upload/Browse [OVCA_TCGA_Clinical.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/cancer/OVCA_TCGA_Clinical.txt). Click OK.
 
 12.	What does the Kaplan-Meyer plot show for the most clinically significant modules?
 
