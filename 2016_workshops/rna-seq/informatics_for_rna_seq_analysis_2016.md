@@ -20,14 +20,15 @@ image: CBW_RNA_seq_icon.jpg
       <li><a href="#day1">Day 1</a>
          <ul class="sub2">  
            <li><a href="#welcome">Welcome</a></li>
+           <li><a href="#module_0">Module 0</a></li>
            <li><a href="#module_1">Module 1</a></li>
            <li><a href="#module_2">Module 2</a></li>
-           <li><a href="#module_3">Module 3</a></li>
            <li><a href="#assignment1">Integrated Assignment</a></li>
         </ul>
       </li>
        <li><a href="#day_2">Day 2</a>
           <ul class="sub2">
+             <li><a href="#module_3">Module 3</a></li>
              <li><a href="#module_4">Module 4</a></li>
              <li><a href="#module_5">Module 5</a></li>
            </ul>
@@ -146,7 +147,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 [&uarr;](#back_to_top)
 
-###  Module 1: Introduction to Cloud Computing <a id="module_1"></a>
+###  Module 0: Introduction to Cloud Computing <a id="module_0"></a>
 
   *<font color="827e9c">Obi Griffith</font>*
   
@@ -156,7 +157,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 [&uarr;](#back_to_top)
 
-###  Module 2: Introduction to RNA Sequencing and Analysis <a id="module_2"></a>
+###  Module 1: Introduction to RNA Sequencing and Analysis <a id="module_1"></a>
 
   *<font color="827e9c">Malachi Griffith</font>*
   
@@ -166,7 +167,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 [&uarr;](#back_to_top)
 
-###  Module 3: RNA-Seq Alignment and Visualization <a id="module_3"></a>
+###  Module 2: RNA-Seq Alignment and Visualization <a id="module_2"></a>
 
   *<font color="827e9c">Fouad Yousif</font>*
   
@@ -190,7 +191,7 @@ Assignment Answers:
 
 ##  Day 2 <a id="day_2"></a>
 
-###  Module 4: Expression and Differential Expression <a id="module_4"></a>
+###  Module 3: Expression and Differential Expression <a id="module_3"></a>
 
   *<font color="827e9c">Obi Griffith</font>*
   
@@ -200,13 +201,21 @@ Assignment Answers:
 
 [&uarr;](#back_to_top)
 
-###  Module 5: Isoform Discovery and Alternative Expression <a id="module_5"></a>
+###  Module 4: Isoform Discovery and Alternative Expression <a id="module_4"></a>
 
   *<font color="827e9c">Malachi Griffith</font>*
   
   Lecture:
   
   Lab Practical:
+
+[&uarr;](#back_to_top)
+
+###  Module 5: Reference Free Alignment <a id="module_5"></a>
+
+  *<font color="827e9c">Obi Griffith</font>*
+  
+  Lecture:
 
 [&uarr;](#back_to_top)
 
