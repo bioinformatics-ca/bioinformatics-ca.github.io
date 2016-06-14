@@ -60,7 +60,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
 3.	Improve the layout.  
 
-   ●	In the menu bar, select Layout >yFiles Layouts >Organic.	
+   ●	In the menu bar, select Layout > Files Layouts > Organic.	
 
 4.	Select all nodes in the network. To do this using the mouse, drag from an empty space to the left of and above every node to an empty space to the right of and beneath every node. The selected nodes are now colored yellow.	
 
@@ -220,7 +220,7 @@ Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a n
 
 3.	Improve the layout.
 
-●	In the menu bar, select Layout >yFiles Layouts >Organic.	
+●	In the menu bar, select Layout > Files Layouts > Organic.	
 
 3a
  
