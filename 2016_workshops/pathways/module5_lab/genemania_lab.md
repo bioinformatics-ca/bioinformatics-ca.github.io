@@ -58,11 +58,11 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 
 8. Locate the gene with the strongest association with GRN. **Tip**: this gene is the largest node on the network. 	
 
-9. Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add. Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)? 	 
+9. Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add ![add](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/add.png?raw=true). Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)? 	 
 
-10. On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular, the aligned, and the force_directed layouts.  	
+10. On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular ![circular](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circledot.png?raw=true), the aligned ![aligned](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/twodown.png?raw=true), and the force_directed ![force](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/crossing.png?raw=true) layouts.  	
 
-11. Choose your favorite layout and save the  network as an image  using the *Network image As Shown* option from the *save*  menu.  	
+11. Choose your favorite layout and save the  network as an image  using the *Network image As Shown* option from the *save*  menu ![save](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/save.png?raw=true).  	
 
 ### EXERCISE 1 - STEPS 1-4
 
@@ -114,7 +114,7 @@ How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/)
 ### Execerise 1 - STEP 9
 
 
-* Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add   . Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network ( ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true))? 	 
+* Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add ![add](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/add.png?raw=true)   . Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network ( ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true))? 	 
 
 ![GM5](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM5.png?raw=true)
 
@@ -138,7 +138,7 @@ How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/)
 ### Exercise 1 - STEP 10
 
 
-* On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular ( ) , the aligned ( ) and the force_directed ( ) layouts.  	
+* On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular ![circular](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circledot.png?raw=true), the aligned ![aligned](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/twodown.png?raw=true) and the force_directed ![force](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/crossing.png?raw=true) layouts.  	
 
 #### Circular layout
 
@@ -155,7 +155,7 @@ How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/)
 ### Exercise 1 - STEP 11
 
 
-* Choose your favorite layout and save the  network as an image  using the “Network image As Shown” option from the “save”  menu.  	
+* Choose your favorite layout and save the  network as an image  using the “Network image As Shown” option from the *save*  menu ![save](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/save.png?raw=true).  	
 
 ![GM10](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM10.png?raw=true)  
 
@@ -179,7 +179,7 @@ To start this exercise, you need to download the “30_prostate_cancer_genes.txt
 
 For this exercise, you are working with a list of 30 prostate cancer genes. This list can be downloaded after the workshop from the cBioPortal website (<http://www.cbioportal.org/>) under the download section, user defined list. The cBioPortal for Cancer Genomics stores genomic data from large scale, integrated cancer genomic data sets. During this exercise, you will explore the types of networks that have been used to create the GeneMANIA network from the prostate cancer gene list and you will see how changing input parameters can affect the results. The last step of the exercise consists of uploading a custom network which is a list of genes that are positively correlated with CYP11B1 in mRNA expression data of 94 prostate cancer samples (<http://www.cbioportal.org/>) .
 
-**Skills**: GeneMANIA search using a gene list; Navigating Search Results; Exploring  Networks and advanced options; Uploading a custom network. 
+**Skills**: GeneMANIA search using a gene list; Navigating Search Results; Exploring  Networks and advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true); Uploading a custom network. 
 
 ### STEPS
 
@@ -195,19 +195,19 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 	
 6.	Click any link (edge) connecting two nodes to highlight information about it. **Note**: Clicking on an edge between 2 nodes will display information about all interaction networks that connect  these 2 nodes. It indicates the reference (publication) for these interactions. The colors indicate the type of interaction (co-expression, shared protein domains, co-localization, physical interactions and predicted). 
 	
-7.	Locate the Networks summary tab (on the right ) and look at what data has been used to create the network and predictions. **Note**that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. At the top of the Networks summary tab, try Expand “none”, then “top” and “all”  to get information about the sources of the different networks. 
+7.	Locate the Networks summary tab (on the right ![lines](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/threelines.png?raw=true)) and look at what data has been used to create the network and predictions. **Note**that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. At the top of the Networks summary tab, try Expand “none”, then “top” and “all”  to get information about the sources of the different networks. 
 	
 8.	Highlight all connections corresponding to each network by clicking the name of each network category. Click on  “Shared protein domains” and see which genes are connected by predicted protein protein interaction. You can do the same for “Co-localization” , “Co-expression”  and “Physical interactions”. **Tips**:  these observations of the number of connections make easier to understand why co-expression and shared protein domains get the higher percent weight on this network: they are helping to connect more genes than physical interactions and predicted; A higher weight means that this network helped more to find related genes. 	
 
 9.	Locate the Functions summary tab (bottom left ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)) and look at what functions were  significantly enriched in this list of prostate genes.	
 
-10.	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)  . Explore the results.
+10.	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)  . Explore the results.
 	
 11.	Locate the Functions summary tab (bottom left ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)) and look at what functions were  significantly enriched with these new settings.	
 
-12.	Upload a custom network to GeneMANIA: in ‘advanced options’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
+12.	Upload a custom network to GeneMANIA: in ‘advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
 	
-13.	Try additional parameters of the ‘advanced options’ by selecting “Customise advanced options’‘ and look at how the changes you made influenced the results. For example change ‘Network weighting’ method or ‘Max resultant genes: ’.  	
+13.	Try additional parameters of the ‘advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)’ by selecting “Customise advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)’‘ and look at how the changes you made influenced the results. For example change ‘Network weighting’ method or ‘Max resultant genes: ’.  	
 
 
 
@@ -258,7 +258,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 7
 
 
-*	Locate the Networks summary tab (on the right ) and look at what data has been used to create the network and predictions. **Note** that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. At the top of the Networks summary tab, try Expand “none”, then “top” and “all”  to get information about the sources of the different networks. 
+*	Locate the Networks summary tab (on the right ![lines](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/threelines.png?raw=true)) and look at what data has been used to create the network and predictions. **Note** that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. At the top of the Networks summary tab, try Expand “none”, then “top” and “all”  to get information about the sources of the different networks. 
 	
 ![GM15](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM15.png?raw=true) 
 
@@ -291,7 +291,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 10
 
 
-*	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)  . Explore the results.
+*	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on show advanced option ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true) which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)  . Explore the results.
 	
 ![GM20](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM20.png?raw=true) 
  
@@ -309,7 +309,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise - STEP 12
 
 
-*	Upload a custom network to GeneMANIA: in ‘advanced options’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
+*	Upload a custom network to GeneMANIA: in ‘advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
 	
 ![GM23](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM23.png?raw=true) 
 
@@ -327,7 +327,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 13.
 
 
-*	Try additional parameters of the ‘advanced options ’ by selecting “Customise advanced options’‘ and look at how the changes you made influenced the results. For example change ‘Network weighting’ method or ‘Max resultant genes: ’.  	
+*	Try additional parameters of the ‘advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true) ’ by selecting “Customise advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)’‘ and look at how the changes you made influenced the results. For example change ‘Network weighting’ method or ‘Max resultant genes: ’.  	
 
 
 ![GM26](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM26.png?raw=true) 
@@ -359,13 +359,13 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 5.	In the functions summary tab,  check some functions to color genes included in these functions. To follow this tutorial, you can for example color the “response to insulin” , “DNA recombination” and“vitamin transport” functions. **Tip**: You need to scroll down to found DNA recombination and vitamin transport as these pathways have an FDR greater than the one for “response to insulin”. 	
 
-6.	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results. Explore the network. **Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
+6.	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results. Explore the network. **Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
 
 7.	Locate our favorite gene PDPK1 on the network, select it by moving the mouse cursor to its node and wait there for a second. It will highlight this gene and all its connections. **Tip**: make sure that the black box displaying the details for PDPK1 is closed.	
 
-8.	Generate and save a report of your results by locating the save  menu  , and selecting “Report”. The PDF report provides a detailed description of your search and results.	
+8.	Generate and save a report of your results by locating the save menu ![save](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/save.png?raw=true), and selecting “Report”. The PDF report provides a detailed description of your search and results.	
 
-9.	Investigate the “history” function by clicking on the related icon  located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
+9.	Investigate the “history” function by clicking on the related icon ![redo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/redo.png?raw=true) located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
 
 
 
@@ -399,7 +399,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 ### Exercise 3 - STEPS 6 
 
-*	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results. Explore the network.
+*	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results. Explore the network.
 
 **Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
 
@@ -419,7 +419,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 ### Exercise 3 - STEP 8
 
-*	Generate and save a report of your results by locating the save  menu  , and selecting “Report”. The PDF report provides a detailed description of your search and results.	
+*	Generate and save a report of your results by locating the save menu ![save](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/save.png?raw=true), and selecting “Report”. The PDF report provides a detailed description of your search and results.	
 
 ![GM35](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM35.png?raw=true) 
 
@@ -430,7 +430,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 ### Exercise 3 - STEP 9
 
-*	Investigate the “history” function by clicking on the related icon  located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
+*	Investigate the “history” function by clicking on the related icon ![redo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/redo.png?raw=true) located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
 
 ![GM37](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM37.png?raw=true)  
 
@@ -476,7 +476,7 @@ in Functions tab:
 
 *	Coverage: (number of genes in the network with a given function) / (all genes in the genome with the function)
 
-#### In advanced options: 
+#### In advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true): 
 
 *	Network weighting? GeneMANIA can use a few different methods to weight networks when combining all networks to form the final composite network that results from a search. The default settings are usually appropriate, but you can choose a weighting method in the advanced option panel. (more details at <http://pages.genemania.org/help/>).
 
