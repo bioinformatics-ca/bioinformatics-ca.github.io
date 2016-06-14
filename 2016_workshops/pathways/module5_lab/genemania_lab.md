@@ -175,7 +175,7 @@ Targeted manipulation of the sortilin–progranulin axis rescues progranulin hap
 
 ## EXERCISE 2
 
-To start this exercise, you need to download the “30_prostate_cancer_genes.txt” file from the course wiki and save it on your computer. 
+To start this exercise, you need to download the [30_prostate_cancer_genes.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module5_lab/30_prostate_cancer_genes.txt) file from the course wiki and save it on your computer. 
 
 For this exercise, you are working with a list of 30 prostate cancer genes. This list can be downloaded after the workshop from the cBioPortal website (<http://www.cbioportal.org/>) under the download section, user defined list. The cBioPortal for Cancer Genomics stores genomic data from large scale, integrated cancer genomic data sets. During this exercise, you will explore the types of networks that have been used to create the GeneMANIA network from the prostate cancer gene list and you will see how changing input parameters can affect the results. The last step of the exercise consists of uploading a custom network which is a list of genes that are positively correlated with CYP11B1 in mRNA expression data of 94 prostate cancer samples (<http://www.cbioportal.org/>) .
 
@@ -187,7 +187,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 
 2.	In the search window, ensure that the model organism is set to *Homo sapiens* ![homo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Up.png?raw=true)  .	
 
-3.	Copy and paste genes in the file 30_prostate_cancer_genes.txt  	
+3.	Copy and paste genes in the file [30_prostate_cancer_genes.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module5_lab/30_prostate_cancer_genes.txt).  	
 
 4.	Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true) and wait for the results.	
 
@@ -205,7 +205,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 	
 11.	Locate the Functions summary tab (bottom left ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)) and look at what functions were  significantly enriched with these new settings.	
 
-12.	Upload a custom network to GeneMANIA: in ‘advanced options’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
+12.	Upload a custom network to GeneMANIA: in ‘advanced options’, click on “Upload network…” and browse your computer to locate and select the file [CYP11B_pearson_correlation_prostate.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module5_lab/CYB11B_pearson_correlation_prostate.txt). Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
 	
 13.	Try additional parameters of the ‘advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)’ by selecting “Customise advanced options" and look at how the changes you made influenced the results. For example change ‘Network weighting’ method or ‘Max resultant genes: ’.  	
 
@@ -218,7 +218,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 
 2.	In the search window, ensure that the model organism is set to *Homo sapiens* ![homo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Up.png?raw=true).	
 
-3.	Copy and paste genes in the file 30_prostate_cancer_genes.txt  	
+3.	Copy and paste genes in the file [30_prostate_cancer_genes.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module5_lab/30_prostate_cancer_genes.txt).  	
 
 4.	Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results.	
 
@@ -309,7 +309,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise - STEP 12
 
 
-*	Upload a custom network to GeneMANIA: in ‘advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
+*	Upload a custom network to GeneMANIA: in ‘advanced options ![options](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/dotdotdot.png?raw=true)’, click on “Upload network…” and browse your computer to locate and select the file [CYP11B_pearson_correlation_prostate.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module5_lab/CYB11B_pearson_correlation_prostate.txt). Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
 	
 ![GM23](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM23.png?raw=true) 
 
@@ -340,7 +340,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 
 ## EXERCISE 3
 
-To start this exercise, you need to download the “mixed_gene_list.txt” file from the course wiki and save it on your computer. 
+To start this exercise, you need to download the [Mixed_gene_list.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module5_lab/mixed_gene_list.txt) file and save it on your computer. 
 
 For this exercise, you are working on a gene list created by combining 3 user defined gene lists available from the cBioportal (<http://www.cbioportal.org>). It contains genes implicated in the DNA damage response, the PI3K-AKT-mTOR signaling pathway and Folate transport. This list is representative of a gene list obtained from transcriptomics data. During this exercise, we will first characterize our gene list based on functions and then we  will add potential drug and microRNAs targeting genes in the network, and we will save the report.
 
@@ -353,7 +353,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 2.	In the search window, ensure that the model organism is set to *Homo sapiens* ![homo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Up.png?raw=true)  .	
 
-3.	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results.	
+3.	Copy and paste genes in the file [Mixed_gene_list.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module5_lab/mixed_gene_list.txt). Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results.	
 
 4.	Locate the Functions summary tab (bottom left ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)) and look at functions returned by GeneMANIA	
 
@@ -375,7 +375,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 2.	In the search window, ensure that the model organism is set to *Homo sapiens* ![homo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Up.png?raw=true).	
 
-3.	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results.	
+3.	Copy and paste genes in the file [Mixed_gene_list.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module5_lab/mixed_gene_list.txt). Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results.	
 
 ![GM28](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM28.png?raw=true) 
 
