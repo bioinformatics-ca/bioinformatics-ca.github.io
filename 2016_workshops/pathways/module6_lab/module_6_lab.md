@@ -56,7 +56,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
    ●	Click the ‘OK’ button.
 
    The main window now displays the created network. Each node represents a gene. Edges represent the relationships (e.g physical interactions, co-expression)  between the genes (nodes) that were calculated by GeneMANIA in the previous exercise.
-   Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a network from a file.	
+   **Tip**: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a network from a file.	
 
 3)	Improve the layout.  
 
@@ -78,23 +78,23 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Click on the ‘float window’ icon located at the upper right corner. 
 
-   ●	Tip: resize the ‘Result Panel’ window by expanding it horizontally and vertically, so you can see the results and the network simultaneously.
+   ●	**Tip**: resize the ‘Result Panel’ window by expanding it horizontally and vertically, so you can see the results and the network simultaneously.
    
-   ●	Tip: mouse over column names to get a tooltip describing their meaning in more detail.	
+   ●	**Tip**: mouse over column names to get a tooltip describing their meaning in more detail.	
 
 7)	Explore the enrichment results in the Motifs tab from the Results Panel. It is a list of all DNA binding motifs that appear in more than one gene region from the prostate cancer gene list. They are ranked by the strongest Normalized Enrichment Score (NES). Some DNA binding motifs in the databases are related to a specific transcription factor, but others are not.
 
    ●	Check that ‘Motifs’ is the selected tab of the ‘Results Panel’.
 
-   ●	Which is the first motif with an associated TF? (Tip: use the information displayed in the “TFs” column).
+   ●	Which is the first motif with an associated TF? (**Tip**: use the information displayed in the “TFs” column).
 
    ●	Click on the row for this motif to display the motif’s sequence logo and related information at the bottom part of Results Panel.
 
    ●	Click on the sequence logo to zoom in on it.
 
-   ●	What are the potential target genes for this TF? (Tip: look at the ‘Target Name’ column). 
+   ●	What are the potential target genes for this TF? (**Tip**: look at the ‘Target Name’ column). 
 
-   ●	Tip: some explanation about the results are located at the end of this document and in more detail in the iRegulon reference paper.	
+   ●	**Tip**: some explanation about the results are located at the end of this document and in more detail in the iRegulon reference paper.	
 
 8)	Explore the enrichment results in the Tracks tab. It is a list of all ChIP-seq datasets (or “tracks”) sorted by strongest enrichment from genes inour network. 
 
@@ -114,7 +114,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
 10)	How did iRegulon perform? Is MTF1 (metal-transcription factor 1) known to be expressed or to play a role in prostate cancer?
 
-   ●	Tip: Open your web browser and search the web for [MTF1 “prostate cancer”]. 	
+   ●	**Tip**: Open your web browser and search the web for [MTF1 “prostate cancer”]. 	
 
 11)	Add MTF1 to the network.
 
@@ -122,15 +122,15 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Click the MTF1 row to select it.
 
-   ●	Click the ‘Add regulator’ icon   located at the upper left corner of the ‘Results Panel’.  This adds MTF1 to the network as a yellow node, with the edges linking to its 11 potential targets, all highlighted as purple nodes.	
+   ●	Click the ‘Add regulator’ icon ![Add icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/add.png?raw=true) located at the upper left corner of the ‘Results Panel’.  This adds MTF1 to the network as a yellow node, with the edges linking to its 11 potential targets, all highlighted as purple nodes.	
 
 12)	Create a subnetwork to better visualize the predicted targets.
 
    ●	Select the MTF1 node in the network by clicking on it. 
 
-   ●	In the Cytoscape toolbar above the network, click the ‘First Neighbors of Selected Nodes’ icon  .MTF1 and its targets are now highlighted in yellow (which means they are selected).
+   ●	In the Cytoscape toolbar above the network, click the ‘First Neighbors of Selected Nodes’ icon ![Neighbours icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/neighbours.png?raw=true). MTF1 and its targets are now highlighted in yellow (which means they are selected).
 
-   ●	Use the ‘New network from selection’ icon  to create a subnetwork. 	
+   ●	Use the ‘New network from selection’ icon ![New icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/new.png?raw=true) to create a subnetwork. 	
 
 13)	Add to the figure information on the types of interactions obtained from GeneMANIA and stored as additional information in the ‘prostate_cancer_genemania_network.txt’ file.
 
@@ -148,11 +148,11 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
 14)	Save current results  as an iRegulon (iRF) file.
 
-   ●	In the ‘Results Panel’ toolbar, click the ‘Save current results  as an iRegulon (iRF) file’ button  .
+   ●	In the ‘Results Panel’ toolbar, click the ‘Save current results  as an iRegulon (iRF) file’ button  ![Save icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/save.png?raw=true).
 
    ●	Choose a name and click the ‘Save’ button.
 
-   ●	Tip: you can reuse these iRegulon results by loading this iRF file using the ‘Load saved results’ icon  . 	
+   ●	**Tip**: you can reuse these iRegulon results by loading this iRF file using the ‘Load saved results’ icon  ![Save2 icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/save2.png?raw=true).. 	
 
 15)	Save the Cytoscape session .
 
@@ -160,7 +160,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Choose a name and click the ‘Save’ button.
 
-   ●	Tip: you can re-open this file later to examine the network further.	
+   ●	**Tip**: you can re-open this file later to examine the network further.	
 
 
 
@@ -179,7 +179,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
 1)	Launch Cytoscape. Close the “Welcome to Cytoscape” window, if it’s enabled.	
 
-Double click on the   Cytoscape  icon.
+Double click on the ![Cytoscape icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/cytoscape.png?raw=true).  Cytoscape  icon.
 
 
 2)	Create a network using the  ‘prostate_cancer_genemania_network.txt’ file.
@@ -198,25 +198,30 @@ Double click on the   Cytoscape  icon.
 
 ●	Click the ‘OK’ button.
 The main window now displays the created network. Each node represents a gene. Edges represent the relationships (e.g physical interactions, co-expression)  between the genes (nodes) that were calculated by GeneMANIA in the previous exercise.
-Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a network from a file.	
+**Tip**: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a network from a file.	
 
 2a)
  
+![2a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/2a.png?raw=true)
 
 2b)
- 
+
+![2b](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/2b.png?raw=true) 
 
 2c)
- 
+
+![2c](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/2c.png?raw=true)  
 
 2d)
  
+![2d](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/2d.png?raw=true) 
 
 
 
 2e)
  
 
+![2e](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/2e.png?raw=true) 
 
 3)	Improve the layout.
 
@@ -224,15 +229,18 @@ Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a n
 
 3a)
  
+![3a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/3a.png?raw=true) 
 
 3b)
  
 
+![3b](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/3b.png?raw=true) 
 
 4)	Select all nodes in the network. To do this using the mouse, drag from an empty space to the left of and above every node to an empty space to the right of and beneath every node. The selected nodes are now colored yellow.	
 
 
- 
+
+![4](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/4.png?raw=true)  
 
 
 5)	In the menu bar, select Apps > iRegulon > Predict regulators and targets.A ‘Predict regulators and targets’ dialog pops up. 
@@ -247,9 +255,12 @@ Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a n
 
 5a)
  
+![5a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/5a.png?raw=true) 
+
 5b)
 
- 
+
+![5b](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/5b.png?raw=true)  
 
 
 
@@ -259,10 +270,11 @@ Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a n
 
 ●	Click on the ‘float window’ icon located at the upper right corner. 
 
-●	Tip: resize the ‘Result Panel’ window by expanding it horizontally and vertically, so you can see the results and the network simultaneously.
-Tip: mouse over column names to get a tooltip describing their meaning in more detail.
+●	**Tip**: resize the ‘Result Panel’ window by expanding it horizontally and vertically, so you can see the results and the network simultaneously.
+**Tip**: mouse over column names to get a tooltip describing their meaning in more detail.
 	
 
+![6](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/6.png?raw=true) 
 
  
 
@@ -271,17 +283,18 @@ Tip: mouse over column names to get a tooltip describing their meaning in more d
 
 ●	Check that ‘Motifs’ is the selected tab of the ‘Results Panel’.
 
-●	Which is the first motif with an associated TF? (Tip: use the information displayed in the “TFs” column).
+●	Which is the first motif with an associated TF? (**Tip**: use the information displayed in the “TFs” column).
 
 ●	Click on the row for this motif to display the motif’s sequence logo and related information at the bottom part of Results Panel.
 
 ●	Click on the sequence logo to zoom in on it.
 
-●	What are the potential target genes for this TF? (Tip: look at the ‘Target Name’ column). 
+●	What are the potential target genes for this TF? (**Tip**: look at the ‘Target Name’ column). 
 
-Tip: some explanation about the results are located at the end of this document and in more detail in the iRegulon reference paper. 
+**Tip**: some explanation about the results are located at the end of this document and in more detail in the iRegulon reference paper. 
  
 
+![7](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/7.png?raw=true) 
 
 
  
@@ -299,6 +312,7 @@ Tip: some explanation about the results are located at the end of this document 
 ●	Compare and contrast the target genes for the two tracks.	
 
 
+![8](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/8.png?raw=true) 
  
 
 Answer:
@@ -313,7 +327,8 @@ T4 is a track cluster associated with 2 tracks. The first track is ranked number
 ●	Click on ‘MTF1’ and explore the results. 	
 
 
- 
+
+![9](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/9.png?raw=true)  
 
 Answer: 
 MTF1 is associated with the motif cluster M1. This cluster contains 6 related motifs and  11 potential target genes. 
@@ -322,8 +337,10 @@ One motif (homer-M00129) selected as example in the above screenshot is directly
 
 10)	How did iRegulon perform? Is MTF1 (metal-transcription factor 1) known to be expressed or to play a role in prostate cancer?
 
-Tip: Open your web browser and search the web for [MTF1 “prostate cancer”].	
+**Tip**: Open your web browser and search the web for [MTF1 “prostate cancer”].	
 
+
+![10](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/10.png?raw=true) 
  
 This network MTF1 within genes and miRs  important for prostate cancer.
 PMID:14568174
@@ -337,32 +354,36 @@ PMID:23157640
 
 ●	Click the MTF1 row to select it.
 
-●	Click the ‘Add regulator’ icon   located at the upper left corner of the ‘Results Panel’.
+●	Click the ‘Add regulator’ icon ![Add icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/add.png?raw=true) located at the upper left corner of the ‘Results Panel’.
 This adds MTF1 to the network as a yellow node, with the edges linking to its 11 potential targets, all highlighted as purple nodes.	
 
 11a)
- 
+
+![11a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/11a.png?raw=true)  
 
 11b)
  
 
+![11b](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/11b.png?raw=true) 
 
 12)	Create a subnetwork to better visualize the predicted targets.
 
 ●	Select the MTF1 node in the network by clicking on it. 
 
-●	In the Cytoscape toolbar above the network, click the ‘First Neighbors of Selected Nodes’ icon  .MTF1 and its targets are now highlighted in yellow (which means they are selected).
+●	In the Cytoscape toolbar above the network, click the ‘First Neighbors of Selected Nodes’ icon ![Neighbours icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/neighbours.png?raw=true). MTF1 and its targets are now highlighted in yellow (which means they are selected).
 
-●	Use the ‘New network from selection’ icon  to create a subnetwork. 	
+●	Use the ‘New network from selection’ icon ![New icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/new.png?raw=true) to create a subnetwork. 	
 
 12a)
  
 
+![12a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/12a.png?raw=true) 
 
 
 12b)
  
 
+![12b](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/12b.png?raw=true) 
 
 
 13)	Add to the figure information on the types of interactions obtained from GeneMANIA and stored as additional information in the ‘prostate_cancer_genemania_network.txt’ file.
@@ -384,22 +405,25 @@ The edges should now be colored by the types of interactions.
 13a)
  
 
+![13a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/13a.png?raw=true) 
 
 13b)
  
 
+![13b](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/13b.png?raw=true) 
 
 14)	Save current results  as an iRegulon (iRF) file.
 
-●	In the ‘Results Panel’ toolbar, click the ‘Save current results  as an iRegulon (iRF) file’ button  .
+●	In the ‘Results Panel’ toolbar, click the ‘Save current results  as an iRegulon (iRF) file’ button  ![Save icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/save.png?raw=true)..
 
 ●	Choose a name and click the ‘Save’ button.
-Tip: you can reuse these iRegulon results by loading this iRF file using the ‘Load saved results’ icon  . 
+**Tip**: you can reuse these iRegulon results by loading this iRF file using the ‘Load saved results’ icon  ![Save2 icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/save2.png?raw=true).. 
 
 
 14a)
  
 
+![14](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/14.png?raw=true) 
 
 
 15)	Save the Cytoscape session .
@@ -407,11 +431,12 @@ Tip: you can reuse these iRegulon results by loading this iRF file using the ‘
 ●	In the Cytoscape menu bar, select File > Save as.
 
 ●	Choose a name and click the ‘Save’ button.
-Tip: you can re-open this file later to examine the network further.
+**Tip**: you can re-open this file later to examine the network further.
 
 
  
 
+![15](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/15.png?raw=true) 
 
 
 
@@ -481,13 +506,16 @@ Double click on the   Cytoscape  icon.
 ●	Click the ‘Submit’ button.	
 
 2a)
- 
+
+![2a2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/2a2.png?raw=true)  
 
 2b)
- 
+
+![2b2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/2b2.png?raw=true)  
 
 2c)
- 
+
+![2c2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/2c2.png?raw=true)  
 
 
 
@@ -502,10 +530,12 @@ Double click on the   Cytoscape  icon.
 ●	Click the ‘Submit’ button.	
 
 3a)
- 
+
+![3a2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/3a2.png?raw=true)  
 
 3b)
- 
+
+![3b2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/3b2.png?raw=true)  
 
 
 
@@ -524,13 +554,16 @@ From the Cytoscape menu bar, select Tools > Merge > Networks….An ‘Advanced N
 Cytoscape now displays the two networks in the same window, linked by the two genes they have in common.
 
 4a)
- 
+
+![4a2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/4a2.png?raw=true)  
 
 4b)
- 
+
+![4b2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/4b2.png?raw=true)  
 
 4c)
- 
+
+![4c2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/4c2.png?raw=true)  
 
 
 #### END  OF EXERCISE
