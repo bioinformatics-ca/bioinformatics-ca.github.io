@@ -42,16 +42,25 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 
 ### Steps
 
-1. Go to GeneMANIA’s homepage at <http://www.genemania.org/>   	
-2. In the search window, ensure that the model organism is set to *Homo sapiens*.   	
+1. Go to GeneMANIA’s homepage at <http://www.genemania.org/>  
+
+2. In the search window, ensure that the model organism is set to *Homo sapiens*.  
+
 3. Enter the following gene: GRN	
+
 4. Click on the search icon and wait for the results.	
+
 5. When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). **Tip**: zoom in and zoom out using trackpad or mouse scrolling up and down using the mouse or trackpad or zoom in to the maximum using the  specific icon. 	
 6. Clicking on a node gives information about the name of gene, the possibility to add, remove this gene or search with this gene only. Click on the GRN node and explore the displayed information. 	
+
 7. Locate the Functions summary tab (bottom left icon). What are the functions significantly associated with  this network?  GRN is the central node of this network: which function would you predict for GRN? How well did GeneMANIA perform (hints: use GeneCards (<http://www.genecards.org/>) , PubMed (<http://www.ncbi.nlm.nih.gov/pubmed/>))?	
+
 8. Locate the gene with the strongest association with GRN. **Tip**: this gene is the largest node on the network. 	
+
 9. Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add. Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network? 	 
+
 10. On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular, the aligned, and the force_directed layouts.  	
+
 11. Choose your favorite layout and save the  network as an image  using the *Network image As Shown* option from the *save*  menu.  	
 
 ### EXERCISE 1 - STEPS 1-4
