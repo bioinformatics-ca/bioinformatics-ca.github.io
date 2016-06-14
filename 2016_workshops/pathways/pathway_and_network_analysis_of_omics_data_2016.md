@@ -221,7 +221,7 @@ image: CBW_pathway_icon.jpg
 
 *<font color="#827e9c">Veronique Voisin</font>*
 
-Integrated Assignment: Reactome FI and GeneMANIA
+[Integrated Assignment: Reactome FI and GeneMANIA](http://bioinformatics-ca.github.io/PNAOD_integrated_assingment_2_2016/)
 
 [&uarr;](#back_to_top)
 
