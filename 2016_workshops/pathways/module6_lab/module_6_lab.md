@@ -37,9 +37,9 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
 ### Steps
 
-1.	Launch Cytoscape. Close the “Welcome to Cytoscape” window, if it’s enabled.	
+1)	Launch Cytoscape. Close the “Welcome to Cytoscape” window, if it’s enabled.	
 
-2.	Create a network using the  ‘prostate_cancer_genemania_network.txt’ file.
+2)	Create a network using the  ‘prostate_cancer_genemania_network.txt’ file.
 
    ●	In the menu bar select ‘File > Import > Network >File…. A file open dialog pops up.
 
@@ -58,13 +58,13 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
    The main window now displays the created network. Each node represents a gene. Edges represent the relationships (e.g physical interactions, co-expression)  between the genes (nodes) that were calculated by GeneMANIA in the previous exercise.
    Tip: The shortcut ⌘+L (Mac) or Ctrl+L (Windows) is a quicker way to import a network from a file.	
 
-3.	Improve the layout.  
+3)	Improve the layout.  
 
    ●	In the menu bar, select Layout > Files Layouts > Organic.	
 
-4.	Select all nodes in the network. To do this using the mouse, drag from an empty space to the left of and above every node to an empty space to the right of and beneath every node. The selected nodes are now colored yellow.	
+4)	Select all nodes in the network. To do this using the mouse, drag from an empty space to the left of and above every node to an empty space to the right of and beneath every node. The selected nodes are now colored yellow.	
 
-5.	In the menu bar, select Apps > iRegulon > Predict regulators and targets. A ‘Predict regulators and targets’ dialog pops up. 
+5)	In the menu bar, select Apps > iRegulon > Predict regulators and targets. A ‘Predict regulators and targets’ dialog pops up. 
 
    ●	Using the default parameters, click the ‘Submit’ button at the bottom of the page. A progress bar will pop up.
 
@@ -72,7 +72,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Deselect all nodes by clicking on a blank space of the screen. The nodes are all cyan again.	
 
-6.	Explore the results. 
+6)	Explore the results. 
 
    ●	Locate the ‘Results Panel’ on the right side of the window. 
 
@@ -82,7 +82,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
    
    ●	Tip: mouse over column names to get a tooltip describing their meaning in more detail.	
 
-7.	Explore the enrichment results in the Motifs tab from the Results Panel. It is a list of all DNA binding motifs that appear in more than one gene region from the prostate cancer gene list. They are ranked by the strongest Normalized Enrichment Score (NES). Some DNA binding motifs in the databases are related to a specific transcription factor, but others are not.
+7)	Explore the enrichment results in the Motifs tab from the Results Panel. It is a list of all DNA binding motifs that appear in more than one gene region from the prostate cancer gene list. They are ranked by the strongest Normalized Enrichment Score (NES). Some DNA binding motifs in the databases are related to a specific transcription factor, but others are not.
 
    ●	Check that ‘Motifs’ is the selected tab of the ‘Results Panel’.
 
@@ -96,7 +96,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Tip: some explanation about the results are located at the end of this document and in more detail in the iRegulon reference paper.	
 
-8.	Explore the enrichment results in the Tracks tab. It is a list of all ChIP-seq datasets (or “tracks”) sorted by strongest enrichment from genes inour network. 
+8)	Explore the enrichment results in the Tracks tab. It is a list of all ChIP-seq datasets (or “tracks”) sorted by strongest enrichment from genes inour network. 
 
    ●	Select the  ‘Tracks’ tab of the ‘Results Panel’.
 
@@ -106,17 +106,17 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Compare and contrast the target genes for the two tracks.	
 
-9.	Explore the enrichment results in the Transcription Factors tabview. Each row is a TF that is a potential co-regulator of the genes in our network. Each row represents a cluster that combines related motifs or tracks or both.
+9)	Explore the enrichment results in the Transcription Factors tabview. Each row is a TF that is a potential co-regulator of the genes in our network. Each row represents a cluster that combines related motifs or tracks or both.
 
    ●	Select the ‘Transcription Factors’ tab of the ‘Results Panels’. 
 
    ●	Click on ‘MTF1’ and explore the results. 	
 
-10.	How did iRegulon perform? Is MTF1 (metal-transcription factor 1) known to be expressed or to play a role in prostate cancer?
+10)	How did iRegulon perform? Is MTF1 (metal-transcription factor 1) known to be expressed or to play a role in prostate cancer?
 
    ●	Tip: Open your web browser and search the web for [MTF1 “prostate cancer”]. 	
 
-11.	Add MTF1 to the network.
+11)	Add MTF1 to the network.
 
    ●	Check that the Transcription Factors tab is selected. 
 
@@ -124,7 +124,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Click the ‘Add regulator’ icon   located at the upper left corner of the ‘Results Panel’.  This adds MTF1 to the network as a yellow node, with the edges linking to its 11 potential targets, all highlighted as purple nodes.	
 
-12.	Create a subnetwork to better visualize the predicted targets.
+12)	Create a subnetwork to better visualize the predicted targets.
 
    ●	Select the MTF1 node in the network by clicking on it. 
 
@@ -132,7 +132,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Use the ‘New network from selection’ icon  to create a subnetwork. 	
 
-13.	Add to the figure information on the types of interactions obtained from GeneMANIA and stored as additional information in the ‘prostate_cancer_genemania_network.txt’ file.
+13)	Add to the figure information on the types of interactions obtained from GeneMANIA and stored as additional information in the ‘prostate_cancer_genemania_network.txt’ file.
 
    ●	In the Control Panel at the left of the window, select the ‘Style’ tab. At the bottom of the panel, select the ‘Edge’ tab. 
 
@@ -146,7 +146,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Repeat that step, choosing a different color for each interaction type. The edges should now be colored by the types of interactions. 	
 
-14.	Save current results  as an iRegulon (iRF) file.
+14)	Save current results  as an iRegulon (iRF) file.
 
    ●	In the ‘Results Panel’ toolbar, click the ‘Save current results  as an iRegulon (iRF) file’ button  .
 
@@ -154,7 +154,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Tip: you can reuse these iRegulon results by loading this iRF file using the ‘Load saved results’ icon  . 	
 
-15.	Save the Cytoscape session .
+15)	Save the Cytoscape session .
 
    ●	In the Cytoscape menu bar, select File > Save as.
 
