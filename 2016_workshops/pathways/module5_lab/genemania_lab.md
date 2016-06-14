@@ -117,7 +117,7 @@ How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/)
 
 ![GM5](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM5.png?raw=true)
 
-![GM6](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/GM1.png?raw=true)   
+![GM6](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/GM6.png?raw=true)   
 
 
  
@@ -149,14 +149,14 @@ How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/)
  
 #### Force directed layout
  
-![GM8](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM9.png?raw=true) 
+![GM9](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM9.png?raw=true) 
 
 ### Exercise 1 - STEP 11
 
 
 * Choose your favorite layout and save the  network as an image  using the “Network image As Shown” option from the “save”  menu.  	
 
-![GM11](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM11.png?raw=true)  
+![GM10](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM10.png?raw=true)  
 
 
 **Notes** about biological interpretation of the results: 
@@ -168,7 +168,7 @@ The top functions predicted by GeneMANIA for GRN were related to lysosome and va
 Targeted manipulation of the sortilin–progranulin axis rescues progranulin haploinsufficiency. Lee et al. Hum Mol Genet. 2014 March 15; 23(6): 1467–1478. Published online 2013 October 26. doi: 10.1093/hmg/ddt534. PMCID:PMC3929086
 “Progranulin (GRN) mutations causing haploinsufficiency are a major cause of frontotemporal lobar degeneration (FTLD-TDP). Recent discoveries demonstrating sortilin (SORT1) is a neuronal receptor for PGRN endocytosis and a determinant of plasma PGRN levels portend the development of enhancers targeting the SORT1–PGRN axis. We demonstrate the preclinical efficacy of several approaches through which impairing PGRN's interaction with SORT1 restores extracellular PGRN levels. “
 
-![GM12](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM12.png?raw=true) 
+![GM11](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM11.png?raw=true) 
 
 ---
 
@@ -378,7 +378,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 ![GM28](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM28.png?raw=true) 
 
-![GM28](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM28.png?raw=true)  
+![GM29](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM29.png?raw=true)  
 
  
 
@@ -386,14 +386,14 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 *	Locate the Functions summary tab (bottom left ) and look at functions returned by GeneMANIA	
 
-![GM29](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM29.png?raw=true)  
+![GM30](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM30.png?raw=true)  
 
 
 ### Exercise 3 - STEP 5
 
 *	In the functions summary tab,  check some functions to color genes included in these functions. To follow this tutorial, you can for example color the “response to insulin” , “DNA recombination” and“vitamin transport” functions. **Tip**: You need to scroll down to found DNA recombination and vitamin transport as these pathways have an FDR greater than the one for “response to insulin”. 	
 
-![GM30](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM30.png?raw=true)  
+![GM31](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM31.png?raw=true)  
 
 
 ### Exercise 3 - STEPS 6 
@@ -402,9 +402,9 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 **Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
 
-![GM31](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM31.png?raw=true) 
+![GM32](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM32.png?raw=true) 
 
-![GM32](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM32.png?raw=true)  
+![GM33](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM33.png?raw=true)  
 
  
 
@@ -414,15 +414,15 @@ For this exercise, you are working on a gene list created by combining 3 user de
 *	Locate our favorite gene PDPK1 on the network, select it by moving the mouse cursor to its node and wait there for a second. It will highlight this gene and all its connections. 
 **Tip**: make sure that the black box displaying the details for PDPK1 is closed.	
 
-![GM33](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM33.png?raw=true)  
+![GM34](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM34.png?raw=true)  
 
 ### Exercise 3 - STEP 8
 
 *	Generate and save a report of your results by locating the save  menu  , and selecting “Report”. The PDF report provides a detailed description of your search and results.	
 
-![GM34](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM34.png?raw=true) 
+![GM35](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM35.png?raw=true) 
 
-![GM35](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM35.png?raw=true)  
+![GM36](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM36.png?raw=true)  
 
  
 
@@ -431,7 +431,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 *	Investigate the “history” function by clicking on the related icon  located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
 
-![GM36](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM36.png?raw=true)  
+![GM37](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM37.png?raw=true)  
 
 
 
