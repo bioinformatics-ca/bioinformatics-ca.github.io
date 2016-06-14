@@ -211,7 +211,7 @@ image: CBW_pathway_icon.jpg
   
   [Lecture](https://bioinformatics.ca/pathways-module-5)
   
-  Lab practical:
+  [Lab practical](http://bioinformatics-ca.github.io/PNAOD_module5_lab_genemania_2016/)
   
   [&uarr;](#back_to_top)
 
