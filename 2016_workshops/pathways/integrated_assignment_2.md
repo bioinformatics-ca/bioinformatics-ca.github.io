@@ -24,7 +24,7 @@ The integrated assignment day 1 showed how transcriptomics and pathway analysis 
 
 The gene list for this assignment is the output from MutSig run based on Stomach Adenocarcinoma somatic mutations found in ~300 samples. It is publicly available through TCGA portal. 
 
-File provided: STAD_MutSig.txt
+File provided: [STAD_MutSig.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/STAD_MutSig.txt)
 
 ## Goal
 
@@ -34,9 +34,9 @@ Familiarize yourself with ReactomeFI, learn how to do a pathway and network-base
 
 2.	Choose Apps > ReactomeFI -> Gene set/ mutation analysis
 
-3.	Upload STAD_MutSig.txt and build a network without linkers
+3.	Upload [STAD_MutSig.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/STAD_MutSig.txt) and build a network without linkers
 
-
+![image1](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/in6.png?raw=true)
  
 
 
@@ -62,7 +62,7 @@ Familiarize yourself with ReactomeFI, learn how to do a pathway and network-base
 
 13.	How many interactive partners does CDH1 have in gastric cancer-related network? How many in the whole FI network? (Hint: right click on the node, select Reactome FI > fetch FIs).
 
-14.	Start a new network. Go to Apps > Reactome FIs > GeneSet/ Mutation Analysis  and upload the STAD_MutSig.txt file (as in step1, do not save session). Run network clustering (Hint: Right click on the network panel, choose Apps -> reactome FI -> Cluster FI Network). Nodes colored with the same color belong to the same module. Modules are mutually exclusive meaning that a gene can belong only to one module. 
+14.	Start a new network. Go to Apps > Reactome FIs > GeneSet/ Mutation Analysis  and upload the [STAD_MutSig.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/STAD_MutSig.txt) file (as in step1, do not save session). Run network clustering (Hint: Right click on the network panel, choose Apps -> reactome FI -> Cluster FI Network). Nodes colored with the same color belong to the same module. Modules are mutually exclusive meaning that a gene can belong only to one module. 
 
 How many modules does this network have? 
 
@@ -111,7 +111,7 @@ Functional Interaction Network (FIN, the Reactome FI database) contains ~50% of 
 
 2.	Go App -> GeneMANIA -> Search…
 
-3.	Copy top 30 genes from the STAD_MutSig.txt file (until ODZ1) and paste them into “Genes of interest” window. In Advanced options, set number of related genes (analog to linkers) to 20. Click on the  “START” button.
+3.	Copy top 30 genes from the [STAD_MutSig.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/STAD_MutSig.txt) file (until ODZ1) and paste them into “Genes of interest” window. In Advanced options, set number of related genes (analog to linkers) to 20. Click on the  “START” button.
 
 4.	What kind of conclusions can you make about functional relationships between presented genes based on the network?
 
