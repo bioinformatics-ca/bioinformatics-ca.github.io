@@ -148,7 +148,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
 14)	Save current results  as an iRegulon (iRF) file.
 
-   ●	In the ‘Results Panel’ toolbar, click the ‘Save current results  as an iRegulon (iRF) file’ button  ![Save icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/save.png?raw=true).
+   ●	In the ‘Results Panel’ toolbar, click the ‘Save current results  as an iRegulon (iRF) file’ button  ![Save icon](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod6/save1.png?raw=true).
 
    ●	Choose a name and click the ‘Save’ button.
 
