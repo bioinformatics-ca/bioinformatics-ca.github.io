@@ -53,6 +53,7 @@ Step |	Action |
 9	| Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add. Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network? 	 
 10	| On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular, the aligned, and the force_directed layouts.  	
 11	| Choose your favorite layout and save the  network as an image  using the *Network image As Shown* option from the *save*  menu.  	
+
 ### EXERCISE 1 - STEPS 1-4
 
 Step |	Action |
