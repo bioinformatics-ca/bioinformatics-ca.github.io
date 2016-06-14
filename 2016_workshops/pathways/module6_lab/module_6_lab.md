@@ -66,100 +66,101 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
 5.	In the menu bar, select Apps > iRegulon > Predict regulators and targets. A ‘Predict regulators and targets’ dialog pops up. 
 
-●	Using the default parameters, click the ‘Submit’ button at the bottom of the page. A progress bar will pop up.
+   ●	Using the default parameters, click the ‘Submit’ button at the bottom of the page. A progress bar will pop up.
 
-●	Wait until the running analysis is completed (usually less than 1 min). The progress bar will vanish, and a new right panel, “Results Panel” will be added to the main Cytoscape window.
+   ●	Wait until the running analysis is completed (usually less than 1 min). The progress bar will vanish, and a new right panel, “Results Panel” will be added to the main Cytoscape window.
 
-●	Deselect all nodes by clicking on a blank space of the screen. The nodes are all cyan again.	
+   ●	Deselect all nodes by clicking on a blank space of the screen. The nodes are all cyan again.	
 
 6.	Explore the results. 
 
-●	Locate the ‘Results Panel’ on the right side of the window. 
+   ●	Locate the ‘Results Panel’ on the right side of the window. 
 
-●	Click on the ‘float window’ icon located at the upper right corner. 
+   ●	Click on the ‘float window’ icon located at the upper right corner. 
 
-●	Tip: resize the ‘Result Panel’ window by expanding it horizontally and vertically, so you can see the results and the network simultaneously.
-Tip: mouse over column names to get a tooltip describing their meaning in more detail.	
+   ●	Tip: resize the ‘Result Panel’ window by expanding it horizontally and vertically, so you can see the results and the network simultaneously.
+   
+   ●	Tip: mouse over column names to get a tooltip describing their meaning in more detail.	
 
 7.	Explore the enrichment results in the Motifs tab from the Results Panel. It is a list of all DNA binding motifs that appear in more than one gene region from the prostate cancer gene list. They are ranked by the strongest Normalized Enrichment Score (NES). Some DNA binding motifs in the databases are related to a specific transcription factor, but others are not.
 
-●	Check that ‘Motifs’ is the selected tab of the ‘Results Panel’.
+   ●	Check that ‘Motifs’ is the selected tab of the ‘Results Panel’.
 
-●	Which is the first motif with an associated TF? (Tip: use the information displayed in the “TFs” column).
+   ●	Which is the first motif with an associated TF? (Tip: use the information displayed in the “TFs” column).
 
-●	Click on the row for this motif to display the motif’s sequence logo and related information at the bottom part of Results Panel.
+   ●	Click on the row for this motif to display the motif’s sequence logo and related information at the bottom part of Results Panel.
 
-●	Click on the sequence logo to zoom in on it.
+   ●	Click on the sequence logo to zoom in on it.
 
-●	What are the potential target genes for this TF? (Tip: look at the ‘Target Name’ column). 
+   ●	What are the potential target genes for this TF? (Tip: look at the ‘Target Name’ column). 
 
-Tip: some explanation about the results are located at the end of this document and in more detail in the iRegulon reference paper.	
+   ●	Tip: some explanation about the results are located at the end of this document and in more detail in the iRegulon reference paper.	
 
 8.	Explore the enrichment results in the Tracks tab. It is a list of all ChIP-seq datasets (or “tracks”) sorted by strongest enrichment from genes inour network. 
 
-●	Select the  ‘Tracks’ tab of the ‘Results Panel’.
+   ●	Select the  ‘Tracks’ tab of the ‘Results Panel’.
 
-●	Find a ‘ClusterCode’ assigned to more than one track. What is the name of the associated TF? 
+   ●	Find a ‘ClusterCode’ assigned to more than one track. What is the name of the associated TF? 
 
-●	What is the difference between the two tracks?
+   ●	What is the difference between the two tracks?
 
-●	Compare and contrast the target genes for the two tracks.	
+   ●	Compare and contrast the target genes for the two tracks.	
 
 9.	Explore the enrichment results in the Transcription Factors tabview. Each row is a TF that is a potential co-regulator of the genes in our network. Each row represents a cluster that combines related motifs or tracks or both.
 
-●	Select the ‘Transcription Factors’ tab of the ‘Results Panels’. 
+   ●	Select the ‘Transcription Factors’ tab of the ‘Results Panels’. 
 
-●	Click on ‘MTF1’ and explore the results. 	
+   ●	Click on ‘MTF1’ and explore the results. 	
 
 10.	How did iRegulon perform? Is MTF1 (metal-transcription factor 1) known to be expressed or to play a role in prostate cancer?
 
-Tip: Open your web browser and search the web for [MTF1 “prostate cancer”]. 	
+   ●	Tip: Open your web browser and search the web for [MTF1 “prostate cancer”]. 	
 
 11.	Add MTF1 to the network.
 
-●	Check that the Transcription Factors tab is selected. 
+   ●	Check that the Transcription Factors tab is selected. 
 
-●	Click the MTF1 row to select it.
+   ●	Click the MTF1 row to select it.
 
-●	Click the ‘Add regulator’ icon   located at the upper left corner of the ‘Results Panel’.
-This adds MTF1 to the network as a yellow node, with the edges linking to its 11 potential targets, all highlighted as purple nodes.	
+   ●	Click the ‘Add regulator’ icon   located at the upper left corner of the ‘Results Panel’.  This adds MTF1 to the network as a yellow node, with the edges linking to its 11 potential targets, all highlighted as purple nodes.	
 
 12.	Create a subnetwork to better visualize the predicted targets.
 
-●	Select the MTF1 node in the network by clicking on it. 
+   ●	Select the MTF1 node in the network by clicking on it. 
 
-●	In the Cytoscape toolbar above the network, click the ‘First Neighbors of Selected Nodes’ icon  .MTF1 and its targets are now highlighted in yellow (which means they are selected).
+   ●	In the Cytoscape toolbar above the network, click the ‘First Neighbors of Selected Nodes’ icon  .MTF1 and its targets are now highlighted in yellow (which means they are selected).
 
-●	Use the ‘New network from selection’ icon  to create a subnetwork. 	
+   ●	Use the ‘New network from selection’ icon  to create a subnetwork. 	
 
 13.	Add to the figure information on the types of interactions obtained from GeneMANIA and stored as additional information in the ‘prostate_cancer_genemania_network.txt’ file.
 
-●	In the Control Panel at the left of the window, select the ‘Style’ tab. At the bottom of the panel, select the ‘Edge’ tab. 
+   ●	In the Control Panel at the left of the window, select the ‘Style’ tab. At the bottom of the panel, select the ‘Edge’ tab. 
 
-●	Locate the ‘Stroke Color’ property and click the right triangle to expand the box.
+   ●	Locate the ‘Stroke Color’ property and click the right triangle to expand the box.
 
-●	Change the ‘Column’ field to ‘Network group’
+   ●	Change the ‘Column’ field to ‘Network group’
 
-●	Verify that the  ‘Mapping Type’ field is ‘Discrete Mapping’
+   ●	Verify that the  ‘Mapping Type’ field is ‘Discrete Mapping’
 
-●	For the first interaction type, choose a color by clicking on the ‘Edit color’ button   on the right side of the color field. Choose a color and click the ‘OK’ button. 
+   ●	For the first interaction type, choose a color by clicking on the ‘Edit color’ button   on the right side of the color field. Choose a color and click the ‘OK’ button. 
 
-●	Repeat that step, choosing a different color for each interaction type.
-The edges should now be colored by the types of interactions. 	
+   ●	Repeat that step, choosing a different color for each interaction type. The edges should now be colored by the types of interactions. 	
 
 14.	Save current results  as an iRegulon (iRF) file.
 
-●	In the ‘Results Panel’ toolbar, click the ‘Save current results  as an iRegulon (iRF) file’ button  .
+   ●	In the ‘Results Panel’ toolbar, click the ‘Save current results  as an iRegulon (iRF) file’ button  .
 
-●	Choose a name and click the ‘Save’ button.
-Tip: you can reuse these iRegulon results by loading this iRF file using the ‘Load saved results’ icon  . 	
+   ●	Choose a name and click the ‘Save’ button.
+
+   ●	Tip: you can reuse these iRegulon results by loading this iRF file using the ‘Load saved results’ icon  . 	
 
 15.	Save the Cytoscape session .
 
-●	In the Cytoscape menu bar, select File > Save as.
+   ●	In the Cytoscape menu bar, select File > Save as.
 
-●	Choose a name and click the ‘Save’ button.
-Tip: you can re-open this file later to examine the network further.	
+   ●	Choose a name and click the ‘Save’ button.
+
+   ●	Tip: you can re-open this file later to examine the network further.	
 
 
 
