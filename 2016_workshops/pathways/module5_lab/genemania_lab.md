@@ -44,20 +44,21 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 
 1. Go to GeneMANIA’s homepage at <http://www.genemania.org/>  
 
-2. In the search window, ensure that the model organism is set to *Homo sapiens*.  
+2. In the search window, ensure that the model organism is set to *Homo sapiens* ![homo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Up.png?raw=true).  
 
 3. Enter the following gene: GRN	
 
 4. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true) and wait for the results.	
 
-5. When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). **Tip**: zoom in and zoom out using trackpad or mouse scrolling up and down using the mouse or trackpad or zoom in to the maximum using the  specific icon. 	
+5. When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). **Tip**: zoom in and zoom out using trackpad or mouse scrolling up and down using the mouse or trackpad or zoom in to the maximum using the specific icon ![arrow](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/arrow.png?raw=true).
+ 	
 6. Clicking on a node gives information about the name of gene, the possibility to add, remove this gene or search with this gene only. Click on the GRN node and explore the displayed information. 	
 
-7. Locate the Functions summary tab (bottom left icon). What are the functions significantly associated with  this network?  GRN is the central node of this network: which function would you predict for GRN? How well did GeneMANIA perform (hints: use GeneCards (<http://www.genecards.org/>) , PubMed (<http://www.ncbi.nlm.nih.gov/pubmed/>))?	
+7. Locate the Functions summary tab (bottom left icon ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)). What are the functions significantly associated with  this network?  GRN is the central node of this network: which function would you predict for GRN? How well did GeneMANIA perform (hints: use GeneCards (<http://www.genecards.org/>) , PubMed (<http://www.ncbi.nlm.nih.gov/pubmed/>))?	
 
 8. Locate the gene with the strongest association with GRN. **Tip**: this gene is the largest node on the network. 	
 
-9. Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add. Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network? 	 
+9. Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add. Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)? 	 
 
 10. On the left side of the window are located icons that we haven’t yet explored. The first 3 buttons are activating different network layouts. Try the circular, the aligned, and the force_directed layouts.  	
 
@@ -68,7 +69,7 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 
 * Go to GeneMANIA’s homepage at <http://www.genemania.org/>.	
 
-* In the search window, ensure that the model organism is set to *Homo sapiens*.	
+* In the search window, ensure that the model organism is set to *Homo sapiens* ![homo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Up.png?raw=true).	
 
 * Enter the following gene: GRN.	
 
@@ -78,7 +79,7 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 
 ### EXERCISE 1 - STEP 5
 
-* When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). **Tip**: zoom in and zoom out using trackpad or mouse scrolling up and down using the mouse or trackpad or zoom in to the maximum using the  specific icon ( ) . 	
+* When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). **Tip**: zoom in and zoom out using trackpad or mouse scrolling up and down using the mouse or trackpad or zoom in to the maximum using the specific icon ![arrow](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/arrow.png?raw=true). 	
 
 ![GM2](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM2.png?raw=true) 
  
@@ -97,7 +98,7 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 ### Exercise 1 - STEP 7
 
 
-* Locate the Functions summary tab (bottom left icon  ). What are the functions significantly associated with  this network ?  GRN is the central node of this network: which function would you predict for GRN?
+* Locate the Functions summary tab (bottom left icon  ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)). What are the functions significantly associated with  this network ?  GRN is the central node of this network: which function would you predict for GRN?
 How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/) , pubMed (http://www.ncbi.nlm.nih.gov/pubmed/) )?	
 
 ![GM4](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM4.png?raw=true)  
@@ -113,7 +114,7 @@ How well did GeneMANIA perform (hints: use GeneCards (http://www.genecards.org/)
 ### Execerise 1 - STEP 9
 
 
-* Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add   . Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network ( ) ? 	 
+* Re-run an analysis by adding SORT1, HSPG2 to the search. Click on SORT1, click on Add   . Do the same for HSPG2.  The genes are now added to the search box and a new network is automatically created.  Which functions are associated with this new network ( ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true))? 	 
 
 ![GM5](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM5.png?raw=true)
 
@@ -184,7 +185,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 
 1.	Go to GeneMANIA’s homepage at <http://www.genemania.org/>	
 
-2.	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
+2.	In the search window, ensure that the model organism is set to *Homo sapiens* ![homo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Up.png?raw=true)  .	
 
 3.	Copy and paste genes in the file 30_prostate_cancer_genes.txt  	
 
@@ -198,11 +199,11 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 	
 8.	Highlight all connections corresponding to each network by clicking the name of each network category. Click on  “Shared protein domains” and see which genes are connected by predicted protein protein interaction. You can do the same for “Co-localization” , “Co-expression”  and “Physical interactions”. **Tips**:  these observations of the number of connections make easier to understand why co-expression and shared protein domains get the higher percent weight on this network: they are helping to connect more genes than physical interactions and predicted; A higher weight means that this network helped more to find related genes. 	
 
-9.	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched in this list of prostate genes.	
+9.	Locate the Functions summary tab (bottom left ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)) and look at what functions were  significantly enriched in this list of prostate genes.	
 
 10.	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)  . Explore the results.
 	
-11.	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched with these new settings.	
+11.	Locate the Functions summary tab (bottom left ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)) and look at what functions were  significantly enriched with these new settings.	
 
 12.	Upload a custom network to GeneMANIA: in ‘advanced options’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
 	
@@ -215,7 +216,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 
 1.	Go to GeneMANIA’s homepage at <http://www.genemania.org/>	
 
-2.	In the search window, ensure that the model organism is set to ‘Homo sapiens’.	
+2.	In the search window, ensure that the model organism is set to *Homo sapiens* ![homo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Up.png?raw=true).	
 
 3.	Copy and paste genes in the file 30_prostate_cancer_genes.txt  	
 
@@ -283,7 +284,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 
 ### Exercise 2 - STEP 9
 
-*	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched in this list of prostate genes.	
+*	Locate the Functions summary tab (bottom left ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)) and look at what functions were  significantly enriched in this list of prostate genes.	
 
 ![GM19](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM19.png?raw=true) 
  
@@ -301,7 +302,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 11
 
 
-*	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched with these new settings.	
+*	Locate the Functions summary tab (bottom left ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)) and look at what functions were  significantly enriched with these new settings.	
 
 ![GM22](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM22.png?raw=true)  
 
@@ -350,11 +351,11 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 1.	Go to GeneMANIA’s homepage at <http://www.genemania.org/>.	
 
-2.	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
+2.	In the search window, ensure that the model organism is set to *Homo sapiens* ![homo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Up.png?raw=true)  .	
 
 3.	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results.	
 
-4.	Locate the Functions summary tab (bottom left ) and look at functions returned by GeneMANIA	
+4.	Locate the Functions summary tab (bottom left ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)) and look at functions returned by GeneMANIA	
 
 5.	In the functions summary tab,  check some functions to color genes included in these functions. To follow this tutorial, you can for example color the “response to insulin” , “DNA recombination” and“vitamin transport” functions. **Tip**: You need to scroll down to found DNA recombination and vitamin transport as these pathways have an FDR greater than the one for “response to insulin”. 	
 
@@ -372,7 +373,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 1.	Go to GeneMANIA’s homepage at <http://www.genemania.org/>.	
 
-2.	In the search window, ensure that the model organism is set to ‘Homo sapiens’.	
+2.	In the search window, ensure that the model organism is set to *Homo sapiens* ![homo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Up.png?raw=true).	
 
 3.	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results.	
 
@@ -384,7 +385,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 ### Exercise 3 - STEP 4
 
-*	Locate the Functions summary tab (bottom left ) and look at functions returned by GeneMANIA	
+*	Locate the Functions summary tab (bottom left ![circle](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/circle.png?raw=true)) and look at functions returned by GeneMANIA	
 
 ![GM30](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM30.png?raw=true)  
 
