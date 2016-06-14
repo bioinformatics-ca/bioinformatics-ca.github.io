@@ -40,7 +40,7 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 
 **Skills**: GeneMANIA Single Gene search; Navigating Search Results; Exploring  available Genes features;  Rerun a new analysis using a single gene or multiple genes query from the network.
 
-### Steps
+### STEPS
 
 1. Go to GeneMANIA’s homepage at <http://www.genemania.org/>  
 
@@ -67,8 +67,11 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 
 
 1. Go to GeneMANIA’s homepage at <http://www.genemania.org/>.	
+
 2. In the search window, ensure that the model organism is set to *Homo sapiens*.	
+
 3. Enter the following gene: GRN.	
+
 4. Click on the search icon and wait for the results.	
 
  
@@ -150,7 +153,7 @@ Force directed layout
  
 
 
-Notes about biological interpretation of the results: 
+**Notes** about biological interpretation of the results: 
 
 The top functions predicted by GeneMANIA for GRN were related to lysosome and vacuole.  A pubmed search could confirm these results: “We experimentally verified that granulin precursor (GRN) gene, whose mutations cause frontotemporal lobar degeneration, is involved in lysosome function.” (Transcriptional gene network inference from a massive dataset elucidates transcriptome organization and gene function. Belcastro et al. Nucleic Acids Res. 2011 Nov 1;39(20):8677-88. 2011. PMID:21785136)
 
@@ -164,11 +167,11 @@ Targeted manipulation of the sortilin–progranulin axis rescues progranulin hap
 
 To start this exercise, you need to download the “30_prostate_cancer_genes.txt” file from the course wiki and save it on your computer. 
 
-      For this exercise, you are working with a list of 30 prostate cancer genes. This list can be downloaded after the workshop from the cBioPortal website (http://www.cbioportal.org/) under the download section, user defined list. The cBioPortal for Cancer Genomics stores genomic data from large scale, integrated cancer genomic data sets. During this exercise, you will explore the types of networks that have been used to create the GeneMANIA network from the prostate cancer gene list and you will see how changing input parameters can affect the results. The last step of the exercise consists of uploading a custom network which is a list of genes that are positively correlated with CYP11B1 in mRNA expression data of 94 prostate cancer samples (http://www.cbioportal.org/) .
+For this exercise, you are working with a list of 30 prostate cancer genes. This list can be downloaded after the workshop from the cBioPortal website (http://www.cbioportal.org/) under the download section, user defined list. The cBioPortal for Cancer Genomics stores genomic data from large scale, integrated cancer genomic data sets. During this exercise, you will explore the types of networks that have been used to create the GeneMANIA network from the prostate cancer gene list and you will see how changing input parameters can affect the results. The last step of the exercise consists of uploading a custom network which is a list of genes that are positively correlated with CYP11B1 in mRNA expression data of 94 prostate cancer samples (http://www.cbioportal.org/) .
 
 **Skills**: GeneMANIA search using a gene list; Navigating Search Results; Exploring  Networks and advanced options; Uploading a custom network. 
 
-### Steps
+### STEPS
 
 1.	Go to GeneMANIA’s homepage at <http://www.genemania.org/>	
 
@@ -180,9 +183,9 @@ To start this exercise, you need to download the “30_prostate_cancer_genes.txt
 
 5.	When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). Move nodes around by selecting them with a mouse to investigate how they are connected.
 	
-6.	Click any link (edge) connecting two nodes to highlight information about it. Note: Clicking on an edge between 2 nodes will display information about all interaction networks that connect  these 2 nodes. It indicates the reference (publication) for these interactions. The colors indicate the type of interaction (co-expression, shared protein domains, co-localization, physical interactions and predicted). 
+6.	Click any link (edge) connecting two nodes to highlight information about it. **Note**: Clicking on an edge between 2 nodes will display information about all interaction networks that connect  these 2 nodes. It indicates the reference (publication) for these interactions. The colors indicate the type of interaction (co-expression, shared protein domains, co-localization, physical interactions and predicted). 
 	
-7.	Locate the Networks summary tab (on the right ) and look at what data has been used to create the network and predictions. Note that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. At the top of the Networks summary tab, try Expand “none”, then “top” and “all”  to get information about the sources of the different networks. 
+7.	Locate the Networks summary tab (on the right ) and look at what data has been used to create the network and predictions. **Note**that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. At the top of the Networks summary tab, try Expand “none”, then “top” and “all”  to get information about the sources of the different networks. 
 	
 8.	Highlight all connections corresponding to each network by clicking the name of each network category. Click on  “Shared protein domains” and see which genes are connected by predicted protein protein interaction. You can do the same for “Co-localization” , “Co-expression”  and “Physical interactions”. **Tips**:  these observations of the number of connections make easier to understand why co-expression and shared protein domains get the higher percent weight on this network: they are helping to connect more genes than physical interactions and predicted; A higher weight means that this network helped more to find related genes. 	
 
@@ -198,14 +201,16 @@ To start this exercise, you need to download the “30_prostate_cancer_genes.txt
 
 
 
-Exercise 2 - Steps 1 to 4
+### Exercise 2 - STEPS 1 to 4
 
-Step |	Action |
---- | --- |
-1	Go to GeneMANIA’s homepage at http://www.genemania.org/	
-2	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
-3	Copy and paste genes in the file 30_prostate_cancer_genes.txt  	
-4	Click on the search icon    and wait for the results.	
+
+1.	Go to GeneMANIA’s homepage at <http://www.genemania.org/>	
+
+2.	In the search window, ensure that the model organism is set to ‘Homo sapiens’.	
+
+3.	Copy and paste genes in the file 30_prostate_cancer_genes.txt  	
+
+4.	Click on the search icon    and wait for the results.	
 
  
 
@@ -222,36 +227,28 @@ Step |	Action |
 
 
 
-Exercise 2 . Step 5
+### Exercise 2 - STEP 5
 
-Step |	Action |
---- | --- |
-5	When your search results load, examine the network. 
-Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). Move nodes around by selecting them with a mouse to investigate how they are connected.
+
+5.	When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). Move nodes around by selecting them with a mouse to investigate how they are connected.
 	
 
  
 
-Exercise 2. Step 6.
+### Exercise 2 - STEP 6.
 
-Step |	Action |
---- | --- |
-6	Click any link (edge) connecting two nodes to highlight information about it. 
-Note: Clicking on an edge between 2 nodes will display information about all interaction networks that connect  these 2 nodes. It indicates the reference (publication) for these interactions. The colors indicate the type of interaction (co-expression, shared protein domains, co-localization, physical interactions and predicted). 
+
+6.	Click any link (edge) connecting two nodes to highlight information about it. **Note**: Clicking on an edge between 2 nodes will display information about all interaction networks that connect  these 2 nodes. It indicates the reference (publication) for these interactions. The colors indicate the type of interaction (co-expression, shared protein domains, co-localization, physical interactions and predicted). 
 	
 
  
 
 
 
-Exercise 2. Step 7
+### Exercise 2 - STEP 7
 
-Step |	Action |
---- | --- |
-7	Locate the Networks summary tab (on the right ) and look at what data
-has been used to create the network and predictions.
-Note that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. 
-At the top of the Networks summary tab, try Expand “none”, then “top” and “all”  to get information about the sources of the different networks. 
+
+7.	Locate the Networks summary tab (on the right ) and look at what data has been used to create the network and predictions. **Note** that Co-expression (purple colored lines, weight over 30%) and Shared protein domains (lightgold colored  lines, weight over 30%) influence the results the most, but Co-localization (blue colored lines), Physical interactions (salmon colored lines) and Predicted (orange) data are also included. At the top of the Networks summary tab, try Expand “none”, then “top” and “all”  to get information about the sources of the different networks. 
 	
 
 
@@ -264,49 +261,42 @@ At the top of the Networks summary tab, try Expand “none”, then “top” an
 
 
 
-Exercise 2 - Step 8
+### Exercise 2 - STEP 8
 
-Step |	Action |
---- | --- | 
-8	Highlight all connections corresponding to each network by clicking the name of each network category. Click on  “Shared protein domains” and see which genes are connected by predicted protein protein interaction. You can do the same for “Co-localization” , “Co-expression”  and “Physical interactions”. 
-**Tips**:  these observations of the number of connections make easier to understand why co-expression and shared protein domains get the higher percent weight on this network: they are helping to connect more genes than physical interactions and predicted; A higher weight means that this network helped more to find related genes. 	
+
+8.	Highlight all connections corresponding to each network by clicking the name of each network category. Click on  “Shared protein domains” and see which genes are connected by predicted protein protein interaction. You can do the same for “Co-localization” , “Co-expression”  and “Physical interactions”. **Tips**:  these observations of the number of connections make easier to understand why co-expression and shared protein domains get the higher percent weight on this network: they are helping to connect more genes than physical interactions and predicted; A higher weight means that this network helped more to find related genes. 	
 
 
  
 
-Exercise 2 - Step 9
+### Exercise 2 - STEP 9
 
-Step |	Action |
---- | --- |
-9	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched in this list of prostate genes.	
+9.	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched in this list of prostate genes.	
 
 
  
-Exercise 2 - Step 10
+### Exercise 2 - STEP 10
 
-Step |	Action |
---- | --- |
-10	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon  . Explore the results.
-`	
+
+10.	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon  . Explore the results.
+	
 
  
 
 
  
 
-Exercise 2 - Step 11
+### Exercise 2 - STEP 11
 
-Step |	Action |
---- | --- |
-11	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched with these new settings.	
+
+11.	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched with these new settings.	
 
  
 
-Exercise - Step 12
+### Exercise - STEP 12
 
-Step |	Action |
---- | --- |
-12	Upload a custom network to GeneMANIA: in ‘advanced options  ’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
+
+12.	Upload a custom network to GeneMANIA: in ‘advanced options’, click on “Upload network…” and browse your computer to locate and select the file “CYB11B_pearson_correlation_prostate.txt”. Wait about a minute for the network to be uploaded.  Explore the results and locate the genes linked by the custom network (**tip**: click on “Uploaded” in the Networks tab). 
 	
 
  
@@ -317,11 +307,10 @@ Step |	Action |
 
  
 
-Exercise 2 - Step 13.
+### Exercise 2 - STEP 13.
 
-Step |	Action |
---- | --- |
-13	Try additional parameters of the ‘advanced options ’ by selecting “Customise advanced options’‘ and look at how the changes you made influenced the results. For example change ‘Network weighting’ method or ‘Max resultant genes: ’.  	
+
+13.	Try additional parameters of the ‘advanced options ’ by selecting “Customise advanced options’‘ and look at how the changes you made influenced the results. For example change ‘Network weighting’ method or ‘Max resultant genes: ’.  	
 
  
 How to get the 30 prostate cancer gene list:
@@ -330,82 +319,93 @@ How to get the 30 prostate cancer gene list:
 
 
 
-EXERCISE 3
+## EXERCISE 3
 
 To start this exercise, you need to download the “mixed_gene_list.txt” file from the course wiki and save it on your computer. 
 
 For this exercise, you are working on a gene list created by combining 3 user defined gene lists available from the cBioportal (http://www.cbioportal.org). It contains genes implicated in the DNA damage response, the PI3K-AKT-mTOR signaling pathway and Folate transport. This list is representative of a gene list obtained from transcriptomics data. During this exercise, we will first characterize our gene list based on functions and then we  will add potential drug and microRNAs targeting genes in the network, and we will save the report.
 
 
-Skills: GeneMANIA search using a gene list; Navigating Search Results; Exploring  Functions; Adding attributes; Create a report. 
-  
-Step	Action	Check  
-Step |	Action | Check |
---- | --- | --- |
-1	Go to GeneMANIA’s homepage at http://www.genemania.org/	
-3	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
-4	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon    and wait for the results.	
-5	Locate the Functions summary tab (bottom left ) and look at functions returned by GeneMANIA	
-6	In the functions summary tab,  check some functions to color genes included in these functions. To follow this tutorial, you can for example color the “response to insulin” , “DNA recombination” and“vitamin transport” functions. **Tip**: You need to scroll down to found DNA recombination and vitamin transport as these pathways have an FDR greater than the one for “response to insulin”. 	
-7	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon    and wait for the results. Explore the network.
+**Skills**: GeneMANIA search using a gene list; Navigating Search Results; Exploring  Functions; Adding attributes; Create a report. 
+
+### STEPS  
+
+1.	Go to GeneMANIA’s homepage at <http://www.genemania.org/>.	
+
+2.	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
+
+3.	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon    and wait for the results.	
+
+4.	Locate the Functions summary tab (bottom left ) and look at functions returned by GeneMANIA	
+
+5.	In the functions summary tab,  check some functions to color genes included in these functions. To follow this tutorial, you can for example color the “response to insulin” , “DNA recombination” and“vitamin transport” functions. **Tip**: You need to scroll down to found DNA recombination and vitamin transport as these pathways have an FDR greater than the one for “response to insulin”. 	
+
+6.	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon    and wait for the results. Explore the network. **Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
+
+7.	Locate our favorite gene PDPK1 on the network, select it by moving the mouse cursor to its node and wait there for a second. It will highlight this gene and all its connections. **Tip**: make sure that the black box displaying the details for PDPK1 is closed.	
+
+8.	Generate and save a report of your results by locating the save  menu  , and selecting “Report”. The PDF report provides a detailed description of your search and results.	
+
+9.	Investigate the “history” function by clicking on the related icon  located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
+
+
+
+### Exercise 3 - STEPS 1 - 3
+
+1.	Go to GeneMANIA’s homepage at <http://www.genemania.org/>.	
+
+2.	In the search window, ensure that the model organism is set to ‘Homo sapiens’.	
+
+3.	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon    and wait for the results.	
+
+ 
+
+ 
+
+### Exercise 3 - STEP 4
+
+4.	Locate the Functions summary tab (bottom left ) and look at functions returned by GeneMANIA	
+
+ 
+
+
+### Exercise 3 - STEP 5
+
+5.	In the functions summary tab,  check some functions to color genes included in these functions. To follow this tutorial, you can for example color the “response to insulin” , “DNA recombination” and“vitamin transport” functions. **Tip**: You need to scroll down to found DNA recombination and vitamin transport as these pathways have an FDR greater than the one for “response to insulin”. 	
+
+ 
+
+
+### Exercise 3 - STEPS 6 
+
+6.	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon    and wait for the results. Explore the network.
 
 **Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
-8	Locate our favorite gene PDPK1 on the network, select it by moving the mouse cursor to its node and wait there for a second. It will highlight this gene and all its connections. 
-**Tip**: make sure that the black box displaying the details for PDPK1 is closed.	
-9	Generate and save a report of your results by locating the save  menu  , and selecting “Report”. The PDF report provides a detailed description of your search and results.	
-10	Investigate the “history” function by clicking on the related icon  located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
-
-
-
-Steps 1- 4
-1	Go to GeneMANIA’s homepage at http://www.genemania.org/	
-3	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
-4	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon    and wait for the results.	
-
- 
-
- 
-
-Step 5
-5	Locate the Functions summary tab (bottom left ) and look at functions returned by GeneMANIA	
-
- 
-
-
-Step 6
-6	In the functions summary tab,  check some functions to color genes included in these functions. To follow this tutorial, you can for example color the “response to insulin” , “DNA recombination” and“vitamin transport” functions. **Tip**: You need to scroll down to found DNA recombination and vitamin transport as these pathways have an FDR greater than the one for “response to insulin”. 	
-
- 
-
-
-Steps 7 
-7	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon    and wait for the results. Explore the network.
-
-**Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
 
  
 
  
 
 
-Step 8
-8	Locate our favorite gene PDPK1 on the network, select it by moving the mouse cursor to its node and wait there for a second. It will highlight this gene and all its connections. 
+### Exercise 3 - STEP 7
+
+7.	Locate our favorite gene PDPK1 on the network, select it by moving the mouse cursor to its node and wait there for a second. It will highlight this gene and all its connections. 
 **Tip**: make sure that the black box displaying the details for PDPK1 is closed.	
 
  
 
-Step 9
+### Exercise 3 - STEP 8
 
-9	Generate and save a report of your results by locating the save  menu  , and selecting “Report”. The PDF report provides a detailed description of your search and results.	
-
- 
+8.	Generate and save a report of your results by locating the save  menu  , and selecting “Report”. The PDF report provides a detailed description of your search and results.	
 
  
 
+ 
 
-Step 10
 
-10	Investigate the “history” function by clicking on the related icon  located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
+### Exercise 3 - STEP 9
+
+9.	Investigate the “history” function by clicking on the related icon  located at the bottom of the window. A panel pops up showing the past networks generated by GeneMANIA. Clicking on one panel will relaunch the search for this network. 	
 
  
 
@@ -460,7 +460,7 @@ in Functions tab:
 *	The attributes represent  the differences sources of evidence that can be used to build the network.
 
 
-Notes:
+**Notes**:
 
 *	prostate cancer gene list is “AKR1C3 AR CYB5A CYP11A1 CYP11B1 CYP11B2 CYP17A1 CYP19A1 CYP21A2 HSD17B1 HSD17B10 HSD17B11 HSD17B12 HSD17B13 HSD17B14 HSD17B2 HSD17B3 HSD17B4 HSD17B6 HSD17B7 HSD17B8 HSD3B1 HSD3B2 HSD3B7 RDH5 SHBG SRD5A1 SRD5A3 STAR”.
 
