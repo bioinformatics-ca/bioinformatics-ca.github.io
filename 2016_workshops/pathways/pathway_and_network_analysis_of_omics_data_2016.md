@@ -227,6 +227,8 @@ Your feedback is important to us!  Please fill out [our survey](https://www.surv
 
 [Integrated Assignment: Reactome FI and GeneMANIA](http://bioinformatics-ca.github.io/PNAOD_integrated_assingment_2_2016/)
 
+[Answers](https://bioinformatics.ca/pathways-integrated-assignment-2-answers-2016)
+
 [&uarr;](#back_to_top)
 
 ***
