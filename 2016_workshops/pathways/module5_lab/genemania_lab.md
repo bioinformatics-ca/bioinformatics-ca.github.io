@@ -48,7 +48,7 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 
 3. Enter the following gene: GRN	
 
-4. Click on the search icon and wait for the results.	
+4. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true) and wait for the results.	
 
 5. When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). **Tip**: zoom in and zoom out using trackpad or mouse scrolling up and down using the mouse or trackpad or zoom in to the maximum using the  specific icon. 	
 6. Clicking on a node gives information about the name of gene, the possibility to add, remove this gene or search with this gene only. Click on the GRN node and explore the displayed information. 	
@@ -72,7 +72,7 @@ NOTE: Network layouts are flexible and can be rearranged. What you see when you 
 
 * Enter the following gene: GRN.	
 
-* Click on the search icon and wait for the results.	
+* Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true) and wait for the results.	
 
 ![GM1](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM1.png?raw=true) 
 
@@ -188,7 +188,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 
 3.	Copy and paste genes in the file 30_prostate_cancer_genes.txt  	
 
-4.	Click on the search icon and wait for the results.	
+4.	Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true) and wait for the results.	
 
 5.	When your search results load, examine the network. Genes you searched with are indicated with stripes, related genes added by GeneMANIA are represented in black, and colored links represent the interactions that connect the nodes (genes). Move nodes around by selecting them with a mouse to investigate how they are connected.
 	
@@ -200,7 +200,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 
 9.	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched in this list of prostate genes.	
 
-10.	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon  . Explore the results.
+10.	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)  . Explore the results.
 	
 11.	Locate the Functions summary tab (bottom left ) and look at what functions were  significantly enriched with these new settings.	
 
@@ -219,7 +219,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 
 3.	Copy and paste genes in the file 30_prostate_cancer_genes.txt  	
 
-4.	Click on the search icon    and wait for the results.	
+4.	Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results.	
 
 ![GM12](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM12.png?raw=true)  
 
@@ -290,7 +290,7 @@ For this exercise, you are working with a list of 30 prostate cancer genes. This
 ### Exercise 2 - STEP 10
 
 
-*	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon  . Explore the results.
+*	“Shared protein domains” is an important part of the network. What would be the GeneMANIA results if we don’t include this source when we run GSEA? Click on ‘Show advanced option   ’ which is located at the right of the search box. Uncheck ‘Shared protein domains’ and click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)  . Explore the results.
 	
 ![GM20](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM20.png?raw=true) 
  
@@ -352,13 +352,13 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 2.	In the search window, ensure that the model organism is set to ‘Homo sapiens’  .	
 
-3.	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon    and wait for the results.	
+3.	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results.	
 
 4.	Locate the Functions summary tab (bottom left ) and look at functions returned by GeneMANIA	
 
 5.	In the functions summary tab,  check some functions to color genes included in these functions. To follow this tutorial, you can for example color the “response to insulin” , “DNA recombination” and“vitamin transport” functions. **Tip**: You need to scroll down to found DNA recombination and vitamin transport as these pathways have an FDR greater than the one for “response to insulin”. 	
 
-6.	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon    and wait for the results. Explore the network. **Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
+6.	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results. Explore the network. **Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
 
 7.	Locate our favorite gene PDPK1 on the network, select it by moving the mouse cursor to its node and wait there for a second. It will highlight this gene and all its connections. **Tip**: make sure that the black box displaying the details for PDPK1 is closed.	
 
@@ -374,7 +374,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 2.	In the search window, ensure that the model organism is set to ‘Homo sapiens’.	
 
-3.	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon    and wait for the results.	
+3.	Copy and paste genes in the file “mixed_gene_list.txt”. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results.	
 
 ![GM28](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/GM28.png?raw=true) 
 
@@ -398,7 +398,7 @@ For this exercise, you are working on a gene list created by combining 3 user de
 
 ### Exercise 3 - STEPS 6 
 
-*	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon    and wait for the results. Explore the network.
+*	We are going next to add miRs and drug interaction networks. Click on ‘Show advanced option   ’ which is located at the right of the search box. Check “Drug-interactions-2013” and “miRNA-target-predictions-2013” as “Attributes”. Check “Physical interactions” and “Co-expression” . Click on “Customise advanced options”. Set “Max resultant genes” to 20 and “Max resultant attributes” to 40. Click on the search icon ![search](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/pathways/img/mod5/Search.png?raw=true)    and wait for the results. Explore the network.
 
 **Tips**: the Drug-interactions and miRNA-target-predictions nodes are displayed in gray. The nodes connected to a drug are genes that are targeted by the drug and nodes connected to a  microRNA (miR) are genes predicted to be targeted by this miR.	
 
@@ -491,5 +491,4 @@ in Functions tab:
 *	mixed gene list is AKT1 AKT1S1 AKT2 ATM ATR BRCA1 BRCA2 CHEK1 CHEK2 FANCF FOLR1 FOLR2 FOLR3 FOXO1 FOXO3 MDC1 MLH1 MLST8 MSH2 MTOR PARP1 PDPK1 PIK3CA PIK3R1 PIK3R2 PTEN RAD51 RHEB RICTOR RPTOR SLC19A1 TSC1 TSC2
 
 *	**Tip**: look at GeneMANIA help pages when you run an analysis on your own after the workshop: <http://pages.genemania.org/help/>.
-
 
