@@ -161,7 +161,19 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/rnaseq-module-1-2016)
   
+#### Module 1 Lab  
+  
   [Lab practical](https://bioinformatics.ca/rnaseq-module-1-lab-2016)
+  
+  [Reference Genomes](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reference-Genome)
+  
+  [Annotations](https://github.com/griffithlab/rnaseq_tutorial/wiki/Annotation)
+  
+  [Indexing](https://github.com/griffithlab/rnaseq_tutorial/wiki/Indexing)
+  
+  [Data](https://github.com/griffithlab/rnaseq_tutorial/wiki/RNAseq-Data)
+  
+  [Data QC](https://github.com/griffithlab/rnaseq_tutorial/wiki/PreAlignment-QC)
 
 [&uarr;](#back_to_top)
 
@@ -171,7 +183,19 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/rnaseq-module-2-2016)
   
+#### Module 2 Lab  
+  
   [Lab practical](https://bioinformatics.ca/rnaseq-module-2-lab-2016)
+  
+  [Adapter Trim](https://github.com/griffithlab/rnaseq_tutorial/wiki/Adapter-Trim)
+  
+  [Alignment](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment)
+  
+  [IGV](https://github.com/griffithlab/rnaseq_tutorial/wiki/IGV-Tutorial)
+
+  [Alignment Visualization](https://github.com/griffithlab/rnaseq_tutorial/wiki/PostAlignment-Visualization)
+  
+  [Alignment QC](https://github.com/griffithlab/rnaseq_tutorial/wiki/PostAlignment-QC)
 
 [&uarr;](#back_to_top)  
   
@@ -195,7 +219,15 @@ Assignment Answers:
   
   [Lecture](https://bioinformatics.ca/rnaseq-module-3-2016)
   
+#### Module 3 Lab  
+  
  [Lab practical](https://bioinformatics.ca/rnaseq-module-3-lab-2016)
+ 
+ [Expression](https://github.com/griffithlab/rnaseq_tutorial/wiki/Expression)
+ 
+ [Differential Expression](https://github.com/griffithlab/rnaseq_tutorial/wiki/Differential-Expression)
+ 
+ [DE Visualization](https://github.com/griffithlab/rnaseq_tutorial/wiki/DE-Visualization)
 
 [&uarr;](#back_to_top)
 
@@ -205,7 +237,19 @@ Assignment Answers:
   
   [Lecture](https://bioinformatics.ca/rnaseq-module-4-2016)
   
+#### Module 4 Lab
+  
   [Lab Practical](https://bioinformatics.ca/rnaseq-module-4-lab-2016)
+  
+  [Ref Guided](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reference-Guided-Transcript-Assembly)
+  
+  [De novo](https://github.com/griffithlab/rnaseq_tutorial/wiki/de-novo-Transcript-Assembly)
+  
+  [Merging](https://github.com/griffithlab/rnaseq_tutorial/wiki/Transcript-Assembly-Merge)
+  
+  [Differential Splicing](https://github.com/griffithlab/rnaseq_tutorial/wiki/Differential-Splicing)
+  
+  [Splicing Visualization](https://github.com/griffithlab/rnaseq_tutorial/wiki/Transcript-Assembly-Visualization)
 
 [&uarr;](#back_to_top)
 
@@ -213,7 +257,7 @@ Assignment Answers:
 
   *<font color="827e9c">Obi Griffith</font>*
   
-  Lecture:
+  [Kallisto](https://github.com/griffithlab/rnaseq_tutorial/wiki/Kallisto)
 
 [&uarr;](#back_to_top)
 
