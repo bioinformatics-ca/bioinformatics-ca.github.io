@@ -7,7 +7,7 @@ header2: Integrated Assignment 2
 image: CBW_Metagenome_icon.jpg
 ---
 
-#Answers to Integrated Assignment Day 2
+# Answers to Integrated Assignment Day 2
 
 Q1) How many total sample files do we have?
 
