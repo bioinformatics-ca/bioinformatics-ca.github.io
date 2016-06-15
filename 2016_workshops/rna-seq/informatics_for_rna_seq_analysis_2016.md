@@ -41,7 +41,7 @@ image: CBW_RNA_seq_icon.jpg
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/informatics_for_rna_seq_analysis_2016/">Schedule for June 16 to June 17, 2016</a>
+  <a href="http://bioinformatics-ca.github.io/informatics_for_rna_seq_analysis_schedule_2016/">Schedule for June 16 to June 17, 2016</a>
 
 [&uarr;](#back_to_top)
 
