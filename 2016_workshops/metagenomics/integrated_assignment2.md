@@ -14,8 +14,11 @@ Q1) How many total sample files do we have?
 A1: There are two ways to do this:
 
 • List and count the number of \*.fasta files we have in our folder
+
 • `ls *.fasta | wc`
+
 • Count the lines in the metadata file. Each row in the metadata file corresponds to one sample. Remember to subtract 1 as the first row contains the headers
+
 • `wc metadata-file-for-osd-subset-210615.txt`
 
 Q2) How many sequences does the sample from OSD station 10 contain?
@@ -74,7 +77,9 @@ You can do the same for the top 3 abundance values. The corresponding top 3 modu
 follows:
 
 M00185: Sulfate transport system   
+
 M00039: Lignin biosynthesis, cinnamate => lignin   
+
 M00235: Arginine/ornithine transport system   
 
 Q9) In the STAMP analysis of the Humann results using a two group test with no multiple
