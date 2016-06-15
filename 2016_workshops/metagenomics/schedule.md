@@ -23,7 +23,7 @@ image: CBW_Metagenome_icon.jpg
 | 1:30 | Module 2 Lab | 1:30 | Module 5: Metagenomic Functional Composition (Langille) | 1:30 | Module 7: Biomarker Selection (Brinkman) |
 | | | 2:30 | Module 5 Lab | | |
 | 3:00 | *Coffee Break* | 3:00 | *Coffee Break* | 3:00 | Survey and Closing Remarks
-| 3:30 | Module 3: PICRUSt (Langille) | Module 5 Lab continued | | |
+| 3:30 | Module 3: PICRUSt (Langille) | 3:30 | Module 5 Lab continued | | |
 | 4:00 | Module 3 Lab | | | | |
 | 5:00 | Integrated Assignment 1 | 5:00 | Integrated Assignment 2 | | |
 
