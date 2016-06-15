@@ -96,3 +96,5 @@ Q12) Change the p-value to 0.001 and create an “Extended error bar” plot and
 a .png using the File->Save Plot option.
 
 A12:
+
+![A12](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/metagenomics/integrated_assignment2_image.jpg?raw=true)
