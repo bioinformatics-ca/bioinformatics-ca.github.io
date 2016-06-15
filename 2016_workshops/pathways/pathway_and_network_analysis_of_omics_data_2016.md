@@ -249,7 +249,7 @@ Your feedback is important to us!  Please fill out [our survey](https://www.surv
 
 [Lab practical](http://bioinformatics-ca.github.io/PNAOD_module6_lab_iRegulon_2016/)
 
-[Precomputed results](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module6_lab/prostate_cancer_genemania_network.cys)
+[Precomputed results cys file](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module6_lab/prostate_cancer_genemania_network.cys) and [Precomputed results irf file](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module6_lab/iregulon_results.irf)
 
 To use the precomputed results: 
 
@@ -257,7 +257,7 @@ To use the precomputed results:
 
 2) open the "prostate_cancer_genemania_network.cys" file 
 
-3) go to App > iRegulon > 'Load results from file...'
+3) go to App > iRegulon > 'Load results from the iregulon_results.irf file'
 
 
 [&uarr;](#back_to_top)  
