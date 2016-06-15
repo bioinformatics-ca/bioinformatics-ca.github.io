@@ -52,7 +52,7 @@ image: CBW_Metagenome_icon.jpg
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
-  Post your workshop questions <a href="http://todaysmeet.com/Metagenomics2016">here</a>!
+  Post your workshop questions <a href="https://noteapp.com/Metagenomics2016">here</a>!
 
 [&uarr;](#back_to_top)
 
