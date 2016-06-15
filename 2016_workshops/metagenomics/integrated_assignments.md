@@ -349,7 +349,7 @@ Assignment 1 Questions
 
 8) Exploring the data: Some questions require a bit of mucking through data files to be answered. Being able to navigate through the maze of files you have created is essential. In your OTU table (either the rarefied or the normal OTU table), there should be a relatively large OTU of [genus *Sediminicola*](http://www.bacterio.net/sediminicola.html). Find this OTU in your OTU table, and then track down the sequence of this OTU. Using [NCBI's BLAST tool](http://blast.ncbi.nlm.nih.gov/Blast.cgi), align this sequence against the NR database and exclude uncultured organisms. Does the classification given by RDP seem correct?
 
-[Integrated assignment Day 1 Answer Key](Metagenomics_IntegratedAssignment_AnswerKey "wikilink")
+[Integrated assignment Day 1 Answer Key](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_integrated_assignment1_2016/)
 ------------------------------------------------------------------------------------------------
 
 Integrated Assignment - Day \#2
@@ -628,5 +628,5 @@ Day 2 assigment questions
 
 -   12) Change the p-value to 0.001 and create an “Extended error bar” plot and save the image as a .png using the File-&gt;Save Plot option.
 
-![](pdf.gif "fig:pdf.gif") [Integrated assignment Day 2 Answer Key](Media:Cbw-workshop-assignment-key.pdf "wikilink")
+[Integrated assignment Day 2 Answer Key](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_integrated_assignment1_2016/)
 ---------------------------------------------------------------------------------------------------------------------
