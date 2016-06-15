@@ -1,9 +1,9 @@
 ---
 layout: post2
-permalink: /analysis_of_metagenomic_data_integrated_assignment1_2016/
+permalink: /analysis_of_metagenomic_data_integrated_assignment2_2016/
 title: Analysis of Metagenomic Data 2016 Student Page
 header1: Analysis of Metagenomic Data 2016
-header2: Integrated Assignment 1
+header2: Integrated Assignment 2
 image: CBW_Metagenome_icon.jpg
 ---
 
