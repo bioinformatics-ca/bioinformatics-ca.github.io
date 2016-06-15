@@ -47,7 +47,7 @@ image: CBW_RNA_seq_icon.jpg
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
-  Post your workshop questions <a href="http://todaysmeet.com/RNASeq2016">here</a>!
+  Post your workshop questions <a href="http://noteapp.com/RNASeq2016">here</a>!
 
 [&uarr;](#back_to_top)
 
@@ -151,9 +151,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="827e9c">Obi Griffith</font>*
   
-  Lecture:
-  
-  Lab practical:
+  [Lecture](https://bioinformatics.ca/rnaseq-module-0-2016)
 
 [&uarr;](#back_to_top)
 
@@ -161,9 +159,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="827e9c">Malachi Griffith</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/rnaseq-module-1-2016)
   
-  Lab practical:
+  [Lab practical](https://bioinformatics.ca/rnaseq-module-1-lab-2016)
 
 [&uarr;](#back_to_top)
 
@@ -171,9 +169,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="827e9c">Fouad Yousif</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/rnaseq-module-2-2016)
   
-  Lab practical
+  [Lab practical](https://bioinformatics.ca/rnaseq-module-2-lab-2016)
 
 [&uarr;](#back_to_top)  
   
@@ -195,9 +193,9 @@ Assignment Answers:
 
   *<font color="827e9c">Obi Griffith</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/rnaseq-module-3-2016)
   
-  Lab practical:
+ [Lab practical](https://bioinformatics.ca/rnaseq-module-3-lab-2016)
 
 [&uarr;](#back_to_top)
 
@@ -205,9 +203,9 @@ Assignment Answers:
 
   *<font color="827e9c">Malachi Griffith</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/rnaseq-module-4-2016)
   
-  Lab Practical:
+  [Lab Practical](https://bioinformatics.ca/rnaseq-module-4-lab-2016)
 
 [&uarr;](#back_to_top)
 
