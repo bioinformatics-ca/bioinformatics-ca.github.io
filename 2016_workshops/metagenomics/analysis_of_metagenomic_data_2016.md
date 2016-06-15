@@ -58,7 +58,7 @@ image: CBW_Metagenome_icon.jpg
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
-  Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/ht-seq/laptop_setup_instructions.pdf">here</a>.
+  Instructions to setup your laptop can be found <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/metagenomics/laptop_instructions.md">here</a>.
 
 [&uarr;](#back_to_top)
 
