@@ -628,5 +628,5 @@ Day 2 assigment questions
 
 -   12) Change the p-value to 0.001 and create an “Extended error bar” plot and save the image as a .png using the File-&gt;Save Plot option.
 
-[Integrated assignment Day 2 Answer Key](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_integrated_assignment1_2016/)
+[Integrated assignment Day 2 Answer Key](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_integrated_assignment2_2016/)
 ---------------------------------------------------------------------------------------------------------------------
