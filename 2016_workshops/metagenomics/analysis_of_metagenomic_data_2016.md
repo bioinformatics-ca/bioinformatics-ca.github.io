@@ -46,7 +46,7 @@ image: CBW_Metagenome_icon.jpg
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/2016_workshops/metagenomics/Metagenomics_2016_Schedule_v1.pdf">Schedule for June 22 to June 24, 2016</a>
+  <a href="http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_schedule_2016/">Schedule for June 22 to June 24, 2016</a>
 
 [&uarr;](#back_to_top)
 
