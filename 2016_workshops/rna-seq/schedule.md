@@ -1,6 +1,6 @@
 ---
 layout: post2
-permalink: /informatics_for_rna_seq_analysis_2016/
+permalink: /informatics_for_rna_seq_analysis_schedule_2016/
 title: Informatics for RNA-Seq Analysis 2016 Schedule
 header1: Informatics for RNA-Seq Analysis 2016
 header2: Schedule
