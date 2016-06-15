@@ -153,7 +153,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 *<font color="#827e9c">Thea Van Rossum and Mike Peabody</font>*
 
-Integrated Assignment: 
+[Integrated Assignment](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_integrated_assignments_2016/) 
 
 
 [&uarr;](#back_to_top)
@@ -191,7 +191,7 @@ Integrated Assignment:
 
 *<font color="#827e9c">Thea Van Rossum and Mike Peabody</font>*
 
-Integrated Assignment: 
+[Integrated Assignment](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_integrated_assignments_2016/) 
 
 [&uarr;](#back_to_top)
 
