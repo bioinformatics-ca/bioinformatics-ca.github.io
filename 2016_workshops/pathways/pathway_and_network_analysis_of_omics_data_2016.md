@@ -245,6 +245,8 @@ Your feedback is important to us!  Please fill out [our survey](https://www.surv
 
 *<font color="#827e9c">Veronique Voisin</font>*
 
+[Lab lecture](https://bioinformatics.ca/pathways-module-6-lab-2016)
+
 [Lab practical](http://bioinformatics-ca.github.io/PNAOD_module6_lab_iRegulon_2016/)
 
 [Precomputed results](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/pathways/module6_lab/prostate_cancer_genemania_network.cys)
