@@ -39,6 +39,8 @@ image: CBW_RNA_seq_icon.jpg
 
 <br>
 
+**This workshop refers to content in the [RNA-Seq wiki](https://github.com/griffithlab/rnaseq_tutorial/wiki).**
+
 ###  Course Schedule  <a id="course_schedule"></a>
 
   <a href="http://bioinformatics-ca.github.io/informatics_for_rna_seq_analysis_schedule_2016/">Schedule for June 16 to June 17, 2016</a>
