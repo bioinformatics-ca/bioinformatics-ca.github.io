@@ -48,6 +48,11 @@ image: CBW_RNA_seq_icon.jpg
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="http://noteapp.com/RNASeq2016">here</a>!
+  
+  
+### Survey
+
+Your feedback is important to us!  Please fill out [our survey](https://www.surveymonkey.com/r/G68P9RY).
 
 [&uarr;](#back_to_top)
 
