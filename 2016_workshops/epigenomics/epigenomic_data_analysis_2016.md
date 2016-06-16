@@ -36,7 +36,7 @@ image: CBW_Epigenome-data_icon.jpg
 
 ###  Course Schedule  <a id="course_schedule"></a>
 
-  <a href="http://bioinformatics-ca.github.io/2016_workshops/epigenomics/Epigenomics_2016_Schedule_v1.pdf">Schedule for June 20 to June 21, 2016</a>
+  <a href="http://bioinformatics-ca.github.io/epigenomic_data_analysis_schedule_2016/">Schedule for June 20 to June 21, 2016</a>
 
 [&uarr;](#back_to_top)
 
