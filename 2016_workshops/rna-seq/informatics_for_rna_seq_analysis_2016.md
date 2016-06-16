@@ -165,6 +165,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lab practical](https://bioinformatics.ca/rnaseq-module-1-lab-2016)
   
+  [Installation](https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation)
+  
   [Reference Genomes](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reference-Genome)
   
   [Annotations](https://github.com/griffithlab/rnaseq_tutorial/wiki/Annotation)
