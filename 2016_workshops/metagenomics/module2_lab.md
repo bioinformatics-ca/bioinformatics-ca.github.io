@@ -431,31 +431,10 @@ Then we will get the env file (metadata file) that describes our samples and a c
 
 
 ```
-wget 
+wget https://raw.githubusercontent.com/beiko-lab/CBWMeta2015/master/mothur_demo_metadata.tsv
+wget -O scripts/mesas-pcoa https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-pcoa
+wget -O scripts/mesas-uc2clust https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-uc2clust
 ```
-[
-```
-https://raw.githubusercontent.com/beiko-lab/CBWMeta2015/master/mothur_demo_metadata.tsv
-```
-](https://raw.githubusercontent.com/beiko-lab/CBWMeta2015/master/mothur_demo_metadata.tsv)
-
-```
-wget -O scripts/mesas-pcoa 
-```
-[
-```
-https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-pcoa
-```
-](https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-pcoa)
-
-```
-wget -O scripts/mesas-uc2clust 
-```
-[
-```
-https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-uc2clust
-```
-](https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-uc2clust)
 
 Then we make the scripts executable.
 
