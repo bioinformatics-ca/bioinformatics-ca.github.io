@@ -54,6 +54,10 @@ image: CBW_RNA_seq_icon.jpg
 
 Your feedback is important to us!  Please fill out [our survey](https://www.surveymonkey.com/r/G68P9RY).
 
+### Class Photo
+
+![class photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/rna-seq/RNASeq_photo.jpeg?raw=true)
+
 [&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
