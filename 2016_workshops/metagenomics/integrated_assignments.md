@@ -511,7 +511,7 @@ We'll now use the PERL script metaphlan\_to\_stamp.pl to convert the Metaphlan o
 metaphlan_to_stamp.pl osd_metaphlan_merged_all.txt > osd_metaphlan_merged_all.spf
 ```
 
-The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenoems. This involves comparing the metagenome sequences to the KEGG database using the prgram diamond. This is a time comsuming step and estimated to take around ~80-90 minutes for all our samples. So before moving onto the statistical analysis of the metaphlan results, it would be advisable to start the "Preparing for running Humann" step. You can then switch to your other login instance for continuing with the pipeline.
+The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenomes. This involves comparing the metagenome sequences to the KEGG database using the program diamond. This is a time consuming step and estimated to take around ~80-90 minutes for all our samples. So before moving onto the statistical analysis of the metaphlan results, it would be advisable to start the "Preparing for running Humann" step. You can then switch to your other login instance for continuing with the pipeline.
 
 ### Statistical analysis of the taxa using STAMP
 
