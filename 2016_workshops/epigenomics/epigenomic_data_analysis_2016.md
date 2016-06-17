@@ -14,6 +14,7 @@ image: CBW_Epigenome-data_icon.jpg
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
      <li><a href="#laptop_setup">Laptop Setup Instructions</a></li>
      <li><a href="#pre_readings">Pre-Workshop Readings</a></li>
+     <li><a href="#pre_tutorials">Pre-Workshop Tutorials</a></li>
       <li><a href="#day1">Day 1</a>
          <ul class="sub2">  
            <li><a href="#welcome">Welcome</a></li>
@@ -47,13 +48,34 @@ image: CBW_Epigenome-data_icon.jpg
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
-  Instructions to setup your laptop can be found <a href="http://bioinformatics-ca.github.io/2016_workshops/epigenomics/laptop_setup_instructions.pdf">here</a>.
+  Instructions to setup your laptop can be found <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/laptop_instructions.mdf">here</a>.
 
 [&uarr;](#back_to_top)
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
-  Before coming to the workshop, read these.
+[Introduction to High-Performance Computing](http://insidehpc.com/hpc-basic-training/what-is-hpc/
+
+[Introduction to Compute Canada](https://www.computecanada.ca/research-portal/accessing-resources/
+
+[Introduction to epigenomics](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3080743/
+
+[Additional reading on ChIP-Seq](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3053263/
+
+[Additional reading on Methylation analysis](http://www.ncbi.nlm.nih.gov/pubmed/22986265/ 
+
+###  Pre-workshop Tutorials <a id="pre_tutorials"></a>
+
+[UNIX Preparation tutorials](http://www.ee.surrey.ac.uk/Teaching/Unix/): Please complete tutorials #1-3 on UNIX 
+
+[Unix cheat sheet](http://www.rain.org/~mkummel/unix.html)
+
+[IGV Tutorial](http://bioinformatics-ca.github.io/bioinformatics_for_cancer_genomics_IGV_lab_2016/): Review how to use IGV Genome Browser if you have not used this tool before.
+
+[UCSC Genome Browser tutorial](http://www.ncbi.nlm.nih.gov/pubmed/18514479)
+
+[FastQC Introduction and examples](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/)
+
 
 [&uarr;](#back_to_top)
 
