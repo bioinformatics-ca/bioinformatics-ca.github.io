@@ -74,13 +74,17 @@ cp ~/CourseData/metagenomics/integrated_assignment_day1/Integrated_Lab_1.sh .
 chmod u+x Integrated_Lab_1.sh
 ```
 
-The first command fetches the script from the web. The second command allows us to execute it.
+The first command fetches the script and the second command allows us to execute it.
 
-This script takes about half an hour to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
+This script takes about 40-60 minutes to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
 
 ```
 ./Integrated_Lab_1.sh 2>&1 | tee -a log.txt
 ```
+
+Run the commands above then come back to this document to learn about what it's doing.
+
+**You should not enter the commands below into the console. They are being run using the script.**
 
 Let's go through the script command by command. First is a bunch of setup commands.
 
