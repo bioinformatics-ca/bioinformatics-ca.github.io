@@ -77,6 +77,7 @@ chmod u+x Integrated_Lab_1.sh
 The first command fetches the script from the web. The second command allows us to execute it.
 
 This script takes about half an hour to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
+
 ```
 ./Integrated_Lab_1.sh 2>&1 | tee -a log.txt
 ```
@@ -223,6 +224,7 @@ pick_open_reference_otus.py -i $inputFasta -o clustering/ -p clustering_pa
 This is a QIIME wrapper script which will generate OTUs from our data and save the results in a directory called "clustering". Check out details on the script [here](http://qiime.org/1.9.0/scripts/pick_open_reference_otus.html), where the six major steps are outlines. This QIIME script calls other QIIME scripts for each of these steps, including some which are responsible for:
 
 -   clustering sequences into OTUs (pick\_otus.py)
+  -   
 -   taxonomically classifying OTUs using the (assign\_taxonomy.py). The default setting is to use RDP against the [GreenGenes 13\_8 reference](ftp://greengenes.microbio.me/greengenes_release/unversioned/).
 -   aligning the OTU representative sequences and filtering the alignment of columns that are all gaps (align\_seqs.py, filter\_alignment.py)
 -   generating a tree of OTUs from the alignment, e.g. useful for UniFrac analysis (make\_phylogeny.py)
@@ -230,7 +232,7 @@ This is a QIIME wrapper script which will generate OTUs from our data and save t
 This script produces many results files, the most commonly used include:
 
 -   otu\_table\_mc1\_w\_tax\_no\_pynast\_failures.biom : the final OTU results, including taxonomic assignments and per-sample abundances, stored in a biom file. This is the file you will use the most.
--   rep\_set.tre : a tree file of OTUs, indicating the similarity-based hierarchical relationship between OTUs
+-   rep\_set.tre : a tree file of OTUs in newick format, indicating the similarity-based hierarchical relationship between OTUs
 -   rep\_set.fna : a fasta file of the OTU representative sequences
 -   final\_otu\_map\_mc1.txt : listing of which reads were clustered into which OTUs
 -   pynast\_aligned\_seqs/rep\_set\_aligned\_pfiltered.fasta : alignment of OTU representative sequences
@@ -360,17 +362,19 @@ Assignment 1 Questions <a id="questions"></a>
 
 1) Paired-end assembly: PEAR uses a statistical test to generate a p-value for each paired-end sequence assembly. If the p-value is larger than the cutoff, the sequence will not be assembled. What is the default p-value cutoff?
 
-2) Sequence clustering: We are using the UPARSE pipeline to create de novo clusters of our 16S rRNA sequences. Its steps are: collapse unique sequences, sort by abundance, cluster all unique sequences seen more than once while checking for chimeras, then map all sequences back onto the OTUs. How many chimeras did the UPARSE pipeline detect? Approximately how many sequences were discarded by the UPARSE pipeline? How many OTUs were generated?
+2) Sequence clustering: We are using the QIIME open-reference pipeline to create clusters of our 16S rRNA sequences. According to [the documentation](http://qiime.org/scripts/pick_open_reference_otus.html), its steps are: (A) assign reads to existing OTUs (closed-reference), (B) take a percentage of the unassigned reads and cluster them de novo, (C) compare all the unassigned reads from step A against the representative sequences from the OTUs generated in step B and assign matches to OTUs, (D) cluster any remaining unassigned reads de novo. Take a look at the results generated in the `clustering` folder. Does it look like all these steps were performed? Is there a particular file that will tell you exactly what was done?
+
+3) Sequence clustering: How many reads were clustered de novo?
 
 3) Taxonomic classification: The ribosomal database project (RDP) is the name for both a taxonomic classifier and a reference dataset. In this lab we have used GreenGenes 13\_8 revision as the reference dataset, and the naive Bayes RDP classifier. What other datasets and classifiers are available? For what reasons might one choose one of these reference datasets?
 
-4) Phylogenetic tree generation: From the script file, can you determine the method used to create a multiple sequence alignment of the OTU sequences? What type of multiple sequence alignment algorithm is this? What program was used for the creation of a phylogenetic tree? Which version of the tree building program did we use, and what is the most recent version?
+4) Phylogenetic tree generation: From the clustering log file, can you determine the method used to create a multiple sequence alignment of the OTU sequences? What about if you check the documentation for the QIIME script used to align sequences? What type of multiple sequence alignment algorithm is this? What program was used for the creation of a phylogenetic tree? Which version of the tree building program did we use, and what is the most recent version?
 
 5) OTU table: In this pipeline, QIIME combined a list that maps sequences to OTU names and the taxonomic classifications and create an OTU table. By default, QIIME creates OTU tables in BIOM format (http://biom-format.org/). This is a binary storage format that stores the BIOM file in a sparse representation (no zeros are stored, only positive counts). This results in a smaller file size. We have used the `biom convert` command to create tab-separated OTU tables. When might this less efficient format be preferable?
 
 6) Rarefaction: To eliminate effects due to differing sample sizes, we often subsample the columns of an OTU table without replacement until each column contains the same number of sequences. This process is known more commonly as rarefaction. There has been much debate about the validity of rarefaction. Why might rarefaction be a bad idea? What is an alternate procedure to aid in comparing unevenly sequenced samples?
 
-7) Ordinations: We have created low-dimensional visualizations of our data based on Bray-Curtis and UniFrac distances. PCoA plots attempted to capture as much of the variance present in the distance matrix as is possible in two dimensions. The amount of variance captured can be calculated from the eigenvalues of the covariance matrix calculated from the distance matrix. What percent of the variance was explained by the Bray-Curtis PCoA plot? Can you find any interesting patterns in any of the ordinations? **Note:** This question had previously reference an NMDS plot that was not included in the workflow. Ignore that, sorry!
+7) Ordinations: We have created low-dimensional visualizations of our data based on Bray-Curtis and UniFrac distances. PCoA plots attempted to capture as much of the variance present in the distance matrix as is possible in two dimensions. The amount of variance captured can be calculated from the eigenvalues of the covariance matrix calculated from the distance matrix. What percent of the variance was explained by the Bray-Curtis PCoA plot? Can you find any interesting patterns in any of the ordinations? 
 
 8) Exploring the data: Some questions require a bit of mucking through data files to be answered. Being able to navigate through the maze of files you have created is essential. In your OTU table (either the rarefied or the normal OTU table), there should be a relatively large OTU of [genus *Sediminicola*](http://www.bacterio.net/sediminicola.html). Find this OTU in your OTU table, and then track down the sequence of this OTU. Using [NCBI's BLAST tool](http://blast.ncbi.nlm.nih.gov/Blast.cgi), align this sequence against the NR database and exclude uncultured organisms. Does the classification given by RDP seem correct?
 
@@ -507,7 +511,7 @@ We'll now use the PERL script metaphlan\_to\_stamp.pl to convert the Metaphlan o
 metaphlan_to_stamp.pl osd_metaphlan_merged_all.txt > osd_metaphlan_merged_all.spf
 ```
 
-The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenoems. This involves comparing the metagenome sequences to the KEGG database using the prgram diamond. This is a time comsuming step and estimated to take around ~80-90 minutes for all our samples. So before moving onto the statistical analysis of the metaphlan results, it would be advisable to start the "Preparing for running Humann" step. You can then switch to your other login instance for continuing with the pipeline.
+The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenomes. This involves comparing the metagenome sequences to the KEGG database using the program diamond. This is a time consuming step and estimated to take around ~80-90 minutes for all our samples. So before moving onto the statistical analysis of the metaphlan results, it would be advisable to start the "Preparing for running Humann" step. You can then switch to your other login instance for continuing with the pipeline.
 
 ### Statistical analysis of the taxa using STAMP
 

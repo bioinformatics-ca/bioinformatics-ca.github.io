@@ -284,3 +284,7 @@ For additional resources, tutorials, future directions, and more please refer to
 
 ***
 
+## Data for the Workshop ##
+
+### Results from Instructor's Instance on Amazon ###
+- [download link](http://www.hpc4health.ca/cbw/2016/RNA_data/rnaseq_tutorial.tar.gz)
