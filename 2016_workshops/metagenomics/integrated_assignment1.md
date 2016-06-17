@@ -12,11 +12,11 @@ Integrated Assignment 1 Answer Key
 
 1) The default p-value is 0.01. This can be determined by looking at the help dialogue of the PEAR command, `pear -h`.
 
-2) Since no "step2_otus" or "step3_outs" folders were created, it doesn't look like those steps were performed. We can look at exactly what was done using the log_[...].txt file. In this case, only step 1 and step 4 were performed, which means that we: (A) assigned reads to existing OTUs (closed-reference), (B) took *all* of the unassigned reads and clustered them de novo. This probably took longer than the strategy described in the documents, but it's a good demonstration that you need to keep on top of what an automated pipeline is doing and make sure it's performing the steps you expect.  
+2) Since no "step2\_otus" or "step3\_outs" folders were created, it doesn't look like those steps were performed. We can look at exactly what was done using the log\_[...].txt file. In this case, only step 1 and step 4 were performed, which means that we: (A) assigned reads to existing OTUs (closed-reference), (B) took *all* of the unassigned reads and clustered them de novo. This probably took longer than the strategy described in the documents, but it's a good demonstration that you need to keep on top of what an automated pipeline is doing and make sure it's performing the steps you expect.  
 
 3) Check out the files: 
-clustering/step1_otus/combined_seqs_otus.log
-clustering/step1_otus/sortmerna_otus.log 
+clustering/step1\_otus/combined\_seqs\_otus.log
+clustering/step1\_otus/sortmerna_otus.log 
 - Left over for de novo clustering: 39,788
 
 3) Datasets: SILVA, CORE Oral, Human Oral Microbiome Database (HOMD), NCBI's 16S dataset, or PhytoREF for plastidial rRNA genes. There are many additional datasets for other marker genes (18S, ITS, mitochondrial genes, etc.) Other classification methods include BLAST, rtax, utax, and "16S Classifier". Some reference datasets may be better for specialized environments (such as CORE or HOMD for human oral samples). Every dataset has different requirements before a sequence is included, so be sure to investigate how the reads in your dataset were annotated. Also check the release date for the reference dataset you want to use. GreenGenes, for example, has not been updated since August 2013. You may wish to choose a more frequently updated dataset, like SILVA (last updated April 2015). If you have an organism or group of interest, it is important to check that the organism is well represented in your reference set.
