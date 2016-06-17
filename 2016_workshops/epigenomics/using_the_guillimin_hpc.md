@@ -118,7 +118,7 @@ scp user99@guillimin.clumeq.ca:/home/user99/myfile.txt .
 To download a full directory, add the **-R** option
 ```
 cd /path/to/destination/folder
-scp -R user99@guillimin.clumeq.ca:/home/user99/myfile.txt .
+scp -r user99@guillimin.clumeq.ca:/home/user99/myfile.txt .
 ```
 
 #### Windows
