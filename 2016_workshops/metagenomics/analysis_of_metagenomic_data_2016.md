@@ -141,7 +141,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Morgan Langille</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metagenomics-module-3-2016)
   
   Lab practical:
 
@@ -167,7 +167,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Morgan Langille</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metagenomics-module-4-2016)
   
   Lab practical:
 
@@ -179,7 +179,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Morgan Langille</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metagenomics-module-5-2016)
   
   Lab practical:
 
@@ -203,7 +203,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">John Parkinson</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metagenomics-module-6-2016)
   
   Lab practical:
 
@@ -215,7 +215,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">Fiona Brinkman</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metagenomics-module-7-2016)
   
   [&uarr;](#back_to_top)
 
