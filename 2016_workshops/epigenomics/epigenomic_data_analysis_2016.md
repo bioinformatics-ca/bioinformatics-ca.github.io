@@ -94,7 +94,7 @@ image: CBW_Epigenome-data_icon.jpg
 
   *<font color="#827e9c">Martin Hirst</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/epigenomics-module-1-2016)
   
   Lab practical:
 
