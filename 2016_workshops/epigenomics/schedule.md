@@ -21,4 +21,4 @@ image: CBW_Epigenome-data_icon.jpg
 | 1:30 |  <font color="purple">Module 2: ChIP-seq Alignment, Peak Calling and Visualization (Misha)</font> | 1:30 | <font color="purple">Module 4: Downstream Analyses and Integrative Tools (David)</font> |
 | 3:00 | <font color="green">*Coffee Break*</font> | 3:00 | <font color="green">*Coffee Break*</font> |
 | 3:30 |  <font color="blue">Module 2 Lab</font> | 3:30 | <font color="blue">Module 4 Lab</font>|
-| 5:00 | **Integrated Assignment** | 5:00 | **Survey and Closing Remarks** |
+| 5:00 | | 5:00 | **Survey and Closing Remarks** |
