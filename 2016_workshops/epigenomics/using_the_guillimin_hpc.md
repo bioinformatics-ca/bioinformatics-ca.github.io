@@ -27,18 +27,36 @@ Connect to the ```guillimin.clumeq.ca``` server using the **Putty** tool that yo
 
 
 ## Loading modules
-All available software are organized as modules that you can load. For example, to start using Java 7, you need to load the Java 7 module:
+All available software are organized as modules that you can load. For example, to start using Java 7, you need to load the Java 7 module.
 
-**1- Import the CVMFS list of modules**
-module use /cvmfs/soft.mugqic/CentOS6/modulefiles
+**1- Set the path to the software**
+``` 
+[class99@lg-1r17-n04 ~]$ export MUGQIC_INSTALL_HOME=/cvmfs/soft.mugqic/CentOS6
+```
 
-**2- Get the list of available modules**
-module avail
+You may also put this command in your ```.basrc``` file to avoid having to execute it each time you log into Guillimin.
+```
+[class99@lg-1r17-n04 ~]$ echo 'export MUGQIC_INSTALL_HOME=/cvmfs/soft.mugqic/CentOS6' >> ~/.bashrc
+[class99@lg-1r17-n04 ~]$ source ~/.bashrc
+```
 
-**3- Load your module of choice**
-module load mugqic/java/openjdk-jdk1.7.0_60
 
-**4- You can now run the module you loaded directly**
+**2- Import the CVMFS list of modules**
+```
+[class99@lg-1r17-n04 ~]$ module use /cvmfs/soft.mugqic/CentOS6/modulefiles
+```
+
+**3- Get the list of available modules**
+```
+[class99@lg-1r17-n04 ~]$ module avail
+```
+
+**4- Load your module of choice**
+```
+[class99@lg-1r17-n04 ~]$ module load mugqic/java/openjdk-jdk1.7.0_60
+```
+
+**5- You can now run the module you loaded directly**
 ```
 [class99@lg-1r17-n04 ~]$ javac -version
 javac 1.7.0_60-ea
@@ -60,7 +78,6 @@ Jobs are submitted to the scheduler using the qsub command. The important qsub p
 Please keep in mind that you need always need to load the modules you want to use in your scripts.
  
  
-
 ### Using a bash script
 
 You can specify a bash script to launch as a compute job directly from the command line, like the ```testjob.sh``` script in this example:
@@ -83,8 +100,18 @@ perl bismark_genome_preparation --bowtie2 --verbose .
 ### Specifying the whole command from the prompt
 
 If you do not want to put your command in a script, you can write it directly in the prompt using the ```echo``` command like this:
-```echo "touch test.txt" | qsub -l nodes=1:ppn=1 -A bem-651-ae -d .```
+```
+    echo "touch test.txt" | qsub -l nodes=1:ppn=1 -A bem-651-ae -d .
+```
 
+## Viewing the current state of your jobs
+Use the following command to see the current state of the jobs you launched:
+```
+showq -uclass99 -n -v
+```
+
+* **Idle** means the job is waiting for its turn in the queue
+* **Running** means the job is currently running on one of the execution nodes
 
 ## Downloading a file from Guillimin to your computer
 
