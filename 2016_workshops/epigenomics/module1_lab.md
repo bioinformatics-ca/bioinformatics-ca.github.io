@@ -18,18 +18,23 @@ What will be covered in this module
 
 ## Tutorial
 
-Copy locally the FASTQ file that we will need for our FastQC analysis.
+### Assessing FASTQ file quality with FastQC
+* Copy locally the FASTQ file that we will need for our FastQC analysis.
 ```
 cp /gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/data/H3K27ac/H3K27ac.H1.fastq.gz .
 ```
 
-### Running FastQC
-Run the FastQC command on the scheduler.
+* Run the FastQC command on the scheduler.
 ```
 echo 'module load mugqic/fastqc/0.11.2 ; fastqc H3K27ac.H1.fastq' | qsub -l nodes=1:ppn=1 -d .
 ```
 
-### Download the results to your local computer, using the instructions provided here: [using_the_guillimin_hpc.md](using_the_guillimin_hpc.md)
+* Download the results to your local computer
 ```
 scp class99@guillimin.clumeq.ca:/home/class99/H3K27ac.H1_fastqc.html .
+```
+
+* Open the downloaded file in a web browser, either by double-clicking the file, or from the command line using a command such as
+```
 firefox H3K27ac.H1_fastqc.html
+```
