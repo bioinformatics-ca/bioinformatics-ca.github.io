@@ -19,13 +19,12 @@ image: CBW_Epigenome-data_icon.jpg
            <li><a href="#welcome">Welcome</a></li>
            <li><a href="#module_1">Module 1</a></li>
            <li><a href="#module_2">Module 2</a></li>
-           <li><a href="#module_3">Module 3</a></li>
         </ul>
       </li>
        <li><a href="#day_2">Day 2</a>
           <ul class="sub2">
+             <li><a href="#module_3">Module 3</a></li>
              <li><a href="#module_4">Module 4</a></li>
-             <li><a href="#module_5">Module 5</a></li>
            </ul>
        </li>
     </ul>
@@ -69,17 +68,7 @@ image: CBW_Epigenome-data_icon.jpg
 
 [&uarr;](#back_to_top)
 
-###  Module 1: Introduction to Computing in the Cloud <a id="module_1"></a>
-
-  *<font color="#827e9c">TBA</font>*
-  
-  Lecture:
-  
-  Lab practical:
-
-[&uarr;](#back_to_top)
-
-###  Module 2: Introduction to ChIP Sequencing and Analysis <a id="module_2"></a>
+###  Module 1: Introduction to ChIP Sequencing and Analysis <a id="module_1"></a>
 
   *<font color="#827e9c">Martin Hirst</font>*
   
@@ -89,11 +78,11 @@ image: CBW_Epigenome-data_icon.jpg
 
 [&uarr;](#back_to_top)
 
-###  Module 3: ChIP-Seq Alignment, Peak Calling, and Visualization <a id="module_3"></a>
+###  Module 2: ChIP-Seq Alignment, Peak Calling, and Visualization <a id="module_2"></a>
 
-  *<font color="#827e9c">TBA</font>*
+  *<font color="#827e9c">Misha Bilenky</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/epigenomics-module-2-2016)
   
   Lab practical:
 
@@ -101,21 +90,22 @@ image: CBW_Epigenome-data_icon.jpg
 
 ##  Day 2 <a id="day_2"></a>
 
-###  Module 4: ntroduction to WGBS and Analysis <a id="module_4"></a>
+###  Module 3: Introduction to WGBS and Analysis <a id="module_3"></a>
 
   *<font color="#827e9c">Guillaume Bourque</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/epigenomics-module-3-2016)
   
   Lab practical:
 
 [&uarr;](#back_to_top)
 
-###  Module 5: Downstream Analysis and Integrative Tools <a id="module_5"></a>
 
-  *<font color="#827e9c">Guillaume Bourque</font>*
+###  Module 4: Downstream Analyses and Integrative Tools <a id="module_4"></a>
+
+  *<font color="#827e9c">David Bujold</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/epigenomics-module-4-2016)
   
   Lab practical:
 
