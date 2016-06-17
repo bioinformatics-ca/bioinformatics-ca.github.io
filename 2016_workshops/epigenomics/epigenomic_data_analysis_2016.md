@@ -48,21 +48,21 @@ image: CBW_Epigenome-data_icon.jpg
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
-  Instructions to setup your laptop can be found <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/laptop_instructions.mdf">here</a>.
+  Instructions to setup your laptop can be found <a href="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/laptop_instructions.md">here</a>.
 
 [&uarr;](#back_to_top)
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
-[Introduction to High-Performance Computing](http://insidehpc.com/hpc-basic-training/what-is-hpc/
+[Introduction to High-Performance Computing](http://insidehpc.com/hpc-basic-training/what-is-hpc/)
 
-[Introduction to Compute Canada](https://www.computecanada.ca/research-portal/accessing-resources/
+[Introduction to Compute Canada](https://www.computecanada.ca/research-portal/accessing-resources/)
 
-[Introduction to epigenomics](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3080743/
+[Introduction to epigenomics](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3080743/)
 
-[Additional reading on ChIP-Seq](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3053263/
+[Additional reading on ChIP-Seq](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3053263/)
 
-[Additional reading on Methylation analysis](http://www.ncbi.nlm.nih.gov/pubmed/22986265/ 
+[Additional reading on Methylation analysis](http://www.ncbi.nlm.nih.gov/pubmed/22986265/) 
 
 ###  Pre-workshop Tutorials <a id="pre_tutorials"></a>
 
