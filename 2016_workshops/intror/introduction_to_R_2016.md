@@ -104,8 +104,6 @@ That was the problem when students installed things in **RStudio** at the comman
 
   *<font color="#827e9c">Boris Steipe</font>*
   
-  Lecture:
-  
   Scripts:
   
   * [**R** script template](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/intror/ScriptTemplate.txt)  
@@ -146,9 +144,7 @@ That was the problem when students installed things in **RStudio** at the comman
   
   Scripts:
   
-  Data:
-  
-  Practical:
+  * [First steps](http://bioinformatics-ca.github.io/intror_first_steps_2016/)  
 
 [&uarr;](#back_to_top)
 
