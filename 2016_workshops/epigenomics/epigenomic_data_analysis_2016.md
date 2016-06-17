@@ -41,7 +41,7 @@ image: CBW_Epigenome-data_icon.jpg
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
-  Post your workshop questions <a href="http://todaysmeet.com/Epigenomics2016">here</a>!
+  Post your workshop questions <a href="https://noteapp.com/Epigenomics2016">here</a>!
 
 [&uarr;](#back_to_top)
 
