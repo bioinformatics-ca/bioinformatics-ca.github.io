@@ -44,24 +44,23 @@ header2: Workshop pages for students
 * To log in to the node, use the -i command line argument to specify your certificate:
 
 ```bash
- ssh -i CBWCG.pem ubuntu@cbw#.dyndns.info
+ ssh -i CBWCG.pem ubuntu@cbw##.dyndns.info
 ```
 
-(where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
+(where ## is your assigned student number. Your student number is the number on your name badge. If your number is less than 10, please add 0 in front of it.)
 
 [&uarr;](#back_to_top)
 
 ##### Copying files to your computer
-<br>
 * To copy files from an instance, use scp in a similar fashion:
 
 ```bash
- scp -i CBWCG.pem ubuntu@cbw#.dyndns.info:CourseData/genome/g1k/human_g1k_v37.fasta.fai .
+ scp -i CBWCG.pem ubuntu@cbw##.dyndns.info:<file name> .
 ```
 
 * Everything created in your workspace on the cloud is also available by a web server on your cloud instance.  Simply go to the following in your browser:
 
- http://cbw#.dyndns.info/ http://cbw#.dyndns.info/
+ http://cbw##.dyndns.info/ http://cbw#.dyndns.info/
 
 [&uarr;](#back_to_top)
 
@@ -71,7 +70,7 @@ header2: Workshop pages for students
 </p>
 To configure Putty, start Putty and do the following:
 
-* Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number less is than 10, please add 0 in front of it.)
+* Fill in the "Host name" field with cbw##.dyndns.info (where ## is your assigned student number. Your student number is the number on your name badge. If your number less is than 10, please add 0 in front of it.)
  
 <img src="../resources/Putty_Basic_Options.png" alt="Basic Putty Options" class="center">
 
@@ -95,7 +94,7 @@ To configure WinScp, start WinScp and do the following:
 
 * On the right-hand buttons click "New".
 
-* Fill in the "Host name" field with cbw#.dyndns.info (where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
+* Fill in the "Host name" field with cbw#.dyndns.info (where ## is your assigned student number. Your student number is the number on your name badge. If your number is less than 10, please add 0 in front of it.)
 
 * Fill in the "User name" field with **ubuntu**
 
