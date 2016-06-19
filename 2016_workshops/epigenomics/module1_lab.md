@@ -70,12 +70,17 @@ H3K27ac.H1_fastqc.html	H3K27ac.H1_fastqc.zip  H3K27ac.H1.fastq.gz  STDIN.e602932
 
 #####  Download the results to your local computer
 ```
-scp class99@guillimin.clumeq.ca:/home/class99/H3K27ac.H1_fastqc.html .
+scp class99@guillimin.clumeq.ca:/home/class99/module1/H3K27ac.H1_fastqc.html .
 ```
 
 #####  Open the downloaded file in a web browser
 
-Either by double-clicking the file, or from the command line using a command such as
+Open the folder and then double-click the file 
+```
+open .
+```
+
+Or directly from the command line using a command such as
 ```
 firefox H3K27ac.H1_fastqc.html
 ```
