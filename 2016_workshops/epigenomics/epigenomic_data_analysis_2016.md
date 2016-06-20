@@ -114,7 +114,7 @@ image: CBW_Epigenome-data_icon.jpg
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-2-2016)
   
-  Lab practical:
+  [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module2_lab_2016/)
 
 [&uarr;](#back_to_top)
 
