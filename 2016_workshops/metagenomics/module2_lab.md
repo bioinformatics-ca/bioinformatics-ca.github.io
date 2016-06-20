@@ -14,14 +14,339 @@ image: CBW_Metagenome_icon.jpg
 Background
 ==========
 
-In this lab, we will go over the major steps of 16S analysis using both Mothur and QIIME so we get to become familiar with the two main platforms. Mothur is more user friendly so we will start with Mothur, then we will process the same dataset using QIIME. Then we can compare and contrast the results.
+In this lab, we will go over the major steps of 16S analysis using QIIME scripts and some additional custom scripts so we can become familiar with how to process and analyze 16S data. Analyze 16S data with QIIME entails running scripts each consist of multiple steps (commands). Some QIIME scripts even "call" (i.e. execute) additional QIIME scripts to form a workflow. As a result, running a single script could accomplish many tasks and generate multiple result files. This approach hides a lot of complexity and to really understand QIIME analyses, one has to study the documents available for the scripts (see http://qiime.org/scripts/index.html). This approach also make troubleshooting more difficult as one may have to understand the entire workflow to figure out which step is causing the error.
 
-For the lab, we will use the dataset from the Mothur SOP since it’s an interesting dataset and it has been pared down for demonstration purpose. We will assume that de-multiplexing has been done already. For Illumina MiSeq sequencing, de-multiplexing (or binning) may have been done for you already but if you need to do it on your own, both Mothur and QIIME have commands that you can use.
+A example of a QIIME script is "split_libraries_fastq.py" and you can find the corresponding document at http://qiime.org/scripts/split_libraries_fastq.html. From the document, you can tell that the script performs demultiplexing of Fastq sequence data where barcodes and sequences are contained in two separate fastq files. To run the script, you would type "split_libraries_fastq.py -o slout/ -i forward_reads.fastq.gz -b barcodes.fastq.gz -m map.tsv" into your terminal window. Note that the script name is followed by a list of "agruments" (i.e. -o -i -b and -m).  These "agruments" (also called "parameters") change the default behavior of the script and provide additional information needed for the script to run.  For example, -i specifies the input sequence file to be processed and -b specifies the corresponding barcode file for the input sequences.  Information about these parameters is also provided in the script document page. Note that some arguments are optional and have default values (e.g. by default --store_demultiplexed_fastq is set to false so only a single file containing reads from all samples will be outputed). Lastly, the document has a section on the expected outputs of the script. 
 
-Dataset Intro:
+For the lab, we will mainly use the dataset from the Mothur SOP since it’s an interesting dataset and it has been pared down for demonstration purpose. Moreover, you could use the same dataset to run through the Mothur tutorial (bonus! at end of the QIIME tutorial) and learn to use both Mothur and QIIME. We will assume that de-multiplexing has been done already so you have one pair of files (for paired-end reads) per sample. For Illumina MiSeq sequencing, de-multiplexing (or binning) may have been done for you already but if you need to do it on your own, both Mothur and QIIME have commands that you can use. We will also use a separately dataset that has not been de-multiplexed yet to show you how to do that in case your sequencing facility sends you a single FASTQ file and the corresponding barcode file containing all your samples.
+
+
+Dataset Intro (always good to know a bit about the data you are working with):
 --------------
 
 The Schloss lab is interested in understanding the effect of normal variation in the gut microbiome on host health. Fresh feces from mice were collected for 365 days post weaning. In the first 150 days no intervention was done. In this demo, we will look at the data collected in the first 10 days except day 4 (early time points) vs. days 140-150 (late time points) for a single female mouse. In addition to mice fecal samples, we included a mock community composed of genomic DNA from 21 bacterial strains (available from HMP studies).
+
+To connect to your Amazon Cloud Instance, type the following command in your terminal window (replace XX with your ID)
+
+```
+ssh -i CBW.pem ubuntu@cbwXX.dyndns.info
+```
+
+
+QIIME Workflow
+==============
+
+We will start with QIIME rather than Mothur as it seemed to have gained more popularity over Mothur in the last few years.
+
+In `~/CourseData/markergenes/qiime`, we have
+
+**40 input sequences (FASTQ) files:**
+
+-   F3Dxxx\_S209\_L001\_R1/2\_001.fastq for the 19 mouse samples (forward and reverse reads)
+-   Mock\_S280\_L001\_R1/2\_001.fastq for the mock community sample
+
+**Reference Datasets:**
+
+-   Silva (Silva): consists of both taxonomic files (.tax files) and representative reference sequence files (.fasta files)
+-   RDP (trainset9): consists of Mothur formatted RDP 16S reference sequences and taxonomic assignments
+
+**Metadata:** In Mothur, metadata are in two column formats (ID and Grouping)
+
+-   stability.files (list of paired forward and reverse reads)
+-   mouse.dpw.metadata (list of samples and day post weaning)
+-   mouse.time.design (list of samples and early or late time points)
+
+First, we will setup our analysis directory.
+
+
+```
+mkdir -p ~/workspace/lab2_qiime
+cd ~/workspace/lab2_qiime
+```
+
+
+Then we will link the files we need to perform the analysis. Linking files instead of copying the files to your analysis directory saves disk space.  As these files are   First make three directories to organize your input sequence files, your reference data, and the scripts that you'll be using.
+
+
+```
+mkdir sequence_files
+mkdir reference_data
+mkdir scripts
+```
+
+Now link the files from the ~/CourseData directory which is read-only.
+
+
+```
+ln -s ~/CourseData/markergenes/qiime/*.fastq.gz sequence_files/
+ln -s ~/CourseData/markergenes/qiime/97* reference_data/
+ln -s ~/CourseData/integrated_assignment_day1/core_set_aligned.fasta.imputed reference_data/
+```
+
+
+Then we will get the env file (metadata file) that describes our samples and a couple of scripts we need for QIIME analysis.
+
+
+```
+wget https://raw.githubusercontent.com/beiko-lab/CBWMeta2015/master/mothur_demo_metadata.tsv
+wget -O scripts/mesas-pcoa https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-pcoa
+wget -O scripts/mesas-uc2clust https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-uc2clust
+```
+
+Then we make the scripts executable.
+
+
+```
+chmod u+x scripts/*
+```
+
+
+Lastly, we will setup our environmental variables
+
+
+```
+export PYTHONPATH=~/local/lib/python2.7/site-packages
+export RDP_JAR_PATH=/usr/local/rdp_classifier_2.2/rdp_classifier-2.2.jar
+```
+
+
+Pre-processing
+--------------
+
+### Paired-end Assembly
+
+Just like in Mothur, we will start with assemble our reads. Unlike mothur, we need to resort to some pretty complex shell scripting to tell the assembly program (pear) that we are using how to match up the pairs of files.
+
+
+```
+for i in "1" "5" "9" "13" "17" "21"
+do
+    echo $i
+    find sequence_files/ -name "*.fastq.gz" -printf '%f\n' | sed 's/_L001.*//' | sort | uniq | sed -n $i,$((i+3))p | while read line; do ( pear -f sequence_files/${line}_L001_R1_001.fastq.gz -r sequence_files/${line}_L001_R2_001.fastq.gz -o ${line} & ); done > /dev/null
+    sleep 30
+done
+```
+
+
+Next we will combine all the assembled reads into a single file.
+
+
+```
+for filename in $( ls *.assembled.fastq )
+do
+    awk 'BEGIN{ORS=""; i=0;}{split(FILENAME, x, "."); prefix=x[1]; sub("@","",prefix); print ">" prefix "_" i "\n"; i+=1; getline; print; print "\n"; getline; getline;}' ${filename} >> seq.fasta
+done
+```
+
+
+### Reduce the Number of Redundant Sequences
+
+Next we will perform a set of procedures to reduce the number of redundant sequences and cluster our sequences (essentially forming OTUs). First we will collapse dataset to remove redundancy
+
+
+```
+usearch -derep_fulllength seq.fasta -fastaout derep.fa -sizeout
+```
+
+
+The result showed that there are 27,289 unique sequences.
+
+
+```
+00:00  83Mb  100.0% Reading seq.fasta 
+00:00 119Mb 152132 seqs, 27289 uniques, 22777 singletons (83.5%)
+00:00 119Mb Min size 1, median 1, max 11708, avg 5.57
+00:01 119Mb  100.0% Writing derep.fa
+```
+
+
+Then we will sort the sequences by abundance and cluster the sequences based on minimal 97% identity. In this step, chimera detection is also performed
+
+
+```
+usearch -sortbysize derep.fa -fastaout sorted.fa -minsize 2
+usearch -cluster_otus sorted.fa -otus otus.fa -otu_radius_pct 3 -sizeout -uparseout results.txt
+```
+
+
+Here's the output. It shows that there are 219 OTUs based on the filtering and cutoffs we specified.
+
+
+```
+00:01  47Mb  100.0% 219 OTUs, 348 chimeras (7.7%)
+```
+
+
+Then to make the output QIIME compatible, we will rename the sequence IDs (to be numerical)
+
+
+```
+awk 'BEGIN{count=0;}{if ($$0~/>/){print ">" count; count+=1;} else {print}}' otus.fa > rep_set.fasta
+```
+
+
+This step, we will map all sequences (even singletons) back onto the OTUs. The file generated consists of OTU IDs and memberships. This file is similar in format to the .names. However, it is meant to store OTU membership.
+
+
+```
+usearch -usearch_global seq.fasta -db rep_set.fasta -strand both -id 0.97 -uc map.uc -threads 4
+```
+
+
+Lastly we will convert USEARCH output to QIIME OTU list format using a custom script (which you will have access to after the workshop)
+
+
+```
+scripts/mesas-uc2clust -t 4 map.uc seq_otus.txt
+```
+
+
+We will create a new directory to store the clusters we generated:
+
+
+```
+mkdir cluster
+mv results.txt otus.fa map.uc rep_set.fasta seq_otus.txt sorted.fa derep.fa cluster
+```
+
+
+3: Taxonomy Assignment
+----------------------
+
+We will use RDP Classifier for taxonomy assignment. Note that this is done by calling a QIIME script from command line directly. Like before, we need to provide a taxonomy file and a reference sequence file.
+
+
+```
+assign_taxonomy.py -m rdp -i cluster/rep_set.fasta -o taxonomic_classification -t reference_data/97_otu_taxonomy.txt -r reference_data/97_otus.fasta -c 0.6
+```
+
+
+The results of taxonomy assignment is in ~/workspace/lab2\_qiime/taxonomic\_classification/. As you can see the abundant OTUs are also Bacteroidales as predicted in Mothur. We use the sort command to sort the OTUs from most abundant to least abundant.
+
+
+```
+sort -k1n rep_set_tax_assignments.txt 
+0  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
+1  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
+2  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
+3  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
+4  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides;s__ovatus 0.730
+5  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
+6  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__;s__   0.990
+7  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
+8  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
+9  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
+```
+
+
+5: Sequence Alignment
+---------------------
+
+To align sequences to a template in order to do phylogenetic tree generation, we use align\_seqs.py. Unlike Mothur, the QIIME workflow does this after sequences are clustered as OTUs. The method (-m) used is pynast which is actually a very similar algorithm to what we used in Mothur. Pynast is a template based alignment algorithm so it requires a pre-aligned database (specified with -t option) to do the alignment.
+
+
+```
+align_seqs.py -m pynast -i cluster/rep_set.fasta -o alignment -t reference_data/core_set_aligned.fasta.imputed
+filter_alignment.py -i alignment/rep_set_aligned.fasta -o alignment -s
+```
+
+
+6:Phylogenetic Analysis
+-----------------------
+
+We will first make a new directory to store the tree. Then we will run the make\_phylogeny.py script to create the tree from the aligned sequences using the fasttree algorithm. The fasttree algorithm as the name implied is really fast and can build tree from thousands of long sequences in a few minutes. It is much faster than the clearcut algorithm that mothur uses.
+
+
+```
+mkdir phylogeny
+make_phylogeny.py -i alignment/rep_set_aligned_pfiltered.fasta -t fasttree -o phylogeny/rep_set.tre -l phylogeny/log.txt
+```
+
+
+4: Build OTU Table
+------------------
+
+We will first make a new directory to store the OTU table. Then we will run the script to make OTU table containing counts and taxonomic classifications
+
+
+```
+mkdir otu_table
+make_otu_table.py -i cluster/seq_otus.txt -o otu_table/otu_table.biom -t taxonomic_classification/rep_set_tax_assignments.txt
+```
+
+
+This creates a .biom file in the otu\_table directory. The .biom file is a binary file so it is not readable directly. So we will convert the BIOM format file to tab-separated format (human readable). More information about the biom convert script can be found at <http://biom-format.org/documentation/biom_conversion.html>.
+
+
+```
+biom convert --to-tsv -i otu_table/otu_table.biom --table-type='OTU table' -o otu_table/otu_table.tab --header-key=taxonomy --output-metadata-id=Consensus\ Lineage
+```
+
+
+In order to carry out rarefaction of our data, we use awk on the converted OTU table to determine the lowest sequence depth. The result is passed as a parameter to QIIME's rarefaction script
+
+
+```
+
+```
+ single_rarefaction.py -i otu_table/otu_table.biom -o otu_table/otu_table_rarefied.biom -d 
+```
+awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' otu_table/otu_table.tab
+```
+ 
+```
+
+biom convert --to-tsv -i otu_table/otu_table_rarefied.biom --table-type='OTU table' -o otu_table/otu_table_rarefied.tab --header-key=taxonomy --output-metadata-id=Consensus\ Lineage
+```
+
+
+7:Downstream Analysis
+---------------------
+
+We can quickly plot the taxonomic profile of the samples by using the following command:
+
+
+```
+summarize_taxa_through_plots.py -f -s -i otu_table/otu_table.biom -o taxaplot -m mothur_demo_metadata.tsv
+```
+
+
+We can look at the output plots through a webpage (html file): <http://cbwXX.dyndns.info/lab2_qiime/taxaplot/taxa_summary_plots/bar_charts.html>. Remember to replace the XX with your machine number.
+
+We will then calculate beta-diversity using weighted unifrac:
+
+
+```
+beta_diversity.py -i otu_table/otu_table_rarefied.biom -o qiime_pcoa/distance/ -m weighted_unifrac -t phylogeny/rep_set.tre
+```
+
+
+Next we will generate the PCoA plot using these beta-diversity matrices
+
+
+```
+principal_coordinates.py -i qiime_pcoa/distance/ -o qiime_pcoa/pcoa/
+make_2d_plots.py -i qiime_pcoa/pcoa -m mothur_demo_metadata.tsv -o qiime_pcoa/pcoa_plots/
+chmod -R o+x qiime_pcoa/pcoa_plots
+```
+
+
+Lastly, we will run an R script for PCoA
+
+
+```
+mkdir mesas_pcoa
+scripts/mesas-pcoa -i otu_table/otu_table_rarefied.tab -m mothur_demo_metadata.tsv -d bray -o mesas_pcoa/pcoa-bray.pdf
+```
+
+
+You can view the results at <http://cbwXX.dyndns.info/lab2_qiime/mesas_pcoa/pcoa-bray.pdf>. Again, remember to change the XX to your machine number.
+
+
+
+
+Mothur Workflow (Optional)
+===============
 
 In `~/CourseData/markergenes/mothur`, we have
 
@@ -41,9 +366,6 @@ In `~/CourseData/markergenes/mothur`, we have
 -   mouse.dpw.metadata (list of samples and day post weaning)
 -   mouse.time.design (list of samples and early or late time points)
 
-Mothur Workflow
-===============
-
 Adapted from [Mothur MiSeq SOP](http://www.mothur.org/wiki/MiSeq_SOP). For full tutorial please visit the Mothur website.
 
 First, we will create our workspace for today's demo.
@@ -55,7 +377,7 @@ cd ~/workspace/lab2_mothur
 ```
 
 
-After you are in the ~/workspace/lab2\_mothur directory, we will copy over the necessary files
+After you are in the ~/workspace/lab2_mothur directory, we will copy over the necessary files.  Linking is probably a better option
 
 
 ```
@@ -394,296 +716,10 @@ There are other downstream analyses such as picking out indicator species and cl
 
 To quit Mothur, simply type
 
-
 ```
 mothur > quit
 ```
 
-
-QIIME Workflow
-==============
-
-Now, let's see how QIIME achieve the same tasks.
-
-First, we will setup our analysis directory.
-
-
-```
-mkdir -p ~/workspace/lab2_qiime
-cd ~/workspace/lab2_qiime
-```
-
-
-Then we will link the files we need to perform the analysis. We could also just copy over the files like we did before, but let's try to link them this time.
-
-
-```
-mkdir sequence_files
-mkdir reference_data
-mkdir scripts
-ln -s ~/CourseData/markergenes/qiime/*.fastq.gz sequence_files/
-ln -s ~/CourseData/markergenes/qiime/97* reference_data/
-ln -s ~/CourseData/integrated_assignment_day1/core_set_aligned.fasta.imputed reference_data/
-```
-
-
-Then we will get the env file (metadata file) that describes our samples and a couple of scripts we need for QIIME analysis.
-
-
-```
-wget https://raw.githubusercontent.com/beiko-lab/CBWMeta2015/master/mothur_demo_metadata.tsv
-wget -O scripts/mesas-pcoa https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-pcoa
-wget -O scripts/mesas-uc2clust https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-uc2clust
-```
-
-Then we make the scripts executable.
-
-
-```
-chmod u+x scripts/*
-```
-
-
-Lastly, we will setup our environmental variables
-
-
-```
-export PYTHONPATH=~/local/lib/python2.7/site-packages
-export RDP_JAR_PATH=/usr/local/rdp_classifier_2.2/rdp_classifier-2.2.jar
-```
-
-
-Pre-processing
---------------
-
-### Paired-end Assembly
-
-Just like in Mothur, we will start with assemble our reads. Unlike mothur, we need to resort to some pretty complex shell scripting to tell the assembly program (pear) that we are using how to match up the pairs of files.
-
-
-```
-for i in "1" "5" "9" "13" "17" "21"
-do
-    echo $i
-    find sequence_files/ -name "*.fastq.gz" -printf '%f\n' | sed 's/_L001.*//' | sort | uniq | sed -n $i,$((i+3))p | while read line; do ( pear -f sequence_files/${line}_L001_R1_001.fastq.gz -r sequence_files/${line}_L001_R2_001.fastq.gz -o ${line} & ); done > /dev/null
-    sleep 30
-done
-```
-
-
-Next we will combine all the assembled reads into a single file.
-
-
-```
-for filename in $( ls *.assembled.fastq )
-do
-    awk 'BEGIN{ORS=""; i=0;}{split(FILENAME, x, "."); prefix=x[1]; sub("@","",prefix); print ">" prefix "_" i "\n"; i+=1; getline; print; print "\n"; getline; getline;}' ${filename} >> seq.fasta
-done
-```
-
-
-### Reduce the Number of Redundant Sequences
-
-Next we will perform a set of procedures to reduce the number of redundant sequences and cluster our sequences (essentially forming OTUs). First we will collapse dataset to remove redundancy
-
-
-```
-usearch -derep_fulllength seq.fasta -fastaout derep.fa -sizeout
-```
-
-
-The result showed that there are 27,289 unique sequences.
-
-
-```
-00:00  83Mb  100.0% Reading seq.fasta 
-00:00 119Mb 152132 seqs, 27289 uniques, 22777 singletons (83.5%)
-00:00 119Mb Min size 1, median 1, max 11708, avg 5.57
-00:01 119Mb  100.0% Writing derep.fa
-```
-
-
-Then we will sort the sequences by abundance and cluster the sequences based on minimal 97% identity. In this step, chimera detection is also performed
-
-
-```
-usearch -sortbysize derep.fa -fastaout sorted.fa -minsize 2
-usearch -cluster_otus sorted.fa -otus otus.fa -otu_radius_pct 3 -sizeout -uparseout results.txt
-```
-
-
-Here's the output. It shows that there are 219 OTUs based on the filtering and cutoffs we specified.
-
-
-```
-00:01  47Mb  100.0% 219 OTUs, 348 chimeras (7.7%)
-```
-
-
-Then to make the output QIIME compatible, we will rename the sequence IDs (to be numerical)
-
-
-```
-awk 'BEGIN{count=0;}{if ($$0~/>/){print ">" count; count+=1;} else {print}}' otus.fa > rep_set.fasta
-```
-
-
-This step, we will map all sequences (even singletons) back onto the OTUs. The file generated consists of OTU IDs and memberships. This file is similar in format to the .names. However, it is meant to store OTU membership.
-
-
-```
-usearch -usearch_global seq.fasta -db rep_set.fasta -strand both -id 0.97 -uc map.uc -threads 4
-```
-
-
-Lastly we will convert USEARCH output to QIIME OTU list format using a custom script (which you will have access to after the workshop)
-
-
-```
-scripts/mesas-uc2clust -t 4 map.uc seq_otus.txt
-```
-
-
-We will create a new directory to store the clusters we generated:
-
-
-```
-mkdir cluster
-mv results.txt otus.fa map.uc rep_set.fasta seq_otus.txt sorted.fa derep.fa cluster
-```
-
-
-3: Taxonomy Assignment
-----------------------
-
-We will use RDP Classifier for taxonomy assignment. Note that this is done by calling a QIIME script from command line directly. Like before, we need to provide a taxonomy file and a reference sequence file.
-
-
-```
-assign_taxonomy.py -m rdp -i cluster/rep_set.fasta -o taxonomic_classification -t reference_data/97_otu_taxonomy.txt -r reference_data/97_otus.fasta -c 0.6
-```
-
-
-The results of taxonomy assignment is in ~/workspace/lab2\_qiime/taxonomic\_classification/. As you can see the abundant OTUs are also Bacteroidales as predicted in Mothur. We use the sort command to sort the OTUs from most abundant to least abundant.
-
-
-```
-sort -k1n rep_set_tax_assignments.txt 
-0  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
-1  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
-2  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
-3  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
-4  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides;s__ovatus 0.730
-5  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
-6  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__;s__   0.990
-7  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
-8  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
-9  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
-```
-
-
-5: Sequence Alignment
----------------------
-
-To align sequences to a template in order to do phylogenetic tree generation, we use align\_seqs.py. Unlike Mothur, the QIIME workflow does this after sequences are clustered as OTUs. The method (-m) used is pynast which is actually a very similar algorithm to what we used in Mothur. Pynast is a template based alignment algorithm so it requires a pre-aligned database (specified with -t option) to do the alignment.
-
-
-```
-align_seqs.py -m pynast -i cluster/rep_set.fasta -o alignment -t reference_data/core_set_aligned.fasta.imputed
-filter_alignment.py -i alignment/rep_set_aligned.fasta -o alignment -s
-```
-
-
-6:Phylogenetic Analysis
------------------------
-
-We will first make a new directory to store the tree. Then we will run the make\_phylogeny.py script to create the tree from the aligned sequences using the fasttree algorithm. The fasttree algorithm as the name implied is really fast and can build tree from thousands of long sequences in a few minutes. It is much faster than the clearcut algorithm that mothur uses.
-
-
-```
-mkdir phylogeny
-make_phylogeny.py -i alignment/rep_set_aligned_pfiltered.fasta -t fasttree -o phylogeny/rep_set.tre -l phylogeny/log.txt
-```
-
-
-4: Build OTU Table
-------------------
-
-We will first make a new directory to store the OTU table. Then we will run the script to make OTU table containing counts and taxonomic classifications
-
-
-```
-mkdir otu_table
-make_otu_table.py -i cluster/seq_otus.txt -o otu_table/otu_table.biom -t taxonomic_classification/rep_set_tax_assignments.txt
-```
-
-
-This creates a .biom file in the otu\_table directory. The .biom file is a binary file so it is not readable directly. So we will convert the BIOM format file to tab-separated format (human readable). More information about the biom convert script can be found at <http://biom-format.org/documentation/biom_conversion.html>.
-
-
-```
-biom convert --to-tsv -i otu_table/otu_table.biom --table-type='OTU table' -o otu_table/otu_table.tab --header-key=taxonomy --output-metadata-id=Consensus\ Lineage
-```
-
-
-In order to carry out rarefaction of our data, we use awk on the converted OTU table to determine the lowest sequence depth. The result is passed as a parameter to QIIME's rarefaction script
-
-
-```
-
-```
- single_rarefaction.py -i otu_table/otu_table.biom -o otu_table/otu_table_rarefied.biom -d 
-```
-awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' otu_table/otu_table.tab
-```
- 
-```
-
-biom convert --to-tsv -i otu_table/otu_table_rarefied.biom --table-type='OTU table' -o otu_table/otu_table_rarefied.tab --header-key=taxonomy --output-metadata-id=Consensus\ Lineage
-```
-
-
-7:Downstream Analysis
----------------------
-
-We can quickly plot the taxonomic profile of the samples by using the following command:
-
-
-```
-summarize_taxa_through_plots.py -f -s -i otu_table/otu_table.biom -o taxaplot -m mothur_demo_metadata.tsv
-```
-
-
-We can look at the output plots through a webpage (html file): <http://cbwXX.dyndns.info/lab2_qiime/taxaplot/taxa_summary_plots/bar_charts.html>. Remember to replace the XX with your machine number.
-
-We will then calculate beta-diversity using weighted unifrac:
-
-
-```
-beta_diversity.py -i otu_table/otu_table_rarefied.biom -o qiime_pcoa/distance/ -m weighted_unifrac -t phylogeny/rep_set.tre
-```
-
-
-Next we will generate the PCoA plot using these beta-diversity matrices
-
-
-```
-principal_coordinates.py -i qiime_pcoa/distance/ -o qiime_pcoa/pcoa/
-make_2d_plots.py -i qiime_pcoa/pcoa -m mothur_demo_metadata.tsv -o qiime_pcoa/pcoa_plots/
-chmod -R o+x qiime_pcoa/pcoa_plots
-```
-
-
-Lastly, we will run an R script for PCoA
-
-
-```
-mkdir mesas_pcoa
-scripts/mesas-pcoa -i otu_table/otu_table_rarefied.tab -m mothur_demo_metadata.tsv -d bray -o mesas_pcoa/pcoa-bray.pdf
-```
-
-
-You can view the results at <http://cbwXX.dyndns.info/lab2_qiime/mesas_pcoa/pcoa-bray.pdf>. Again, remember to change the XX to your machine number.
 
 Summary
 =======
