@@ -81,20 +81,22 @@ Replace "%%" by your student number.
 
 ##### Check files
 ```
-[class99@lg-1r14-n04 module3]$ ls
-data  iPSC_1.1.fastq_C_to_T.fastq  iPSC_1.2.fastq_G_to_A.fastq	STDIN.e60365781  STDIN.o60365781
+[class99@lg-1r17-n02 module3]$ ls
+data  iPSC_1.1.fastq_C_to_T.fastq  iPSC_1.2.fastq_G_to_A.fastq	STDIN.e60392282  STDIN.o60392282
 ```
 
 *Is this what you expected?*
 
 ##### Check the error message
 ```
-less STDIN.e60365781
+less STDIN.e60392282
 ```
 Where you replace the file name by your specific error file.
 
 ##### Map (again) using bismark
 ```
+rm iPSC_*
+rm STDIN.*
 echo 'module load mugqic/bismark/0.16.1 ; module load mugqic/bowtie2/2.2.4 ; module load mugqic/samtools/1.3 ; \
 bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
 -1 data/iPSC_1.1.fastq -2 data/iPSC_1.2.fastq' \
