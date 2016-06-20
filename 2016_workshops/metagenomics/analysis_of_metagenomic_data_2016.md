@@ -53,6 +53,10 @@ image: CBW_Metagenome_icon.jpg
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="https://noteapp.com/Metagenomics2016">here</a>!
+  
+### Workshop Survey
+
+Your feedback is important to us!  Please complete [our survey](https://www.surveymonkey.com/r/5Z3F5C8)!
 
 [&uarr;](#back_to_top)
 
