@@ -52,25 +52,25 @@ cp /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/data/* data/.
 ##### Check the files
 By typing ```ls``` you should see something similar to this
 ```
-[class99@lg-1r14-n04 module3]$ ls data
-fat.1.fastq  iPSC_1.1.fastq  iPSC_2.1.fastq  kidney.1.fastq
-fat.2.fastq  iPSC_1.2.fastq  iPSC_2.2.fastq  kidney.2.fastq
+[class99@lg-1r17-n02 module3]$ ls data
+iPSC_1.1.fastq	iPSC_1.2.fastq	iPSC_2.1.fastq	iPSC_2.2.fastq
 ```
 *What do the ".1" and ".2" in the file names mean?*
 
 ### Map using bismark
 We will now process and map the reads using Bismark.
 ```
+mkdir align
 echo 'module load mugqic/bismark/0.16.1 ; \
 bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
 -1 data/iPSC_1.1.fastq -2 data/iPSC_1.2.fastq' \
-|  qsub -l nodes=1:ppn=4 -d .
+|  qsub -l nodes=1:ppn=4 -d align
 ```
 The ```-n 1``` defines the maximum number of mismatches permitted in the seed.
 
 The ```/gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/``` specifies the reference genome to use.
 
-The ```qsub -l nodes=1:ppn=4 -d .``` submits the job to the cluster using 1 node, 4 processors and the current directory for output.
+The ```qsub -l nodes=1:ppn=4 -d align``` submits the job to the cluster using 1 node, 4 processors and the ```align``` directory for output.
 
 For more details, please refer to the Bismark [user guide](http://www.bioinformatics.babraham.ac.uk/projects/bismark/Bismark_User_Guide.pdf).
 
