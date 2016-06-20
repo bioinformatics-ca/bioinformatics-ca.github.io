@@ -107,11 +107,46 @@ bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/
 watch -d ls -ltr
 ```
 
+##### Check files
+At the end, you should have something similar to
+```
+[class99@lg-1r17-n02 module4]$ ls -ltr
+total 13760
+drwxr-xr-x 2 class99 class      512 Jun 20 13:21 data
+-rw------- 1 class99 class     5046 Jun 20 13:50 STDIN.e60373053
+-rw-r--r-- 1 class99 class 13964455 Jun 20 13:50 iPSC_1.1_bismark_bt2_pe.bam
+-rw-r--r-- 1 class99 class     1862 Jun 20 13:50 iPSC_1.1_bismark_bt2_PE_report.txt
+-rw------- 1 class99 class     4405 Jun 20 13:51 STDIN.o60373053
+```
 
-##### Prepare files for loading in IGV
+Let's look at the report
+```
+less iPSC_1.1_bismark_bt2_PE_report.txt
+```
+
+### Prepare files for loading in IGV
+
+We need to sort the bam file and prepare an index so we will be able to load in IGV. We will use the program ```samtools``` for this.
+
 ```
 echo 'module load mugqic/samtools/1.3 ; \
 samtools sort iPSC_1.1_bismark_bt2_pe.bam -o iPSC_1.1_bismark_bt2_pe_sorted.bam ; \
 samtools index iPSC_1.1_bismark_bt2_pe_sorted.bam' \
 | qsub -l nodes=1:ppn=1 -d .
+```
+
+##### Check files
+At the end, you should have something similar to
+```
+[class99@lg-1r17-n02 module4]$ ls -ltr
+total 27136
+drwxr-xr-x 2 class99 class      512 Jun 20 13:21 data
+-rw------- 1 class99 class     5046 Jun 20 13:50 STDIN.e60373053
+-rw-r--r-- 1 class99 class 13964455 Jun 20 13:50 iPSC_1.1_bismark_bt2_pe.bam
+-rw-r--r-- 1 class99 class     1862 Jun 20 13:50 iPSC_1.1_bismark_bt2_PE_report.txt
+-rw------- 1 class99 class     4405 Jun 20 13:51 STDIN.o60373053
+-rw------- 1 class99 class        0 Jun 20 13:55 STDIN.e60374332
+-rw-r--r-- 1 class99 class 11653618 Jun 20 13:55 iPSC_1.1_bismark_bt2_pe_sorted.bam
+-rw-r--r-- 1 class99 class  1967480 Jun 20 13:55 iPSC_1.1_bismark_bt2_pe_sorted.bam.bai
+-rw------- 1 class99 class      855 Jun 20 13:55 STDIN.o60374332
 ```
