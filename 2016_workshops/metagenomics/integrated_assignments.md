@@ -132,8 +132,7 @@ fastqc -q -t $ncores sequence_files/*.fastq -o fastqc_out/raw/individuals
 
 This command will run FastQC on all of our raw data files and store the results in the folder indicated. $ncores is a variable defined at the begining of the script indicating how many cores we have, here we're using that number to tell FastQC how many threads to use.
 
--This is a general quality checker for all types of DNA sequencing data, so not all of the output will be important for amplicon reads. Focus on the read lengths and quality scores. You can look at the results either by transferring the output html files to your local computer, or going to  [<http://cbwXX.dyndns.info>](http://cbwXX.dyndns.info) (where XX is your student number) and navigating to the output directory. You may need to unzip the results first. 
--
+This is a general quality checker for all types of DNA sequencing data, so not all of the output will be important for amplicon reads. Focus on the read lengths and quality scores. You can look at the results either by transferring the output html files to your local computer, or going to  [<http://cbwXX.dyndns.info>](http://cbwXX.dyndns.info) (where XX is your student number) and navigating to the output directory. You may need to unzip the results first. 
 
 ```
 gunzip --to-stdout sequence_files/*.fastq.gz | fastqc -q -t $ncores stdin -o fastqc_out/raw/combined
@@ -265,17 +264,17 @@ biom convert --to-tsv -i clustering/otu_table_high_conf.biom --table-type='OTU t
 Here we convert the BIOM format file to tab-separated format (human readable) using a command from the "biom" [software package](http://biom-format.org/) with a column for taxonomic info called "Consensus Lineage".
 
 ```
--#We use awk on the converted OTU table to determine the lowest sequence depth
--subsampleSize=$(awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } \
-- END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' clustering/otu_table_high_conf.tsv)
--echo $subsampleSize
--
--#This is passed as a parameter to QIIME's rarefaction script
--single_rarefaction.py -i clustering/otu_table_high_conf.biom -o clustering/otu_table_high_conf_rarefied.biom -d $subsampleSize
--
+#We use awk on the converted OTU table to determine the lowest sequence depth
+subsampleSize=$(awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } \
+ END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' clustering/otu_table_high_conf.tsv)
+echo $subsampleSize
+
+#This is passed as a parameter to QIIME's rarefaction script
+single_rarefaction.py -i clustering/otu_table_high_conf.biom -o clustering/otu_table_high_conf_rarefied.biom -d $subsampleSize
+
 ```
 
--The awk command uses the converted OTU table to determine the lowest sequence depth of all the input samples and we then pass that value as the -d parameter to QIIME's rarefaction script. This QIIME script will "rarefy" a biom file such that every sample in the output biom file (here: clustering/otu\_table\_high\_conf\_rarefied.biom) will be represented by the same number of reads.  This number could also be read manually from the summary files we generated.
+The awk command uses the converted OTU table to determine the lowest sequence depth of all the input samples and we then pass that value as the -d parameter to QIIME's rarefaction script. This QIIME script will "rarefy" a biom file such that every sample in the output biom file (here: clustering/otu\_table\_high\_conf\_rarefied.biom) will be represented by the same number of reads.  This number could also be read manually from the summary files we generated.
 
 ### Downstream Analyses
 
