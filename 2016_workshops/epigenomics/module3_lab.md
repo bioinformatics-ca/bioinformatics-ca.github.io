@@ -33,3 +33,18 @@ rm -rf ~/module4
 mkdir -p ~/module4
 cd ~/module4
 ```
+
+##### Copy data for module 4
+```
+cp /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/data/* .
+```
+
+##### Check the files
+By typing ```ls``` you should see something similar to this
+```
+[class99@lg-1r14-n04 module4]$ ls
+fat.1.fastq  iPSC_1.1.fastq  iPSC_2.1.fastq  kidney.1.fastq
+fat.2.fastq  iPSC_1.2.fastq  iPSC_2.2.fastq  kidney.2.fastq
+```
+
+
