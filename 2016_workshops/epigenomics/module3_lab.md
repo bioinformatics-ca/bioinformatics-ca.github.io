@@ -45,13 +45,14 @@ cd ~/module4
 
 ##### Copy data for module 4
 ```
-cp /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/data/* .
+mkdir data
+cp /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/data/* data/.
 ```
 
 ##### Check the files
 By typing ```ls``` you should see something similar to this
 ```
-[class99@lg-1r14-n04 module4]$ ls
+[class99@lg-1r14-n04 module4]$ ls data
 fat.1.fastq  iPSC_1.1.fastq  iPSC_2.1.fastq  kidney.1.fastq
 fat.2.fastq  iPSC_1.2.fastq  iPSC_2.2.fastq  kidney.2.fastq
 ```
@@ -62,9 +63,18 @@ We will now process and map the reads using Bismark.
 ```
 echo 'module load mugqic/bismark/0.16.1 ; \
 bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
--1 iPSC_1.1.fastq -2 iPSC_1.2.fastq' \
+-1 data/iPSC_1.1.fastq -2 data/iPSC_1.2.fastq' \
 |  qsub -l nodes=1:ppn=1 -d .
 ```
+The ```-n 1``` defines the maximum number of mismatches permitted in the seed.
+
+For more details, please refer to the Bismark [user guide](http://www.bioinformatics.babraham.ac.uk/projects/bismark/Bismark_User_Guide.pdf).
+
+##### Check status of your job
+```
+watch -d showq -uclass%%
+```
+Replace "%%" by your student number.
 
 ##### Check files
 ```
@@ -75,7 +85,7 @@ iPSC_1.1.fastq	iPSC_1.2.fastq_G_to_A.fastq  kidney.1.fastq  STDIN.o60334723
 ```
 *Is this what you expected?*
 
-##### Check for error message
+##### Check the error message
 ```
 less STDIN.e60334723
 ```
@@ -85,6 +95,6 @@ Where you replace the file name by your specific error file.
 ```
 echo 'module load mugqic/bismark/0.16.1 ; module load mugqic/bowtie2/2.2.4 ; \
 bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
--1 iPSC_1.1.fastq -2 iPSC_1.2.fastq' \
+-1 data/iPSC_1.1.fastq -2 data/iPSC_1.2.fastq' \
 |  qsub -l nodes=1:ppn=1 -d .
 ```
