@@ -1,3 +1,12 @@
+---
+layout: post2
+permalink: /epigenomic_data_analysis_hpc_2016/
+title: Epigenomic Data Analysis 2016 Student Page
+header1: Epigenomic Data Analysis 2016
+header2: Using the Guillimin HPC
+image: CBW_Epigenome-data_icon.jpg
+---
+
 # Using the Guillimin HPC
 
 This document provides information on how to get started with using the Guillimin HPC.
