@@ -224,7 +224,7 @@ echo "pick_otus:sortmerna_db $sortmernaDB" >> clustering_params.txt
 This last line is pointing to the SortMeRNA database, which was created from the 97\_otus.fasta reference file using this command: `sortmerna-2.1/indexdb\_rna --ref 97\_otus.fasta`. If you want to use a different reference database, you'll need to create a new database using this command.
 
 ```
-pick_open_reference_otus.py -i $inputFasta -o clustering/ -p clustering_params.txt -m sortmerna_sumaclust -s 0.1 -v --min_otu_size 1
+pick_open_reference_otus.py -i $inputFasta -o clustering/ -p clustering_params.txt -m sortmerna_sumaclust --parallel --jobs_to_start $ncores
 ```
 
 This is a QIIME wrapper script which will generate OTUs from our data and save the results in a directory called "clustering". Check out details on the script [here](http://qiime.org/1.9.0/scripts/pick_open_reference_otus.html), where the six major steps are outlines. This QIIME script calls other QIIME scripts for each of these steps, including some which are responsible for:
