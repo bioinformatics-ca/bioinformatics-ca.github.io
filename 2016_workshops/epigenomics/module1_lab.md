@@ -10,8 +10,8 @@ image: CBW_Epigenome-data_icon.jpg
 # Module 1: Introduction to ChIP sequencing & analysis 
 
 ## Important notes:
-* Please refer to the following guide for instructions on how to connect to Guillimin and submit jobs: [using_the_guillimin_hpc.md](using_the_guillimin_hpc.md)
-* The instructions in this tutorial will suppose you are in a Linux/Max environment. The equivalent tools in Windows are provided in the [Guillimin documentation](using_the_guillimin_hpc.md).
+* Please refer to the following guide for instructions on how to connect to Guillimin and submit jobs: [Using the Guillimin HPC](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/)
+* The instructions in this tutorial will suppose you are in a Linux/Max environment. The equivalent tools in Windows are provided in the [Using the Guillimin HPC](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/).
 * The user **class99** is provided here as an example. You should replace it by the username that was assigned to you at the beginning of the workshop.
 
 
@@ -34,7 +34,7 @@ This module will cover the basics of how to login to the cluster, launch jobs an
 ssh class99@guillimin.clumeq.ca
 ```
 
-You will be in your home folder. At this step, before continuing, please make sure that you followed the instructions in the section **"The first time you log in"** of the [Guillimin guide](using_the_guillimin_hpc.md). If you don't, compute jobs will not execute normally.
+You will be in your home folder. At this step, before continuing, please make sure that you followed the instructions in the section **"The first time you log in"** of the [Using the Guillimin HPC](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/). If you don't, compute jobs will not execute normally.
 
 ##### Prepare directory for module 1
 ```
