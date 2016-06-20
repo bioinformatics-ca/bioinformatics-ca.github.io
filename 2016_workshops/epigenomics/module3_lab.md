@@ -166,12 +166,19 @@ Launch IGV on your computer.
 
 Load your sorted bam and index file in IGV using ```File -> Load from file```.
 
-Go to
+Go to:
 ```
 chr3:43375889-45912052
 ```
 
 And zoom in until you see something.
+
+For instance go to:
+```
+chr3:44,513,532-44,523,018
+```
+You should see something like
+![region](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/region1.png)
 
 ### Repeat for the other replicate
 
