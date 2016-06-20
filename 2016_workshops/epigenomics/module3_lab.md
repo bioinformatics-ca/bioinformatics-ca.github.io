@@ -155,7 +155,47 @@ drwxr-xr-x 2 class99 class      512 Jun 20 13:21 data
 
 Using a different terminal window that is not connected to the server (if you are using Mac/Linux) or WinSCP (if you are using Windows), retrieve the ```iPSC_1.1_bismark_bt2_pe_sorted.bam``` and ```iPSC_1.1_bismark_bt2_pe_sorted.bam.bai```
 ```
-scp class%%@guillimin.clumeq.ca:/home/class99/module4/iPSC_1.1_bismark_bt2_pe_sorted.bam* .
+scp class%%@guillimin.clumeq.ca:/home/class%%/module3/iPSC_1.1_bismark_bt2_pe_sorted.bam* .
 ```
 
-Where you need to replace the "%%" by your student number.
+Where you need to replace the two places with "%%" by your student number.
+
+### Load data and explore using IGV
+
+Launch IGV on your computer.
+
+Load your sorted bam and index file in IGV using ```File -> Load from file```.
+
+Go to
+```
+chr3:43375889-45912052
+```
+
+And zoom in until you see something.
+
+### Repeat for the other replicate
+
+##### Map using bismark
+```
+echo 'module load mugqic/bismark/0.16.1 ; module load mugqic/bowtie2/2.2.4 ; module load mugqic/samtools/1.3 ; \
+bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
+-1 data/iPSC_2.1.fastq -2 data/iPSC_2.2.fastq' | qsub -l nodes=1:ppn=4 -d .
+```
+
+##### Prepare files for IGV
+
+```
+echo 'module load mugqic/samtools/1.3 ; \
+samtools sort iPSC_2.1_bismark_bt2_pe.bam -o iPSC_2.1_bismark_bt2_pe_sorted.bam ; \
+samtools index iPSC_2.1_bismark_bt2_pe_sorted.bam' \
+| qsub -l nodes=1:ppn=1 -d .
+```
+
+### Generate methylation profiles from the bam files
+
+So far we have only mapped the reads using bismark. We can now generate methylation profiles using the following command
+```
+echo 'module load mugqic/bismark/0.16.1 ; module load mugqic/samtools/1.3 ; \
+bismark_methylation_extractor --bedGraph iPSC_1.1_bismark_bt2_pe.bam' \
+| qsub -l nodes=1:ppn=1 -d .
+```
