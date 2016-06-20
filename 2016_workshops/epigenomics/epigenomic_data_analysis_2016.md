@@ -108,6 +108,8 @@ image: CBW_Epigenome-data_icon.jpg
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-1-2016)
   
+  [Lecture on Compute Canada](https://bioinformatics.ca/epigenomics-module-1-hpc-2016)
+  
   [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module1_lab_2016/)
   
   [Using the Guillimin HPC](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/)
