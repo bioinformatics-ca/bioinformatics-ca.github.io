@@ -58,5 +58,9 @@ fat.2.fastq  iPSC_1.2.fastq  iPSC_2.2.fastq  kidney.2.fastq
 *What do the ".1" and ".2" in the file names mean?*
 
 ##### Map using bismark
-echo 'module load mugqic/bismark/0.16.1 ; bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ -1 iPSC_1.1.fastq -2 iPSC_1.2.fastq' |  qsub -l nodes=1:ppn=1 -d .
+```
+echo 'module load mugqic/bismark/0.16.1 ; bismark --bowtie2 -n 1 \
+/gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ -1 iPSC_1.1.fastq -2 iPSC_1.2.fastq' \
+|  qsub -l nodes=1:ppn=1 -d .
+```
 
