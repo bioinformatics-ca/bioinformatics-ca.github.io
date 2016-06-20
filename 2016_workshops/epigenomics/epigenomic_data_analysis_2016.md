@@ -106,7 +106,7 @@ image: CBW_Epigenome-data_icon.jpg
   
   [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module1_lab_2016/)
   
-  [Using th Guillimin HPC](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/)
+  [Using the Guillimin HPC](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/)
 
 [&uarr;](#back_to_top)
 
