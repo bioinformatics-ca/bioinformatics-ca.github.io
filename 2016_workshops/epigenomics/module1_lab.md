@@ -9,7 +9,7 @@
 ## Introduction
 
 ### Description of the lab
-What will be covered in this module
+This module will cover the basics of how to login to the cluster, launch jobs and perform a basic QC analysis of the data sets.
 
 ### Local software that we will use
 * ssh
