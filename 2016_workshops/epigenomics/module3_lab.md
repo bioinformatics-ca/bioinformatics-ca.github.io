@@ -238,3 +238,41 @@ bismark_methylation_extractor --bedGraph iPSC_2.1_bismark_bt2_pe.bam' \
 | qsub -l nodes=1:ppn=1 -d .
 ```
 
+##### Check files
+At this point you should have something like
+```
+[class99@lg-1r17-n02 module3]$ ls
+CHG_OB_iPSC_1.1_bismark_bt2_pe.txt  CpG_OT_iPSC_2.1_bismark_bt2_pe.txt		  iPSC_2.1_bismark_bt2_pe.bedGraph.gz		STDIN.e60397907
+CHG_OB_iPSC_2.1_bismark_bt2_pe.txt  data					  iPSC_2.1_bismark_bt2_pe.bismark.cov.gz	STDIN.e60397937
+CHG_OT_iPSC_1.1_bismark_bt2_pe.txt  iPSC_1.1_bismark_bt2_pe.bam			  iPSC_2.1_bismark_bt2_pe.M-bias.txt		STDIN.e60398115
+CHG_OT_iPSC_2.1_bismark_bt2_pe.txt  iPSC_1.1_bismark_bt2_pe.bedGraph.gz		  iPSC_2.1_bismark_bt2_PE_report.txt		STDIN.o60392695
+CHH_OB_iPSC_1.1_bismark_bt2_pe.txt  iPSC_1.1_bismark_bt2_pe.bismark.cov.gz	  iPSC_2.1_bismark_bt2_pe_sorted.bam		STDIN.o60393634
+CHH_OB_iPSC_2.1_bismark_bt2_pe.txt  iPSC_1.1_bismark_bt2_pe.M-bias.txt		  iPSC_2.1_bismark_bt2_pe_sorted.bam.bai	STDIN.o60394706
+CHH_OT_iPSC_1.1_bismark_bt2_pe.txt  iPSC_1.1_bismark_bt2_PE_report.txt		  iPSC_2.1_bismark_bt2_pe_splitting_report.txt	STDIN.o60397285
+CHH_OT_iPSC_2.1_bismark_bt2_pe.txt  iPSC_1.1_bismark_bt2_pe_sorted.bam		  STDIN.e60392695				STDIN.o60397907
+CpG_OB_iPSC_1.1_bismark_bt2_pe.txt  iPSC_1.1_bismark_bt2_pe_sorted.bam.bai	  STDIN.e60393634				STDIN.o60397937
+CpG_OB_iPSC_2.1_bismark_bt2_pe.txt  iPSC_1.1_bismark_bt2_pe_splitting_report.txt  STDIN.e60394706				STDIN.o60398115
+CpG_OT_iPSC_1.1_bismark_bt2_pe.txt  iPSC_2.1_bismark_bt2_pe.bam			  STDIN.e60397285
+```
+
+##### Uncompress the bedGraph files
+```
+gunzip iPSC_1.1_bismark_bt2_pe.bedGraph.gz
+gunzip iPSC_2.1_bismark_bt2_pe.bedGraph.gz
+```
+
+##### Transfer the files to your local computer
+Using a different terminal window that is not connected to the server (if you are using Mac/Linux) or WinSCP (if you are using Windows), retrieve the ```iPSC_2.1_bismark_bt2_pe_sorted.bam``` and ```iPSC_2.1_bismark_bt2_pe_sorted.bam.bai```
+```
+scp class%%@guillimin.clumeq.ca:/home/class%%/module3/iPSC_2.1_bismark_bt2_pe_sorted.bam* .
+```
+Also transfer the bedGraphs
+```
+scp class%%@guillimin.clumeq.ca:/home/class%%/module3/*bedGraph* .
+```
+
+Where you need to replace the two places with "%%" by your student number.
+
+### Load all the data in IGV
+
+
