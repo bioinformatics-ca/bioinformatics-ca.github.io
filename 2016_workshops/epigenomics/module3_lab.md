@@ -94,6 +94,7 @@ less STDIN.e60392282
 Where you replace the file name by your specific error file.
 
 ##### Map (again) using bismark
+
 ```
 rm iPSC_*
 rm STDIN.*
@@ -109,6 +110,7 @@ watch -d ls -ltr
 
 ##### Check files
 At the end, you should have something similar to
+
 ```
 [class99@lg-1r17-n02 module3]$ ls -ltr
 total 13760
@@ -137,6 +139,7 @@ samtools index iPSC_1.1_bismark_bt2_pe_sorted.bam' \
 
 ##### Check files
 At the end, you should have something similar to
+
 ```
 [class99@lg-1r17-n02 module3]$ ls -ltr
 total 27136
@@ -201,6 +204,7 @@ samtools index iPSC_2.1_bismark_bt2_pe_sorted.bam' \
 
 ##### Check files
 At this point you should have something like
+
 ```
 [class99@lg-1r17-n02 module3]$ ls -ltr
 total 59872
