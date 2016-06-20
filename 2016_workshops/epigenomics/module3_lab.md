@@ -112,11 +112,11 @@ At the end, you should have something similar to
 ```
 [class99@lg-1r17-n02 module3]$ ls -ltr
 total 13760
-drwxr-xr-x 2 class99 class      512 Jun 20 13:21 data
--rw------- 1 class99 class     5046 Jun 20 13:50 STDIN.e60373053
--rw-r--r-- 1 class99 class 13964455 Jun 20 13:50 iPSC_1.1_bismark_bt2_pe.bam
--rw-r--r-- 1 class99 class     1862 Jun 20 13:50 iPSC_1.1_bismark_bt2_PE_report.txt
--rw------- 1 class99 class     4405 Jun 20 13:51 STDIN.o60373053
+drwxr-xr-x 2 class99 class      512 Jun 20 16:56 data
+-rw------- 1 class99 class     5107 Jun 20 17:21 STDIN.e60392695
+-rw-r--r-- 1 class99 class 13964455 Jun 20 17:21 iPSC_1.1_bismark_bt2_pe.bam
+-rw-r--r-- 1 class99 class     1862 Jun 20 17:21 iPSC_1.1_bismark_bt2_PE_report.txt
+-rw------- 1 class99 class     4405 Jun 20 17:21 STDIN.o60392695
 ```
 
 Let's look at the report
@@ -140,15 +140,15 @@ At the end, you should have something similar to
 ```
 [class99@lg-1r17-n02 module3]$ ls -ltr
 total 27136
-drwxr-xr-x 2 class99 class      512 Jun 20 13:21 data
--rw------- 1 class99 class     5046 Jun 20 13:50 STDIN.e60373053
--rw-r--r-- 1 class99 class 13964455 Jun 20 13:50 iPSC_1.1_bismark_bt2_pe.bam
--rw-r--r-- 1 class99 class     1862 Jun 20 13:50 iPSC_1.1_bismark_bt2_PE_report.txt
--rw------- 1 class99 class     4405 Jun 20 13:51 STDIN.o60373053
--rw------- 1 class99 class        0 Jun 20 13:55 STDIN.e60374332
--rw-r--r-- 1 class99 class 11653618 Jun 20 13:55 iPSC_1.1_bismark_bt2_pe_sorted.bam
--rw-r--r-- 1 class99 class  1967480 Jun 20 13:55 iPSC_1.1_bismark_bt2_pe_sorted.bam.bai
--rw------- 1 class99 class      855 Jun 20 13:55 STDIN.o60374332
+drwxr-xr-x 2 class99 class      512 Jun 20 16:56 data
+-rw------- 1 class99 class     5107 Jun 20 17:21 STDIN.e60392695
+-rw-r--r-- 1 class99 class 13964455 Jun 20 17:21 iPSC_1.1_bismark_bt2_pe.bam
+-rw-r--r-- 1 class99 class     1862 Jun 20 17:21 iPSC_1.1_bismark_bt2_PE_report.txt
+-rw------- 1 class99 class     4405 Jun 20 17:21 STDIN.o60392695
+-rw------- 1 class99 class       61 Jun 20 17:25 STDIN.e60393634
+-rw-r--r-- 1 class99 class 11653618 Jun 20 17:25 iPSC_1.1_bismark_bt2_pe_sorted.bam
+-rw------- 1 class99 class      846 Jun 20 17:25 STDIN.o60393634
+-rw-r--r-- 1 class99 class  1967480 Jun 20 17:25 iPSC_1.1_bismark_bt2_pe_sorted.bam.bai
 ```
 
 ##### Copy files to your local computer to view in IGV
