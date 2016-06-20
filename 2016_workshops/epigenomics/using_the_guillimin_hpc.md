@@ -14,7 +14,8 @@ This document provides information on how to get started with using the Guillimi
 
 ## Connecting to the Guillimin HPC scheduler:
 
-**Host:** username@guillimin.clumeq.ca
+**Host:** guillimin.clumeq.ca
+
 **Login / Password:** Provided to you on a separate piece of paper at the beginning of the workshop.
 
 **Note:** Your home folder is limited to 10GB of storage. The tutorials we will do shouldn't make you go over this quota, but to be aware of the remaining space you have, you can use the command ```myquota```.
