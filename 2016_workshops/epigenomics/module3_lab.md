@@ -168,7 +168,7 @@ Load your sorted bam and index file in IGV using ```File -> Load from file```.
 
 Go to:
 ```
-chr3:43375889-45912052
+chr3:43,375,889-45,912,052
 ```
 
 And zoom in until you see something.
@@ -199,6 +199,30 @@ samtools index iPSC_2.1_bismark_bt2_pe_sorted.bam' \
 | qsub -l nodes=1:ppn=1 -d .
 ```
 
+##### Check files
+At this point you should have something like
+```
+[class99@lg-1r17-n02 module3]$ ls -ltr
+total 59872
+drwxr-xr-x 2 class99 class      512 Jun 20 16:56 data
+-rw------- 1 class99 class     5107 Jun 20 17:21 STDIN.e60392695
+-rw-r--r-- 1 class99 class 13964455 Jun 20 17:21 iPSC_1.1_bismark_bt2_pe.bam
+-rw-r--r-- 1 class99 class     1862 Jun 20 17:21 iPSC_1.1_bismark_bt2_PE_report.txt
+-rw------- 1 class99 class     4405 Jun 20 17:21 STDIN.o60392695
+-rw------- 1 class99 class       61 Jun 20 17:25 STDIN.e60393634
+-rw-r--r-- 1 class99 class 11653618 Jun 20 17:25 iPSC_1.1_bismark_bt2_pe_sorted.bam
+-rw------- 1 class99 class      846 Jun 20 17:25 STDIN.o60393634
+-rw-r--r-- 1 class99 class  1967480 Jun 20 17:25 iPSC_1.1_bismark_bt2_pe_sorted.bam.bai
+-rw------- 1 class99 class     4404 Jun 20 17:36 STDIN.o60394706
+-rw------- 1 class99 class     5111 Jun 20 17:36 STDIN.e60394706
+-rw-r--r-- 1 class99 class 17226651 Jun 20 17:36 iPSC_2.1_bismark_bt2_pe.bam
+-rw-r--r-- 1 class99 class     1862 Jun 20 17:36 iPSC_2.1_bismark_bt2_PE_report.txt
+-rw------- 1 class99 class       61 Jun 20 17:51 STDIN.e60397285
+-rw------- 1 class99 class      846 Jun 20 17:51 STDIN.o60397285
+-rw-r--r-- 1 class99 class 14046478 Jun 20 17:51 iPSC_2.1_bismark_bt2_pe_sorted.bam
+-rw-r--r-- 1 class99 class  2064608 Jun 20 17:51 iPSC_2.1_bismark_bt2_pe_sorted.bam.bai
+```
+
 ### Generate methylation profiles from the bam files
 
 So far we have only mapped the reads using bismark. We can now generate methylation profiles using the following command
@@ -207,3 +231,10 @@ echo 'module load mugqic/bismark/0.16.1 ; module load mugqic/samtools/1.3 ; \
 bismark_methylation_extractor --bedGraph iPSC_1.1_bismark_bt2_pe.bam' \
 | qsub -l nodes=1:ppn=1 -d .
 ```
+Do the same for the other replicate
+```
+echo 'module load mugqic/bismark/0.16.1 ; module load mugqic/samtools/1.3 ; \
+bismark_methylation_extractor --bedGraph iPSC_2.1_bismark_bt2_pe.bam' \
+| qsub -l nodes=1:ppn=1 -d .
+```
+
