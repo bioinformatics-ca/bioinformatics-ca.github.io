@@ -102,7 +102,7 @@ bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/
 ##### Prepare files for loading in IGV
 ```
 echo 'module load mugqic/samtools/1.3 ; \
-samtools sort iPSC_1.1_bismark_bt2_pe.bam -o iPSC_1.1_bismark_bt2_pe_sorted.bam . ; \
+samtools sort iPSC_1.1_bismark_bt2_pe.bam -o iPSC_1.1_bismark_bt2_pe_sorted.bam ; \
 samtools index iPSC_1.1_bismark_bt2_pe_sorted.bam' \
 | qsub -l nodes=1:ppn=1 -d .
 ```
