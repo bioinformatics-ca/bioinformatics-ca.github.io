@@ -227,9 +227,10 @@ cd $out
 gunzip *.wig.gz
 H=/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/data/H3K27ac/wig_track_header
 cp $H $out/test.wig
-less $out/H3K27ac.H1.sorted.dupsMarked.q5.F1028.SET_150.wig.gz >> $out/test.wig
+less $out/H3K27ac.H1.sorted.dupsMarked.q5.F1028.SET_150.wig >> $out/test.wig
 gzip $out/test.wig
 ```
+Move test.wig to your local computer using WinSCP or scp.
 
 In your browser, open <http://genome.ucsc.edu>
 
