@@ -64,13 +64,13 @@ mkdir align
 echo 'module load mugqic/bismark/0.16.1 ; \
 bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
 -1 data/iPSC_1.1.fastq -2 data/iPSC_1.2.fastq' \
-|  qsub -l nodes=1:ppn=4 -d align
+|  qsub -l nodes=1:ppn=4 -d .
 ```
 The ```-n 1``` defines the maximum number of mismatches permitted in the seed.
 
 The ```/gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/``` specifies the reference genome to use.
 
-The ```qsub -l nodes=1:ppn=4 -d align``` submits the job to the cluster using 1 node, 4 processors and the ```align``` directory for output.
+The ```qsub -l nodes=1:ppn=4 -d .``` submits the job to the cluster using 1 node, 4 processors and the current directory for output.
 
 For more details, please refer to the Bismark [user guide](http://www.bioinformatics.babraham.ac.uk/projects/bismark/Bismark_User_Guide.pdf).
 
@@ -82,9 +82,8 @@ Replace "%%" by your student number.
 
 ##### Check files
 ```
-[class99@lg-1r14-n04 module3]$ ls
-ls
-data  iPSC_1.1.fastq_C_to_T.fastq  iPSC_1.2.fastq_G_to_A.fastq	STDIN.e60365781  STDIN.o60365781
+[class99@lg-1r14-n04 module3]$ ls align
+iPSC_1.1.fastq_C_to_T.fastq  iPSC_1.2.fastq_G_to_A.fastq	STDIN.e60365781  STDIN.o60365781
 ```
 
 *Is this what you expected?*
