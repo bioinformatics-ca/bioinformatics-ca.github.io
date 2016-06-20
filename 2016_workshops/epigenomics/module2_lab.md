@@ -271,7 +271,9 @@ export PYTHONPATH=/cvmfs/soft.mugqic/CentOS6/software/MACS2/MACS2-2.1.0.20151222
 ```
 
 ```
-out=<your location>/macs2; mkdir –p $out
+#out=<your location>/macs2; mkdir –p $out
+out=/home/mbilenky/test/macs2; mkdir -p $out
+
 macs2 callpeak -t $sig -c $inp -f BAM -g hs -n $out/$mark.v.Input.chr3 -B -q 0.01 &> $out/$mark.v.Input.chr3.log
 ```
 
