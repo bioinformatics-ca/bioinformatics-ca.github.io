@@ -60,7 +60,6 @@ iPSC_1.1.fastq	iPSC_1.2.fastq	iPSC_2.1.fastq	iPSC_2.2.fastq
 ### Map using bismark
 We will now process and map the reads using Bismark.
 ```
-mkdir align
 echo 'module load mugqic/bismark/0.16.1 ; \
 bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
 -1 data/iPSC_1.1.fastq -2 data/iPSC_1.2.fastq' \
@@ -82,8 +81,8 @@ Replace "%%" by your student number.
 
 ##### Check files
 ```
-[class99@lg-1r14-n04 module3]$ ls align
-iPSC_1.1.fastq_C_to_T.fastq  iPSC_1.2.fastq_G_to_A.fastq	STDIN.e60365781  STDIN.o60365781
+[class99@lg-1r14-n04 module3]$ ls
+data  iPSC_1.1.fastq_C_to_T.fastq  iPSC_1.2.fastq_G_to_A.fastq	STDIN.e60365781  STDIN.o60365781
 ```
 
 *Is this what you expected?*
