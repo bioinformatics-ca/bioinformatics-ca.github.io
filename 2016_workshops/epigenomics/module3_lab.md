@@ -36,14 +36,14 @@ ssh class99@guillimin.clumeq.ca
 
 You will be in your home folder. At this step, before continuing, please make sure that you followed the instructions in the section **"The first time you log in"** of the [Guillimin guide](using_the_guillimin_hpc.md). If you don't, compute jobs will not execute normally.
 
-##### Prepare directory for module 4
+##### Prepare directory for module 3
 ```
-rm -rf ~/module4
-mkdir -p ~/module4
-cd ~/module4
+rm -rf ~/module3
+mkdir -p ~/module3
+cd ~/module3
 ```
 
-##### Copy data for module 4
+##### Copy data for module 3
 ```
 mkdir data
 cp /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/data/* data/.
@@ -52,7 +52,7 @@ cp /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/data/* data/.
 ##### Check the files
 By typing ```ls``` you should see something similar to this
 ```
-[class99@lg-1r14-n04 module4]$ ls data
+[class99@lg-1r14-n04 module3]$ ls data
 fat.1.fastq  iPSC_1.1.fastq  iPSC_2.1.fastq  kidney.1.fastq
 fat.2.fastq  iPSC_1.2.fastq  iPSC_2.2.fastq  kidney.2.fastq
 ```
@@ -82,7 +82,7 @@ Replace "%%" by your student number.
 
 ##### Check files
 ```
-[class99@lg-1r14-n04 module4]$ ls
+[class99@lg-1r14-n04 module3]$ ls
 ls
 data  iPSC_1.1.fastq_C_to_T.fastq  iPSC_1.2.fastq_G_to_A.fastq	STDIN.e60365781  STDIN.o60365781
 ```
@@ -110,7 +110,7 @@ watch -d ls -ltr
 ##### Check files
 At the end, you should have something similar to
 ```
-[class99@lg-1r17-n02 module4]$ ls -ltr
+[class99@lg-1r17-n02 module3]$ ls -ltr
 total 13760
 drwxr-xr-x 2 class99 class      512 Jun 20 13:21 data
 -rw------- 1 class99 class     5046 Jun 20 13:50 STDIN.e60373053
@@ -138,7 +138,7 @@ samtools index iPSC_1.1_bismark_bt2_pe_sorted.bam' \
 ##### Check files
 At the end, you should have something similar to
 ```
-[class99@lg-1r17-n02 module4]$ ls -ltr
+[class99@lg-1r17-n02 module3]$ ls -ltr
 total 27136
 drwxr-xr-x 2 class99 class      512 Jun 20 13:21 data
 -rw------- 1 class99 class     5046 Jun 20 13:50 STDIN.e60373053
@@ -150,3 +150,12 @@ drwxr-xr-x 2 class99 class      512 Jun 20 13:21 data
 -rw-r--r-- 1 class99 class  1967480 Jun 20 13:55 iPSC_1.1_bismark_bt2_pe_sorted.bam.bai
 -rw------- 1 class99 class      855 Jun 20 13:55 STDIN.o60374332
 ```
+
+##### Copy files to your local computer to view in IGV
+
+Using a different terminal window that is not connected to the server (if you are using Mac/Linux) or WinSCP (if you are using Windows), retrieve the ```iPSC_1.1_bismark_bt2_pe_sorted.bam``` and ```iPSC_1.1_bismark_bt2_pe_sorted.bam.bai```
+```
+scp class%%@guillimin.clumeq.ca:/home/class99/module4/iPSC_1.1_bismark_bt2_pe_sorted.bam* .
+```
+
+Where you need to replace the "%%" by your student number.
