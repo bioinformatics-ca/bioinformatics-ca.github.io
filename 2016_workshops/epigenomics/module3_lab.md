@@ -325,4 +325,6 @@ How about `chr3:44,274,770-44,293,744`?
 
 *Do you how to load CpG islands annotation?*
 
+### Congrats, you're done!
+
 Continue exploring on your own...
