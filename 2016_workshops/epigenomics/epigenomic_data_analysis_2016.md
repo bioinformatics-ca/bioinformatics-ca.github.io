@@ -46,7 +46,7 @@ image: CBW_Epigenome-data_icon.jpg
   
 ### Class Picture
 
-1[Class photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/img/class_photo_small.png?raw=true)
+![Class photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/img/class_photo_small.png?raw=true)
 
 [&uarr;](#back_to_top)
 
