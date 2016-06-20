@@ -57,10 +57,34 @@ fat.2.fastq  iPSC_1.2.fastq  iPSC_2.2.fastq  kidney.2.fastq
 ```
 *What do the ".1" and ".2" in the file names mean?*
 
-##### Map using bismark
+### Map using bismark
+We will now process and map the reads using Bismark.
 ```
-echo 'module load mugqic/bismark/0.16.1 ; bismark --bowtie2 -n 1 \
-/gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ -1 iPSC_1.1.fastq -2 iPSC_1.2.fastq' \
+echo 'module load mugqic/bismark/0.16.1 ; \
+bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
+-1 iPSC_1.1.fastq -2 iPSC_1.2.fastq' \
 |  qsub -l nodes=1:ppn=1 -d .
 ```
 
+##### Check files
+```
+[class99@lg-1r14-n04 module4]$ ls
+fat.1.fastq	iPSC_1.1.fastq_C_to_T.fastq  iPSC_2.1.fastq  kidney.2.fastq
+fat.2.fastq	iPSC_1.2.fastq		     iPSC_2.2.fastq  STDIN.e60334723
+iPSC_1.1.fastq	iPSC_1.2.fastq_G_to_A.fastq  kidney.1.fastq  STDIN.o60334723
+```
+*Is this what you expected?*
+
+##### Check for error message
+```
+less STDIN.e60334723
+```
+Where you replace the file name by your specific error file.
+
+##### Map (again) using bismark
+```
+echo 'module load mugqic/bismark/0.16.1 ; module load mugqic/bowtie2/2.2.4 ; \
+bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
+-1 iPSC_1.1.fastq -2 iPSC_1.2.fastq' \
+|  qsub -l nodes=1:ppn=1 -d .
+```
