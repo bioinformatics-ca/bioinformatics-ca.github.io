@@ -178,6 +178,7 @@ For instance go to:
 chr3:44,513,532-44,523,018
 ```
 You should see something like
+
 ![region](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/region1.png)
 
 ### Repeat for the other replicate
