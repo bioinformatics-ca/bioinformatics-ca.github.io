@@ -285,3 +285,12 @@ At this point, if you load the region ```chr3:44,513,532-44,523,018``` you shoul
 
 ![region](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/region1_full.png)
 
+This promoter looks to be hypomethylated. 
+
+*Can you find a promoter that is hypermethylated?*
+
+How about ```chr3:44,274,770-44,293,744```?
+
+*Do you how to view CpGs? Can you load that data?*
+
+Continue exploring on your own...
