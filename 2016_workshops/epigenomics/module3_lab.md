@@ -46,5 +46,7 @@ By typing ```ls``` you should see something similar to this
 fat.1.fastq  iPSC_1.1.fastq  iPSC_2.1.fastq  kidney.1.fastq
 fat.2.fastq  iPSC_1.2.fastq  iPSC_2.2.fastq  kidney.2.fastq
 ```
+*What do the ".1" and ".2" in the file names mean?*
 
+###
 
