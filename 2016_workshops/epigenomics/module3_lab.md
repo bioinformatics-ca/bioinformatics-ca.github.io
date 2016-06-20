@@ -1,4 +1,4 @@
-# Module 4: Introduction to WGBS and Analysis 
+# Module 3: Introduction to WGBS and Analysis 
 
 ## Important notes:
 * Please refer to the following guide for instructions on how to connect to Guillimin and submit jobs: [using_the_guillimin_hpc.md](using_the_guillimin_hpc.md)
