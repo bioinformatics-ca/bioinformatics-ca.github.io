@@ -210,7 +210,10 @@ Define:
 ```
 BAM=$out/H3K27ac.H1.sorted.dupsMarked.bam
 SAMTOOLS=/cvmfs/soft.mugqic/CentOS6/software/samtools/samtools-0.1.19/samtools 
-java -jar -Xmx2G /home/mbilenky/bin/BAM2WIG.jar -bamFile $BAM -out $out -q 5 -F 1028 -cs -x 150 -samtools $SAMTOOLS > $out/wig.log
+
+BIN=/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/bin/
+
+java -jar -Xmx2G $BIN/BAM2WIG.jar -bamFile $BAM –out $out -q 5 -F 1028 -cs -x 150 -samtools $SAMTOOLS > $out/wig.log
 
 less $out/H3K27ac.H1.sorted.dupsMarked.q5.F1028.SET_150.wig.gz
 ```
