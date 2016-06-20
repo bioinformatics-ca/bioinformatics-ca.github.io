@@ -70,10 +70,11 @@ Toy example:
 
 ```
 data=/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/data/
-genome=/home/pubseq/genomes/Homo_sapiens/hg19a/bwa_ind/genome/GRCh37-lite.fa
+genome=/cvmfs/ref.mugqic/genomes/species/Homo_sapiens.GRCh37/genome/bwa_index/Homo_sapiens.GRCh37.fa
 mark=H3K27ac
 f=$data/$mark/$mark.H1.fastq.gz
-out=<location of your choice>/$mark; mkdir –p $out 
+#out=<location of your choice>/$mark; mkdir –p $out 
+out=/home/mbilenky/test/H3K27ac; mkdir -p $out
 n=$mark.H1
 ```
 
@@ -139,14 +140,14 @@ $BWA sampe [options] <genome> <in1.sai> <in2.sai> <in1.fq> <in2.fq> > out.sam
 Lets define samtools variable:
 
 ```
-SAMTOOLS= /cvmfs/soft.mugqic/CentOS6/software/samtools/samtools-1.3/bin/samtools
+SAMTOOLS=/cvmfs/soft.mugqic/CentOS6/software/samtools/samtools-1.3/bin/samtools
 ```
 
 And convert the SAM to BAM and sort the BAM
 
 ```
 $SAMTOOLS view -Sb $out/$n.sam > $out/$n.bam
-$SAMTOOLS sort $out/$n.bam –o $out/$n.sorted.bam
+$SAMTOOLS sort $out/$n.bam > $out/$n.sorted.bam
 ```
 
 This was *position sorting*; Option *-n* gives *name sorted* BAM file
@@ -160,7 +161,7 @@ $SAMTOOLS view  -h $out/$n.sorted.bam | more
 Check the size of SAM/BAM files
 
 ```
-ls -lh
+ls -lh $out
 ```
 
 We can delete intermediate files (sai sam and unsorted bam):
@@ -188,7 +189,8 @@ java -jar -Xmx20G $PICARD/MarkDuplicates.jar I=$out/$n.sorted.bam O=$out/$n.sort
 
 
 ```
-samtools flagstat $out/$n.sorted.dupsMarked.bam > $out/$n.flagstat
+$SAMTOOLS flagstat $out/$n.sorted.dupsMarked.bam > $out/$n.flagstat
+less $out/H3K27ac.H1.flagstat
 ```
 
 Flagstat contains different BAM file statistics; check the file
@@ -206,9 +208,11 @@ Index $out/$n.sorted.dupsMarked.bam.bai file is generated; it allows samtool acc
 Define:
 
 ```
-BAM=$OUT/H3K27ac.H1.sorted.dupsMarked.bam
-SAMTOOLS= /cvmfs/soft.mugqic/CentOS6/software/samtools/samtools-0.1.19/samtools 
-java -jar -Xmx2G /home/mbilenky/bin/BAM2WIG.jar -bamFile $BAM –out $OUT -q 5 -F 1028 -cs -x 150 -samtools $SAMTOOLS > $OUT/wig.log
+BAM=$out/H3K27ac.H1.sorted.dupsMarked.bam
+SAMTOOLS=/cvmfs/soft.mugqic/CentOS6/software/samtools/samtools-0.1.19/samtools 
+java -jar -Xmx2G /home/mbilenky/bin/BAM2WIG.jar -bamFile $BAM -out $out -q 5 -F 1028 -cs -x 150 -samtools $SAMTOOLS > $out/wig.log
+
+less $out/H3K27ac.H1.sorted.dupsMarked.q5.F1028.SET_150.wig.gz
 ```
 
 #### Alignment Step: Visualization
@@ -216,11 +220,12 @@ java -jar -Xmx2G /home/mbilenky/bin/BAM2WIG.jar -bamFile $BAM –out $OUT -q 5 -
 We would need to add a track header to the file
 
 ```
-cd $OUT
+cd $out
 gunzip *.wig.gz
 H=/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/data/H3K27ac/wig_track_header
-cat $H H3K27ac.H1.sorted.dupsMarked.q5.F1028.SET_150.wig > test.wig
-gzip test.wig
+cp $H $out/test.wig
+less $out/H3K27ac.H1.sorted.dupsMarked.q5.F1028.SET_150.wig.gz >> $out/test.wig
+gzip $out/test.wig
 ```
 
 In your browser, open <http://genome.ucsc.edu>
@@ -247,12 +252,13 @@ dir=/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/
 sig=$dir/original/chr3/$mark.H1.bam
 inp=$dir/original/chr3/Input.H1.bam
 BIN=/home/mbilenky/bin
-OUT=<your location>/FindER; mkdir -p $OUT
+#OUT=<your location>/FindER; mkdir -p $OUT
+out=/home/mbilenky/test/FindER; mkdir -p $out
 SAMTOOLS=/cvmfs/soft.mugqic/CentOS6/software/samtools/samtools-0.1.19/samtools
 ```
 
 ```
-java -jar -Xmx10G $BIN/FindER_1_0_0.jar -signalBam $sig -inputBam $inp -SE -xsetI 150 -xsetS 150 -bin 150 -v -out $OUT -samtools $SAMTOOLS -regions 3 &> $OUT/$mark.log
+java -jar -Xmx10G $BIN/FindER_1_0_0.jar -signalBam $sig -inputBam $inp -SE -xsetI 150 -xsetS 150 -bin 150 -v -out $out -samtools $SAMTOOLS -regions 3 &> $out/$mark.log
 ```
 
 #### Run MACS2
