@@ -14,10 +14,10 @@ image: CBW_Metagenome_icon.jpg
 | | **Wednesday, June 22** | | **Thursday, June 23** | | **Friday, June 24** |
 | 8:00 | <font color="green">*Registration and Breakfast*</font> | 8:00 | <font color="green">*Breakfast*</font> | 8:00 | <font color="green">*Breakfast*</font> |
 | 8:30 | <font color="purple">Welcome (Ann)</font> | 8:30 | <font color="purple">Module 4: Metagenomic Taxonomic Composition (Langille)</font> | 8:30 | <font color="purple">Module 6: Metatranscriptomics (Parkinson)</font> |
-| 9:00 | <font color="purple">Module 1: Introduction to Metagenomics and Amazon Setup (Hsiao)</font> | 9:30 |  <font color="blue">Module 4 Lab</font> | 9:30 |  <font color="blue">Module 6 Lab</font> |
-| 10:00 | <font color="blue">Module 1 Lab</font> | | | | |
+| 9:00 | <font color="purple">Module 1.1: Introduction to Metagenomics (Hsiao)</font> | 9:30 |  <font color="blue">Module 4 Lab</font> | 9:30 |  <font color="blue">Module 6 Lab</font> |
+| 9:45 | <font color="purple">Module 1.2: Introduction to Cloud Computing (Lu)</font> | | | | |
 | 10:30 | <font color="green">*Coffee Break*</font> | 10:30 | <font color="green">*Coffee Break*</font> | 10:30 | <font color="green">*Coffee Break*</font> |
-| 11:00 |  <font color="blue">Module 1 Lab Continued</font> | 11:00 |  <font color="blue">Module 4 Lab Continued</font> | 11:00 |  <font color="blue">Module 6 Lab Continued</font> |
+| 11:00 |  <font color="blue">Module 1.3: Intro to Database Resource</font> | 11:00 |  <font color="blue">Module 4 Lab Continued</font> | 11:00 |  <font color="blue">Module 6 Lab Continued</font> |
 | 11:30 | <font color="purple">Module 2: Marker Gene-based Analysis (Hsiao)</font> | | | | |
 | 12:30 | <font color="green">*Lunch - on your own*</font> | 12:30 | <font color="green">*Lunch - on your own*</font> | 12:30 | <font color="green">*Lunch - on your own*</font> |
 | 1:30 |  <font color="blue">Module 2 Lab</font> | 1:30 | <font color="purple">Module 5: Metagenomic Functional Composition (Langille)</font> | 1:30 | <font color="purple">Module 7: Biomarker Selection (Brinkman)</font> |
