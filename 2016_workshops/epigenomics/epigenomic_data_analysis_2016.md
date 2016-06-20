@@ -84,7 +84,9 @@ image: CBW_Epigenome-data_icon.jpg
 ## R Review Session
 
 [Lecture](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/resources/RReview_slides.pdf)
+
 [RScript to use for Review](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/epigenomics/BiCG_2016_Rreview_Code.R)
+
 [RScript to view Results](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/resources/R_Review_Session_Code.ipynb)
 
 ##  Day 1 <a id="day_1"></a>
