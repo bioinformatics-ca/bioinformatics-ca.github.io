@@ -76,7 +76,7 @@ chmod u+x Integrated_Lab_1.sh
 
 The first command fetches the script and the second command allows us to execute it.
 
-This script takes about 40-60 minutes to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
+This script takes about 40-50 minutes to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
 
 ```
 ./Integrated_Lab_1.sh 2>&1 | tee -a log.txt
@@ -124,13 +124,15 @@ Workflow <a id="workflow"></a>
 
 ### Data QC
 
-The first step when analysing data is to assess its quality and to check your assumptions. Are the reads of the expected length? Are the PHRED quality scores sufficiently high? We can run common quality checks using a tool called FastQC. This is a general quality checker for all types of DNA sequencing data, so not all of the output will be important for amplicon reads. Focus on the read lengths and quality scores.
+The first step when analysing data is to assess its quality and to check your assumptions. Are the reads of the expected length? Are the PHRED quality scores sufficiently high? We can run common quality checks using a tool called FastQC. 
 
 ```
 fastqc -q -t $ncores sequence_files/*.fastq -o fastqc_out/raw/individuals
 ```
 
 This command will run FastQC on all of our raw data files and store the results in the folder indicated. $ncores is a variable defined at the begining of the script indicating how many cores we have, here we're using that number to tell FastQC how many threads to use.
+
+This is a general quality checker for all types of DNA sequencing data, so not all of the output will be important for amplicon reads. Focus on the read lengths and quality scores. You can look at the results either by transferring the output html files to your local computer, or going to  [<http://cbwXX.dyndns.info>](http://cbwXX.dyndns.info) (where XX is your student number) and navigating to the output directory. You may need to unzip the results first. 
 
 ```
 gunzip --to-stdout sequence_files/*.fastq.gz | fastqc -q -t $ncores stdin -o fastqc_out/raw/combined
