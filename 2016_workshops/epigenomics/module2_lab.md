@@ -203,7 +203,7 @@ Index $out/$n.sorted.dupsMarked.bam.bai file is generated; it allows samtool acc
 
 #### Alignment Step: Generating wig File
 
-[**BAM2WIG java tool**](see http://www.epigenomes.ca/tools-and-software/index.html)
+[**BAM2WIG java tool**](http://www.epigenomes.ca/tools-and-software/index.html)
 
 Define:
 
