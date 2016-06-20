@@ -30,6 +30,7 @@ This module will cover the basics of Bisulfite-sequencing data analysis includin
 ### Getting started
 
 #####  Connect to the Guillimin HPC
+
 ```
 ssh class99@guillimin.clumeq.ca
 ```
@@ -37,6 +38,7 @@ ssh class99@guillimin.clumeq.ca
 You will be in your home folder. At this step, before continuing, please make sure that you followed the instructions in the section **"The first time you log in"** of the [Guillimin guide](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/.md). If you don't, compute jobs will not execute normally.
 
 ##### Prepare directory for module 3
+
 ```
 rm -rf ~/module3
 mkdir -p ~/module3
@@ -44,42 +46,50 @@ cd ~/module3
 ```
 
 ##### Copy data for module 3
+
 ```
 mkdir data
 cp /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/data/* data/.
 ```
 
 ##### Check the files
-By typing ```ls``` you should see something similar to this
+By typing `ls` you should see something similar to this
+
 ```
 [class99@lg-1r17-n02 module3]$ ls data
 iPSC_1.1.fastq	iPSC_1.2.fastq	iPSC_2.1.fastq	iPSC_2.2.fastq
 ```
+
 *What do the ".1" and ".2" in the file names mean?*
 
 ### Map using bismark
 We will now process and map the reads using Bismark.
+
 ```
 echo 'module load mugqic/bismark/0.16.1 ; \
 bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
 -1 data/iPSC_1.1.fastq -2 data/iPSC_1.2.fastq' \
 |  qsub -l nodes=1:ppn=4 -d .
 ```
-The ```-n 1``` defines the maximum number of mismatches permitted in the seed.
 
-The ```/gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/``` specifies the reference genome to use.
+The `-n 1` defines the maximum number of mismatches permitted in the seed.
 
-The ```qsub -l nodes=1:ppn=4 -d .``` submits the job to the cluster using 1 node, 4 processors and the current directory for output.
+The `/gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/` specifies the reference genome to use.
+
+The `qsub -l nodes=1:ppn=4 -d .` submits the job to the cluster using 1 node, 4 processors and the current directory for output.
 
 For more details, please refer to the Bismark [user guide](http://www.bioinformatics.babraham.ac.uk/projects/bismark/Bismark_User_Guide.pdf).
 
 ##### Check status of your job
+
 ```
 watch -d showq -uclass%%
 ```
+
 Replace "%%" by your student number.
 
 ##### Check files
+
 ```
 [class99@lg-1r17-n02 module3]$ ls
 data  iPSC_1.1.fastq_C_to_T.fastq  iPSC_1.2.fastq_G_to_A.fastq	STDIN.e60392282  STDIN.o60392282
@@ -88,9 +98,11 @@ data  iPSC_1.1.fastq_C_to_T.fastq  iPSC_1.2.fastq_G_to_A.fastq	STDIN.e60392282  
 *Is this what you expected?*
 
 ##### Check the error message
+
 ```
 less STDIN.e60392282
 ```
+
 Where you replace the file name by your specific error file.
 
 ##### Map (again) using bismark
@@ -103,7 +115,9 @@ bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/
 -1 data/iPSC_1.1.fastq -2 data/iPSC_1.2.fastq' \
 | qsub -l nodes=1:ppn=4 -d .
 ```
+
 ##### Check the files as the are being written
+
 ```
 watch -d ls -ltr
 ```
@@ -122,13 +136,14 @@ drwxr-xr-x 2 class99 class      512 Jun 20 16:56 data
 ```
 
 Let's look at the report
+
 ```
 less iPSC_1.1_bismark_bt2_PE_report.txt
 ```
 
 ### Prepare files for loading in IGV
 
-We need to sort the bam file and prepare an index so we will be able to load in IGV. We will use the program ```samtools``` for this.
+We need to sort the bam file and prepare an index so we will be able to load in IGV. We will use the program `samtools` for this.
 
 ```
 echo 'module load mugqic/samtools/1.3 ; \
@@ -156,7 +171,8 @@ drwxr-xr-x 2 class99 class      512 Jun 20 16:56 data
 
 ##### Copy files to your local computer to view in IGV
 
-Using a different terminal window that is not connected to the server (if you are using Mac/Linux) or WinSCP (if you are using Windows), retrieve the ```iPSC_1.1_bismark_bt2_pe_sorted.bam``` and ```iPSC_1.1_bismark_bt2_pe_sorted.bam.bai```
+Using a different terminal window that is not connected to the server (if you are using Mac/Linux) or WinSCP (if you are using Windows), retrieve the `iPSC_1.1_bismark_bt2_pe_sorted.bam` and `iPSC_1.1_bismark_bt2_pe_sorted.bam.bai`
+
 ```
 scp class%%@guillimin.clumeq.ca:/home/class%%/module3/iPSC_1.1_bismark_bt2_pe_sorted.bam* .
 ```
@@ -167,9 +183,10 @@ Where you need to replace the two places with "%%" by your student number.
 
 Launch IGV on your computer.
 
-Load your sorted bam and index file in IGV using ```File -> Load from file```.
+Load your sorted bam and index file in IGV using `File -> Load from file`.
 
 Go to:
+
 ```
 chr3:43,375,889-45,912,052
 ```
@@ -177,9 +194,11 @@ chr3:43,375,889-45,912,052
 And zoom in until you see something.
 
 For instance go to:
+
 ```
 chr3:44,513,532-44,523,018
 ```
+
 You should see something like
 
 ![region](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/region1.png)
@@ -187,6 +206,7 @@ You should see something like
 ### Repeat for the other replicate
 
 ##### Map using bismark
+
 ```
 echo 'module load mugqic/bismark/0.16.1 ; module load mugqic/bowtie2/2.2.4 ; module load mugqic/samtools/1.3 ; \
 bismark --bowtie2 -n 1 /gs/project/mugqic/bioinformatics.ca/epigenomics/wgb-seq/genome/ \
@@ -230,12 +250,15 @@ drwxr-xr-x 2 class99 class      512 Jun 20 16:56 data
 ### Generate methylation profiles from the bam files
 
 So far we have only mapped the reads using bismark. We can now generate methylation profiles using the following command
+
 ```
 echo 'module load mugqic/bismark/0.16.1 ; module load mugqic/samtools/1.3 ; \
 bismark_methylation_extractor --bedGraph iPSC_1.1_bismark_bt2_pe.bam' \
 | qsub -l nodes=1:ppn=1 -d .
 ```
+
 Do the same for the other replicate
+
 ```
 echo 'module load mugqic/bismark/0.16.1 ; module load mugqic/samtools/1.3 ; \
 bismark_methylation_extractor --bedGraph iPSC_2.1_bismark_bt2_pe.bam' \
@@ -244,6 +267,7 @@ bismark_methylation_extractor --bedGraph iPSC_2.1_bismark_bt2_pe.bam' \
 
 ##### Check files
 At this point you should have something like
+
 ```
 [class99@lg-1r17-n02 module3]$ ls
 CHG_OB_iPSC_1.1_bismark_bt2_pe.txt  CpG_OT_iPSC_2.1_bismark_bt2_pe.txt		  iPSC_2.1_bismark_bt2_pe.bedGraph.gz		STDIN.e60397907
@@ -260,17 +284,21 @@ CpG_OT_iPSC_1.1_bismark_bt2_pe.txt  iPSC_2.1_bismark_bt2_pe.bam			  STDIN.e60397
 ```
 
 ##### Uncompress the bedGraph files
+
 ```
 gunzip iPSC_1.1_bismark_bt2_pe.bedGraph.gz
 gunzip iPSC_2.1_bismark_bt2_pe.bedGraph.gz
 ```
 
 ##### Transfer the files to your local computer
-Using a different terminal window that is not connected to the server (if you are using Mac/Linux) or WinSCP (if you are using Windows), retrieve the ```iPSC_2.1_bismark_bt2_pe_sorted.bam``` and ```iPSC_2.1_bismark_bt2_pe_sorted.bam.bai```
+Using a different terminal window that is not connected to the server (if you are using Mac/Linux) or WinSCP (if you are using Windows), retrieve the `iPSC_2.1_bismark_bt2_pe_sorted.bam` and `iPSC_2.1_bismark_bt2_pe_sorted.bam.bai`
+
 ```
 scp class%%@guillimin.clumeq.ca:/home/class%%/module3/iPSC_2.1_bismark_bt2_pe_sorted.bam* .
 ```
+
 Also transfer the bedGraphs
+
 ```
 scp class%%@guillimin.clumeq.ca:/home/class%%/module3/*bedGraph* .
 ```
@@ -279,13 +307,13 @@ Where you need to replace the two places with "%%" by your student number.
 
 ### Load all the data in IGV
 
-Load ```iPSC_1.1_bismark_bt2_pe.bedGraph``` in IGV using ```File -> Load from file```.
+Load `iPSC_1.1_bismark_bt2_pe.bedGraph` in IGV using `File -> Load from file`.
 
-Load ```iPSC_2.1_bismark_bt2_pe_sorted.bam``` in IGV using ```File -> Load from file```.
+Load `iPSC_2.1_bismark_bt2_pe_sorted.bam` in IGV using `File -> Load from file`.
 
-Load ```iPSC_2.1_bismark_bt2_pe.bedGraph``` in IGV using ```File -> Load from file```.
+Load `iPSC_2.1_bismark_bt2_pe.bedGraph` in IGV using `File -> Load from file`.
 
-At this point, if you load the region ```chr3:44,513,532-44,523,018``` you should see something like
+At this point, if you load the region `chr3:44,513,532-44,523,018` you should see something like
 
 ![region](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/region1_full.png)
 
@@ -293,7 +321,7 @@ This promoter looks to be hypomethylated.
 
 *Can you find a promoter that is hypermethylated?*
 
-How about ```chr3:44,274,770-44,293,744```?
+How about `chr3:44,274,770-44,293,744`?
 
 *Do you how to load CpG islands annotation?*
 
