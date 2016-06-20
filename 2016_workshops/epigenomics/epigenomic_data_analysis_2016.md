@@ -43,6 +43,10 @@ image: CBW_Epigenome-data_icon.jpg
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="https://noteapp.com/Epigenomics2016">here</a>!
+  
+### Class Picture
+
+1[Class photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/img/class_photo_small.png?raw=true)
 
 [&uarr;](#back_to_top)
 
