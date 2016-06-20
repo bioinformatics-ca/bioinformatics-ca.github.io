@@ -44,6 +44,10 @@ image: CBW_Epigenome-data_icon.jpg
 
   Post your workshop questions <a href="https://noteapp.com/Epigenomics2016">here</a>!
   
+### Workshop Survey
+
+We appreciate your feedback!  Please fill out [our survey](https://www.surveymonkey.com/r/6NVXVQT)!
+  
 ### Class Picture
 
 ![Class photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/img/class_photo_small.png?raw=true)
