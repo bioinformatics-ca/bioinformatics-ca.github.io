@@ -15,7 +15,7 @@ By Misha Bilenky
 
 Genomes for different species can be found at:
 
-[NCBI](ftp://ftp/ncbi.nih.gov/genomes)
+[NCBI](ftp://ftp.ncbi.nih.gov/genomes)
 
 or
 
