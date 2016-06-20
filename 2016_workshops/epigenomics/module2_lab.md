@@ -26,6 +26,11 @@ On **Guillimin**
 ```
 cd /cvmfs/ref.mugqic/genomes/species/
 ls -l
+```
+
+![file list](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/img/img1.png?raw=true)
+
+```
 cd /Homo_sapiens.GRCh37/genome
 ls -l
 ```
@@ -226,6 +231,8 @@ Click the *Manage custom tracks* button.
 
 *Add custom track* and browse to $OUT/test.wig.gz
 
+![Region of interest](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/img/img2.png?raw=true)
+
 Browse to the region of interest: chr3:43375889-45912052
 
 ### Enriched Regions
@@ -287,4 +294,6 @@ Now load both files
 <FindER out> H3K27ac.H1.vs.Input.H1.bin_150.FDR_0.05.FindER.bed.gz
 ```
 
-You should now see BED tracks
+You should now see BED tracks.
+
+![BED added](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/img/img3.png?raw=true)
