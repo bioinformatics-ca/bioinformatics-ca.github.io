@@ -76,7 +76,7 @@ chmod u+x Integrated_Lab_1.sh
 
 The first command fetches the script and the second command allows us to execute it.
 
-This script takes about 40-50 minutes to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
+This script takes about 40-60 minutes to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
 
 ```
 ./Integrated_Lab_1.sh 2>&1 | tee -a log.txt
@@ -124,15 +124,13 @@ Workflow <a id="workflow"></a>
 
 ### Data QC
 
-The first step when analysing data is to assess its quality and to check your assumptions. Are the reads of the expected length? Are the PHRED quality scores sufficiently high? We can run common quality checks using a tool called FastQC. 
+The first step when analysing data is to assess its quality and to check your assumptions. Are the reads of the expected length? Are the PHRED quality scores sufficiently high? We can run common quality checks using a tool called FastQC. This is a general quality checker for all types of DNA sequencing data, so not all of the output will be important for amplicon reads. Focus on the read lengths and quality scores.
 
 ```
 fastqc -q -t $ncores sequence_files/*.fastq -o fastqc_out/raw/individuals
 ```
 
 This command will run FastQC on all of our raw data files and store the results in the folder indicated. $ncores is a variable defined at the begining of the script indicating how many cores we have, here we're using that number to tell FastQC how many threads to use.
-
-This is a general quality checker for all types of DNA sequencing data, so not all of the output will be important for amplicon reads. Focus on the read lengths and quality scores. You can look at the results either by transferring the output html files to your local computer, or going to  [<http://cbwXX.dyndns.info>](http://cbwXX.dyndns.info) (where XX is your student number) and navigating to the output directory. You may need to unzip the results first. 
 
 ```
 gunzip --to-stdout sequence_files/*.fastq.gz | fastqc -q -t $ncores stdin -o fastqc_out/raw/combined
@@ -264,17 +262,12 @@ biom convert --to-tsv -i clustering/otu_table_high_conf.biom --table-type='OTU t
 Here we convert the BIOM format file to tab-separated format (human readable) using a command from the "biom" [software package](http://biom-format.org/) with a column for taxonomic info called "Consensus Lineage".
 
 ```
-#We use awk on the converted OTU table to determine the lowest sequence depth
-subsampleSize=$(awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } \
- END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' clustering/otu_table_high_conf.tsv)
-echo $subsampleSize
-
-#This is passed as a parameter to QIIME's rarefaction script
-single_rarefaction.py -i clustering/otu_table_high_conf.biom -o clustering/otu_table_high_conf_rarefied.biom -d $subsampleSize
-
+single_rarefaction.py -i clustering/otu_table_high_conf.biom -o clustering/otu_table_high_conf_rarefied.biom -d  \
+`awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } \ ``
+END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' clustering/otu_table_high_conf.tsv`
 ```
 
-The awk command uses the converted OTU table to determine the lowest sequence depth of all the input samples and we then pass that value as the -d parameter to QIIME's rarefaction script. This QIIME script will "rarefy" a biom file such that every sample in the output biom file (here: clustering/otu\_table\_high\_conf\_rarefied.biom) will be represented by the same number of reads.  This number could also be read manually from the summary files we generated.
+This QIIME script will "rarefy" a biom file such that every sample in the output biom file (here: clustering/otu\_table\_high\_conf\_rarefied.biom) will be represented by the same number of reads. The embedded awk command uses the converted OTU table to determine the lowest sequence depth of all the input samples and pass it as the -d parameter to QIIME's rarefaction script. This number could also be read manually from the summary files we generated.
 
 ### Downstream Analyses
 
@@ -415,7 +408,7 @@ cd ~/workspace/assignment2
 -   To avoid copying all the sample files from the ~/CourseData directory, we will just create a link to that folder from our folder that we just created.
 
 ```
-ln -s ~/CourseData/integrated_assignment_day2/* .
+ln -s ~/CourseData/metagenomics/integrated_assignment_day2/* .
 ```
 
 -   Check to see if we have got all the files
@@ -436,20 +429,14 @@ We have the helper script run\_metaphlan2.pl for running MetaPhlan on all our sa
 -   Run the helper script run\_metaphlan2.pl
 
 ```
-run_metaphlan2.pl -p 4 -o osd_metaphlan_merged_all.txt *.fasta
+/usr/local/microbiome_helper-master/run_metaphlan2.pl -p 4 -o osd_metaphlan_merged_all.txt *.fasta
 ```
 
 This step should take ~20 minutes to complete. So, we will try and dissect the run\_metaphlan2.pl PERL script while it is running by opening up another connection to the cloud.
 
 ### Dissecting the run\_metaphlan2.pl PERL script
 
--   Locate the script and open it for viewing; When you open the script using 'less' you can use the up and down arrow to navigate.
-
-```
-which run_metaphlan2.pl
-```
-
--   open it for viewing
+-   Open the script for viewing; When you open the script using 'less' you can use the up and down arrow to navigate.
 
 ```
 less /usr/local/microbiome_helper-master/run_metaphlan2.pl
@@ -515,10 +502,8 @@ We'll now use the PERL script metaphlan\_to\_stamp.pl to convert the Metaphlan o
 -   Convert the metaphlan output to the input profile format required for STAMP
 
 ```
-metaphlan_to_stamp.pl osd_metaphlan_merged_all.txt > osd_metaphlan_merged_all.spf
+/usr/local/microbiome_helper-master/metaphlan_to_stamp.pl osd_metaphlan_merged_all.txt > osd_metaphlan_merged_all.spf
 ```
-
-The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenomes. This involves comparing the metagenome sequences to the KEGG database using the program diamond. This is a time consuming step and estimated to take around ~80-90 minutes for all our samples. So before moving onto the statistical analysis of the metaphlan results, it would be advisable to start the "Preparing for running Humann" step. You can then switch to your other login instance for continuing with the pipeline.
 
 ### Statistical analysis of the taxa using STAMP
 
@@ -537,14 +522,14 @@ The metadata file is called "metadata-file-for-osd-subset-210615.txt" and is loc
 Functional composition of the OSD samples OR "What are they doing?" <a id="what"></a>
 -------------------------------------------------------------------
 
-We will be using the program Humann for this purpose.
+The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenomes. This involves comparing the metagenome sequences to the KEGG database using the program diamond. This is a time consuming step and estimated to take around ~80-90 minutes for all our samples. Based on feedback from last year, we have pre-computed these results for you. The results are named kos.spf, pathways.spf, and modules.spf and can be found in your ~/workspace/assignment2 directory. If you are interested, see below is how we ran the samples. If not, skip to "Statistical analysis of metabolic differences"
 
 ### Preparing for running Humann
 
 -   Perform BLASTX searches agaisnt the KEGG reference database using the program Diamond (We have a helper script for running this step in batch mode for all of our samples)
 
 ```
- run_pre_humann.pl -d ~/CourseData/refs/kegg/kegg.reduced -p 8 -o pre_humann *.fasta
+ /usr/local/microbiome_helper-master/run_pre_humann.pl -d ~/CourseData/metagenomics/ref/kegg/kegg.reduced -p 8 -o pre_humann *.fasta
 ```
 
 -   Check whether the run was successful by examining the output files
@@ -559,7 +544,7 @@ less pre_humann/OSD106-0m-depth.comb.qc.masked.dedup.subsample.txt
 -   copy the humann program folder (humann-0.99) to your working directory
 
 ```
-cp -r ~/CourseData/refs/humann-0.99/ ~/workspace/
+cp -r ~/CourseData/metagenomics/ref/humann-0.99/ ~/workspace/
 ```
 
 -   Change to the humann directory you just copied
@@ -590,14 +575,14 @@ A bunch of messages will pass on your screen and it should finish in ~20-30 minu
 
 These files contain relative abundances for each of these different functional classifications. You can look at the format of these using “less”:
 
--   To statistically test and visualize these resutls using STAMP we need to convert these files into a format readable by STAMP just like we did with the Metaphlan output. We use the "humann\_to\_stamp.pl" PERL script for this step
+-   To statistically test and visualize these results using STAMP we need to convert these files into a format readable by STAMP just like we did with the Metaphlan output. We use the "humann\_to\_stamp.pl" PERL script for this step
 
 ```
-humann_to_stamp.pl output/04b-hit-keg-mpt-cop-nul-nve-nve.txt > pathways.spf
+/usr/local/microbiome_helper-master/humann_to_stamp.pl output/04b-hit-keg-mpt-cop-nul-nve-nve.txt > pathways.spf
 
-humann_to_stamp.pl output/04b-hit-keg-mpm-cop-nul-nve-nve.txt > modules.spf
+/usr/local/microbiome_helper-master/humann_to_stamp.pl output/04b-hit-keg-mpm-cop-nul-nve-nve.txt > modules.spf
 
-humann_to_stamp.pl output/01b-hit-keg-cat.txt > kos.spf
+/usr/local/microbiome_helper-master/humann_to_stamp.pl output/01b-hit-keg-cat.txt > kos.spf
 ```
 
 -   Since the sample names in the \*.spf files and in the metadata file do not match (the \*.spf files have the text ".subsample" appendedto the sample name), it mght results in errors when you load them in STAMP. So we have to fix the \*.spf by removing the ".subsample" from them.
