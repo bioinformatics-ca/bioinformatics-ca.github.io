@@ -262,12 +262,17 @@ biom convert --to-tsv -i clustering/otu_table_high_conf.biom --table-type='OTU t
 Here we convert the BIOM format file to tab-separated format (human readable) using a command from the "biom" [software package](http://biom-format.org/) with a column for taxonomic info called "Consensus Lineage".
 
 ```
-single_rarefaction.py -i clustering/otu_table_high_conf.biom -o clustering/otu_table_high_conf_rarefied.biom -d  \
-`awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } \ ``
-END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' clustering/otu_table_high_conf.tsv`
+#We use awk on the converted OTU table to determine the lowest sequence depth
+subsampleSize=$(awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } \
+ END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' clustering/otu_table_high_conf.tsv)
+echo $subsampleSize
+
+#This is passed as a parameter to QIIME's rarefaction script
+single_rarefaction.py -i clustering/otu_table_high_conf.biom -o clustering/otu_table_high_conf_rarefied.biom -d $subsampleSize
+
 ```
 
-This QIIME script will "rarefy" a biom file such that every sample in the output biom file (here: clustering/otu\_table\_high\_conf\_rarefied.biom) will be represented by the same number of reads. The embedded awk command uses the converted OTU table to determine the lowest sequence depth of all the input samples and pass it as the -d parameter to QIIME's rarefaction script. This number could also be read manually from the summary files we generated.
+The awk command uses the converted OTU table to determine the lowest sequence depth of all the input samples and we then pass that value as the -d parameter to QIIME's rarefaction script. This QIIME script will "rarefy" a biom file such that every sample in the output biom file (here: clustering/otu\_table\_high\_conf\_rarefied.biom) will be represented by the same number of reads.  This number could also be read manually from the summary files we generated.
 
 ### Downstream Analyses
 
