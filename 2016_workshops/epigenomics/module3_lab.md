@@ -275,4 +275,13 @@ Where you need to replace the two places with "%%" by your student number.
 
 ### Load all the data in IGV
 
+Load ```iPSC_1.1_bismark_bt2_pe.bedGraph``` in IGV using ```File -> Load from file```.
+
+Load ```iPSC_2.1_bismark_bt2_pe_sorted.bam``` in IGV using ```File -> Load from file```.
+
+Load ```iPSC_2.1_bismark_bt2_pe.bedGraph``` in IGV using ```File -> Load from file```.
+
+At this point, if you load the region ```chr3:44,513,532-44,523,018``` you should see something like
+
+![region](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/region1_full.png)
 
