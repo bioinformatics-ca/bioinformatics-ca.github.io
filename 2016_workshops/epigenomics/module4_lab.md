@@ -211,7 +211,7 @@ bigBedToBed S005HDH1.H3K27ac.ppqt_macs2_v2.20130819.bb S005HDH1.H3K27ac.ppqt_mac
 * Download the BED files locally using **scp** / **WinSCP**. Don't forget to run the command on a local terminal session, not on Guillimin.
 
 ```
-scp class99@guillimin.clumeq.ca:/home/class99/module4/*.bed .
+scp class99@guillimin.clumeq.ca:/home/class99/module4/great/*.bed .
 ```
 
 * Load the GREAT website: http://bejerano.stanford.edu/great/public/html/
