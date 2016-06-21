@@ -73,9 +73,10 @@ cd ~/module4
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_portal_fullTrackView.png)
     
-* You can also download these tracks locally for visualization in IGV
-    * Click on the download button at the bottom of the grid.
-    * Use the download links to download the tracks.
+* You can also download these tracks locally for visualization in IGV. (You can skip this step if you're comfortable with IGV already)
+    * Go back to the IHEC Data Portal tab.
+    * Click on the "Download tracks" button at the bottom of the grid.
+    * Use the download links to download a few of the tracks.
     * Open them in IGV.
 
 #### Tracks correlation
