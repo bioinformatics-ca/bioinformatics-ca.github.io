@@ -246,7 +246,7 @@ Then, open the de novo and known motifs HTML files in a browser for visualizatio
 
 If your job didn't complete yet, you can download the results from here instead:
 
-[home results](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/homer_output.zip)
+[Homer results](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/homer_output.zip)
 
 ### Congrats, now you're really done!
 
