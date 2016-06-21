@@ -177,7 +177,7 @@ Next, we will try to identify GO terms connected to ChIP-Seq peaks calls using G
 * Go to your module4 directory.
 
 ```
-cd module4
+cd ~/module4
 ```
 
 * For you own analyses, you can download a bunch of tracks at the same time by using wget on a list of URLs.
