@@ -21,9 +21,8 @@ image: CBW_Epigenome-data_icon.jpg
 In this module's lab, we will explore some of the tools that were covered in the lecture.
 
 * First, we will learn how to use the IHEC Data Portal's tools to fetch datasets tracks of interest.
-* Second, we will use these datasets with the GREAT GO enrichment tool to do functions prediction.
-* Third, we will explore ChIP-Seq peak prediction files to attempt discovering motifs using HOMER.
-
+* Second, we will explore ChIP-Seq peak prediction files to attempt discovering motifs using HOMER.
+* Third, we will use these datasets with the GREAT GO enrichment tool to do functions prediction.
 
 ### Local software that we will use
 * A web browser
@@ -106,17 +105,15 @@ Lastly, we will attempt to detect motifs in peak regions for transcription facto
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_show_tfbs.png)
 
-* In the grid, select ENCODE datasets for the CTCF assay and the H1hESC cell type.
+* In the grid, select ENCODE datasets for the YY1 assay and the H1hESC cell type.
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_H1hESC.png)
 
-* Go to the track list at the bottom of the grid and select peaks file for dataset "BroadHistoneH1hescCtcfStdAlnRep0peakSeq".
-
-![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_encode_ctcf.png)
+* Go to the track list at the bottom of the grid and select peaks file for dataset "HaibH1hescYy1c20Pcr1xAlnRep0peakSeq".
 
 * Get the URL to this track by clicking on the "Download datasets" button at the bottom of the grid.
 
-* Obtain the URL to this track, which should be *http://ftp.ebi.ac.uk/pub/databases/ensembl/encode/integration_data_jan2011/byDataType/peaks/jan2011/peakSeq/optimal/hub/peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bb*.
+* Obtain the URL to this track, which should be *http://ftp.ebi.ac.uk/pub/databases/ensembl/encode/integration_data_jan2011/byDataType/peaks/jan2011/peakSeq/optimal/hub/peakSeq.optimal.wgEncodeHaibTfbsH1hescYy1c20Pcr1xAlnRep0_vs_wgEncodeHaibTfbsH1hescControlPcr1xAlnRep0.bb*.
 
 * Open your Guillimin terminal session, create a directory for our HOMER-related files, and go into it. Then, download the BigBed file.
 
@@ -124,14 +121,14 @@ Lastly, we will attempt to detect motifs in peak regions for transcription facto
 cd ~/module4
 mkdir homer
 cd homer
-wget http://ftp.ebi.ac.uk/pub/databases/ensembl/encode/integration_data_jan2011/byDataType/peaks/jan2011/peakSeq/optimal/hub/peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bb
+wget http://ftp.ebi.ac.uk/pub/databases/ensembl/encode/integration_data_jan2011/byDataType/peaks/jan2011/peakSeq/optimal/hub/peakSeq.optimal.wgEncodeHaibTfbsH1hescYy1c20Pcr1xAlnRep0_vs_wgEncodeHaibTfbsH1hescControlPcr1xAlnRep0.bb
 ```
 
 * Convert the bigBed file into a bed file using the UCSC set of tools. It is available as a CVMFS module.
 
 ```
 module load mugqic/ucsc/20140212
-bigBedToBed peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bb peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bed
+bigBedToBed peakSeq.optimal.wgEncodeHaibTfbsH1hescYy1c20Pcr1xAlnRep0_vs_wgEncodeHaibTfbsH1hescControlPcr1xAlnRep0.bb peakSeq.optimal.wgEncodeHaibTfbsH1hescYy1c20Pcr1xAlnRep0_vs_wgEncodeHaibTfbsH1hescControlPcr1xAlnRep0.bed
 ```
 
 * Prepare an output directory for HOMER, and a genome preparsed motifs directory.
@@ -147,8 +144,8 @@ mkdir preparsed
 
 ```
 echo 'module load mugqic/homer/4.7 ; module load mugqic/weblogo/2.8.2 ; \
-findMotifsGenome.pl peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bed \
-hg19 output -preparsedDir preparsed' | qsub -l nodes=1:ppn=2 -d .
+findMotifsGenome.pl peakSeq.optimal.wgEncodeHaibTfbsH1hescYy1c20Pcr1xAlnRep0_vs_wgEncodeHaibTfbsH1hescControlPcr1xAlnRep0.bed \
+hg19 output -preparsedDir preparsed -p 2 -S 15' | qsub -l nodes=1:ppn=2 -d .
 ```
 
 * Homer takes a while to execute for a whole genome track like this. Expect the job to take about 30 minutes of runtime. In the meantime, we will explore the GO terms enrichment tool GREAT.
