@@ -92,7 +92,7 @@ Let's go through the script command by command. First is a bunch of setup comman
 #Setup some parameters for the script
 dataLocation="~/CourseData/metagenomics/integrated_assignment_day1/" # this is where your fastq files should be
 workingDir="~/workspace/assignment1"
-ncores=4
+ncores=8
 
 cd $workingDir
 
@@ -107,7 +107,7 @@ ln -s $dataLocation/*.py scripts
 ln -s $dataLocation/mesas-* scripts # from [https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-pcoa](https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-pcoa)
 ```
 
-These commands get the necessary data files into our workspace. Source FASTQ sequence files are linked to the sequence\_files directory. GreenGenes reference set and alignment template are linked to the reference\_data directory.
+These commands get the necessary data files into our workspace. Source FASTQ sequence files are linked to the sequence\_files directory. GreenGenes reference set and alignment template are linked to the reference\_data directory. `ncores` is a variable  indicating how many cores we have,
 
 ```
 #Prep database for SortMeRNA using: cd reference_data; /usr/local/sortmerna-2.1/indexdb_rna --ref 97_otus.fasta
