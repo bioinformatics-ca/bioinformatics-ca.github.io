@@ -158,7 +158,7 @@ hg19 output -preparsedDir preparsed -p 2 -S 15' | qsub -l nodes=1:ppn=2 -d .
 
 Next, we will try to identify GO terms connected to ChIP-Seq peaks calls using GREAT. We need BED files to use the GREAT portal. We will do the conversion on the Guillimin HPC.
 
-* In the IHEC Data Portal, go back to the grid page, and activate all track hubs.
+* In the IHEC Data Portal, go back to the grid page, and activate all track hubs if not done already. Also filter the tissues list to keep only "Bone Marrow" tissues.
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_activate_all_trackhubs.png)
 
