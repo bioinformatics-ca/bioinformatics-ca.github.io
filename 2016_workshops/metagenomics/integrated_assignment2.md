@@ -19,7 +19,7 @@ A1: There are two ways to do this:
 
 • Count the lines in the metadata file. Each row in the metadata file corresponds to one sample. Remember to subtract 1 as the first row contains the headers
 
-• `wc -l metadata-file-for-osd-subset-210615.txt`
+`wc -l metadata-file-for-osd-subset-210615.txt`
 
 There are 25 sample files.
 
