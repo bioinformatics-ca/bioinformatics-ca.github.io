@@ -31,7 +31,7 @@ ls -l
 ![file list](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/img/img1.png?raw=true)
 
 ```
-cd /Homo_sapiens.GRCh37/genome
+cd ./Homo_sapiens.GRCh37/genome
 ls -l
 ```
 
@@ -63,7 +63,7 @@ Toy example:
  located at:
  
  ```
-/gs/projext/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/data/H3K27ac/H3K27ac.H1.fastq.gz
+/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/data/H3K27ac/H3K27ac.H1.fastq.gz
 ``` 
 
 #### Setting up the Variables
@@ -73,8 +73,7 @@ data=/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/data/
 genome=/cvmfs/ref.mugqic/genomes/species/Homo_sapiens.GRCh37/genome/bwa_index/Homo_sapiens.GRCh37.fa
 mark=H3K27ac
 f=$data/$mark/$mark.H1.fastq.gz
-#out=<location of your choice>/$mark; mkdir –p $out 
-out=/home/mbilenky/test/H3K27ac; mkdir -p $out
+out=~/test/H3K27ac; mkdir -p $out
 n=$mark.H1
 ```
 
@@ -85,7 +84,7 @@ Note: By changing H3K27ac to H3K36me3 you will align for another mark
 Try:
 
 ```
-bwa aln
+$BWA aln
 ```
 
 You will see all the options/parameters and default values
@@ -110,6 +109,9 @@ The .sai file is an intermediate file containing the suffix array indexes. Such 
 
 **NOTE** if we align data from pair-end experiment we need to do alignment of both read1 and read2
 
+
+As an example:
+
 ```
 $BWA aln $genome $f1 > $out/$n1.sai
 $BWA aln $genome $f2 > $out/$n2.sai
@@ -129,6 +131,8 @@ To see the file:
 less $out/$n.sam
 ```
 
+To quit less, press q.
+
 NOTE in case of pair end data
 
 ```
@@ -137,7 +141,7 @@ $BWA sampe [options] <genome> <in1.sai> <in2.sai> <in1.fq> <in2.fq> > out.sam
 
 #### Alignment Step: Conversion of SAM to BAM and Sorting
 
-Lets define samtools variable:
+Let's define samtools variable:
 
 ```
 SAMTOOLS=/cvmfs/soft.mugqic/CentOS6/software/samtools/samtools-1.3/bin/samtools
@@ -155,7 +159,7 @@ This was *position sorting*; Option *-n* gives *name sorted* BAM file
 Now we can view bam file
 
 ```
-$SAMTOOLS view  -h $out/$n.sorted.bam | more
+$SAMTOOLS view -h $out/$n.sorted.bam | more
 ```
 
 Check the size of SAM/BAM files
@@ -182,6 +186,7 @@ PICARD=/cvmfs/soft.mugqic/CentOS6/software/picard/picard-tools-1.123/
 Mark the duplicates
 
 ```
+cd $out
 java -jar -Xmx20G $PICARD/MarkDuplicates.jar I=$out/$n.sorted.bam O=$out/$n.sorted.dupsMarked.bam M=dups AS=true VALIDATION_STRINGENCY=LENIENT QUIET=true
 ```
 
@@ -213,10 +218,14 @@ SAMTOOLS=/cvmfs/soft.mugqic/CentOS6/software/samtools/samtools-0.1.19/samtools
 
 BIN=/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/bin/
 
-java -jar -Xmx2G $BIN/BAM2WIG.jar -bamFile $BAM –out $out -q 5 -F 1028 -cs -x 150 -samtools $SAMTOOLS > $out/wig.log
+java -jar -Xmx2G $BIN/BAM2WIG.jar -bamFile $BAM -out $out -q 5 -F 1028 -cs -x 150 -samtools $SAMTOOLS > $out/wig.log
 
-less $out/H3K27ac.H1.sorted.dupsMarked.q5.F1028.SET_150.wig.gz
+cat $out/wig.log
+
+zcat $out/H3K27ac.H1.sorted.dupsMarked.q5.F1028.SET_150.wig.gz | head
 ```
+
+**Note**: if wig.log says `Output dir is not defined` try retyping the java command (do not copy and paste it).
 
 #### Alignment Step: Visualization
 
@@ -229,6 +238,7 @@ H=/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/data/H3K27ac/wig_
 cp $H $out/test.wig
 less $out/H3K27ac.H1.sorted.dupsMarked.q5.F1028.SET_150.wig >> $out/test.wig
 gzip $out/test.wig
+zcat $out/test.wig.gz | head
 ```
 Move test.wig to your local computer using WinSCP or scp.
 
@@ -250,16 +260,18 @@ We should use full size bam files in order to call enrichments (or at least bam 
 
 #### Run FindER on H3K27ac (just chr3)
 
+First, set some variables.
+
 ```
 mark=H3K27ac
 dir=/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/
 sig=$dir/original/chr3/$mark.H1.bam
 inp=$dir/original/chr3/Input.H1.bam
-BIN=/home/mbilenky/bin
-#OUT=<your location>/FindER; mkdir -p $OUT
-out=/home/mbilenky/test/FindER; mkdir -p $out
+BIN=/gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/bin/
+out=~/test/FindER; mkdir -p $out
 SAMTOOLS=/cvmfs/soft.mugqic/CentOS6/software/samtools/samtools-0.1.19/samtools
 ```
+Now, run the command.
 
 ```
 java -jar -Xmx10G $BIN/FindER_1_0_0.jar -signalBam $sig -inputBam $inp -SE -xsetI 150 -xsetS 150 -bin 150 -v -out $out -samtools $SAMTOOLS -regions 3 &> $out/$mark.log
@@ -275,8 +287,7 @@ export PYTHONPATH=/cvmfs/soft.mugqic/CentOS6/software/MACS2/MACS2-2.1.0.20151222
 ```
 
 ```
-#out=<your location>/macs2; mkdir –p $out
-out=/home/mbilenky/test/macs2; mkdir -p $out
+out=~/test/macs2; mkdir -p $out
 
 macs2 callpeak -t $sig -c $inp -f BAM -g hs -n $out/$mark.v.Input.chr3 -B -q 0.01 &> $out/$mark.v.Input.chr3.log
 ```
@@ -285,8 +296,11 @@ Running macs in a standard (narrow peak mode) with a q-value threshold 0.01
 
 Broad mode (for H3K36me3, H3K27me3, for example)
 
+For example:
+
 ```
 macs2 callpeak -t ChIP.bam -c Control.bam --broad -g hs --broad-cutoff 0.1
+# where ChIP.bam is your ChIP-Seq bam and Control.bam is your control input bam
 ```
 
 #### Load MACS2/FindER track to UCSC
@@ -299,12 +313,14 @@ cp /gs/project/mugqic/bioinformatics.ca/epigenomics/chip-seq/H1/macs2/macs_track
 less H3K27ac.v.Input.chr3_peaks.narrowPeak | cut -f1-3 | awk '{print "chr"$0}' >> macs2.bed
 ```
 
-Now load both files 
+Move both files to your local computer using WinSCP or scp.
 
-```
-<macs out> macs2.bed
-<FindER out> H3K27ac.H1.vs.Input.H1.bin_150.FDR_0.05.FindER.bed.gz
-```
+Now load both files into UCSC
+
+macs output file: macs2.bed
+
+FindER output file: H3K27ac.H1.vs.Input.H1.bin_150.FDR_0.05.FindER.bed.gz
+
 
 You should now see BED tracks.
 
