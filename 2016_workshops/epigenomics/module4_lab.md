@@ -110,11 +110,13 @@ Lastly, we will attempt to detect motifs in peak regions for transcription facto
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_H1hESC.png)
 
-* Go to the track list at the bottom of the grid and select peaks file for dataset "".
+* Go to the track list at the bottom of the grid and select peaks file for dataset "BroadHistoneH1hescCtcfStdAlnRep0peakSeq".
+
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_encode_ctcf.png)
 
 * Get the URL to this track by clicking on the "Download datasets" button at the bottom of the grid.
 
-* Obtain the URL to this track.
+* Obtain the URL to this track, which should be *http://ftp.ebi.ac.uk/pub/databases/ensembl/encode/integration_data_jan2011/byDataType/peaks/jan2011/peakSeq/optimal/hub/peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bb*.
 
 * Open your Guillimin terminal session, create a directory for our HOMER-related files, and go into it. Then, download the BigBed file.
 
@@ -122,15 +124,31 @@ Lastly, we will attempt to detect motifs in peak regions for transcription facto
 cd ~/module4
 mkdir homer
 cd homer
-wget 
+wget http://ftp.ebi.ac.uk/pub/databases/ensembl/encode/integration_data_jan2011/byDataType/peaks/jan2011/peakSeq/optimal/hub/peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bb
+```
+
+* Convert the bigBed file into a bed file using the UCSC set of tools. It is available as a CVMFS module.
+
+```
+module load mugqic/ucsc/20140212
+bigBedToBed peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bb peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bed
+```
+
+* Prepare an output directory for HOMER, and a genome preparsed motifs directory.
+
+```
+mkdir output
+mkdir preparsed
 ```
 
 * Run the HOMER software to identify motifs in the peak regions. To do so, we will launch jobs on the scheduler. Please note that there are two modules necessary here:
-    * **mugqic/homer/4.7** to run 
+    * **mugqic/homer/4.7** to run HOMER
     * **mugqic/weblogo/2.8.2** to create the nice motifs images that we will visualize in a browser. Don't load module mugqic/weblogo/3.3, as the input parameters are very different and it will not work with HOMER.
 
 ```
-findMotifsGenome.pl peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bed hg19 output -preparsedDir preparsed
+echo 'module load mugqic/homer/4.7 ; module load mugqic/weblogo/2.8.2 ; \
+findMotifsGenome.pl peakSeq.optimal.wgEncodeBroadHistoneH1hescCtcfStdAlnRep0_vs_wgEncodeBroadHistoneH1hescControlStdAlnRep0.bed \
+hg19 output -preparsedDir preparsed' | qsub -l nodes=1:ppn=2 -d .
 ```
 
 * Homer takes a while to execute for a whole genome track like this. Expect the job to take about 30 minutes of runtime. In the meantime, we will explore the GO terms enrichment tool GREAT.
