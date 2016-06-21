@@ -118,9 +118,7 @@ We will now attempt to detect motifs in peak regions for transcription factor bi
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_encode_yy1_h1_peaks.png)
 
-* Get the URL to this track by clicking on the "Download datasets" button at the bottom of the grid.
-
-* Obtain the URL to this track, which should be *http://ftp.ebi.ac.uk/pub/databases/ensembl/encode/integration_data_jan2011/byDataType/peaks/jan2011/peakSeq/optimal/hub/peakSeq.optimal.wgEncodeHaibTfbsH1hescYy1c20Pcr1xAlnRep0_vs_wgEncodeHaibTfbsH1hescControlPcr1xAlnRep0.bb*.
+* Get the URL to this track by clicking on the "Download datasets" button at the bottom of the grid. The URL should be *http://ftp.ebi.ac.uk/pub/databases/ensembl/encode/integration_data_jan2011/byDataType/peaks/jan2011/peakSeq/optimal/hub/peakSeq.optimal.wgEncodeHaibTfbsH1hescYy1c20Pcr1xAlnRep0_vs_wgEncodeHaibTfbsH1hescControlPcr1xAlnRep0.bb*.
 
 * Open your Guillimin terminal session, create a directory for our HOMER-related files, and go into it. Then, download the BigBed file.
 
