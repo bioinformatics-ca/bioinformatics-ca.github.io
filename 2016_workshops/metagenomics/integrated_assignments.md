@@ -537,7 +537,7 @@ Q4) Do you see any separation in the samples when the PCA is coloured by Depth?
 
 Q5) Do you see any separation in the samples when the PCA is coloured by the province codes? If so, describe which PC axis differentiates these samples.
 
-Q6) How many species are statistically significant?
+Q6) In the “multiple group test” using ANOVA with no multiple test correction how many species are statistically significant?
 
 Q7) How many are still significant in the “two group test” using White's non-parametric t-test without and with Benjamini-hochberg FDR for multiple test correction?
 
@@ -629,7 +629,7 @@ Q9) In the STAMP analysis of the Humann results (with kos.spf file) using a two 
 
 Q10) What happens when the p-value cut-off is lowered to 0.01 for Q9?
 
-Q11) In the STAMP analysis of the Humann results with the kos.spf file, what is the most significantly different KEGG pathway? What is the p-value for this KEGG Pathway?
+Q11) In the STAMP analysis of the Humann results with the kos.spf file, what is the most significantly different KEGG category? What is the p-value for this KEGG category?
 
 Q12) Change the p-value to 0.001 and create an “Extended error bar” plot and save the image as a .png using the File->Save Plot option.
 
@@ -676,7 +676,7 @@ Day 2 assigment questions <a id="questions2"></a>
 
 <!-- -->
 
--   11) In the STAMP analysis of the Humann results with the kos.spf file, what is the most significantly different KEGG pathway? What is the p-value for this KEGG Pathway?
+-   11) In the STAMP analysis of the Humann results with the kos.spf file, what is the most significantly different KEGG category? What is the p-value for this KEGG category?
 
 <!-- -->
 
