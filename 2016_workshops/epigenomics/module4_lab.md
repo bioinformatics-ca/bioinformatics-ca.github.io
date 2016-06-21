@@ -206,7 +206,7 @@ module load mugqic/ucsc/20140212
 bigBedToBed S005HDH1.H3K27ac.ppqt_macs2_v2.20130819.bb S005HDH1.H3K27ac.ppqt_macs2_v2.20130819.bed
 ```
 
-**Note:** If you're under Linux / Windows, you can also install the UCSC tools locally, as they are a useful set of tools to manipulate tracks data, without requiring so much processing power.
+**Note:** If you're under Linux / Mac, you can also install the UCSC tools locally, as they are a useful set of tools to manipulate tracks data, without requiring so much processing power.
 
 * Download the BED files locally using **scp** / **WinSCP**. Don't forget to run the command on a local terminal session, not on Guillimin.
 
