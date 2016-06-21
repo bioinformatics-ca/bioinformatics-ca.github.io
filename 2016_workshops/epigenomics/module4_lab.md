@@ -152,7 +152,7 @@ findMotifsGenome.pl peakSeq.optimal.wgEncodeHaibTfbsH1hescYy1c20Pcr1xAlnRep0_vs_
 hg19 output -preparsedDir preparsed -p 2 -S 15' | qsub -l nodes=1:ppn=2 -d .
 ```
 
-* Homer takes a while to execute for a whole genome track like this. Expect the job to take about 30 minutes of runtime. In the meantime, we will explore the GO terms enrichment tool GREAT.
+* HOMER takes a while to execute for a whole genome track like this. Expect this job to take about 30 minutes of runtime, with the current 2 cores setup. In the meantime, we will explore the GO terms enrichment tool GREAT.
 
 ### 3- Looking for GO terms enrichment with GREAT
 
