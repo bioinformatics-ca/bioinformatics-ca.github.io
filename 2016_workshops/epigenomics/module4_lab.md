@@ -190,7 +190,7 @@ cd great
     * Use the **wget** command to download the text file that contains the list of tracks.
 
 ```
-wget -O trackList.txt http://epigenomesportal.ca/edcc/cgi-bin/downloadList.cgi?hubId=4579&as=1
+wget -O trackList.txt http://epigenomesportal.ca/edcc/cgi-bin/downloadList.cgi?hubId=4580&as=1
 ```
 
 * Now download the tracks that are contained in this list.
