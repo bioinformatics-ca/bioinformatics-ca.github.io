@@ -82,7 +82,7 @@ cd ~/module4
 #### Tracks correlation
 You can get a whole genome overview of the similarity of a group of tracks by using the Portal's correlation tool.
 
-* From the available list of track hubs at the bottom of the grid, select only Roadmap datasets.
+* From the filters at the bottom of the grid, add back datasets for all tissues.
 
 * Select all ChIP-Seq marks for the cell type "Bone Marrow Derived Mesenchymal Stem Cell Cultured Cell".
 
@@ -90,7 +90,7 @@ You can get a whole genome overview of the similarity of a group of tracks by us
 
 * At the bottom of the grid, click on the button "Correlate tracks".
 
-* You will see that tracks seem to correlate nicely, with activator marks clustering together and repressor marks forming another group.
+* You will see that tracks seem to correlate nicely, with activator marks clustering together and repressor marks forming another group. You can zoom out the view at the upper right corner of the popup.
 
 * You can also use the correlation tool to assess whether datasets that are supposed to be similar actually are.
     * Activate the track hubs for all consortia.
