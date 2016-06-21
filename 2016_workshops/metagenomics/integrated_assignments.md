@@ -371,8 +371,6 @@ Assignment 1 Questions <a id="questions"></a>
 
 2) Sequence clustering: We are using the QIIME open-reference pipeline to create clusters of our 16S rRNA sequences. According to [the documentation](http://qiime.org/scripts/pick_open_reference_otus.html), its steps are: (A) assign reads to existing OTUs (closed-reference), (B) take a percentage of the unassigned reads and cluster them de novo, (C) compare all the unassigned reads from step A against the representative sequences from the OTUs generated in step B and assign matches to OTUs, (D) cluster any remaining unassigned reads de novo. Take a look at the results generated in the `clustering` folder. Does it look like all these steps were performed? Is there a particular file that will tell you exactly what was done?
 
-3) Sequence clustering: How many reads were clustered de novo?
-
 3) Taxonomic classification: The ribosomal database project (RDP) is the name for both a taxonomic classifier and a reference dataset. In this lab we have used GreenGenes 13\_8 revision as the reference dataset, and the naive Bayes RDP classifier. What other datasets and classifiers are available? For what reasons might one choose one of these reference datasets?
 
 4) Phylogenetic tree generation: From the clustering log file, can you determine the method used to create a multiple sequence alignment of the OTU sequences? What about if you check the documentation for the QIIME script used to align sequences? What type of multiple sequence alignment algorithm is this? What program was used for the creation of a phylogenetic tree? Which version of the tree building program did we use, and what is the most recent version?
