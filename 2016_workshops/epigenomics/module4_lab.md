@@ -226,7 +226,7 @@ scp class99@guillimin.clumeq.ca:/home/class99/module4/great/*.bed .
 
 If you weren't able to retrieve the BED file from guillimin, you can also get it here
 
-[BED file](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/S005HDH1.H3K27ac.ppqt_macs2_v2.20130819.bed)
+[BED file](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/S005HDH1_H3K27ac.bed)
 
 ### Go back to your HOMER results
 
