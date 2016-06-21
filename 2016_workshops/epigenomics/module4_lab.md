@@ -196,7 +196,7 @@ wget -O trackList.txt http://epigenomesportal.ca/edcc/cgi-bin/downloadList.cgi?h
 * Now download the tracks that are contained in this list.
     
 ```
-wget -i fileList.txt
+wget -i trackList.txt
 ```
 
 * Convert the bigbeds using the UCSC set of tools. It is available as a CVMFS module. For this example, we will convert and use only one of the files, **S005HDH1.H3K27ac.ppqt_macs2_v2.20130819.bb**.
