@@ -425,8 +425,11 @@ ls -ltrh 
 ```
 
 Q1) How many total sample files do we have?
+
 Q2) How many sequences does the sample from OSD station 10 contain?
+
 Q3) How many samples of each type are there in each of the different Province code categories?
+
 
 Taxonomic composition of communities in the OSD samples OR "Who is out there?" <a id="who"></a>
 ------------------------------------------------------------------------------
