@@ -18,6 +18,8 @@ image: CBW_Epigenome-data_icon.jpg
 
 [bai file](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/iPSC_1.1_bismark_bt2_pe_sorted.bam.bai)
 
+[bed graph](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/iPSC_1.1_bismark_bt2_pe.bedGraph)
+
 ## Introduction
 
 ### Description of the lab
