@@ -43,22 +43,22 @@ Q5) Do you see any separation in the samples when the PCA is coloured by the pro
 codes? If so, describe which PC axis differentiates these samples.
 
 A5: Yes, there is a slight separation between the Arctic samples and the Northwest Atlantic
-samples. The separation is seen in the PC1 vs PC2 and occurs partly along PC1.
+samples. The separation is seen in the PC1 vs PC2 and occurs partly along PC2.
 
 Q6) In a “multiple group test” using ANOVA with no multiple test correction how many
 genera are statistically significant?
 
-A6: 2
+A6: 4
 
 Q7) How many are still significant in the “two group test” using White's non-parametric
 t-test without and with Benjamini-hochberg FDR for multiple test correction?
 
-A7: Without Benjamini-Hochberg FDR – 22, With – 20
+A7: Without Benjamini-Hochberg FDR – 27, With – 23
 
 Q8) What are the top 3 Modules present in the 1m sample from the Bedford basin (station
 152)?
 
-A8: You can find this out from the modules.spf file that we generated. You can view the modules.spf file using `less` and manually count the column number where the
+A8: You can find this out from the kos.spf file that we generated. You can view the kos.spf file using `less` and manually count the column number where the
 OSD152 1m sample occurs. In this case it is 13.
 
 `less modules.spf`
@@ -66,7 +66,7 @@ OSD152 1m sample occurs. In this case it is 13.
 Now we will cut out that column (which contains the abundances pf the modules for OSD152 1m) and
 sort it based on the abundance values and list out the top 10 most abundant values
 
-`cut -f 13 modules.spf | sort -nr |head`
+`cut -f 13 modules.spf | sort -gr |head`
 
 Next we will take the top most abundant value (8.9726e-05 in this case) and grep the 1st column (which
 contains the pathway name) using this value
@@ -86,20 +86,20 @@ Q9) In the STAMP analysis of the Humann results using a two group test with no m
 test correction applied how many significant differences are seen between the Arctic and
 Northwest Atlantic samples?
 
-A9: 919
+A9: 645
 
 Q10) What happens when the p-value cut-off is lowered to 0.01 for Q9?
 
-A10: The significantly different modules decrease to 272
+A10: The significantly different modules decrease to 154
 
 Q11) What is the most significantly different KEGG orthology group? What is the p-value
 for this KO?
 
-A11: K01786: L-ribulose-5-phosphate 4-epimerase . P-value: 1.26e-5
+A11: K01130: arylsulfatase. P-value: 1.10e-4
 
 Q12) Change the p-value to 0.001 and create an “Extended error bar” plot and save the image as
 a .png using the File->Save Plot option.
 
 A12:
 
-![A12](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/metagenomics/integrated_assignment2_image.jpg?raw=true)
+![A12](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/metagenomics/Integrated_assignment2_Q12A.png?raw=true)
