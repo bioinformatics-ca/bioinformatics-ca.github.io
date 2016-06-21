@@ -53,7 +53,7 @@ cd ~/module4
 ### 1- IHEC Data Portal
 
 #### Exploring available datasets
-* Open a web browser on your computer, and load the URL http://epigenomesportal.ca/ihec
+* Open a web browser on your computer, and load the URL [http://epigenomesportal.ca/ihec](http://epigenomesportal.ca/ihec)
 
 * Click on the "View all" button
 
