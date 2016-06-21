@@ -166,7 +166,7 @@ Next, we will try to identify GO terms connected to ChIP-Seq peaks calls using G
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_bone_marrow_h3k27ac.png)
 
-* Click download at the bottom of the grid.
+* Click "Download" at the bottom of the grid.
 
 * At the top of the download page, click on the link that says "Alternatively, you can click here to obtain a text list of all the tracks". This will give you a text list with all tracks of interest. Copy the link to this page in your clipboard, using the address provided in your browser's URL bar.
 
