@@ -9,7 +9,8 @@ image: CBW_Metagenome_icon.jpg
 
 **This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US). This means that you are able to copy, share and modify the work, as long as the result is distributed under the same license.**
 
-# Marker Gene-Based Lab
+# Module 2: Marker Gene Lab
+
 
 Background
 ==========
@@ -18,11 +19,13 @@ In this lab, we will go over the major steps of 16S analysis using QIIME scripts
 
 A example of a QIIME script is "split_libraries_fastq.py" and you can find the corresponding document at http://qiime.org/scripts/split_libraries_fastq.html. From the document, you can tell that the script performs demultiplexing of Fastq sequence data where barcodes and sequences are contained in two separate fastq files. To run the script, you would type "split_libraries_fastq.py -o slout/ -i forward_reads.fastq.gz -b barcodes.fastq.gz -m map.tsv" into your terminal window. Note that the script name is followed by a list of "agruments" (i.e. -o -i -b and -m).  These "agruments" (also called "parameters") change the default behavior of the script and provide additional information needed for the script to run.  For example, -i specifies the input sequence file to be processed and -b specifies the corresponding barcode file for the input sequences.  Information about these parameters is also provided in the script document page. Note that some arguments are optional and have default values (e.g. by default --store_demultiplexed_fastq is set to false so only a single file containing reads from all samples will be outputed). Lastly, the document has a section on the expected outputs of the script. 
 
-For the lab, we will mainly use the dataset from the Mothur SOP since it’s an interesting dataset and it has been pared down for demonstration purpose. Moreover, you could use the same dataset to run through the Mothur tutorial (bonus! at end of the QIIME tutorial) and learn to use both Mothur and QIIME. We will assume that de-multiplexing has been done already so you have one pair of files (for paired-end reads) per sample. For Illumina MiSeq sequencing, de-multiplexing (or binning) may have been done for you already but if you need to do it on your own, both Mothur and QIIME have commands that you can use. We will also use a separately dataset that has not been de-multiplexed yet to show you how to do that in case your sequencing facility sends you a single FASTQ file and the corresponding barcode file containing all your samples.
+For the lab, we will mainly use the dataset from the Mothur SOP since it’s an interesting dataset and it has been pared down for demonstration purpose. Moreover, you could use the same dataset to run through the Mothur tutorial (bonus! at end of the QIIME tutorial) and learn to use both Mothur and QIIME. In this case, de-multiplexing has been done already so you have one pair of files (for paired-end reads) per sample. For Illumina MiSeq sequencing, de-multiplexing (or binning) may have been done for you already by the sequencing centre but if you need to do it on your own, both Mothur and QIIME have commands that you can use. Later on, we will also use a separately dataset that has not been de-multiplexed yet to show you how to do that in case your sequencing facility sends you a single FASTQ file and the corresponding barcode file containing all your samples.
+
+In this semi self-guided tutorial, you can copy and paste the commands in the grey boxes into your terminal to execute the commands. We will provide some explanation as you go along.  In the Integrated Assignment, you will run all the commands from a single shell script - effectively running your entire analysis pipeline in one go.
 
 
 Dataset Intro (always good to know a bit about the data you are working with):
---------------
+==============
 
 The Schloss lab is interested in understanding the effect of normal variation in the gut microbiome on host health. Fresh feces from mice were collected for 365 days post weaning. In the first 150 days no intervention was done. In this demo, we will look at the data collected in the first 10 days except day 4 (early time points) vs. days 140-150 (late time points) for a single female mouse. In addition to mice fecal samples, we included a mock community composed of genomic DNA from 21 bacterial strains (available from HMP studies).
 
@@ -33,40 +36,37 @@ ssh -i CBW.pem ubuntu@cbwXX.dyndns.info
 ```
 
 
-QIIME Workflow
+QIIME Workflow (based on https://github.com/mlangill/microbiome_helper/wiki/16S-tutorial-for-CCBC)
 ==============
 
-We will start with QIIME rather than Mothur as it seemed to have gained more popularity over Mothur in the last few years.
+We will cover QIIME first rather than Mothur as it seemed to have gained more popularity over Mothur in the last few years.
 
-In `~/CourseData/markergenes/qiime`, we have
+In `~/CourseData/metagenomics/markergenes/qiime`, we have
 
 **40 input sequences (FASTQ) files:**
 
--   F3Dxxx\_S209\_L001\_R1/2\_001.fastq for the 19 mouse samples (forward and reverse reads)
--   Mock\_S280\_L001\_R1/2\_001.fastq for the mock community sample
+-   F3Dxxx\_S209\_L001\_R1/2\_001.fastq.gz for the 19 mouse samples (forward and reverse reads)
+-   Mock\_S280\_L001\_R1/2\_001.fastq.gz for the mock community sample
 
 **Reference Datasets:**
 
--   Silva (Silva): consists of both taxonomic files (.tax files) and representative reference sequence files (.fasta files)
--   RDP (trainset9): consists of Mothur formatted RDP 16S reference sequences and taxonomic assignments
+-   97_otus.fasta for GreenGenes reference database sequences (representative sequences from 97% identity cluster)
+-   97_otu_taxonomy.txt for GreenGenes reference database taxonomy
+-   core_set_aligned.fasta.imputed GreenGenes alignment template
 
-**Metadata:** In Mothur, metadata are in two column formats (ID and Grouping)
+**Metadata:** In QIIME, metadata is kept in a tab delimited file (.tsv) that's commonly called the mapping file
 
--   stability.files (list of paired forward and reverse reads)
--   mouse.dpw.metadata (list of samples and day post weaning)
--   mouse.time.design (list of samples and early or late time points)
+-   qiime_demo_metadata.tsv
+
 
 First, we will setup our analysis directory.
-
 
 ```
 mkdir -p ~/workspace/lab2_qiime
 cd ~/workspace/lab2_qiime
 ```
 
-
-Then we will link the files we need to perform the analysis. Linking files instead of copying the files to your analysis directory saves disk space.  As these files are   First make three directories to organize your input sequence files, your reference data, and the scripts that you'll be using.
-
+Then we will link the files we need to perform the analysis. Linking files instead of copying the files to your analysis directory saves disk space. First make three directories to organize your input sequence files, your reference data, and the scripts that you'll be using.
 
 ```
 mkdir sequence_files
@@ -76,37 +76,31 @@ mkdir scripts
 
 Now link the files from the ~/CourseData directory which is read-only.
 
+```
+ln -s ~/CourseData/metagenomics/markergenes/qiime/*.fastq.gz sequence_files/
+ln -s ~/CourseData/metagenomics/markergenes/qiime/97* reference_data/
+ln -s ~/CourseData/metagenomics/markergenes/qiime/core_set_aligned.fasta.imputed reference_data/
+```
+
+Then we will copy over the env file (metadata file) that describes our samples and a couple of scripts we need for QIIME analysis.
 
 ```
-ln -s ~/CourseData/markergenes/qiime/*.fastq.gz sequence_files/
-ln -s ~/CourseData/markergenes/qiime/97* reference_data/
-ln -s ~/CourseData/integrated_assignment_day1/core_set_aligned.fasta.imputed reference_data/
-```
-
-
-Then we will get the env file (metadata file) that describes our samples and a couple of scripts we need for QIIME analysis.
-
-
-```
-wget https://raw.githubusercontent.com/beiko-lab/CBWMeta2015/master/mothur_demo_metadata.tsv
+cp ~/CourseData/metagenomics/markergenes/qiime/qiime_demo_metadata.tsv ./
 wget -O scripts/mesas-pcoa https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-pcoa
 wget -O scripts/mesas-uc2clust https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-uc2clust
 ```
 
 Then we make the scripts executable.
 
-
 ```
 chmod u+x scripts/*
 ```
 
-
 Lastly, we will setup our environmental variables
-
 
 ```
 export PYTHONPATH=~/local/lib/python2.7/site-packages
-export RDP_JAR_PATH=/usr/local/rdp_classifier_2.2/rdp_classifier-2.2.jar
+export RDP_JAR_PATH=/usr/local/rdp_classifier/rdp_classifier.jar
 ```
 
 
@@ -115,7 +109,7 @@ Pre-processing
 
 ### Paired-end Assembly
 
-Just like in Mothur, we will start with assemble our reads. Unlike mothur, we need to resort to some pretty complex shell scripting to tell the assembly program (pear) that we are using how to match up the pairs of files.
+We will start with assemble our paired-end reads. Unlike mothur, we need to resort to some pretty complex shell scripting to tell the assembly program (pear) that we are using how to match up the pairs of files.
 
 
 ```
@@ -123,7 +117,7 @@ for i in "1" "5" "9" "13" "17" "21"
 do
     echo $i
     find sequence_files/ -name "*.fastq.gz" -printf '%f\n' | sed 's/_L001.*//' | sort | uniq | sed -n $i,$((i+3))p | while read line; do ( pear -f sequence_files/${line}_L001_R1_001.fastq.gz -r sequence_files/${line}_L001_R2_001.fastq.gz -o ${line} & ); done > /dev/null
-    sleep 30
+    sleep 60
 done
 ```
 
