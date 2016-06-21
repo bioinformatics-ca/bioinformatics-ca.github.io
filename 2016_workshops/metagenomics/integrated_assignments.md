@@ -529,12 +529,15 @@ The metadata file is called "metadata-file-for-osd-subset-210615.txt" and is loc
 -   Change the “Profile level” (top left) to “Species”, ensure that the Group legend (top right) has been set to “depth”, and that “PCA plot” has been set below the large middle window. You should now be looking at a PCA plot where the samples are colored according to their depths.
 
 Q4) Do you see any separation in the samples when the PCA is coloured by Depth?
+
 -   Now change the group field to “prov\_code” and the PCA will be coloured according to that grouping instead.
 
 Q5) Do you see any separation in the samples when the PCA is coloured by the province codes? If so, describe which PC axis differentiates these samples.
+
 -   Now lets test what is significantly different between the groups at the Species rank. Under the “Multiple groups” dialog on the left, check that ANOVA is being used as the statistical test, and select “No correction” for the multiple test correction. The box at bottom will say what the “Number of active features” is, using these set of statistics.
 
 Q6) How many species are statistically significant?
+
 -   Explore the different visualizations by changing “PCA plot” to each of the other visualizations. Note that you can change which species is being visualized by selecting different ones on the right hand side. Also, note that you can check the “Show only active features” to reduce the list to those that are significantly different.
 -   You can save any plot image using File -&gt; Save plot
 -   Switch to the "Two Groups" dialog and select "White's non parametric t-test" from the "Statistical tests" drop-down; Repeat the same but this time selecting "Benjamini-Hochberg FDR" from the "Multiple test correction" drop-down
