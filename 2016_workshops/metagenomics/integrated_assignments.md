@@ -152,8 +152,8 @@ for j in $(seq 0 $numberOfIterations)
 do
    let i=( $j * $ncores + 1 )
    echo $i
-   find $workingDir/sequence_files -name "*.fastq.gz" -printf '%f\n' | sed 's/_.*//' | sort | uniq | sed -n $i,$((i+${ncores}-1))p | while read line; do ( pear -f sequence_files/${line}_1.fastq.gz -r sequence_files/${line}_2.fastq.gz -o ${line} & ); done >> logPear.txt
-    sleep 60
+   find $workingDir/sequence_files -name "*.fastq.gz" -printf '%f\n' | sed 's/_.*//' | sort | uniq | sed -n $i,$((i+${ncores}-1))p | while read line; do ( pear -f sequence_files/${line}_1.fastq.gz -r sequence_files/${line}_2.fastq.gz -o ${line} & ); done >> logPear.txt
+   sleep 60
 done
 ```
 
@@ -424,6 +424,10 @@ ln -s ~/CourseData/metagenomics/integrated_assignment_day2/* .
 ls -ltrh 
 ```
 
+Q1) How many total sample files do we have?
+Q2) How many sequences does the sample from OSD station 10 contain?
+Q3) How many samples of each type are there in each of the different Province code categories?
+
 Taxonomic composition of communities in the OSD samples OR "Who is out there?" <a id="who"></a>
 ------------------------------------------------------------------------------
 
@@ -516,20 +520,26 @@ We'll now use the PERL script metaphlan\_to\_stamp.pl to convert the Metaphlan o
 
 STAMP takes two main files as input the profile data which is a table that contains the abundance of features (i.e. taxonomic or functions) and a group metadata file which provides more information about each of the samples in the profile data file.
 
-The metadata file is called "metadata-file-for-osd-subset-210615.txt" and is located in ~/CourseData/integrated\_assignment\_day2/. Download this file locally to your computer using an appropriate method (e.g. WinSCP, etc.) You will also need the profile data file "osd\_metaphlan\_merged\_all.spf" which we generated fro the metaphlan output in the previous step.
+The metadata file is called "metadata-file-for-osd-subset-210615.txt" and is located in ~/CourseData/metagenomics/integrated\_assignment\_day2/. Download this file locally to your computer using an appropriate method (e.g. WinSCP, etc.) You will also need the profile data file "osd\_metaphlan\_merged\_all.spf" which we generated fro the metaphlan output in the previous step.
 
 -   Load files in STAMP by going to File-&gt; Load Data; You should load both the profile and the metadata files
--   Change the “Profile level” (top left) to “Genus”, ensure that the Group legend (top right) has been set to “depth”, and that “PCA plot” has been set below the large middle window. You should now be looking at a PCA plot where the samples are colored according to their depths.
+-   Change the “Profile level” (top left) to “Species”, ensure that the Group legend (top right) has been set to “depth”, and that “PCA plot” has been set below the large middle window. You should now be looking at a PCA plot where the samples are colored according to their depths.
+-   Q4) Do you see any separation in the samples when the PCA is coloured by Depth?
 -   Now change the group field to “prov\_code” and the PCA will be coloured according to that grouping instead.
--   Now lets test what is significantly different between the groups at the Genus rank. Under the “Multiple groups” dialog on the left, check that ANOVA is being used as the statistical test, and select “None” for the multiple test correction. The box at bottom will say what the “Number of active features” is, using these set of statistics.
--   Explore the different visualizations by changing “PCA plot” to each of the other visualizations. Note that you can change which genera is being visualized by selecting different ones on the right hand side. Also, note that you can check the “Show only active features” to reduce the list to those that are significantly different.
+-   Q5) Do you see any separation in the samples when the PCA is coloured by the province codes? If so, describe which PC axis differentiates these samples.
+-   Now lets test what is significantly different between the groups at the Species rank. Under the “Multiple groups” dialog on the left, check that ANOVA is being used as the statistical test, and select “No correction” for the multiple test correction. The box at bottom will say what the “Number of active features” is, using these set of statistics.
+-   Q6) How many species are statistically significant?
+-   Explore the different visualizations by changing “PCA plot” to each of the other visualizations. Note that you can change which species is being visualized by selecting different ones on the right hand side. Also, note that you can check the “Show only active features” to reduce the list to those that are significantly different.
 -   You can save any plot image using File -&gt; Save plot
--   Switch to the "Two Groups" dialog and select "White's non parametric t-test" from the "Statistical tests" drop-down; check the “Show only active features”; Repeat the same but this time selecting "Benjamini-Hochberg FDR" from the "Multiple test correction" drop-down
+-   Switch to the "Two Groups" dialog and select "White's non parametric t-test" from the "Statistical tests" drop-down; Repeat the same but this time selecting "Benjamini-Hochberg FDR" from the "Multiple test correction" drop-down
+-   Q7) How many are still significant in the “two group test” using White's non-parametric t-test without and with Benjamini-hochberg FDR for multiple test correction?
 
 Functional composition of the OSD samples OR "What are they doing?" <a id="what"></a>
 -------------------------------------------------------------------
 
 The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenomes. This involves comparing the metagenome sequences to the KEGG database using the program diamond. This is a time consuming step and estimated to take around ~80-90 minutes for all our samples. Based on feedback from last year, we have pre-computed these results for you. The results are named kos.spf, pathways.spf, and modules.spf and can be found in your ~/workspace/assignment2 directory. If you are interested, see below is how we ran the samples. If not, skip to "Statistical analysis of metabolic differences"
+
+Q8) From the kos.spf file what are the top 3 categories present in the 1m sample from the Bedford basin (station 152)?
 
 ### Preparing for running Humann
 
@@ -605,7 +615,11 @@ sed -i 's/\.subsample//g' pathways.spf
 ### Statistical analysis of metabolic differences
 
 -   Load the kos.spf file along with the original metadata-file-for-osd-subset-210615.txt file into STAMP.
--   Compare the Arctic samples to the Northwest Atlantic samples using a Two Group test. Use the default Welch’s t-test with BH FDR. Since the number of features (i.e the KO categories) is very high, we will reduce the p-value cut-off
+-   Compare the Arctic samples to the Northwest Atlantic samples using a Two Group test. Use the default Welch’s t-test with no multiple test correction. Since the number of features (i.e the KO categories) is very high, we will reduce the p-value cut-off to 0.01. Now try changing the p-value to 0.001 and create an “Extended error bar” plot to show a plot of the top differential KO categories.
+-   Q9) In the STAMP analysis of the Humann results (with kos.spf file) using a two group test with no multiple test correction applied how many significant differences are seen between the Arctic and Northwest Atlantic samples?
+-   Q10) What happens when the p-value cut-off is lowered to 0.01 for Q9?
+-   Q11) In the STAMP analysis of the Humann results with the kos.spf file, what is the most significantly different KEGG pathway? What is the p-value for this KEGG Pathway?
+-   Q12) Change the p-value to 0.001 and create an “Extended error bar” plot and save the image as a .png using the File->Save Plot option.
 
 Day 2 assigment questions <a id="questions2"></a>
 -------------------------
@@ -630,7 +644,7 @@ Day 2 assigment questions <a id="questions2"></a>
 
 <!-- -->
 
--   6) In the STAMP analysis of the Metaphlan results, in a “multiple group test” using ANOVA with no multiple test correction how many genera are statistically significant?
+-   6) In the STAMP analysis of the Metaphlan results, in a “multiple group test” using ANOVA with no multiple test correction how many species are statistically significant?
 
 <!-- -->
 
@@ -638,7 +652,7 @@ Day 2 assigment questions <a id="questions2"></a>
 
 <!-- -->
 
--   8) From the kos.spf file what are the top 3 Modules present in the 1m sample from the Bedford basin (station 152)?
+-   8) From the kos.spf file what are the top 3 categories present in the 1m sample from the Bedford basin (station 152)?
 
 <!-- -->
 
