@@ -174,10 +174,12 @@ Next, we will try to identify GO terms connected to ChIP-Seq peaks calls using G
 
 * Open the terminal that's logged into Guillimin.
 
-* Go to your module4 directory.
+* Go to your module4 directory and create a place to put the material we will download.
 
 ```
 cd ~/module4
+mkdir great
+cd great
 ```
 
 * For you own analyses, you can download a bunch of tracks at the same time by using wget on a list of URLs.
