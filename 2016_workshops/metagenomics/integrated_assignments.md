@@ -450,9 +450,10 @@ This step should take ~20 minutes to complete. So, we will try and dissect the r
 
 ### Dissecting the run\_metaphlan2.pl PERL script
 
--   Open the script for viewing; When you open the script using 'less' you can use the up and down arrow to navigate.
+-   Find and open the script for viewing; When you open the script using 'less' you can use the up and down arrow to navigate.
 
 ```
+which run_metaphlan2.pl
 less /usr/local/microbiome_helper-master/run_metaphlan2.pl
 ```
 
@@ -516,7 +517,7 @@ We'll now use the PERL script metaphlan\_to\_stamp.pl to convert the Metaphlan o
 -   Convert the metaphlan output to the input profile format required for STAMP
 
 ```
-/usr/local/microbiome_helper-master/metaphlan_to_stamp.pl osd_metaphlan_merged_all.txt > osd_metaphlan_merged_all.spf
+metaphlan_to_stamp.pl osd_metaphlan_merged_all.txt > osd_metaphlan_merged_all.spf
 ```
 
 ### Statistical analysis of the taxa using STAMP
@@ -554,7 +555,7 @@ Q8) From the kos.spf file what are the top 3 categories present in the 1m sample
 -   Perform BLASTX searches agaisnt the KEGG reference database using the program Diamond (We have a helper script for running this step in batch mode for all of our samples)
 
 ```
- /usr/local/microbiome_helper-master/run_pre_humann.pl -d ~/CourseData/metagenomics/ref/kegg/kegg.reduced -p 8 -o pre_humann *.fasta
+run_pre_humann.pl -d ~/CourseData/metagenomics/ref/kegg/kegg.reduced -p 8 -o pre_humann *.fasta
 ```
 
 -   Check whether the run was successful by examining the output files
@@ -603,11 +604,11 @@ These files contain relative abundances for each of these different functional c
 -   To statistically test and visualize these results using STAMP we need to convert these files into a format readable by STAMP just like we did with the Metaphlan output. We use the "humann\_to\_stamp.pl" PERL script for this step
 
 ```
-/usr/local/microbiome_helper-master/humann_to_stamp.pl output/04b-hit-keg-mpt-cop-nul-nve-nve.txt > pathways.spf
+humann_to_stamp.pl output/04b-hit-keg-mpt-cop-nul-nve-nve.txt > pathways.spf
 
-/usr/local/microbiome_helper-master/humann_to_stamp.pl output/04b-hit-keg-mpm-cop-nul-nve-nve.txt > modules.spf
+humann_to_stamp.pl output/04b-hit-keg-mpm-cop-nul-nve-nve.txt > modules.spf
 
-/usr/local/microbiome_helper-master/humann_to_stamp.pl output/01b-hit-keg-cat.txt > kos.spf
+humann_to_stamp.pl output/01b-hit-keg-cat.txt > kos.spf
 ```
 
 -   Since the sample names in the \*.spf files and in the metadata file do not match (the \*.spf files have the text ".subsample" appendedto the sample name), it mght results in errors when you load them in STAMP. So we have to fix the \*.spf by removing the ".subsample" from them.
