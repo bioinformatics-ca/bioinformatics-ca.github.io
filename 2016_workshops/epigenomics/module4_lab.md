@@ -142,7 +142,7 @@ mkdir output
 mkdir preparsed
 ```
 
-* Run the HOMER software to identify motifs in the peak regions. To do so, we will launch jobs on the scheduler. Please note that there are two modules necessary here:
+* Run the HOMER software to identify motifs in the peak regions. To do so, we will launch a job on the scheduler. Please note that there are two modules necessary here:
     * **mugqic/homer/4.7** to run HOMER
     * **mugqic/weblogo/2.8.2** to create the nice motifs images that we will visualize in a browser. Don't load module mugqic/weblogo/3.3, as the input parameters are very different and it will not work with HOMER.
 
