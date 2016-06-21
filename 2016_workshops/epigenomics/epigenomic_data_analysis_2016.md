@@ -150,7 +150,7 @@ We appreciate your feedback!  Please fill out [our survey](https://www.surveymon
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-4-2016)
   
-  Lab practical:
+  [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module4_lab_2016/)
 
 [&uarr;](#back_to_top)
 
