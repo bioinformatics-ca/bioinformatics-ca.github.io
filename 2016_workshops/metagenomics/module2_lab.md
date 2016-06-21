@@ -200,19 +200,23 @@ mv results.txt otus.fa map.uc rep_set.fasta seq_otus.txt sorted.fa derep.fa clus
 3: Taxonomy Assignment
 ----------------------
 
-We will use RDP Classifier for taxonomy assignment. Note that this is done by calling a QIIME script from command line directly. Like before, we need to provide a taxonomy file and a reference sequence file.
+We will use Mothur Taxonomy (kmer based) Classifier for taxonomy assignment. Note that this is done by calling a QIIME script from command line directly. Like before, we need to provide a taxonomy file and a reference sequence file.
+
+```
+assign_taxonomy.py -m mothur -i cluster/rep_set.fasta -o taxonomic_classification -t reference_data/97_otu_taxonomy.txt -r reference_data/97_otus.fasta -c 0.6
+```
+
+
+The results of taxonomy assignment is in ~/workspace/lab2\_qiime/taxonomic\_classification/. As you can see the abundant OTUs are Bacteroidales. We use the sort command to sort the OTUs from most abundant to least abundant.
 
 
 ```
-assign_taxonomy.py -m rdp -i cluster/rep_set.fasta -o taxonomic_classification -t reference_data/97_otu_taxonomy.txt -r reference_data/97_otus.fasta -c 0.6
+sort -k1n ./taxonomic_classification/rep_set_tax_assignments.txt | less
+#less command allows you to scroll up and down the results
+#type q to quick the scrolling window
 ```
-
-
-The results of taxonomy assignment is in ~/workspace/lab2\_qiime/taxonomic\_classification/. As you can see the abundant OTUs are also Bacteroidales as predicted in Mothur. We use the sort command to sort the OTUs from most abundant to least abundant.
-
-
+The Results looks like:
 ```
-sort -k1n rep_set_tax_assignments.txt 
 0  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
 1  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
 2  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
@@ -224,7 +228,6 @@ sort -k1n rep_set_tax_assignments.txt 
 8  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
 9  k__Bacteria;p__Bacteroidetes;c__Bacteroidia;o__Bacteroidales;f__S24-7;g__;s__   1.000
 ```
-
 
 5: Sequence Alignment
 ---------------------
@@ -274,27 +277,19 @@ In order to carry out rarefaction of our data, we use awk on the converted OTU t
 
 
 ```
-
+single_rarefaction.py -i otu_table/otu_table.biom -o otu_table/otu_table_rarefied.biom -d `awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' otu_table/otu_table.tab`
 ```
- single_rarefaction.py -i otu_table/otu_table.biom -o otu_table/otu_table_rarefied.biom -d 
 ```
-awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' otu_table/otu_table.tab
-```
- 
-```
-
 biom convert --to-tsv -i otu_table/otu_table_rarefied.biom --table-type='OTU table' -o otu_table/otu_table_rarefied.tab --header-key=taxonomy --output-metadata-id=Consensus\ Lineage
 ```
-
 
 7:Downstream Analysis
 ---------------------
 
 We can quickly plot the taxonomic profile of the samples by using the following command:
 
-
 ```
-summarize_taxa_through_plots.py -f -s -i otu_table/otu_table.biom -o taxaplot -m mothur_demo_metadata.tsv
+summarize_taxa_through_plots.py -f -s -i otu_table/otu_table.biom -o taxaplot -m qiime_demo_metadata.tsv
 ```
 
 
@@ -313,7 +308,7 @@ Next we will generate the PCoA plot using these beta-diversity matrices
 
 ```
 principal_coordinates.py -i qiime_pcoa/distance/ -o qiime_pcoa/pcoa/
-make_2d_plots.py -i qiime_pcoa/pcoa -m mothur_demo_metadata.tsv -o qiime_pcoa/pcoa_plots/
+make_2d_plots.py -i qiime_pcoa/pcoa -m qiime_demo_metadata.tsv -o qiime_pcoa/pcoa_plots/
 chmod -R o+x qiime_pcoa/pcoa_plots
 ```
 
@@ -323,7 +318,7 @@ Lastly, we will run an R script for PCoA
 
 ```
 mkdir mesas_pcoa
-scripts/mesas-pcoa -i otu_table/otu_table_rarefied.tab -m mothur_demo_metadata.tsv -d bray -o mesas_pcoa/pcoa-bray.pdf
+scripts/mesas-pcoa -i otu_table/otu_table_rarefied.tab -m qiime_demo_metadata.tsv -d bray -o mesas_pcoa/pcoa-bray.pdf
 ```
 
 
