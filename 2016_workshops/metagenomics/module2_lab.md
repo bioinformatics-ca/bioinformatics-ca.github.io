@@ -100,7 +100,7 @@ Lastly, we will setup our environmental variables so the scripts know where to f
 
 ```
 export PYTHONPATH=~/local/lib/python2.7/site-packages
-export RDP_JAR_PATH=/usr/local/rdp_classifier/rdp_classifier.jar
+export RDP_JAR_PATH=/usr/local/rdp_classifier/classifier.jar
 ```
 
 
@@ -170,12 +170,10 @@ Here's the output. It shows that there are 219 OTUs based on the filtering and c
 Then to make the output QIIME compatible, we will need to rename the sequence IDs (to be numerical). Again, we rely on awk to do the text manipulation.
 
 ```
-awk 'BEGIN{count=0;}{if ($$0~/>/){print ">" count; count+=1;} else {print}}' otus.fa > rep_set.fasta
+awk 'BEGIN{count=0;}{if ($$0~/>/){print ">" count; count+=1;} else {print}}' otus.fa>rep_set.fasta
 ```
 
-
 This step, we will map all sequences (even singletons) back onto the OTUs. The file generated consists of OTU IDs and memberships. This file is similar in format to the .names. However, it is meant to store OTU membership.
-
 
 ```
 usearch -usearch_global seq.fasta -db rep_set.fasta -strand both -id 0.97 -uc map.uc -threads 4
@@ -186,7 +184,7 @@ Lastly we will convert USEARCH output to QIIME OTU list format using a custom sc
 
 
 ```
-scripts/mesas-uc2clust -t 4 map.uc seq_otus.txt
+scripts/mesas-uc2clust -t 4 map.uc seq_otus.txt
 ```
 
 
@@ -194,8 +192,8 @@ We will create a new directory to store the clusters we generated:
 
 
 ```
-mkdir cluster
-mv results.txt otus.fa map.uc rep_set.fasta seq_otus.txt sorted.fa derep.fa cluster
+mkdir cluster
+mv results.txt otus.fa map.uc rep_set.fasta seq_otus.txt sorted.fa derep.fa cluster
 ```
 
 
