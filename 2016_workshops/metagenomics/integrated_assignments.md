@@ -565,7 +565,7 @@ ls -ltrh pre_humann
 less pre_humann/OSD106-0m-depth.comb.qc.masked.dedup.subsample.txt
 ```
 
-### Running Humann *Already run
+### Running Humann (Already run)
 
 -   copy the humann program folder (humann-0.99) to your working directory
 
@@ -621,7 +621,7 @@ sed -i 's/\.subsample//g' modules.spf
 sed -i 's/\.subsample//g' pathways.spf
 ```
 
-### Statistical analysis of metabolic differences (Already run)
+### Statistical analysis of metabolic differences
 
 -   Load the kos.spf file along with the original metadata-file-for-osd-subset-210615.txt file into STAMP.
 -   Compare the Arctic samples to the Northwest Atlantic samples using a Two Group test. Use the default Welch’s t-test with no multiple test correction. Since the number of features (i.e the KO categories) is very high, we will reduce the p-value cut-off to 0.01. Now try changing the p-value to 0.001 and create an “Extended error bar” plot to show a plot of the top differential KO categories.
