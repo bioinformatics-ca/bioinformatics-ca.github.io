@@ -170,7 +170,7 @@ Next, we will try to identify GO terms connected to ChIP-Seq peaks calls using G
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_select_Blueprint_dataset.png)
 
-* Click "Download" at the bottom of the grid.
+* Click "Download tracks" at the bottom of the grid.
 
 * At the top of the download page, click on the link that says "Alternatively, you can click here to obtain a text list of all the tracks". This will give you a text list with all tracks of interest. Copy the link to this page in your clipboard, using the address provided in your browser's URL bar.
 
@@ -190,7 +190,7 @@ cd great
     * Use the **wget** command to download the text file that contains the list of tracks.
 
 ```
-wget -O trackList.txt http://epigenomesportal.ca/edcc/cgi-bin/downloadList.cgi?&hubId=____
+wget -O trackList.txt http://epigenomesportal.ca/edcc/cgi-bin/downloadList.cgi?hubId=4578&as=1
 ```
 
 * Now download the tracks that are contained in this list.
