@@ -152,8 +152,8 @@ for j in $(seq 0 $numberOfIterations)
 do
    let i=( $j * $ncores + 1 )
    echo $i
-   find $workingDir/sequence_files -name "*.fastq.gz" -printf '%f\n' | sed 's/_.*//' | sort | uniq | sed -n $i,$((i+${ncores}-1))p | while read line; do ( pear -f sequence_file$
-   sleep 60
+   find $workingDir/sequence_files -name "*.fastq.gz" -printf '%f\n' | sed 's/_.*//' | sort | uniq | sed -n $i,$((i+${ncores}-1))p | while read line; do ( pear -f sequence_files/${line}_1.fastq.gz -r sequence_files/${line}_2.fastq.gz -o ${line} & ); done >> logPear.txt
+    sleep 60
 done
 ```
 
