@@ -36,7 +36,7 @@ ssh -i CBW.pem ubuntu@cbwXX.dyndns.info
 ```
 
 
-QIIME Workflow (based on https://github.com/mlangill/microbiome_helper/wiki/16S-tutorial-for-CCBC)
+QIIME Workflow
 ==============
 
 We will cover QIIME first rather than Mothur as it seemed to have gained more popularity over Mothur in the last few years.
@@ -96,7 +96,7 @@ Then we make the scripts executable.
 chmod u+x scripts/*
 ```
 
-Lastly, we will setup our environmental variables
+Lastly, we will setup our environmental variables so the scripts know where to find certain programs
 
 ```
 export PYTHONPATH=~/local/lib/python2.7/site-packages
@@ -109,7 +109,7 @@ Pre-processing
 
 ### Paired-end Assembly
 
-We will start with assemble our paired-end reads. Unlike mothur, we need to resort to some pretty complex shell scripting to tell the assembly program (pear) that we are using how to match up the pairs of files.
+We will start with assemble our paired-end reads to merge the two reads into a single (possibly longer) read if the ends overlap. We will use a program called PEAR (Paired_End reAd mergeR) to do that. The document for PEAR can be found at http://sco.h-its.org/exelixis/web/software/pear/doc.html#cl-usage. While QIIME offers a script to assemble already de-multiplexed files (see http://qiime.org/tutorials/processing_illumina_data.html for more information), we will apply our own solution here to tell the assembly program (PEAR) how to match up the pairs of files and assemble the reads.
 
 
 ```
@@ -117,62 +117,57 @@ for i in "1" "5" "9" "13" "17" "21"
 do
     echo $i
     find sequence_files/ -name "*.fastq.gz" -printf '%f\n' | sed 's/_L001.*//' | sort | uniq | sed -n $i,$((i+3))p | while read line; do ( pear -f sequence_files/${line}_L001_R1_001.fastq.gz -r sequence_files/${line}_L001_R2_001.fastq.gz -o ${line} & ); done > /dev/null
-    sleep 60
+    sleep 40
 done
 ```
 
+While the above little snippet of code looks complicated, it basically tells the computer to interate through the sequence_files directory and run PEAR assembler on matching pairs of sequence files (XXX_L001_R1_001.fastq.gz and XXX_L001_R2_001.fastq.gz). Since there are 20 matching pairs, You could run the PEAR program yourself 20 times by changing the XXX to the correct file name (e.g. pear -f sequence_files/F3D0_S188_L001_R1_001.fastq.gz -r sequence_files/F3D0_S188_L001_R2_001.fastq.gz -o F3D0_S188). You can look at the files created by PEAR by typing
 
-Next we will combine all the assembled reads into a single file.
+```
+ls *.fastq
+```
 
+Notice that for each sample, there is one assembled read file, one discarded read file and two unassembled read files (forward and reverse).
+
+As QIIME expects one single FASTA file as input sequence file, next we will combine all the assembled reads into a single file.  Again, this is done by looping through the directory containing the assembled.fastq files.  We also use a bit of "awk" magic to convert FASTQ files into a FASTA formatted file called "seq.fasta". Awk is a utility that allows one to process text files.  More information about the Awk language can be found at http://www.grymoire.com/Unix/Awk.html (come back to this later when you have time!)
 
 ```
 for filename in $( ls *.assembled.fastq )
 do
-    awk 'BEGIN{ORS=""; i=0;}{split(FILENAME, x, "."); prefix=x[1]; sub("@","",prefix); print ">" prefix "_" i "\n"; i+=1; getline; print; print "\n"; getline; getline;}' ${filename} >> seq.fasta
+    awk 'BEGIN{ORS=""; i=0;}{split(FILENAME, x, "."); prefix=x[1]; sub("@","",prefix); print ">" prefix "_" i "\n"; i+=1; 
+         getline; print; print "\n"; getline; getline;}' ${filename} >> seq.fasta
 done
 ```
 
-
 ### Reduce the Number of Redundant Sequences
 
-Next we will perform a set of procedures to reduce the number of redundant sequences and cluster our sequences (essentially forming OTUs). First we will collapse dataset to remove redundancy
-
-
-```
-usearch -derep_fulllength seq.fasta -fastaout derep.fa -sizeout
-```
-
-
-The result showed that there are 27,289 unique sequences.
-
+Next we will perform a set of procedures to reduce the number of redundant sequences and cluster our sequences (essentially forming OTUs). First we will collapse dataset to remove redundancy. We will do this using the default program for clustering in QIIME, namely usearch (note there is a new recommendation for clustering in QIIME. We will meet the new tools in the Integrated Assignment so you can compare the different clustering approaches).
 
 ```
-00:00  83Mb  100.0% Reading seq.fasta 
-00:00 119Mb 152132 seqs, 27289 uniques, 22777 singletons (83.5%)
-00:00 119Mb Min size 1, median 1, max 11708, avg 5.57
-00:01 119Mb  100.0% Writing derep.fa
+usearch -derep_fulllength seq.fasta -fastaout derep.fa -sizeout
 ```
+
+The result showed that from a total of 152132 sequences, there are 27,289 unique sequences.
+
+00:00  83Mb  100.0% Reading seq.fasta
+00:00  93Mb 152132 seqs, 27289 uniques, 22777 singletons (83.5%)
+00:00  93Mb Min size 1, median 1, max 11708, avg 5.57
+00:00  82Mb  100.0% Writing derep.fa
 
 
 Then we will sort the sequences by abundance and cluster the sequences based on minimal 97% identity. In this step, chimera detection is also performed
 
 
 ```
-usearch -sortbysize derep.fa -fastaout sorted.fa -minsize 2
-usearch -cluster_otus sorted.fa -otus otus.fa -otu_radius_pct 3 -sizeout -uparseout results.txt
+usearch -sortbysize derep.fa -fastaout sorted.fa -minsize 2
+usearch -cluster_otus sorted.fa -otus otus.fa -otu_radius_pct 3 -sizeout -uparseout results.txt
 ```
 
 
 Here's the output. It shows that there are 219 OTUs based on the filtering and cutoffs we specified.
-
-
-```
 00:01  47Mb  100.0% 219 OTUs, 348 chimeras (7.7%)
-```
 
-
-Then to make the output QIIME compatible, we will rename the sequence IDs (to be numerical)
-
+Then to make the output QIIME compatible, we will need to rename the sequence IDs (to be numerical). Again, we rely on awk to do the text manipulation.
 
 ```
 awk 'BEGIN{count=0;}{if ($$0~/>/){print ">" count; count+=1;} else {print}}' otus.fa > rep_set.fasta
