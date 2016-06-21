@@ -145,9 +145,9 @@ If you have hundreds of data files, it can be overwhelming to check all the qual
 The next step in our pipeline is to assemble the Illumina paired-end reads with [PEAR](https://github.com/xflouris/PEAR).
 
 ```
-ncores=4`
 numberOfFilePairs=$(ls $workingDir/sequence_files/*_1.fastq.gz| wc -l )
 let numberOfIterations=($numberOfFilePairs+$ncores-1)/$ncores
+
 for j in $(seq 0 $numberOfIterations)
 do
    let i=( $j * $ncores + 1 )
