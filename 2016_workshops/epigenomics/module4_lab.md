@@ -55,10 +55,10 @@ cd ~/module4
 #### Exploring available datasets
 * Open a web browser on your computer, and load the URL [http://epigenomesportal.ca/ihec](http://epigenomesportal.ca/ihec)
 
-* Click on the "View all" button
+* In the Overview page, click on the "View all" button.
 
 * You will get a grid with all available datasets for IHEC Core Assays.
-    * You can filter out visibile datasets in the grid using the filtering options at the bottom of the grid.
+    * You can filter out visible datasets in the grid using the filtering options at the bottom of the grid.
 
 * Go back to the Overview page, and select the following categories of datasets: "Histone" for the "Muscle" cell type.
 
