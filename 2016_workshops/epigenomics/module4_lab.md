@@ -242,6 +242,7 @@ scp class%%@guillimin.clumeq.ca:/home/class%%/module4/homer/output .
 
 Then, open the de novo and known motifs HTML files in a browser for visualization. Do the identified motifs fit what we would expect?
 
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_results.png)
 
 ### Congrats, now you're really done!
 
