@@ -156,7 +156,7 @@ hg19 output -preparsedDir preparsed -p 2 -S 15' | qsub -l nodes=1:ppn=2 -d .
 
 ### 3- Looking for GO terms enrichment with GREAT
 
-Next, we will try to load peaks called for ChIP-Seq experiments using GREAT. We need bed files to use the GREAT portal. We will do the conversion on the Guillimin HPC.
+Next, we will try to identify GO terms connected to ChIP-Seq peaks calls using GREAT. We need BED files to use the GREAT portal. We will do the conversion on the Guillimin HPC.
 
 * In the IHEC Data Portal, go back to the grid page, and activate all track hubs.
 
