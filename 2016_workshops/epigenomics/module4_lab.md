@@ -234,7 +234,7 @@ scp class99@guillimin.clumeq.ca:/home/class99/module4/great/*.bed .
 showq -uclass%%
 ```
 
-If the job is completed, you can bring back HOMER results to your laptop for visualiztion. **From your laptopt**, use the scp command or WinSCP to bring back the results folder.
+If the job is completed, you can bring back HOMER results to your laptop for visualiztion. **From your laptop**, use the scp command or WinSCP to bring back the results folder.
 
 ```
 scp class%%@guillimin.clumeq.ca:/home/class%%/module4/homer .
