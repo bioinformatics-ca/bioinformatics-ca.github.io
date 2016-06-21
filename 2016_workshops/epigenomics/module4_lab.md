@@ -166,7 +166,7 @@ Next, we will try to identify GO terms connected to ChIP-Seq peaks calls using G
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_bone_marrow_h3k27ac.png)
 
-* For this exercise, we will download only one of the available datasets. Pick up the one for the "ERS255952" sample.
+* For this exercise, we will download only two of the bigbeds for available datasets. Pick up the one for the "ERS255952" and "ERS365966" sample.
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_select_Blueprint_dataset.png)
 
@@ -199,7 +199,7 @@ wget -O trackList.txt http://epigenomesportal.ca/edcc/cgi-bin/downloadList.cgi?h
 wget -i trackList.txt
 ```
 
-* Convert the bigbeds using the UCSC set of tools. It is available as a CVMFS module. For this example, we will convert and use only one of the files, **S005HDH1.H3K27ac.ppqt_macs2_v2.20130819.bb**.
+* Convert the bigbed using the UCSC set of tools. It is available as a CVMFS module. For this example, we will convert and use only one of the files, **S005HDH1.H3K27ac.ppqt_macs2_v2.20130819.bb**.
 
 ```
 module load mugqic/ucsc/20140212
