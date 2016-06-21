@@ -96,15 +96,15 @@ You can get a whole genome overview of the similarity of a group of tracks by us
     * Activate the track hubs for all consortia.
     * Click on the grid cell for cell type "B Cell" and assay "H3K27ac".
     * Click on "Correlate tracks".
-    * One track seems to be an outlier... This is either a problem with the quality of the track, or the underlying metadata can indicate that something is different with this dataset.
+    * One dataset seems to be an outlier... This is either a problem with the quality of the dataset, or the underlying metadata can indicate that something is different (disease status or some other key element).
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_portal_BCell.png)
 
 ### 2- Predicting motifs with HOMER
 
-Lastly, we will attempt to detect motifs in peak regions for transcription factor binding sites using HOMER.
+We will now attempt to detect motifs in peak regions for transcription factor binding sites using HOMER.
 
-* Go back to the IHEC Data Portal.
+* Go back to the default IHEC Data Portal view by clicking "Data Grid" in the top bar.
 
 * In the filters at the bottom of the grid, activate non-core IHEC assays.
 
