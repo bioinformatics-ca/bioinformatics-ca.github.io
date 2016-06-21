@@ -123,7 +123,6 @@ We will now attempt to detect motifs in peak regions for transcription factor bi
 * Open your Guillimin terminal session, create a directory for our HOMER-related files, and go into it. Then, download the BigBed file.
 
 ```
-cd ~/module4
 mkdir homer
 cd homer
 wget http://ftp.ebi.ac.uk/pub/databases/ensembl/encode/integration_data_jan2011/byDataType/peaks/jan2011/peakSeq/optimal/hub/peakSeq.optimal.wgEncodeHaibTfbsH1hescYy1c20Pcr1xAlnRep0_vs_wgEncodeHaibTfbsH1hescControlPcr1xAlnRep0.bb
