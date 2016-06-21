@@ -443,7 +443,7 @@ We have the helper script run\_metaphlan2.pl for running MetaPhlan on all our sa
 -   Run the helper script run\_metaphlan2.pl
 
 ```
-/usr/local/microbiome_helper-master/run_metaphlan2.pl -p 4 -o osd_metaphlan_merged_all.txt *.fasta
+run_metaphlan2.pl -p 8 -o osd_metaphlan_merged_all.txt *.fasta
 ```
 
 This step should take ~20 minutes to complete. So, we will try and dissect the run\_metaphlan2.pl PERL script while it is running by opening up another connection to the cloud.
