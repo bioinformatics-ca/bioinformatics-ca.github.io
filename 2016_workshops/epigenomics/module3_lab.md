@@ -14,6 +14,9 @@ image: CBW_Epigenome-data_icon.jpg
 * The instructions in this tutorial will suppose you are in a Linux/Max environment. The equivalent tools in Windows are provided in the [Guillimin documentation](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/.md).
 * The user **class99** is provided here as an example. You should replace it by the username that was assigned to you at the beginning of the workshop.
 
+[bam file](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/iPSC_1.1_bismark_bt2_pe_sorted.bam)
+
+[bai file](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/iPSC_1.1_bismark_bt2_pe_sorted.bam.bai)
 
 ## Introduction
 
