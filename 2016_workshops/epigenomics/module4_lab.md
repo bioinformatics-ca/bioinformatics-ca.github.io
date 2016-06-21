@@ -214,7 +214,7 @@ bigBedToBed S005HDH1.H3K27ac.ppqt_macs2_v2.20130819.bb S005HDH1.H3K27ac.ppqt_mac
 scp class99@guillimin.clumeq.ca:/home/class99/module4/great/*.bed .
 ```
 
-* Load the GREAT website: http://bejerano.stanford.edu/great/public/html/
+* Load the GREAT website: [http://bejerano.stanford.edu/great/public/html/](http://bejerano.stanford.edu/great/public/html/)
 
 * Provide the following input to the GREAT interface:
     * Assembly: **Human: GRCh37**
