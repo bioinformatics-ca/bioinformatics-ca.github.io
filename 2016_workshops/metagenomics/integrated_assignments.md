@@ -546,11 +546,11 @@ Q7) How many are still significant in the “two group test” using White's non
 Functional composition of the OSD samples OR "What are they doing?" <a id="what"></a>
 -------------------------------------------------------------------
 
-The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenomes. This involves comparing the metagenome sequences to the KEGG database using the program diamond. This is a time consuming step and estimated to take around ~80-90 minutes for all our samples. Based on feedback from last year, we have pre-computed these results for you. The results are named kos.spf, pathways.spf, and modules.spf and can be found in your ~/workspace/assignment2 directory. If you are interested, see below is how we ran the samples. If not, skip to "Statistical analysis of metabolic differences"
+The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenomes. This involves comparing the metagenome sequences to the KEGG database using the program diamond. This is a time consuming step and estimated to take around ~80-90 minutes for all our samples. Based on feedback from last year, we have pre-computed these results for you. The results are named kos.spf, pathways.spf, and modules.spf and can be found in your ~/workspace/assignment2 directory. If you are interested, see below for how we ran the samples. If not, skip to "Statistical analysis of metabolic differences"
 
 Q8) From the kos.spf file what are the top 3 categories present in the 1m sample from the Bedford basin (station 152)?
 
-### Preparing for running Humann
+### Preparing for running Humann (Already run)
 
 -   Perform BLASTX searches agaisnt the KEGG reference database using the program Diamond (We have a helper script for running this step in batch mode for all of our samples)
 
@@ -565,7 +565,7 @@ ls -ltrh pre_humann
 less pre_humann/OSD106-0m-depth.comb.qc.masked.dedup.subsample.txt
 ```
 
-### Running Humann
+### Running Humann *Already run
 
 -   copy the humann program folder (humann-0.99) to your working directory
 
@@ -621,7 +621,7 @@ sed -i 's/\.subsample//g' modules.spf
 sed -i 's/\.subsample//g' pathways.spf
 ```
 
-### Statistical analysis of metabolic differences
+### Statistical analysis of metabolic differences (Already run)
 
 -   Load the kos.spf file along with the original metadata-file-for-osd-subset-210615.txt file into STAMP.
 -   Compare the Arctic samples to the Northwest Atlantic samples using a Two Group test. Use the default Welch’s t-test with no multiple test correction. Since the number of features (i.e the KO categories) is very high, we will reduce the p-value cut-off to 0.01. Now try changing the p-value to 0.001 and create an “Extended error bar” plot to show a plot of the top differential KO categories.
