@@ -106,7 +106,7 @@ We will now attempt to detect motifs in peak regions for transcription factor bi
 
 * Go back to the default IHEC Data Portal view by clicking "Data Grid" in the top bar.
 
-* In the filters at the bottom of the grid, activate non-core IHEC assays.
+* In the filters at the bottom of the grid, activate non-core IHEC assays, and display only Transcription Factor Binding Sites (TFBS) assays.
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_show_tfbs.png)
 
