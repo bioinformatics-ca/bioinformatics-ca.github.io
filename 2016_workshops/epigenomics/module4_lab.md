@@ -244,6 +244,10 @@ Then, open the de novo and known motifs HTML files in a browser for visualizatio
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_results.png)
 
+If your job didn't complete yet, you can download the results from here instead:
+
+[home results](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/homer_output.zip)
+
 ### Congrats, now you're really done!
 
 If you have time remaining, try running queries on other types of datasets. For example, does running a GREAT query on another cell type yield the type of annotations that you'd expect?
