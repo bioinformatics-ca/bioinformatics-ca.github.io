@@ -69,8 +69,10 @@ cd ~/module4
 #### Visualizing the tracks
 
 * Select "Visualize in Genome Browser"
-    * You can see that the datasets are being displayed at a mirror of the UCSC Genome Browser. These are all peaks and signal for the chosen muscle H3K427ac ChIP-Seq datasets.
-        
+    * You can see that the datasets are being displayed at a mirror of the UCSC Genome Browser. These are all peaks and signal for the chosen muscle H3K427ac ChIP-Seq datasets. In the Genome Browser, you can expand the tracks by changing visibility from "pack" to "full".
+
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_portal_fullTrackView.png)
+    
 * You can also download these tracks locally for visualization in IGV
     * Click on the download button at the bottom of the grid.
     * Use the download links to download the tracks.
