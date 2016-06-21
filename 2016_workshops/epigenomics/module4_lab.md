@@ -166,7 +166,7 @@ Next, we will try to identify GO terms connected to ChIP-Seq peaks calls using G
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_bone_marrow_h3k27ac.png)
 
-* For this exercise, we will download only two of the bigbeds for available datasets. Pick up the one for the "ERS255952" and "ERS365966" sample.
+* For this exercise, we will download only two of the bigbeds for available datasets. Pick up the one for the "ERS255952" and "ERS365962" sample.
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_select_Blueprint_dataset.png)
 
