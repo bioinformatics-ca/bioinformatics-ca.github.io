@@ -53,7 +53,7 @@ cd ~/module4
 ### 1- IHEC Data Portal
 
 #### Exploring available datasets
-* Open a web browser on your computer, and load the URL [http://epigenomesportal.ca/ihec](http://epigenomesportal.ca/ihec)
+* Open a web browser on your computer, and load the URL [http://epigenomesportal.ca/ihec](http://epigenomesportal.ca/ihec) .
 
 * In the Overview page, click on the "View all" button.
 
@@ -62,7 +62,9 @@ cd ~/module4
 
 * Go back to the Overview page, and select the following categories of datasets: "Histone" for the "Muscle" cell type.
 
-* Only these categories will now get displayed in the grid. Select the following grid cells.
+* Only these categories will now get displayed in the grid. Select the following grid cells:
+
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_portal_muscle_h3k27ac.png)
 
 #### Visualizing the tracks
 
