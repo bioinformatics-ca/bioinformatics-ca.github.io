@@ -114,7 +114,10 @@ We will now attempt to detect motifs in peak regions for transcription factor bi
 
 ![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_H1hESC.png)
 
-* Go to the track list at the bottom of the grid and select peaks file for dataset "HaibH1hescYy1c20Pcr1xAlnRep0peakSeq".
+* Go to the track list at the bottom of the grid and select only the peak file "HaibH1hescYy1c20Pcr1xAlnRep0peakSeq".
+
+
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_great_encode_yy1_h1_peaks.png)
 
 * Get the URL to this track by clicking on the "Download datasets" button at the bottom of the grid.
 
