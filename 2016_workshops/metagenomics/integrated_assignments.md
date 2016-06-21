@@ -76,7 +76,7 @@ chmod u+x Integrated_Lab_1.sh
 
 The first command fetches the script from github and the second command allows us to execute it.
 
-This script takes about 40-50 minutes to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
+This script takes about 30-40 minutes to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
 
 ```
 ./Integrated_Lab_1.sh 2>&1 | tee -a log.txt
