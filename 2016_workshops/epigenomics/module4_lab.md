@@ -82,7 +82,7 @@ You can get a whole genome overview of the similarity of a group of tracks by us
 
 * Select all ChIP-Seq marks for the cell type "Bone Marrow Derived Mesenchymal Stem Cell Cultured Cell".
 
-![track_hubs](./img/module4_portal_roadmap_chipseq.png)
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_portal_roadmap_chipseq.png)
 
 * At the bottom of the grid, click on the button "Correlate tracks".
 
@@ -94,7 +94,7 @@ You can get a whole genome overview of the similarity of a group of tracks by us
     * Click on "Correlate tracks".
     * One track seems to be an outlier... This is either a problem with the quality of the track, or the underlying metadata can indicate that something is different with this dataset.
 
-![track_hubs](./img/module4_portal_BCell.png)
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_portal_BCell.png)
 
 ### 2- Predicting motifs with HOMER
 
@@ -104,11 +104,11 @@ Lastly, we will attempt to detect motifs in peak regions for transcription facto
 
 * In the filters at the bottom of the grid, activate non-core IHEC assays.
 
-![track_hubs](./img/module4_HOMER_show_tfbs.png)
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_show_tfbs.png)
 
 * In the grid, select ENCODE datasets for the CTCF assay and the H1hESC cell type.
 
-![track_hubs](./img/module4_HOMER_H1hESC.png)
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_HOMER_H1hESC.png)
 
 * Go to the track list at the bottom of the grid and select peaks file for dataset "".
 
@@ -141,17 +141,17 @@ Next, we will try to load peaks called for ChIP-Seq experiments using GREAT. We 
 
 * In the IHEC Data Portal, go back to the grid page, and activate all track hubs.
 
-![track_hubs](./img/module4_GREAT_activate_all_trackhubs.png)
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_activate_all_trackhubs.png)
 
 * Select the datasets for cell type "Bone marrow" and assay H3K27ac.
 
-![track_hubs](./img/module4_GREAT_bone_marrow_h3k27ac.png)
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_bone_marrow_h3k27ac.png)
 
 * Click download at the bottom of the grid.
 
 * At the top of the download page, click on the link that says "Alternatively, you can click here to obtain a text list of all the tracks". This will give you a text list with all tracks of interest. Copy the link to this page in your clipboard, using the address provided in your browser's URL bar.
 
-![track_hubs](./img/module4_GREAT_batch_download.png)
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_batch_download.png)
 
 * Open the terminal that's logged into Guillimin.
 
@@ -197,7 +197,7 @@ scp class99@guillimin.clumeq.ca:/home/class99/module4/*.bed .
 
 * In the results, for instance, you should obtain something like this for biological processes:
 
-![track_hubs](./img/module4_GREAT_go_biological_process.png)
+![img](https://bioinformatics-ca.github.io/2016_workshops/epigenomics/img/module4_GREAT_go_biological_process.png)
 
 
 
