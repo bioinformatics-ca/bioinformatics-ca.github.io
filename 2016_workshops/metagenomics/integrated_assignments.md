@@ -70,11 +70,11 @@ cd ~/workspace/assignment1
 All of the required commands are in a BASH script which we can copy to our workspaces. Each of the commands contained within this script are displayed and discussed below.
 
 ```
-cp ~/CourseData/metagenomics/integrated_assignment_day1/Integrated_Lab_1.sh .
+wget https://raw.githubusercontent.com/theavanrossum/cbwMicrobiomeWorkshop/master/Integrated_Lab_1.sh
 chmod u+x Integrated_Lab_1.sh
 ```
 
-The first command fetches the script and the second command allows us to execute it.
+The first command fetches the script from github and the second command allows us to execute it.
 
 This script takes about 40-50 minutes to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
 
