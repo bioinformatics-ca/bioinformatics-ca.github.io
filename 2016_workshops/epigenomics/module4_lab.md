@@ -237,10 +237,10 @@ showq -uclass%%
 If the job is completed, you can bring back HOMER results to your laptop for visualiztion. **From your laptop**, use the scp command or WinSCP to bring back the results folder.
 
 ```
-scp class%%@guillimin.clumeq.ca:/home/class%%/module4/homer .
+scp class%%@guillimin.clumeq.ca:/home/class%%/module4/homer/output .
 ```
 
-Then, open the de novo and known motifs HTML files for visualization.
+Then, open the de novo and known motifs HTML files in a browser for visualization. Do the identified motifs fit what we would expect?
 
 
 ### Congrats, now you're really done!
