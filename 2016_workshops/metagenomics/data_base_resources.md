@@ -46,7 +46,7 @@ You can browse the data (and metadata) via a web browser but to download the act
 
 Navigate to the SRA homepage (<http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=announcement>).  Click on “Browse” to look at the different studies available. There are over 71K records. While you can type in keywords in the search field, the datasets are not organized, making comprehensive search for particular data types (say 16S amplicon) difficult. A more common way to use SRA is to first identify the paper which contains the datasets that you are interested in.  In the paper, a SRA ID and Bioproject ID will be provided to help you retrieve the raw data. We will focus on a particular study by typing 16S robustness into the search field (note that the keyword 16S is not an exhaustive nor specific way to identify all 16S marker gene microbiome studies in SRA).
 
-Each study in this set of 18 (refer to the paper here: http://dnaresearch.oxfordjournals.org/content/20/3/241.long) comes from a different individual in a probiotic intervention study. The study page contains several cross-referencing links to various other databases (such as Bioproject) at NCBI, but let’s stay within the SRA by clicking on “Runs”.
+Each study in this set of 18 (refer to the paper here: <http://dnaresearch.oxfordjournals.org/content/20/3/241.long>) comes from a different individual in a probiotic intervention study. The study page contains several cross-referencing links to various other databases (such as Bioproject) at NCBI, but let’s stay within the SRA by clicking on “Runs”.
 
 On the resulting page you will see a table that summarizes the nine runs for this individual. The first was a pre-probiotic (!?) administration, the next four are identified as during the administration (eight weeks, with samples collected every two weeks), and the final four are unlabeled but likely correspond to the post-probiotic phase as identified in the paper. With the SRA we can drill as deeply as we want to into these data.
 
@@ -72,7 +72,7 @@ A more high-throughput approach to download data from MG-RAST is to use the prog
 
 The default return type is a JSON structure which contains relevant metadata as well as the answer to your query. There are libraries for importing JSON structs into (for example) Python; you might also want to install an add-on such as JSONView for Firefox (<https://addons.mozilla.org/en-us/firefox/addon/jsonview/>) or Chrome to get slightly more readable results in your browser. Tabular results are returned as a BIOM-formatted file.
 
-A separate tutorial shows you on to download data using MG-RAST API: http://adina-howe.readthedocs.io/en/latest/mgrast/
+A separate tutorial shows you on to download data using MG-RAST API: <http://adina-howe.readthedocs.io/en/latest/mgrast/>.
 
 ## 3) HMP DACC
 
