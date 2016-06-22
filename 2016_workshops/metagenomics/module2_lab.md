@@ -32,7 +32,7 @@ The Schloss lab is interested in understanding the effect of normal variation in
 To connect to your Amazon Cloud Instance, type the following command in your terminal window (replace XX with your ID)
 
 ```
-ssh -i CBW.pem ubuntu@cbwXX.dyndns.info
+ssh -i CBWCG.pem ubuntu@cbwXX.dyndns.info
 ```
 
 
