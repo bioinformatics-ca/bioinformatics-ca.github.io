@@ -123,7 +123,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Introduction to Cloud Computing](https://bioinformatics.ca/metagenomics-module-12-2016)
   
-  [Introduction to Data Resources]()
+  [Introduction to Data Resources Self-Guided Tour](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_module1_lab_2016/)
 
 [&uarr;](#back_to_top)
 
