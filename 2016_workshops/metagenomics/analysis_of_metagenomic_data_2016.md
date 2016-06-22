@@ -147,7 +147,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-3-2016)
   
-  Lab practical:
+  [Lab practical](https://github.com/mlangill/microbiome_helper/wiki/CBW-2016-PICRUSt-tutorial)
 
 [&uarr;](#back_to_top)
 
@@ -173,7 +173,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-4-2016)
   
-  Lab practical:
+  [Lab practical](https://github.com/mlangill/microbiome_helper/wiki/CBW-2016-Metagenomic-Taxonomic-Tutorial)
 
 [&uarr;](#back_to_top)
   
@@ -185,7 +185,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-5-2016)
   
-  Lab practical:
+  [Lab practical](https://github.com/mlangill/microbiome_helper/wiki/CBW-2016-Metagenomics-Functional-Tutorial)
 
 [&uarr;](#back_to_top)
   
