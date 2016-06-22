@@ -119,9 +119,11 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">William Hsiao</font>*
   
-  Lecture:
+  [Introduction to Metagenomics](https://bioinformatics.ca/metagenomics-module-11-2016)
   
-  Lab practical:
+  [Introduction to Cloud Computing](https://bioinformatics.ca/metagenomics-module-12-2016)
+  
+  [Introduction to Data Resources]()
 
 [&uarr;](#back_to_top)
 
@@ -131,7 +133,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">William Hsiao</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metagenomics-module-2-2016)
   
   [Lab practical](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_module2_lab_2016/)
   
