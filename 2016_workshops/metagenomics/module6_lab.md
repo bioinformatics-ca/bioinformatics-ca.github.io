@@ -715,7 +715,7 @@ To visualize our processed microbiome dataset in the context of the functional P
 -   Using the scroll wheel, you can zoom in by scrolling up and zoom out by scrolling downwards.
 -   Select nodes on the current network display, you will see the nodes' attributes from the Table Panel (Node Table). Same for edges.
 
-Here we will skip the steps of generating the node attribute file "<Media:cow_PPI.nodes.txt>" from "cow\_table\_RPKM\_all.txt", however for your information the steps involve:
+Here we will skip the steps of generating the node attribute [cow_PPI.nodes.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Cow_PPI.nodes.txt) from "cow\_table\_RPKM\_all.txt", however for your information the steps involve:
 
 -   predefining taxonomic categories (here we use the following 12 phylum categories: archaea, protozoan, bacteria, actinobacteria, bacteroidetes, gammaproteobacteria, deltaproteobacteria, betaproteobacteria, alphaproteobacteria, clostridiales, leuconostocaceae, lactobacillaceae, but you could define these categories to fit your microbiome).
 
@@ -744,7 +744,7 @@ leuconostocaceae,lactobacillaceae" colorlist="#FFA500,#C0C0C0,#EDF252,#0000FF,#
 20.77  7.35    2.3 0   4.63    19.18   0   0
 ```
 
-Once the node attribute file has been generated, we provide two network files onto which these attributes can be mapped: "![](ecoli_PPI_cellwall.cys "fig:ecoli_PPI_cellwall.cys")" or "![](ecoli_PPI_transporter.cys "fig:ecoli_PPI_transporter.cys")". These need to be downloaded from your module5 directory onto your laptop via scp or winscp. Once downloaded then these files can be opened using Cytoscape installed in your local computer. To import node attributes:
+Once the node attribute file has been generated, we provide two network files onto which these attributes can be mapped: [ecoli_PPI_cellwall.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_cellwall.cys) or [ecoli_PPI_transporter.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_transporter.cys). These need to be downloaded from your module5 directory onto your laptop via scp or winscp. Once downloaded then these files can be opened using Cytoscape installed in your local computer. To import node attributes:
 
 ```
 1) select File -> Import -> Table -> File, select "cow_PPI.nodes.txt" from your working folder,
@@ -755,4 +755,4 @@ click OK from the prompting window. 
 
 **Notes**:
 
--   You can open two cytoscape files, '![](ecoli_PPI_cellwall_cow.cys "fig:ecoli_PPI_cellwall_cow.cys")' and '![](ecoli_PPI_transporter_cow.cys "fig:ecoli_PPI_transporter_cow.cys")', to see what the PPI neworks look like.
+-   You can open two cytoscape files, [ecoli_PPI_cellwall_cow.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_cellwall_cow.cys) and [ecoli_PPI_transporter_cow.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_transporter_cow.cys), to see what the PPI neworks look like.
