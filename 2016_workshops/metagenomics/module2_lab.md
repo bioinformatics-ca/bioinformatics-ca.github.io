@@ -27,7 +27,7 @@ In this semi self-guided tutorial, you can copy and paste the commands in the gr
 Dataset Intro (always good to know a bit about the data you are working with):
 ==============
 
-The Schloss lab is interested in understanding the effect of normal variation in the gut microbiome on host health. Fresh feces from mice were collected for 365 days post weaning. In the first 150 days no intervention was done. In this demo, we will look at the data collected in the first 10 days except day 4 (early time points) vs. days 140-150 (late time points) for a single female mouse. In addition to mice fecal samples, we included a mock community composed of genomic DNA from 21 bacterial strains (available from HMP studies).
+The Schloss lab is interested in understanding the effect of normal variation in the gut microbiome on host health. Fresh feces from mice were collected for 365 days post weaning. In the first 150 days no intervention was done. In this demo, we will look at the data collected in the first 10 days except day 4 (early time points) vs. days 140-150 (late time points) for a single female mouse.
 
 To connect to your Amazon Cloud Instance, type the following command in your terminal window (replace XX with your ID)
 
@@ -76,7 +76,7 @@ mkdir scripts
 Now link the files from the ~/CourseData directory which is read-only.
 
 ```
-ln -s ~/CourseData/metagenomics/markergenes/qiime/*.fastq.gz sequence_files/
+ln -s ~/CourseData/metagenomics/markergenes/qiime/F*.fastq.gz sequence_files/
 ln -s ~/CourseData/metagenomics/markergenes/qiime/97* reference_data/
 ln -s ~/CourseData/metagenomics/markergenes/qiime/core_set_aligned.fasta.imputed reference_data/
 ```
@@ -329,12 +329,14 @@ You can view the results at <http://cbwXX.dyndns.info/lab2_qiime/mesas_pcoa/pcoa
 Mothur Workflow (Optional)
 ===============
 
-In `~/CourseData/markergenes/mothur`, we have
+In `~/CourseData/metagenomics/markergenes/mothur`, we have
 
 **40 input sequences (FASTQ) files:**
 
 -   F3Dxxx\_S209\_L001\_R1/2\_001.fastq for the 19 mouse samples (forward and reverse reads)
 -   Mock\_S280\_L001\_R1/2\_001.fastq for the mock community sample
+
+(In addition to the mouse samples files, we will include a couple of mock community samples from HMP.  These samples have very different microbial profile compared to the mouse samples, and they serve as outliers to our mouse samples for comparing)
 
 **Reference Datasets:**
 
@@ -362,7 +364,7 @@ After you are in the ~/workspace/lab2_mothur directory, we will copy over the ne
 
 
 ```
-cp ~/CourseData/markergenes/mothur/* ~/workspace/lab2_mothur/
+cp ~/CourseData/metagenomics/markergenes/mothur/* ~/workspace/lab2_mothur/
 ```
 
 
