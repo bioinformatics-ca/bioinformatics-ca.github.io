@@ -33,6 +33,7 @@ In general, you should not worry about querying databases unless you are writing
 
 NCBI Sequence Read Archive (SRA) is the main primary (raw data) repository for next generation sequence data (and synchronized with Europe and Japan repositories as well) and it has an overwhelming amount of raw sequence data. Included in this are marker-gene and metagenomic survey data from a remarkable range of projects. Understanding how the data are organized within SRA can help you navigate. The organization of SRA is as follows:
 
+![Flow graph](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/metagenomics/Mod1.png?raw=true) 
  
 **Study** – A study is a set of experiments and has an overall goal. Studies are organized into Bioprojects.
 
