@@ -19,9 +19,9 @@ In this lab, we will go over the major steps of 16S analysis using QIIME scripts
 
 A example of a QIIME script is "split_libraries_fastq.py" and you can find the corresponding document at http://qiime.org/scripts/split_libraries_fastq.html. From the document, you can tell that the script performs demultiplexing of Fastq sequence data where barcodes and sequences are contained in two separate fastq files. To run the script, you would type "split_libraries_fastq.py -o slout/ -i forward_reads.fastq.gz -b barcodes.fastq.gz -m map.tsv" into your terminal window. Note that the script name is followed by a list of "agruments" (i.e. -o -i -b and -m).  These "agruments" (also called "parameters") change the default behavior of the script and provide additional information needed for the script to run.  For example, -i specifies the input sequence file to be processed and -b specifies the corresponding barcode file for the input sequences.  Information about these parameters is also provided in the script document page. Note that some arguments are optional and have default values (e.g. by default --store_demultiplexed_fastq is set to false so only a single file containing reads from all samples will be outputed). Lastly, the document has a section on the expected outputs of the script. 
 
-For the lab, we will mainly use the dataset from the Mothur SOP since it’s an interesting dataset and it has been pared down for demonstration purpose. Moreover, you could use the same dataset to run through the Mothur tutorial (bonus! at end of the QIIME tutorial) and learn to use both Mothur and QIIME. In this case, de-multiplexing has been done already so you have one pair of files (for paired-end reads) per sample. For Illumina MiSeq sequencing, de-multiplexing (or binning) may have been done for you already by the sequencing centre but if you need to do it on your own, both Mothur and QIIME have commands that you can use. Later on, we will also use a separately dataset that has not been de-multiplexed yet to show you how to do that in case your sequencing facility sends you a single FASTQ file and the corresponding barcode file containing all your samples.
+For the lab, we will mainly use the dataset from the Mothur SOP (http://www.mothur.org/wiki/MiSeq_SOP) since it’s an interesting dataset and it has been pared down for demonstration purpose. Moreover, you could use the same dataset to run through the Mothur tutorial (bonus! at end of the QIIME tutorial) and learn to use both Mothur and QIIME. In this case, de-multiplexing has been done already so you have one pair of files (for paired-end reads) per sample. For Illumina MiSeq sequencing, de-multiplexing (or binning) may have been done for you already by the sequencing centre but if you need to do it on your own, both Mothur and QIIME have commands that you can use. If your data set has not been de-multiplexed (i.e. all your samples are in the same FASTQ file and you have the associated barcode file, then you can follow the QIIME Illumina tutorial (http://nbviewer.jupyter.org/github/biocore/qiime/blob/1.9.1/examples/ipynb/illumina_overview_tutorial.ipynb) to carry out the initial de-multiplexing and quality filtering of your data.
 
-In this semi self-guided tutorial, you can copy and paste the commands in the grey boxes into your terminal to execute the commands. We will provide some explanation as you go along.  In the Integrated Assignment, you will run all the commands from a single shell script - effectively running your entire analysis pipeline in one go.
+In this semi self-guided tutorial, you can copy and paste the commands in the grey boxes into your terminal to execute the commands. We will provide some explanation as you go along.  The learning objective here is to get you to be familiar with running interactive command line tools like QIIME.  In the Integrated Assignment, you will run all the commands from a single shell script - effectively running your entire analysis pipeline in one go and focus on interpreting the result files.
 
 
 Dataset Intro (always good to know a bit about the data you are working with):
@@ -43,10 +43,9 @@ We will cover QIIME first rather than Mothur as it seemed to have gained more po
 
 In `~/CourseData/metagenomics/markergenes/qiime`, we have
 
-**40 input sequences (FASTQ) files:**
+**38 input sequences (FASTQ) files:**
 
 -   F3Dxxx\_S209\_L001\_R1/2\_001.fastq.gz for the 19 mouse samples (forward and reverse reads)
--   Mock\_S280\_L001\_R1/2\_001.fastq.gz for the mock community sample
 
 **Reference Datasets:**
 
