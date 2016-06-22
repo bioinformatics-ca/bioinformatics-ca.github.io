@@ -58,6 +58,10 @@ image: CBW_Metagenome_icon.jpg
 
 Your feedback is important to us!  Please complete [our survey](https://www.surveymonkey.com/r/5Z3F5C8)!
 
+### Class Picture
+
+![Class Picture](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/metagenomics/metag_2016.jpeg?raw=true)
+
 [&uarr;](#back_to_top)
 
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
