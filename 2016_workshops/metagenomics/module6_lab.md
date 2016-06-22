@@ -40,7 +40,7 @@ Preliminaries
 
 ### Amazon node
 
-Read [these directions](http://bioinformatics.ca/workshop_wiki/index.php/Analysis_of_Metagenomic_Data_2015_Workshop_Wiki#Logging_into_the_Amazon_cloud) for information on how to log in to your assigned Amazon node.
+Read [these directions](http://bioinformatics-ca.github.io/logging_into_the_Amazon_cloud/) for information on how to log in to your assigned Amazon node.
 
 ### Work directory
 
@@ -95,9 +95,10 @@ To open the HTML report file, please go to your workspace folder from your web b
 Processing the Reads
 --------------------
 
-To ensure compatibility with downstream software we first need to reformat the headers of the paired-end reads such that the 5\` and 3\` ends are assigned appropriate matching sequence identifiers s e.g. 5\` reads are marked with a trailing '/1'/ while 3\` reads are marked with a trailing '/2'/.
+To ensure compatibility with downstream software we first need to reformat the headers of the paired-end reads such that the 5\` and 3\` ends are assigned appropriate matching sequence identifiers s e.g. 5\` reads are marked with a trailing '/1' while 3\` reads are marked with a trailing '/2'.
 
-```perl main_add_subID_reads_fastq.pl  cow
+```
+perl main_add_subID_reads_fastq.pl  cow
 ```
 
 **Notes**:
@@ -116,14 +117,12 @@ To ensure compatibility with downstream software we first need to reformat the h
 
 Trimmomatic can rapidly identify and trim adaptor sequences, as well as identify and remove low quality sequence data - you can find it at <http://www.usadellab.org/cms/?page=trimmomatic>. Here we use UniVec\_Core which is a fasta file of known vectors and sequencing adaptors from NCBI Univec Database. Please download it into your working directory first.
 
-```wget [ftp://ftp.ncbi.nih.gov/pub/UniVec/UniVec_Core](ftp://ftp.ncbi.nih.gov/pub/UniVec/UniVec_Core)
+```
+wget [ftp://ftp.ncbi.nih.gov/pub/UniVec/UniVec_Core](ftp://ftp.ncbi.nih.gov/pub/UniVec/UniVec_Core)
 ```
 
 ```
-java -jar /usr/local/Trimmomatic-0.36/trimmomatic-0.36.jar PE cow1_new.fastq 
-cow2_new.fastq cow1_qual_paired.fastq cow1_qual_unpaired.fastq cow2_qual_paired.fastq 
-cow2_qual_unpaired.fastq ILLUMINACLIP:UniVec_Core:2:30:10 LEADING:3 
-TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
+java -jar /usr/local/Trimmomatic-0.36/trimmomatic-0.36.jar PE cow1_new.fastq cow2_new.fastq cow1_qual_paired.fastq cow1_qual_unpaired.fastq cow2_qual_paired.fastq cow2_qual_unpaired.fastq ILLUMINACLIP:UniVec_Core:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
 
 **Notes**:
@@ -183,7 +182,8 @@ less out/cow_qual.histogram
 
 To greatly reduce computational time, we need to remove duplicated reads before the following rRNA removal. This is because a lots of duplicated reads are rRNAs. We use USEARCH to do the dereplcation step.
 
-```usearch -derep_fulllength cow1_qual_all.fastq -fastaout cow1_qual_all_unique.fasta -sizeout -uc cow1_qual_all_unique.uc```
+```
+usearch -derep_fulllength cow1_qual_all.fastq -fastaout cow1_qual_all_unique.fasta -sizeout -uc cow1_qual_all_unique.uc```
 
 usearch -derep_fulllength cow2_qual_all.fastq -fastaout cow2_qual_all_unique.fasta  -sizeout -uc cow2_qual_all_unique.uc```
 
@@ -210,7 +210,7 @@ The results can be found in cow1\_qual\_all\_unique\_paired\_fastqc.html.
 
 ### Step 3. Remove abundant rRNA sequences
 
-rRNA genes tend to be highly expressed in all samples and must therefore be screened out to avoid lengthy downstream processing times for the assembly and annotation steps. We use Infernal (http://infernal.janelia.org/) which relies on a database of hidden Markov models (HMMs) describing rRNA sequence profiles - typically obtained from the Rfam database. However, due to the reliance on HMMs, Infernal, while more sensitive than BWA takes a long time (26 hours for ~100,000 reads on a single core!). So we will skip this step and use two precomputed files - "cow1\_rRNA.infernalout" and "cow2\_rRNA.infernalout" from a tar file "files2out.tar.gz".
+rRNA genes tend to be highly expressed in all samples and must therefore be screened out to avoid lengthy downstream processing times for the assembly and annotation steps. We use Infernal (<http://infernal.janelia.org/>) which relies on a database of hidden Markov models (HMMs) describing rRNA sequence profiles - typically obtained from the Rfam database. However, due to the reliance on HMMs, Infernal, while more sensitive than BWA takes a long time (26 hours for ~100,000 reads on a single core!). So we will skip this step and use two precomputed files - "cow1\_rRNA.infernalout" and "cow2\_rRNA.infernalout" from a tar file "files2out.tar.gz".
 
 ``` 
 tar -xzf files4out.tar.gz cow1_rRNA.infernalout cow2_rRNA.infernalout
@@ -344,9 +344,9 @@ Trinity --seqType fq --left cow1_mRNA.fastq --right cow2_mRNA.fastq --CPU
 -   The command line parameters are:
     -   `--seqType`: type of reads: ( fa, or fq ).
     -   `--CPU`: number of CPUs to use is 8.
-    -   `--max\_memory`: max memory to use by Trinity is 10GB.
-    -   `--min\_contig\_length`: .
-    -   `--full\_cleanup`: remove the temporary folder and results.
+    -   `--max_memory`: max memory to use by Trinity is 10GB.
+    -   `--min_contig_length`: .
+    -   `--full_cleanup`: remove the temporary folder and results.
 
 2. Extract singleton reads to a fastq format file:
 
@@ -619,7 +619,7 @@ Thus of ~6100 reads of putative microbial mRNA origin, we can annotate only ~180
 
 ### Step 8. Map the known genes to E. coli homologs to facilitate network visualization
 
-To help interpret our metatranscriptomic datasets from a functional perspective, we rely on mapping our data to functional networks such as metabolic pathways and maps of protein complexes. Here we will use a previously published map of functional protein-protein interactions (PPI) constructed for E. coli (''Peregrín-Alvarez JM. *et al.*, PLoS Comput Biol. 2009''<http://www.ncbi.nlm.nih.gov/pubmed/19798435>) as a proxy to get a systems-level view of annotated reads. To begin, we need to first define E. coli homologs for our annotated genes and proteins from the BWA, BLAT and DIAMOND searches.
+To help interpret our metatranscriptomic datasets from a functional perspective, we rely on mapping our data to functional networks such as metabolic pathways and maps of protein complexes. Here we will use a previously published map of functional protein-protein interactions (PPI) constructed for E. coli (''Peregrín-Alvarez JM. *et al.*, PLoS Comput Biol. 2009'' <http://www.ncbi.nlm.nih.gov/pubmed/19798435>) as a proxy to get a systems-level view of annotated reads. To begin, we need to first define E. coli homologs for our annotated genes and proteins from the BWA, BLAT and DIAMOND searches.
 
 For mapped microbial genes identified through our BWA and BLAT searches:
 
@@ -675,7 +675,7 @@ perl main_get_mapped_gene_table_RPKM.pl cow
 
 -   The final output file is named "cow\_table\_RPKM\_all.txt" and has the following format:
     -   \[geneID/proteinID, length, \#reads, taxonID, specie, phylum, RPKM, PPI\]
-    -   gi|110832861|ref|NC\_008260.1|:414014-415204 1191 1 393595 Alcanivorax borkumensis SK2 gammaproteobacteria 450.4456 b3339
+    -   gi\|110832861\|ref\|NC\_008260.1\|:414014-415204 1191 1 393595 Alcanivorax borkumensis SK2 gammaproteobacteria 450.4456 b3339
 
 <!-- -->
 
@@ -709,7 +709,7 @@ To visualize our processed microbiome dataset in the context of the functional P
 
 -   Select Apps —&gt; select App Manager -&gt; Type in enhancedGraphics in the Search box -&gt; Select enhancedGraphics and click Install
 
-'''Basic Network Navigation'
+**Basic Network Navigation**
 
 -   Use the zooming buttons located on the toolbar to zoom in and out of the interaction network shown in the current network display.
 -   Using the scroll wheel, you can zoom in by scrolling up and zoom out by scrolling downwards.
