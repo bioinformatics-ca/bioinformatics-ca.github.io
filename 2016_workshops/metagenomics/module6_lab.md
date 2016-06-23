@@ -118,7 +118,7 @@ perl main_add_subID_reads_fastq.pl  cow
 Trimmomatic can rapidly identify and trim adaptor sequences, as well as identify and remove low quality sequence data - you can download and install on your own computer from their project [website](http://www.usadellab.org/cms/?page=trimmomatic). As a reference database for identifying contaminating vector and adaptor sequences we rely on the UniVec\_Core dataset which is a fasta file of known vectors and sequencing adaptors derived from the NCBI Univec Database. Please download it into your working directory first.
 
 ```
-wget [ftp://ftp.ncbi.nih.gov/pub/UniVec/UniVec_Core](ftp://ftp.ncbi.nih.gov/pub/UniVec/UniVec_Core)
+wget ftp://ftp.ncbi.nih.gov/pub/UniVec/UniVec_Core
 ```
 
 ```
@@ -161,14 +161,14 @@ cp out/cow_qual.notCombined_2.fastq cow2_qual_all.fastq
 
 -   The command line parameters are:
     -   `-M 75`: Maximum overlap length expected in approximately 90% of read pairs is 75.
-    -   `-p 64`: The smallest ASCII value of the characters used to represent quality values of bases in FASTQ files. It is set to 64, which corresponds to the Illumina platforms.
-    -   `-t 2`: The number of worker threads is 2.
+    -   `-p 64`: The smallest ASCII value of the characters used to represent quality values of bases in FASTQ files. Here we set this to 64 consistent with the Illumina platform that was used to generate the data.
+    -   `-t 2`: Sets the number of computing threads to use to 2.
     -   `-o`: Prefix of output files.
     -   `-d out`: Path to directory for output files.
 
 <!-- -->
 
--   cow1\_qual\_all.fastq contains merged reads and un-merged reads from cow1\_qual\_paired.fastq, while cow2\_qual\_all.fastq has un-merged reads from cow2\_qual\_paired.fastq only. We will keep our reads as paired end format afterwards even though cow1\_qual\_all.fastq has more reads than another.
+-   cow1\_qual\_all.fastq contains merged reads and un-merged reads from cow1\_qual\_paired.fastq, while cow2\_qual\_all.fastq has un-merged reads from cow2\_qual\_paired.fastq only. To allow compatibility for downstream programs, we maintain two files or 'paired reads' albeit cow1\_qual\_all.fastq contaains the additional merged reads not present in the cow2\_qual\_all.fastq file.
 
 If you want to see the distribution of merged read length you can look at the histogram file:
 
@@ -180,7 +180,7 @@ less out/cow_qual.histogram
 
 ### Step 2. Dereplication
 
-To greatly reduce computational time, we need to remove duplicated reads before the following rRNA removal. This is because a lots of duplicated reads are rRNAs. We use USEARCH to do the dereplcation step.
+To significantly reduce the amount of computating time required for identification and filtering of rRNA reads, we perform a dereplication step to remove duplicated reads using the software tool USEARCH.
 
 ```
 usearch -derep_fulllength cow1_qual_all.fastq -fastaout cow1_qual_all_unique.fasta -sizeout -uc cow1_qual_all_unique.uc```
@@ -193,12 +193,15 @@ perl main_get_derepli_IDs.pl cow
 **Notes**:
 
 -   The command line parameters are:
-    -   `-derep\_fulllength`: dereplicates reads using full-length matching.
-    -   `-fastaout`: the output file is a FASTA format file.
-    -   `-sizeout: the size annotations is added to the unique sequence labels.
-    -   `-uc`: also generate a USEARCH cluster (UC) format output.
+    -   `-derep\_fulllength`: dereplicates reads based on a match across the full-length of the sequences.
+    -   `-fastaout`: output file in FASTA format.
+    -   `-sizeout`: annotates the number of replicated reads associated with the specified sequence.
+    -   `-uc`: Generates an additional USEARCH cluster (UC) format file.
 
-***Question: Can you find how many reads are redundant?***
+***Question: Can you find how many unique reads there are?***
+
+While the number of replicated reads in this small dataset is relatively low, with larger datasets, this step can 
+
 
 Checking read quality with FastQC:
 
