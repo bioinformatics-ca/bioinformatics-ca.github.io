@@ -512,24 +512,20 @@ perl main_select_reads_fromfile.pl cow microgenes_blat blat singletons mic
     -   65 - percentage of overlap is 65
     -   60 - bit score is 60
 
-**DIAMOND against NR protein DB**
+**DIAMOND against the non-redundant (NR) protein DB**
 
-DIAMOND is a BLAST-like local aligner for mapping translated DNA query sequences against a protein reference database (BLASTX alignment mode). The speedup over BLAST is up to 20,000 on short reads at a typical sensitivity of 90-99% relative to BLAST depending on the data and settings. However, for our dataset running time is still long, so please use the precomputed file.
-
-To run DIAMOND, you need to make a temporary folder first by using command
-
-```
-mkdir dmnd_tmp
-```
-
-DIAMOND requires a lot of memory to speed the mapping. If the current server cannot allocate sufficient memory to run it, you can skip the steps and use 3 precomputed files
+DIAMOND is a BLAST-like local aligner for mapping translated DNA query sequences against a protein reference database (BLASTX alignment mode). The speedup over BLAST is up to 20,000 on short reads at a typical sensitivity of 90-99% relative to BLAST depending on the data and settings. However, for our dataset running time is still long (timing scales by size of reference database; not so much by number of reads) so please use the 3 precomputed files.
 
 ```
 tar -zxf files4out.tar.gz cow_contigs_nr.diamondout  cow1_singletons_nr.diamondout cow2_singletons_nr.diamondout
 ```
 
-The DIAMOND commands are list below for your information:
+The DIAMOND commands are provided below for your information:
 
+First you need to make a temporary folder first by using command
+-   mkdir dmnd_tmp
+
+Then to run DIAMOND you might use the following commands
 -   for contigs
     -   diamond blastx -p 8 -d $BLASTDB/nr -q cow\_contigs\_n\_micro\_cds\_rest.fasta -a cow\_contigs\_nr.matches -t dmnd\_tmp -e 10 -k 10
     -   diamond view -a cow\_contigs\_nr.matches.daa -o cow\_contigs\_nr.diamondout -f tab
@@ -559,13 +555,13 @@ perl main_sort_blastout_fromfile.pl cow nr diamond singletons 10
 perl main_get_blast_fromfile_tophits.pl cow nr diamond singletons 1 100 85 65 60
 ```
 
-Because NR database contains proteins from all species (including microbiome), some of our sequences may map to multiple protein hits with same top bit scores. From these multiple mapping, we need to select one pair whose hit is a microbial protein. Because of the running speed is very slow, you can use the pre-computed files,
+Because the non-redundant protein database contains entries from many species, including eukaryotes, we often find that sequence reads can match multiple protein with the same score. From these multiple matches, we currently select the first (i.e. 'top hit') that derives from a bacteria. As mentioned in the metagenomics lecture, more sophisticated algorithms could be applied, however our current philosophy is that proteins sharing the same sequence match are likely to possess similar functions in any event; taxonomy is a seperate issue however! Again, due to the size of the output file and the processing time, we will rely on the use of pre-computed files.
 
 ```
 tar -zxf files4out.tar.gz cow_contigs_nr_diamond_hitsID_sub.txt  cow_contigs_nr_diamond_pairs_sub.txt cow_singletons_nr_diamond_hitsID_sub.txt  cow_singletons_nr_diamond_pairs_sub.txt
 ```
 
-For your own practice, please use the following commands,
+If you were going to perform these steps manually you would use the following commands:
 
 -   perl main\_get\_blast\_fromfile\_1topbachit.pl cow nr diamond contigs
 -   perl main\_get\_blast\_fromfile\_1topbachit.pl cow nr diamond singletons
