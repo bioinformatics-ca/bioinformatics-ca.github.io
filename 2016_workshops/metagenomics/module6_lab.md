@@ -183,9 +183,9 @@ less out/cow_qual.histogram
 To significantly reduce the amount of computating time required for identification and filtering of rRNA reads, we perform a dereplication step to remove duplicated reads using the software tool USEARCH.
 
 ```
-usearch -derep_fulllength cow1_qual_all.fastq -fastaout cow1_qual_all_unique.fasta -sizeout -uc cow1_qual_all_unique.uc```
+usearch -derep_fulllength cow1_qual_all.fastq -fastaout cow1_qual_all_unique.fasta -sizeout -uc cow1_qual_all_unique.uc
 
-usearch -derep_fulllength cow2_qual_all.fastq -fastaout cow2_qual_all_unique.fasta  -sizeout -uc cow2_qual_all_unique.uc```
+usearch -derep_fulllength cow2_qual_all.fastq -fastaout cow2_qual_all_unique.fasta  -sizeout -uc cow2_qual_all_unique.uc
 
 perl main_get_derepli_IDs.pl cow
 ```
