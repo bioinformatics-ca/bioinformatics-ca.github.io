@@ -213,7 +213,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-6-2016)
   
-  Lab practical:
+  [Lab practical](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_module6_lab_2016/)
 
 [&uarr;](#back_to_top)
 
