@@ -88,7 +88,7 @@ To open the HTML report file, please go to your workspace folder from your web b
 
 **Notes**:
 
--   As you look at the reports, try running BLAST via the [NCBI website](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch) on some of the overrepresented sequences to get an idea of what they might be.
+-   As you look at the reports, try running BLAST via the [NCBI website](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch) on some of the overrepresented sequences, by copy/paste, to get an idea of what they might be.
 
 ***Question: What do overrepresented sequences map to?***
 
@@ -196,24 +196,23 @@ perl main_get_derepli_IDs.pl cow
     -   `-derep\_fulllength`: dereplicates reads based on a match across the full-length of the sequences.
     -   `-fastaout`: output file in FASTA format.
     -   `-sizeout`: annotates the number of replicated reads associated with the specified sequence.
-    -   `-uc`: Generates an additional USEARCH cluster (UC) format file.
+    -   `-uc`: Generates an additional USEARCH cluster (UC) format file for help with downstream de-dereplication.
 
 ***Question: Can you find how many unique reads there are?***
 
-While the number of replicated reads in this small dataset is relatively low, with larger datasets, this step can 
+While the number of replicated reads in this small dataset is relatively low, with larger datasets, this step can reduce file size by as much as 50-80%
 
-
-Checking read quality with FastQC:
+Check read quality with FastQC:
 
 ```
 fastqc cow1_qual_all_unique.fastq
 ```
 
-The results can be found in cow1\_qual\_all\_unique\_paired\_fastqc.html.
+The results are found in cow1\_qual\_all\_unique\_paired\_fastqc.html.
 
 ### Step 3. Remove abundant rRNA sequences
 
-rRNA genes tend to be highly expressed in all samples and must therefore be screened out to avoid lengthy downstream processing times for the assembly and annotation steps. We use Infernal (<http://infernal.janelia.org/>) which relies on a database of hidden Markov models (HMMs) describing rRNA sequence profiles - typically obtained from the Rfam database. However, due to the reliance on HMMs, Infernal, while more sensitive than BWA takes a long time (26 hours for ~100,000 reads on a single core!). So we will skip this step and use two precomputed files - "cow1\_rRNA.infernalout" and "cow2\_rRNA.infernalout" from a tar file "files2out.tar.gz".
+rRNA genes tend to be highly expressed in all samples and must therefore be screened out to avoid lengthy downstream processing times for the assembly and annotation steps. You could use sequence similarity tools such as BWA or BLAST for this step, but we find Infernal (http://infernal.janelia.org/), albeit slower, is more sensitive as it relies on a database of hidden Markov models (HMMs) describing rRNA sequence profiles based on the Rfam database. Due to the reliance on HMMs, Infernal, can take as much as 26 hours on a single processor for ~100,000 reads on a single core. So we will skip this step and use two precomputed files - "cow1\_rRNA.infernalout" and "cow2\_rRNA.infernalout" from a tar file "files2out.tar.gz".
 
 ``` 
 tar -xzf files4out.tar.gz cow1_rRNA.infernalout cow2_rRNA.infernalout
@@ -233,7 +232,7 @@ tar -xzf files4out.tar.gz cow1_rRNA.infernalout cow2_rRNA.infernalout
     -   `--rfam`: use a strict filtering strategy devised for large database. This will speed the search at a potential cost to sensitivity.
     -   `-E`: report target sequences with an E-value of 0.001.
 
-Finally from all these output files we need to extract all those reads which were not deemed to be rRNA for subsequent processing:
+Finally from all these output files we need to filter out the rRNA reads:
 
 ```
 perl main_get_sequence_length.pl cow rRNA
@@ -254,14 +253,14 @@ perl main_select_reads_fromfile.pl cow rRNA infernal pairs
 
 There's a lot of rRNAs!!
 
-Checking read quality with FastQC:
+Check read quality again with FastQC:
 
 ```
 fastqc cow1_qual_unique_rRNA.fastq
 fastqc cow1_qual_unique_n_rRNA.fastq
 ```
 
-Please check if there are any changes from the following sections:
+Again compare with the previous report to identify differences:
 
 -   Basic Statistics
 -   Per base sequence quality
@@ -269,7 +268,7 @@ Please check if there are any changes from the following sections:
 
 ### Step 4. Remove host reads
 
-To identify and screen out host reads (here reads of bovine origin) we use the Burrows Wheeler aligner again to search against a database of cow sequences. For our purposes we use a cow genome database, downloaded from Ensembl (ftp://ftp.ensembl.org/pub/release-80/fasta/bos\_taurus/cds/Bos\_taurus.UMD3.1.cds.all.fa.gz). Normally we would generate an index for these sequences using 'bwa index -a bwtsw cow\_cds.fa' and 'samtools faidx bow\_cds.fa', but we have already done that for you so you can perform the alignments for the reads using the following commands:
+To identify and filter host reads (here reads of bovine origin) we use the Burrows Wheeler aligner (BWA) tool to search against a database of cow sequences. For our purposes we use a cow genome database, downloaded from Ensembl (ftp://ftp.ensembl.org/pub/release-80/fasta/bos\_taurus/cds/Bos\_taurus.UMD3.1.cds.all.fa.gz). Normally we would generate an index for these sequences using 'bwa index -a bwtsw cow\_cds.fa' and 'samtools faidx bow\_cds.fa', but we have already done that for you so you can perform the alignments for the reads using the following commands:
 
 ```
 /usr/local/bwa-0.7.5a/bwa aln -t 4 cow_cds.fa cow1_qual_unique_n_rRNA.fastq > cow1_host.sai
@@ -277,7 +276,7 @@ To identify and screen out host reads (here reads of bovine origin) we use the B
 /usr/local/bwa-0.7.5a/bwa sampe cow_cds.fa cow1_host.sai cow2_host.sai cow1_qual_unique_n_rRNA.fastq cow2_qual_unique_n_rRNA.fastq > cow_host.sam
 ```
 
-Then we use SAMTools to convert sam-formatted binary BWA output files and custom perl scripts to extract unmapped reads (which are now our set of putative mRNA's - congratulations!):
+Then we use SAMTools to convert sam-formatted binary BWA output files and custom perl scripts to extract unmapped reads (which are now our set of putative bacterial mRNA's - congratulations!):
 
 ```
 samtools view -bS cow_host.sam | samtools sort -n -o cow_host.bam
@@ -289,23 +288,21 @@ perl main_select_reads_fromfile.pl cow host bwa pairs
 
 **Notes**:
 
--   This step does not actually identify any reads of bovine origin. However, we did identify 1937 of 81955 rRNA reads that map to bovine LSU rRNAs!
+-   This step does not actually identify any reads of bovine origin. However, the Infernal step did identify 1937 of 81955 rRNA reads that map to bovine LSU rRNAs!
 
 ### Step 5. De-dereplication
 
-After removing rRNA and host reads, we need to get the replicated reads back to our data set.
+After removing rRNA and host reads, we need to replace the previously removed replicated reads back to our data set.
 
 ```
 perl main_remove_derepli.pl cow
 ```
 
-Then we get putative mRNA sequences with replicas for the further assembly analysis.
-
 ***Question: How many putative mRNA sequences were identified? How many unique mRNA sequences?***
 
 -   clue - examine the files cow1\_mRNA.fastq, cow2\_mRNA.fastq, cow1\_qual\_unique\_n\_rRNA\_n\_host.fastq, cow2\_qual\_unique\_n\_rRNA\_n\_host.fastq
 
-Checking read quality with FastQC:
+Again check read quality with FastQC:
 
 ```
 fastqc cow1_mRNA.fastq
@@ -319,11 +316,11 @@ Please check if there are any changes from the following sections:
 
 ### Step 6. Assembling reads
 
-Previous studies have shown that assembling reads into larger contigs significantly increases our ability to annotate them through sequence similarity searches. Comparisons of various assembly methods have shown Trinity yields the best performance in terms of number of reads annotated after assembly (Celaj, A., Markle, J., Danska, J. and Parkinson, J. (2014) Comparison of assembly algorithms for improving rate of metatranscriptomic functional annotation. Microbiome. 2:39.). Here we will apply the Trinity pipeline to our set of putative mRNA's recovered at the end of Step 5.
+Previous studies have shown that assembling reads into larger contigs significantly increases our ability to annotate them through sequence similarity searches. Comparisons of various assembly methods have shown Trinity yields decent performance in terms of number of reads annotated after assembly (Celaj, A., Markle, J., Danska, J. and Parkinson, J. (2014) Comparison of assembly algorithms for improving rate of metatranscriptomic functional annotation. Microbiome. 2:39.). Here we will apply the Trinity pipeline to our set of putative mRNA's recovered at the end of Step 5.
 
 1. Perform Trinity assembly:
 
-For paired-end reads:
+For paired-end reads (which is why we kept two paired files throughout):
 
 ```
 Trinity --seqType fq --left cow1_mRNA.fastq --right cow2_mRNA.fastq --CPU 8 --max_memory 10G --min_contig_length 75 --full_cleanup
@@ -340,7 +337,7 @@ Trinity --seqType fq --left cow1_mRNA.fastq --right cow2_mRNA.fastq --CPU
 
 <!-- -->
 
--   Because Trinity headers are not consistent between runs, we have to cheat here slightly to ensure that our named contigs are consistent with pregenerated DIAMOND output used in a subsequent annotation step and will rely on a pregenerated contig assembly file termed "cow\_contigs.fasta".
+-   Because Trinity headers are not consistent between runs, we have to cheat here slightly to ensure that our named contigs are consistent with DIAMOND output that we have pregenerated (due to time constraints) in a subsequent annotation step and will rely on a pregenerated contig assembly file termed "cow\_contigs.fasta".
 
 <!-- -->
 
@@ -372,7 +369,7 @@ samtools view -bS cow_trinity.sam | samtools sort -n -o cow_trinity.bam
 samtools view -F 4 cow_trinity.bam > cow_trinity.bwaout
 ```
 
-We then extract singletons in a fastq format for subsequent processing:
+We then extract singletons into a fastq format file for subsequent processing:
 
 ```
 perl main_read_samout.pl cow assembly bwa pairs
@@ -390,18 +387,18 @@ perl main_get_maptable_contig.pl cow assembly
 -   The format in the file “cow\_contigs\_IDs\_length.txt” is \[contigID \#reads length\].
 -   From the following files we observe -
     -   cow\_contigs.fasta: 297 contigs = 972 reads
-    -   cow1\_singletons.fastq: 5348 reads
+    -   cow1\_singletons.fastq: 5348 reads (these include the merged reads from the FLASH step above)
     -   cow2\_singletons.fastq: 953 reads
 
-The numbers here change from run to run because of the BWA mapping.
+Your numbers may differ from these as the algorithm that BWA uses can alter mapping from run to run.
 
 Note the file cow1\_singletons.fastq contains many more reads than cow2\_singletons.fastq - this is an artifact from the earlier step of merging reads, all merged reads were added to the file of unmerged 5` reads.
 
 ### Step 7. Annotate reads to known genes/proteins
 
-This is the step where we attempt to infer the origins of the putative microbial mRNA reads. We use a tiered set of sequence similarity searches of decreasing accuracy - BWA, BLAT and DIAMOND. While BWA and BLAT provide high stringency, sequence diversity that occurs at the nucleotide level results in few matches observed for these processes. Nonetheless they are quick. To avoid the problems of diversity that occur at the level of nucleotide, particularly in the absence of reference microbial genomes, we use DIAMOND searches to provide more sensitive peptide-based searches, which are less prone to sequence changes between strains.
+This is the step where we attempt to infer the origins of the putative microbial mRNA reads. In our pipeline we rely on a tiered set of sequence similarity searches of decreasing accuracy - BWA, BLAT and DIAMOND. While BWA and BLAT provide high stringency, sequence diversity that occurs at the nucleotide level results in few matches observed for these processes. Nonetheless they are quick. To avoid the problems of diversity that occur at the level of nucleotide, particularly in the absence of reference microbial genomes, we use DIAMOND searches to provide more sensitive peptide-based searches, which are less prone to sequence changes between strains.
 
-Since BWA and BLAT utilize nucleotide searches, we rely on a microbial genome database that we obtained from the NCBI, <ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Bacteria/all.ffn.tar.gz>, which contains 5231 ffn files. We then merge all 5231 ffn files into one fasta file "microbial\_all\_cds.fasta". And we build indexes for this database to allow searching via BWA and BLAT. For DIAMOND searches we use the Non-Redundant (NR) protein database also from NCBI: <ftp://ftp.ncbi.nih.gov/blast/db/FASTA/nr>.
+Since BWA and BLAT utilize nucleotide searches, we rely on a microbial genome database that we obtained from the NCBI, (ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Bacteria/all.ffn.tar.gz), which contains 5231 ffn files (maybe more now!). We then merge all 5231 ffn files into one fasta file "microbial\_all\_cds.fasta" and build indexes for this database to allow searching via BWA and BLAT. For DIAMOND searches we use the Non-Redundant (NR) protein database also from NCBI: (ftp://ftp.ncbi.nih.gov/blast/db/FASTA/nr).
 
 **Notes**:
 
@@ -413,7 +410,7 @@ Since BWA and BLAT utilize nucleotide searches, we rely on a microbial genome da
 
 <!-- -->
 
--   If you got the error message: "Cannot allocate memory", or the running speed is very slow, especially while doing BWA or DIAMOND mapping, you can skip the steps and use our precomputed files from the tar file "files2out.tar.gz".
+-   If you got the error message: "Cannot allocate memory", or the running speed is very slow, especially while doing BWA or DIAMOND mapping, you can skip the steps and use our precomputed files from the tar file "files2out.tar.gz". DIAMOND in particular may take a long time to run.
     -   For example, to extract "cow\_contigs.sam" file, you can use the command "tar -xzf files4out.tar.gz cow\_contigs.sam".
 
 **BWA searches against microbial genome database**
@@ -517,7 +514,7 @@ perl main_select_reads_fromfile.pl cow microgenes_blat blat singletons mic
 
 **DIAMOND against NR protein DB**
 
-DIAMOND is a BLAST-compatible local aligner for mapping translated DNA query sequences against a protein reference database (BLASTX alignment mode). The speedup over BLAST is up to 20,000 on short reads at a typical sensitivity of 90-99% relative to BLAST depending on the data and settings.
+DIAMOND is a BLAST-like local aligner for mapping translated DNA query sequences against a protein reference database (BLASTX alignment mode). The speedup over BLAST is up to 20,000 on short reads at a typical sensitivity of 90-99% relative to BLAST depending on the data and settings. However, for our dataset running time is still long, so please use the precomputed file.
 
 To run DIAMOND, you need to make a temporary folder first by using command
 
