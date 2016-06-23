@@ -35,18 +35,18 @@ image: CBW_Metagenome_icon.jpg
 Background <a id="background"></a>
 ==========
 
-This integrated lab assignment session will use a subset of samples collected and sequenced through the MicroB3 consortium (http://www.microb3.eu/osd) as part of the global Ocean Sampling Day event in 2014.
+This integrated lab assignment session will use a subset of samples collected and sequenced through the MicroB3 consortium (<http://www.microb3.eu/osd>) as part of the global Ocean Sampling Day event in 2014.
 
 To quote from the OSD website:
 
    "The Ocean Sampling Day (OSD) is a simultaneous sampling campaign of the world’s oceans which took place (for the first time) on the summer solstice (June 21st) in the year 2014. These cumulative samples, related in time, space and environmental parameters, provide insights into fundamental rules describing microbial diversity and function and contribute to the blue economy through the identification of novel, ocean-derived biotechnologies. We see OSD data as a reference data set for generations of experiments to follow in the coming decade."
 
-We will be analyzing samples collected from marine stations from various locations in the North West Atlantic shelf and the Polar Atlantic Arctic province. For the integrated assignment on day 1, we will be using sequences from the V4-V6 region of the 16S rRNA gene from 28 samples (19 from the North West Atlantic shelf and 9 from the Polar Atlantic Arctic). These samples have been subsampled from the originals so that the analysis runs faster. On day 2, we will be using shotgun metagenomic sequences from 25 samples (16 from the North West Atlantic shelf and 9 from the Polar Atlantic Arctic). These samples have been downloaded for you already from the European Bioinformatics Institute metagenomics portal (https://www.ebi.ac.uk/metagenomics/projects/ERP009703) and placed in the directories:
+We will be analyzing samples collected from marine stations from various locations in the North West Atlantic shelf and the Polar Atlantic Arctic province. For the integrated assignment on day 1, we will be using sequences from the V4-V6 region of the 16S rRNA gene from 28 samples (19 from the North West Atlantic shelf and 9 from the Polar Atlantic Arctic). These samples have been subsampled from the originals so that the analysis runs faster. On day 2, we will be using shotgun metagenomic sequences from 25 samples (16 from the North West Atlantic shelf and 9 from the Polar Atlantic Arctic). These samples have been downloaded for you already from the European Bioinformatics Institute metagenomics portal (<https://www.ebi.ac.uk/metagenomics/projects/ERP009703>) and placed in the directories:
 
 ```
-~/CourseData/integrated\_assignment\_day1/
+~/CourseData/integrated_assignment_day1/
 
-~/CourseData/integrated\_assignment\_day2/
+~/CourseData/integrated_assignment_day2/
 ```
 
 Objective 
