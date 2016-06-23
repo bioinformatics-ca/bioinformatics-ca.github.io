@@ -547,13 +547,18 @@ Then to run DIAMOND you might use the following commands
     -   `-o`: Output file name.
     -   `-f`: Output file is in a tabular format.
 
-Then you can extract diamond results with top matched microbial proteins using the following scripts:
+From the output of these searches, you next need to extract the top matched proteins using the following scripts:
 
 ```
 perl main_get_blast_fromfile_tophits.pl cow nr diamond contigs 1 100 85 65 60
 perl main_sort_blastout_fromfile.pl cow nr diamond singletons 10
 perl main_get_blast_fromfile_tophits.pl cow nr diamond singletons 1 100 85 65 60
 ```
+
+**Notes**
+
+-   Here we consider a match if 85% sequence identity over 65% of the read length - this can result in very poor e-values (E = 3!) but the matches nonetheless appear reasonable.
+-   We see a lot of 'Errors' of Entries not being found in the database - this arises because our precomputed search was against a database of non-redundant proteins, many of which are not found in the more limited non-redundant database of bacterial proteins we provide here.
 
 Because the non-redundant protein database contains entries from many species, including eukaryotes, we often find that sequence reads can match multiple protein with the same score. From these multiple matches, we currently select the first (i.e. 'top hit') that derives from a bacteria. As mentioned in the metagenomics lecture, more sophisticated algorithms could be applied, however our current philosophy is that proteins sharing the same sequence match are likely to possess similar functions in any event; taxonomy is a seperate issue however! Again, due to the size of the output file and the processing time, we will rely on the use of pre-computed files.
 
@@ -566,19 +571,15 @@ If you were going to perform these steps manually you would use the following co
 -   perl main\_get\_blast\_fromfile\_1topbachit.pl cow nr diamond contigs
 -   perl main\_get\_blast\_fromfile\_1topbachit.pl cow nr diamond singletons
 
-**Notes**
 
--   Here we consider a match if 85% sequence identity over 65% of the read length - this can result in very poor e-values (E = 3!) but the matches nonetheless are reasonable.
--   We see a lot of 'Errors' of Entries not being found in the database - this arises because our precomputed search was against a database of non-redundant proteins, many of which are not found in the more limited non-redundant database of bacterial proteins we provide here.
-
-We then generate a sequence file of mapped microbial genes:
+We then generate a sequence file of mapped microbial *genes* from the BWA and BLAT searches:
 
 ```
 perl main_get_microbial_cds_sub.pl cow
 perl main_get_sequence_length.pl cow micro_cds_sub
 ```
 
-As well as a sequence file of mapped NR proteins:
+As well as a sequence file of mapped *proteins* from the DIAMOND searches:
 
 ```
 perl main_get_nr_sub.pl cow
@@ -587,7 +588,7 @@ perl main_get_sequence_length.pl cow nr_sub
 
 **SUMMARY**:
 
-In order to know the number of mapped reads at different processing steps, you can use the following commands (the first two copy commands are simply a bit of housekeeping!):
+In order to know the number of mapped reads at different processing steps, you can use the following commands:
 
 ```
 perl main_get_maptable_contig.pl cow bwa
@@ -609,15 +610,17 @@ grep ">"  nr_all_sub.fasta | wc -l
 -   Total number of mapped micro\_cds genes = 390
 -   Total number of mapped nr proteins = 966
 
-The numbers change from run to run because of BWA, BLAT and DIAMOND mapping.
+The numbers can change from run to run due to the Trinity assembly feature noted earlier.
 
-Thus of ~6100 reads of putative microbial mRNA origin, we can annotate only ~1800 of them!! This appears to be typical for microbiome samples.
+Thus of ~6100 reads of putative microbial mRNA origin, we can annotate only ~1800 of them!! This is not uncommon for many microbiome samples without good reference sequences.
 
-### Step 8. Map the known genes to E. coli homologs to facilitate network visualization
+### Step 8. Map identified genes to a "system" dataset for network visualization - here a protein-protein interaction map based on E. coli proteins.
 
-To help interpret our metatranscriptomic datasets from a functional perspective, we rely on mapping our data to functional networks such as metabolic pathways and maps of protein complexes. Here we will use a previously published map of functional protein-protein interactions (PPI) constructed for E. coli (''Peregrín-Alvarez JM. *et al.*, PLoS Comput Biol. 2009'' <http://www.ncbi.nlm.nih.gov/pubmed/19798435>) as a proxy to get a systems-level view of annotated reads. To begin, we need to first define E. coli homologs for our annotated genes and proteins from the BWA, BLAT and DIAMOND searches.
+To help interpret our metatranscriptomic datasets from a functional perspective, we rely on mapping our data to functional networks such as metabolic pathways and maps of protein complexes. Here we will use a previously published map of functional protein-protein interactions (PPI) constructed for E. coli ([Peregrín-Alvarez JM. *et al.*, PLoS Comput Biol. 2009](http://www.ncbi.nlm.nih.gov/pubmed/19798435)) as a proxy to get a systems-level view of annotated reads. While it would be nice to have access to a 'pan-bacterial' protein interaction network to account for complexes from different species, such datasets do not currently exist.
 
-For mapped microbial genes identified through our BWA and BLAT searches:
+To begin, we need to first match our annotated genes (from Step. 7) to E. coli homologs.
+
+For microbial *genes* identified through our BWA and BLAT searches:
 
 ```
 diamond blastx -p 8 -d $BLASTDB/EcoliMG1655_std -q microbial_cds_sub.fasta  -a microbial_cds_sub_ecoli_ppi.matches -t dmnd_tmp -e 10 -k 10 
@@ -625,7 +628,7 @@ diamond view -a microbial_cds_sub_ecoli_ppi.matches.daa  -o microbial_cds_s
 perl main_get_blast_fromfile_1tophit.pl cow ecoli_ppi diamond genes 0
 ```
 
-For mapped NR proteins identified through our DIAMOND searches:
+For *proteins* identified through our DIAMOND searches:
 
 ```
 diamond blastp -p 8 -d $BLASTDB/EcoliMG1655_std -q nr_all_sub.fasta  -a nr_all_sub_ecoli_ppi.matches -t dmnd_tmp -e 10 -k 10 
@@ -637,7 +640,7 @@ perl main_get_blast_fromfile_1tophit.pl cow ecoli_ppi diamond proteins 0
 
 -   the output files are "microbial\_cds\_sub\_ecoli\_ppi\_pairs.txt" and 'nr\_all\_sub\_ecoli\_ppi\_pairs.txt"
 
-We then need to generate a "PPI\_pairs.txt" mapping file which lists E. coli homolog (defined through its 'b'-number) for each of our mapped genes/proteins:
+We then need to generate a "PPI\_pairs.txt" mapping file which lists E. coli homolog (we use the E. coli 'b'-number as the sequence classifier) for each of our genes/proteins:
 
 ```
 perl main_combine_PPI_results.pl cow
@@ -679,39 +682,39 @@ perl main_get_mapped_gene_table_RPKM.pl cow
 
 ***Question: have a look at this file, what are the most highly expressed genes? Which phylum appears most active?***
 
-### Step 10. Visulization of PPI network
+### Step 10. Visualize the results using an E. coli map of protein-protein interactions as a scaffold in Cytoscape.
 
-To visualize our processed microbiome dataset in the context of the functional PPI network, we use the network visualization tool - Cytoscape together with the enhancedGraphics plugin. Here we provide a brief introduction for using Cytoscape.
+To visualize our processed microbiome dataset in the context of the E. coli PPI network, we use the network visualization tool - Cytoscape together with the enhancedGraphics plugin. Some useful commands for loading in networks, node attributes and changing visual properties are provided below (there are many cytoscape tutorials available online).
 
-**Loading a Cytoscape session file (.cys)**
+**Open a Cytoscape session file (.cys)**
 
 -   Select File -&gt; Open -&gt; Select the session file and click Open.
 
-**Loading a node attribute text file (.txt)**
+**Loading a node attribute text file (.txt) - this will map attributes to nodes in your network which you can subsequently visualize**
 
 -   Select File -&gt; Import -&gt; Table -&gt; File -&gt; Select the node file and click Open
 -   Select Key Column for network (shared name),
 -   Select Show Mapping Opteins -&gt; Select the primary key column in table and click OK
 
-**Changing node properties**
+**Changing node properties - this changes the visual properties of the nodes - here size**
 
 -   Select Style on Control Panel -&gt; Select Node tag at the bottom -&gt; Select Size -&gt; Select Column as RPKM -&gt; Select Mapping Type as Continuous Mapping -&gt; Double click on the Current Mapping to open Continuous Mapping Editor for Node Size -&gt; Select your preferred values
 
-**Changing edge properties**
+**Changing edge properties - this changes visual properties of edges connecting nodes - here width of lines**
 
 -   Select Style on Control Panel -&gt; Select Edge tag at the bottom -&gt; Select Width -&gt; Select Column as Scores -&gt; Select Mapping Type as Continuous Mapping -&gt; Double click on the Current Mapping to open Continuous Mapping Editor for Edge Width -&gt; Select your preferred values
 
-**Installing Apps**
+**Installing Apps - Cytoscape features the ability to load in 3rd party applications that provide additional functionality**
 
 -   Select Apps —&gt; select App Manager -&gt; Type in enhancedGraphics in the Search box -&gt; Select enhancedGraphics and click Install
 
 **Basic Network Navigation**
 
 -   Use the zooming buttons located on the toolbar to zoom in and out of the interaction network shown in the current network display.
--   Using the scroll wheel, you can zoom in by scrolling up and zoom out by scrolling downwards.
+-   Using the scroll wheel of your mouse, you can zoom in by scrolling up and zoom out by scrolling downwards.
 -   Select nodes on the current network display, you will see the nodes' attributes from the Table Panel (Node Table). Same for edges.
 
-Here we will skip the steps of generating the node attribute [cow_PPI.nodes.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Cow_PPI.nodes.txt) from "cow\_table\_RPKM\_all.txt", however for your information the steps involve:
+Here we will skip the steps of generating the node attribute file to map onto the E. coli PPI network - [cow_PPI.nodes.txt](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Cow_PPI.nodes.txt) from "cow\_table\_RPKM\_all.txt", however for your information the steps involve:
 
 -   predefining taxonomic categories (here we use the following 12 phylum categories: archaea, protozoan, bacteria, actinobacteria, bacteroidetes, gammaproteobacteria, deltaproteobacteria, betaproteobacteria, alphaproteobacteria, clostridiales, leuconostocaceae, lactobacillaceae, but you could define these categories to fit your microbiome).
 
@@ -740,7 +743,7 @@ leuconostocaceae,lactobacillaceae" colorlist="#FFA500,#C0C0C0,#EDF252,#0000FF,#
 20.77  7.35    2.3 0   4.63    19.18   0   0
 ```
 
-Once the node attribute file has been generated, we provide two network files onto which these attributes can be mapped: [ecoli_PPI_cellwall.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_cellwall.cys) or [ecoli_PPI_transporter.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_transporter.cys). These need to be downloaded from your module5 directory onto your laptop via scp or winscp. Once downloaded then these files can be opened using Cytoscape installed in your local computer. To import node attributes:
+Once the node attribute file has been generated, we provide two network files (one based on cell wall biogenesis proteins and one based on transporters) onto which these attributes can be mapped: [ecoli_PPI_cellwall.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_cellwall.cys) or [ecoli_PPI_transporter.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_transporter.cys). While we recommend using the precomputed cytoscape files listed below - you could use these attribute files by downloading them from your module5 directory onto your laptop via scp or winscp. Once downloaded these files can be opened using Cytoscape installed in your local computer. To import node attributes (note you need to have the Ecoli PPI cytoscape file loaded first!):
 
 ```
 1) select File -> Import -> Table -> File, select "cow_PPI.nodes.txt" from your working folder,
@@ -751,4 +754,4 @@ click OK from the prompting window. 
 
 **Notes**:
 
--   You can open two cytoscape files, [ecoli_PPI_cellwall_cow.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_cellwall_cow.cys) and [ecoli_PPI_transporter_cow.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_transporter_cow.cys), to see what the PPI neworks look like.
+-   Two cytoscape files with node attributes precalculated are provided for your convenience the first focuses on proteins involved in cell wall biogenesis, the second focuses on proteins involved in transport activities, [ecoli_PPI_cellwall_cow.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_cellwall_cow.cys) and [ecoli_PPI_transporter_cow.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_transporter_cow.cys), open them up and have a play with different visualizations and different layouts - compare the circular layouts with the spring embedded layouts for example..
