@@ -17,19 +17,19 @@ Overview
 This tutorial will take you through a pipeline processing metatranscriptomic data. The pipeline, developed by the Parkinson lab, consists of various steps which are as follows:
 
 1.  Remove adaptor sequences and trim low quality sequences. These are added during library preparation and sequencing steps and can be generated during sequencing runs.
-2.  Remove duplicate reads for speed up the following steps.
-3.  Remove abundant rRNA sequences which can dominate the dataset.
+2.  Remove duplicate reads to reduce processing time for following steps.
+3.  Remove abundant rRNA sequences which typically dominate metatranscriptomic datasets despite the use of rRNA removal kits.
 4.  Remove host reads (if exploring a microbiome in which host is an issue).
-5.  Put the duplicated reads back to the data set to improve the assembling quality.
+5.  Add duplicated reads, removed in step 2, back to the data set to improve quality of assemblies.
 6.  Assemble the reads into contigs to improve annotation quality.
 7.  Annotate reads to known genes.
-8.  Map the known genes to E. coli homologs to facilitate network visualization.
+8.  Map identified genes to a "system" dataset for network visualization - here a protein-protein interaction map based on E. coli proteins.
 9.  Generate normalized expression values associated with each gene.
-10. Visualize the results.
+10. Visualize the results using an E. coli map of protein-protein interactions as a scaffold in Cytoscape.
 
 The whole metatranscriptomic pipeline includes existing bioinformatic tools and a series of Perl scripts that run these tools and provide input files in the correct format. We will go through these steps to illustrate the complexity of the process and the underlying tools and scripts.
 
-New, faster, and/or more accurate tools are being developed all the time, and it is worth bearing in mind that any pipelines need to be flexible to incorporate these tools as they get adopted as standards by the community. For example, in this year, we have transitioned from cross\_match to Trimmomatic, from BLAST to DIAMOND. Also due to our historical lab culture, we are using Perl scripts. However, other scripting languages are also suitable and we will be transitioning to Python soon.
+New, faster, and/or more accurate tools are being developed all the time, and it is worth bearing in mind that any pipelines need to be flexible to incorporate these tools as they get adopted as standards by the community. For example, over the past two years, our lab has transitioned from cross\_match to Trimmomatic, from BLAST to DIAMOND. Also due to our historical lab culture, we are using Perl scripts. However, other scripting languages are also suitable and we will be transitioning to Python soon.
 
 To illustrate the process we are going to use sequence reads generated from the rumen of a cow. These are 100bp paired end reads - single end reads can also be used, but paired end reads can increase sequence length if there is significant overlap and consequently improve annotation quality.
 
