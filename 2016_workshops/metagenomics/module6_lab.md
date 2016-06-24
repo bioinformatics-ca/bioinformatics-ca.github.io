@@ -758,9 +758,10 @@ click OK from the prompting window. 
 -   Cytoscape can be tempermental. If you don't see piecharts for the nodes, they appear as blank circles, you can show these manually. Under the 'properties' panel on the left, there is an entry labelled 'Custom Graphics 1'. Double click the empty box on the left (this is for default behaviour) - this will pop up a new window with a choice of 'Images' 'Charts' and 'Gradients' - select 'Charts', choose the chart type you want (pie chart or donut for example) and select the different bacterial taxa by moving them from "Available Columns" to "Selected Columns". Finally click on 'Apply' in bottom right of window (may not be visible until you move the window).
 
 ***Questions:
-Which genes are most highly expressed in these two systems?
-Which taxa are responsible for most gene expression?
-Can you identify sub-systems (groups of interacting genes) that display anomalous taxonomic profiles?
-Think about how you might interpret these findings - for example are certain taxa responsible for a specific set of genes that operate together to fulfill a key function?
-Can you use the gene annotations to identify the functions of these genes through online searches?
-Think about the implications of sequence homology searches, what may be some caveats associated with interpreting these datasets?***
+- Which genes are most highly expressed in these two systems?
+- Which taxa are responsible for most gene expression?
+- Can you identify sub-systems (groups of interacting genes) that display anomalous taxonomic profiles?
+- Think about how you might interpret these findings; for example are certain taxa responsible for a specific set of genes that operate together to fulfill a key function?
+- Can you use the gene annotations to identify the functions of these genes through online searches?
+- Think about the implications of sequence homology searches, what may be some caveats associated with interpreting these datasets?
+***
