@@ -113,7 +113,7 @@ perl main_add_subID_reads_fastq.pl  cow
     -   @SRR594215.2/1
     -   TGTACCTTGAGAGGAAGCACCGGCAAACTTCGTGCCAGGAGCCGCGGTAATACGAGGGGTGCAAGCGTTGTTCGGAATTACTGGGCGGACAGGGAGAGGT
 
-### Step 1. Remove adaptor sequences, trim and remove low quality sequence
+### Step 1. Remove adaptor sequences and trim low quality sequences. 
 
 Trimmomatic can rapidly identify and trim adaptor sequences, as well as identify and remove low quality sequence data - you can download and install on your own computer from their project [website](http://www.usadellab.org/cms/?page=trimmomatic). As a reference database for identifying contaminating vector and adaptor sequences we rely on the UniVec\_Core dataset which is a fasta file of known vectors and sequencing adaptors derived from the NCBI Univec Database. Please download it into your working directory first.
 
@@ -178,7 +178,7 @@ less out/cow_qual.histogram
 
 ***Question: Can you find how many pairs have been merged?***
 
-### Step 2. Dereplication
+### Step 2. Remove duplicate reads
 
 To significantly reduce the amount of computating time required for identification and filtering of rRNA reads, we perform a dereplication step to remove duplicated reads using the software tool USEARCH.
 
@@ -754,4 +754,6 @@ click OK from the prompting window. 
 
 **Notes**:
 
--   Two cytoscape files with node attributes precalculated are provided for your convenience the first focuses on proteins involved in cell wall biogenesis, the second focuses on proteins involved in transport activities, [ecoli_PPI_cellwall_cow.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_cellwall_cow.cys) and [ecoli_PPI_transporter_cow.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_transporter_cow.cys), open them up and have a play with different visualizations and different layouts - compare the circular layouts with the spring embedded layouts for example..
+-   Two cytoscape files with node attributes precalculated are provided for your convenience the first focuses on proteins involved in cell wall biogenesis, the second focuses on proteins involved in transport activities, [ecoli_PPI_cellwall_cow.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_cellwall_cow.cys) and [ecoli_PPI_transporter_cow.cys](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/metagenomics/Ecoli_PPI_transporter_cow.cys), open them up and have a play with different visualizations and different layouts - compare the circular layouts with the spring embedded layouts for example.
+-   Cytoscape can be tempermental. If you don't see piecharts for the nodes, they appear as blank circles, you can show these manually. Under the 'properties' panel on the left, there is an entry labelled 'Custom Graphics 1'. Double click the empty box on the left (this is for default behaviour) - this will pop up a new window with a choice of 'Images' 'Charts' and 'Gradients' - select 'Charts', choose the chart type you want (pie chart or donut for example) and s
+
