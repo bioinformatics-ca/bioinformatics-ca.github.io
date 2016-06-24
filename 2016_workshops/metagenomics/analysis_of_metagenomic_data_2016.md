@@ -228,3 +228,17 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   [&uarr;](#back_to_top)
 
 ***
+
+## Data for the Workshop ##
+
+### Data Sets ###
+- [hmp_metagenomics](http://www.hpc4health.ca/cbw/2016/metagenomics/hmp_metagenomics.tar.gz) 
+- [integrated_assignment_day1](http://www.hpc4health.ca/cbw/2016/metagenomics/integrated_assignment_day1.tar.gz)
+- [integrated_assignment_day2](http://www.hpc4health.ca/cbw/2016/metagenomics/integrated_assignment_day2.tar.gz)
+- [markergenes](http://www.hpc4health.ca/cbw/2016/metagenomics/markergenes.tar.gz) 
+- [metatranscriptomics](http://www.hpc4health.ca/cbw/2016/metagenomics/metatranscriptomics.tar.gz)
+- [picrust](http://www.hpc4health.ca/cbw/2016/metagenomics/picrust.tar.gz)
+
+  [&uarr;](#back_to_top)
+
+***
