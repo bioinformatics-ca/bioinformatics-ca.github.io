@@ -564,6 +564,10 @@ Useful plugins:
 
 ## Data for the Workshop ##
 
+### Tool Installation ###
+
+Instructions for installing the tools used in the workshops can be found [here](http://bioinformatics-ca.github.io/install_tools_2016/).
+
 ### Data Sets ###
 - HCC1395 data: [CEL](http://www.hpc4health.ca/cbw/2016/CG_data/HCC1395/cel.tar.gz) [exome](http://www.hpc4health.ca/cbw/2016/CG_data/HCC1395/exome.tar.gz) [rnaseq](http://www.hpc4health.ca/cbw/2016/CG_data/HCC1395/rnaseq.tar.gz)
 - [Module 3 data](http://www.hpc4health.ca/cbw/2016/CG_data/Module3.tar.gz)
