@@ -286,5 +286,9 @@ For additional resources, tutorials, future directions, and more please refer to
 
 ## Data for the Workshop ##
 
+### Tool Installation ###
+
+Instructions for installing the tools used in the workshops can be found [here](http://bioinformatics-ca.github.io/install_tools_2016/).
+
 ### Results from Instructor's Instance on Amazon ###
 - [download link](http://www.hpc4health.ca/cbw/2016/RNA_data/rnaseq_tutorial.tar.gz)
