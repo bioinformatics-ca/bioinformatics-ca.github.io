@@ -354,6 +354,11 @@ Galaxy Resources:
 
 ## Data for the Workshop ##
 
+### Tool Installation ###
+
+Instructions for installing the tools used in the workshops can be found [here](http://bioinformatics-ca.github.io/install_tools_2016/).
+
+
 ### Data Sets ###
 - [Module 2 data](http://www.hpc4health.ca/cbw/2016/HT_data/Module2.tar.gz)
 - [Module 5 data](http://www.hpc4health.ca/cbw/2016/HT_data/Module5.tar.gz)
