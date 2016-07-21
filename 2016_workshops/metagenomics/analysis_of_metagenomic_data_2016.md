@@ -231,6 +231,10 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 ## Data for the Workshop ##
 
+### Tool Installation ###
+
+Instructions for installing the tools used in the workshops can be found [here](http://bioinformatics-ca.github.io/install_tools_2016/).
+
 ### Data Sets ###
 - [hmp_metagenomics](http://www.hpc4health.ca/cbw/2016/metagenomics/hmp_metagenomics.tar.gz) 
 - [integrated_assignment_day1](http://www.hpc4health.ca/cbw/2016/metagenomics/integrated_assignment_day1.tar.gz)
