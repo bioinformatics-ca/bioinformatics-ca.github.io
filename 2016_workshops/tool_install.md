@@ -49,7 +49,7 @@ Download databases
 
 ```
 cd annovar
-./annotate_variation.pl -buildver hg19 -webfrom annovar -downdb `<db_name>` ./humandb
+./annotate_variation.pl -buildver hg19 -webfrom annovar -downdb <db_name> ./humandb
 ```
 
 ### APOLLOH
