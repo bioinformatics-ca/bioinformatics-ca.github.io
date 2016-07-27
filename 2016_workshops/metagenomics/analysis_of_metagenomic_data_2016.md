@@ -137,7 +137,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">William Hsiao</font>*
   
-  [Lecture](https://bioinformatics.ca/metagenomics-module-2-2016)
+  [Lecture](https://bioinformatics.ca/metagenomics-module-2-2016); [recorded video](https://youtu.be/fZNdWbr6xEA)
   
   [Lab practical](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_module2_lab_2016/)
   
