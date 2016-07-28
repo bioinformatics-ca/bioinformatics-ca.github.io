@@ -125,7 +125,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Introduction to Metagenomics](https://bioinformatics.ca/metagenomics-module-11-2016) 
   
-  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" alt="Smiley face" width="42"> [Recorded Lecture](https://youtu.be/s_MnbWohcBM)
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/s_MnbWohcBM)
   
   [Introduction to Cloud Computing](https://bioinformatics.ca/metagenomics-module-12-2016)
   
@@ -141,6 +141,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-2-2016); [recorded video](https://youtu.be/fZNdWbr6xEA)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/fZNdWbr6xEA)
+  
   [Lab practical](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_module2_lab_2016/)
   
   [&uarr;](#back_to_top)
@@ -152,6 +154,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="#827e9c">Morgan Langille</font>*
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-3-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/0eK2ycMgVmY)
   
   [Lab practical](https://github.com/mlangill/microbiome_helper/wiki/CBW-2016-PICRUSt-tutorial)
 
@@ -179,6 +183,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-4-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/YhjSDG5mMjE)
+  
   [Lab practical](https://github.com/mlangill/microbiome_helper/wiki/CBW-2016-Metagenomic-Taxonomic-Tutorial)
 
 [&uarr;](#back_to_top)
@@ -190,6 +196,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="#827e9c">Morgan Langille</font>*
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-5-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://https://youtu.be/zhHE7vbmLSE)
   
   [Lab practical](https://github.com/mlangill/microbiome_helper/wiki/CBW-2016-Metagenomics-Functional-Tutorial)
 
@@ -215,6 +223,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-6-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/841EZb3GOs8)
+  
   [Lab practical](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_module6_lab_2016/)
 
 [&uarr;](#back_to_top)
@@ -226,6 +236,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="#827e9c">Fiona Brinkman</font>*
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-7-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture with Q&A](https://youtu.be/9AZM9y7niXs)
   
   [&uarr;](#back_to_top)
 
