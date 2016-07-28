@@ -125,7 +125,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Introduction to Metagenomics](https://bioinformatics.ca/metagenomics-module-11-2016); [recorded video](https://youtu.be/s_MnbWohcBM)
   
-  ![Film strip](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true)
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" alt="Smiley face" width="42">
   
   [Introduction to Cloud Computing](https://bioinformatics.ca/metagenomics-module-12-2016)
   
