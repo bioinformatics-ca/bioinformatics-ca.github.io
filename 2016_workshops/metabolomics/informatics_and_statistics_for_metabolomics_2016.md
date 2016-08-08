@@ -290,7 +290,7 @@ Place your data file in [this google folder](https://goo.gl/nTRMQa).
   
   [Lecture](https://bioinformatics.ca/metabolomics2016module6)
   
-  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture Coming Soon]()
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/jZ_G07-F7TQ)
 
 [&uarr;](#back_to_top)
 
