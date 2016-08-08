@@ -126,6 +126,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/htseq-module-1-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/GHCvABSNlx8)
+  
 
 [&uarr;](#back_to_top)
 
