@@ -143,7 +143,7 @@ We appreciate your feedback!  Please fill out [our survey](https://www.surveymon
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-3-2016)
   
-    <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/4TdFn5MrD90)
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/4TdFn5MrD90)
   
   [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module3_lab_2016/)
 
