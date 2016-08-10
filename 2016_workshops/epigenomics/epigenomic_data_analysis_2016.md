@@ -112,6 +112,8 @@ We appreciate your feedback!  Please fill out [our survey](https://www.surveymon
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-1-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/7g16OnETZf0)
+  
   [Lecture on Compute Canada](https://bioinformatics.ca/epigenomics-module-1-hpc-2016)
   
   [Using the Guillimin HPC](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/)
@@ -127,6 +129,8 @@ We appreciate your feedback!  Please fill out [our survey](https://www.surveymon
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-2-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/n6e6rdQsMmw)
+  
   [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module2_lab_2016/)
 
 [&uarr;](#back_to_top)
@@ -138,6 +142,8 @@ We appreciate your feedback!  Please fill out [our survey](https://www.surveymon
   *<font color="#827e9c">Guillaume Bourque</font>*
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-3-2016)
+  
+    <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/4TdFn5MrD90)
   
   [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module3_lab_2016/)
 
