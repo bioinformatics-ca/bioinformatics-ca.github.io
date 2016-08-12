@@ -197,7 +197,7 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lab practical for ICGC](https://bioinformatics.ca/bicg-module-2-lab-2016)
   
-  [Lab practical for IGV](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/cancer/IGV_lab.md)
+  [Lab practical for IGV](http://bioinformatics-ca.github.io/bioinformatics_for_cancer_genomics_IGV_lab_2016/)
   
 #### Links:
   
