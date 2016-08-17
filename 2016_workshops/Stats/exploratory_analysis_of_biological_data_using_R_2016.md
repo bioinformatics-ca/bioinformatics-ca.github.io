@@ -75,6 +75,11 @@ Let's begin - start here by installing the first "project" we will work with, as
 12. Click **Create Project**; the project files should be downloaded and the *console* should prompt you to type `init()` to begin.
 13. Type `init()` into the *console* pane.
 14. Place a **green** PostIt if this has worked for you; place a **pink** PostIt if you run into issues or have questions.
+ 
+### YouTube Playlist for Recorded Lectures
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lectures' Playlist](https://www.youtube.com/playlist?list=PL3izGL6oi0S8mDpENdfrx7cpSFcbtjSTc)
+
 
 ---
 <!--
@@ -123,6 +128,10 @@ That was the problem when students installed things in **RStudio** at the comman
   
   [Lecture](https://bioinformatics.ca/eda-module-1-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=bwUNyWy9aHM)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=532D3MFYQF8)
+
   Link to R Project repo: Enter `https://github.com/hyginn/R_EDA-Introduction` as the **Repository URL**.
   
 ---
@@ -163,6 +172,9 @@ That was the problem when students installed things in **RStudio** at the comman
   
   [Lecture](https://bioinformatics.ca/eda-module-2-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=s35yAXCDOk4)
+
+  
   Link to R Project repo: Enter `https://github.com/hyginn/R_EDA-Regression` as the **Repository URL**.
   
 ---
@@ -189,6 +201,11 @@ That was the problem when students installed things in **RStudio** at the comman
   *<font color="#827e9c">Boris Steipe</font>*
   
   [Lecture](https://bioinformatics.ca/eda-module-3-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=_itDTki63NU)
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=KV36pbX6_FM)
+
   
   Link to R Project repo: Enter `https://github.com/hyginn/R_EDA-DimensionReduction` as the **Repository URL**.
   
@@ -231,6 +248,9 @@ That was the problem when students installed things in **RStudio** at the comman
   
   [Lecture](https://bioinformatics.ca/eda-module-4-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=8aK5dYtw_S0)
+
+  
   Scripts:
   
   Link to R Project repo: Enter `https://github.com/hyginn/R_EDA-Clustering` as the **Repository URL**.
@@ -270,6 +290,9 @@ Read with:
   *<font color="#827e9c">Boris Steipe</font>*
   
   [Lecture](https://bioinformatics.ca/eda-module-5-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=3BpVk9OBmPY)
+
   
   Scripts:
   
