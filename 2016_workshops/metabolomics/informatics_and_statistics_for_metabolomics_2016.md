@@ -73,6 +73,11 @@ image: CBW_metabolomics_icon.jpg
 
 [Link to download picture](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/images/Metab_student_picture_May_26_2016.jpg)
 
+### YouTube Playlist for Recorded Lectures
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lectures' Playlist](https://www.youtube.com/playlist?list=PL3izGL6oi0S9M2gAD1FCuZVVO1re9aAZx)
+
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
