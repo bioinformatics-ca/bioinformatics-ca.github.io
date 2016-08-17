@@ -27,7 +27,6 @@ image: CBW_R_icon.jpg
           <ul class="sub2">
              <li><a href="#module_4">Module 4</a></li>
              <li><a href="#module_5">Module 5</a></li>
-             <li><a href="#assignment2">Integrated Assignment</a></li>
            </ul>
        </li>
     </ul>
@@ -302,17 +301,5 @@ Read with:
   * [Erroneous Analysis of Significance](http://www.ncbi.nlm.nih.gov/pubmed/21878926)
 
 [&uarr;](#back_to_top)
-
-###  Integrated Assignment Part 2 <a id="assignment2"></a>
-
-  *<font color="#827e9c">TBA</font>*
-  
-  Assignment Part 2:
-  
-  Questions in **R** Part 2:
-  
-  Answer Key Part 2:
-  
-  [&uarr;](#back_to_top)
   
   ***
