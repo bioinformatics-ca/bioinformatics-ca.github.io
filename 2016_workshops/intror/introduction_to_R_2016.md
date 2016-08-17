@@ -89,6 +89,11 @@ That was the problem when students installed things in **RStudio** at the comman
 
 [&uarr;](#back_to_top)
 
+### YouTube Playlist for Recorded Lectures
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lectures' Playlist](https://www.youtube.com/playlist?list=PL3izGL6oi0S_iy864DJA91eeahvYD2XEV)
+
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
@@ -103,6 +108,9 @@ That was the problem when students installed things in **RStudio** at the comman
 ###  Module 1: The **R** Environment <a id="module_1"></a>
 
   *<font color="#827e9c">Boris Steipe</font>*
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=mC6hGhkCiCM)
+
   
   Scripts:
   
@@ -141,6 +149,8 @@ That was the problem when students installed things in **RStudio** at the comman
 ###  Module 2: Programming Basics <a id="module_2"></a>
 
   *<font color="#827e9c">Boris Steipe</font>*
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=z6sBQQJx4mw)
   
   Scripts:
   
