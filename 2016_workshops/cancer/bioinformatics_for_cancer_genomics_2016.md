@@ -166,6 +166,12 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 ![Class Picture](http://bioinformatics-ca.github.io/images/cbw-may-30-bicg.jpeg)
 [Link to Download Class Photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/cbw-may-30-bicg.jpeg)
 
+
+### YouTube Playlist for Recorded Lectures
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lectures' Playlist](https://www.youtube.com/playlist?list=PL3izGL6oi0S_Qhwn29LD66nYb-2YHf0z4)
+
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
