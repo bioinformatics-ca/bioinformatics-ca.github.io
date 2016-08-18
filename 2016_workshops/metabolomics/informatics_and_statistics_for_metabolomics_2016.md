@@ -73,6 +73,11 @@ image: CBW_metabolomics_icon.jpg
 
 [Link to download picture](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/images/Metab_student_picture_May_26_2016.jpg)
 
+### YouTube Playlist for Recorded Lectures
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lectures' Playlist](https://www.youtube.com/playlist?list=PL3izGL6oi0S9M2gAD1FCuZVVO1re9aAZx)
+
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
@@ -91,6 +96,8 @@ image: CBW_metabolomics_icon.jpg
   *<font color="#827e9c">David Wishart</font>*
   
   [Lecture](https://bioinformatics.ca/metabolomics2016module1)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/Tii7jZNu5cg)
 
 [&uarr;](#back_to_top)
 
@@ -101,6 +108,8 @@ image: CBW_metabolomics_icon.jpg
   *<font color="#827e9c">David Wishart and Jeff Xia</font>*
   
   [Lecture](https://bioinformatics.ca/metabolomics2016module2)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/1XUhkVeRxpg)
   
   [Lab practical](https://bioinformatics.ca/metabolomics2016module2lab)
   
@@ -206,6 +215,8 @@ Place your data file in [this google folder](https://goo.gl/nTRMQa).
   
   [Lecture](https://bioinformatics.ca/metabolomics2016module3)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/dNVht3vOBUk)
+  
 #### Links:
   
  * [HMDB](http://hmdb.ca/) 
@@ -236,6 +247,8 @@ Place your data file in [this google folder](https://goo.gl/nTRMQa).
   *<font color="#827e9c">Jeff Xia</font>*
   
   [Lecture](https://bioinformatics.ca/metabolomics2016module4)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/J8xW2e5xy2g)
 
 [&uarr;](#back_to_top)
 
@@ -246,6 +259,8 @@ Place your data file in [this google folder](https://goo.gl/nTRMQa).
   *<font color="827e9c">David Wishart and Jeff Xia</font>*
   
   [Lecture](https://bioinformatics.ca/metabolomics2016module5)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/4CVC98KnlMA)
   
   [Lab practical](https://bioinformatics.ca/metabolomics2016module5lab)
   
@@ -279,6 +294,8 @@ Place your data file in [this google folder](https://goo.gl/nTRMQa).
   *<font color="827e9c">David Wishart</font>*
   
   [Lecture](https://bioinformatics.ca/metabolomics2016module6)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/jZ_G07-F7TQ)
 
 [&uarr;](#back_to_top)
 

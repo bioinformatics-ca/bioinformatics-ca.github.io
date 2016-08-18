@@ -107,6 +107,11 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 [&uarr;](#back_to_top)
 
+### YouTube Playlist for Recorded Lectures
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lectures' Playlist](https://www.youtube.com/playlist?list=PL3izGL6oi0S-ENehFjvQmyiF5-Q00F71Q)
+
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
@@ -126,6 +131,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/htseq-module-1-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/GHCvABSNlx8)
+  
 
 [&uarr;](#back_to_top)
 
@@ -136,6 +143,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="#827e9c">Mathieu Bourgey</font>*
   
   [Lecture](https://bioinformatics.ca/htseq-module-2-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/re1I0ntIMUI)
   
   [Lab practical](http://bioinformatics-ca.github.io/informatics_for_high-throughput_data_sequencing_2016_module2_lab)
   
@@ -168,6 +177,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/htseq-module-3-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/o1KKMqONi08)
+  
   [Lab practical](https://bioinformatics-ca.github.io/informatics_for_high-throughput_data_sequencing_2016_module3_lab/)
 
 [&uarr;](#back_to_top)
@@ -179,6 +190,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="#827e9c">Jared Simpson</font>*
   
   [Lecture](https://bioinformatics.ca/htseq-module-4-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/sysnKQvqmnk)
 
 [&uarr;](#back_to_top)
   
@@ -265,6 +278,8 @@ Discussion/Questions:
   
   [Lecture](https://bioinformatics.ca/htseq-module-5-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/hFuT88akRCg)
+  
   [Lab practical](https://bioinformatics-ca.github.io/informatics_for_high-throughput_data_sequencing_2016_module5_lab/)
   
   [VCF format](https://samtools.github.io/hts-specs/VCFv4.2.pdf)
@@ -289,6 +304,8 @@ Programs:
   
   [Lecture](https://bioinformatics.ca/htseq-module-6-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/7HbbAea7sKA)
+  
   [Lab practical](https://bioinformatics-ca.github.io/informatics_for_high-throughput_data_sequencing_2016_module6_lab/)
   
   Programs:
@@ -306,6 +323,8 @@ Programs:
   *<font color="#827e9c">David Morais</font>*
   
   [Lecture](https://bioinformatics.ca/htseq-module-7-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/HUBEzy3J76E)
   
   [Lab practical](https://bioinformatics-ca.github.io/informatics_for_high-throughput_data_sequencing_2016_module7_lab/)
 
@@ -353,6 +372,11 @@ Galaxy Resources:
 ***
 
 ## Data for the Workshop ##
+
+### Tool Installation ###
+
+Instructions for installing the tools used in the workshops can be found [here](http://bioinformatics-ca.github.io/install_tools_2016/).
+
 
 ### Data Sets ###
 - [Module 2 data](http://www.hpc4health.ca/cbw/2016/HT_data/Module2.tar.gz)

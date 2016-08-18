@@ -43,6 +43,14 @@ image: CBW_Epigenome-data_icon.jpg
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="https://noteapp.com/Epigenomics2016">here</a>!
+  
+### Workshop Survey
+
+We appreciate your feedback!  Please fill out [our survey](https://www.surveymonkey.com/r/6NVXVQT)!
+  
+### Class Picture
+
+![Class photo](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/epigenomics/img/class_photo_small.png?raw=true)
 
 [&uarr;](#back_to_top)
 
@@ -79,12 +87,19 @@ image: CBW_Epigenome-data_icon.jpg
 
 [&uarr;](#back_to_top)
 
+### YouTube Playlist for Recorded Lectures
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lectures' Playlist](https://www.youtube.com/playlist?list=PL3izGL6oi0S-CGCK0dPj0Mwt1XBWCCWcq)
+
+
 ***
 
 ## R Review Session
 
 [Lecture](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/resources/RReview_slides.pdf)
+
 [RScript to use for Review](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/2016_workshops/epigenomics/BiCG_2016_Rreview_Code.R)
+
 [RScript to view Results](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/resources/R_Review_Session_Code.ipynb)
 
 ##  Day 1 <a id="day_1"></a>
@@ -102,10 +117,15 @@ image: CBW_Epigenome-data_icon.jpg
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-1-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/7g16OnETZf0)
+  
+  [Lecture on Compute Canada](https://bioinformatics.ca/epigenomics-module-1-hpc-2016)
+  
+  [Using the Guillimin HPC](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/)
+
   [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module1_lab_2016/)
   
-  [Using th Guillimin HPC](http://bioinformatics-ca.github.io/epigenomic_data_analysis_hpc_2016/)
-
+  
 [&uarr;](#back_to_top)
 
 ###  Module 2: ChIP-Seq Alignment, Peak Calling, and Visualization <a id="module_2"></a>
@@ -113,6 +133,8 @@ image: CBW_Epigenome-data_icon.jpg
   *<font color="#827e9c">Misha Bilenky</font>*
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-2-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/n6e6rdQsMmw)
   
   [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module2_lab_2016/)
 
@@ -126,6 +148,8 @@ image: CBW_Epigenome-data_icon.jpg
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-3-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/4TdFn5MrD90)
+  
   [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module3_lab_2016/)
 
 [&uarr;](#back_to_top)
@@ -137,7 +161,7 @@ image: CBW_Epigenome-data_icon.jpg
   
   [Lecture](https://bioinformatics.ca/epigenomics-module-4-2016)
   
-  Lab practical:
+  [Lab practical](http://bioinformatics-ca.github.io/epigenomic_data_analysis_module4_lab_2016/)
 
 [&uarr;](#back_to_top)
 

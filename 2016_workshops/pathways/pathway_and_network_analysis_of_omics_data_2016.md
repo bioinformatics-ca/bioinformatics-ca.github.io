@@ -102,6 +102,11 @@ Your feedback is important to us!  Please fill out [our survey](https://www.surv
 
 [&uarr;](#back_to_top)  
 
+
+### YouTube Playlist for Recorded Lectures
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lectures' Playlist](https://www.youtube.com/playlist?list=PL3izGL6oi0S9amh6CzalbUo4ICcvZIWFO)
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
@@ -120,6 +125,9 @@ Your feedback is important to us!  Please fill out [our survey](https://www.surv
   *<font color="#827e9c">Gary Bader</font>*
   
   [Lecture](https://bioinformatics.ca/pathways-module-1)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=PtWf-XSzUYc)
+
 
 [&uarr;](#back_to_top)
 
@@ -130,6 +138,9 @@ Your feedback is important to us!  Please fill out [our survey](https://www.surv
   *<font color="#827e9c">Quaid Morris</font>*
   
 [Lecture](https://bioinformatics.ca/pathways-module-2)
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=bN2OakOqOQI)
+
   
 #### Lab practical: Enrichment-Based Analysis - Performing ORA
   *<font color="#827e9c">Veronique Voisin</font>*
@@ -152,11 +163,17 @@ Your feedback is important to us!  Please fill out [our survey](https://www.surv
 
 ###  Module 3: Network Visualization and Analysis with Cytoscape <a id="module_3"></a>
 
-  *<font color="#827e9c">Gary Bader</font>*
+  *<font color="#827e9c">Gary Bader and Veronique Voisin</font>*
   
   [Lecture Part 1](https://bioinformatics.ca/pathways-module-3)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=q-_MQUL15A0)
+
+  
   [Lecture Part 2](https://bioinformatics.ca/pathways-module-3-part-2-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=IuH5QT_loHM)
+
   
 #### Lab practical: Cytoscape Demo, Enrichment Map
   *<font color="#827e9c">Veronique Voisin</font>*
@@ -197,6 +214,9 @@ Your feedback is important to us!  Please fill out [our survey](https://www.surv
   
   [Lecture](https://bioinformatics.ca/pathways-module-4)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=jUdclB06D9M)
+
+  
 #### Lab practical: *De Novo* Subnetwork Clustering Analysis in Reactome
   
   *<font color="#827e9c">Robin Haw</font>*
@@ -214,6 +234,9 @@ Your feedback is important to us!  Please fill out [our survey](https://www.surv
   *<font color="#827e9c">Quaid Morris</font>*
   
   [Lecture](https://bioinformatics.ca/pathways-module-5)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=2KrUq9ad2xc)
+
   
   [Lab practical](http://bioinformatics-ca.github.io/PNAOD_module5_lab_genemania_2016/)
   
@@ -240,6 +263,9 @@ Your feedback is important to us!  Please fill out [our survey](https://www.surv
   *<font color="#827e9c">Michael Hoffman</font>*
   
 [Lecture](https://bioinformatics.ca/pathways-module-6)
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=SYDU5Ycas4Q)
+
   
 #### Lab practical: iRegulon
 

@@ -35,18 +35,18 @@ image: CBW_Metagenome_icon.jpg
 Background <a id="background"></a>
 ==========
 
-This integrated lab assignment session will use a subset of samples collected and sequenced through the MicroB3 consortium (http://www.microb3.eu/osd) as part of the global Ocean Sampling Day event in 2014.
+This integrated lab assignment session will use a subset of samples collected and sequenced through the MicroB3 consortium (<http://www.microb3.eu/osd>) as part of the global Ocean Sampling Day event in 2014.
 
 To quote from the OSD website:
 
    "The Ocean Sampling Day (OSD) is a simultaneous sampling campaign of the world’s oceans which took place (for the first time) on the summer solstice (June 21st) in the year 2014. These cumulative samples, related in time, space and environmental parameters, provide insights into fundamental rules describing microbial diversity and function and contribute to the blue economy through the identification of novel, ocean-derived biotechnologies. We see OSD data as a reference data set for generations of experiments to follow in the coming decade."
 
-We will be analyzing samples collected from marine stations from various locations in the North West Atlantic shelf and the Polar Atlantic Arctic province. For the integrated assignment on day 1, we will be using sequences from the V4-V6 region of the 16S rRNA gene from 28 samples (19 from the North West Atlantic shelf and 9 from the Polar Atlantic Arctic). These samples have been subsampled from the originals so that the analysis runs faster. On day 2, we will be using shotgun metagenomic sequences from 25 samples (16 from the North West Atlantic shelf and 9 from the Polar Atlantic Arctic). These samples have been downloaded for you already from the European Bioinformatics Institute metagenomics portal (https://www.ebi.ac.uk/metagenomics/projects/ERP009703) and placed in the directories:
+We will be analyzing samples collected from marine stations from various locations in the North West Atlantic shelf and the Polar Atlantic Arctic province. For the integrated assignment on day 1, we will be using sequences from the V4-V6 region of the 16S rRNA gene from 28 samples (19 from the North West Atlantic shelf and 9 from the Polar Atlantic Arctic). These samples have been subsampled from the originals so that the analysis runs faster. On day 2, we will be using shotgun metagenomic sequences from 25 samples (16 from the North West Atlantic shelf and 9 from the Polar Atlantic Arctic). These samples have been downloaded for you already from the European Bioinformatics Institute metagenomics portal (<https://www.ebi.ac.uk/metagenomics/projects/ERP009703>) and placed in the directories:
 
 ```
-~/CourseData/integrated\_assignment\_day1/
+~/CourseData/integrated_assignment_day1/
 
-~/CourseData/integrated\_assignment\_day2/
+~/CourseData/integrated_assignment_day2/
 ```
 
 Objective 
@@ -70,13 +70,13 @@ cd ~/workspace/assignment1
 All of the required commands are in a BASH script which we can copy to our workspaces. Each of the commands contained within this script are displayed and discussed below.
 
 ```
-cp ~/CourseData/metagenomics/integrated_assignment_day1/Integrated_Lab_1.sh .
+wget https://raw.githubusercontent.com/theavanrossum/cbwMicrobiomeWorkshop/master/Integrated_Lab_1.sh
 chmod u+x Integrated_Lab_1.sh
 ```
 
-The first command fetches the script and the second command allows us to execute it.
+The first command fetches the script from github and the second command allows us to execute it.
 
-This script takes about 40-60 minutes to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
+This script takes about 30-40 minutes to run to completion. When running the script, piping to the `tee` command is helpful to store a copy of the output for later viewing.
 
 ```
 ./Integrated_Lab_1.sh 2>&1 | tee -a log.txt
@@ -92,7 +92,7 @@ Let's go through the script command by command. First is a bunch of setup comman
 #Setup some parameters for the script
 dataLocation="~/CourseData/metagenomics/integrated_assignment_day1/" # this is where your fastq files should be
 workingDir="~/workspace/assignment1"
-ncores=4
+ncores=8
 
 cd $workingDir
 
@@ -107,7 +107,7 @@ ln -s $dataLocation/*.py scripts
 ln -s $dataLocation/mesas-* scripts # from [https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-pcoa](https://raw.githubusercontent.com/neufeld/MESaS/master/scripts/mesas-pcoa)
 ```
 
-These commands get the necessary data files into our workspace. Source FASTQ sequence files are linked to the sequence\_files directory. GreenGenes reference set and alignment template are linked to the reference\_data directory.
+These commands get the necessary data files into our workspace. Source FASTQ sequence files are linked to the sequence\_files directory. GreenGenes reference set and alignment template are linked to the reference\_data directory. `ncores` is a variable  indicating how many cores we have,
 
 ```
 #Prep database for SortMeRNA using: cd reference_data; /usr/local/sortmerna-2.1/indexdb_rna --ref 97_otus.fasta
@@ -124,13 +124,15 @@ Workflow <a id="workflow"></a>
 
 ### Data QC
 
-The first step when analysing data is to assess its quality and to check your assumptions. Are the reads of the expected length? Are the PHRED quality scores sufficiently high? We can run common quality checks using a tool called FastQC. This is a general quality checker for all types of DNA sequencing data, so not all of the output will be important for amplicon reads. Focus on the read lengths and quality scores.
+The first step when analysing data is to assess its quality and to check your assumptions. Are the reads of the expected length? Are the PHRED quality scores sufficiently high? We can run common quality checks using a tool called FastQC.
 
 ```
 fastqc -q -t $ncores sequence_files/*.fastq -o fastqc_out/raw/individuals
 ```
 
 This command will run FastQC on all of our raw data files and store the results in the folder indicated. $ncores is a variable defined at the begining of the script indicating how many cores we have, here we're using that number to tell FastQC how many threads to use.
+
+This is a general quality checker for all types of DNA sequencing data, so not all of the output will be important for amplicon reads. Focus on the read lengths and quality scores. You can look at the results either by transferring the output html files to your local computer, or going to  [<http://cbwXX.dyndns.info>](http://cbwXX.dyndns.info) (where XX is your student number) and navigating to the output directory. You may need to unzip the results first. 
 
 ```
 gunzip --to-stdout sequence_files/*.fastq.gz | fastqc -q -t $ncores stdin -o fastqc_out/raw/combined
@@ -143,14 +145,14 @@ If you have hundreds of data files, it can be overwhelming to check all the qual
 The next step in our pipeline is to assemble the Illumina paired-end reads with [PEAR](https://github.com/xflouris/PEAR).
 
 ```
-ncores=4`
 numberOfFilePairs=$(ls $workingDir/sequence_files/*_1.fastq.gz| wc -l )
 let numberOfIterations=($numberOfFilePairs+$ncores-1)/$ncores
+
 for j in $(seq 0 $numberOfIterations)
 do
    let i=( $j * $ncores + 1 )
    echo $i
-   find $workingDir/sequence_files -name "*.fastq.gz" -printf '%f\n' | sed 's/_.*//' | sort | uniq | sed -n $i,$((i+${ncores}-1))p | while read line; do ( pear -f sequence_file$
+   find $workingDir/sequence_files -name "*.fastq.gz" -printf '%f\n' | sed 's/_.*//' | sort | uniq | sed -n $i,$((i+${ncores}-1))p | while read line; do ( pear -f sequence_files/${line}_1.fastq.gz -r sequence_files/${line}_2.fastq.gz -o ${line} & ); done >> logPear.txt
    sleep 60
 done
 ```
@@ -222,7 +224,7 @@ echo "pick_otus:sortmerna_db $sortmernaDB" >> clustering_params.txt
 This last line is pointing to the SortMeRNA database, which was created from the 97\_otus.fasta reference file using this command: `sortmerna-2.1/indexdb\_rna --ref 97\_otus.fasta`. If you want to use a different reference database, you'll need to create a new database using this command.
 
 ```
-pick_open_reference_otus.py -i $inputFasta -o clustering/ -p clustering_params.txt -m sortmerna_sumaclust -s 0.1 -v --min_otu_size 1
+pick_open_reference_otus.py -i $inputFasta -o clustering/ -p clustering_params.txt -m sortmerna_sumaclust --parallel --jobs_to_start $ncores
 ```
 
 This is a QIIME wrapper script which will generate OTUs from our data and save the results in a directory called "clustering". Check out details on the script [here](http://qiime.org/1.9.0/scripts/pick_open_reference_otus.html), where the six major steps are outlines. This QIIME script calls other QIIME scripts for each of these steps, including some which are responsible for:
@@ -262,12 +264,17 @@ biom convert --to-tsv -i clustering/otu_table_high_conf.biom --table-type='OTU t
 Here we convert the BIOM format file to tab-separated format (human readable) using a command from the "biom" [software package](http://biom-format.org/) with a column for taxonomic info called "Consensus Lineage".
 
 ```
-single_rarefaction.py -i clustering/otu_table_high_conf.biom -o clustering/otu_table_high_conf_rarefied.biom -d  \
-`awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } \ ``
-END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' clustering/otu_table_high_conf.tsv`
+#We use awk on the converted OTU table to determine the lowest sequence depth
+subsampleSize=$(awk 'BEGIN{FS="\t"} NR == 1 { } NR == 2 { max = NF-1; } NR > 2 { for (i = 2; i <= max; i++) { c[i] += $i; } } \
+ END { smallest = c[2]; for (i = 3; i <= max; i++) { if (c[i] < smallest) { smallest = c[i]; }} print smallest; }' clustering/otu_table_high_conf.tsv)
+echo $subsampleSize
+
+#This is passed as a parameter to QIIME's rarefaction script
+single_rarefaction.py -i clustering/otu_table_high_conf.biom -o clustering/otu_table_high_conf_rarefied.biom -d $subsampleSize
+
 ```
 
-This QIIME script will "rarefy" a biom file such that every sample in the output biom file (here: clustering/otu\_table\_high\_conf\_rarefied.biom) will be represented by the same number of reads. The embedded awk command uses the converted OTU table to determine the lowest sequence depth of all the input samples and pass it as the -d parameter to QIIME's rarefaction script. This number could also be read manually from the summary files we generated.
+The awk command uses the converted OTU table to determine the lowest sequence depth of all the input samples and we then pass that value as the -d parameter to QIIME's rarefaction script. This QIIME script will "rarefy" a biom file such that every sample in the output biom file (here: clustering/otu\_table\_high\_conf\_rarefied.biom) will be represented by the same number of reads.  This number could also be read manually from the summary files we generated.
 
 ### Downstream Analyses
 
@@ -364,8 +371,6 @@ Assignment 1 Questions <a id="questions"></a>
 
 2) Sequence clustering: We are using the QIIME open-reference pipeline to create clusters of our 16S rRNA sequences. According to [the documentation](http://qiime.org/scripts/pick_open_reference_otus.html), its steps are: (A) assign reads to existing OTUs (closed-reference), (B) take a percentage of the unassigned reads and cluster them de novo, (C) compare all the unassigned reads from step A against the representative sequences from the OTUs generated in step B and assign matches to OTUs, (D) cluster any remaining unassigned reads de novo. Take a look at the results generated in the `clustering` folder. Does it look like all these steps were performed? Is there a particular file that will tell you exactly what was done?
 
-3) Sequence clustering: How many reads were clustered de novo?
-
 3) Taxonomic classification: The ribosomal database project (RDP) is the name for both a taxonomic classifier and a reference dataset. In this lab we have used GreenGenes 13\_8 revision as the reference dataset, and the naive Bayes RDP classifier. What other datasets and classifiers are available? For what reasons might one choose one of these reference datasets?
 
 4) Phylogenetic tree generation: From the clustering log file, can you determine the method used to create a multiple sequence alignment of the OTU sequences? What about if you check the documentation for the QIIME script used to align sequences? What type of multiple sequence alignment algorithm is this? What program was used for the creation of a phylogenetic tree? Which version of the tree building program did we use, and what is the most recent version?
@@ -408,7 +413,7 @@ cd ~/workspace/assignment2
 -   To avoid copying all the sample files from the ~/CourseData directory, we will just create a link to that folder from our folder that we just created.
 
 ```
-ln -s ~/CourseData/integrated_assignment_day2/* .
+ln -s ~/CourseData/metagenomics/integrated_assignment_day2/* .
 ```
 
 -   Check to see if we have got all the files
@@ -416,6 +421,13 @@ ln -s ~/CourseData/integrated_assignment_day2/* .
 ```
 ls -ltrh 
 ```
+
+Q1) How many total sample files do we have?
+
+Q2) How many sequences does the sample from OSD station 10 contain?
+
+Q3) How many samples of each type are there in each of the different Province code categories?
+
 
 Taxonomic composition of communities in the OSD samples OR "Who is out there?" <a id="who"></a>
 ------------------------------------------------------------------------------
@@ -429,22 +441,17 @@ We have the helper script run\_metaphlan2.pl for running MetaPhlan on all our sa
 -   Run the helper script run\_metaphlan2.pl
 
 ```
-run_metaphlan2.pl -p 4 -o osd_metaphlan_merged_all.txt *.fasta
+run_metaphlan2.pl -p 8 -o osd_metaphlan_merged_all.txt *.fasta
 ```
 
 This step should take ~20 minutes to complete. So, we will try and dissect the run\_metaphlan2.pl PERL script while it is running by opening up another connection to the cloud.
 
 ### Dissecting the run\_metaphlan2.pl PERL script
 
--   Locate the script and open it for viewing; When you open the script using 'less' you can use the up and down arrow to navigate.
+-   Find and open the script for viewing; When you open the script using 'less' you can use the up and down arrow to navigate.
 
 ```
-which run_metaphlan2.pl
-```
-
--   open it for viewing
-
-```
+which run_metaphlan2.pl
 less /usr/local/microbiome_helper-master/run_metaphlan2.pl
 ```
 
@@ -511,33 +518,42 @@ We'll now use the PERL script metaphlan\_to\_stamp.pl to convert the Metaphlan o
 metaphlan_to_stamp.pl osd_metaphlan_merged_all.txt > osd_metaphlan_merged_all.spf
 ```
 
-The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenomes. This involves comparing the metagenome sequences to the KEGG database using the program diamond. This is a time consuming step and estimated to take around ~80-90 minutes for all our samples. So before moving onto the statistical analysis of the metaphlan results, it would be advisable to start the "Preparing for running Humann" step. You can then switch to your other login instance for continuing with the pipeline.
-
 ### Statistical analysis of the taxa using STAMP
 
 STAMP takes two main files as input the profile data which is a table that contains the abundance of features (i.e. taxonomic or functions) and a group metadata file which provides more information about each of the samples in the profile data file.
 
-The metadata file is called "metadata-file-for-osd-subset-210615.txt" and is located in ~/CourseData/integrated\_assignment\_day2/. Download this file locally to your computer using an appropriate method (e.g. WinSCP, etc.) You will also need the profile data file "osd\_metaphlan\_merged\_all.spf" which we generated fro the metaphlan output in the previous step.
+The metadata file is called "metadata-file-for-osd-subset-210615.txt" and is located in ~/CourseData/metagenomics/integrated\_assignment\_day2/. Download this file locally to your computer using an appropriate method (e.g. WinSCP, etc.) You will also need the profile data file "osd\_metaphlan\_merged\_all.spf" which we generated fro the metaphlan output in the previous step.
 
 -   Load files in STAMP by going to File-&gt; Load Data; You should load both the profile and the metadata files
--   Change the “Profile level” (top left) to “Genus”, ensure that the Group legend (top right) has been set to “depth”, and that “PCA plot” has been set below the large middle window. You should now be looking at a PCA plot where the samples are colored according to their depths.
+-   Change the “Profile level” (top left) to “Species”, ensure that the Group legend (top right) has been set to “depth”, and that “PCA plot” has been set below the large middle window. You should now be looking at a PCA plot where the samples are colored according to their depths.
 -   Now change the group field to “prov\_code” and the PCA will be coloured according to that grouping instead.
--   Now lets test what is significantly different between the groups at the Genus rank. Under the “Multiple groups” dialog on the left, check that ANOVA is being used as the statistical test, and select “None” for the multiple test correction. The box at bottom will say what the “Number of active features” is, using these set of statistics.
--   Explore the different visualizations by changing “PCA plot” to each of the other visualizations. Note that you can change which genera is being visualized by selecting different ones on the right hand side. Also, note that you can check the “Show only active features” to reduce the list to those that are significantly different.
+-   Now lets test what is significantly different between the groups at the Species rank. Under the “Multiple groups” dialog on the left, check that ANOVA is being used as the statistical test, and select “No correction” for the multiple test correction. The box at bottom will say what the “Number of active features” is, using these set of statistics.
+-   Explore the different visualizations by changing “PCA plot” to each of the other visualizations. Note that you can change which species is being visualized by selecting different ones on the right hand side. Also, note that you can check the “Show only active features” to reduce the list to those that are significantly different.
 -   You can save any plot image using File -&gt; Save plot
--   Switch to the "Two Groups" dialog and select "White's non parametric t-test" from the "Statistical tests" drop-down; check the “Show only active features”; Repeat the same but this time selecting "Benjamini-Hochberg FDR" from the "Multiple test correction" drop-down
+-   Switch to the "Two Groups" dialog and select "White's non parametric t-test" from the "Statistical tests" drop-down; Repeat the same but this time selecting "Benjamini-Hochberg FDR" from the "Multiple test correction" drop-down
+
+Q4) Do you see any separation in the samples when the PCA is coloured by Depth?
+
+Q5) Do you see any separation in the samples when the PCA is coloured by the province codes? If so, describe which PC axis differentiates these samples.
+
+Q6) In the “multiple group test” using ANOVA with no multiple test correction how many species are statistically significant?
+
+Q7) How many are still significant in the “two group test” using White's non-parametric t-test without and with Benjamini-hochberg FDR for multiple test correction?
+
 
 Functional composition of the OSD samples OR "What are they doing?" <a id="what"></a>
 -------------------------------------------------------------------
 
-We will be using the program Humann for this purpose.
+The next step in the pipeline is to run the progam Humann to identify and quantify the metabolic processes in the metagenomes. This involves comparing the metagenome sequences to the KEGG database using the program diamond. This is a time consuming step and estimated to take around ~80-90 minutes for all our samples. Based on feedback from last year, we have pre-computed these results for you. The results are named kos.spf, pathways.spf, and modules.spf and can be found in your ~/workspace/assignment2 directory. If you are interested, see below for how we ran the samples. If not, skip to "Statistical analysis of metabolic differences"
 
-### Preparing for running Humann
+Q8) From the kos.spf file what are the top 3 categories present in the 1m sample from the Bedford basin (station 152)?
+
+### Preparing for running Humann (Already run)
 
 -   Perform BLASTX searches agaisnt the KEGG reference database using the program Diamond (We have a helper script for running this step in batch mode for all of our samples)
 
 ```
- run_pre_humann.pl -d ~/CourseData/refs/kegg/kegg.reduced -p 8 -o pre_humann *.fasta
+run_pre_humann.pl -d ~/CourseData/metagenomics/ref/kegg/kegg.reduced -p 8 -o pre_humann *.fasta
 ```
 
 -   Check whether the run was successful by examining the output files
@@ -547,12 +563,12 @@ ls -ltrh pre_humann
 less pre_humann/OSD106-0m-depth.comb.qc.masked.dedup.subsample.txt
 ```
 
-### Running Humann
+### Running Humann (Already run)
 
 -   copy the humann program folder (humann-0.99) to your working directory
 
 ```
-cp -r ~/CourseData/refs/humann-0.99/ ~/workspace/
+cp -r ~/CourseData/metagenomics/ref/humann-0.99/ ~/workspace/
 ```
 
 -   Change to the humann directory you just copied
@@ -583,7 +599,7 @@ A bunch of messages will pass on your screen and it should finish in ~20-30 minu
 
 These files contain relative abundances for each of these different functional classifications. You can look at the format of these using “less”:
 
--   To statistically test and visualize these resutls using STAMP we need to convert these files into a format readable by STAMP just like we did with the Metaphlan output. We use the "humann\_to\_stamp.pl" PERL script for this step
+-   To statistically test and visualize these results using STAMP we need to convert these files into a format readable by STAMP just like we did with the Metaphlan output. We use the "humann\_to\_stamp.pl" PERL script for this step
 
 ```
 humann_to_stamp.pl output/04b-hit-keg-mpt-cop-nul-nve-nve.txt > pathways.spf
@@ -606,7 +622,15 @@ sed -i 's/\.subsample//g' pathways.spf
 ### Statistical analysis of metabolic differences
 
 -   Load the kos.spf file along with the original metadata-file-for-osd-subset-210615.txt file into STAMP.
--   Compare the Arctic samples to the Northwest Atlantic samples using a Two Group test. Use the default Welch’s t-test with BH FDR. Since the number of features (i.e the KO categories) is very high, we will reduce the p-value cut-off
+-   Compare the Arctic samples to the Northwest Atlantic samples using a Two Group test. Use the default Welch’s t-test with no multiple test correction. Since the number of features (i.e the KO categories) is very high, we will reduce the p-value cut-off to 0.01. Now try changing the p-value to 0.001 and create an “Extended error bar” plot to show a plot of the top differential KO categories.
+
+Q9) In the STAMP analysis of the Humann results (with kos.spf file) using a two group test with no multiple test correction applied how many significant differences are seen between the Arctic and Northwest Atlantic samples?
+
+Q10) What happens when the p-value cut-off is lowered to 0.01 for Q9?
+
+Q11) In the STAMP analysis of the Humann results with the kos.spf file, what is the most significantly different KEGG category? What is the p-value for this KEGG category?
+
+Q12) Change the p-value to 0.001 and create an “Extended error bar” plot and save the image as a .png using the File->Save Plot option.
 
 Day 2 assigment questions <a id="questions2"></a>
 -------------------------
@@ -631,7 +655,7 @@ Day 2 assigment questions <a id="questions2"></a>
 
 <!-- -->
 
--   6) In the STAMP analysis of the Metaphlan results, in a “multiple group test” using ANOVA with no multiple test correction how many genera are statistically significant?
+-   6) In the STAMP analysis of the Metaphlan results, in a “multiple group test” using ANOVA with no multiple test correction how many species are statistically significant?
 
 <!-- -->
 
@@ -639,7 +663,7 @@ Day 2 assigment questions <a id="questions2"></a>
 
 <!-- -->
 
--   8) From the kos.spf file what are the top 3 Modules present in the 1m sample from the Bedford basin (station 152)?
+-   8) From the kos.spf file what are the top 3 categories present in the 1m sample from the Bedford basin (station 152)?
 
 <!-- -->
 
@@ -651,7 +675,7 @@ Day 2 assigment questions <a id="questions2"></a>
 
 <!-- -->
 
--   11) In the STAMP analysis of the Humann results with the kos.spf file, what is the most significantly different KEGG pathway? What is the p-value for this KEGG Pathway?
+-   11) In the STAMP analysis of the Humann results with the kos.spf file, what is the most significantly different KEGG category? What is the p-value for this KEGG category?
 
 <!-- -->
 

@@ -137,6 +137,11 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 [&uarr;](#back_to_top)
 
+### YouTube Playlist for Recorded Lectures
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lectures' Playlist](https://www.youtube.com/playlist?list=PL3izGL6oi0S849u7OZbX85WTyBxVdcpqx)
+
+
 ***
 
 ### R Review Session <a id="r_review"></a>
@@ -163,6 +168,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="827e9c">Obi Griffith</font>*
   
   [Lecture](https://bioinformatics.ca/rnaseq-module-0-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=B69fkgEkCaE)
+
 
 [&uarr;](#back_to_top)
 
@@ -171,6 +179,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="827e9c">Malachi Griffith</font>*
   
   [Lecture](https://bioinformatics.ca/rnaseq-module-1-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=Ji9nFCYl7Bk)
+
   
 #### Module 1 Lab  
   
@@ -195,6 +206,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="827e9c">Fouad Yousif</font>*
   
   [Lecture](https://bioinformatics.ca/rnaseq-module-2-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=mCwraSW_XsQ)
+
   
 #### Module 2 Lab  
   
@@ -232,6 +246,9 @@ Paper: [Recurrent chimeric RNAs enriched in human prostate cancer identified by 
   
   [Lecture](https://bioinformatics.ca/rnaseq-module-3-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=5sPQ6C-yBQc)
+
+  
 #### Module 3 Lab  
   
  [Lab practical](https://bioinformatics.ca/rnaseq-module-3-lab-2016)
@@ -249,6 +266,9 @@ Paper: [Recurrent chimeric RNAs enriched in human prostate cancer identified by 
   *<font color="827e9c">Malachi Griffith</font>*
   
   [Lecture](https://bioinformatics.ca/rnaseq-module-4-2016)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://www.youtube.com/watch?v=HqthkVAgmtg)
+
   
 #### Module 4 Lab
   
@@ -285,6 +305,10 @@ For additional resources, tutorials, future directions, and more please refer to
 ***
 
 ## Data for the Workshop ##
+
+### Tool Installation ###
+
+Instructions for installing the tools used in the workshops can be found [here](http://bioinformatics-ca.github.io/install_tools_2016/).
 
 ### Results from Instructor's Instance on Amazon ###
 - [download link](http://www.hpc4health.ca/cbw/2016/RNA_data/rnaseq_tutorial.tar.gz)

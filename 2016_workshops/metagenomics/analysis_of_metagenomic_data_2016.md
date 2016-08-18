@@ -53,6 +53,14 @@ image: CBW_Metagenome_icon.jpg
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
   Post your workshop questions <a href="https://noteapp.com/Metagenomics2016">here</a>!
+  
+### Workshop Survey
+
+Your feedback is important to us!  Please complete [our survey](https://www.surveymonkey.com/r/5Z3F5C8)!
+
+### Class Picture
+
+![Class Picture](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/metagenomics/metag_2016.jpeg?raw=true)
 
 [&uarr;](#back_to_top)
 
@@ -98,6 +106,11 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 [&uarr;](#back_to_top)
 
+### YouTube Playlist for Recorded Lectures
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lectures' Playlist](https://www.youtube.com/playlist?list=PL3izGL6oi0S9ud1IZDHZWEHrHiWXoYn-2)
+
+
 ***
 
 ##  Day 1 <a id="day_1"></a>
@@ -115,9 +128,13 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">William Hsiao</font>*
   
-  Lecture:
+  [Introduction to Metagenomics](https://bioinformatics.ca/metagenomics-module-11-2016) 
   
-  Lab practical:
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/s_MnbWohcBM)
+  
+  [Introduction to Cloud Computing](https://bioinformatics.ca/metagenomics-module-12-2016)
+  
+  [Introduction to Data Resources Self-Guided Tour](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_module1_lab_2016/)
 
 [&uarr;](#back_to_top)
 
@@ -127,7 +144,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
   *<font color="#827e9c">William Hsiao</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/metagenomics-module-2-2016); [recorded video](https://youtu.be/fZNdWbr6xEA)
+  
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/fZNdWbr6xEA)
   
   [Lab practical](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_module2_lab_2016/)
   
@@ -141,7 +160,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-3-2016)
   
-  Lab practical:
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/0eK2ycMgVmY)
+  
+  [Lab practical](https://github.com/mlangill/microbiome_helper/wiki/CBW-2016-PICRUSt-tutorial)
 
 [&uarr;](#back_to_top)
 
@@ -167,7 +188,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-4-2016)
   
-  Lab practical:
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/YhjSDG5mMjE)
+  
+  [Lab practical](https://github.com/mlangill/microbiome_helper/wiki/CBW-2016-Metagenomic-Taxonomic-Tutorial)
 
 [&uarr;](#back_to_top)
   
@@ -179,7 +202,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-5-2016)
   
-  Lab practical:
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://https://youtu.be/zhHE7vbmLSE)
+  
+  [Lab practical](https://github.com/mlangill/microbiome_helper/wiki/CBW-2016-Metagenomics-Functional-Tutorial)
 
 [&uarr;](#back_to_top)
   
@@ -203,7 +228,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-6-2016)
   
-  Lab practical:
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/841EZb3GOs8)
+  
+  [Lab practical](http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_module6_lab_2016/)
 
 [&uarr;](#back_to_top)
 
@@ -215,6 +242,26 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lecture](https://bioinformatics.ca/metagenomics-module-7-2016)
   
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture with Q&A](https://youtu.be/9AZM9y7niXs)
+  
+  [&uarr;](#back_to_top)
+
+***
+
+## Data for the Workshop ##
+
+### Tool Installation ###
+
+Instructions for installing the tools used in the workshops can be found [here](http://bioinformatics-ca.github.io/install_tools_2016/).
+
+### Data Sets ###
+- [hmp_metagenomics](http://www.hpc4health.ca/cbw/2016/metagenomics/hmp_metagenomics.tar.gz) 
+- [integrated_assignment_day1](http://www.hpc4health.ca/cbw/2016/metagenomics/integrated_assignment_day1.tar.gz)
+- [integrated_assignment_day2](http://www.hpc4health.ca/cbw/2016/metagenomics/integrated_assignment_day2.tar.gz)
+- [markergenes](http://www.hpc4health.ca/cbw/2016/metagenomics/markergenes.tar.gz) 
+- [metatranscriptomics](http://www.hpc4health.ca/cbw/2016/metagenomics/metatranscriptomics.tar.gz)
+- [picrust](http://www.hpc4health.ca/cbw/2016/metagenomics/picrust.tar.gz)
+
   [&uarr;](#back_to_top)
 
 ***
