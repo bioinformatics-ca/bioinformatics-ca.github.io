@@ -4,3 +4,6 @@
 [submodule "2015_workshops"]
 	path = 2015_workshops
 	url = ../2015_workshops.git
+[submodule "other_workshops"]
+	path = other_workshops
+	url = ../other_workshops/
