@@ -87,6 +87,25 @@ image: bioinformatics_LOGO.jpg
   </tr>  
 </table>
 
+### Select Workshops Prior to 2015
+
+<table>
+  <tr>
+    <th>Workshop</th>
+    <th>Location</th>
+    <th>Date</th>
+  </tr>
+  <tr>
+  <td><a href="http://bioinformatics-ca.github.io/flow_cytometry_2013/">Flow Cytometry Data Analysis using R 2013 </a></td><td> Toronto, ON </td><td> June 17 to June 18, 2013</td>
+  </tr>
+  <tr>
+  <td><a href="http://bioinformatics-ca.github.io/microarrays_2013/">Microarray Data Analysis 2013 </a> </td><td> Toronto, ON </td><td> June 24 to June 25, 2013</td>
+  </tr>
+  <tr>
+  <td><a href="http://bioinformatics-ca.github.io/patents_2012/">Patent Informatics 2012 </a> </td><td> Toronto, ON </td><td> April 19, 2012</td>
+  </tr>
+</table>
+
 ### About CBW
 
 Visit our <a href="http://bioinformatics-ca.github.io/About.html">About page</a> to learn more about us or to contact us.
