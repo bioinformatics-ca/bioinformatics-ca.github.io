@@ -46,9 +46,6 @@ image: bioinformatics_LOGO.jpg
   <td><a href="http://bioinformatics-ca.github.io/analysis_of_metagenomic_data_2016/">Analysis of Metagenomic Data 2016 </a> </td><td> Vancouver, BC </td><td> June 22 to June 24, 2016</td>
   </tr>
   <tr>
-  <td><a href="http://bioinformatics-ca.github.io/population_and_quantitative_genomics_2016/">Next-Generation Methods for Mapping Genomic Features and Clinical Traits 2016 </a> </td><td> Toronto, ON </td><td> July 18 to July 19, 2016</td>
-  </tr>
-  <tr>
   <td><a href="http://bioinformatics-ca.github.io/bioinformatics_on_big_data_2016/">Bioinformatics on Big Data: Computing on the Human Genome 2016 </a> </td><td> Toronto, ON </td><td> September 29 to September 30, 2016</td>
   </tr>
 </table>
