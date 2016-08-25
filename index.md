@@ -91,3 +91,5 @@ image: bioinformatics_LOGO.jpg
 
 Visit our <a href="http://bioinformatics-ca.github.io/About.html">About page</a> to learn more about us or to contact us.
 
+**All workshop contents are licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US). This means that you are able to copy, share and modify the work, as long as the result is distributed under the same license.**
+
