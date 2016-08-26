@@ -282,6 +282,8 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   *<font color="#827e9c">Andrew McPherson</font>*
   
 [Lecture and Lab](https://bioinformatics.ca/bicg-module-4-2016)
+
+  <img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/03ogT2Mo8z8)
   
 Lab practical:
 
