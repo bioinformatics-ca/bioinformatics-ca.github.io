@@ -37,7 +37,7 @@ image: CBW_bigdata_icon.jpg
   
 ###  Course Schedule  <a id="course_schedule"></a>
 
-<a href="http://bioinformatics-ca.github.io/bioinformatics_on_big_data_schedule_2016/">Schedule for July 14 to July 15, 2016</a>
+<a href="http://bioinformatics-ca.github.io/bioinformatics_on_big_data_schedule_2016/">Schedule for September 29 to September 30, 2016</a>
 
 [&uarr;](#back_to_top)
 
