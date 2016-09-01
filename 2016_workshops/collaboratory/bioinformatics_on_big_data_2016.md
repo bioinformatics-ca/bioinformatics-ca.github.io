@@ -21,14 +21,12 @@ image: CBW_bigdata_icon.jpg
            <li><a href="#module_1">Module 1</a></li>
            <li><a href="#module_2">Module 2</a></li>
            <li><a href="#module_3">Module 3</a></li>
-           <li><a href="#module_4">Module 4</a></li>
         </ul>
       </li>
        <li><a href="#day_2">Day 2</a>
           <ul class="sub2">
+             <li><a href="#module_4">Module 4</a></li>
              <li><a href="#module_5">Module 5</a></li>
-             <li><a href="#module_6">Module 6</a></li>
-             <li><a href="#module_7">Module 7</a></li>
            </ul>
        </li>
     </ul>
@@ -39,13 +37,13 @@ image: CBW_bigdata_icon.jpg
   
 ###  Course Schedule  <a id="course_schedule"></a>
 
-<a href="http://bioinformatics-ca.github.io/2016_workshops/collaboratory/BigData_2016_Schedule_v3.pdf">Schedule for July 14 to July 15, 2016</a>
+<a href="http://bioinformatics-ca.github.io/bioinformatics_on_big_data_schedule_2016/">Schedule for July 14 to July 15, 2016</a>
 
 [&uarr;](#back_to_top)
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
-  Post your workshop questions <a href="http://todaysmeet.com/Collaboratory2016">here</a>!
+  Post your workshop questions <a href="https://noteapp.com/Epigenomics2016">here</a>!
 
 [&uarr;](#back_to_top)
 
@@ -72,35 +70,33 @@ image: CBW_bigdata_icon.jpg
 
 [&uarr;](#back_to_top)
 
-###  Module 1: Ethics of Data Usage and Security Best Practices <a id="module_1"></a>
-
-   *<font color="#827e9c">Mark Phillips</font>*
-
-  Lecture:
-
-[&uarr;](#back_to_top)
-
-###  Module 2: How and Where to Launch a VM <a id="module_2"></a>
-
-   *<font color="#827e9c">Michael Brudno</font>*
-
-  Lecture:
-
-  Lab practical:
-
-[&uarr;](#back_to_top)
-
-###  Module 3: Module 3: Accessing Data in the Cloud <a id="module_3"></a>
+###  Module 1: Introduction to Cloud Computing and Virtual Machines <a id="module_1"></a>
 
    *<font color="#827e9c">Francis Ouellette</font>*
 
   Lecture:
 
+[&uarr;](#back_to_top)
+
+###  Module 2: Ethics of Data Usage and Security Best Practices <a id="module_2"></a>
+
+   *<font color="#827e9c">Mark Phillips</font>*
+
+[&uarr;](#back_to_top)
+
+###  Module 3: Module 3: Working Reproducibly in the Cloud <a id="module_3"></a>
+
+   *<font color="#827e9c">George Mihaiescu</font>*
+
+  Lecture:
+
   Lab practical:
 
 [&uarr;](#back_to_top)
 
-###  Module 4: Customizing a VM with New Tools <a id="module_4"></a>
+##  Day 2 <a id="day_2"></a>
+
+###  Module 4: Sharing and Scaling a VM <a id="module_4"></a>
 
    *<font color="#827e9c">George Mihaiescu</font>*
   
@@ -110,11 +106,9 @@ image: CBW_bigdata_icon.jpg
 
 [&uarr;](#back_to_top)
 
-##  Day 2 <a id="day_2"></a>
+###  Module 5: Big Data Analysis in the Cloud <a id="module_5"></a>
 
-###  Module 5: Sharing a VM <a id="module_5"></a>
-
-   *<font color="#827e9c">George Mihaiescu</font>*
+   *<font color="#827e9c">Christina Yung</font>*
  
  Lecture:
 
@@ -122,22 +116,4 @@ image: CBW_bigdata_icon.jpg
 
 [&uarr;](#back_to_top)
 
-###  Module 6: Scaling a VM for the Data <a id="module_6"></a>
-
-   *<font color="#827e9c">George Mihaiescu</font>*
- 
- Lecture:
-
- Lab practical:
-
-[&uarr;](#back_to_top)
-
-###  Module 7: Big Data Analysis in the Cloud <a id="module_7"></a>
-
-   *<font color="#827e9c">TBA</font>*
- 
- Lecture:
- 
- [&uarr;](#back_to_top)
- 
  ***
