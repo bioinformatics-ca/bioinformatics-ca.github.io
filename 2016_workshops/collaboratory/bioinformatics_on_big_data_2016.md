@@ -15,6 +15,7 @@ image: CBW_bigdata_icon.jpg
      <li><a href="#q_a_forum">Workshop Q/A Forum</a></li>
      <li><a href="#laptop_setup">Laptop Setup Instructions</a></li>
      <li><a href="#pre_readings">Pre-Workshop Readings</a></li>
+     <li><a href="#pre_tutorials">Pre-Workshop Tutorials</a></li>
       <li><a href="#day1">Day 1</a>
          <ul class="sub2">  
            <li><a href="#welcome">Welcome</a></li>
@@ -43,7 +44,7 @@ image: CBW_bigdata_icon.jpg
 
 ###  Workshop Q/A Forum <a id="q_a_forum"></a>
 
-  Post your workshop questions <a href="https://noteapp.com/Epigenomics2016">here</a>!
+  Post your workshop questions <a href="https://noteapp.com/BigData2016">here</a>!
 
 [&uarr;](#back_to_top)
 
@@ -55,9 +56,18 @@ image: CBW_bigdata_icon.jpg
 
 ###  Pre-workshop Readings <a id="pre_readings"></a>
 
-  Before coming to the workshop, read these.
+[Data Analysis: Create a cloud Commons](http://www.ncbi.nlm.nih.gov/pubmed/26156357)   
+[Analysis of five years of controlled access and data sharing compliance at the International Cancer Genome Consortium](http://www.ncbi.nlm.nih.gov/pubmed/26906679)   
+
 
 [&uarr;](#back_to_top)
+
+###  Pre-workshop Tutorials <a id="pre_tutorials"></a>
+
+
+* UNIX Preparation tutorials: Please complete tutorials #1-3 on UNIX at http://www.ee.surrey.ac.uk/Teaching/Unix/ and UNIX Bootcamp at https://github.com/griffithlab/rnaseq_tutorial/wiki/Unix-Bootcamp.
+
+* [Sequencing terminology](http://www.ncbi.nlm.nih.gov/projects/genome/glossary.shtml)
 
 ***
 
