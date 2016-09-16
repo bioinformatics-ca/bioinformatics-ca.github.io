@@ -10,7 +10,7 @@ image: bioinformatics_LOGO.jpg
 
 <a href="http://bioinformatics.ca/mailman/listinfo/announce">Sign up</a> to receive announcements to upcoming workshops!
 
-Interested in attending a workshop? Register (here)[https://bioinformatics.ca/workshops/2016]!
+Interested in attending a workshop? Register [here](https://bioinformatics.ca/workshops/2016)!
 
 ### 2016 Workshops
 
