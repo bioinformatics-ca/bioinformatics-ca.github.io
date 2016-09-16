@@ -1,4 +1,4 @@
-# This assumes a pretty fresh VM...
+# This assumes a pretty fresh VM, running Ubuntu 16
 # Install java
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
@@ -10,9 +10,11 @@ cd ~/sbin
 # get the dockstore script
 wget https://github.com/ga4gh/dockstore/releases/download/0.4-beta.4/dockstore
 chomd u+x dockstore
-# Add the location of the dockstore script to $PATH
+# Add the location of the dockstore script to $PATH. You will want to add this line to the end of ~/.bashrc
 PATH=$PATH:~/sbin
 cd ~
+mkdir -p ~/.dockstore
+touch ~/.dockstore/config
 # add to ~/.dockstore/config these lines:
 # # The URL for dockstore
 # server-url: https://dockstore.org:8443
@@ -25,10 +27,18 @@ cd ~
 sudo apt-get install curl
 curl -sSL https://get.docker.com/ | sh
 
+# sudo groupadd docker # probably not necessary - the docker installer should create this for you.
+# This is so you can run `docker` without having to sudo every time.
+# After you execute the line below, you will need to log out and log back in.
+sudo usermod -aG docker $USER
+
 # get cwltool
 sudo apt install python-pip
-pip install setuptools==24.0.3
-pip install cwl-runner cwltool==1.0.20160316150250 schema-salad==1.7.20160316150109 avro==1.7.7
+# If you are on ubuntu 14, also need: `sudo pip install typing`
+# run as sudo if ubuntu 14
+pip install setuptools==24.0.3 
+# run as sudo if ubuntu 14
+pip install cwl-runner cwltool==1.0.20160316150250 schema-salad==1.7.20160316150109 avro==1.7.7 
 
 # Get the sample JSON file.
 # wget https://raw.githubusercontent.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/develop/Dockstore_cwl.json
