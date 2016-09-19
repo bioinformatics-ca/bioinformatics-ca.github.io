@@ -1,0 +1,59 @@
+{
+  "reads": [
+    {
+      "path":"http://reference.cancercollaboratory.org/reference/hg19.chr22.5x.normal.bam",
+      "class":"File"
+    },
+      {
+      "path":"http://reference.cancercollaboratory.org/reference/hg19.chr22.5x.normal2.bam",
+      "class":"File"
+    }
+  ],
+  "output_dir": "datastore/",
+  "output_file_basename": "hg19.chr22.5x.normal",
+  "download_reference_files": "true",
+  "reference_gz_amb": {
+    "path": "http://reference.cancercollaboratory.org/reference/genome.fa.gz.64.amb",
+    "class": "File"
+  },
+  "reference_gz_sa": {
+    "path": "http://reference.cancercollaboratory.org/reference/genome.fa.gz.64.sa",
+    "class": "File"
+  },
+  "reference_gz_pac": {
+    "path": "http://reference.cancercollaboratory.org/reference/genome.fa.gz.64.pac",
+    "class": "File"
+  },
+  "reference_gz_ann": {
+    "path": "http://reference.cancercollaboratory.org/reference/genome.fa.gz.64.ann",
+    "class": "File"
+  },
+  "reference_gz_bwt": {
+    "path": "http://reference.cancercollaboratory.org/reference/genome.fa.gz.64.bwt",
+    "class": "File"
+  },
+  "reference_gz_fai": {
+    "path": "http://reference.cancercollaboratory.org/reference/genome.fa.gz.fai",
+    "class": "File"
+  },
+  "reference_gz": {
+    "path": "http://reference.cancercollaboratory.org/reference/genome.fa.gz",
+    "class": "File"
+  },
+  "merged_output_unmapped_bai": {
+    "path": "tmp/unmapped_output.bai",
+    "class": "File"
+  },
+  "merged_output_bam": {
+    "path": "tmp/output.bam",
+    "class": "File"
+  },
+  "merged_output_unmapped_bam": {
+    "path": "tmp/unmapped_output.bam",
+    "class": "File"
+  },
+  "merged_output_bai": {
+    "path": "tmp/output.bai",
+    "class": "File"
+  }
+}
