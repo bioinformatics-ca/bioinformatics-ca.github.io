@@ -53,4 +53,4 @@ dockstore tool cwl --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8 > Dock
 # Note: That examples uses S3 for output. You will probably want to store your output locally.
 dockstore tool convert cwl2json --cwl Dockstore.cwl > Dockstore.json
 # run it locally with the Dockstore CLI
-time dockstore tool launch --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8 --json Dockstore.json 
+time dockstore tool launch --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 --json Dockstore.json 
