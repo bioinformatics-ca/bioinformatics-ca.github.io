@@ -91,6 +91,8 @@ image: CBW_bigdata_icon.jpg
 ###  Module 2: Ethics of Data Usage and Security Best Practices <a id="module_2"></a>
 
    *<font color="#827e9c">Mark Phillips</font>*
+   
+  Lecture:
 
 [&uarr;](#back_to_top)
 
