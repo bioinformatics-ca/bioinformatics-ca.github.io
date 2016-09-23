@@ -130,11 +130,46 @@ To view your instances, in the left hand menu, click on "Instances".
 
 ## Log Into Your Instance
 
-You will need to change the file permissions for your private SSH key.
-
 ### Mac/Linux Instructions
 
+You will need to change the file permissions for your private SSH key.
+
+```bash
+ chmod 400 path_to_private_key
+```
+
+Where `path_to_private_key` is the path to where you have saved your key.
+
+
+Then, to log in:
+
+```bash
+ ssh -i path_to_private_key ubuntu@142.1.177.XXX
+```
+
+??? What is XXX?
+
 ### Windows Instructions
+
+To configure Putty, start Putty and do the following:
+
+* Fill in the "Host name" field with 142.1.177.XXX.
+
+??? What is XXX?
+ 
+<img src="../../../resources/Putty_Basic_Options.png" alt="Basic Putty Options" class="center">
+
+* In the left hand categories,under the Connection category choose Data.  In the auto-login username field write ***ubuntu***.
+
+<img src="../../../resources/Putty_Data_Options.png" alt="Putty Data Options" class="center"> 
+
+* In the left hand categories, in the Connection category next to SSH click on the **+**. Click on Auth. In the private-key file for authentication field, hit browse and find the your private key.
+
+<img src="../../../resources/Putty_Auth_Options.png" alt="Putty Auth Options" class="center">
+
+* In the left hand categories, click on Session.  In the Saved Sessions field write **Collaboratory** and click save.
+
+**Now that Putty is configured**, all you have to do is start putty and double-click on "Collaboratory" to login.
 
 ## Customize Your Virtual Machine
 
