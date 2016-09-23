@@ -88,7 +88,9 @@ You only need a valid token if you want to push data TO dockstore. To pull data,
 token: DUMMY
 ```
 
-##### Turn on caching to prevent the same input files from being downloaded again and again and again...
+##### Caching
+
+Turn on caching to prevent the same input files from being downloaded again and again and again...
 
 ```
 use-cache=true
@@ -129,32 +131,33 @@ sudo pip install setuptools==24.0.3
 sudo pip install cwl-runner cwltool==1.0.20160712154127 schema-salad==1.14.20160708181155 avro==1.8.1 
 ```
 
-
-### Get the sample JSON file.
-
-```
-wget https://raw.githubusercontent.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/develop/Dockstore_cwl.json
-```
-
-Edit it as necessary.   
-Ensure that the outputs will be saved on your local file system.   
-
 ### Use the dockstore CLI to fetch the CWL
+
+The dockstore CLI will download the CWL file for the tool specified by `--entry`.
 
 ```
 dockstore tool cwl --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 > Dockstore.cwl
 ```
 
-### Make a runtime JSON template and edit it
+### Prepare your JSON input file
 
-If you're not sure how to edit Dockstore.json, see: https://raw.githubusercontent.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/develop/Dockstore_cwl.json
 
-*Note:* That example uses S3 for output. You will probably want to store your output locally.
+#### Generate the JSON file
 
-### Generate the JSON file from the CWL file
+JSON files can be automatically generated from the CWL file. You will have to fill in the default values in this file.
 ```
 dockstore tool convert cwl2json --cwl Dockstore.cwl > Dockstore.json
 ```
+
+#### Download an existing file
+
+An existing input JSON file can be found here.
+```
+wget https://raw.githubusercontent.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/develop/Dockstore_cwl.json
+```
+
+Once you have an input JSON file, edit it as necessary.
+*Note:* The example file above uses Amazon S3 for output. You will probably want to change that to store your output locally.
 
 ### Run it locally with the Dockstore CLI
 
