@@ -47,7 +47,7 @@ In your browser, go to <https://console.cancercollaboratory.org>.  Log in using 
 
 In the left hand menu, expand the "Compute" menu and click on "Overview".  This will take you to the "Overview Page"
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_b.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_b.png?raw=true)
 
 ## Before Launching a Virtual Machine
 
@@ -55,13 +55,13 @@ In the left hand menu, expand the "Compute" menu and click on "Overview".  This 
 
 In the bar on the left of the page, click on "Access and Security."  At the top of the page, under "Access and Security", select the "Key Pairs" tab.  Click on the "Create Key Pair" button.  Name your key-pair and click on the "Create Key Pair" button.
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_c.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_c.png?raw=true)
 
 ### Import an Existing SSH Key-pair
 
 Alternatively, you can import a key-pair by hitting the "Import Key Pair" button.  You will need to name your key-pair and paste the public key into the text box.  Click on "Import Key Pair" when done.
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_d.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_d.png?raw=true)
 
 ??? Are students creating or importing a key-pair?
 
@@ -69,11 +69,11 @@ Alternatively, you can import a key-pair by hitting the "Import Key Pair" button
 
 You will need to know your IP address for this.  To find you IP address, open a new tab or window and go to Google and search for "what is my ip".
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_e.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_e.png?raw=true)
 
 Return to the Collaboratory page.  Select the "Security Groups" tab and click on the "Create Security Group" button.  Name your security group and write a description.  CLick on "Create Security Group".
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_f.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_f.png?raw=true)
 
 You will need to allow SSH access from your IP address.  Beside the name for the security group you just created, click on "Manage Rules".  Click on the "Add Rule" button.  
 
@@ -85,7 +85,7 @@ In the dropdown menus and boxes, select or enter:
 * CIDR
 * your IP address
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_g.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_g.png?raw=true)
 
 ??? Do students need to do this twice, once for 22 and once for 80?
 
@@ -93,7 +93,7 @@ In the dropdown menus and boxes, select or enter:
 
 In the menu on the left, select "Instances."  Click on the "Launch Instance" button.
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_h.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_h.png?raw=true)
 
 Make sure you are in the "Details" tab.  
 
@@ -106,19 +106,19 @@ In the dropdown menus and boxes, select or enter:
 * Boot from image  
 * Ubuntu 16.04 - 2016.04.25 (297.9 MB)  
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_i.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_i.png?raw=true)
 
 Select the "Access and Security" tab.  Select the key pair you previously created and check the box beside "ssh".  
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_j.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_j.png?raw=true)
 
 Select the "Networking" tab.  Choose the appropriate network.
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_k.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_k.png?raw=true)
 
 Launch the instance by hitting the "Launch" button.
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_l.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_l.png?raw=true)
 
 ??? Fields from first launch image don't match last image.  Which are the correct entries?
 
@@ -126,7 +126,7 @@ It will take a few minutes for the instance to start.
 
 To view your instances, in the left hand menu, click on "Instances".
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_m.png?raw=true]
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_m.png?raw=true)
 
 ## Log Into Your Instance
 
