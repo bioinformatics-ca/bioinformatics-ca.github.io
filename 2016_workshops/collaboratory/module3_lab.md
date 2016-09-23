@@ -45,7 +45,7 @@ In your browser, go to <https://console.cancercollaboratory.org>.  Log in using 
 
 <image_a>
 
-This will take you to the "Overview Page"
+In the left hand menu, expand the "Compute" menu and click on "Overview".  This will take you to the "Overview Page"
 
 <image_b>
 
@@ -63,11 +63,214 @@ Alternatively, you can import a key-pair by hitting the "Import Key Pair" button
 
 <image_d>
 
+??? Are students creating or importing a key-pair?
+
 ### Customize Your Security Groups
 
-You will need to know your IP address for this.  To find you IP address, go to Google and search for "what is my ip".
+You will need to know your IP address for this.  To find you IP address, open a new tab or window and go to Google and search for "what is my ip".
 
-<image_d>
+<image_e>
+
+Return to the Collaboratory page.  Select the "Security Groups" tab and click on the "Create Security Group" button.  Name your security group and write a description.  CLick on "Create Security Group".
+
+<image_f>
+
+You will need to allow SSH access from your IP address.  Beside the name for the security group you just created, click on "Manage Rules".  Click on the "Add Rule" button.  
+
+In the dropdown menus and boxes, select or enter:  
+* Custom TCP Rule   
+* Ingress  
+* Port
+* 22
+* CIDR
+* your IP address
+
+<image_g>
+
+??? Do students need to do this twice, once for 22 and once for 80?
+
+### Choose Your Flavor
+
+In the menu on the left, select "Instances."  Click on the "Launch Instance" button.
+
+<image_h>
+
+Make sure you are in the "Details" tab.  
+
+In the dropdown menus and boxes, select or enter:
+
+* Nova  
+* Name you instance  
+* c1.micro  
+* 1  
+* Boot from image  
+* Ubuntu 16.04 - 2016.04.25 (297.9 MB)  
+
+<image_i>
+
+Select the "Access and Security" tab.  Select the key pair you previously created and check the box beside "ssh".  
+
+<image_j>
+
+Select the "Networking" tab.  Choose the appropriate network.
+
+<image_k>
+
+Launch the instance by hitting the "Launch" button.
+
+<image_l>
+
+??? Fields from first launch image don't match last image.  Which are the correct entries?
+
+It will take a few minutes for the instance to start.
+
+To view your instances, in the left hand menu, click on "Instances".
+
+<image_m>
+
+## Log Into Your Instance
+
+You will need to change the file permissions for your private SSH key.
+
+### Mac/Linux Instructions
+
+### Windows Instructions
+
+## Customize Your Virtual Machine
+
+You will need to upgrade your package index and existing packages.
+
+```
+apt-get update && apt-get upgrade
+```
+
+??? how to install updates and how long will this take?
+
+## Docker Installation
+
+Run the following commands to install the Docker engine software.
+
+```
+sudo apt-get install -y apt-transport-https ca-certificates unzip
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+
+echo 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' | sudo tee /etc/apt/sources.list.d/docker.list
+
+sudo apt-get update && sudo apt-get -y install linux-image-extra-$(uname -r) linux-image-extra-virtual
+
+sudo apt-get -y install docker-engine
+
+sudo service docker start
+
+sudo docker run hello-world
+```
+
+???what do these commands do?  What is the expected output?
+
+???Note (say something here about using sudo and how this is kind of a bad idea outside a VM)
+
+## Run a Bioinformatics Tool in Docker
+
+We will first need a data file.  To get the file from the ftp server, we will use the `wget` command.
+
+```
+wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/NA12878/alignment/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+```
+
+We will need the Docker container with the "bamstats" tool.  We will use the Docker `pull` command to retrieve the container.
+
+```
+sudo docker pull quay.io/briandoconnor/dockstore-tool-bamstats
+```
+
+Run the container, mounting the sample file inside.
+
+```
+sudo docker run -it -v `pwd`/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam:/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam -v /tmp:/home/ubuntu quay.io/briandoconnor/dockstore-tool-bamstats
+```
+
+In this command, `-it` means run interactively and `-v` maps a file or directory from the VM inside the Docker container.
+
+The OS inside the Docker container is different than that of the host VM.  You can check this with:
+
+```
+cat /etc/lsb-release
+```
+
+Recall that we chose Ubuntu 16.04 for our VM.
+
+Inside the Docker container, execute the bamstats binary against the sample file.
+
+```
+cd && /usr/local/bin/bamstats 4 /NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+```
+
+Exit the docker container by typing "exit" and go to "/tmp" where the report was created.
+
+```
+   exit
+	cd /tmp 
+	unzip bamstats_report.zip 
+	sudo python3 -m http.server
+```
+
+Visit the page to see the statistics for that sample BAM:
+	<http://142.1.177.XXX/bamstats_report.html>
+	
+???what does XXX mean?
+
+## Access Data in the Cloud
+
+**Note that you need DACO approval to access ICGC data stored in the Cloud**
+
+**The following exercises will be done by the instructor only**
+
+### Create a Configuration File
+
+First, determine how many cores and how much memory you can allocate to the download.
+
+```
+cat /proc/cpuinfo | grep -c processor
+free -g
+```
+
+On a VM with 8 cores and 55 GB of RAM, you can allocate 7 cores and 49 GB of RAM (7 GB per thread).  Create a text file `application.properties` that contains the access token and the number of cores and memory per core.  Use `cat` to view the file contents.  
+
+```
+cat application.properties
+accessToken=XXX
+transport.parallel=7
+transport.memory=7
+```
+
+### Download Protected Data
+
+Pull the Docker container containing the storage client.
+
+```
+ docker pull icgc/icgc-storage-client
+```
+
+Initiate the download, mounting the application.properties file as well as the destination directory for the download (-v /tmp/:/data),  so it survives the termination of the Docker container:
+
+```
+sudo docker run -v /tmp/:/data -v /home/ubuntu/application.properties:/icgc/icgc-storage-client/conf/application.properties --privileged icgc/icgc-storage-client bin/icgc-storage-client --profile collab download --object-id 6329334b-dcd5-53c8-98fd-9812ac386d30 --output-dir /data
+```
+
+It takes around 16 min for a 120 GB file to be downloaded using a VM with 8 cores and 56 GB of RAM, and another five or so minutes for the automated checksum to verify its integrity.
+
+The download speed depends on the disk IO which is shared with other VMs running on the same physical server, as well as other shared resources (network, storage cluster).
+
+### Important Notes
+
+ICGC data stored in AWS S3 is only available from EC2 instances.
+
+Download of ICGC protected data from S3 is only available within the “us-east-1” EC2 region of AWS.
+
+ ICGC data stored in Cancer Genome Collaboratory is only available from VMs inside Collaboratory, or from external IP addresses listed on the user enrollment form.
+
+It is the responsibility of the users to protect access to the EC2 or Collaboratory VMs, as well as the restricted data they have access to.
+
 
 
 
