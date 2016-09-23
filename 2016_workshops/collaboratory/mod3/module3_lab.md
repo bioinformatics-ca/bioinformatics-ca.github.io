@@ -43,7 +43,7 @@ There are a few thought-provoking Questions or Notes pertaining to sections of t
 
 In your browser, go to <https://console.cancercollaboratory.org>.  Log in using your provided credentials.
 
-![https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_a.png?raw=true]
+!(image_a)[https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_a.png?raw=true]
 
 In the left hand menu, expand the "Compute" menu and click on "Overview".  This will take you to the "Overview Page"
 
