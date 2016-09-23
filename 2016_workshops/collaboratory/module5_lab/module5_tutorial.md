@@ -15,13 +15,13 @@ This lab was created by Solomon Shorser
 
 ### Description of the lab
 
-*write description here something like:*
 
 Welcome to the lab for Big Data Analysis! This lab will consolidate what you have learned about Cloud Computing by using aligning reads from a cell line as an example.
 
 After this lab, you will be able to:
 
-* list things that they will learn
+* Install the dockstore CLI.
+* Run CWL tools and workflows using the dockstore CLI.
 
 Things to know before you start:
 
@@ -53,21 +53,20 @@ sudo apt-get install oracle-java8-installer
 ```
 mkdir -p ~/sbin
 cd ~/sbin
-```
-
-### Get the dockstore script
-
-```
+sudo apt-get install wget
 wget https://github.com/ga4gh/dockstore/releases/download/0.4-beta.4/dockstore
 chomd u+x dockstore
 ```
 
 ### Add the location of the dockstore script to $PATH. 
 
-You will want to add this line to the end of ~/.bashrc
-
+Using your favourite text editor, you will want to add this line to the end of ~/.bashrc:
 ```
 PATH=$PATH:~/sbin
+```
+
+Now, set up the dockstore configuration file:
+```
 cd ~
 mkdir -p ~/.dockstore
 touch ~/.dockstore/config
@@ -102,11 +101,10 @@ sudo apt-get install curl
 curl -sSL https://get.docker.com/ | sh
 ```
 
-Installation information can be found (here)[https://docs.docker.com/v1.8/installation/ubuntulinux/]
+Detailed installation information can be found (here)[https://docs.docker.com/v1.8/installation/ubuntulinux/]
 
-#### sudo groupadd docker 
+#### Add your user to the docker user group
 
-This is probably not necessary - the docker installer should create this for you.   
 This is so you can run `docker` without having to sudo every time.   
 After you execute the line below, you will need to log out and log back in.   
 
@@ -124,7 +122,7 @@ pip install cwl-runner cwltool==1.0.20160712154127 schema-salad==1.14.2016070818
 
 *Note:*   
 
-If you are on **ubuntu 14**, also need `sudo pip install typing` and pip install commands will need to be run as `sudo`.   
+If you are on **ubuntu 14**, you may also need `sudo pip install typing` and pip install commands will need to be run as `sudo`: 
 
 ```
 sudo pip install setuptools==24.0.3 
@@ -141,7 +139,7 @@ wget https://raw.githubusercontent.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/
 Edit it as necessary.   
 Ensure that the outputs will be saved on your local file system.   
 
-### Fetch CWL
+### Use the dockstore CLI to fetch the CWL
 
 ```
 dockstore tool cwl --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 > Dockstore.cwl
@@ -151,9 +149,9 @@ dockstore tool cwl --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 >
 
 If you're not sure how to edit Dockstore.json, see: https://raw.githubusercontent.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/develop/Dockstore_cwl.json
 
+*Note:* That example uses S3 for output. You will probably want to store your output locally.
 
-*Note:* That examples uses S3 for output. You will probably want to store your output locally.
-
+### Generate the JSON file from the CWL file
 ```
 dockstore tool convert cwl2json --cwl Dockstore.cwl > Dockstore.json
 ```
@@ -161,5 +159,5 @@ dockstore tool convert cwl2json --cwl Dockstore.cwl > Dockstore.json
 ### Run it locally with the Dockstore CLI
 
 ```
-time dockstore tool launch --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 --json Dockstore.json 
+dockstore tool launch --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 --json Dockstore.json 
 ```
