@@ -35,9 +35,10 @@ There are a few thought-provoking Questions or Notes pertaining to sections of t
 
    * Thought-provoking question goes here
    
-### Requirments
+### Requirements
 
-???
+Laptop connected to OICR's wifi network, web browser.
+
 
 ## Log In to the Collaboratory
 
@@ -45,7 +46,7 @@ In your browser, go to <https://console.cancercollaboratory.org>.  Log in using 
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_a.png?raw=true)
 
-In the left hand menu, expand the "Compute" menu and click on "Overview".  This will take you to the "Overview Page"
+Once logged in, the first page open will be the "Overview Page" that shows how many resources the project you are part of has access to, as well as the current usage.
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_b.png?raw=true)
 
@@ -63,7 +64,8 @@ Alternatively, you can import a key-pair by hitting the "Import Key Pair" button
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_d.png?raw=true)
 
-??? Are students creating or importing a key-pair?
+If you already have a SSH key-pair on your laptop that you want to use, feel free to upload the public key part by clicking the "Import Key Pair" button.
+Otherwise, choose the "Create Key Pair" option and download the private part of the SSH key that will be created.
 
 ### Customize Your Security Groups
 
@@ -85,9 +87,16 @@ In the dropdown menus and boxes, select or enter:
 * CIDR
 * your IP address
 
+Repeat this step and add a second rule with allowing TCP port 80:
+* Custom TCP Rule   
+* Ingress  
+* Port
+* 80
+* CIDR
+* your IP address
+
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_g.png?raw=true)
 
-??? Do students need to do this twice, once for 22 and once for 80?
 
 ### Choose Your Flavor
 
@@ -147,7 +156,7 @@ Then, to log in:
  ssh -i path_to_private_key ubuntu@142.1.177.XXX
 ```
 
-??? What is XXX?
+XXX is the last octet from the floating IP address you assigned to the instance.
 
 ### Windows Instructions
 
@@ -155,7 +164,8 @@ To configure Putty, start Putty and do the following:
 
 * Fill in the "Host name" field with 142.1.177.XXX.
 
-??? What is XXX?
+XXX is the last octet from the floating IP address you assign to the instance.
+
  
 <img src="../../../resources/Putty_Basic_Options.png" alt="Basic Putty Options" class="center">
 
@@ -173,17 +183,16 @@ To configure Putty, start Putty and do the following:
 
 ## Customize Your Virtual Machine
 
-You will need to upgrade your package index and existing packages.
+You will need to upgrade your package index and existing packages by running:
 
 ```
-apt-get update && apt-get upgrade
+sudo apt-get update && sudo apt-get upgrade
 ```
 
-??? how to install updates and how long will this take?
 
 ## Docker Installation
 
-Run the following commands to install the Docker engine software.
+Run the following commands to install the Docker engine software and required dependencies:
 
 ```
 sudo apt-get install -y apt-transport-https ca-certificates unzip
@@ -200,9 +209,7 @@ sudo service docker start
 sudo docker run hello-world
 ```
 
-???what do these commands do?  What is the expected output?
 
-???Note (say something here about using sudo and how this is kind of a bad idea outside a VM)
 
 ## Run a Bioinformatics Tool in Docker
 
@@ -252,7 +259,8 @@ Exit the docker container by typing "exit" and go to "/tmp" where the report was
 Visit the page to see the statistics for that sample BAM:
 	<http://142.1.177.XXX/bamstats_report.html>
 	
-???what does XXX mean?
+XXX is the last octet from the floating IP address you assigned to the instance.
+
 
 ## Access Data in the Cloud
 
@@ -292,7 +300,7 @@ Initiate the download, mounting the application.properties file as well as the d
 sudo docker run -v /tmp/:/data -v /home/ubuntu/application.properties:/icgc/icgc-storage-client/conf/application.properties --privileged icgc/icgc-storage-client bin/icgc-storage-client --profile collab download --object-id 6329334b-dcd5-53c8-98fd-9812ac386d30 --output-dir /data
 ```
 
-It takes around 16 min for a 120 GB file to be downloaded using a VM with 8 cores and 56 GB of RAM, and another five or so minutes for the automated checksum to verify its integrity.
+It takes around 30 min for a 120 GB file to be downloaded using a VM with 8 cores and 56 GB of RAM, including the time needed by the storage client to perform an automated checksum to verify downloaded data integrity.
 
 The download speed depends on the disk IO which is shared with other VMs running on the same physical server, as well as other shared resources (network, storage cluster).
 
