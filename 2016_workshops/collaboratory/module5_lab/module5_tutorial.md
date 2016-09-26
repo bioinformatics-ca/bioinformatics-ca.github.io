@@ -16,7 +16,7 @@ This lab was created by Solomon Shorser
 ### Description of the lab
 
 
-Welcome to the lab for Big Data Analysis! This lab will consolidate what you have learned about Cloud Computing by using aligning reads from a cell line as an example.
+Welcome to the lab for Big Data Analysis! This lab will consolidate what you have learned about Cloud Computing by aligning reads from a cell line as an example.
 
 After this lab, you will be able to:
 
@@ -54,13 +54,13 @@ sudo apt-get install oracle-java8-installer
 mkdir -p ~/sbin
 cd ~/sbin
 sudo apt-get install wget
-wget https://github.com/ga4gh/dockstore/releases/download/0.4-beta.4/dockstore
+wget https://github.com/ga4gh/dockstore/releases/download/0.4-beta.4/dockstore  <- THIS NEEDS TO BE UPDATED
 chomd u+x dockstore
 ```
 
 ### Add the location of the dockstore script to $PATH. 
 
-Using your favourite text editor, you will want to add this line to the end of ~/.bashrc:
+Using your favourite text editor (try pico if you don't have one), add this line to the end of ~/.bashrc:
 ```
 PATH=$PATH:~/sbin
 ```
@@ -103,12 +103,12 @@ sudo apt-get install curl
 curl -sSL https://get.docker.com/ | sh
 ```
 
-Detailed installation information can be found (here)[https://docs.docker.com/v1.8/installation/ubuntulinux/]
+This will take a few minutes. Detailed installation information can be found (here)[https://docs.docker.com/v1.8/installation/ubuntulinux/]
 
 #### Add your user to the docker user group
 
 This is so you can run `docker` without having to sudo every time.   
-After you execute the line below, you will need to log out and log back in.   
+After you execute the line below, you will need to **log out and log back in**.   
 
 ```
 sudo usermod -aG docker $USER
@@ -122,9 +122,7 @@ pip install setuptools==24.0.3
 pip install cwl-runner cwltool==1.0.20160712154127 schema-salad==1.14.20160708181155 avro==1.8.1
 ```
 
-*Note:*   
-
-If you are on **ubuntu 14**, you may also need `sudo pip install typing` and pip install commands will need to be run as `sudo`: 
+*Note:* If you are on **ubuntu 14**, you may also need `sudo pip install typing` and pip install commands will need to be run as `sudo`: 
 
 ```
 sudo pip install setuptools==24.0.3 
@@ -138,6 +136,8 @@ The dockstore CLI will download the CWL file for the tool specified by `--entry`
 ```
 dockstore tool cwl --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 > Dockstore.cwl
 ```
+*Note:* If you get an error "dockstore: command not found", that's because you haven't logged out and logged back in after adding yourself to the docker group.
+
 
 ### Prepare your JSON input file
 
@@ -162,5 +162,5 @@ Once you have an input JSON file, edit it as necessary.
 ### Run it locally with the Dockstore CLI
 
 ```
-dockstore tool launch --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 --json Dockstore.json 
+dockstore tool launch --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 --json Dockstore_cwl.json 
 ```
