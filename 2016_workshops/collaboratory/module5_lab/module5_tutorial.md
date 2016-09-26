@@ -54,7 +54,7 @@ sudo apt-get install oracle-java8-installer
 mkdir -p ~/sbin
 cd ~/sbin
 sudo apt-get install wget
-wget https://github.com/ga4gh/dockstore/releases/download/0.4-beta.4/dockstore  <- THIS NEEDS TO BE UPDATED
+wget https://github.com/ga4gh/dockstore/releases/download/1.0/dockstore
 chomd u+x dockstore
 ```
 
