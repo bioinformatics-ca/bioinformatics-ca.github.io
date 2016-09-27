@@ -181,7 +181,7 @@ XXX is the last octet from the floating IP address you assign to the instance.
 
 * In the left hand categories, click on Session.  In the Saved Sessions field write **Collaboratory** and click save.
 
-**Now that Putty is configured**, all you have to do is start putty and double-click on "Collaboratory" to login.
+**Now that Putty is configured**, all you have to do is start PuTTY and double-click on "Collaboratory" to login.
 
 ## Customize Your Virtual Machine
 
