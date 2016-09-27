@@ -158,6 +158,11 @@ wget https://raw.githubusercontent.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/
 
 Once you have an input JSON file, edit it as necessary.
 *Note:* The example file above uses Amazon S3 for output. You will probably want to change that to store your output locally.
+```
+mkdir ~/output
+```
+Open the JSON file, and edit the paths for the 4 parameters: merged\_output\_\*.  Replace 's3://oicr.temp/testing-bwa-workflow' with '/home/ubuntu/output'.  Note that '~' if used in the JSON is not interpreted as home directory.
+
 
 ### Run it locally with the Dockstore CLI
 
