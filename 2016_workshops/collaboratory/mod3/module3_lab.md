@@ -37,7 +37,9 @@ There are a few thought-provoking Questions or Notes pertaining to sections of t
    
 ### Requirements
 
-Laptop connected to OICR's wifi network, web browser.
+* Laptop connected to OICR's wifi network  
+* Web browser
+* Collaboratory credentials
 
 
 ## Log In to the Collaboratory
