@@ -51,10 +51,11 @@ To log back in, open PuTTY and double-click on "Collaboratory" to login.
 
 ## Customize Your VM
 
-Install some packages.
+Install some packages and create a new file containing your name and your favorite food.
 
 ```
 sudo apt-get –y install vim atop
+echo "My name is <your name> and my favourite food is <food>" > /home/ubuntu/student
 ```
 
 ## Prepare to Take a Snapshot
@@ -75,7 +76,7 @@ Remove your public key from the default user’s “authorized_keys” file, so 
 rm –i ~/.ssh/authorized_keys
 ```
 
-**Note:** after removing your public key you will not be able to log in again into this virtual machine, and you will have to start a new one from the snapshot 
+**Note:** after removing your public key you will not be able to log in again into this virtual machine, and you will have to start a new one from the snapshot.  Your VM session may suspend while you take the snapshot.  Initiating a new ssh session will fail because the public key was removed. 
 
 ## Take the Snapshot
 
@@ -93,11 +94,13 @@ To terminate your old instance, place a check mark in the box beside the name of
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod4/mod4_b.png?raw=true)
 
+**Note:** Make sure you are terminating your own instance and not someone else's instance.
+
 ## Start a New Image from the Snapshot
 
 On the lefthand side, from the expanded "Compute" menu, select "Images."  In the table, you should see the snapshot that you just took.  Click on "Launch Instance" for your snapshot.
 
-Choose the same or a larger flavor when starting an instance from a snapshot. Assign a floating IP, then SSH into it and verify the packages you installed before are present.
+The launch instance form will preselect the information from your image source. You can choose the same or a larger flavor when starting an instance from a snapshot but not a smaller flavor. Give your new instance a name. Assign a floating IP, then SSH into it and verify the packages you installed before are present.  If you need help with this, see the instructions for lab 3.
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod4/mod4_c.png?raw=true)
 
@@ -113,9 +116,7 @@ sudo apt-get -y install python-glanceclient
 
 In your browser on the Collaboratory website, in the lefthand side in the expanded "Compute" menu, select "Access and Security."
 
-Click on the "API Access" tab.
-
-??? what are they downloading
+Click on the "API Access" tab.  Click on the "Download OpenStack RC File."
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod4/mod4_d.png?raw=true)
 
@@ -123,17 +124,19 @@ Click on the "API Access" tab.
 
 Create a file and paste the contents of the download, then source them.
 
-![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod4/mod4_e.png?raw=true)
+If using vi as your editor, press "i" for insert and then CTRL+v to paste the file contents that you downloaded.  Hit ESC to exit insert mode.  Press `:wq` to save and exit.
 
-??? Are students creating a file in the VM?  How are students creating the file and sourcing it?
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod4/mod4_e.png?raw=true)
 
 ## Share the Snapshot
 
 Execute the following commands to share the snapshot:
 
 ```
-glance image-list  -> find the ID of the snapshot
+glance image-list  # find the ID of the snapshot
 ```
+
+In the list, find the ID of your snapshot.
 
 Share it with the project ID a295a12382ef451b9bf2353d624455bb
 
@@ -141,9 +144,13 @@ Share it with the project ID a295a12382ef451b9bf2353d624455bb
 glance member-create b42a556a-9525-4575-9828-9f01833a939d a295a12382ef451b9bf2353d624455bb
 ```
 
+In the command, the first ID is the ID of your snapshot and the second ID is the project ID you wish to share with.
+
+Now when the instructor whose project ID is a295a12382ef451b9bf2353d624455bb is on the Collaboratory site, in "Images" under the "Shared with Me" tab he will see a list of shared snapshots.
+
 ## Using `cloud-init` to Bootstrap a VM
 
-Launch a new Ubuntu 16.04 instance using flavor c1.micro and paste the following in the “Post-creation” tab, “Direct Input” window:
+Launch a new Ubuntu 16.04 instance using flavor c1.micro.  Under the “Post-creation” tab select “Direct Input” from the drop-down menu and paste the following:
 
 ```
 #!/bin/sh
