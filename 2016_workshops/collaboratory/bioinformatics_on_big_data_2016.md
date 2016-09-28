@@ -92,7 +92,7 @@ image: CBW_bigdata_icon.jpg
 
    *<font color="#827e9c">Mark Phillips</font>*
    
-  Lecture:
+  [Lecture](https://bioinformatics.ca/big-data-module-2-2016)
 
 [&uarr;](#back_to_top)
 
@@ -100,9 +100,11 @@ image: CBW_bigdata_icon.jpg
 
    *<font color="#827e9c">George Mihaiescu</font>*
 
-  Lecture:
+  [Lecture](https://bioinformatics.ca/big-data-module-3-2016)
+  
+  [Lab lecture](https://bioinformatics.ca/big-data-module-3-lab-2016)  
 
-  Lab practical:
+  [Lab practical](http://bioinformatics-ca.github.io/bioinformatics_on_big_data_module3_lab/)  
 
 [&uarr;](#back_to_top)
 
@@ -112,9 +114,11 @@ image: CBW_bigdata_icon.jpg
 
    *<font color="#827e9c">George Mihaiescu</font>*
   
-  Lecture:
+  [Lecture](https://bioinformatics.ca/big-data-module-4-2016)  
 
-  Lab practical:
+  [Lab lecture](https://bioinformatics.ca/big-data-module-4-lab-2016)
+
+  [Lab practical](http://bioinformatics-ca.github.io/bioinformatics_on_big_data_module4_lab/)
 
 [&uarr;](#back_to_top)
 
@@ -122,9 +126,11 @@ image: CBW_bigdata_icon.jpg
 
    *<font color="#827e9c">Christina Yung</font>*
  
- Lecture:
+ [Lecture](https://bioinformatics.ca/big-data-module-5-2016)  
+ 
+ [Lab lecture](https://bioinformatics.ca/big-data-module-5-lab-2016)  
 
- Lab practical:
+ [Lab practical](http://bioinformatics-ca.github.io/bioinformatics_on_big_data_module5_lab/)
 
 [&uarr;](#back_to_top)
 
