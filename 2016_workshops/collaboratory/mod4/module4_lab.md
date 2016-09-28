@@ -15,8 +15,6 @@ This lab was created by George Mihaiescu
 
 ### Description of the lab
 
-*write description here something like:*
-
 Welcome to the lab for Sharing and Scaling a VM! 
 
 After this lab, you will be able to:
@@ -27,32 +25,15 @@ After this lab, you will be able to:
 
 Things to know before you start:
 
-The lab may take between 1-2 hours, depending on your familiarity with Cloud Computing and VMs. Don't worry if you don't complete the lab! It will be made available for you to complete later.   
-There are a few thought-provoking Questions or Notes pertaining to sections of the lab. These are optional, and may take more time, but are meant to help you better understand the the tasks you are performing. These questions will be denoted by boxes, as follows:
+The lab may take between 1-2 hours, depending on your familiarity with Cloud Computing and VMs.   
 
-   Question(s):
-
-   * Thought-provoking question goes here
-   
 ### Requirements
 
 * Laptop connected to OICR's wifi network  
 * Web browser  
 * The VM from Module 3 Lab
 
-
-
-## Customize Your VM
-
-Install some packages.
-
-```
-apt-get –y install vim atop
-``
-
-## Prepare to Take a Snapshot
-
-SSH into the VM configured in Module 3 Lab
+Log back into the VM configured in Module 3.
 
 ### For Mac/Linux Users
 
@@ -61,17 +42,31 @@ To log back in, open terminal and type:
 ```bash
  ssh -i path_to_private_key ubuntu@142.1.177.XXX
 ```
+
 XXX is the last octet from the floating IP address you assigned to the instance.
 
 ### For Windows Users
 
 To log back in, open PuTTY and double-click on "Collaboratory" to login.
 
+## Customize Your VM
+
+Install some packages.
+
+```
+sudo apt-get –y install vim atop
+```
+
+## Prepare to Take a Snapshot
+
+SSH into the VM configured in Module 3 Lab
+
 ### Clean Up Its History
 
 ```
 rm -i ~/.bash_history
 ```
+
 **Note:** the `-i` option in `rm` will prompt you to answer yes or no to remove a file.  It's a good idea to use `-i` with `rm` so that you don't inadvertently delete the wrong thing.
 
 Remove your public key from the default user’s “authorized_keys” file, so they don’t have free access to virtual machines based on the snapshot.
