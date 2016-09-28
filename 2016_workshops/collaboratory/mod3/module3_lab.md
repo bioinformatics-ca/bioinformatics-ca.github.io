@@ -50,21 +50,29 @@ Once logged in, the first page open will be the "Overview Page" that shows how m
 
 ### Create a SSH Key-pair
 
+#### In the Collaboratory
+
+This is the method we will be using for this workshop.
+
+In the bar on the left of the page, click on "Access and Security."  At the top of the page, under "Access and Security", select the "Key Pairs" tab.  Click on the "Create Key Pair" button.  Name your key-pair and click on the "Create Key Pair" button.
+
+![image_aa](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_c.png?raw=true)
+
 #### On Windows with PuTTY
 
-The [PuTTY Key Generator](https://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe) can be used to create SSH Key-pairs.  Once the program is installed, open it and click on "Generate."
+If you are using a Windows computer and do not have access to Collaboratory the [PuTTY Key Generator](https://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe) can be used to create SSH Key-pairs.  Once the program is installed, open it and click on "Generate."
 
-![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_aa.png?raw=true)
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_aa.png?raw=true" class="center">
 
-![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_bb.png?raw=true)
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_bb.png?raw=true" class="center">
 
 Once the key is generated, you can add a Key comment (ie your name and the date the key was created) and key passphrases.  The key can be saved as a public key or a private key.
 
-![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_cc.png?raw=true)
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_cc.png?raw=true" class="center">
 
 #### On Mac/Linux
 
-In Terminal, the command `ssh-keygen` can be used to create SSH key-pairs.  You will be prompted to enter a file name for the key and a passphrase.  Leaving the file name blank will save the key /home/user/.ssh/id_rsa file.
+If you are using a Unix system and do not have access to Collaboratory in Terminal, the command `ssh-keygen` can be used to create SSH key-pairs.  You will be prompted to enter a file name for the key and a passphrase.  Leaving the file name blank will save the key /home/user/.ssh/id_rsa file.
 
 ```
 ssh-keygen
@@ -87,12 +95,6 @@ id_rsa.pub
 chmod 400 ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub
 ```
-
-#### In the Collaboratory
-
-In the bar on the left of the page, click on "Access and Security."  At the top of the page, under "Access and Security", select the "Key Pairs" tab.  Click on the "Create Key Pair" button.  Name your key-pair and click on the "Create Key Pair" button.
-
-![image_aa](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_c.png?raw=true)
 
 ### Import an Existing SSH Key-pair
 
