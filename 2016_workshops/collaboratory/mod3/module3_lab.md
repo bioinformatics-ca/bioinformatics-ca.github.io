@@ -62,13 +62,13 @@ In the bar on the left of the page, click on "Access and Security."  At the top 
 
 If you are using a Windows computer and do not have access to Collaboratory the [PuTTY Key Generator](https://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe) can be used to create SSH Key-pairs.  Once the program is installed, open it and click on "Generate."
 
-<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_aa.png?raw=true" class="center">
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_aa.png?raw=true" class="center" width="200">
 
-<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_bb.png?raw=true" class="center">
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_bb.png?raw=true" class="center" width="200">
 
 Once the key is generated, you can add a Key comment (ie your name and the date the key was created) and key passphrases.  The key can be saved as a public key or a private key.
 
-<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_cc.png?raw=true" class="center">
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_cc.png?raw=true" class="center" width="200">
 
 #### On Mac/Linux
 
