@@ -150,6 +150,8 @@ Now when the instructor whose project ID is a295a12382ef451b9bf2353d624455bb is 
 
 ## Using `cloud-init` to Bootstrap a VM
 
+You can use `cloud-init` to automate all the steps that you did manually from the previous lab.
+
 Launch a new Ubuntu 16.04 instance using flavor c1.micro.  Under the “Post-creation” tab select “Direct Input” from the drop-down menu and paste the following:
 
 ```
@@ -176,4 +178,6 @@ cd /tmp && sudo python3 -m http.server 80 &
 Monitor the bootstrap progress by checking the boot console output in “Instance details” under the “Log” tab.
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod4/mod4_g.png?raw=true)
+
+When this completes, you can assign a floating IP.  If you browse to the IP, you can see the bamstats report.
 
