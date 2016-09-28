@@ -15,8 +15,6 @@ This lab was created by George Mihaiescu
 
 ### Description of the lab
 
-*write description here something like:*
-
 Welcome to the lab for Working Reproducibly in the Cloud! This lab will take you through the steps to setup and configure your virtual machine with Docker packages and will show you how to access data in the Cloud.
 
 After this lab, you will be able to:
@@ -56,9 +54,49 @@ Once logged in, the first page open will be the "Overview Page" that shows how m
 
 ### Create a SSH Key-pair
 
+#### On Windows with PuTTY
+
+The [PuTTY Key Generator](https://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe) can be used to create SSH Key-pairs.  Once the program is installed, open it and click on "Generate."
+
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_aa.png?raw=true)
+
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_bb.png?raw=true)
+
+Once the key is generated, you can add a Key comment (ie your name and the date the key was created) and key passphrases.  The key can be saved as a public key or a private key.
+
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_cc.png?raw=true)
+
+#### On Mac/Linux
+
+In Terminal, the command `ssh-keygen` can be used to create SSH key-pairs.  You will be prompted to enter a file name for the key and a passphrase.  Leaving the file name blank will save the key /home/user/.ssh/id_rsa file.
+
+```
+ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in testkey.txt.
+Your public key has been saved in testkey.txt.pub.
+The key fingerprint is:
+SHA256:OnHW+VAa/n05qiS2V0HqHbaWAln9J0njgy9zbwYFIa8
+```
+
+You will need to change the permissions on the key.  Use `ls` to view the files in your .ssh directory and `chmod` to change the permissions.  Use `cat` to view the contents of the key file.
+
+```
+ls ~/.ssh
+id_rsa
+id_rsa.pub
+chmod 400 ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub
+```
+
+#### In the Collaboratory
+
 In the bar on the left of the page, click on "Access and Security."  At the top of the page, under "Access and Security", select the "Key Pairs" tab.  Click on the "Create Key Pair" button.  Name your key-pair and click on the "Create Key Pair" button.
 
-![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_c.png?raw=true)
+![image_aa](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_c.png?raw=true)
 
 ### Import an Existing SSH Key-pair
 
@@ -182,6 +220,26 @@ XXX is the last octet from the floating IP address you assign to the instance.
 * In the left hand categories, click on Session.  In the Saved Sessions field write **Collaboratory** and click save.
 
 **Now that Putty is configured**, all you have to do is start PuTTY and double-click on "Collaboratory" to login.
+
+## Testing SSH Login
+
+### With Windows
+
+In PuTTY, expand the "Connection" node, and the "SSH" node.
+
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_dd.png?raw=true)
+
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_ee.png?raw=true)
+
+
+### With Mac/Linux
+
+```
+ssh username@vp_ip
+```
+
+This will show the last time you logged in.
+
 
 ## Customize Your Virtual Machine
 
