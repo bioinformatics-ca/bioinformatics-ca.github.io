@@ -26,19 +26,15 @@ After this lab, you will be able to:
 
 Things to know before you start:
 
-The lab may take between 1-2 hours, depending on your familiarity with Cloud Computing and alignment tasks. Don't worry if you don't complete the lab! It will be made available for you to complete later.   
-There are a few thought-provoking Questions or Notes pertaining to sections of the lab. These are optional, and may take more time, but are meant to help you better understand the visualizations you are seeing. These questions will be denoted by boxes, as follows:
-
-   Question(s):
-
-   * Thought-provoking question goes here
+The lab may take between 1-2 hours, depending on your familiarity with Cloud Computing and alignment tasks.
    
 ### Requirements
 
 * Laptop connected to OICR's wifi network  
 * Web browser
-* Collaboratory credentials
+* Collaboratory credentials 
 
+**Note:** The Collaboratory credentials you are given for the workshop will only work during the workshop.
 
 ## Log In to the Collaboratory
 
@@ -113,7 +109,7 @@ You will need to know your IP address for this.  To find you IP address, open a 
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_e.png?raw=true)
 
-Return to the Collaboratory page.  Select the "Security Groups" tab and click on the "Create Security Group" button.  Name your security group and write a description.  CLick on "Create Security Group".
+Return to the Collaboratory page.  Select the "Security Groups" tab and click on the "Create Security Group" button.  Name your security group (ie ssh_yourname) and write a description.  Click on "Create Security Group".
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_f.png?raw=true)
 
@@ -122,18 +118,18 @@ You will need to allow SSH access from your IP address.  Beside the name for the
 In the dropdown menus and boxes, select or enter:  
 * Custom TCP Rule   
 * Ingress  
-* Port
-* 22
-* CIDR
-* your IP address
+* Port  
+* 22  
+* CIDR  
+* your IP address  
 
 Repeat this step and add a second rule with allowing TCP port 80:
 * Custom TCP Rule   
 * Ingress  
-* Port
-* 80
-* CIDR
-* your IP address
+* Port  
+* 80  
+* CIDR  
+* your IP address  
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_g.png?raw=true)
 
@@ -168,8 +164,6 @@ Select the "Networking" tab.  Choose the appropriate network.
 Launch the instance by hitting the "Launch" button.
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_l.png?raw=true)
-
-??? Fields from first launch image don't match last image.  Which are the correct entries?
 
 It will take a few minutes for the instance to start.
 
@@ -213,33 +207,13 @@ XXX is the last octet from the floating IP address you assign to the instance.
 
 <img src="../../../resources/Putty_Data_Options.png" alt="Putty Data Options" class="center"> 
 
-* In the left hand categories, in the Connection category next to SSH click on the **+**. Click on Auth. In the private-key file for authentication field, hit browse and find the your private key.
+* In the left hand categories, in the Connection category next to SSH click on the **+**. Click on Auth. In the private-key file for authentication field, hit browse and find your private key.
 
 <img src="../../../resources/Putty_Auth_Options.png" alt="Putty Auth Options" class="center">
 
 * In the left hand categories, click on Session.  In the Saved Sessions field write **Collaboratory** and click save.
 
 **Now that Putty is configured**, all you have to do is start PuTTY and double-click on "Collaboratory" to login.
-
-## Testing SSH Login
-
-### With Windows
-
-In PuTTY, expand the "Connection" node, and the "SSH" node.
-
-![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_dd.png?raw=true)
-
-![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_ee.png?raw=true)
-
-
-### With Mac/Linux
-
-```
-ssh username@vp_ip
-```
-
-This will show the last time you logged in.
-
 
 ## Customize Your Virtual Machine
 
@@ -269,7 +243,7 @@ sudo service docker start
 sudo docker run hello-world
 ```
 
-
+This will install Docker and run hello-world to test the installation.
 
 ## Run a Bioinformatics Tool in Docker
 
@@ -291,7 +265,7 @@ Run the container, mounting the sample file inside.
 sudo docker run -it -v `pwd`/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam:/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam -v /tmp:/home/ubuntu quay.io/briandoconnor/dockstore-tool-bamstats
 ```
 
-In this command, `-it` means run interactively and `-v` maps a file or directory from the VM inside the Docker container.
+In this command, `-it` means run interactively and `-v` maps a file or directory from the VM inside the Docker container.  Whatever is created inside /home/ubuntu (inside the container) will be in the host tmp directory.  This will allow the files that are create to survive after the container is terminated.
 
 The OS inside the Docker container is different than that of the host VM.  You can check this with:
 
@@ -310,10 +284,10 @@ cd && /usr/local/bin/bamstats 4 /NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.2
 Exit the docker container by typing "exit" and go to "/tmp" where the report was created.
 
 ```
-   exit
-	cd /tmp 
-	unzip bamstats_report.zip 
-	sudo python3 -m http.server
+exit
+cd /tmp 
+unzip bamstats_report.zip 
+sudo python3 -m http.server
 ```
 
 Visit the page to see the statistics for that sample BAM:
