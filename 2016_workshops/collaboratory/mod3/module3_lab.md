@@ -54,7 +54,7 @@ Once logged in, the first page open will be the "Overview Page" that shows how m
 
 This is the method we will be using for this workshop.
 
-In the bar on the left of the page, click on "Access and Security."  At the top of the page, under "Access and Security", select the "Key Pairs" tab.  Click on the "Create Key Pair" button.  Name your key-pair and click on the "Create Key Pair" button.
+In the bar on the left of the page, click on "Access and Security."  At the top of the page, under "Access and Security", select the "Key Pairs" tab.  Click on the "Create Key Pair" button.  Name your key-pair and click on the "Create Key Pair" button.  This will prompt you to save a file to your computer.  Take note where you save this because you will need to find it later.
 
 ![image_aa](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_c.png?raw=true)
 
@@ -62,13 +62,13 @@ In the bar on the left of the page, click on "Access and Security."  At the top 
 
 If you are using a Windows computer and do not have access to Collaboratory the [PuTTY Key Generator](https://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe) can be used to create SSH Key-pairs.  Once the program is installed, open it and click on "Generate."
 
-<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_aa.png?raw=true" class="center" width="200">
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_aa.png?raw=true" class="center" width="400">
 
-<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_bb.png?raw=true" class="center" width="200">
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_bb.png?raw=true" class="center" width="400">
 
 Once the key is generated, you can add a Key comment (ie your name and the date the key was created) and key passphrases.  The key can be saved as a public key or a private key.
 
-<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_cc.png?raw=true" class="center" width="200">
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_cc.png?raw=true" class="center" width="400">
 
 #### On Mac/Linux
 
@@ -173,6 +173,16 @@ To view your instances, in the left hand menu, click on "Instances".
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_m.png?raw=true)
 
+## Associate a Floating/Public IP Address
+
+By default, the VM will have a private IP allocated that is only reachable from inside your virtual network (other VMs connected to the same network).
+
+It is recommended to associate a floating/public IP address only  to a single VM and use that one as a “jumpserver”.
+
+From the "Compute" menu, select "Instances."  Beside the name of your instance, select "Associate Floating IP."
+
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_aaa.png?raw=true)
+
 ## Log Into Your Instance
 
 ### Mac/Linux Instructions
@@ -183,7 +193,7 @@ You will need to change the file permissions for your private SSH key.
  chmod 400 path_to_private_key
 ```
 
-Where `path_to_private_key` is the path to where you have saved your key.
+Where `path_to_private_key` is the path to where you have saved your key after you created it in the first steps.
 
 
 Then, to log in:
@@ -209,7 +219,7 @@ XXX is the last octet from the floating IP address you assign to the instance.
 
 <img src="../../../resources/Putty_Data_Options.png" alt="Putty Data Options" class="center"> 
 
-* In the left hand categories, in the Connection category next to SSH click on the **+**. Click on Auth. In the private-key file for authentication field, hit browse and find your private key.
+* In the left hand categories, in the Connection category next to SSH click on the **+**. Click on Auth. In the private-key file for authentication field, hit browse and find your private key, the file you downloaded previously.
 
 <img src="../../../resources/Putty_Auth_Options.png" alt="Putty Auth Options" class="center">
 
@@ -300,7 +310,33 @@ XXX is the last octet from the floating IP address you assigned to the instance.
 
 ## Access Data in the Cloud
 
-**Note that you need DACO approval to access ICGC data stored in the Cloud**
+ICGC (stored at GNOS sites, Collaboratory, AWS S3) and TCGA (stored at cgHub and GDC) are indexed at https://dcc.icgc.org/repositories.
+
+Other data sets are usually available on-line and can be accessed over HTTP(s) protocol.
+
+Data repositories have different access policies and download clients:
+http://docs.icgc.org/cloud/repositories/#download-client-operation_1
+
+OICR created a unified client that can be used to download data from multiple repos: http://docs.icgc.org/cloud/icgc-get/
+
+### Collaboratory Data
+
+You need DACO approval to access ICGC data stored in the Cloud.
+
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_bbb.png?raw=true)
+
+### Storage Client
+
+In addition to a token scoped for the right environment (AWS or Collaboratory), you need a storage client in order to download ICGC data.
+
+The storage client is provided as a tarball or packaged in a Docker container (http://docs.icgc.org/cloud/guide/).
+
+Advanced functionality provided by the storage client:  
+* Fast parallel download of remote objects with option to resume an interrupted download session  
+* Single file download or manifest based download  
+* Generate a pre-signed URL for a file that can be used to download with WGET or cURL  
+
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_ccc.png?raw=true)
 
 **The following exercises will be done by the instructor only**
 
@@ -339,6 +375,8 @@ sudo docker run -v /tmp/:/data -v /home/ubuntu/application.properties:/icgc/icgc
 It takes around 30 min for a 120 GB file to be downloaded using a VM with 8 cores and 56 GB of RAM, including the time needed by the storage client to perform an automated checksum to verify downloaded data integrity.
 
 The download speed depends on the disk IO which is shared with other VMs running on the same physical server, as well as other shared resources (network, storage cluster).
+
+![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_ddd.png?raw=true)
 
 ### Important Notes
 
