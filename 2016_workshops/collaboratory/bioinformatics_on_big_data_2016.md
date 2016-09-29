@@ -88,7 +88,7 @@ image: CBW_bigdata_icon.jpg
 
    *<font color="#827e9c">Francis Ouellette</font>*
 
-  Lecture:
+  [Lecture](https://bioinformatics.ca/big-data-module-1-2016)  
 
 [&uarr;](#back_to_top)
 
