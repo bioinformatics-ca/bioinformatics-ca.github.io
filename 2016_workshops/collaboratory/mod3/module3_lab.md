@@ -58,6 +58,8 @@ In the bar on the left of the page, click on "Access and Security."  At the top 
 
 ![image_aa](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_c.png?raw=true)
 
+**Note:** Collaboratory currently creates key-pairs that work only with Mac/Linux.  If you create a key-pair with Collaboratory and want to use it with Windows, use [PuTTY Key Generator](https://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe) to convert the key-pair to a Windows key-pair.   
+
 #### On Windows with PuTTY
 
 If you are using a Windows computer and do not have access to Collaboratory the [PuTTY Key Generator](https://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe) can be used to create SSH Key-pairs.  Once the program is installed, open it and click on "Generate."
@@ -299,7 +301,7 @@ Exit the docker container by typing "exit" and go to "/tmp" where the report was
 exit
 cd /tmp 
 unzip bamstats_report.zip 
-sudo python3 -m http.server
+sudo python3 -m http.server 80
 ```
 
 Visit the page to see the statistics for that sample BAM:
