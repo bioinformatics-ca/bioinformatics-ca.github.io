@@ -48,6 +48,10 @@ image: CBW_bigdata_icon.jpg
 
 [&uarr;](#back_to_top)
 
+### Class Photo
+
+![class](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/cbw-sept-29.jpg?raw=true)
+
 ###  Laptop Setup Instructions <a id="laptop_setup"></a>
 
   Instructions to setup your laptop can be found <a href="https://raw.githubusercontent.com/bioinformatics-ca/bioinformatics-ca.github.io/master/2016_workshops/collaboratory/laptop_setup.txt">here</a>.
