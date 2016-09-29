@@ -177,7 +177,7 @@ To view your instances, in the left hand menu, click on "Instances".
 
 By default, the VM will have a private IP allocated that is only reachable from inside your virtual network (other VMs connected to the same network).
 
-It is recommended to associate a floating/public IP address only  to a single VM and use that one as a “jumpserver”.
+It is recommended to associate a floating/public IP address only to a single VM and use that one as a “jumpserver”.
 
 From the "Compute" menu, select "Instances."  Beside the name of your instance, select "Associate Floating IP."
 
@@ -277,7 +277,7 @@ Run the container, mounting the sample file inside.
 sudo docker run -it -v `pwd`/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam:/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam -v /tmp:/home/ubuntu quay.io/briandoconnor/dockstore-tool-bamstats
 ```
 
-In this command, `-it` means run interactively and `-v` maps a file or directory from the VM inside the Docker container.  Whatever is created inside /home/ubuntu (inside the container) will be in the host tmp directory.  This will allow the files that are create to survive after the container is terminated.
+In this command, `-it` means run interactively and `-v` maps a file or directory from the VM inside the Docker container.  Whatever is created inside /home/ubuntu (inside the container) will be in the host tmp directory.  This will allow the files that are created to survive after the container is terminated.
 
 The OS inside the Docker container is different than that of the host VM.  You can check this with:
 
@@ -317,11 +317,33 @@ Other data sets are usually available on-line and can be accessed over HTTP(s) p
 Data repositories have different access policies and download clients:
 http://docs.icgc.org/cloud/repositories/#download-client-operation_1
 
-OICR created a unified client that can be used to download data from multiple repos: http://docs.icgc.org/cloud/icgc-get/
+OICR created a unified client that can be used to download data from multiple repos http://docs.icgc.org/cloud/icgc-get/ which is under active development, so for this lab we will use the "storage client".
 
 ### Collaboratory Data
 
-You need DACO approval to access ICGC data stored in the Cloud.
+You need DACO approval to access ICGC data stored in the Cloud, but for this workshop we uploaded a set of BAM files that are open access which can be used to test the functionality of the storage client. The same methodology can be used to download protected data, if a valid access token is used. 
+
+Below is the list of open-access BAM files and their object IDs:
+
+HCC1143.bam.bai         dae332b8-107f-5e58-aefa-5c00de5d0bb3
+HCC1143_BL.bam          561d9ddf-bbbc-5988-91c5-3c46d0d67ebe
+HCC1143_BL.bam.bai      40c1b7a1-980e-57c5-9b82-538f1fdd5fc1
+HCC1143_BL.RG1.bam      caa34f59-f93f-53d3-aca0-03a18b8f7892
+HCC1143_BL.RG2.bam      09a31178-48e9-5632-9085-a8a34c6144e3
+HCC1143_BL.RG3.bam      08a65e40-4ff0-547d-89cf-b0a2859a5602
+HCC1143_BL.RG4.bam      ddd9d9e0-ac67-50b4-8a57-d8854372269c
+HCC1143_BL.RG5.bam      3825dd85-cd0c-5121-9c05-0ce3e5883a08
+HCC1143_BL.RG6.bam      fd858cf7-e19b-566a-98cc-63516d607f2d
+HCC1143_BL.RG7.bam      9ea3f173-2c6a-5dc8-974c-a0887f99c15f
+HCC1143_BL.RG8.bam      75931e5b-ac08-57d6-b6d2-792e1609c588
+HCC1143_BL.RG9.bam      cff12c98-3ce7-5afa-8509-ba4a69880119
+HCC1143_BL.RG10.bam     95ce9fda-b0aa-5e79-ae2b-74555031fee4
+HCC1143_BL.RG11.bam     350d1d46-ddd1-5d67-bad0-94b29358cd2a
+HCC1143_BL.RG12.bam     927dd39e-1199-55ac-b051-58b738c88bcb
+HCC1143_BL.RG13.bam     147356e1-80cb-598a-ad0b-86007b92cb5e
+HCC1143_BL.RG14.bam     b5e1eb25-c297-53f9-b04f-0261b7c2a1f7
+HCC1143_BL.RG15.bam     9717921b-67f3-5914-8c66-db3ef1ad6d61
+HCC1143_BL.RG16.bam     891f33b1-b355-525e-a4e4-87a0397f5be4
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_bbb.png?raw=true)
 
@@ -334,13 +356,14 @@ The storage client is provided as a tarball or packaged in a Docker container (h
 Advanced functionality provided by the storage client:  
 * Fast parallel download of remote objects with option to resume an interrupted download session  
 * Single file download or manifest based download  
-* Generate a pre-signed URL for a file that can be used to download with WGET or cURL  
+* Generate a pre-signed temporary URL (24 hours) for a file that can be used to download with WGET or cURL  
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_ccc.png?raw=true)
 
-**The following exercises will be done by the instructor only**
 
 ### Create a Configuration File
+
+By default, the storage client only uses a single core for downloading, so it's important to adapt its configuration to your local environment.
 
 First, determine how many cores and how much memory you can allocate to the download.
 
@@ -353,12 +376,12 @@ On a VM with 8 cores and 55 GB of RAM, you can allocate 7 cores and 49 GB of RAM
 
 ```
 cat application.properties
-accessToken=XXX
+#accessToken=XXX ## you would have to uncomment this line and add a valid ICGC token in order to access protected-data
 transport.parallel=7
 transport.memory=7
 ```
 
-### Download Protected Data
+### How to Download Data using the storage client
 
 Pull the Docker container containing the storage client.
 
@@ -366,10 +389,10 @@ Pull the Docker container containing the storage client.
  docker pull icgc/icgc-storage-client
 ```
 
-Initiate the download, mounting the application.properties file as well as the destination directory for the download (-v /tmp/:/data),  so it survives the termination of the Docker container:
+Choose an object_id from the list above containing open-data files, and initiate the download, mounting the application.properties file as well as the destination directory for the download (-v /tmp/:/data),  so it survives the termination of the Docker container:
 
 ```
-sudo docker run -v /tmp/:/data -v /home/ubuntu/application.properties:/icgc/icgc-storage-client/conf/application.properties --privileged icgc/icgc-storage-client bin/icgc-storage-client --profile collab download --object-id 6329334b-dcd5-53c8-98fd-9812ac386d30 --output-dir /data
+sudo docker run -v /tmp/:/data -v /home/ubuntu/application.properties:/icgc/icgc-storage-client/conf/application.properties --privileged icgc/icgc-storage-client bin/icgc-storage-client --profile collab download --object-id OBJECT_ID --output-dir /data
 ```
 
 It takes around 30 min for a 120 GB file to be downloaded using a VM with 8 cores and 56 GB of RAM, including the time needed by the storage client to perform an automated checksum to verify downloaded data integrity.
@@ -388,7 +411,7 @@ Download of ICGC protected data from S3 is only available within the “us-east-
 
 It is the responsibility of the users to protect access to the EC2 or Collaboratory VMs, as well as the restricted data they have access to.
 
-
+Do not snapshot a VM that contains confidential tokens or protected data if the snapshot is intended to be shared with other cloud users. Also, keep in mind that other member of the same project as you could start instances from your snapshot and by doing so, have access to the data or tokens you left inside.
 
 
 
