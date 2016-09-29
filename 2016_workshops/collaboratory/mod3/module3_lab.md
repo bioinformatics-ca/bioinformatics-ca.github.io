@@ -390,7 +390,7 @@ transport.memory=7
 Pull the Docker container containing the storage client.
 
 ```
- docker pull icgc/icgc-storage-client
+ sudo docker pull icgc/icgc-storage-client
 ```
 
 Choose an object_id from the list above containing open-data files, and initiate the download, mounting the application.properties file as well as the destination directory for the download (-v /tmp/:/data),  so it survives the termination of the Docker container:
