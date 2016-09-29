@@ -29,8 +29,15 @@ The lab may take between 1-2 hours, depending on your familiarity with Cloud Com
    
 ### Requirments
 
-* A fresh VM
-* Ubuntu 16
+Set up a fresh VM by following the instructions in [Module 3 lab] (https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/module3_lab.md), but with the following changes:
+* choose flavor c1.large
+* don't assign a floating IP
+
+Without a floating IP, this VM is only accessible from Collaboratory.  Note that there are often not enough floating IPs for all VMs when you're running a fleet.  So you'll have to set up a "jump server" as a getway to ssh from outside into Collaboratory.  Then from the jump server, you can ssh into any of the VMs in your fleet.  We'll use the VM (c1.micro) you've set up for Modules 3 and 4 as a jump server.  If you haven't already done so, add your prviate key to the jump server.  From the console, find the IP address of the new c1.large VM and ssh into it.
+
+```
+ssh -i path_to_private_key ubuntu@10.0.0.XXX
+```
 
 ## Setting up your VM
 
@@ -146,18 +153,15 @@ dockstore tool convert cwl2json --cwl Dockstore.cwl > Dockstore.json
 
 #### Download an existing file
 
-An existing input JSON file can be found here.
+An existing input JSON file can be found here.  Edit it if you wish, but note that '~' if used in the JSON is not interpreted as home directory.
 ```
-wget https://raw.githubusercontent.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/develop/Dockstore_cwl.json
+wget https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/module5_lab/sample_input.json
 ```
 
-Once you have an input JSON file, edit it as necessary.
-*Note:* The example file above uses Amazon S3 for output. You will probably want to change that to store your output locally.
+Create a directory for the output data.  We use '~/tmp' in the example JSON.
 ```
-mkdir ~/output
+mkdir ~/tmp
 ```
-Open the JSON file, and edit the paths for the 4 parameters: merged\_output\_\*.  Replace 's3://oicr.temp/testing-bwa-workflow' with '/home/ubuntu/output'.  Note that '~' if used in the JSON is not interpreted as home directory.
-
 
 ### Run it locally with the Dockstore CLI
 
