@@ -30,6 +30,7 @@ The lab may take between 1-2 hours, depending on your familiarity with Cloud Com
 ### Requirments
 
 Set up a fresh VM by following the instructions in [Module 3 lab] (https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/module3_lab.md), but with the following changes:
+
 * choose flavor c1.large
 * don't assign a floating IP
 
@@ -154,8 +155,9 @@ dockstore tool convert cwl2json --cwl Dockstore.cwl > Dockstore.json
 #### Download an existing file
 
 An existing input JSON file can be found here.  Edit it if you wish, but note that '~' if used in the JSON is not interpreted as home directory.
+
 ```
-wget https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/module5_lab/sample_input.json
+wget https://raw.githubusercontent.com/bioinformatics-ca/bioinformatics-ca.github.io/master/2016_workshops/collaboratory/module5_lab/sample_input.json
 ```
 
 Create a directory for the output data.  We use '~/tmp' in the example JSON.
