@@ -325,6 +325,7 @@ You need DACO approval to access ICGC data stored in the Cloud, but for this wor
 
 Below is the list of open-access BAM files and their object IDs:
 
+```
 HCC1143.bam.bai         dae332b8-107f-5e58-aefa-5c00de5d0bb3
 HCC1143_BL.bam          561d9ddf-bbbc-5988-91c5-3c46d0d67ebe
 HCC1143_BL.bam.bai      40c1b7a1-980e-57c5-9b82-538f1fdd5fc1
@@ -344,6 +345,7 @@ HCC1143_BL.RG13.bam     147356e1-80cb-598a-ad0b-86007b92cb5e
 HCC1143_BL.RG14.bam     b5e1eb25-c297-53f9-b04f-0261b7c2a1f7
 HCC1143_BL.RG15.bam     9717921b-67f3-5914-8c66-db3ef1ad6d61
 HCC1143_BL.RG16.bam     891f33b1-b355-525e-a4e4-87a0397f5be4
+```
 
 ![image_a](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/mod3_bbb.png?raw=true)
 
