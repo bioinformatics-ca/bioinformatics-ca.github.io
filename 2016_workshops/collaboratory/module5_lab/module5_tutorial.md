@@ -29,9 +29,9 @@ The lab may take between 1-2 hours, depending on your familiarity with Cloud Com
    
 ### Requirments
 
-Set up a fresh VM by following the instructions in [Module 3 lab] (https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/mod3/module3_lab.md), but with the following changes:
-* choose flavor c1.large
-* don't assign a floating IP
+Set up a fresh VM by following the instructions in [Module 3 lab](http://bioinformatics-ca.github.io/bioinformatics_on_big_data_module3_lab/), but with the following changes:  
+* choose flavor c1.large  
+* don't assign a floating IP  
 
 Without a floating IP, this VM is only accessible from Collaboratory.  Note that there are often not enough floating IPs for all VMs when you're running a fleet.  So you'll have to set up a "jump server" as a getway to ssh from outside into Collaboratory.  Then from the jump server, you can ssh into any of the VMs in your fleet.  We'll use the VM (c1.micro) you've set up for Modules 3 and 4 as a jump server.  If you haven't already done so, add your prviate key to the jump server.  From the console, find the IP address of the new c1.large VM and ssh into it.
 
@@ -63,11 +63,13 @@ chomd u+x dockstore
 ### Add the location of the dockstore script to $PATH. 
 
 Using your favourite text editor (try pico if you don't have one), add this line to the end of ~/.bashrc:
+
 ```
 PATH=$PATH:~/sbin
 ```
 
 Now, set up the dockstore configuration file:
+
 ```
 cd ~
 mkdir -p ~/.dockstore
@@ -138,6 +140,7 @@ The dockstore CLI will download the CWL file for the tool specified by `--entry`
 ```
 dockstore tool cwl --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 > Dockstore.cwl
 ```
+
 *Note:* If you get an error "dockstore: command not found", that's because you haven't logged out and logged back in after adding yourself to the docker group.
 
 
@@ -147,6 +150,7 @@ dockstore tool cwl --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 >
 #### Generate the JSON file
 
 JSON files can be automatically generated from the CWL file. You will have to fill in the default values in this file.
+
 ```
 dockstore tool convert cwl2json --cwl Dockstore.cwl > Dockstore.json
 ```
@@ -154,11 +158,13 @@ dockstore tool convert cwl2json --cwl Dockstore.cwl > Dockstore.json
 #### Download an existing file
 
 An existing input JSON file can be found here.  Edit it if you wish, but note that '~' if used in the JSON is not interpreted as home directory.
+
 ```
 wget https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/2016_workshops/collaboratory/module5_lab/sample_input.json
 ```
 
 Create a directory for the output data.  We use '~/tmp' in the example JSON.
+
 ```
 mkdir ~/tmp
 ```
