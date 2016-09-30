@@ -64,11 +64,13 @@ chomd u+x dockstore
 ### Add the location of the dockstore script to $PATH. 
 
 Using your favourite text editor (try pico if you don't have one), add this line to the end of ~/.bashrc:
+
 ```
 PATH=$PATH:~/sbin
 ```
 
 Now, set up the dockstore configuration file:
+
 ```
 cd ~
 mkdir -p ~/.dockstore
