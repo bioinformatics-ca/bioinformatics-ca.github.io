@@ -168,9 +168,11 @@ wget https://raw.githubusercontent.com/bioinformatics-ca/bioinformatics-ca.githu
 mkdir ~/tmp
 ```
 
-You are ready to run BWA-Mem using the Dockstore CLI (see below).  However, if you have time, try downloading the input data (unaligned BAM) to your VM using the icgc-storage-client.  In Module 3, you ran icgc-storage-client as a Docker.  We'll now run it as a command line tool.  To install the tool,
+You are ready to run BWA-Mem using the Dockstore CLI (see below).  However, if you have time, try downloading the input data (unaligned BAM) to your VM using the icgc-storage-client.  In Module 3, you ran icgc-storage-client as a Docker.  We'll now run it as a command line tool.  
 
-#### Download unaligned BAMs using the icgc-storage-client
+### Download unaligned BAMs using the icgc-storage-client
+
+To install the tool,
 
 ```
 wget -O icgc-storage-client.tar.gz https://dcc.icgc.org/api/v1/ui/software/icgc-storage-client/latest
