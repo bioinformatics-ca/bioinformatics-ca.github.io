@@ -161,29 +161,39 @@ wget https://raw.githubusercontent.com/bioinformatics-ca/bioinformatics-ca.githu
 ```
 
 Create a directory for the output data.  We use '~/tmp' in the example JSON.
+
 ```
 mkdir ~/tmp
 ```
+
 You are ready to run BWA-Mem using the Dockstore CLI (see below).  However, if you have time, try downloading the input data (unaligned BAM) to your VM using the icgc-storage-client.  In Module 3, you ran icgc-storage-client as a Docker.  We'll now run it as a command line tool.  To install the tool,
+
 ```
 wget -O icgc-storage-client.tar.gz https://dcc.icgc.org/api/v1/ui/software/icgc-storage-client/latest
 tar -zxvf icgc-storage-client.tar.gz
 ```
+
 Here are the 2 unaligned BAMs with their object ids.  They are are open-access in Collaboratory and don't require a token.
+
 ```
 hg19.chr22.5x.normal.bam	26ed125c-bc28-552c-b82d-1de2561b3911
 hg19.chr22.5x.normal2.bam	1039a928-a767-5fe4-a50a-4e7af8ced828
 ```
+
 One way to download is to genereate a pre-signed URL, and download using curl or wget.  Remember to put quotes for the URL in the wget command.  Otherwise, you'll get a 403 error.
+
 ```
 mkdir input
 icgc-storage-client-1.0.21/bin/icgc-storage-client --profile collab url --object-id 1039a928-a767-5fe4-a50a-4e7af8ced828
 wget -O input/hg19.chr22.5x.normal2.bam "<pre-signed URL>"
 ```
+
 A second way to download is to use the icgc-storage client which will handle multi-part download and resume after interruption.
+
 ```
 icgc-storage-client-1.0.21/bin/icgc-storage-client --profile collab download --object-id 26ed125c-bc28-552c-b82d-1de2561b3911 --output-layout bundle --output-dir input
 ```
+
 You may want to organize the files in your input directory. Then edit the JSON sample_input.json to update under "reads" the paths to 2 unaligned BAMs.
 
 
