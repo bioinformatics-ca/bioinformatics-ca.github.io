@@ -58,7 +58,7 @@ mkdir -p ~/sbin
 cd ~/sbin
 sudo apt-get install wget
 wget https://github.com/ga4gh/dockstore/releases/download/1.0/dockstore
-chomd u+x dockstore
+chmod u+x dockstore
 ```
 
 ### Add the location of the dockstore script to $PATH. 
