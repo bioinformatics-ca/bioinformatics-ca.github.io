@@ -139,6 +139,7 @@ The dockstore CLI will download the CWL file for the tool specified by `--entry`
 ```
 dockstore tool cwl --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 > Dockstore.cwl
 ```
+
 *Note:* If you get an error "dockstore: command not found", that's because you haven't logged out and logged back in after adding yourself to the docker group.
 
 
@@ -148,6 +149,7 @@ dockstore tool cwl --entry quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8-cwl1 >
 #### Generate the JSON file
 
 JSON files can be automatically generated from the CWL file. You will have to fill in the default values in this file.
+
 ```
 dockstore tool convert cwl2json --cwl Dockstore.cwl > Dockstore.json
 ```
@@ -160,13 +162,15 @@ An existing input JSON file can be found here.  Edit it if you wish, but note th
 wget https://raw.githubusercontent.com/bioinformatics-ca/bioinformatics-ca.github.io/master/2016_workshops/collaboratory/module5_lab/sample_input.json
 ```
 
-Create a directory for the output data.  We use '~/tmp' in the example JSON.
+### Create a directory for the output data.  We use '~/tmp' in the example JSON.
 
 ```
 mkdir ~/tmp
 ```
 
 You are ready to run BWA-Mem using the Dockstore CLI (see below).  However, if you have time, try downloading the input data (unaligned BAM) to your VM using the icgc-storage-client.  In Module 3, you ran icgc-storage-client as a Docker.  We'll now run it as a command line tool.  To install the tool,
+
+#### Download unaligned BAMs using the icgc-storage-client
 
 ```
 wget -O icgc-storage-client.tar.gz https://dcc.icgc.org/api/v1/ui/software/icgc-storage-client/latest
