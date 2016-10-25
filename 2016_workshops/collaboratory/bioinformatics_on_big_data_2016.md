@@ -94,6 +94,8 @@ Your feedback is important to us.  Please complete [our workshop survey](https:/
 
   [Lecture](https://bioinformatics.ca/big-data-module-1-2016)  
 
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/9Pxto9I1BOg)
+
 [&uarr;](#back_to_top)
 
 ###  Module 2: Ethics of Data Usage and Security Best Practices <a id="module_2"></a>
@@ -102,9 +104,11 @@ Your feedback is important to us.  Please complete [our workshop survey](https:/
    
   [Lecture](https://bioinformatics.ca/big-data-module-2-2016)
 
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/iU4BJNDNMRE)
+
 [&uarr;](#back_to_top)
 
-###  Module 3: Module 3: Working Reproducibly in the Cloud <a id="module_3"></a>
+###  Module 3: Working Reproducibly in the Cloud <a id="module_3"></a>
 
    *<font color="#827e9c">George Mihaiescu</font>*
 
@@ -113,6 +117,8 @@ Your feedback is important to us.  Please complete [our workshop survey](https:/
   [Lab lecture](https://bioinformatics.ca/big-data-module-3-lab-2016)  
 
   [Lab practical](http://bioinformatics-ca.github.io/bioinformatics_on_big_data_module3_lab/)  
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/ScNmW2ddiDc)
 
 [&uarr;](#back_to_top)
 
@@ -128,6 +134,8 @@ Your feedback is important to us.  Please complete [our workshop survey](https:/
 
   [Lab practical](http://bioinformatics-ca.github.io/bioinformatics_on_big_data_module4_lab/)
 
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/49CU-P-Nr5E)
+
 [&uarr;](#back_to_top)
 
 ###  Module 5: Big Data Analysis in the Cloud <a id="module_5"></a>
@@ -139,6 +147,8 @@ Your feedback is important to us.  Please complete [our workshop survey](https:/
  [Lab lecture](https://bioinformatics.ca/big-data-module-5-lab-2016)  
 
  [Lab practical](http://bioinformatics-ca.github.io/bioinformatics_on_big_data_module5_lab/)
+
+<img src="https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/blob/master/images/Nova-Video-300px.png?raw=true" width="42"> [Recorded Lecture](https://youtu.be/LdPj5UKWtx0)
 
 [&uarr;](#back_to_top)
 
