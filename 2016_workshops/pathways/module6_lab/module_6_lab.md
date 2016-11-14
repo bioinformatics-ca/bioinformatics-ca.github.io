@@ -142,7 +142,7 @@ Create a network by importing a text file, run iRegulon to detect regulons, expl
 
    ●	Verify that the  ‘Mapping Type’ field is ‘Discrete Mapping’
 
-   ●	For the first interaction type, choose a color by clicking on the ‘Edit color’ button   on the right side of the color field. Choose a color and click the ‘OK’ button. 
+   ●	A number of different interaction types such as "co-expression" should appear. For the first of these interaction types, choose a color by clicking on the ‘Edit color’ button   on the right side of the color field. Choose a color and click the ‘OK’ button. 
 
    ●	Repeat that step, choosing a different color for each interaction type. The edges should now be colored by the types of interactions. 	
 
