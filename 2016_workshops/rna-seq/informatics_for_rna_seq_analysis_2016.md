@@ -187,17 +187,17 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lab practical](https://bioinformatics.ca/rnaseq-module-1-lab-2016)
   
-  [Installation](https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation)
+  [Installation](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Installation)
   
-  [Reference Genomes](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reference-Genome)
+  [Reference Genomes](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Reference-Genome)
   
-  [Annotations](https://github.com/griffithlab/rnaseq_tutorial/wiki/Annotation)
+  [Annotations](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Annotation)
   
-  [Indexing](https://github.com/griffithlab/rnaseq_tutorial/wiki/Indexing)
+  [Indexing](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Indexing)
   
-  [Data](https://github.com/griffithlab/rnaseq_tutorial/wiki/RNAseq-Data)
+  [Data](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/RNAseq-Data)
   
-  [Data QC](https://github.com/griffithlab/rnaseq_tutorial/wiki/PreAlignment-QC)
+  [Data QC](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/PreAlignment-QC)
 
 [&uarr;](#back_to_top)
 
@@ -214,15 +214,15 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
   
   [Lab practical](https://bioinformatics.ca/rnaseq-module-2-lab-2016)
   
-  [Adapter Trim](https://github.com/griffithlab/rnaseq_tutorial/wiki/Adapter-Trim)
+  [Adapter Trim](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Adapter-Trim)
   
-  [Alignment](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment)
+  [Alignment](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Alignment)
   
-  [IGV](https://github.com/griffithlab/rnaseq_tutorial/wiki/IGV-Tutorial)
+  [IGV](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/IGV-Tutorial)
 
-  [Alignment Visualization](https://github.com/griffithlab/rnaseq_tutorial/wiki/PostAlignment-Visualization)
+  [Alignment Visualization](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/PostAlignment-Visualization)
   
-  [Alignment QC](https://github.com/griffithlab/rnaseq_tutorial/wiki/PostAlignment-QC)
+  [Alignment QC](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/PostAlignment-QC)
 
 [&uarr;](#back_to_top)  
   
@@ -232,9 +232,9 @@ Instructions can be found [here](http://bioinformatics-ca.github.io/logging_into
 
 Paper: [Recurrent chimeric RNAs enriched in human prostate cancer identified by deep sequencing](http://www.ncbi.nlm.nih.gov/pubmed/21571633)
 
-[Assignment Questions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Integrated-Assignment)
+[Assignment Questions](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Integrated-Assignment)
 
-[Assignment Answers](https://github.com/griffithlab/rnaseq_tutorial/wiki/ZIA-Answers)
+[Assignment Answers](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/ZIA-Answers)
 
 [&uarr;](#back_to_top)
 
@@ -253,11 +253,11 @@ Paper: [Recurrent chimeric RNAs enriched in human prostate cancer identified by 
   
  [Lab practical](https://bioinformatics.ca/rnaseq-module-3-lab-2016)
  
- [Expression](https://github.com/griffithlab/rnaseq_tutorial/wiki/Expression)
+ [Expression](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Expression)
  
- [Differential Expression](https://github.com/griffithlab/rnaseq_tutorial/wiki/Differential-Expression)
+ [Differential Expression](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Differential-Expression)
  
- [DE Visualization](https://github.com/griffithlab/rnaseq_tutorial/wiki/DE-Visualization)
+ [DE Visualization](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/DE-Visualization)
 
 [&uarr;](#back_to_top)
 
@@ -274,15 +274,15 @@ Paper: [Recurrent chimeric RNAs enriched in human prostate cancer identified by 
   
   [Lab Practical](https://bioinformatics.ca/rnaseq-module-4-lab-2016)
   
-  [Ref Guided](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reference-Guided-Transcript-Assembly)
+  [Ref Guided](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Reference-Guided-Transcript-Assembly)
   
-  [De novo](https://github.com/griffithlab/rnaseq_tutorial/wiki/de-novo-Transcript-Assembly)
+  [De novo](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/de-novo-Transcript-Assembly)
   
-  [Merging](https://github.com/griffithlab/rnaseq_tutorial/wiki/Transcript-Assembly-Merge)
+  [Merging](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Transcript-Assembly-Merge)
   
-  [Differential Splicing](https://github.com/griffithlab/rnaseq_tutorial/wiki/Differential-Splicing)
+  [Differential Splicing](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Differential-Splicing)
   
-  [Splicing Visualization](https://github.com/griffithlab/rnaseq_tutorial/wiki/Transcript-Assembly-Visualization)
+  [Splicing Visualization](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Transcript-Assembly-Visualization)
 
 [&uarr;](#back_to_top)
 
@@ -290,7 +290,7 @@ Paper: [Recurrent chimeric RNAs enriched in human prostate cancer identified by 
 
   *<font color="827e9c">Obi Griffith</font>*
   
-  [Kallisto](https://github.com/griffithlab/rnaseq_tutorial/wiki/Kallisto)
+  [Kallisto](https://github.com/griffithlab/rnaseq_tutorial_v1/wiki/Kallisto)
 
 [&uarr;](#back_to_top)
 
