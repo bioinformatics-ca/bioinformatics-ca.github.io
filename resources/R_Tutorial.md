@@ -58,7 +58,7 @@ image: Bioinfo_Logo.jpg
 
 <br>
 
-This tutorial was created by [Boris Steipe](http://steipe.biochemistry.utoronto.ca/abc/index.php/R_tutorial) and converted to markdown format for CBW by Ann Meyer. 
+This tutorial was created by [Boris Steipe](http://steipe.biochemistry.utoronto.ca/abc/index.php/R_tutorial) and converted and updated by the CBW team.
 
 ###  The Environment  <a id="environment"></a>
 
@@ -291,8 +291,15 @@ In any case: the procedure is the same as for Unix systems. A text editor you ca
 
 [&uarr;](#back_to_top)
 
-###### ...Windows Systems <a id="windows"></a>
-...
+###### Windows Systems <a id="windows"></a>
+
+Navigate to your home directory (use cd to change directory)
+- Open a textfile (Notepad)
+
+- Type in: 
+```setwd("/path/to/your/project")```
+
+- Save the file with a filename of .Rprofile
 
 [&uarr;](#back_to_top)
 
