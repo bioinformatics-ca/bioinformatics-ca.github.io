@@ -6,7 +6,12 @@ header2: Workshop pages for students
 image: bioinformatics_LOGO.jpg
 ---
 
+
+<hr>
 ## This is the legacy website for Canadian Bioinformatics Workshops run in 2015 and 2016. For our workshops from 2017 to present, visit <a href="https://bioinformaticsdotca.github.io/">https://bioinformaticsdotca.github.io/</a>.
+<hr>
+
+
 
 ### Welcome to the CBW Workshop Pages!
 
